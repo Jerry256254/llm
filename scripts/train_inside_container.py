@@ -388,7 +388,6 @@ def train_with_peft_fallback(cfg: dict) -> None:
     except Exception:
         BitsAndBytesConfig = None  # type: ignore
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-    from trl import SFTTrainer
 
     max_seq = int(cfg.get("max_seq_length", 2048))
     model_id = cfg["model_id"]
@@ -396,7 +395,7 @@ def train_with_peft_fallback(cfg: dict) -> None:
     load_in_4bit = method == "qlora" or bool(cfg.get("load_in_4bit", True))
 
     bnb = None
-    if load_in_4bit and method != "full":
+    if load_in_4bit and method != "full" and BitsAndBytesConfig is not None:
         bnb = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
@@ -404,8 +403,8 @@ def train_with_peft_fallback(cfg: dict) -> None:
             bnb_4bit_use_double_quant=True,
         )
 
-    log(f"Loading model (PEFT fallback): {model_id}")
-    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
+    log(f"Loading model (PEFT): {model_id}")
+    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True, trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
@@ -414,6 +413,7 @@ def train_with_peft_fallback(cfg: dict) -> None:
         quantization_config=bnb,
         device_map="auto",
         torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,
+        trust_remote_code=True,
     )
     if method != "full":
         model = prepare_model_for_kbit_training(model)
@@ -426,6 +426,7 @@ def train_with_peft_fallback(cfg: dict) -> None:
             target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
         )
         model = get_peft_model(model, lora)
+        model.print_trainable_parameters()
 
     raw = load_raw_dataset(cfg["dataset_path"], cfg.get("dataset_format", "alpaca"))
     ds = format_dataset(raw, cfg.get("dataset_format", "alpaca"), tokenizer)
@@ -434,6 +435,7 @@ def train_with_peft_fallback(cfg: dict) -> None:
 
     out = cfg.get("output_dir", "/workspace/adapter")
     os.makedirs(out, exist_ok=True)
+    use_bf16 = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
     args = TrainingArguments(
         output_dir=out,
         per_device_train_batch_size=int(cfg.get("batch_size", 2)),
@@ -441,24 +443,53 @@ def train_with_peft_fallback(cfg: dict) -> None:
         num_train_epochs=float(cfg.get("epochs", 1.0)),
         max_steps=int(cfg.get("max_steps", -1)),
         learning_rate=float(cfg.get("learning_rate", 2e-4)),
-        fp16=not torch.cuda.is_bf16_supported(),
-        bf16=torch.cuda.is_bf16_supported(),
+        fp16=not use_bf16,
+        bf16=use_bf16,
         logging_steps=5,
         save_strategy="epoch",
         report_to="none",
-        optim="paged_adamw_8bit" if load_in_4bit else "adamw_torch",
+        optim="paged_adamw_8bit" if (load_in_4bit and method != "full") else "adamw_torch",
         seed=int(cfg.get("seed", 42)),
+        gradient_checkpointing=True,
+        remove_unused_columns=False,
     )
-    trainer = SFTTrainer(
-        model=model,
-        train_dataset=ds,
-        dataset_text_field="text",
-        max_seq_length=max_seq,
-        tokenizer=tokenizer,
-        args=args,
-        packing=False,
-    )
+
+    # Prefer TRL SFTTrainer; fall back to plain HF Trainer if trl missing deps
+    try:
+        from trl import SFTTrainer
+        trainer = SFTTrainer(
+            model=model,
+            train_dataset=ds,
+            dataset_text_field="text",
+            max_seq_length=max_seq,
+            tokenizer=tokenizer,
+            args=args,
+            packing=False,
+        )
+    except Exception as e:
+        log(f"SFTTrainer unavailable ({e}) — using transformers.Trainer")
+        from transformers import Trainer, DataCollatorForLanguageModeling
+
+        def tok_fn(ex):
+            return tokenizer(
+                ex["text"],
+                truncation=True,
+                max_length=max_seq,
+                padding="max_length",
+            )
+
+        tokenized = ds.map(tok_fn, batched=True, remove_columns=ds.column_names)
+        collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+        trainer = Trainer(
+            model=model,
+            args=args,
+            train_dataset=tokenized,
+            data_collator=collator,
+        )
+
+    log("Starting training…")
     trainer.train()
+    log("Saving…")
     model.save_pretrained(out)
     tokenizer.save_pretrained(out)
 

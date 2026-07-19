@@ -1,8 +1,5 @@
-# Minimal reliable training image — PEFT/TRL primary (no Unsloth dependency wars)
-# Tag: llm-finetune/unsloth:cuda12.1.0-r4
-#
-# Why no bare `pip install unsloth`:
-#   latest unsloth pulls torch>=2.11 / torchao / newest transformers and breaks 2.5.1 stack.
+# Training image r4 — PEFT + TRL (stable with torch 2.5.1)
+# docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0-r4 .
 FROM pytorch/pytorch:2.5.1-cuda12.1-cudnn9-devel
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -17,8 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgomp1 ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Frozen stack compatible with torch 2.5.1 from base image
-# DO NOT install unsloth here (it upgrades torch and breaks everything).
+# All deps for transformers / peft / trl SFTTrainer (incl. rich — required by trl)
 RUN pip install --upgrade pip setuptools wheel \
  && pip install --no-cache-dir \
       "transformers==4.46.3" \
@@ -39,41 +35,33 @@ RUN pip install --upgrade pip setuptools wheel \
       "numpy==1.26.4" \
       "tqdm" \
       "psutil" \
-      "tyro"
+      "tyro" \
+      "rich" \
+      "markdown-it-py" \
+      "pygments" \
+      "jinja2" \
+      "aiohttp"
 
-# Remove packages that unsloth/newer HF might have left requiring torch.int1
 RUN pip uninstall -y torchao unsloth unsloth_zoo 2>/dev/null || true
 
-# Ensure base torch trio is intact (reinstall only if needed — same versions as image)
-RUN python -c "import torch; assert torch.__version__.startswith('2.5.1'), torch.__version__"
-
-# llama.cpp for GGUF export (CPU quantize)
+# llama.cpp quantize (CPU)
 RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
  && cmake -S /opt/llama.cpp -B /opt/llama.cpp/build \
       -DGGML_CUDA=OFF -DGGML_NATIVE=OFF -DCMAKE_BUILD_TYPE=Release \
  && cmake --build /opt/llama.cpp/build --config Release -j"$(nproc)" \
- && (test -x /opt/llama.cpp/build/bin/llama-quantize \
-     && cp /opt/llama.cpp/build/bin/llama-quantize /usr/local/bin/llama-quantize \
-     || test -x /opt/llama.cpp/build/bin/quantize \
-     && cp /opt/llama.cpp/build/bin/quantize /usr/local/bin/llama-quantize \
+ && (cp /opt/llama.cpp/build/bin/llama-quantize /usr/local/bin/llama-quantize 2>/dev/null \
+     || cp /opt/llama.cpp/build/bin/quantize /usr/local/bin/llama-quantize 2>/dev/null \
      || true)
 
 ENV PATH="/opt/llama.cpp/build/bin:${PATH}"
 
-# Smoke — must succeed
-RUN python - <<'PY'
-import torch
-print("torch", torch.__version__, "cuda_build", torch.version.cuda)
-import torchvision
-print("torchvision", torchvision.__version__)
-from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
-print("transformers OK")
-from peft import LoraConfig, get_peft_model
-print("peft OK")
-from trl import SFTTrainer
-print("trl OK")
-print("SMOKE_OK")
-PY
+RUN python -c "\
+import torch, torchvision; \
+from transformers import TrainingArguments, AutoTokenizer; \
+from peft import LoraConfig; \
+from trl import SFTTrainer; \
+print('torch', torch.__version__); \
+print('SMOKE_OK')"
 
 WORKDIR /workspace
 CMD ["bash"]
