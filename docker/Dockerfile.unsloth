@@ -1,5 +1,8 @@
-# Fine-tuning image: Unsloth + TRL + llama.cpp (CPU quantize — fast build)
-# Build: docker build -f docker/Dockerfile.unsloth --build-arg CUDA_VERSION=12.1.0 -t llm-finetune/unsloth:cuda12.1.0 .
+# Fine-tuning image: matched torch stack + Unsloth + llama.cpp (CPU quant)
+# Build: docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0 .
+#
+# IMPORTANT: install torch/vision/audio TOGETHER and RE-SYNC after unsloth
+# (unsloth often upgrades torch alone and breaks torchvision).
 ARG CUDA_VERSION=12.1.0
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu22.04
 
@@ -7,7 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     CUDA_HOME=/usr/local/cuda \
-    HF_HUB_ENABLE_HF_TRANSFER=1
+    HF_HUB_ENABLE_HF_TRANSFER=1 \
+    TOKENIZERS_PARALLELISM=false
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         python3 python3-pip python3-dev git git-lfs curl wget \
@@ -16,16 +20,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3 /usr/bin/python
 
-# PyTorch CUDA 12.1 wheels (works with L4 + driver 550+/610)
+# --- PyTorch stack (single coherent cu121 wheel set) ---
+# Pin a known-good trio; adjust together if needed.
 RUN pip3 install --upgrade pip setuptools wheel \
-    && pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+    && pip3 install \
+        torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 \
+        --index-url https://download.pytorch.org/whl/cu121
 
+# Core ML (avoid bleeding-edge transformers that fight peft)
 RUN pip3 install \
-        "transformers>=4.44.0" \
+        "transformers>=4.46.0,<4.50.0" \
         "datasets>=2.19.0" \
         "accelerate>=0.33.0" \
-        "peft>=0.12.0" \
-        "trl>=0.9.0" \
+        "peft>=0.12.0,<0.15.0" \
+        "trl>=0.9.0,<0.15.0" \
         "bitsandbytes>=0.43.0" \
         "sentencepiece" \
         "protobuf" \
@@ -33,17 +41,30 @@ RUN pip3 install \
         "einops" \
         "packaging" \
         "hf_transfer" \
-        "huggingface_hub"
+        "huggingface_hub" \
+        "gguf" \
+        "numpy"
 
+# Unsloth — may try to bump torch; we re-sync immediately after
 RUN pip3 install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" \
     || pip3 install unsloth \
     || echo "WARN: Unsloth install failed; PEFT fallback will be used"
 
-RUN pip3 install xformers \
-    || echo "WARN: xformers optional install failed"
+# Re-pin torch stack AFTER unsloth so versions always match
+RUN pip3 install --force-reinstall \
+        torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 \
+        --index-url https://download.pytorch.org/whl/cu121 \
+    && python3 -c "import torch, torchvision; \
+print('torch', torch.__version__, 'cuda', torch.cuda.is_available()); \
+print('torchvision', torchvision.__version__); \
+assert torch.__version__.startswith('2.5.1'), torch.__version__; \
+assert '0.20.1' in torchvision.__version__, torchvision.__version__"
 
-# llama.cpp: CPU build only for convert + quantize (minutes, not hours of CUDA compile)
-# Training uses PyTorch GPU; GGUF export does not need GGML_CUDA here.
+RUN pip3 install xformers==0.0.28.post3 \
+    || pip3 install xformers \
+    || echo "WARN: xformers optional"
+
+# llama.cpp CPU quant tools (fast build)
 RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
     && cmake -S /opt/llama.cpp -B /opt/llama.cpp/build \
         -DGGML_CUDA=OFF -DGGML_NATIVE=OFF \
@@ -52,10 +73,22 @@ RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
     && (cp /opt/llama.cpp/build/bin/llama-quantize /usr/local/bin/llama-quantize \
         || cp /opt/llama.cpp/build/bin/quantize /usr/local/bin/llama-quantize \
         || true) \
-    && pip3 install gguf numpy sentencepiece protobuf || true \
-    && (test -f /opt/llama.cpp/convert_hf_to_gguf.py \
-        || test -f /opt/llama.cpp/convert-hf-to-gguf.py \
-        || ls /opt/llama.cpp/*.py | head)
+    && pip3 install -r /opt/llama.cpp/requirements.txt || true
+
+# Final import smoke test (fails the build early if stack is broken)
+RUN python3 - <<'PY'
+import torch
+print("SMOKE torch", torch.__version__, "cuda?", torch.cuda.is_available())
+from transformers import AutoTokenizer, TrainingArguments
+print("SMOKE transformers OK", TrainingArguments)
+try:
+    import unsloth
+    print("SMOKE unsloth OK")
+except Exception as e:
+    print("SMOKE unsloth skip:", e)
+from peft import LoraConfig
+print("SMOKE peft OK")
+PY
 
 ENV PATH="/opt/llama.cpp/build/bin:${PATH}"
 

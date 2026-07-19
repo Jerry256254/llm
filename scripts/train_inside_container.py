@@ -376,13 +376,15 @@ def train_with_unsloth(cfg: dict) -> None:
 def train_with_peft_fallback(cfg: dict) -> None:
     """Fallback without Unsloth (slower, more VRAM)."""
     import torch
-    from datasets import Dataset
-    from transformers import (
-        AutoModelForCausalLM,
-        AutoTokenizer,
-        BitsAndBytesConfig,
-        TrainingArguments,
-    )
+    # Avoid broken torchvision side-imports in some transformers versions
+    import os
+    os.environ.setdefault("TRANSFORMERS_NO_ADVISORY_WARNINGS", "1")
+
+    from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
+    try:
+        from transformers import BitsAndBytesConfig
+    except Exception:
+        BitsAndBytesConfig = None  # type: ignore
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
     from trl import SFTTrainer
 
@@ -473,6 +475,18 @@ def train_with_peft_fallback(cfg: dict) -> None:
     log("PEFT training finished.")
 
 
+def _stack_selfcheck() -> None:
+    import torch
+    log(f"torch={torch.__version__} cuda={torch.cuda.is_available()}")
+    if torch.cuda.is_available():
+        log(f"gpu0={torch.cuda.get_device_name(0)}")
+    try:
+        import torchvision
+        log(f"torchvision={torchvision.__version__}")
+    except Exception as e:
+        log(f"torchvision import warning: {e}")
+
+
 def main() -> int:
     if len(sys.argv) < 2:
         print("Usage: train_inside_container.py <config.json>", file=sys.stderr)
@@ -480,11 +494,21 @@ def main() -> int:
     cfg = load_config(sys.argv[1])
     log(f"Config: {json.dumps(cfg, indent=2)}")
     try:
+        _stack_selfcheck()
+        use_unsloth = False
         try:
             import unsloth  # noqa: F401
+            use_unsloth = True
+            log("Using Unsloth backend")
+        except Exception as e:
+            # Catch ImportError AND runtime ImportError from version checks
+            log(f"Unsloth not available ({type(e).__name__}: {e})")
+            log("Falling back to PEFT/transformers backend")
+            use_unsloth = False
+
+        if use_unsloth:
             train_with_unsloth(cfg)
-        except ImportError:
-            log("Unsloth not available — using PEFT fallback")
+        else:
             train_with_peft_fallback(cfg)
         return 0
     except Exception:

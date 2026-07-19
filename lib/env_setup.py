@@ -462,7 +462,8 @@ def build_or_pull_image(
     import fcntl
     import time as _time
 
-    image = f"llm-finetune/{framework}:cuda{cuda_tag}"
+    # -r2: fixed torch/torchvision pin after unsloth upgrade break
+    image = f"llm-finetune/{framework}:cuda{cuda_tag}-r2"
     dockerfile = DOCKER_DIR / f"Dockerfile.{framework}"
     if not dockerfile.exists():
         raise FileNotFoundError(f"Missing Dockerfile: {dockerfile}")

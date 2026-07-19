@@ -51,7 +51,7 @@ class JobPhase(str, Enum):
 class JobStatus:
     phase: str = JobPhase.IDLE.value
     message: str = "Připraveno"
-    progress: float = 0.0  # 0–100
+    progress: float = 0.0  # 0–100 overall pipeline
     started_at: Optional[float] = None
     finished_at: Optional[float] = None
     run_dir: Optional[str] = None
@@ -61,9 +61,26 @@ class JobStatus:
     gguf_path: Optional[str] = None
     config: Optional[dict] = None
     env: Optional[dict] = None
+    # Live training sub-progress (parsed from trainer logs)
+    train_progress: Optional[dict] = None
+    progress_detail: Optional[str] = None
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+# Overall pipeline progress bands (proportional UX)
+# setup 0–8 | analyze 8–15 | docker 15–28 | train 28–88 | gguf 88–95 | ollama 95–100
+_BAND = {
+    "setup": (0.0, 8.0),
+    "analyze": (8.0, 15.0),
+    "docker": (15.0, 28.0),
+    "train": (28.0, 88.0),
+    "gguf": (88.0, 95.0),
+    "ollama": (95.0, 100.0),
+    "done": (100.0, 100.0),
+    "error": (100.0, 100.0),
+}
 
 
 class LogTee:
@@ -118,6 +135,8 @@ class JobManager:
         self._env: Optional[EnvReport] = None
         self._prepared = False
         self._log_file = ROOT / "outputs" / "live_terminal.log"
+        self._est_total_steps: Optional[int] = None
+        self._est_epochs: float = 1.0
         try:
             self._log_file.parent.mkdir(parents=True, exist_ok=True)
         except OSError:
@@ -132,6 +151,130 @@ class JobManager:
         s = re.sub(r"\x1b\].*?\x07", "", s)
         s = re.sub(r"\r", "", s)
         return s
+
+    def _map_band(self, band: str, frac: float, message: Optional[str] = None) -> None:
+        """Map 0..1 fraction inside a pipeline band to overall 0..100 progress."""
+        lo, hi = _BAND.get(band, (0.0, 100.0))
+        frac = max(0.0, min(1.0, float(frac)))
+        overall = lo + (hi - lo) * frac
+        # Never go backwards during a running job (except error/done)
+        with self._lock:
+            if band not in ("error", "done") and overall < self._status.progress:
+                overall = self._status.progress
+            self._status.progress = overall
+            if message:
+                self._status.message = message
+            if band in ("setup", "analyze", "train", "gguf", "ollama"):
+                # keep phase as-is if already train/gguf; docker maps to train phase for UI
+                if band == "docker":
+                    self._status.phase = JobPhase.TRAIN.value
+                elif band == "train":
+                    self._status.phase = JobPhase.TRAIN.value
+                elif band == "setup":
+                    self._status.phase = JobPhase.SETUP.value
+                elif band == "analyze":
+                    self._status.phase = JobPhase.ANALYZE.value
+                elif band == "gguf":
+                    self._status.phase = JobPhase.GGUF.value
+                elif band == "ollama":
+                    self._status.phase = JobPhase.OLLAMA.value
+
+    def _parse_train_progress(self, line: str) -> None:
+        """Extract step/epoch/% from HF Trainer / tqdm / Unsloth logs → overall progress."""
+        import re
+
+        step = total = None
+        epoch = None
+        pct = None
+        detail = None
+
+        # Docker build: [ 45%] Building
+        m = re.search(r"\[\s*(\d+)%\s*\]", line)
+        if m and ("Building" in line or "ggml" in line.lower() or "%" in line):
+            try:
+                if any(x in line for x in ("Building", "ggml", "cmake", "Linking", "%]")):
+                    bp = float(m.group(1)) / 100.0
+                    # only treat as docker if not clearly a trainer line
+                    if "loss" not in line.lower() and "epoch" not in line.lower():
+                        self._map_band("docker", min(0.99, bp), f"Docker/build ~{m.group(1)}%")
+                        return
+            except Exception:
+                pass
+
+        if "Building image" in line or "Čekám na zámek Docker" in line:
+            self._map_band("docker", 0.05, "Stavím Docker image…")
+            return
+        if "Image hotový" in line or "Docker image ready" in line:
+            self._map_band("docker", 1.0, "Docker image ready")
+            return
+        if "Spouštím trénink" in line or "Starting training" in line:
+            self._map_band("train", 0.0, "Start tréninku…")
+            return
+        if "Loading model" in line or "from_pretrained" in line:
+            self._map_band("train", 0.02, "Načítám model…")
+            return
+        if "ollama create" in line.lower() or "Import do Ollama" in line:
+            self._map_band("ollama", 0.4, "Import do Ollama…")
+            return
+
+        # tqdm: 45%|
+        m = re.search(r"(\d+(?:\.\d+)?)%\s*\|", line)
+        if m:
+            pct = float(m.group(1))
+
+        m = re.search(r"\b(\d+)\s*/\s*(\d+)\s*\[", line)
+        if m:
+            step, total = int(m.group(1)), int(m.group(2))
+
+        m = re.search(r"['\"]epoch['\"]\s*:\s*([\d.]+)", line)
+        if m:
+            epoch = float(m.group(1))
+
+        m = re.search(r"\bstep\s*[:=]?\s*(\d+)\s*/\s*(\d+)", line, re.I)
+        if m:
+            step, total = int(m.group(1)), int(m.group(2))
+
+        # HF: {'loss': 0.9, 'learning_rate': ..., 'epoch': 0.5}
+        if "loss" in line.lower() and epoch is None:
+            m = re.search(r"epoch['\"]?\s*[:=]\s*([\d.]+)", line, re.I)
+            if m:
+                epoch = float(m.group(1))
+
+        frac = None
+        if step is not None and total and total > 0:
+            frac = step / total
+            detail = f"step {step}/{total}"
+            if pct is None:
+                pct = frac * 100.0
+        elif epoch is not None and self._est_epochs > 0:
+            frac = min(1.0, epoch / max(self._est_epochs, 1e-6))
+            detail = f"epoch {epoch:.3f}/{self._est_epochs:g}"
+            if pct is None:
+                pct = frac * 100.0
+        elif pct is not None:
+            frac = pct / 100.0
+            detail = f"{pct:.1f}%"
+        elif step is not None and self._est_total_steps:
+            frac = min(1.0, step / max(self._est_total_steps, 1))
+            detail = f"step {step}/{self._est_total_steps}"
+            pct = frac * 100.0
+
+        if frac is not None:
+            self._map_band(
+                "train",
+                frac,
+                f"Učení {pct:.1f}%" if pct is not None else "Učení…",
+            )
+            with self._lock:
+                self._status.train_progress = {
+                    "percent": float(pct) if pct is not None else frac * 100.0,
+                    "step": step,
+                    "total_steps": total or self._est_total_steps,
+                    "epoch": epoch,
+                }
+                self._status.progress_detail = detail
+                if detail:
+                    self._status.message = f"Učení — {detail}"
 
     def log(self, line: str) -> None:
         ts = time.strftime("%H:%M:%S")
@@ -149,6 +292,11 @@ class JobManager:
                 with self._log_file.open("a", encoding="utf-8") as f:
                     f.write(text + "\n")
             except OSError:
+                pass
+            # Update live progress from this log line
+            try:
+                self._parse_train_progress(clean)
+            except Exception:
                 pass
             for ev in subs:
                 ev.set()
@@ -510,7 +658,7 @@ class JobManager:
             self.log(f"Host není kompletní ({ready_why}) — zkusím setup (max. jednotky minut)…")
 
         # Setup (host packages only — Docker image se staví až při tréninku, 1× se zámkem)
-        self._set(phase=JobPhase.SETUP.value, message="Kontrola prostředí…", progress=5)
+        self._map_band("setup", 0.2, "Kontrola prostředí…")
         self.log("Kontrola Docker + GPU…")
         try:
             self.prepare_env(
@@ -518,7 +666,7 @@ class JobManager:
                 framework=data.get("framework") or "unsloth",
                 build_image=False,
             )
-            self._set(progress=10, message="Prostředí OK, jdu na odhad…")
+            self._map_band("setup", 1.0, "Prostředí OK")
             self.log("Kontrola prostředí hotová.")
         except Exception as e:
             self.log(f"Setup varování: {e}")
@@ -543,7 +691,7 @@ class JobManager:
             self.log(f"GPU: {gpus[0].name} ({gpus[0].memory_mib} MiB)")
 
         # Analyze FIRST (live estimate in UI before long docker build)
-        self._set(phase=JobPhase.ANALYZE.value, message="Počítám odhad paměti a času…", progress=12)
+        self._map_band("analyze", 0.2, "Počítám odhad paměti a času…")
         mode = (cfg.extra or {}).get("train_mode") or "?"
         identity = (cfg.extra or {}).get("identity_name") or cfg.ollama_name
         self.log("=" * 48)
@@ -558,6 +706,8 @@ class JobManager:
         if "qwen" in cfg.model_id.lower() and mode in ("from_scratch", "from_scratch_full"):
             self.log("POZNÁMKA: zvolili jste Qwen model záměrně (ID výše).")
         est = analyze(cfg, gpus)
+        self._est_total_steps = est.total_steps
+        self._est_epochs = float(cfg.epochs) if cfg.epochs else 1.0
         self._set(estimate=est.to_dict(), config={
             "model_id": cfg.model_id,
             "method": cfg.method,
@@ -565,11 +715,13 @@ class JobManager:
             "identity_name": identity,
             "dataset_path": cfg.dataset_path,
             "ollama_name": cfg.ollama_name,
-        }, progress=25)
+        })
+        self._map_band("analyze", 1.0, "Odhad hotov")
         self.log(
             f"ODHAD (živě): VRAM ~{est.recommended_vram_gib:.1f} GB | "
             f"čas ~{est.est_train_hours:.2f} h | ~${est.est_cost_usd:.2f} | "
-            f"samples {est.num_samples} | trainable {est.trainable_params/1e6:.1f}M "
+            f"samples {est.num_samples} | steps {est.total_steps} | "
+            f"trainable {est.trainable_params/1e6:.1f}M "
             f"({est.trainable_pct:.1f}%) | vejde se na GPU: {est.fits_gpus}"
         )
         self.log("=" * 48)
@@ -586,8 +738,8 @@ class JobManager:
 
         self._check_cancel()
 
-        # Train
-        self._set(phase=JobPhase.TRAIN.value, message="Učení modelu běží (Docker + GPU)…", progress=35)
+        # Train: overall 28–88% follows trainer logs via _parse_train_progress
+        self._map_band("docker", 0.0, "Docker / start tréninku…")
         self.log("Spouštím učení…")
         run_dir = run_training(
             cfg,
@@ -596,7 +748,8 @@ class JobManager:
             skip_if_over_limit=not allow_over,
             dry_run=False,
         )
-        self._set(run_dir=str(run_dir), progress=70)
+        self._map_band("train", 1.0, "Trénink dokončen")
+        self._set(run_dir=str(run_dir))
         self.log(f"Trénink hotov: {run_dir}")
 
         meta = {
@@ -615,18 +768,20 @@ class JobManager:
         gguf_path = None
 
         if not skip_gguf:
-            self._set(phase=JobPhase.GGUF.value, message="Balím model (GGUF)…", progress=78)
+            self._map_band("gguf", 0.1, "Balím model (GGUF)…")
             gguf_path = convert_to_gguf(run_dir, quant=cfg.gguf_quant, gpus=gpus)
-            self._set(gguf_path=str(gguf_path), progress=88)
+            self._set(gguf_path=str(gguf_path))
+            self._map_band("gguf", 1.0, "GGUF hotovo")
             self.log(f"GGUF: {gguf_path}")
         else:
             found = list((run_dir / "gguf").glob("*.gguf")) if (run_dir / "gguf").exists() else []
             gguf_path = found[0] if found else None
+            self._map_band("gguf", 1.0, "GGUF přeskočen")
 
         self._check_cancel()
 
         if not skip_ollama and gguf_path is not None:
-            self._set(phase=JobPhase.OLLAMA.value, message="Instaluji do Ollama…", progress=92)
+            self._map_band("ollama", 0.2, "Import do Ollama…")
             system_prompt = (cfg.extra or {}).get("system_prompt")
             export_and_import(
                 run_dir,
@@ -634,8 +789,13 @@ class JobManager:
                 cfg.ollama_name,
                 system_prompt=system_prompt,
             )
-            self._set(ollama_name=cfg.ollama_name, progress=98)
+            self._set(ollama_name=cfg.ollama_name)
+            self._map_band("ollama", 1.0, f"Ollama: {cfg.ollama_name}")
             self.log(f"Hotovo. Spusťte: ollama run {cfg.ollama_name}")
+        elif skip_ollama:
+            self.log("Ollama import přeskočen.")
+        elif gguf_path is None:
+            self.log("VAROVÁNÍ: chybí GGUF — Ollama import nelze.")
 
         self._set(
             phase=JobPhase.DONE.value,
@@ -644,8 +804,10 @@ class JobManager:
             finished_at=time.time(),
             ollama_name=cfg.ollama_name,
             gguf_path=str(gguf_path) if gguf_path else None,
+            progress_detail="100%",
         )
         self.log("=== UČENÍ DOKONČENO ===")
+        self.log(f"=== ollama run {cfg.ollama_name} ===")
 
 
 # Global instance used by web + run.py

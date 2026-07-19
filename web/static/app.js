@@ -1,79 +1,44 @@
 (() => {
   const authRequired = window.__AUTH_REQUIRED__ === true || window.__AUTH_REQUIRED__ === "true";
-  const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
 
   let token = localStorage.getItem("llm_ui_token") || "";
   let logSeq = 0;
   let pollTimer = null;
+  let lineCount = 0;
+  let ollamaTouched = false;
 
   const authGate = $("#auth-gate");
   const app = $("#app");
   const logEl = $("#log");
-  const logFullEl = $("#log-full");
   const form = $("#train-form");
-  let lineCount = 0;
 
-  // Friendly presets: base (uncensored path) vs instruct
   const PRESETS = {
     uncensored: [
-      { id: "unsloth/llama-3.2-1b", label: "Malý (1B) — rychlý test, málo GPU", params: 1 },
-      { id: "unsloth/llama-3.2-3b", label: "Střední (3B) — dobrý kompromis", params: 3 },
-      { id: "unsloth/meta-llama-3.1-8b", label: "Velký (8B) — chytřejší, potřebuje silnou GPU", params: 8 },
-      { id: "unsloth/qwen2.5-7b", label: "Qwen 7B — silný na text", params: 7 },
-      { id: "unsloth/mistral-7b-v0.3", label: "Mistral 7B — klasika", params: 7 },
-      { id: "__custom__", label: "Vlastní model (napíšu ID sám)…", params: null },
+      { id: "unsloth/llama-3.2-1b", label: "Malý 1B — test na L4" },
+      { id: "unsloth/llama-3.2-3b", label: "Střední 3B" },
+      { id: "unsloth/meta-llama-3.1-8b", label: "Velký 8B" },
+      { id: "unsloth/qwen2.5-7b", label: "Qwen 7B" },
+      { id: "unsloth/mistral-7b-v0.3", label: "Mistral 7B" },
+      { id: "__custom__", label: "Vlastní ID…" },
     ],
     instruct: [
-      { id: "unsloth/llama-3.2-1b-instruct", label: "Malý chat (1B Instruct)", params: 1 },
-      { id: "unsloth/llama-3.2-3b-instruct", label: "Střední chat (3B Instruct)", params: 3 },
-      { id: "unsloth/meta-llama-3.1-8b-instruct", label: "Velký chat (8B Instruct)", params: 8 },
-      { id: "unsloth/qwen2.5-7b-instruct", label: "Qwen 7B Instruct", params: 7 },
-      { id: "__custom__", label: "Vlastní model (napíšu ID sám)…", params: null },
+      { id: "unsloth/llama-3.2-1b-instruct", label: "Malý 1B Instruct" },
+      { id: "unsloth/llama-3.2-3b-instruct", label: "Střední 3B Instruct" },
+      { id: "unsloth/meta-llama-3.1-8b-instruct", label: "Velký 8B Instruct" },
+      { id: "__custom__", label: "Vlastní ID…" },
     ],
   };
 
-  const DEFAULT_DATA = "./data/test_multilang_code/train.jsonl";
-
   const MODE_DEFAULTS = {
-    from_scratch: {
-      method: "full",
-      lora_r: 64,
-      batch_size: 1,
-      grad_accum: 8,
-      epochs: 2,
-      learning_rate: 0.00005,
-      dataset_format: "alpaca",
-      dataHint:
-        "Výchozí test: kód + CS/EN/DE/HI v " + DEFAULT_DATA +
-        ". Od nuly = učí se všechny váhy na těchto (nebo vašich) datech.",
-      modelHint: "Pro test berte malý základ 1B (ne Instruct). Bez cenzury = base model.",
-    },
-    finetune: {
-      method: "qlora",
-      lora_r: 32,
-      batch_size: 2,
-      grad_accum: 4,
-      epochs: 2,
-      learning_rate: 0.0002,
-      dataset_format: "alpaca",
-      dataHint:
-        "Stejná testovací sada " + DEFAULT_DATA +
-        " — fine-tune je rychlejší a šetrnější k GPU (QLoRA).",
-      modelHint: "1B stačí na test. Fine-tune nemění všechny váhy, jen adaptéry.",
-    },
+    from_scratch: { method: "full", lora_r: 64, batch_size: 1, grad_accum: 8, epochs: 2, learning_rate: 0.00005 },
+    finetune: { method: "qlora", lora_r: 32, batch_size: 2, grad_accum: 4, epochs: 2, learning_rate: 0.0002 },
   };
 
   const PHASE_CS = {
-    idle: "připraveno",
-    setup: "příprava",
-    analyze: "počítám odhad",
-    train: "učení běží",
-    gguf: "balím model",
-    ollama: "instaluji do Ollama",
-    done: "hotovo",
-    error: "chyba",
-    cancelled: "zrušeno",
+    idle: "připraveno", setup: "příprava", analyze: "odhad", train: "učení",
+    gguf: "GGUF", ollama: "Ollama", done: "hotovo", error: "chyba", cancelled: "zrušeno",
   };
 
   function headers(json = true) {
@@ -91,14 +56,13 @@
     if (res.status === 401) {
       localStorage.removeItem("llm_ui_token");
       token = "";
-      // Keep deník/logy visible — token bar only at bottom
       showAuth(true, { keepAppVisible: true });
-      throw new Error("Špatný přístupový token — zadejte token znovu dole na stránce");
+      throw new Error("Neplatný token — zadejte znovu dole");
     }
     const data = await res.json().catch(() => ({}));
     if (!res.ok) {
       const d = data.detail;
-      throw new Error(typeof d === "string" ? d : (d && JSON.stringify(d)) || data.message || res.statusText);
+      throw new Error(typeof d === "string" ? d : JSON.stringify(d || res.statusText));
     }
     return data;
   }
@@ -106,24 +70,14 @@
   function showAuth(need, { keepAppVisible = false } = {}) {
     if (need && authRequired) {
       authGate.classList.remove("hidden");
-      // First login: dim full page but card stays at BOTTOM.
-      // Re-auth mid-session (401): keep app + logs visible, bar only at bottom.
       if (keepAppVisible || !app.classList.contains("hidden")) {
-        authGate.classList.remove("auth-gate--fullscreen");
         app.classList.remove("hidden");
         app.classList.add("app--auth-open");
       } else {
-        authGate.classList.add("auth-gate--fullscreen");
         app.classList.add("hidden");
-        app.classList.remove("app--auth-open");
       }
-      // Don't jump scroll to top when token bar appears
       requestAnimationFrame(() => {
-        try {
-          $("#token-input")?.focus({ preventScroll: true });
-        } catch (_) {
-          $("#token-input")?.focus();
-        }
+        try { $("#token-input")?.focus({ preventScroll: true }); } catch (_) { $("#token-input")?.focus(); }
       });
     } else {
       authGate.classList.add("hidden");
@@ -133,17 +87,12 @@
   }
 
   function selectedMode() {
-    const el = form.querySelector('input[name="train_mode"]:checked');
-    return el ? el.value : "from_scratch";
+    return form.querySelector('input[name="train_mode"]:checked')?.value || "from_scratch";
   }
 
-  function isUncensored() {
-    return !!$("#uncensored")?.checked;
-  }
-
-  function fillModelPresets() {
+  function fillPresets() {
+    const list = $("#uncensored")?.checked !== false ? PRESETS.uncensored : PRESETS.instruct;
     const sel = $("#model_preset");
-    const list = isUncensored() ? PRESETS.uncensored : PRESETS.instruct;
     const prev = sel.value;
     sel.innerHTML = list.map((p) => `<option value="${p.id}">${p.label}</option>`).join("");
     if (list.some((p) => p.id === prev)) sel.value = prev;
@@ -163,168 +112,183 @@
   }
 
   function applyModeDefaults() {
-    const mode = selectedMode();
-    const d = MODE_DEFAULTS[mode] || MODE_DEFAULTS.from_scratch;
+    const d = MODE_DEFAULTS[selectedMode()] || MODE_DEFAULTS.from_scratch;
     form.method.value = d.method;
     form.lora_r.value = d.lora_r;
     form.batch_size.value = d.batch_size;
     form.grad_accum.value = d.grad_accum;
-    form.epochs.value = d.epochs;
-    form.learning_rate.value = d.learning_rate;
-    form.dataset_format.value = d.dataset_format;
+    if (!form.epochs.dataset.touched) form.epochs.value = d.epochs;
+    if (!form.learning_rate.dataset.touched) form.learning_rate.value = d.learning_rate;
     form.lora_alpha.value = String(Number(d.lora_r) * 2);
-    // keep default test corpus unless user already changed path away from old samples
-    const pathEl = form.querySelector('[name="dataset_path"]');
-    if (pathEl && (!pathEl.value || pathEl.value.includes("sample_alpaca") || pathEl.value.includes("test_multilang_code"))) {
-      pathEl.value = DEFAULT_DATA;
-    }
-    $("#data-hint").textContent = d.dataHint;
-    $("#model-hint").textContent = d.modelHint;
-
-    $$(".choice-card").forEach((card) => {
-      const input = card.querySelector('input[type="radio"]');
-      card.classList.toggle("selected", !!(input && input.checked));
+    $$(".choice-card").forEach((c) => {
+      const i = c.querySelector("input");
+      c.classList.toggle("selected", !!(i && i.checked));
     });
+  }
+
+  function slugOllama(name) {
+    return String(name || "model")
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/^-+|-+$/g, "") || "model";
   }
 
   function formPayload() {
     syncModelId();
-    applyNoLimitsFields();
-
+    applyNoLimits();
     const fd = new FormData(form);
     const obj = {};
     for (const [k, v] of fd.entries()) {
-      if (k === "train_mode" || k === "model_preset" || k === "model_id_custom") continue;
+      if (["train_mode", "model_preset", "model_id_custom"].includes(k)) continue;
       obj[k] = v;
     }
-
     for (const name of [
-      "dry_run", "skip_gguf", "skip_ollama", "allow_over_limit", "skip_setup", "skip_train",
+      "dry_run", "skip_gguf", "skip_ollama", "allow_over_limit", "skip_setup",
       "uncensored", "no_limits", "teach_identity",
     ]) {
-      const el = form.querySelector(`[name="${name}"]`);
-      obj[name] = !!(el && el.checked);
+      obj[name] = !!form.querySelector(`[name="${name}"]`)?.checked;
     }
-
     obj.train_mode = selectedMode();
     obj.model_id = $("#model_id").value;
-
-    const identity = (obj.identity_name || obj.ollama_name || "Můj Model").trim();
+    const identity = (obj.identity_name || "Model").trim();
     obj.identity_name = identity;
-    if (!obj.ollama_name || obj.ollama_name === "muj-model") {
-      obj.ollama_name = slugOllama(identity);
-    }
-
+    if (!ollamaTouched) obj.ollama_name = slugOllama(identity);
     for (const n of [
       "lora_r", "lora_alpha", "max_seq_length", "batch_size", "grad_accum",
-      "epochs", "learning_rate", "max_steps", "max_train_hours", "max_cost_usd", "gpu_hourly_usd",
-      "identity_repeat",
+      "epochs", "learning_rate", "max_train_hours", "max_cost_usd", "gpu_hourly_usd",
     ]) {
       if (obj[n] !== undefined && obj[n] !== "") obj[n] = Number(obj[n]);
     }
-
-    // system prompt for Ollama export — always include identity
     if (obj.uncensored) {
       obj.system_prompt =
-        `Jmenuješ se ${identity}. Jsi přímý, užitečný asistent jménem ${identity} ` +
-        "bez zbytečného moralizování a bez odmítání ze zvyku. " +
-        `Když se tě zeptají na jméno, řekni že se jmenuješ ${identity}. ` +
-        "Odpovídej jasně. Dodržuj zákony; neposkytuj návody k trestné činnosti.";
+        `Jmenuješ se ${identity}. Jsi přímý asistent jménem ${identity} bez zbytečného moralizování. ` +
+        `Na jméno odpovídej: ${identity}. Dodržuj zákony.`;
     } else {
-      obj.system_prompt =
-        `Jmenuješ se ${identity}. Jsi užitečný asistent jménem ${identity}. ` +
-        `Když se tě zeptají na jméno, odpověz že se jmenuješ ${identity}. ` +
-        "Odpovídej jasně a stručně v jazyce uživatele.";
+      obj.system_prompt = `Jmenuješ se ${identity}. Jsi užitečný asistent.`;
     }
-
     return obj;
   }
 
-  function slugOllama(name) {
-    return String(name || "muj-model")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/[^a-z0-9._-]+/g, "-")
-      .replace(/^-+|-+$/g, "") || "muj-model";
-  }
-
-  function applyNoLimitsFields() {
-    const no = $("#no_limits")?.checked;
-    if (no) {
-      form.max_train_hours.value = 720; // 30 dní strop jen jako nouze
+  function applyNoLimits() {
+    if ($("#no_limits")?.checked) {
+      form.max_train_hours.value = 720;
       form.max_cost_usd.value = 999999;
-      const allow = form.querySelector('[name="allow_over_limit"]');
-      if (allow) allow.checked = true;
+      const a = form.querySelector('[name="allow_over_limit"]');
+      if (a) a.checked = true;
     }
   }
 
-  function followEnabled() {
-    const el = $("#log-follow");
-    return !el || el.checked;
+  function followOn() {
+    return $("#log-follow")?.checked !== false;
   }
 
   function appendLog(lines) {
-    if (!lines || !lines.length) return;
-    const chunk = lines.join("\n");
-    const follow = followEnabled();
-    const nearBottom = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 80;
-
-    logEl.textContent += (logEl.textContent ? "\n" : "") + chunk;
-    if (logFullEl) {
-      logFullEl.textContent += (logFullEl.textContent ? "\n" : "") + chunk;
-    }
+    if (!lines?.length || !logEl) return;
+    const near = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 90;
+    logEl.textContent += (logEl.textContent ? "\n" : "") + lines.join("\n");
     lineCount += lines.length;
-    const cnt = $("#log-count");
-    if (cnt) cnt.textContent = lineCount + " řádků";
+    const c = $("#log-count");
+    if (c) c.textContent = lineCount + " řádků";
+    if (followOn() || near) logEl.scrollTop = logEl.scrollHeight;
+  }
 
-    if (follow || nearBottom) {
-      logEl.scrollTop = logEl.scrollHeight;
-      if (logFullEl) logFullEl.scrollTop = logFullEl.scrollHeight;
+  function setProgress(p, msg, phase, detail) {
+    const pct = Math.max(0, Math.min(100, Number(p) || 0));
+    $("#progress-fill").style.width = pct + "%";
+    $("#progress-label").textContent = Math.round(pct) + "%";
+    if (msg) $("#status-msg").textContent = msg;
+    if (detail !== undefined) $("#progress-detail").textContent = detail || "";
+    if (phase) {
+      const b = $("#phase-badge");
+      b.textContent = PHASE_CS[phase] || phase;
+      b.className = "badge phase " + phase;
     }
+  }
+
+  function renderEstimate(est, cfg) {
+    if (!est) return;
+    $("#estimate-box").classList.remove("hidden");
+    const mid = cfg?.model_id || "";
+    $("#estimate-plain").textContent =
+      `${mid || "Model"} · ~${est.recommended_vram_gib.toFixed(1)} GB VRAM · ` +
+      `~${est.est_train_hours.toFixed(2)} h · ${est.num_samples} samples · ` +
+      (est.fits_gpus ? "GPU OK" : "GPU těsně / ?");
+    const rows = [
+      ["Model", mid || "—"],
+      ["Metoda", cfg?.method || "—"],
+      ["Parametry", (est.model_params_total / 1e9).toFixed(1) + " B"],
+      ["Trainable", (est.trainable_params / 1e6).toFixed(1) + " M"],
+      ["VRAM", est.recommended_vram_gib.toFixed(1) + " GB"],
+      ["Samples", String(est.num_samples)],
+      ["Steps", String(est.total_steps)],
+      ["Čas", est.est_train_hours.toFixed(2) + " h"],
+    ];
+    $("#estimate-grid").innerHTML = rows
+      .map(([k, v]) => `<div class="k">${k}</div><div class="v">${v}</div>`)
+      .join("");
+  }
+
+  function showResult(ollamaName) {
+    if (!ollamaName) return;
+    $("#result-box").classList.remove("hidden");
+    $("#result-cmd").textContent = `ollama run ${ollamaName}`;
+  }
+
+  async function refreshStatus() {
+    try {
+      const st = await api("/api/status");
+      const detail = st.train_progress
+        ? `trénink ${st.train_progress.percent?.toFixed?.(1) ?? st.train_progress.percent}%` +
+          (st.train_progress.step != null
+            ? ` · step ${st.train_progress.step}/${st.train_progress.total_steps || "?"}`
+            : "") +
+          (st.train_progress.epoch != null ? ` · epoch ${st.train_progress.epoch}` : "")
+        : (st.progress_detail || "");
+      setProgress(st.progress, st.message, st.phase, detail);
+      if (st.estimate) renderEstimate(st.estimate, st.config);
+      if (st.phase === "done" && st.ollama_name) showResult(st.ollama_name);
+      $("#btn-start").disabled = !!st.running;
+      $("#btn-cancel").disabled = !st.running;
+      $("#btn-analyze").disabled = !!st.running;
+    } catch (_) { /* */ }
+  }
+
+  async function pollLogs() {
+    try {
+      const data = await api("/api/logs?after=" + logSeq);
+      if (data.lines?.length) appendLog(data.lines);
+      logSeq = data.seq || logSeq;
+    } catch (_) { /* */ }
+  }
+
+  function startPolling() {
+    if (pollTimer) clearInterval(pollTimer);
+    pollTimer = setInterval(async () => {
+      await refreshStatus();
+      await pollLogs();
+    }, 1000);
   }
 
   async function copyAllLogs() {
     try {
       const data = await api("/api/logs/full");
-      const text = data.text || logEl.textContent || "";
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        const ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.left = "-9999px";
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        ta.remove();
-      }
-      const toast = $("#copy-toast");
-      if (toast) {
-        toast.classList.remove("hidden");
-        toast.textContent = `Zkopírováno (${data.lines || "?"} řádků, ${data.bytes || "?"} B)`;
-        setTimeout(() => toast.classList.add("hidden"), 3500);
-      }
-      appendLog([`[ui] Zkopírovány všechny logy do schránky (${data.lines || "?"} řádků).`]);
+      await navigator.clipboard.writeText(data.text || "");
+      const t = $("#copy-toast");
+      t.classList.remove("hidden");
+      t.textContent = `Zkopírováno ${data.lines || "?"} řádků`;
+      setTimeout(() => t.classList.add("hidden"), 3000);
     } catch (e) {
-      // fallback: only visible buffer
       try {
         await navigator.clipboard.writeText(logEl.textContent || "");
-        alert("Zkopírován viditelný buffer (full API selhalo: " + e.message + ")");
+        alert("Zkopírován viditelný buffer");
       } catch (_) {
-        alert("Kopírování selhalo: " + e.message);
+        alert(e.message);
       }
     }
   }
 
-  async function downloadAllLogs() {
+  async function downloadLogs() {
     try {
       const res = await fetch("/api/logs/download", { headers: headers(false) });
-      if (res.status === 401) {
-        showAuth(true, { keepAppVisible: true });
-        throw new Error("Nejprve zadejte token");
-      }
       if (!res.ok) throw new Error(res.statusText);
       const blob = await res.blob();
       const a = document.createElement("a");
@@ -333,111 +297,43 @@
       a.click();
       URL.revokeObjectURL(a.href);
     } catch (e) {
-      alert("Stahování selhalo: " + e.message);
+      alert(e.message);
     }
   }
 
-  function setProgress(p, msg, phase) {
-    const pct = Math.max(0, Math.min(100, p || 0));
-    $("#progress-fill").style.width = pct + "%";
-    $("#progress-label").textContent = Math.round(pct) + "%";
-    if (msg) $("#status-msg").textContent = msg;
-    const badge = $("#phase-badge");
-    if (phase) {
-      badge.textContent = PHASE_CS[phase] || phase;
-      badge.className = "badge phase " + phase;
-    }
-  }
-
-  function renderEstimate(est, cfg) {
-    if (!est) return;
-    const box = $("#estimate-box");
-    const grid = $("#estimate-grid");
-    box.classList.remove("hidden");
-    const hours = est.est_train_hours;
-    const modelLabel = (cfg && cfg.model_id) ? cfg.model_id : "";
-    const plain =
-      (modelLabel ? `Model: ${modelLabel}. ` : "") +
-      (hours < 0.05
-        ? "Odhad: skoro okamžitě (málo dat)."
-        : hours < 1
-          ? `Odhad: asi ${Math.round(hours * 60)} minut učení.`
-          : `Odhad: asi ${hours.toFixed(1)} hodin učení.`) +
-      ` Paměť grafiky cca ${est.recommended_vram_gib.toFixed(0)} GB. ` +
-      (est.fits_gpus ? "Na detekované GPU by se to mohlo vejít." : "GPU je málo / žádná — pozor.");
-    $("#estimate-plain").textContent = plain;
-
-    const rows = [
-      ["Model", modelLabel || "—"],
-      ["Metoda", (cfg && cfg.method) || "—"],
-      ["Velikost", (est.model_params_total / 1e9).toFixed(1) + " B parametrů"],
-      ["Co se učí", (est.trainable_params / 1e6).toFixed(1) + " M (" + est.trainable_pct.toFixed(1) + " %)"],
-      ["Potřeba GPU", "cca " + est.recommended_vram_gib.toFixed(1) + " GB"],
-      ["Příklady", String(est.num_samples)],
-      ["Kroky", String(est.total_steps)],
-      ["Čas", est.est_train_hours.toFixed(2) + " h"],
-      ["Cena ~", "$" + est.est_cost_usd.toFixed(2)],
-      ["Vejde se?", est.fits_gpus ? "ANO" : "NE / ?"],
-    ];
-    grid.innerHTML = rows.map(([k, v]) =>
-      `<div class="k">${k}</div><div class="v">${v}</div>`
-    ).join("");
-  }
-
-  async function refreshStatus() {
+  async function startTraining() {
     try {
-      const st = await api("/api/status");
-      setProgress(st.progress, st.message, st.phase);
-      if (st.estimate) renderEstimate(st.estimate, st.config);
-      $("#btn-start").disabled = !!st.running;
-      $("#btn-cancel").disabled = !st.running;
-      $("#btn-analyze").disabled = !!st.running;
-    } catch (e) { /* */ }
-  }
-
-  async function pollLogs() {
-    try {
-      const data = await api("/api/logs?after=" + logSeq);
-      if (data.lines && data.lines.length) appendLog(data.lines);
-      logSeq = data.seq || logSeq;
-    } catch (e) { /* */ }
-  }
-
-  function startPolling() {
-    if (pollTimer) clearInterval(pollTimer);
-    pollTimer = setInterval(async () => {
+      const body = formPayload();
+      setProgress(2, "Počítám odhad…", "analyze", "");
+      appendLog(["=== START ===", `MODEL: ${body.model_id} · ${body.train_mode} · ${body.method}`]);
+      try {
+        const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
+        if (pre.estimate) renderEstimate(pre.estimate, { model_id: body.model_id, method: body.method });
+      } catch (e) {
+        appendLog(["Odhad: " + e.message]);
+      }
+      const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
+      appendLog([`Job: ${st.phase} — ${st.message}`]);
       await refreshStatus();
-      await pollLogs();
-    }, 1500);
-  }
-
-  async function loadEnv() {
-    try {
-      const env = await api("/api/env");
-      const gpus = env.gpus || [];
-      const badge = $("#gpu-badge");
-      if (!gpus.length) badge.textContent = "Grafická karta: žádná NVIDIA";
-      else if (gpus.length === 1)
-        badge.textContent = `GPU: ${gpus[0].name} (${Math.round(gpus[0].memory_mib / 1024)} GB)`;
-      else badge.textContent = `GPU: ${gpus.length}×`;
     } catch (e) {
-      $("#gpu-badge").textContent = "Grafická karta: ?";
+      appendLog(["CHYBA: " + e.message]);
+      alert(e.message);
     }
   }
 
-  // Events
-  $$('input[name="train_mode"]').forEach((r) => {
-    r.addEventListener("change", applyModeDefaults);
-  });
-  $("#uncensored")?.addEventListener("change", fillModelPresets);
+  // events
+  $$('input[name="train_mode"]').forEach((r) => r.addEventListener("change", applyModeDefaults));
+  $("#uncensored")?.addEventListener("change", fillPresets);
   $("#model_preset")?.addEventListener("change", syncModelId);
   $("#model_id_custom")?.addEventListener("input", syncModelId);
-  $("#no_limits")?.addEventListener("change", applyNoLimitsFields);
+  form.epochs?.addEventListener("input", () => { form.epochs.dataset.touched = "1"; });
+  form.learning_rate?.addEventListener("input", () => { form.learning_rate.dataset.touched = "1"; });
+  $("#ollama_name")?.addEventListener("input", () => { ollamaTouched = true; });
+  $("#identity_name")?.addEventListener("input", () => {
+    if (!ollamaTouched) $("#ollama_name").value = slugOllama($("#identity_name").value);
+  });
 
-  if (authRequired && !token) showAuth(true);
-  else showAuth(false);
-
-  $("#token-save").addEventListener("click", async () => {
+  $("#token-save")?.addEventListener("click", async () => {
     token = $("#token-input").value.trim();
     try {
       await api("/api/status");
@@ -445,146 +341,69 @@
       $("#token-error").classList.add("hidden");
       showAuth(false);
       boot();
-    } catch (e) {
+    } catch (_) {
       $("#token-error").classList.remove("hidden");
       token = "";
     }
   });
 
-  async function startTraining() {
-    try {
-      applyNoLimitsFields();
-      const body = formPayload();
-      if (!body.model_id || !String(body.model_id).trim()) {
-        alert("Vyberte nebo zadejte model.");
-        return;
-      }
-      if (!body.dataset_path || !String(body.dataset_path).trim()) {
-        alert("Zadejte cestu k datům.");
-        return;
-      }
-      // Live estimate immediately (before / with start)
-      setProgress(2, "Počítám odhad…", "analyze");
-      appendLog(["=== ZAČÍNÁM UČENÍ ==="]);
-      appendLog([`MODEL: ${body.model_id} (režim ${body.train_mode}, metoda ${body.method})`]);
-      try {
-        const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
-        if (pre.estimate) {
-          renderEstimate(pre.estimate, { model_id: body.model_id, method: body.method });
-          appendLog([
-            `ODHAD: VRAM ~${pre.estimate.recommended_vram_gib.toFixed(1)} GB | ` +
-            `${pre.estimate.est_train_hours.toFixed(2)} h | $${pre.estimate.est_cost_usd.toFixed(2)} | ` +
-            `${pre.estimate.num_samples} samples`
-          ]);
-        }
-      } catch (e) {
-        appendLog(["Odhad před startem selhal (pokračuji): " + e.message]);
-      }
-      appendLog([
-        `jméno AI: „${body.identity_name}“ | Ollama: ${body.ollama_name}`
-      ]);
-      if (body.teach_identity) {
-        appendLog([`Učení jména: ano (${body.identity_name})`]);
-      }
-      setProgress(5, "Startuji job…", "setup");
-      const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
-      appendLog([`Job spuštěn: ${st.phase || "?"} — ${st.message || ""}`]);
-      await refreshStatus();
-    } catch (err) {
-      console.error(err);
-      appendLog(["CHYBA: " + (err && err.message ? err.message : String(err))]);
-      alert("Start selhal: " + (err && err.message ? err.message : String(err)));
-    }
-  }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    await startTraining();
-  });
-
-  // Explicit click — bypasses HTML5 "invalid hidden field" submit block
-  $("#btn-start")?.addEventListener("click", async (e) => {
-    e.preventDefault();
-    await startTraining();
-  });
-
-  $("#btn-analyze").addEventListener("click", async () => {
+  form.addEventListener("submit", (e) => { e.preventDefault(); startTraining(); });
+  $("#btn-start")?.addEventListener("click", (e) => { e.preventDefault(); startTraining(); });
+  $("#btn-analyze")?.addEventListener("click", async () => {
     try {
       const body = formPayload();
       body.dry_run = true;
-      appendLog([`Analýza pro model: ${body.model_id}`]);
       const res = await api("/api/analyze", { method: "POST", body: JSON.stringify(body) });
       if (res.estimate) renderEstimate(res.estimate, { model_id: body.model_id, method: body.method });
-      appendLog(["Odhad hotov — nic se neučilo."]);
-    } catch (err) {
-      alert(err.message);
-    }
-  });
-
-  $("#btn-cancel").addEventListener("click", async () => {
-    try {
-      await api("/api/cancel", { method: "POST", body: "{}" });
-      appendLog(["Zastavení odesláno…"]);
-    } catch (err) {
-      alert(err.message);
-    }
-  });
-
-  $("#btn-clear-log")?.addEventListener("click", () => {
-    // Only clears the on-screen view — server still has full history for Copy/Download
-    logEl.textContent = "";
-    if (logFullEl) logFullEl.textContent = "";
-    lineCount = 0;
-    const cnt = $("#log-count");
-    if (cnt) cnt.textContent = "0 řádků (pohled vyčištěn, historie na serveru zůstává)";
-  });
-  $("#btn-copy-log")?.addEventListener("click", () => copyAllLogs());
-  $("#btn-download-log")?.addEventListener("click", () => downloadAllLogs());
-
-  $("#btn-formats").addEventListener("click", async () => {
-    try {
-      const data = await api("/api/formats");
-      $("#formats-body").textContent = data.markdown || "";
-      $("#modal").classList.remove("hidden");
+      appendLog([`Odhad pro ${body.model_id} hotov.`]);
     } catch (e) {
       alert(e.message);
     }
   });
-  $("#modal-close").addEventListener("click", () => $("#modal").classList.add("hidden"));
-  $("#modal").addEventListener("click", (e) => {
-    if (e.target.id === "modal") $("#modal").classList.add("hidden");
-  });
-
-  // Sync technical Ollama name from friendly identity name (unless user edits ollama manually)
-  let ollamaTouched = false;
-  $("#ollama_name")?.addEventListener("input", () => { ollamaTouched = true; });
-  $("#identity_name")?.addEventListener("input", () => {
-    if (!ollamaTouched) {
-      $("#ollama_name").value = slugOllama($("#identity_name").value);
+  $("#btn-cancel")?.addEventListener("click", async () => {
+    try {
+      await api("/api/cancel", { method: "POST", body: "{}" });
+      appendLog(["Zastavení odesláno…"]);
+    } catch (e) {
+      alert(e.message);
     }
+  });
+  $("#btn-copy-log")?.addEventListener("click", copyAllLogs);
+  $("#btn-download-log")?.addEventListener("click", downloadLogs);
+  $("#btn-clear-log")?.addEventListener("click", () => {
+    logEl.textContent = "";
+    lineCount = 0;
+    $("#log-count").textContent = "0 řádků (historie na serveru zůstává)";
   });
 
   async function boot() {
-    fillModelPresets();
+    fillPresets();
     applyModeDefaults();
-    applyNoLimitsFields();
-    if ($("#identity_name") && $("#ollama_name") && !ollamaTouched) {
-      $("#ollama_name").value = slugOllama($("#identity_name").value);
+    if (!ollamaTouched) $("#ollama_name").value = slugOllama($("#identity_name").value);
+    try {
+      const env = await api("/api/env");
+      const g = env.gpus || [];
+      $("#gpu-badge").textContent = g.length
+        ? `GPU: ${g[0].name} (${Math.round(g[0].memory_mib / 1024)} GB)`
+        : "GPU: žádná";
+    } catch (_) {
+      $("#gpu-badge").textContent = "GPU: ?";
     }
-    await loadEnv();
     await refreshStatus();
     await pollLogs();
     startPolling();
   }
 
-  fetch("/api/health").then((r) => r.json()).then((h) => {
-    if (h.auth_required && !token) showAuth(true);
-    else {
-      showAuth(false);
-      boot();
-    }
-  }).catch(() => {
-    if (!authRequired) boot();
-  });
+  fetch("/api/health")
+    .then((r) => r.json())
+    .then((h) => {
+      if (h.auth_required && !token) showAuth(true);
+      else {
+        showAuth(false);
+        boot();
+      }
+    })
+    .catch(() => {
+      if (!authRequired) boot();
+    });
 })();
