@@ -165,50 +165,58 @@ def _ensure_docker_access() -> None:
 def _try_install_nvidia_driver_debian() -> None:
     """
     On GCE G2/L4 the GPU is present in hardware but needs host drivers.
-    Prefer Google's installer when available; else proprietary nvidia-driver.
+    Debian 13 often has NO nvidia-driver apt package — use Google's installer.
     """
     if shutil.which("nvidia-smi"):
         r = _run(["nvidia-smi"], check=False)
         if r.returncode == 0 and "NVIDIA-SMI" in (r.stdout or ""):
             return
     console.print(
-        "[yellow]NVIDIA driver / nvidia-smi chybí — zkouším instalaci ovladače (GCE L4/T4)…[/]"
+        "[yellow]NVIDIA driver / nvidia-smi chybí — instaluji přes Google Cloud GPU installer…[/]"
     )
-    # Google CUDA / GPU installer (common on Deep Learning images; may exist as package)
-    scripts = [
-        r"""
+    # https://cloud.google.com/compute/docs/gpus/install-drivers-gpu
+    setup = r"""
 set -e
 export DEBIAN_FRONTEND=noninteractive
-# Fix apt first if nvidia list was broken
-rm -f /etc/apt/sources.list.d/nvidia-container-toolkit.list
 apt-get update -y || true
-# Google's open installer when present
-if apt-cache show google-nvidia-driver 2>/dev/null | grep -q Package; then
-  apt-get install -y google-nvidia-driver || true
+apt-get install -y ca-certificates curl python3 build-essential linux-headers-$(uname -r) || true
+# Prefer Google's CUDA/GPU installer (works on Debian 12/13 + G2 L4)
+cd /tmp
+curl -fsSL -o cuda_installer.pyz \
+  https://storage.googleapis.com/compute-gpu-installation-us/installer/latest/cuda_installer.pyz
+python3 cuda_installer.pyz install_driver
+"""
+    r = _run(_sudo_prefix() + ["bash", "-c", setup], check=False, capture=False)
+    if r.returncode != 0:
+        # Fallback: enable non-free and try Debian packages
+        console.print("[yellow]Google installer selhal — zkouším Debian non-free…[/]")
+        fallback = r"""
+set -e
+. /etc/os-release
+# enable non-free if missing
+if [ -f /etc/apt/sources.list.d/debian.sources ]; then
+  sed -i 's/Components: main$/Components: main contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources || true
 fi
-if [ -x /opt/deeplearning/install-driver.sh ]; then
-  /opt/deeplearning/install-driver.sh || true
-fi
-# Debian/Ubuntu proprietary meta package (works for L4 on many kernels)
-apt-get install -y linux-headers-$(uname -r) build-essential || true
-apt-get install -y nvidia-driver || apt-get install -y nvidia-driver-550 || apt-get install -y nvidia-open || true
-# If still no smi, try ubuntu drivers autoinstall
-if command -v ubuntu-drivers >/dev/null 2>&1; then
-  ubuntu-drivers autoinstall || true
-fi
-""",
-    ]
-    for s in scripts:
-        _run(_sudo_prefix() + ["bash", "-c", s], check=False, capture=False)
+apt-get update -y || true
+apt-get install -y nvidia-driver firmware-misc-nonfree || \
+  apt-get install -y nvidia-open-kernel-dkms nvidia-driver || true
+"""
+        _run(_sudo_prefix() + ["bash", "-c", fallback], check=False, capture=False)
+
     r = _run(["nvidia-smi"], check=False)
     if r.returncode != 0:
         console.print(
             "[red bold]GPU stále nevidí nvidia-smi.[/]\n"
-            "Na GCE G2/L4 po instalaci ovladače často pomůže [bold]reboot[/]:\n"
+            "Na GCE po instalaci ovladače skoro vždy potřebuješ [bold]reboot[/]:\n"
             "  sudo reboot\n"
-            "Pak: nvidia-smi  (mělo by ukázat NVIDIA L4)\n"
-            "Alternativa: vytvořit VM z image [cyan]pytorch-latest-gpu[/] "
-            "(deeplearning-platform-release) — ovladače už jsou hotové."
+            "Pak:\n"
+            "  nvidia-smi          # musí ukázat NVIDIA L4\n"
+            "  newgrp docker\n"
+            "Ruční instalace driveru:\n"
+            "  curl -fsSL -o /tmp/cuda_installer.pyz \\\n"
+            "    https://storage.googleapis.com/compute-gpu-installation-us/installer/latest/cuda_installer.pyz\n"
+            "  sudo python3 /tmp/cuda_installer.pyz install_driver\n"
+            "  sudo reboot\n"
         )
 
 
