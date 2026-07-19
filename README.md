@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LLM Fine-Tune Pipeline (Google Cloud + NVIDIA GPU → Ollama)
 
 Univerzální **Docker-first** Python pipeline pro fine-tuning LLM modelů na NVIDIA GPU (typicky Google Cloud VM), s automatickým exportem do **GGUF** a importem do **Ollama**.
@@ -162,3 +163,6 @@ python train_pipeline.py --run-dir outputs/run_XXXX --ollama-name my-model
 ## Licence
 
 MIT — použijte na vlastní riziko; sledujte licence base modelů a datasetů.
+=======
+# llm
+>>>>>>> 84acf00b1c820772f3260d5036366789f7d7adfb
