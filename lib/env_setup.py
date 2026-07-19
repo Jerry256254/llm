@@ -97,7 +97,55 @@ def _need_sudo() -> bool:
 
 
 def _sudo_prefix() -> list[str]:
-    return ["sudo"] if _need_sudo() else []
+    """Non-interactive sudo (-n) so apt never hangs waiting for a password."""
+    if not _need_sudo():
+        return []
+    return ["sudo", "-n"]
+
+
+def env_ready_for_train() -> tuple[bool, str]:
+    """
+    True if we can skip apt/driver install and go straight to Docker train.
+    Returns (ok, reason).
+    """
+    if not shutil.which("docker"):
+        return False, "docker chybí"
+    dr = _run(["docker", "ps"], check=False)
+    if dr.returncode != 0:
+        return False, "docker neběží / není přístup (zkuste: newgrp docker)"
+    if not shutil.which("nvidia-smi"):
+        return False, "nvidia-smi chybí"
+    smi = _run(["nvidia-smi", "-L"], check=False)
+    if smi.returncode != 0 or not (smi.stdout or "").strip():
+        return False, "GPU nevidí nvidia-smi"
+    return True, "docker + GPU OK"
+
+
+def _run_timeout(
+    cmd: list[str] | str,
+    *,
+    timeout: int = 180,
+    check: bool = False,
+    shell: bool = False,
+) -> subprocess.CompletedProcess:
+    """Run command with timeout; never block forever on apt/sudo."""
+    console.print(f"  $ {cmd if isinstance(cmd, str) else ' '.join(cmd)}  [timeout {timeout}s]")
+    try:
+        return subprocess.run(
+            cmd,
+            check=check,
+            capture_output=False,
+            text=True,
+            shell=shell,
+            timeout=timeout,
+            env=os.environ.copy(),
+        )
+    except subprocess.TimeoutExpired:
+        console.print(f"[red]Timeout po {timeout}s — přeskakuji[/]")
+        return subprocess.CompletedProcess(cmd, returncode=124)
+    except FileNotFoundError as e:
+        console.print(f"[red]Příkaz nenalezen: {e}[/]")
+        return subprocess.CompletedProcess(cmd, returncode=127)
 
 
 def _fix_broken_nvidia_apt_list() -> None:
@@ -223,35 +271,60 @@ apt-get install -y nvidia-driver firmware-misc-nonfree || \
 
 def install_host_packages(distro: Distro) -> None:
     """Install Docker, NVIDIA driver (if needed), Container Toolkit, curl, etc."""
-    console.print("[bold cyan]Preparing host packages…[/]")
+    ready, why = env_ready_for_train()
+    if ready:
+        console.print(f"[green]Host už je připravený ({why}) — přeskakuji apt install.[/]")
+        return
+
+    console.print(f"[bold cyan]Preparing host packages…[/] (důvod: {why})")
+    # Detect passwordless sudo; if not, don't hang
+    if _need_sudo():
+        probe = subprocess.run(
+            ["sudo", "-n", "true"],
+            capture_output=True,
+            text=True,
+        )
+        if probe.returncode != 0:
+            console.print(
+                "[yellow]sudo vyžaduje heslo (nebo není nastavené). "
+                "Přeskakuji apt — Docker/GPU už by měly být nainstalované ručně. "
+                "Pro plný auto-setup: sudo visudo / NOPASSWD, nebo zaškrtněte "
+                "„Přeskočit instalaci balíčků“ ve webu.[/]"
+            )
+            return
 
     if distro == Distro.DEBIAN:
         _fix_broken_nvidia_apt_list()
+        env_apt = "export DEBIAN_FRONTEND=noninteractive; "
         cmds = [
-            "apt-get update -y",
-            "apt-get install -y ca-certificates curl gnupg lsb-release "
+            env_apt + "apt-get update -y",
+            env_apt + "apt-get install -y ca-certificates curl gnupg lsb-release "
             "python3-pip python3-venv git pciutils",
         ]
         for c in cmds:
-            console.print(f"  $ {c}")
-            _run(_sudo_prefix() + ["bash", "-c", c], check=False, capture=False)
+            _run_timeout(_sudo_prefix() + ["bash", "-c", c], timeout=180, check=False)
 
         # Docker engine if missing
         if not shutil.which("docker"):
             console.print("[yellow]Installing Docker (get.docker.com)…[/]")
-            _run(
-                "curl -fsSL https://get.docker.com | " + ("sudo " if _need_sudo() else "") + "sh",
+            sudo = "sudo -n " if _need_sudo() else ""
+            _run_timeout(
+                f"curl -fsSL https://get.docker.com | {sudo}sh",
+                timeout=300,
                 shell=True,
-                capture=False,
+                check=False,
             )
-        # start docker
-        _run(_sudo_prefix() + ["systemctl", "enable", "--now", "docker"], check=False, capture=False)
+        _run_timeout(
+            _sudo_prefix() + ["systemctl", "enable", "--now", "docker"],
+            timeout=60,
+            check=False,
+        )
         _ensure_docker_access()
 
-        # Host NVIDIA driver (G2 L4 etc.)
-        _try_install_nvidia_driver_debian()
+        # Host NVIDIA driver only if smi missing
+        if not shutil.which("nvidia-smi") or _run(["nvidia-smi", "-L"], check=False).returncode != 0:
+            _try_install_nvidia_driver_debian()
 
-        # NVIDIA Container Toolkit
         if not _nvidia_runtime_available():
             _install_nvidia_container_toolkit_debian()
 

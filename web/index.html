@@ -255,7 +255,7 @@
               <label class="check"><input type="checkbox" name="dry_run" /> Jen spočítat odhad (neučit)</label>
               <label class="check"><input type="checkbox" name="skip_gguf" /> Nepřevádět do GGUF</label>
               <label class="check"><input type="checkbox" name="skip_ollama" /> Neimportovat do Ollama</label>
-              <label class="check"><input type="checkbox" name="skip_setup" /> Přeskočit instalaci balíčků na serveru</label>
+              <label class="check"><input type="checkbox" name="skip_setup" id="skip_setup" checked /> Přeskočit instalaci balíčků (doporučeno — jinak se job zasekne na apt)</label>
               <label class="check"><input type="checkbox" name="allow_over_limit" checked /> I když odhad překročí limity, stejně učit</label>
             </div>
             <input type="hidden" name="lora_alpha" value="128" />

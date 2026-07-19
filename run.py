@@ -378,11 +378,22 @@ def run_web(args: argparse.Namespace) -> int:
             try:
                 from lib.job_manager import manager
                 manager.log("Automatický setup (balíčky/GPU, bez Docker buildu)…")
-                manager.prepare_env(
-                    install_packages=True,
-                    framework="unsloth",
-                    build_image=False,
-                )
+                from lib.env_setup import env_ready_for_train
+                ok, why = env_ready_for_train()
+                if ok:
+                    manager.log(f"Host už připraven ({why}) — bez apt.")
+                    manager.prepare_env(
+                        install_packages=False,
+                        framework="unsloth",
+                        build_image=False,
+                    )
+                else:
+                    manager.log(f"Host neúplný ({why}) — zkusím lehký setup…")
+                    manager.prepare_env(
+                        install_packages=True,
+                        framework="unsloth",
+                        build_image=False,
+                    )
                 manager.log("Host setup hotov. Docker image se postaví až při Startu (1×).")
             except Exception as e:
                 from lib.job_manager import manager

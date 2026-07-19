@@ -16,7 +16,14 @@ from typing import Any, Callable, Optional
 
 from .analysis import analyze
 from .convert_gguf import convert_to_gguf
-from .env_setup import Distro, EnvReport, GpuInfo, detect_gpus, prepare_environment
+from .env_setup import (
+    Distro,
+    EnvReport,
+    GpuInfo,
+    detect_gpus,
+    env_ready_for_train,
+    prepare_environment,
+)
 from .interactive import (
     KNOWN_MODELS,
     PipelineConfig,
@@ -491,32 +498,49 @@ class JobManager:
         skip_train = bool(data.get("skip_train"))
         # no_limits always allows over estimate; allow_over_limit also
         allow_over = bool(data.get("allow_over_limit")) or bool(data.get("no_limits"))
-        install = not bool(data.get("skip_setup"))
+        user_skip = bool(data.get("skip_setup"))
+        ready, ready_why = env_ready_for_train()
+        # Skip apt if user asked OR host already has docker+GPU (prevents hang on sudo/apt)
+        install = (not user_skip) and (not ready)
+        if user_skip:
+            self.log("Setup balíčků přeskočen (skip_setup).")
+        elif ready:
+            self.log(f"Setup balíčků přeskočen — {ready_why}")
+        else:
+            self.log(f"Host není kompletní ({ready_why}) — zkusím setup (max. jednotky minut)…")
 
         # Setup (host packages only — Docker image se staví až při tréninku, 1× se zámkem)
-        self._set(phase=JobPhase.SETUP.value, message="Setup prostředí…", progress=5)
-        if not self._prepared or install:
-            try:
-                self.prepare_env(
-                    install_packages=install,
-                    framework=data.get("framework") or "unsloth",
-                    build_image=False,
-                )
-            except Exception:
-                if not dry_run and not skip_train:
-                    raise
-                self._env = self._env or EnvReport(
-                    distro=Distro.UNKNOWN,
-                    distro_pretty="unknown",
-                    docker_ok=False,
-                    nvidia_runtime_ok=False,
-                    gpus=detect_gpus(),
-                    cuda_host=None,
-                )
+        self._set(phase=JobPhase.SETUP.value, message="Kontrola prostředí…", progress=5)
+        self.log("Kontrola Docker + GPU…")
+        try:
+            self.prepare_env(
+                install_packages=install,
+                framework=data.get("framework") or "unsloth",
+                build_image=False,
+            )
+            self._set(progress=10, message="Prostředí OK, jdu na odhad…")
+            self.log("Kontrola prostředí hotová.")
+        except Exception as e:
+            self.log(f"Setup varování: {e}")
+            if not dry_run and not skip_train and not ready:
+                # still try — maybe docker works without fresh apt
+                self.log("Pokračuji i po chybě setupu (možná už máte docker+GPU)…")
+            self._env = self._env or EnvReport(
+                distro=Distro.UNKNOWN,
+                distro_pretty="unknown",
+                docker_ok=ready,
+                nvidia_runtime_ok=ready,
+                gpus=detect_gpus(),
+                cuda_host=None,
+            )
 
         self._check_cancel()
         cfg = self.build_config(data)
-        gpus: list[GpuInfo] = self._env.gpus if self._env else detect_gpus()
+        gpus: list[GpuInfo] = (self._env.gpus if self._env and self._env.gpus else detect_gpus())
+        if not gpus:
+            self.log("VAROVÁNÍ: žádná GPU v detekci — trénink může selhat.")
+        else:
+            self.log(f"GPU: {gpus[0].name} ({gpus[0].memory_mib} MiB)")
 
         # Analyze FIRST (live estimate in UI before long docker build)
         self._set(phase=JobPhase.ANALYZE.value, message="Počítám odhad paměti a času…", progress=12)

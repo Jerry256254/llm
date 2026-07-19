@@ -45,7 +45,7 @@ class TrainRequest(BaseModel):
     max_cost_usd: float = 999999.0
     gpu_hourly_usd: float = 0.35
     dry_run: bool = False
-    skip_setup: bool = False
+    skip_setup: bool = True  # default: don't re-run apt (was hanging jobs at 5%)
     skip_train: bool = False
     skip_gguf: bool = False
     skip_ollama: bool = False
