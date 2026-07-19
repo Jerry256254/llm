@@ -99,11 +99,125 @@ def _sudo_prefix() -> list[str]:
     return ["sudo"] if _need_sudo() else []
 
 
+def _fix_broken_nvidia_apt_list() -> None:
+    """Remove apt source files that accidentally contain HTML (old broken NVIDIA URL)."""
+    path = Path("/etc/apt/sources.list.d/nvidia-container-toolkit.list")
+    if not path.exists():
+        return
+    try:
+        head = path.read_text(encoding="utf-8", errors="ignore")[:200].lower()
+    except OSError:
+        return
+    if "<!doctype" in head or "<html" in head or "github.com/nvidia" in head and "deb " not in head:
+        console.print(f"[yellow]Odstraňuji rozbitý apt zdroj:[/] {path}")
+        _run(_sudo_prefix() + ["rm", "-f", str(path)], check=False, capture=False)
+
+
+def _install_nvidia_container_toolkit_debian() -> None:
+    """
+    Official stable/deb repo (NOT distro-specific URL — those now return HTML pages).
+    See: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
+    """
+    console.print("[yellow]Instaluji NVIDIA Container Toolkit (stable/deb)…[/]")
+    setup = r"""
+set -e
+# drop any previous broken list
+rm -f /etc/apt/sources.list.d/nvidia-container-toolkit.list
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+  gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+# ALWAYS use stable/deb — distribution-specific paths return HTML and break apt
+curl -fsSL https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+  sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+  tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+# sanity: must look like an apt source, not HTML
+if head -1 /etc/apt/sources.list.d/nvidia-container-toolkit.list | grep -qiE '<!doctype|<html'; then
+  echo "ERROR: nvidia apt list is HTML, not a repo file" >&2
+  rm -f /etc/apt/sources.list.d/nvidia-container-toolkit.list
+  exit 1
+fi
+apt-get update -y
+apt-get install -y nvidia-container-toolkit
+nvidia-ctk runtime configure --runtime=docker || true
+systemctl restart docker || true
+"""
+    _run(_sudo_prefix() + ["bash", "-c", setup], check=False, capture=False)
+
+
+def _ensure_docker_access() -> None:
+    """Add current user to docker group when possible."""
+    if not shutil.which("docker"):
+        return
+    user = os.environ.get("SUDO_USER") or os.environ.get("USER") or ""
+    if not user or user == "root":
+        try:
+            import pwd
+            user = pwd.getpwuid(os.getuid()).pw_name
+        except Exception:
+            user = ""
+    if user and user != "root":
+        _run(_sudo_prefix() + ["usermod", "-aG", "docker", user], check=False, capture=False)
+        console.print(
+            f"[cyan]Uživatel {user} přidán do skupiny docker. "
+            f"Pokud docker ps selže, odhlas/přihlas se nebo: newgrp docker[/]"
+        )
+
+
+def _try_install_nvidia_driver_debian() -> None:
+    """
+    On GCE G2/L4 the GPU is present in hardware but needs host drivers.
+    Prefer Google's installer when available; else proprietary nvidia-driver.
+    """
+    if shutil.which("nvidia-smi"):
+        r = _run(["nvidia-smi"], check=False)
+        if r.returncode == 0 and "NVIDIA-SMI" in (r.stdout or ""):
+            return
+    console.print(
+        "[yellow]NVIDIA driver / nvidia-smi chybí — zkouším instalaci ovladače (GCE L4/T4)…[/]"
+    )
+    # Google CUDA / GPU installer (common on Deep Learning images; may exist as package)
+    scripts = [
+        r"""
+set -e
+export DEBIAN_FRONTEND=noninteractive
+# Fix apt first if nvidia list was broken
+rm -f /etc/apt/sources.list.d/nvidia-container-toolkit.list
+apt-get update -y || true
+# Google's open installer when present
+if apt-cache show google-nvidia-driver 2>/dev/null | grep -q Package; then
+  apt-get install -y google-nvidia-driver || true
+fi
+if [ -x /opt/deeplearning/install-driver.sh ]; then
+  /opt/deeplearning/install-driver.sh || true
+fi
+# Debian/Ubuntu proprietary meta package (works for L4 on many kernels)
+apt-get install -y linux-headers-$(uname -r) build-essential || true
+apt-get install -y nvidia-driver || apt-get install -y nvidia-driver-550 || apt-get install -y nvidia-open || true
+# If still no smi, try ubuntu drivers autoinstall
+if command -v ubuntu-drivers >/dev/null 2>&1; then
+  ubuntu-drivers autoinstall || true
+fi
+""",
+    ]
+    for s in scripts:
+        _run(_sudo_prefix() + ["bash", "-c", s], check=False, capture=False)
+    r = _run(["nvidia-smi"], check=False)
+    if r.returncode != 0:
+        console.print(
+            "[red bold]GPU stále nevidí nvidia-smi.[/]\n"
+            "Na GCE G2/L4 po instalaci ovladače často pomůže [bold]reboot[/]:\n"
+            "  sudo reboot\n"
+            "Pak: nvidia-smi  (mělo by ukázat NVIDIA L4)\n"
+            "Alternativa: vytvořit VM z image [cyan]pytorch-latest-gpu[/] "
+            "(deeplearning-platform-release) — ovladače už jsou hotové."
+        )
+
+
 def install_host_packages(distro: Distro) -> None:
-    """Install Docker, NVIDIA Container Toolkit, curl, etc. on the host."""
+    """Install Docker, NVIDIA driver (if needed), Container Toolkit, curl, etc."""
     console.print("[bold cyan]Preparing host packages…[/]")
 
     if distro == Distro.DEBIAN:
+        _fix_broken_nvidia_apt_list()
         cmds = [
             "apt-get update -y",
             "apt-get install -y ca-certificates curl gnupg lsb-release "
@@ -121,24 +235,16 @@ def install_host_packages(distro: Distro) -> None:
                 shell=True,
                 capture=False,
             )
+        # start docker
+        _run(_sudo_prefix() + ["systemctl", "enable", "--now", "docker"], check=False, capture=False)
+        _ensure_docker_access()
+
+        # Host NVIDIA driver (G2 L4 etc.)
+        _try_install_nvidia_driver_debian()
 
         # NVIDIA Container Toolkit
         if not _nvidia_runtime_available():
-            console.print("[yellow]Installing NVIDIA Container Toolkit…[/]")
-            setup = r"""
-set -e
-distribution=$(. /etc/os-release; echo ${ID}${VERSION_ID})
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
-  gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
-curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
-  sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-  tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-apt-get update -y
-apt-get install -y nvidia-container-toolkit
-nvidia-ctk runtime configure --runtime=docker
-systemctl restart docker || true
-"""
-            _run(_sudo_prefix() + ["bash", "-c", setup], capture=False)
+            _install_nvidia_container_toolkit_debian()
 
     elif distro == Distro.FEDORA:
         cmds = [
@@ -157,6 +263,7 @@ systemctl restart docker || true
                 "systemctl enable --now docker || true",
             ]:
                 _run(_sudo_prefix() + ["bash", "-c", c], check=False, capture=False)
+        _ensure_docker_access()
 
         if not _nvidia_runtime_available():
             console.print("[yellow]Installing NVIDIA Container Toolkit…[/]")

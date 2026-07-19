@@ -16,9 +16,11 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import socket
 import subprocess
 import sys
+import urllib.request
 import venv
 from pathlib import Path
 
@@ -26,6 +28,7 @@ ROOT = Path(__file__).resolve().parent
 VENV_DIR = ROOT / ".venv"
 REQ_FILE = ROOT / "requirements.txt"
 MARKER = VENV_DIR / ".deps_ok"
+GET_PIP_URL = "https://bootstrap.pypa.io/get-pip.py"
 
 # Import-name -> pip package (for diagnostics only)
 REQUIRED_IMPORTS = (
@@ -42,7 +45,12 @@ REQUIRED_IMPORTS = (
 def _venv_python() -> Path:
     if os.name == "nt":
         return VENV_DIR / "Scripts" / "python.exe"
-    return VENV_DIR / "bin" / "python"
+    # Debian sometimes only creates python3
+    for name in ("python", "python3"):
+        p = VENV_DIR / "bin" / name
+        if p.exists():
+            return p
+    return VENV_DIR / "bin" / "python3"
 
 
 def _in_project_venv() -> bool:
@@ -68,17 +76,145 @@ def _run(cmd: list[str], *, check: bool = True) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, check=check)
 
 
-def _create_venv() -> None:
+def _rm_broken_venv() -> None:
+    if VENV_DIR.exists():
+        print(f"[run.py] Mažu neúplné .venv: {VENV_DIR}", flush=True)
+        shutil.rmtree(VENV_DIR, ignore_errors=True)
+
+
+def _try_apt_install_venv() -> bool:
+    """Best-effort: install python3-venv via sudo (GCE / Ubuntu)."""
+    if os.geteuid() == 0:
+        sudo: list[str] = []
+    elif shutil.which("sudo"):
+        sudo = ["sudo"]
+    else:
+        return False
+    # Detect versioned package
+    ver = f"{sys.version_info.major}.{sys.version_info.minor}"
+    packages = [f"python{ver}-venv", "python3-venv", "python3-pip"]
+    print("[run.py] Zkouším doinstalovat python3-venv přes apt (může chtít heslo sudo)…", flush=True)
+    r = subprocess.run(
+        sudo + ["apt-get", "update", "-y"],
+        check=False,
+    )
+    r2 = subprocess.run(
+        sudo + ["apt-get", "install", "-y"] + packages,
+        check=False,
+    )
+    return r2.returncode == 0
+
+
+def _bootstrap_pip(python: Path) -> None:
+    """Install pip into a venv that was created with --without-pip."""
+    # Already has pip?
+    r = subprocess.run([str(python), "-m", "pip", "--version"], capture_output=True, text=True)
+    if r.returncode == 0:
+        return
+    print("[run.py] Do venv instaluji pip (get-pip.py)…", flush=True)
+    get_pip = ROOT / ".get-pip.py"
+    try:
+        urllib.request.urlretrieve(GET_PIP_URL, get_pip)
+        _run([str(python), str(get_pip)], check=True)
+    finally:
+        if get_pip.exists():
+            get_pip.unlink(missing_ok=True)  # type: ignore[arg-type]
+
+
+def _create_venv() -> Path:
+    """
+    Create project .venv. Handles Debian/Ubuntu without ensurepip:
+    1) normal venv + pip
+    2) venv --without-pip + get-pip.py
+    3) sudo apt install python3-venv and retry
+    """
     print(f"[run.py] Vytvářím virtuální prostředí: {VENV_DIR}", flush=True)
     VENV_DIR.parent.mkdir(parents=True, exist_ok=True)
-    builder = venv.EnvBuilder(with_pip=True, clear=False, upgrade_deps=False)
-    builder.create(str(VENV_DIR))
+
+    def try_with_pip() -> None:
+        builder = venv.EnvBuilder(with_pip=True, clear=True, upgrade_deps=False)
+        builder.create(str(VENV_DIR))
+
+    def try_without_pip() -> None:
+        # clear broken partial env first
+        _rm_broken_venv()
+        print("[run.py] ensurepip chybí — zkouším venv bez pip + get-pip.py …", flush=True)
+        builder = venv.EnvBuilder(with_pip=False, clear=True, upgrade_deps=False)
+        builder.create(str(VENV_DIR))
+        py = _venv_python()
+        if not py.exists():
+            raise RuntimeError(f"Po vytvoření venv chybí interpreter: {py}")
+        _bootstrap_pip(py)
+
+    errors: list[str] = []
+
+    try:
+        try_with_pip()
+    except Exception as e1:
+        errors.append(f"venv+pip: {e1}")
+        try:
+            try_without_pip()
+        except Exception as e2:
+            errors.append(f"venv--without-pip: {e2}")
+            # apt + retry
+            if _try_apt_install_venv():
+                try:
+                    _rm_broken_venv()
+                    try_with_pip()
+                except Exception as e3:
+                    errors.append(f"po apt: {e3}")
+                    try:
+                        try_without_pip()
+                    except Exception as e4:
+                        errors.append(f"po apt without-pip: {e4}")
+                        _print_venv_help(errors)
+                        raise SystemExit(1) from e4
+            else:
+                _print_venv_help(errors)
+                raise SystemExit(1) from e2
+
+    py = _venv_python()
+    if not py.exists():
+        _print_venv_help(errors + ["python v .venv/bin nenalezen"])
+        raise SystemExit(1)
+    # ensure pip exists even if with_pip left a broken state
+    try:
+        _bootstrap_pip(py)
+    except Exception as e:
+        print(f"[run.py] Varování: bootstrap pip: {e}", flush=True)
+    return py
+
+
+def _print_venv_help(errors: list[str]) -> None:
+    ver = f"{sys.version_info.major}.{sys.version_info.minor}"
+    print(
+        "\n[run.py] CHYBA: nejde vytvořit .venv (na GCE/Debian často chybí python3-venv).\n"
+        "\n"
+        "Spusťte jednou s právy root/sudo:\n"
+        f"  sudo apt-get update\n"
+        f"  sudo apt-get install -y python{ver}-venv python3-pip python3-venv\n"
+        f"  rm -rf {VENV_DIR}\n"
+        f"  python3 run.py\n"
+        "\n"
+        "Nebo ručně bez ensurepip:\n"
+        f"  rm -rf {VENV_DIR}\n"
+        f"  python3 -m venv --without-pip {VENV_DIR}\n"
+        f"  curl -sS {GET_PIP_URL} -o /tmp/get-pip.py\n"
+        f"  {VENV_DIR}/bin/python3 /tmp/get-pip.py\n"
+        f"  {VENV_DIR}/bin/pip install -r requirements.txt\n"
+        f"  {VENV_DIR}/bin/python run.py\n"
+        "\n"
+        f"Detaily: {'; | '.join(errors)}\n",
+        file=sys.stderr,
+        flush=True,
+    )
 
 
 def _pip_install(python: Path) -> None:
     if not REQ_FILE.exists():
         raise FileNotFoundError(f"Chybí {REQ_FILE}")
-    # upgrade pip first (helps on older venv bootstrap)
+    # ensure pip module works
+    _bootstrap_pip(python)
     _run([str(python), "-m", "pip", "install", "--upgrade", "pip", "setuptools", "wheel"], check=False)
     print(f"[run.py] Instaluji závislosti z {REQ_FILE.name} …", flush=True)
     _run([str(python), "-m", "pip", "install", "-r", str(REQ_FILE)])
@@ -91,7 +227,6 @@ def _reexec_in_venv(argv: list[str]) -> None:
     if not py.exists():
         raise RuntimeError(f"Venv python neexistuje: {py}")
     print(f"[run.py] Restartuji v .venv: {py}", flush=True)
-    # os.execv replaces process — no return
     os.execv(str(py), [str(py), str(ROOT / "run.py"), *argv])
 
 
@@ -100,7 +235,6 @@ def ensure_runtime(argv: list[str]) -> None:
     Guarantee we run inside project .venv with all host deps installed.
     May os.execv() and never return.
     """
-    # Allow skip for advanced users
     if os.environ.get("LLM_SKIP_BOOTSTRAP") == "1":
         return
 
@@ -108,18 +242,23 @@ def ensure_runtime(argv: list[str]) -> None:
     need_venv = not _in_project_venv()
 
     if need_venv:
+        # Broken partial venv from previous failed ensurepip attempt
+        if VENV_DIR.exists() and not py.exists():
+            _rm_broken_venv()
+            py = _venv_python()
+
         if not py.exists():
+            py = _create_venv()
+
+        # pip missing inside existing venv?
+        probe = subprocess.run([str(py), "-m", "pip", "--version"], capture_output=True)
+        if probe.returncode != 0:
             try:
-                _create_venv()
+                _bootstrap_pip(py)
             except Exception as e:
-                print(
-                    f"[run.py] CHYBA: nelze vytvořit .venv ({e}).\n"
-                    f"  Manuálně: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
-                    file=sys.stderr,
-                    flush=True,
-                )
+                _print_venv_help([str(e)])
                 raise SystemExit(1) from e
-        # Install deps with venv pip if marker missing or force
+
         if not MARKER.exists() or os.environ.get("LLM_FORCE_REINSTALL") == "1":
             try:
                 _pip_install(py)
@@ -149,7 +288,6 @@ def ensure_runtime(argv: list[str]) -> None:
                 flush=True,
             )
             raise SystemExit(1) from e
-        # re-check
         missing = _missing_imports()
         if missing:
             print(
