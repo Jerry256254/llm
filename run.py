@@ -373,6 +373,13 @@ def run_web(args: argparse.Namespace) -> int:
     app = create_app(access_token=token)
 
     # Background: only packages + GPU detect — NOT docker image (avoids dual builds)
+    # Fix HF cache ownership so token file can be written without hf auth login
+    try:
+        from lib.model_source import fix_hf_cache_permissions
+        fix_hf_cache_permissions()
+    except Exception:
+        pass
+
     if not args.skip_setup:
         def _bg_setup():
             try:

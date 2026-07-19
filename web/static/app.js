@@ -14,26 +14,26 @@
   const logEl = $("#log");
   const form = $("#train-form");
 
-  // HF training bases (Ollama names like gemma4:e4b are NOT training checkpoints)
+  // HF training bases. Ollama names (qwen3.5:2b) ≠ HF IDs — mapped below.
+  // Prefer *-Base for "od nuly" full train; chat models also work.
   const PRESETS = {
     uncensored: [
-      { id: "google/gemma-3-1b-pt", label: "Gemma 3 · 1B (novější, L4 OK)" },
-      { id: "google/gemma-3-4b-pt", label: "Gemma 3 · 4B (silnější, víc VRAM)" },
-      { id: "google/gemma-2-2b", label: "Gemma 2 · 2B" },
-      { id: "unsloth/llama-3.2-1b", label: "Llama 3.2 · 1B (výchozí test)" },
-      { id: "unsloth/llama-3.2-3b", label: "Llama 3.2 · 3B" },
-      { id: "Qwen/Qwen2.5-1.5B", label: "Qwen 2.5 · 1.5B" },
-      { id: "Qwen/Qwen2.5-3B", label: "Qwen 2.5 · 3B" },
-      { id: "Qwen/Qwen2.5-7B", label: "Qwen 2.5 · 7B (těsně na 24GB full)" },
-      { id: "unsloth/meta-llama-3.1-8b", label: "Llama 3.1 · 8B" },
-      { id: "__custom__", label: "Vlastní HF ID…" },
+      { id: "Qwen/Qwen3.5-0.8B-Base", label: "Qwen3.5 · 0.8B Base (≈ ollama qwen3.5:0.8b) · L4" },
+      { id: "Qwen/Qwen3.5-2B-Base", label: "Qwen3.5 · 2B Base (≈ qwen3.5:2b) · L4 ★" },
+      { id: "Qwen/Qwen3.5-4B-Base", label: "Qwen3.5 · 4B Base (≈ qwen3.5:4b) · L4" },
+      { id: "Qwen/Qwen3.5-9B-Base", label: "Qwen3.5 · 9B Base (≈ qwen3.5:9b) · full těsné" },
+      { id: "Qwen/Qwen3.5-0.8B", label: "Qwen3.5 · 0.8B (chat/post-train)" },
+      { id: "Qwen/Qwen3.5-2B", label: "Qwen3.5 · 2B (chat/post-train)" },
+      { id: "Qwen/Qwen3.5-4B", label: "Qwen3.5 · 4B (chat/post-train)" },
+      { id: "Qwen/Qwen2.5-1.5B", label: "Qwen2.5 · 1.5B (starší)" },
+      { id: "unsloth/llama-3.2-1b", label: "Llama 3.2 · 1B" },
+      { id: "__custom__", label: "Vlastní (HF / ollama:qwen3.5:2b / cesta)…" },
     ],
     instruct: [
-      { id: "google/gemma-3-1b-it", label: "Gemma 3 · 1B Instruct" },
-      { id: "google/gemma-3-4b-it", label: "Gemma 3 · 4B Instruct" },
-      { id: "unsloth/llama-3.2-1b-instruct", label: "Llama 3.2 · 1B Instruct" },
-      { id: "unsloth/llama-3.2-3b-instruct", label: "Llama 3.2 · 3B Instruct" },
-      { id: "__custom__", label: "Vlastní HF ID…" },
+      { id: "Qwen/Qwen3.5-0.8B", label: "Qwen3.5 · 0.8B Instruct-like" },
+      { id: "Qwen/Qwen3.5-2B", label: "Qwen3.5 · 2B Instruct-like" },
+      { id: "Qwen/Qwen3.5-4B", label: "Qwen3.5 · 4B Instruct-like" },
+      { id: "__custom__", label: "Vlastní…" },
     ],
   };
 
@@ -112,12 +112,21 @@
     return form.querySelector('input[name="train_mode"]:checked')?.value || "from_scratch";
   }
 
-  function fillPresets() {
-    const list = $("#uncensored")?.checked !== false ? PRESETS.uncensored : PRESETS.instruct;
+  async function fillPresets() {
+    const list = ($("#uncensored")?.checked !== false ? PRESETS.uncensored : PRESETS.instruct).slice();
+    // prepend local Ollama models
+    try {
+      const models = await api("/api/models");
+      const ollama = (models || []).filter((m) => m.source === "ollama");
+      ollama.reverse().forEach((m) => {
+        list.unshift({ id: m.id, label: m.label || m.id });
+      });
+    } catch (_) { /* */ }
     const sel = $("#model_preset");
     const prev = sel.value;
-    sel.innerHTML = list.map((p) => `<option value="${p.id}">${p.label}</option>`).join("");
+    sel.innerHTML = list.map((p) => `<option value="${p.id}">${p.label || p.id}</option>`).join("");
     if (list.some((p) => p.id === prev)) sel.value = prev;
+    else if (list[0]) sel.value = list[0].id;
     syncModelId();
   }
 
@@ -172,6 +181,9 @@
     }
     obj.train_mode = selectedMode();
     obj.model_id = $("#model_id").value;
+    // optional HF token from form
+    const hft = ($("#hf_token")?.value || "").trim();
+    if (hft) obj.hf_token = hft;
     const identity = (obj.identity_name || "Model").trim();
     obj.identity_name = identity;
     if (!ollamaTouched) obj.ollama_name = slugOllama(identity);

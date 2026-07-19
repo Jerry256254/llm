@@ -1,5 +1,5 @@
-# Training image r4 — PEFT + TRL (stable with torch 2.5.1)
-# docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0-r4 .
+# r5 — PEFT stack + transformers new enough for Qwen3.5 / Gemma3
+# docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0-r5 .
 FROM pytorch/pytorch:2.5.1-cuda12.1-cudnn9-devel
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -14,25 +14,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgomp1 ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# All deps for transformers / peft / trl SFTTrainer (incl. rich — required by trl)
+# Newer transformers for Qwen3.5 (qwen3_5 arch). No unsloth (breaks torch).
+# Explicitly avoid/remove torchao (needs torch.int1 / torch>=2.11).
 RUN pip install --upgrade pip setuptools wheel \
  && pip install --no-cache-dir \
-      "transformers==4.46.3" \
-      "tokenizers==0.20.3" \
-      "datasets==3.2.0" \
-      "accelerate==1.2.1" \
-      "peft==0.13.2" \
-      "trl==0.11.4" \
-      "bitsandbytes==0.45.0" \
-      "sentencepiece==0.2.0" \
-      "protobuf==5.29.2" \
-      "scipy==1.14.1" \
-      "einops==0.8.0" \
+      "transformers>=4.51.0,<4.56.0" \
+      "tokenizers>=0.21.0" \
+      "datasets>=3.0.0" \
+      "accelerate>=1.2.0" \
+      "peft>=0.14.0,<0.16.0" \
+      "trl>=0.14.0,<0.18.0" \
+      "bitsandbytes>=0.45.0" \
+      "sentencepiece" \
+      "protobuf" \
+      "scipy" \
+      "einops" \
       "packaging" \
-      "huggingface_hub==0.27.1" \
-      "safetensors==0.4.5" \
-      "gguf==0.10.0" \
-      "numpy==1.26.4" \
+      "huggingface_hub" \
+      "safetensors" \
+      "gguf" \
+      "numpy<2.2" \
       "tqdm" \
       "psutil" \
       "tyro" \
@@ -40,11 +41,13 @@ RUN pip install --upgrade pip setuptools wheel \
       "markdown-it-py" \
       "pygments" \
       "jinja2" \
-      "aiohttp"
+      "aiohttp" \
+ && pip uninstall -y torchao 2>/dev/null || true
 
-RUN pip uninstall -y torchao unsloth unsloth_zoo 2>/dev/null || true
+# Keep torch stack from base image (2.5.1+cu121) — do not reinstall newer torch
+RUN python -c "import torch; assert torch.__version__.startswith('2.5'), torch.__version__; print(torch.__version__)"
 
-# llama.cpp quantize (CPU)
+# llama.cpp quantize
 RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
  && cmake -S /opt/llama.cpp -B /opt/llama.cpp/build \
       -DGGML_CUDA=OFF -DGGML_NATIVE=OFF -DCMAKE_BUILD_TYPE=Release \
@@ -56,8 +59,8 @@ RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
 ENV PATH="/opt/llama.cpp/build/bin:${PATH}"
 
 RUN python -c "\
-import torch, torchvision; \
-from transformers import TrainingArguments, AutoTokenizer; \
+import torch; \
+from transformers import TrainingArguments, AutoConfig; \
 from peft import LoraConfig; \
 from trl import SFTTrainer; \
 print('torch', torch.__version__); \

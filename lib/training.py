@@ -124,10 +124,29 @@ def run_training(
     image_fw = "unsloth" if cfg.framework in ("peft", "unsloth", "") else cfg.framework
     image = build_or_pull_image(framework=image_fw, cuda_tag=cuda_tag)
 
+    # Resolve model: HF id | local path | ollama:name
+    from .model_source import fix_hf_cache_permissions, resolve_model_for_training
+
+    fix_hf_cache_permissions()
+    model_for_container = cfg.model_id
+    model_vols: list[str] = []
+    try:
+        model_for_container, model_vols = resolve_model_for_training(
+            cfg.model_id,
+            work_dir=run_dir,
+            docker_image=image,
+        )
+        if model_for_container != cfg.model_id:
+            console.print(f"[green]Model source resolved:[/] {cfg.model_id} → {model_for_container}")
+    except Exception as e:
+        console.print(f"[yellow]Model resolve note:[/] {e}")
+        # keep original HF id — may work with HF_TOKEN
+
     # Materialize config for container (dataset path rewritten)
     cont_dataset, extra_vols = _resolve_dataset_mount(cfg, run_dir)
     cont_cfg = json.loads((run_dir / "train_config.json").read_text())
     cont_cfg["dataset_path"] = cont_dataset
+    cont_cfg["model_id"] = model_for_container
     cont_cfg["output_dir"] = "/workspace/adapter"
     cont_cfg["merged_dir"] = "/workspace/merged"
     cont_cfg_path = run_dir / "train_config.container.json"
@@ -142,10 +161,26 @@ def run_training(
         "NVIDIA_VISIBLE_DEVICES": "all",
         "TOKENIZERS_PARALLELISM": "false",
     }
+    # Token from env OR from config.extra (web form) — never log the value
+    token = None
     for key in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN", "HF_HUB_TOKEN"):
         if os.environ.get(key):
-            extra_env[key] = os.environ[key]
+            token = os.environ[key]
             break
+    if not token and cfg.extra:
+        token = cfg.extra.get("hf_token") or None
+    if token:
+        extra_env["HF_TOKEN"] = token
+        extra_env["HUGGING_FACE_HUB_TOKEN"] = token
+        # Write into user-owned cache so huggingface lib finds it without root-owned stored_tokens
+        tok_dir = Path.home() / ".cache" / "huggingface"
+        try:
+            tok_dir.mkdir(parents=True, exist_ok=True)
+            tok_file = tok_dir / "token"
+            tok_file.write_text(token.strip() + "\n", encoding="utf-8")
+            tok_file.chmod(0o600)
+        except OSError as e:
+            console.print(f"[yellow]Nelze zapsat ~/.cache/huggingface/token: {e}[/]")
 
     args = docker_run_base_args(
         image,
@@ -157,7 +192,7 @@ def run_training(
     # docker_run_base_args ends with image; rebuild carefully
     image_idx = args.index(image)
     prefix, suffix = args[:image_idx], args[image_idx:]
-    # mount scripts + config
+    # mount scripts + config (HF cache already mounted in docker_run_base_args)
     prefix.extend(
         [
             "-v",
@@ -167,6 +202,7 @@ def run_training(
         ]
     )
     prefix.extend(extra_vols)
+    prefix.extend(model_vols)
     cmd = prefix + suffix + ["python", "/opt/pipeline/train_inside_container.py", "/workspace/train_config.json"]
 
     console.print(f"[bold green]Spouštím trénink v Dockeru…[/]")

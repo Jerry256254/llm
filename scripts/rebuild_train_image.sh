@@ -2,14 +2,14 @@
 # Rebuild training Docker image after torch/torchvision fix.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-TAG="${1:-llm-finetune/unsloth:cuda12.1.0-r4}"
+TAG="${1:-llm-finetune/unsloth:cuda12.1.0-r5}"
 echo "Removing old broken tags…"
 docker rmi llm-finetune/unsloth:cuda12.1.0 2>/dev/null || true
 docker rmi llm-finetune/unsloth:cuda12.1.0-r2 2>/dev/null || true
 docker rmi llm-finetune/unsloth:cuda12.1.0-r3 2>/dev/null || true
+docker rmi llm-finetune/unsloth:cuda12.1.0-r4 2>/dev/null || true
 docker rmi "$TAG" 2>/dev/null || true
-echo "Building $TAG (PEFT+TRL+rich)…"
-# Use cache for steps 1-6 if only smoke/deps changed slightly
+echo "Building $TAG (Qwen3.5-ready PEFT stack)…"
 docker build -f docker/Dockerfile.unsloth -t "$TAG" .
 echo "Runtime smoke (with GPU)…"
 docker run --rm --gpus all "$TAG" python -c "

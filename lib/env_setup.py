@@ -462,8 +462,8 @@ def build_or_pull_image(
     import fcntl
     import time as _time
 
-    # -r4: PEFT-primary frozen stack (no unsloth pip wars)
-    image = f"llm-finetune/{framework}:cuda{cuda_tag}-r4"
+    # -r5: transformers new enough for Qwen3.5; no unsloth/torchao
+    image = f"llm-finetune/{framework}:cuda{cuda_tag}-r5"
     dockerfile = DOCKER_DIR / f"Dockerfile.{framework}"
     if not dockerfile.exists():
         raise FileNotFoundError(f"Missing Dockerfile: {dockerfile}")

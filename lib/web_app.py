@@ -21,7 +21,7 @@ STATIC_DIR = WEB_DIR / "static"
 
 
 class TrainRequest(BaseModel):
-    model_id: str = "unsloth/llama-3.2-1b"
+    model_id: str = "Qwen/Qwen3.5-2B-Base"
     model_params_b: Optional[float] = None
     dataset_path: str = "./data/test_multilang_code/train.jsonl"
     dataset_format: str = "alpaca"
@@ -55,6 +55,7 @@ class TrainRequest(BaseModel):
     uncensored: bool = True
     no_limits: bool = True
     system_prompt: Optional[str] = None
+    hf_token: Optional[str] = None  # optional; prefer env HF_TOKEN on server
 
 
 def create_app(access_token: Optional[str] = None) -> FastAPI:
@@ -93,10 +94,25 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
 
     @app.get("/api/models")
     async def models(_auth: None = Depends(verify)) -> list:
-        return [
-            {"id": k, "params_b": v}
+        from .model_source import list_ollama_models
+
+        hf = [
+            {"id": k, "params_b": v, "source": "hf"}
             for k, v in sorted(KNOWN_MODELS.items(), key=lambda x: (x[1], x[0]))
         ]
+        ollama = []
+        for m in list_ollama_models():
+            name = m.get("name")
+            if name:
+                ollama.append(
+                    {
+                        "id": f"ollama:{name}",
+                        "params_b": None,
+                        "source": "ollama",
+                        "label": f"Ollama · {name}",
+                    }
+                )
+        return ollama + hf
 
     @app.get("/api/formats")
     async def formats(_auth: None = Depends(verify)) -> dict:

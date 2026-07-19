@@ -24,6 +24,7 @@ from .env_setup import (
     env_ready_for_train,
     prepare_environment,
 )
+from .model_source import fix_hf_cache_permissions, list_ollama_models
 from .interactive import (
     KNOWN_MODELS,
     PipelineConfig,
@@ -515,6 +516,12 @@ class JobManager:
         elif identity_name and identity_name.lower() not in system_prompt.lower():
             system_prompt = f"Jmenuješ se {identity_name}. " + system_prompt
 
+        # HF token from web form or environment (never log it)
+        hf_token = (data.get("hf_token") or os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN") or "").strip()
+        if hf_token:
+            os.environ["HF_TOKEN"] = hf_token
+            os.environ["HUGGING_FACE_HUB_TOKEN"] = hf_token
+
         extra = {
             "train_mode": train_mode,
             "uncensored": bool(data.get("uncensored")),
@@ -523,6 +530,7 @@ class JobManager:
             "identity_name": identity_name,
             "teach_identity": bool(teach_identity),
             "identity_repeat": int(data.get("identity_repeat") or 3),
+            "hf_token": hf_token or None,
         }
 
         return PipelineConfig(

@@ -52,19 +52,26 @@
             </label>
           </div>
           <p class="hint" style="margin-top:8px">
-            Ollama názvy typu <code>gemma4:e4b</code> slouží k <strong>chatování</strong>, ne k tréninku.
-            Tady bereme <strong>Hugging Face ID</strong> (např. <code>google/gemma-3-1b-pt</code>).
+            Ollama <code>qwen3.5:2b</code> = chat. K tréninku bereme HF
+            <code>Qwen/Qwen3.5-2B-Base</code> (full train všech vah na tvých datech → pak zase Ollama).
+            Licence Qwen3.5 je obvykle Apache-2.0 (bez gate).
           </p>
 
-          <h2 class="section-title">2 · Velikost mozku</h2>
+          <h2 class="section-title">2 · Velikost mozku (základ)</h2>
+          <p class="hint">HF model NEBO lokální Ollama (prefix <code>ollama:</code>). Ollama se převede z GGUF → HF pro trénink.</p>
           <label class="field">
             <select name="model_preset" id="model_preset"></select>
           </label>
           <label class="field hidden" id="custom-model-wrap">
-            Vlastní HF ID
-            <input name="model_id_custom" id="model_id_custom" placeholder="org/model-name" />
+            Vlastní ID (HF / ollama:jméno / cesta)
+            <input name="model_id_custom" id="model_id_custom" placeholder="ollama:gemma2:2b  nebo  unsloth/llama-3.2-1b" />
           </label>
-          <input type="hidden" name="model_id" id="model_id" value="unsloth/llama-3.2-1b" />
+          <input type="hidden" name="model_id" id="model_id" value="Qwen/Qwen3.5-2B-Base" />
+          <label class="field">
+            Hugging Face token (jen pro gated modely, např. Gemma)
+            <input type="password" name="hf_token" id="hf_token" placeholder="hf_… (nebo nastavte export HF_TOKEN na serveru)" autocomplete="off" />
+          </label>
+          <p class="hint">Token se neukládá do gitu. Stačí <code>export HF_TOKEN=…</code> před <code>python3 run.py</code> — <strong>nemusíte</strong> <code>hf auth login</code>.</p>
 
           <h2 class="section-title">3 · Data + učení</h2>
           <label class="field">

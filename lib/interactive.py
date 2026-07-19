@@ -33,6 +33,15 @@ KNOWN_MODELS: dict[str, float] = {
     "Qwen/Qwen2.5-1.5B": 1.5,
     "Qwen/Qwen2.5-3B": 3.0,
     "Qwen/Qwen2.5-7B": 7.0,
+    # Qwen3.5 (2026) — map from Ollama qwen3.5:0.8b / 2b / 4b / 9b
+    "Qwen/Qwen3.5-0.8B-Base": 0.8,
+    "Qwen/Qwen3.5-2B-Base": 2.0,
+    "Qwen/Qwen3.5-4B-Base": 4.0,
+    "Qwen/Qwen3.5-9B-Base": 9.0,
+    "Qwen/Qwen3.5-0.8B": 0.8,
+    "Qwen/Qwen3.5-2B": 2.0,
+    "Qwen/Qwen3.5-4B": 4.0,
+    "Qwen/Qwen3.5-9B": 9.0,
     "meta-llama/Llama-3.2-1B": 1.0,
     "meta-llama/Llama-3.2-3B": 3.0,
     # instruct / chat
