@@ -42,15 +42,19 @@
           <div class="choice-grid">
             <label class="choice-card selected">
               <input type="radio" name="train_mode" value="from_scratch" checked />
-              <strong>Od nuly</strong>
-              <span>Všechny váhy na vašich datech (full)</span>
+              <strong>Od nuly (full)</strong>
+              <span>Učí <em>všechny váhy</em> moderního base modelu na vašich datech (ne random init — to by stálo miliony $)</span>
             </label>
             <label class="choice-card">
               <input type="radio" name="train_mode" value="finetune" />
               <strong>Fine-tune</strong>
-              <span>Rychlé doladění (QLoRA)</span>
+              <span>Jen malé adaptéry (QLoRA) — rychlejší, méně VRAM</span>
             </label>
           </div>
+          <p class="hint" style="margin-top:8px">
+            Ollama názvy typu <code>gemma4:e4b</code> slouží k <strong>chatování</strong>, ne k tréninku.
+            Tady bereme <strong>Hugging Face ID</strong> (např. <code>google/gemma-3-1b-pt</code>).
+          </p>
 
           <h2 class="section-title">2 · Velikost mozku</h2>
           <label class="field">
@@ -106,7 +110,11 @@
               </select>
             </label>
             <label class="field">Framework
-              <select name="framework"><option value="unsloth">unsloth</option><option value="axolotl">axolotl</option></select>
+              <select name="framework">
+                <option value="peft" selected>peft (doporučeno, stabilní)</option>
+                <option value="unsloth">unsloth (jen pokud image umí)</option>
+                <option value="axolotl">axolotl</option>
+              </select>
             </label>
             <label class="field">Metoda
               <select name="method" id="method">

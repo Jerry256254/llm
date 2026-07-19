@@ -384,14 +384,14 @@ def run_web(args: argparse.Namespace) -> int:
                     manager.log(f"Host už připraven ({why}) — bez apt.")
                     manager.prepare_env(
                         install_packages=False,
-                        framework="unsloth",
+                        framework="peft",
                         build_image=False,
                     )
                 else:
                     manager.log(f"Host neúplný ({why}) — zkusím lehký setup…")
                     manager.prepare_env(
                         install_packages=True,
-                        framework="unsloth",
+                        framework="peft",
                         build_image=False,
                     )
                 manager.log("Host setup hotov. Docker image se postaví až při Startu (1×).")

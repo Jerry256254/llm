@@ -26,7 +26,7 @@ class TrainRequest(BaseModel):
     dataset_path: str = "./data/test_multilang_code/train.jsonl"
     dataset_format: str = "alpaca"
     output_dir: str = "./outputs"
-    framework: str = "unsloth"
+    framework: str = "peft"
     method: str = "full"
     lora_r: int = 64
     lora_alpha: int = 128

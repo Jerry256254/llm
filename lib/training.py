@@ -120,7 +120,9 @@ def run_training(
         raise RuntimeError("Nelze spustit trénink bez NVIDIA GPU")
 
     cuda_tag = recommend_cuda_tag(gpus)
-    image = build_or_pull_image(framework=cfg.framework, cuda_tag=cuda_tag)
+    # Docker image is named unsloth historically; peft/unsloth share same image family
+    image_fw = "unsloth" if cfg.framework in ("peft", "unsloth", "") else cfg.framework
+    image = build_or_pull_image(framework=image_fw, cuda_tag=cuda_tag)
 
     # Materialize config for container (dataset path rewritten)
     cont_dataset, extra_vols = _resolve_dataset_mount(cfg, run_dir)

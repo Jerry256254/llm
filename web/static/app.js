@@ -14,26 +14,48 @@
   const logEl = $("#log");
   const form = $("#train-form");
 
+  // HF training bases (Ollama names like gemma4:e4b are NOT training checkpoints)
   const PRESETS = {
     uncensored: [
-      { id: "unsloth/llama-3.2-1b", label: "Malý 1B — test na L4" },
-      { id: "unsloth/llama-3.2-3b", label: "Střední 3B" },
-      { id: "unsloth/meta-llama-3.1-8b", label: "Velký 8B" },
-      { id: "unsloth/qwen2.5-7b", label: "Qwen 7B" },
-      { id: "unsloth/mistral-7b-v0.3", label: "Mistral 7B" },
-      { id: "__custom__", label: "Vlastní ID…" },
+      { id: "google/gemma-3-1b-pt", label: "Gemma 3 · 1B (novější, L4 OK)" },
+      { id: "google/gemma-3-4b-pt", label: "Gemma 3 · 4B (silnější, víc VRAM)" },
+      { id: "google/gemma-2-2b", label: "Gemma 2 · 2B" },
+      { id: "unsloth/llama-3.2-1b", label: "Llama 3.2 · 1B (výchozí test)" },
+      { id: "unsloth/llama-3.2-3b", label: "Llama 3.2 · 3B" },
+      { id: "Qwen/Qwen2.5-1.5B", label: "Qwen 2.5 · 1.5B" },
+      { id: "Qwen/Qwen2.5-3B", label: "Qwen 2.5 · 3B" },
+      { id: "Qwen/Qwen2.5-7B", label: "Qwen 2.5 · 7B (těsně na 24GB full)" },
+      { id: "unsloth/meta-llama-3.1-8b", label: "Llama 3.1 · 8B" },
+      { id: "__custom__", label: "Vlastní HF ID…" },
     ],
     instruct: [
-      { id: "unsloth/llama-3.2-1b-instruct", label: "Malý 1B Instruct" },
-      { id: "unsloth/llama-3.2-3b-instruct", label: "Střední 3B Instruct" },
-      { id: "unsloth/meta-llama-3.1-8b-instruct", label: "Velký 8B Instruct" },
-      { id: "__custom__", label: "Vlastní ID…" },
+      { id: "google/gemma-3-1b-it", label: "Gemma 3 · 1B Instruct" },
+      { id: "google/gemma-3-4b-it", label: "Gemma 3 · 4B Instruct" },
+      { id: "unsloth/llama-3.2-1b-instruct", label: "Llama 3.2 · 1B Instruct" },
+      { id: "unsloth/llama-3.2-3b-instruct", label: "Llama 3.2 · 3B Instruct" },
+      { id: "__custom__", label: "Vlastní HF ID…" },
     ],
   };
 
   const MODE_DEFAULTS = {
-    from_scratch: { method: "full", lora_r: 64, batch_size: 1, grad_accum: 8, epochs: 2, learning_rate: 0.00005 },
-    finetune: { method: "qlora", lora_r: 32, batch_size: 2, grad_accum: 4, epochs: 2, learning_rate: 0.0002 },
+    from_scratch: {
+      method: "full",
+      framework: "peft",
+      lora_r: 64,
+      batch_size: 1,
+      grad_accum: 8,
+      epochs: 2,
+      learning_rate: 0.00005,
+    },
+    finetune: {
+      method: "qlora",
+      framework: "peft",
+      lora_r: 32,
+      batch_size: 2,
+      grad_accum: 4,
+      epochs: 2,
+      learning_rate: 0.0002,
+    },
   };
 
   const PHASE_CS = {
@@ -114,6 +136,7 @@
   function applyModeDefaults() {
     const d = MODE_DEFAULTS[selectedMode()] || MODE_DEFAULTS.from_scratch;
     form.method.value = d.method;
+    if (form.framework) form.framework.value = d.framework || "peft";
     form.lora_r.value = d.lora_r;
     form.batch_size.value = d.batch_size;
     form.grad_accum.value = d.grad_accum;

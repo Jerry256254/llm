@@ -495,23 +495,20 @@ def main() -> int:
         return 2
     cfg = load_config(sys.argv[1])
     log(f"Config: {json.dumps(cfg, indent=2)}")
+    # Prefer PEFT (stable). Unsloth only if explicitly requested and importable.
+    prefer = (cfg.get("framework") or "peft").lower()
     try:
         _stack_selfcheck()
-        use_unsloth = False
-        try:
-            import unsloth  # noqa: F401
-            use_unsloth = True
-            log("Using Unsloth backend")
-        except Exception as e:
-            # Catch ImportError AND runtime ImportError from version checks
-            log(f"Unsloth not available ({type(e).__name__}: {e})")
-            log("Falling back to PEFT/transformers backend")
-            use_unsloth = False
-
-        if use_unsloth:
-            train_with_unsloth(cfg)
-        else:
-            train_with_peft_fallback(cfg)
+        if prefer in ("unsloth",):
+            try:
+                import unsloth  # noqa: F401
+                log("Using Unsloth backend")
+                train_with_unsloth(cfg)
+                return 0
+            except Exception as e:
+                log(f"Unsloth failed ({type(e).__name__}: {e}) — PEFT backend")
+        log("Using PEFT/transformers backend (full or LoRA/QLoRA)")
+        train_with_peft_fallback(cfg)
         return 0
     except Exception:
         traceback.print_exc()

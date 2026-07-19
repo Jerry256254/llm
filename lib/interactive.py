@@ -16,7 +16,7 @@ console = Console()
 
 # Common HF model IDs with approximate parameter counts (billions)
 KNOWN_MODELS: dict[str, float] = {
-    # base (less chat-aligned / better for "uncensored" training)
+    # base (less chat-aligned / better for "uncensored" / full training)
     "unsloth/llama-3.2-1b": 1.0,
     "unsloth/llama-3.2-3b": 3.0,
     "unsloth/meta-llama-3.1-8b": 8.0,
@@ -24,6 +24,17 @@ KNOWN_MODELS: dict[str, float] = {
     "unsloth/qwen2.5-3b": 3.0,
     "unsloth/qwen2.5-1.5b": 1.5,
     "unsloth/mistral-7b-v0.3": 7.0,
+    # Newer open bases (HF) — full-weight training on your data ("od nuly" v praxi)
+    "google/gemma-2-2b": 2.0,
+    "google/gemma-2-9b": 9.0,
+    "google/gemma-3-1b-pt": 1.0,
+    "google/gemma-3-4b-pt": 4.0,
+    "google/gemma-3-12b-pt": 12.0,
+    "Qwen/Qwen2.5-1.5B": 1.5,
+    "Qwen/Qwen2.5-3B": 3.0,
+    "Qwen/Qwen2.5-7B": 7.0,
+    "meta-llama/Llama-3.2-1B": 1.0,
+    "meta-llama/Llama-3.2-3B": 3.0,
     # instruct / chat
     "unsloth/llama-3.2-1b-instruct": 1.0,
     "unsloth/llama-3.2-3b-instruct": 3.0,

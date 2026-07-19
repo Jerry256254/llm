@@ -391,9 +391,11 @@ class JobManager:
         self._set(phase=JobPhase.SETUP.value, message="Připravuji prostředí…", progress=5)
         self.log("Příprava host prostředí (Docker, NVIDIA runtime)…")
         try:
+            # Image family is always "unsloth" tag for Docker (shared PEFT image)
+            image_fw = "unsloth" if framework in ("peft", "unsloth", "", None) else framework
             self._env = prepare_environment(
                 install_packages=install_packages,
-                framework=framework,
+                framework=image_fw,
                 build_image=build_image,
             )
             self._prepared = True
@@ -529,7 +531,7 @@ class JobManager:
             dataset_path=dataset_path,
             dataset_format=ds_format,
             output_dir=out,
-            framework=data.get("framework") or "unsloth",
+            framework=data.get("framework") or "peft",
             method=method,
             lora_r=int(data.get("lora_r") or 16),
             lora_alpha=int(data.get("lora_alpha") or int(data.get("lora_r") or 16) * 2),
@@ -667,7 +669,7 @@ class JobManager:
         try:
             self.prepare_env(
                 install_packages=install,
-                framework=data.get("framework") or "unsloth",
+                framework=data.get("framework") or "peft",
                 build_image=False,
             )
             self._map_band("setup", 1.0, "Prostředí OK")
