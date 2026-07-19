@@ -554,9 +554,11 @@ class JobManager:
         cfg = self.build_config(data)
         gpus = self._env.gpus if self._env else detect_gpus()
         est = analyze(cfg, gpus)
+        identity = (cfg.extra or {}).get("identity_name") or cfg.ollama_name
         result = {
             "config": {
                 "model_id": cfg.model_id,
+                "base_model": cfg.model_id,
                 "model_params_b": cfg.model_params_b,
                 "dataset_path": cfg.dataset_path,
                 "dataset_format": cfg.dataset_format,
@@ -567,6 +569,8 @@ class JobManager:
                 "epochs": cfg.epochs,
                 "gguf_quant": cfg.gguf_quant,
                 "ollama_name": cfg.ollama_name,
+                "identity_name": identity,
+                "display_name": identity,
             },
             "estimate": est.to_dict(),
         }
@@ -713,12 +717,15 @@ class JobManager:
             "method": cfg.method,
             "train_mode": mode,
             "identity_name": identity,
+            "display_name": identity,
             "dataset_path": cfg.dataset_path,
             "ollama_name": cfg.ollama_name,
+            "base_model": cfg.model_id,
         })
-        self._map_band("analyze", 1.0, "Odhad hotov")
+        self._map_band("analyze", 1.0, f"Odhad pro {identity}")
         self.log(
-            f"ODHAD (živě): VRAM ~{est.recommended_vram_gib:.1f} GB | "
+            f"ODHAD (živě): model „{identity}“ (base {cfg.model_id}) | "
+            f"VRAM ~{est.recommended_vram_gib:.1f} GB | "
             f"čas ~{est.est_train_hours:.2f} h | ~${est.est_cost_usd:.2f} | "
             f"samples {est.num_samples} | steps {est.total_steps} | "
             f"trainable {est.trainable_params/1e6:.1f}M "

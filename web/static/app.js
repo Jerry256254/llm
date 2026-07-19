@@ -207,13 +207,18 @@
   function renderEstimate(est, cfg) {
     if (!est) return;
     $("#estimate-box").classList.remove("hidden");
-    const mid = cfg?.model_id || "";
+    const name = cfg?.identity_name || cfg?.display_name || cfg?.ollama_name || "Model";
+    const base = cfg?.model_id || cfg?.base_model || "";
     $("#estimate-plain").textContent =
-      `${mid || "Model"} · ~${est.recommended_vram_gib.toFixed(1)} GB VRAM · ` +
+      `„${name}“` +
+      (base ? ` (základ ${base})` : "") +
+      ` · ~${est.recommended_vram_gib.toFixed(1)} GB VRAM · ` +
       `~${est.est_train_hours.toFixed(2)} h · ${est.num_samples} samples · ` +
       (est.fits_gpus ? "GPU OK" : "GPU těsně / ?");
     const rows = [
-      ["Model", mid || "—"],
+      ["Váš model", name],
+      ["Základ (HF)", base || "—"],
+      ["Ollama", cfg?.ollama_name || "—"],
       ["Metoda", cfg?.method || "—"],
       ["Parametry", (est.model_params_total / 1e9).toFixed(1) + " B"],
       ["Trainable", (est.trainable_params / 1e6).toFixed(1) + " M"],
@@ -244,7 +249,13 @@
           (st.train_progress.epoch != null ? ` · epoch ${st.train_progress.epoch}` : "")
         : (st.progress_detail || "");
       setProgress(st.progress, st.message, st.phase, detail);
-      if (st.estimate) renderEstimate(st.estimate, st.config);
+      if (st.estimate) {
+        renderEstimate(st.estimate, {
+          ...(st.config || {}),
+          identity_name: st.config?.identity_name || st.config?.display_name,
+          ollama_name: st.ollama_name || st.config?.ollama_name,
+        });
+      }
       if (st.phase === "done" && st.ollama_name) showResult(st.ollama_name);
       $("#btn-start").disabled = !!st.running;
       $("#btn-cancel").disabled = !st.running;
@@ -308,7 +319,16 @@
       appendLog(["=== START ===", `MODEL: ${body.model_id} · ${body.train_mode} · ${body.method}`]);
       try {
         const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
-        if (pre.estimate) renderEstimate(pre.estimate, { model_id: body.model_id, method: body.method });
+        if (pre.estimate) {
+          renderEstimate(pre.estimate, {
+            model_id: body.model_id,
+            method: body.method,
+            identity_name: body.identity_name,
+            ollama_name: body.ollama_name,
+            display_name: body.identity_name,
+            base_model: body.model_id,
+          });
+        }
       } catch (e) {
         appendLog(["Odhad: " + e.message]);
       }

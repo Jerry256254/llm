@@ -375,10 +375,12 @@ def train_with_unsloth(cfg: dict) -> None:
 
 def train_with_peft_fallback(cfg: dict) -> None:
     """Fallback without Unsloth (slower, more VRAM)."""
-    import torch
-    # Avoid broken torchvision side-imports in some transformers versions
     import os
+    import torch
+
     os.environ.setdefault("TRANSFORMERS_NO_ADVISORY_WARNINGS", "1")
+    # Prevent optional vision codepaths from pulling broken torchvision ops
+    os.environ.setdefault("DISABLE_TRANSFORMERS_IMAGE", "1")
 
     from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
     try:

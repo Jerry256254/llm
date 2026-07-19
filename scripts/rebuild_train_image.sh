@@ -2,24 +2,24 @@
 # Rebuild training Docker image after torch/torchvision fix.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-TAG="${1:-llm-finetune/unsloth:cuda12.1.0-r2}"
-echo "Removing old images (optional)…"
+TAG="${1:-llm-finetune/unsloth:cuda12.1.0-r3}"
+echo "Removing old broken tags…"
 docker rmi llm-finetune/unsloth:cuda12.1.0 2>/dev/null || true
+docker rmi llm-finetune/unsloth:cuda12.1.0-r2 2>/dev/null || true
 docker rmi "$TAG" 2>/dev/null || true
-echo "Building $TAG …"
-docker build -f docker/Dockerfile.unsloth \
-  --build-arg CUDA_VERSION=12.1.0 \
-  -t "$TAG" .
-echo "Smoke test imports inside image…"
-docker run --rm --gpus all "$TAG" python3 -c "
+echo "Building $TAG (pytorch official base)…"
+docker build -f docker/Dockerfile.unsloth -t "$TAG" .
+echo "Runtime smoke (with GPU)…"
+docker run --rm --gpus all "$TAG" python -c "
 import torch, torchvision
 from transformers import TrainingArguments
-print('torch', torch.__version__, 'tv', torchvision.__version__, 'cuda', torch.cuda.is_available())
+from peft import LoraConfig
+print('torch', torch.__version__, 'tv', torchvision.__version__)
+print('cuda', torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else '')
 try:
-    import unsloth
-    print('unsloth OK')
+    import unsloth; print('unsloth OK')
 except Exception as e:
-    print('unsloth', e)
-print('OK')
+    print('unsloth fallback OK:', e)
+print('READY')
 "
 echo "Hotovo: $TAG"
