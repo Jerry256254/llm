@@ -1,0 +1,18 @@
+# Výchozí konfigurace (lze použít jako referenci; CLI/interaktivní režim má prioritu)
+model_id: unsloth/llama-3.2-1b
+dataset_path: ./data/test_multilang_code/train.jsonl
+dataset_format: alpaca
+framework: unsloth
+method: full
+lora_r: 16
+lora_alpha: 32
+max_seq_length: 2048
+batch_size: 2
+grad_accum: 4
+epochs: 1.0
+learning_rate: 2.0e-4
+gguf_quant: q4_k_m
+ollama_name: llama32-1b-ft
+max_train_hours: 4.0
+max_cost_usd: 20.0
+gpu_hourly_usd: 0.35

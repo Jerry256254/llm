@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Učení AI modelu — jednoduchý průvodce</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="auth-gate" class="auth-gate hidden">
+    <div class="auth-card">
+      <h1>Vstupní heslo</h1>
+      <p class="big-hint">
+        V terminálu, kde běží <code>python run.py</code>, najdete řádek
+        <strong>Access token</strong>. Zkopírujte ho sem (jako heslo ke dveřím).
+      </p>
+      <input type="password" id="token-input" placeholder="Sem vložte token z terminálu" autocomplete="off" />
+      <button id="token-save" class="btn primary">Otevřít panel</button>
+      <p id="token-error" class="error hidden">Špatný token — zkontrolujte zkopírovaný text.</p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">🧠</div>
+        <div>
+          <h1>Učení AI modelu</h1>
+          <span class="sub">Jednoduchý průvodce · trénink · Ollama</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div id="gpu-badge" class="badge">Grafická karta: …</div>
+        <div id="phase-badge" class="badge phase idle">připraveno</div>
+      </div>
+    </header>
+
+    <!-- Co to dělá -->
+    <section class="hero panel">
+      <h2>Co tady děláte? (3 věty)</h2>
+      <ol class="hero-steps">
+        <li><strong>Vyberete režim</strong> — jen dvě volby: <em>Od nuly</em> nebo <em>Fine-tune</em>.</li>
+        <li><strong>Data</strong> — výchozí testovací sada (kód + CS/EN/DE/HI) už je připravená ve složce projektu.</li>
+        <li><strong>Stisknete „Začít učení“</strong> — po doběhu model v Ollama.</li>
+      </ol>
+      <p class="hero-note">
+        <strong>Testovací data:</strong> <code>data/test_multilang_code/train.jsonl</code> —
+        Wikipedia (čeština, angličtina, němčina, hindština) + tisíce příkladů programování.
+        „Od nuly“ = učení všech vah základního modelu na těchto datech (ne postavit GPT z ničeho).
+      </p>
+    </section>
+
+    <main class="grid">
+      <section class="panel form-panel">
+        <form id="train-form">
+          <!-- KROK 1 -->
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h2>Jak chcete model učit?</h2>
+              <p class="hint">Klikněte na jednu kartičku. Ostatní volby se nastaví samy — nemusíte znát anglické zkratky.</p>
+
+              <div class="choice-grid" id="mode-choices">
+                <label class="choice-card selected">
+                  <input type="radio" name="train_mode" value="from_scratch" checked />
+                  <span class="choice-title">Od nuly (na vlastních datech)</span>
+                  <span class="choice-desc">
+                    Základní model (bez chat cenzury) se učí <strong>všechny váhy</strong> na vašich datech —
+                    jazyky, kód, styl. Nejsilnější a nejpomalejší; pro test 1B stačí.
+                  </span>
+                  <span class="choice-tag">full trénink · doporučeno</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="train_mode" value="finetune" />
+                  <span class="choice-title">Fine-tune</span>
+                  <span class="choice-desc">
+                    Rychlejší doladění (QLoRA) — model se přizpůsobí datům, ale nemění všechny váhy.
+                    Šetří paměť GPU, vhodné i na menší karty.
+                  </span>
+                  <span class="choice-tag">QLoRA · rychlejší</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- KROK 2 -->
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h2>Chování modelu</h2>
+              <label class="check big-check">
+                <input type="checkbox" name="uncensored" id="uncensored" checked />
+                <span>
+                  <strong>Bez cenzury / bez moralizování</strong><br />
+                  <span class="hint">
+                    Použije se základní (ne „učitelka“) model a do Ollama se dá systémový pokyn:
+                    odpovídej přímo, bez „jako AI to nesmím“. Stále platí zákony země — tohle není návod na trestnou činnost.
+                  </span>
+                </span>
+              </label>
+              <label class="check big-check">
+                <input type="checkbox" name="no_limits" id="no_limits" checked />
+                <span>
+                  <strong>Bez časových a peněžních brzd</strong><br />
+                  <span class="hint">
+                    Trénink se sám nevypne kvůli „max 4 hodiny / 20 $“.
+                    Na cloudu si hlídejte peněženku sami — GPU něco stojí.
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- KROK 3 -->
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h2>Jaký základ použít? (velikost mozku)</h2>
+              <p class="hint" id="model-hint">Menší = levnější a rychlejší. Větší = chytřejší, ale chce silnější grafiku.</p>
+              <label>Vyberte z nabídky (nebo vepište vlastní ID z Hugging Face)
+                <select name="model_preset" id="model_preset"></select>
+              </label>
+              <label class="hidden" id="custom-model-wrap">Vlastní ID modelu
+                <input name="model_id_custom" id="model_id_custom" placeholder="např. unsloth/meta-llama-3.1-8b" />
+              </label>
+              <!-- hidden technical field filled by JS -->
+              <input type="hidden" name="model_id" id="model_id" value="unsloth/llama-3.2-1b" />
+            </div>
+          </div>
+
+          <!-- KROK 4 -->
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h2>Vaše učební data</h2>
+              <p class="hint" id="data-hint">
+                Cesta k souboru na tomto počítači (serveru), nebo ID datasetu z internetu (Hugging Face).
+              </p>
+              <label>Kde leží data?
+                <input name="dataset_path" value="./data/test_multilang_code/train.jsonl" required />
+              </label>
+              <p class="hint">
+                Výchozí testovací sada: <strong>kód + čeština + angličtina + němčina + hindština</strong>
+                ve složce <code>data/test_multilang_code/</code>.
+                Znovu stáhnout: <code>python scripts/download_test_data.py</code>
+              </p>
+              <label>Jak data vypadají?
+                <select name="dataset_format" id="dataset_format">
+                  <option value="alpaca" selected>Mix Q&amp;A + text (Alpaca) — výchozí test</option>
+                  <option value="text">Jen prostý text</option>
+                  <option value="chat">Chat (user / assistant)</option>
+                  <option value="sharegpt">Dlouhý dialog (ShareGPT)</option>
+                  <option value="hf">Dataset z Hugging Face (automaticky)</option>
+                </select>
+              </label>
+              <button type="button" id="btn-formats" class="btn ghost">Ukázat příklad, jak má soubor vypadat</button>
+            </div>
+          </div>
+
+          <!-- KROK 5 -->
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h2>Jak se má AI jmenovat</h2>
+              <p class="hint">
+                Tohle jméno se <strong>naučí během tréninku</strong> (otázky typu „Jak se jmenuješ?“ → „Jmenuji se …“)
+                a dostane ho i do systémového promptu. Zároveň z něj uděláme technické jméno pro Ollama.
+              </p>
+              <label>Jméno, které si AI pamatuje (česky, s mezerami i velkými písmeny)
+                <input name="identity_name" id="identity_name" value="Můj Model" placeholder="např. Karel, Astra, Domácí Asistent" />
+              </label>
+              <label class="check big-check">
+                <input type="checkbox" name="teach_identity" id="teach_identity" checked />
+                <span>
+                  <strong>Učit model jeho jméno na datech</strong><br />
+                  <span class="hint">Přidá do tréninku desítky příkladů „jak se jmenuješ / who are you“ s vaším jménem.</span>
+                </span>
+              </label>
+              <label>Technické jméno v Ollama (pro příkaz <code>ollama run …</code>)
+                <input name="ollama_name" id="ollama_name" value="muj-model" />
+              </label>
+              <p class="hint">Ollama nechce mezery — doplní se automaticky z jména výše (můžete přepsat).</p>
+              <label>Složka pro výsledky (můžete nechat)
+                <input name="output_dir" value="./outputs" />
+              </label>
+            </div>
+          </div>
+
+          <!-- Pokročilé — schované -->
+          <details class="advanced">
+            <summary>Pokročilé (jen když víte co děláte)</summary>
+            <p class="hint">Normálně na to nesahejte. Průvodce to nastaví podle kroku 1.</p>
+            <div class="row3">
+              <label>Framework
+                <select name="framework">
+                  <option value="unsloth">Unsloth (doporučeno)</option>
+                  <option value="axolotl">Axolotl</option>
+                </select>
+              </label>
+              <label>Technická metoda
+                <select name="method" id="method">
+                  <option value="full">full = všechny váhy</option>
+                  <option value="qlora">qlora = úsporné</option>
+                  <option value="lora">lora = střední</option>
+                </select>
+              </label>
+              <label>Komprese GGUF
+                <select name="gguf_quant">
+                  <option value="q4_k_m">q4_k_m (malý soubor, dobrý kompromis)</option>
+                  <option value="q5_k_m">q5_k_m (lepší kvalita)</option>
+                  <option value="q8_0">q8_0 (ještě lepší, větší)</option>
+                  <option value="f16">f16 (největší, téměř bez ztráty)</option>
+                  <option value="q3_k_m">q3_k_m (nejmenší)</option>
+                </select>
+              </label>
+            </div>
+            <div class="row3">
+              <label>Síla adaptéru (LoRA r)
+                <input type="number" name="lora_r" value="64" min="4" max="256" />
+              </label>
+              <label>Délka kontextu
+                <input type="number" name="max_seq_length" value="2048" min="128" step="128" />
+              </label>
+              <label>Batch
+                <input type="number" name="batch_size" value="1" min="1" />
+              </label>
+            </div>
+            <div class="row3">
+              <label>Grad accum
+                <input type="number" name="grad_accum" value="8" min="1" />
+              </label>
+              <label>Kolikrát projet data (epochs)
+                <input type="number" name="epochs" value="3" min="0.1" step="0.1" />
+              </label>
+              <label>Learning rate
+                <input type="number" name="learning_rate" value="0.0002" step="0.00001" />
+              </label>
+            </div>
+            <div class="row3">
+              <label>Max hodin (když nejsou limity vypnuté)
+                <input type="number" name="max_train_hours" value="168" min="0.1" step="0.1" />
+              </label>
+              <label>Max USD
+                <input type="number" name="max_cost_usd" value="99999" min="0.1" step="1" />
+              </label>
+              <label>GPU cena $/h (jen odhad)
+                <input type="number" name="gpu_hourly_usd" value="0.35" min="0" step="0.01" />
+              </label>
+            </div>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="dry_run" /> Jen spočítat odhad (neučit)</label>
+              <label class="check"><input type="checkbox" name="skip_gguf" /> Nepřevádět do GGUF</label>
+              <label class="check"><input type="checkbox" name="skip_ollama" /> Neimportovat do Ollama</label>
+              <label class="check"><input type="checkbox" name="skip_setup" /> Přeskočit instalaci balíčků na serveru</label>
+              <label class="check"><input type="checkbox" name="allow_over_limit" checked /> I když odhad překročí limity, stejně učit</label>
+            </div>
+            <input type="hidden" name="lora_alpha" value="128" />
+          </details>
+
+          <div class="actions sticky-actions">
+            <button type="button" id="btn-analyze" class="btn">Spočítat odhad (bez učení)</button>
+            <button type="submit" id="btn-start" class="btn primary big">▶ Začít učení</button>
+            <button type="button" id="btn-cancel" class="btn danger" disabled>Zastavit</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel side-panel">
+        <div class="panel-head">
+          <h2>Průběh</h2>
+          <span id="progress-label">0%</span>
+        </div>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
+        <p id="status-msg" class="status-msg">Čekám na vás — vyplňte kroky vlevo a stiskněte tlačítko.</p>
+
+        <div id="estimate-box" class="estimate hidden">
+          <h3>Odhad před startem</h3>
+          <div id="estimate-grid" class="estimate-grid"></div>
+          <p class="hint" id="estimate-plain"></p>
+        </div>
+
+        <div class="help-box">
+          <h3>Rychlá nápověda</h3>
+          <ul>
+            <li><strong>Grafická karta žádná</strong> = na tomto PC se neučí, jen zkoušíte obrazovku. Trénink patří na cloud s NVIDIA.</li>
+            <li><strong>Od nuly</strong> chce hodně VRAM — začněte modelem 1B–3B.</li>
+            <li>Ukázková data: <code>./data/sample_alpaca.jsonl</code> (jen na vyzkoušení).</li>
+          </ul>
+        </div>
+
+        <div class="panel-head log-head">
+          <h2>Deník (co program právě dělá)</h2>
+          <button type="button" id="btn-clear-log" class="btn ghost sm">Vyčistit</button>
+        </div>
+        <pre id="log" class="log"></pre>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <div class="panel-head">
+          <h2>Jak mají vypadat data</h2>
+          <button type="button" id="modal-close" class="btn ghost sm">Zavřít</button>
+        </div>
+        <div id="formats-body" class="formats-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.__AUTH_REQUIRED__ = {{AUTH_REQUIRED}};
+  </script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

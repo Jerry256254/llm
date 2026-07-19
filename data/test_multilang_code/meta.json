@@ -1,0 +1,14 @@
+{
+  "path": "/home/admin/Dokumenty/llm/data/test_multilang_code/train.jsonl",
+  "total": 7984,
+  "text_docs": 1979,
+  "qa_pairs": 6005,
+  "languages": [
+    "cs",
+    "en",
+    "de",
+    "hi",
+    "code"
+  ],
+  "purpose": "Test corpus for 1B model: coding + CS/EN/DE/HI"
+}
