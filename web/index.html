@@ -286,9 +286,10 @@
         <div class="help-box">
           <h3>Rychlá nápověda</h3>
           <ul>
-            <li><strong>Grafická karta žádná</strong> = na tomto PC se neučí, jen zkoušíte obrazovku. Trénink patří na cloud s NVIDIA.</li>
-            <li><strong>Od nuly</strong> chce hodně VRAM — začněte modelem 1B–3B.</li>
-            <li>Ukázková data: <code>./data/sample_alpaca.jsonl</code> (jen na vyzkoušení).</li>
+            <li><strong>L4 / GPU nahoře</strong> = učení běží na této kartě.</li>
+            <li><strong>Od nuly</strong> = full trénink <em>vybraného</em> modelu (např. Llama 3.2 1B) — ne Qwen, pokud jste ho nevybrali.</li>
+            <li>Data: <code>./data/test_multilang_code/train.jsonl</code> (kód + CS/EN/DE/HI).</li>
+            <li>Po <strong>Začít učení</strong> nejdřív uvidíte odhad, pak Docker build (1×), pak trénink.</li>
           </ul>
         </div>
 

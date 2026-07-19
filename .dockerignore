@@ -1,0 +1,15 @@
+.venv
+venv
+__pycache__
+**/__pycache__
+*.pyc
+outputs
+.git
+.docker_build.lock
+.ui_banner.txt
+*.gguf
+.mypy_cache
+.pytest_cache
+data/test_multilang_code
+# keep sample small if any
+**/.DS_Store

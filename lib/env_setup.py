@@ -373,6 +373,9 @@ def ensure_docker_group() -> None:
         )
 
 
+_BUILD_LOCK = PROJECT_ROOT / ".docker_build.lock"
+
+
 def build_or_pull_image(
     framework: str = "unsloth",
     cuda_tag: str = "12.1.0",
@@ -380,7 +383,11 @@ def build_or_pull_image(
 ) -> str:
     """
     Build local training image. Image name encodes framework + CUDA.
+    Uses a file lock so background setup + job never run two builds at once.
     """
+    import fcntl
+    import time as _time
+
     image = f"llm-finetune/{framework}:cuda{cuda_tag}"
     dockerfile = DOCKER_DIR / f"Dockerfile.{framework}"
     if not dockerfile.exists():
@@ -391,22 +398,38 @@ def build_or_pull_image(
         console.print(f"[green]Docker image ready:[/] {image}")
         return image
 
-    console.print(f"[bold cyan]Building image {image}…[/] (first run can take a while)")
-    cmd = [
-        "docker",
-        "build",
-        "-f",
-        str(dockerfile),
-        "--build-arg",
-        f"CUDA_VERSION={cuda_tag}",
-        "-t",
-        image,
-        str(PROJECT_ROOT),
-    ]
-    r = _run(cmd, capture=False)
-    if r.returncode != 0:
-        raise RuntimeError(f"Docker build failed for {image}")
-    return image
+    lock_path = _BUILD_LOCK
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("w") as lf:
+        console.print(f"[cyan]Čekám na zámek Docker buildu…[/] ({lock_path.name})")
+        fcntl.flock(lf.fileno(), fcntl.LOCK_EX)
+        # re-check after lock (another process may have finished)
+        exists = _run(["docker", "image", "inspect", image], check=False)
+        if exists.returncode == 0 and not force_build:
+            console.print(f"[green]Docker image ready (po čekání):[/] {image}")
+            return image
+
+        console.print(
+            f"[bold cyan]Building image {image}…[/] "
+            f"(první běh 10–30 min; llama.cpp jen CPU = rychlejší)"
+        )
+        t0 = _time.time()
+        cmd = [
+            "docker",
+            "build",
+            "-f",
+            str(dockerfile),
+            "--build-arg",
+            f"CUDA_VERSION={cuda_tag}",
+            "-t",
+            image,
+            str(PROJECT_ROOT),
+        ]
+        r = _run(cmd, capture=False)
+        if r.returncode != 0:
+            raise RuntimeError(f"Docker build failed for {image}")
+        console.print(f"[green]Image hotový za {(_time.time()-t0)/60:.1f} min:[/] {image}")
+        return image
 
 
 def prepare_environment(
@@ -414,6 +437,7 @@ def prepare_environment(
     install_packages: bool = True,
     framework: str = "unsloth",
     force_rebuild_image: bool = False,
+    build_image: bool = True,
 ) -> EnvReport:
     """Full host + Docker environment bootstrap."""
     distro, pretty = detect_distro()
@@ -440,7 +464,7 @@ def prepare_environment(
     docker_ok = shutil.which("docker") is not None and _run(["docker", "ps"], check=False).returncode == 0
     nvidia_ok = _nvidia_runtime_available()
 
-    if docker_ok and gpus:
+    if build_image and docker_ok and gpus:
         cuda_tag = recommend_cuda_tag(gpus)
         try:
             build_or_pull_image(framework=framework, cuda_tag=cuda_tag, force_build=force_rebuild_image)

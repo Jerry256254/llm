@@ -74,7 +74,10 @@ class LogTee:
             self._original.write(data)
         except Exception:
             pass
-        self._buf += data
+        # strip ANSI so web deník is readable
+        import re
+        plain = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", data)
+        self._buf += plain
         while "\n" in self._buf:
             line, self._buf = self._buf.split("\n", 1)
             self._callback(line)
@@ -109,9 +112,19 @@ class JobManager:
 
     # ── logging ──────────────────────────────────────────────
 
+    @staticmethod
+    def _strip_ansi(s: str) -> str:
+        import re
+        s = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", s)
+        s = re.sub(r"\x1b\].*?\x07", "", s)
+        return s
+
     def log(self, line: str) -> None:
         ts = time.strftime("%H:%M:%S")
-        text = line if line.startswith("[") else f"[{ts}] {line}"
+        clean = self._strip_ansi(line).rstrip()
+        if not clean:
+            return
+        text = clean if clean.startswith("[") else f"[{ts}] {clean}"
         with self._lock:
             self._logs.append(text)
             self._log_seq += 1
@@ -176,13 +189,20 @@ class JobManager:
 
     # ── environment ──────────────────────────────────────────
 
-    def prepare_env(self, *, install_packages: bool = True, framework: str = "unsloth") -> dict:
+    def prepare_env(
+        self,
+        *,
+        install_packages: bool = True,
+        framework: str = "unsloth",
+        build_image: bool = True,
+    ) -> dict:
         self._set(phase=JobPhase.SETUP.value, message="Připravuji prostředí…", progress=5)
         self.log("Příprava host prostředí (Docker, NVIDIA runtime)…")
         try:
             self._env = prepare_environment(
                 install_packages=install_packages,
                 framework=framework,
+                build_image=build_image,
             )
             self._prepared = True
             env_info = {
@@ -425,16 +445,16 @@ class JobManager:
         allow_over = bool(data.get("allow_over_limit")) or bool(data.get("no_limits"))
         install = not bool(data.get("skip_setup"))
 
-        # Setup
+        # Setup (host packages only — Docker image se staví až při tréninku, 1× se zámkem)
         self._set(phase=JobPhase.SETUP.value, message="Setup prostředí…", progress=5)
         if not self._prepared or install:
             try:
                 self.prepare_env(
                     install_packages=install,
                     framework=data.get("framework") or "unsloth",
+                    build_image=False,
                 )
             except Exception:
-                # continue with partial env for analyze/dry-run
                 if not dry_run and not skip_train:
                     raise
                 self._env = self._env or EnvReport(
@@ -450,24 +470,37 @@ class JobManager:
         cfg = self.build_config(data)
         gpus: list[GpuInfo] = self._env.gpus if self._env else detect_gpus()
 
-        # Analyze
-        self._set(phase=JobPhase.ANALYZE.value, message="Počítám odhad paměti a času…", progress=20)
+        # Analyze FIRST (live estimate in UI before long docker build)
+        self._set(phase=JobPhase.ANALYZE.value, message="Počítám odhad paměti a času…", progress=12)
         mode = (cfg.extra or {}).get("train_mode") or "?"
         identity = (cfg.extra or {}).get("identity_name") or cfg.ollama_name
+        self.log("=" * 48)
+        self.log(f"MODEL (přesně to, co se učí): {cfg.model_id}")
+        self.log(f"Režim: {mode} | metoda: {cfg.method} | jméno AI: „{identity}“")
+        self.log(f"Data: {cfg.dataset_path} | formát: {cfg.dataset_format}")
         self.log(
-            f"Režim: {mode} | jméno AI: „{identity}“ | model: {cfg.model_id} | "
-            f"data: {cfg.dataset_path} | metoda: {cfg.method} | "
             f"bez cenzury: {(cfg.extra or {}).get('uncensored')} | "
             f"bez limitů: {(cfg.extra or {}).get('no_limits')} | "
             f"učit jméno: {(cfg.extra or {}).get('teach_identity', True)}"
         )
+        if "qwen" in cfg.model_id.lower() and mode in ("from_scratch", "from_scratch_full"):
+            self.log("POZNÁMKA: zvolili jste Qwen model záměrně (ID výše).")
         est = analyze(cfg, gpus)
-        self._set(estimate=est.to_dict(), progress=30)
+        self._set(estimate=est.to_dict(), config={
+            "model_id": cfg.model_id,
+            "method": cfg.method,
+            "train_mode": mode,
+            "identity_name": identity,
+            "dataset_path": cfg.dataset_path,
+            "ollama_name": cfg.ollama_name,
+        }, progress=25)
         self.log(
-            f"Odhad: grafika ~{est.recommended_vram_gib:.1f} GB, "
-            f"čas ~{est.est_train_hours:.2f} h, ~${est.est_cost_usd:.2f}, "
-            f"učí se {est.trainable_params/1e6:.1f}M parametrů"
+            f"ODHAD (živě): VRAM ~{est.recommended_vram_gib:.1f} GB | "
+            f"čas ~{est.est_train_hours:.2f} h | ~${est.est_cost_usd:.2f} | "
+            f"samples {est.num_samples} | trainable {est.trainable_params/1e6:.1f}M "
+            f"({est.trainable_pct:.1f}%) | vejde se na GPU: {est.fits_gpus}"
         )
+        self.log("=" * 48)
 
         if dry_run or skip_train:
             self._set(

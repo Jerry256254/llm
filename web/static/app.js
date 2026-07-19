@@ -276,32 +276,35 @@
     }
   }
 
-  function renderEstimate(est) {
+  function renderEstimate(est, cfg) {
     if (!est) return;
     const box = $("#estimate-box");
     const grid = $("#estimate-grid");
     box.classList.remove("hidden");
     const hours = est.est_train_hours;
+    const modelLabel = (cfg && cfg.model_id) ? cfg.model_id : "";
     const plain =
-      hours < 0.05
+      (modelLabel ? `Model: ${modelLabel}. ` : "") +
+      (hours < 0.05
         ? "Odhad: skoro okamžitě (málo dat)."
         : hours < 1
           ? `Odhad: asi ${Math.round(hours * 60)} minut učení.`
-          : `Odhad: asi ${hours.toFixed(1)} hodin učení.`;
-    $("#estimate-plain").textContent =
-      plain +
+          : `Odhad: asi ${hours.toFixed(1)} hodin učení.`) +
       ` Paměť grafiky cca ${est.recommended_vram_gib.toFixed(0)} GB. ` +
-      (est.fits_gpus ? "Na detekované GPU by se to mohlo vejít." : "GPU je málo / žádná — na tomto stroji to asi nepůjde.");
+      (est.fits_gpus ? "Na detekované GPU by se to mohlo vejít." : "GPU je málo / žádná — pozor.");
+    $("#estimate-plain").textContent = plain;
 
     const rows = [
-      ["Velikost modelu", (est.model_params_total / 1e9).toFixed(1) + " miliard parametrů"],
-      ["Co se učí", (est.trainable_params / 1e6).toFixed(1) + " M vah (" + est.trainable_pct.toFixed(1) + " %)"],
-      ["Potřeba grafiky", "cca " + est.recommended_vram_gib.toFixed(1) + " GB"],
-      ["Počet příkladů", String(est.num_samples)],
-      ["Kroků učení", String(est.total_steps)],
-      ["Čas (odhad)", est.est_train_hours.toFixed(2) + " h"],
-      ["Cena (hrubý odhad)", "$" + est.est_cost_usd.toFixed(2)],
-      ["Vejde se na GPU?", est.fits_gpus ? "ANO" : "NE / nevíme"],
+      ["Model", modelLabel || "—"],
+      ["Metoda", (cfg && cfg.method) || "—"],
+      ["Velikost", (est.model_params_total / 1e9).toFixed(1) + " B parametrů"],
+      ["Co se učí", (est.trainable_params / 1e6).toFixed(1) + " M (" + est.trainable_pct.toFixed(1) + " %)"],
+      ["Potřeba GPU", "cca " + est.recommended_vram_gib.toFixed(1) + " GB"],
+      ["Příklady", String(est.num_samples)],
+      ["Kroky", String(est.total_steps)],
+      ["Čas", est.est_train_hours.toFixed(2) + " h"],
+      ["Cena ~", "$" + est.est_cost_usd.toFixed(2)],
+      ["Vejde se?", est.fits_gpus ? "ANO" : "NE / ?"],
     ];
     grid.innerHTML = rows.map(([k, v]) =>
       `<div class="k">${k}</div><div class="v">${v}</div>`
@@ -312,7 +315,7 @@
     try {
       const st = await api("/api/status");
       setProgress(st.progress, st.message, st.phase);
-      if (st.estimate) renderEstimate(st.estimate);
+      if (st.estimate) renderEstimate(st.estimate, st.config);
       $("#btn-start").disabled = !!st.running;
       $("#btn-cancel").disabled = !st.running;
       $("#btn-analyze").disabled = !!st.running;
@@ -387,19 +390,32 @@
         alert("Zadejte cestu k datům.");
         return;
       }
-      setProgress(1, "Startuji učení…", "setup");
+      // Live estimate immediately (before / with start)
+      setProgress(2, "Počítám odhad…", "analyze");
       appendLog(["=== ZAČÍNÁM UČENÍ ==="]);
+      appendLog([`MODEL: ${body.model_id} (režim ${body.train_mode}, metoda ${body.method})`]);
+      try {
+        const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
+        if (pre.estimate) {
+          renderEstimate(pre.estimate, { model_id: body.model_id, method: body.method });
+          appendLog([
+            `ODHAD: VRAM ~${pre.estimate.recommended_vram_gib.toFixed(1)} GB | ` +
+            `${pre.estimate.est_train_hours.toFixed(2)} h | $${pre.estimate.est_cost_usd.toFixed(2)} | ` +
+            `${pre.estimate.num_samples} samples`
+          ]);
+        }
+      } catch (e) {
+        appendLog(["Odhad před startem selhal (pokračuji): " + e.message]);
+      }
       appendLog([
-        `Režim: ${body.train_mode} | jméno AI: „${body.identity_name}“ | ` +
-        `Ollama: ${body.ollama_name} | model: ${body.model_id} | metoda: ${body.method}`
+        `jméno AI: „${body.identity_name}“ | Ollama: ${body.ollama_name}`
       ]);
       if (body.teach_identity) {
-        appendLog([`Do dat se přidají příklady, aby věděl že se jmenuje ${body.identity_name}`]);
+        appendLog([`Učení jména: ano (${body.identity_name})`]);
       }
-      if (body.uncensored) appendLog(["Režim bez cenzury: zapnuto"]);
-      if (body.no_limits) appendLog(["Limity času/peněz: vypnuty (prakticky bez brzd)"]);
+      setProgress(5, "Startuji job…", "setup");
       const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
-      appendLog([`Job spuštěn: fáze ${st.phase || "?"} — ${st.message || ""}`]);
+      appendLog([`Job spuštěn: ${st.phase || "?"} — ${st.message || ""}`]);
       await refreshStatus();
     } catch (err) {
       console.error(err);
@@ -424,9 +440,10 @@
     try {
       const body = formPayload();
       body.dry_run = true;
+      appendLog([`Analýza pro model: ${body.model_id}`]);
       const res = await api("/api/analyze", { method: "POST", body: JSON.stringify(body) });
-      if (res.estimate) renderEstimate(res.estimate);
-      appendLog(["Odhad hotov — nic se neučilo, jen počítání."]);
+      if (res.estimate) renderEstimate(res.estimate, { model_id: body.model_id, method: body.method });
+      appendLog(["Odhad hotov — nic se neučilo."]);
     } catch (err) {
       alert(err.message);
     }

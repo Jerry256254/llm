@@ -319,10 +319,36 @@ def _local_ips() -> list[str]:
     return ips
 
 
+def _banner_text(host: str, port: int, token: str) -> str:
+    urls = [f"http://{ip}:{port}" for ip in _local_ips()]
+    lines = [
+        "Web UI běží — otevřete v prohlížeči:",
+        "",
+        f"  Lokálně:  {urls[0]}",
+    ]
+    for u in urls[1:]:
+        lines.append(f"  Síť:      {u}")
+    lines.append(f"  Bind:     http://{host}:{port}")
+    lines.append("")
+    if token:
+        lines.append(f"  Access token:  {token}")
+        lines.append("  (vložte dole ve webu; nebo: python3 run.py --no-token)")
+    else:
+        lines.append("  Auth: VYPNUTÁ (--no-token)")
+    lines.append("")
+    lines.append("  Firewall GCE: gcloud compute firewall-rules create llm-ui \\")
+    lines.append(f"      --allow=tcp:{port} --source-ranges=0.0.0.0/0")
+    lines.append("")
+    lines.append("  Ctrl+C  =  bezpečně ukončit server")
+    return "\n".join(lines)
+
+
 def run_web(args: argparse.Namespace) -> int:
-    # path for local imports (lib/)
     if str(ROOT) not in sys.path:
         sys.path.insert(0, str(ROOT))
+
+    import signal
+    import threading
 
     from rich.console import Console
     from rich.panel import Panel
@@ -346,46 +372,71 @@ def run_web(args: argparse.Namespace) -> int:
     port = args.port
     app = create_app(access_token=token)
 
+    # Background: only packages + GPU detect — NOT docker image (avoids dual builds)
     if not args.skip_setup:
         def _bg_setup():
             try:
                 from lib.job_manager import manager
-                manager.log("Automatický setup prostředí na pozadí…")
-                manager.prepare_env(install_packages=True, framework="unsloth")
+                manager.log("Automatický setup (balíčky/GPU, bez Docker buildu)…")
+                manager.prepare_env(
+                    install_packages=True,
+                    framework="unsloth",
+                    build_image=False,
+                )
+                manager.log("Host setup hotov. Docker image se postaví až při Startu (1×).")
             except Exception as e:
                 from lib.job_manager import manager
-                manager.log(f"Setup varování (můžete spustit z UI): {e}")
+                manager.log(f"Setup varování: {e}")
 
-        import threading
         threading.Thread(target=_bg_setup, name="bg-setup", daemon=True).start()
 
-    urls = [f"http://{ip}:{port}" for ip in _local_ips()]
-    lines = [
-        "[bold]Web Control Panel běží[/]",
-        "",
-        f"Lokálně:   {urls[0]}",
-    ]
-    for u in urls[1:]:
-        lines.append(f"Síť:       {u}")
-    lines.append(f"Bind:      http://{host}:{port}")
-    lines.append(f"Python:    {sys.executable}")
-    lines.append("")
-    if token:
-        lines.append(f"[bold yellow]Access token:[/] {token}")
-        lines.append("Zadejte token ve web UI (nebo hlavička X-Token).")
-        lines.append("Vypnout auth: python run.py --no-token")
-    else:
-        lines.append("[red]Auth vypnutá[/] — nevystavujte na veřejný internet bez firewallu.")
-    lines.append("")
-    lines.append("Na Google Cloud otevřete firewall pro TCP port " + str(port) + ":")
-    lines.append(
-        f"  gcloud compute firewall-rules create llm-ui --allow=tcp:{port} --source-ranges=0.0.0.0/0"
+    banner = _banner_text(host, port, token)
+    # Save for easy re-print
+    (ROOT / ".ui_banner.txt").write_text(
+        banner.replace("[bold]", "").replace("[/]", "").replace("[bold yellow]", "")
+        .replace("[/bold yellow]", "").replace("[red]", "").replace("[/red]", ""),
+        encoding="utf-8",
     )
-    lines.append("")
-    lines.append("Ctrl+C ukončí server.")
 
-    console.print(Panel("\n".join(lines), title="Učení AI modelu", border_style="cyan"))
-    uvicorn.run(app, host=host, port=port, log_level=args.log_level)
+    def print_footer(title: str = "Učení AI modelu — URL + TOKEN (vždy dole)") -> None:
+        console.print()
+        console.print(Panel(banner, title=title, border_style="bright_cyan", expand=True))
+        console.print("[dim]Logy serveru jsou NÁD tímto panelem. Ctrl+C ukončí vše.[/]\n")
+
+    print_footer()
+
+    config = uvicorn.Config(
+        app,
+        host=host,
+        port=port,
+        log_level=args.log_level,
+        access_log=False,  # méně šumu; job logy jdou do webu
+    )
+    server = uvicorn.Server(config)
+
+    def _on_signal(signum, frame):
+        console.print("\n[yellow]Ctrl+C — ukončuji server…[/]")
+        server.should_exit = True
+
+    signal.signal(signal.SIGINT, _on_signal)
+    signal.signal(signal.SIGTERM, _on_signal)
+
+    # Re-print banner after startup so it sits under uvicorn "Started" lines
+    def _reprint():
+        import time
+        time.sleep(1.2)
+        if not server.should_exit:
+            print_footer("Připomenutí — URL + TOKEN")
+
+    threading.Thread(target=_reprint, name="banner-footer", daemon=True).start()
+
+    try:
+        server.run()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        console.print("[green]Server ukončen.[/]")
+        print_footer("Ukončeno — token pro příští start")
     return 0
 
 
