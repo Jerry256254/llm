@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Učení AI → Ollama</title>
   <link rel="stylesheet" href="/static/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div id="auth-gate" class="auth-gate auth-gate--fullscreen hidden">
+  <div id="auth-gate" class="auth-gate hidden">
     <div class="auth-card">
-      <h1>Přístupový token</h1>
-      <p class="big-hint">Z terminálu (<code>python3 run.py</code>) zkopírujte <strong>Access token</strong>.</p>
-      <input type="password" id="token-input" placeholder="Vložte token" autocomplete="off" />
+      <h1>Token UI</h1>
+      <p class="big-hint">Access token z terminálu <code>python3 run.py</code></p>
+      <input type="password" id="token-input" placeholder="Access token" />
       <button type="button" id="token-save" class="btn primary">Vstoupit</button>
-      <p id="token-error" class="error hidden">Neplatný token</p>
+      <p id="token-error" class="error hidden">Špatný token</p>
     </div>
   </div>
 
@@ -24,136 +23,100 @@
       <div class="brand">
         <div class="logo">🧠</div>
         <div>
-          <h1>Učení AI modelu</h1>
-          <span class="sub">Trénink → GGUF → Ollama</span>
+          <h1>Učení AI → Ollama</h1>
+          <span class="sub">Qwen3.5 full train · GGUF · chat test</span>
         </div>
       </div>
       <div class="topbar-right">
         <span id="gpu-badge" class="badge">GPU: …</span>
+        <span id="hf-badge" class="badge">HF: …</span>
         <span id="phase-badge" class="badge phase idle">připraveno</span>
       </div>
     </header>
 
     <div class="layout">
-      <!-- LEFT: simple form -->
-      <section class="panel form-panel">
+      <section class="panel">
         <form id="train-form" novalidate>
+          <h2 class="section-title">0 · Hugging Face + Ollama</h2>
+          <label class="field">
+            HF token (pro stažení modelů)
+            <input type="password" name="hf_token" id="hf_token" placeholder="hf_…" autocomplete="off" />
+          </label>
+          <div class="actions-inline">
+            <button type="button" id="btn-save-token" class="btn sm">Uložit token</button>
+            <button type="button" id="btn-ensure-ollama" class="btn sm">Nainstalovat / spustit Ollama</button>
+          </div>
+          <p id="hf-status" class="hint">—</p>
+
           <h2 class="section-title">1 · Jak učit</h2>
           <div class="choice-grid">
             <label class="choice-card selected">
               <input type="radio" name="train_mode" value="from_scratch" checked />
               <strong>Od nuly (full)</strong>
-              <span>Učí <em>všechny váhy</em> moderního base modelu na vašich datech (ne random init — to by stálo miliony $)</span>
+              <span>Všechny váhy base modelu na tvých datech</span>
             </label>
             <label class="choice-card">
               <input type="radio" name="train_mode" value="finetune" />
               <strong>Fine-tune</strong>
-              <span>Jen malé adaptéry (QLoRA) — rychlejší, méně VRAM</span>
+              <span>QLoRA — rychlejší</span>
             </label>
           </div>
-          <p class="hint" style="margin-top:8px">
-            Ollama <code>qwen3.5:2b</code> = chat. K tréninku bereme HF
-            <code>Qwen/Qwen3.5-2B-Base</code> (full train všech vah na tvých datech → pak zase Ollama).
-            Licence Qwen3.5 je obvykle Apache-2.0 (bez gate).
-          </p>
 
-          <h2 class="section-title">2 · Velikost mozku (základ)</h2>
-          <p class="hint">HF model NEBO lokální Ollama (prefix <code>ollama:</code>). Ollama se převede z GGUF → HF pro trénink.</p>
+          <h2 class="section-title">2 · Base model (lehce trénovatelné na L4)</h2>
           <label class="field">
             <select name="model_preset" id="model_preset"></select>
           </label>
-          <label class="field hidden" id="custom-model-wrap">
-            Vlastní ID (HF / ollama:jméno / cesta)
-            <input name="model_id_custom" id="model_id_custom" placeholder="ollama:gemma2:2b  nebo  unsloth/llama-3.2-1b" />
-          </label>
-          <input type="hidden" name="model_id" id="model_id" value="Qwen/Qwen3.5-2B-Base" />
-          <label class="field">
-            Hugging Face token (jen pro gated modely, např. Gemma)
-            <input type="password" name="hf_token" id="hf_token" placeholder="hf_… (nebo nastavte export HF_TOKEN na serveru)" autocomplete="off" />
-          </label>
-          <p class="hint">Token se neukládá do gitu. Stačí <code>export HF_TOKEN=…</code> před <code>python3 run.py</code> — <strong>nemusíte</strong> <code>hf auth login</code>.</p>
+          <div class="actions-inline">
+            <button type="button" id="btn-download-model" class="btn primary sm">⬇ Stáhnout model do serveru</button>
+            <span id="dl-status" class="hint"></span>
+          </div>
+          <input type="hidden" name="model_id" id="model_id" value="Qwen/Qwen3.5-0.8B-Base" />
 
           <h2 class="section-title">3 · Data + učení</h2>
-          <label class="field">
-            Umístění dat
-            <input name="dataset_path" value="./data/test_multilang_code/train.jsonl" required />
+          <label class="field">Data
+            <input name="dataset_path" value="./data/test_multilang_code/train.jsonl" />
           </label>
           <div class="row2">
-            <label class="field">
-              Epochs (kolikrát projet data)
-              <input type="number" name="epochs" value="2" min="0.1" step="any" />
-            </label>
-            <label class="field">
-              Learning rate
-              <input type="number" name="learning_rate" value="0.00005" min="0" step="any" />
-            </label>
+            <label class="field">Epochs<input type="number" name="epochs" value="2" step="any" /></label>
+            <label class="field">Learning rate<input type="number" name="learning_rate" value="0.00005" step="any" /></label>
           </div>
 
-          <h2 class="section-title">4 · Jméno modelu</h2>
-          <label class="field">
-            Jméno AI (naučí se ho + Ollama)
+          <h2 class="section-title">4 · Jméno výsledku</h2>
+          <label class="field">Jméno AI
             <input name="identity_name" id="identity_name" value="KucLab V0.1" />
           </label>
-          <label class="field">
-            Technické jméno v Ollama
+          <label class="field">Ollama název
             <input name="ollama_name" id="ollama_name" value="kuclab-v0.1" />
           </label>
 
-          <!-- Hidden defaults / advanced -->
           <details class="advanced">
-            <summary>Advanced (volitelné)</summary>
-            <label class="check"><input type="checkbox" name="uncensored" id="uncensored" checked /> Bez cenzury (base model)</label>
-            <label class="check"><input type="checkbox" name="no_limits" id="no_limits" checked /> Bez limitů času/ceny</label>
-            <label class="check"><input type="checkbox" name="teach_identity" id="teach_identity" checked /> Učit jméno v datech</label>
-            <label class="check"><input type="checkbox" name="skip_setup" id="skip_setup" checked /> Přeskočit apt setup</label>
-            <label class="check"><input type="checkbox" name="allow_over_limit" checked /> Povolit překročení odhadu</label>
-            <label class="field">Formát dat
-              <select name="dataset_format" id="dataset_format">
-                <option value="alpaca" selected>alpaca / mix</option>
-                <option value="text">text</option>
-                <option value="chat">chat</option>
-                <option value="sharegpt">sharegpt</option>
-                <option value="hf">hf</option>
-              </select>
+            <summary>Advanced</summary>
+            <label class="check"><input type="checkbox" name="uncensored" id="uncensored" checked /> Bez cenzury</label>
+            <label class="check"><input type="checkbox" name="no_limits" id="no_limits" checked /> Bez limitů</label>
+            <label class="check"><input type="checkbox" name="teach_identity" checked /> Učit jméno</label>
+            <label class="check"><input type="checkbox" name="skip_setup" checked /> Skip apt</label>
+            <label class="check"><input type="checkbox" name="allow_over_limit" checked /> Allow over limit</label>
+            <label class="field">dataset_format
+              <select name="dataset_format"><option value="alpaca" selected>alpaca</option><option value="text">text</option></select>
             </label>
-            <label class="field">Framework
-              <select name="framework">
-                <option value="peft" selected>peft (doporučeno, stabilní)</option>
-                <option value="unsloth">unsloth (jen pokud image umí)</option>
-                <option value="axolotl">axolotl</option>
-              </select>
+            <label class="field">method
+              <select name="method" id="method"><option value="full">full</option><option value="qlora">qlora</option></select>
             </label>
-            <label class="field">Metoda
-              <select name="method" id="method">
-                <option value="full">full</option>
-                <option value="qlora">qlora</option>
-                <option value="lora">lora</option>
-              </select>
+            <label class="field">framework
+              <select name="framework"><option value="peft" selected>peft</option></select>
             </label>
-            <label class="field">GGUF
-              <select name="gguf_quant">
-                <option value="q4_k_m">q4_k_m</option>
-                <option value="q5_k_m">q5_k_m</option>
-                <option value="q8_0">q8_0</option>
-                <option value="f16">f16</option>
-              </select>
+            <label class="field">gguf_quant
+              <select name="gguf_quant"><option value="q4_k_m">q4_k_m</option><option value="q5_k_m">q5_k_m</option><option value="q8_0">q8_0</option></select>
             </label>
-            <div class="row3">
-              <label class="field">LoRA r<input type="number" name="lora_r" value="64" /></label>
-              <label class="field">Seq<input type="number" name="max_seq_length" value="2048" /></label>
-              <label class="field">Batch<input type="number" name="batch_size" value="1" /></label>
-            </div>
-            <div class="row3">
-              <label class="field">Grad accum<input type="number" name="grad_accum" value="8" /></label>
-              <label class="field">Max h<input type="number" name="max_train_hours" value="720" step="any" /></label>
-              <label class="field">Max $<input type="number" name="max_cost_usd" value="999999" step="any" /></label>
-            </div>
+            <input type="hidden" name="lora_r" value="64" />
             <input type="hidden" name="lora_alpha" value="128" />
+            <input type="hidden" name="max_seq_length" value="2048" />
+            <input type="hidden" name="batch_size" value="1" />
+            <input type="hidden" name="grad_accum" value="8" />
+            <input type="hidden" name="max_train_hours" value="720" />
+            <input type="hidden" name="max_cost_usd" value="999999" />
             <input type="hidden" name="gpu_hourly_usd" value="0.35" />
             <input type="hidden" name="output_dir" value="./outputs" />
-            <label class="check"><input type="checkbox" name="skip_gguf" /> Skip GGUF</label>
-            <label class="check"><input type="checkbox" name="skip_ollama" /> Skip Ollama</label>
-            <label class="check"><input type="checkbox" name="dry_run" /> Jen odhad</label>
           </details>
 
           <div class="actions">
@@ -164,51 +127,55 @@
         </form>
       </section>
 
-      <!-- RIGHT: progress + estimate -->
-      <section class="panel status-panel">
+      <section class="panel">
         <div class="panel-head">
           <h2>Průběh</h2>
           <span id="progress-label" class="progress-pct">0%</span>
         </div>
         <div class="progress-bar"><div id="progress-fill"></div></div>
-        <p id="status-msg" class="status-msg">Nastavte možnosti vlevo a stiskněte Začít učení.</p>
+        <p id="status-msg" class="status-msg">Připraveno</p>
         <p id="progress-detail" class="progress-detail"></p>
-
         <div id="estimate-box" class="estimate hidden">
           <h3>Odhad</h3>
           <div id="estimate-grid" class="estimate-grid"></div>
           <p id="estimate-plain" class="estimate-plain"></p>
         </div>
-
         <div id="result-box" class="result-box hidden">
-          <h3>Hotovo — Ollama</h3>
+          <h3>Hotovo</h3>
           <p id="result-cmd" class="result-cmd"></p>
         </div>
+
+        <h2 class="section-title" style="margin-top:18px">Test chatu (Ollama)</h2>
+        <label class="field">Model
+          <input id="chat-model" value="kuclab-v0.1" />
+        </label>
+        <label class="field">Zpráva
+          <input id="chat-input" placeholder="Ahoj, jak se jmenuješ?" />
+        </label>
+        <button type="button" id="btn-chat" class="btn primary sm">Poslat</button>
+        <pre id="chat-out" class="chat-out"></pre>
       </section>
     </div>
 
-    <!-- FULL WIDTH TERMINAL -->
     <section class="panel terminal-panel">
       <div class="panel-head">
-        <h2>Terminál <span class="muted">(read-only · všechny logy)</span></h2>
+        <h2>Terminál <span class="muted">(všechny logy)</span></h2>
         <div class="log-actions">
-          <label class="log-follow"><input type="checkbox" id="log-follow" checked /> Sledovat konec</label>
-          <button type="button" id="btn-copy-log" class="btn primary sm">📋 Kopírovat vše</button>
-          <button type="button" id="btn-download-log" class="btn sm">⬇ .txt</button>
-          <button type="button" id="btn-clear-log" class="btn ghost sm">Vyčistit pohled</button>
+          <label class="log-follow"><input type="checkbox" id="log-follow" checked /> Sledovat</label>
+          <button type="button" id="btn-copy-log" class="btn primary sm">📋 Kopírovat</button>
+          <button type="button" id="btn-download-log" class="btn sm">⬇ txt</button>
+          <button type="button" id="btn-clear-log" class="btn ghost sm">Vyčistit</button>
         </div>
       </div>
       <div class="terminal-wrap">
         <div class="terminal-bar">
-          <span class="terminal-dot r"></span>
-          <span class="terminal-dot y"></span>
-          <span class="terminal-dot g"></span>
-          <span class="terminal-title">pipeline · live</span>
-          <span id="log-count" class="terminal-count">0 řádků</span>
+          <span class="terminal-dot r"></span><span class="terminal-dot y"></span><span class="terminal-dot g"></span>
+          <span class="terminal-title">live</span>
+          <span id="log-count" class="terminal-count">0</span>
         </div>
-        <pre id="log" class="terminal-body" tabindex="0" aria-readonly="true"></pre>
+        <pre id="log" class="terminal-body"></pre>
       </div>
-      <p id="copy-toast" class="copy-toast hidden">Zkopírováno</p>
+      <p id="copy-toast" class="copy-toast hidden"></p>
     </section>
   </div>
 

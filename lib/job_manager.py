@@ -448,10 +448,15 @@ class JobManager:
     # ── config helpers ───────────────────────────────────────
 
     def build_config(self, data: dict) -> PipelineConfig:
-        model_id = (data.get("model_id") or "unsloth/llama-3.2-1b").strip()
+        raw_model = (data.get("model_id") or "Qwen/Qwen3.5-0.8B-Base").strip()
+        # Map ollama:qwen3.5:0.8b → HF Base before anything else
+        from .model_source import normalize_model_id
+        try:
+            model_id = normalize_model_id(raw_model)
+        except Exception:
+            model_id = raw_model
         default_data = str(ROOT / "data" / "test_multilang_code" / "train.jsonl")
         dataset_path = (data.get("dataset_path") or default_data).strip()
-        # map friendly train_mode → method (UI usually sends both)
         train_mode = (data.get("train_mode") or "from_scratch").strip()
         method = (data.get("method") or "").strip().lower()
         if method not in ("qlora", "lora", "full"):

@@ -333,6 +333,19 @@ body {
 }
 
 .copy-toast { color: var(--good); font-weight: 600; font-size: 0.9rem; margin: 8px 0 0; }
+.actions-inline { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0 12px; }
+.chat-out {
+  margin-top: 10px;
+  padding: 12px;
+  min-height: 80px;
+  max-height: 220px;
+  overflow: auto;
+  background: rgba(0,0,0,.35);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
 code {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.88em;

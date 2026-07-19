@@ -1,31 +1,57 @@
-"""Resolve training base model from HF, local path, or local Ollama install."""
+"""Resolve & download training bases: HF hub (preferred) or local path.
+
+Ollama names like qwen3.5:0.8b are mapped to official HF Base IDs and downloaded
+via huggingface_hub — NOT passed into transformers as repo ids.
+"""
 
 from __future__ import annotations
 
-import json
 import os
-import re
 import shutil
-import struct
 import subprocess
 from pathlib import Path
 from typing import Optional
 
-import requests
 from rich.console import Console
 
 console = Console()
 
-OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+MODELS_DIR = PROJECT_ROOT / "models"
+TOKEN_FILE = PROJECT_ROOT / "outputs" / ".hf_token"
+
+# Ollama name → HF training Base (Apache-2.0 / easy full-train on L4)
+OLLAMA_TO_HF: dict[str, str] = {
+    "qwen3.5:0.8b": "Qwen/Qwen3.5-0.8B-Base",
+    "qwen3.5:0.8b-mlx": "Qwen/Qwen3.5-0.8B-Base",
+    "qwen3.5:2b": "Qwen/Qwen3.5-2B-Base",
+    "qwen3.5:2b-mlx": "Qwen/Qwen3.5-2B-Base",
+    "qwen3.5:4b": "Qwen/Qwen3.5-4B-Base",
+    "qwen3.5:4b-mlx": "Qwen/Qwen3.5-4B-Base",
+    "qwen3.5:9b": "Qwen/Qwen3.5-9B-Base",
+    "qwen3.5:9b-mlx": "Qwen/Qwen3.5-9B-Base",
+    "qwen3.5:latest": "Qwen/Qwen3.5-0.8B-Base",
+    "qwen2.5:1.5b": "Qwen/Qwen2.5-1.5B",
+    "qwen2.5:3b": "Qwen/Qwen2.5-3B",
+    "llama3.2:1b": "unsloth/llama-3.2-1b",
+    "llama3.2:3b": "unsloth/llama-3.2-3b",
+}
+
+# Easy full-train bases for L4 24GB (recommended UI list)
+EASY_BASE_MODELS: list[dict] = [
+    {"id": "Qwen/Qwen3.5-0.8B-Base", "label": "Qwen3.5 · 0.8B Base ★ L4", "params_b": 0.8, "ollama_equiv": "qwen3.5:0.8b"},
+    {"id": "Qwen/Qwen3.5-2B-Base", "label": "Qwen3.5 · 2B Base ★ L4", "params_b": 2.0, "ollama_equiv": "qwen3.5:2b"},
+    {"id": "Qwen/Qwen3.5-4B-Base", "label": "Qwen3.5 · 4B Base · L4", "params_b": 4.0, "ollama_equiv": "qwen3.5:4b"},
+    {"id": "unsloth/llama-3.2-1b", "label": "Llama 3.2 · 1B", "params_b": 1.0, "ollama_equiv": "llama3.2:1b"},
+    {"id": "Qwen/Qwen2.5-1.5B", "label": "Qwen2.5 · 1.5B", "params_b": 1.5, "ollama_equiv": None},
+    {"id": "Qwen/Qwen2.5-3B", "label": "Qwen2.5 · 3B", "params_b": 3.0, "ollama_equiv": None},
+]
 
 
 def fix_hf_cache_permissions() -> None:
-    """Avoid PermissionError on ~/.cache/huggingface/stored_tokens (often root-owned)."""
     cache = Path.home() / ".cache" / "huggingface"
     try:
         cache.mkdir(parents=True, exist_ok=True)
-        # If we can't write, try chown via sudo -n
         test = cache / ".write_test"
         try:
             test.write_text("ok", encoding="utf-8")
@@ -38,255 +64,191 @@ def fix_hf_cache_permissions() -> None:
             check=False,
             capture_output=True,
         )
-        cache.mkdir(parents=True, exist_ok=True)
     except Exception as e:
-        console.print(f"[yellow]HF cache permissions: {e}[/]")
+        console.print(f"[yellow]HF cache: {e}[/]")
 
 
-def list_ollama_models() -> list[dict]:
-    """Return local Ollama models [{name, size, ...}]."""
-    try:
-        r = requests.get(f"{OLLAMA_HOST}/api/tags", timeout=5)
-        r.raise_for_status()
-        models = r.json().get("models") or []
-        out = []
-        for m in models:
-            out.append(
-                {
-                    "name": m.get("name") or m.get("model"),
-                    "size": m.get("size"),
-                    "digest": m.get("digest"),
-                    "details": m.get("details") or {},
-                }
-            )
-        return out
-    except Exception as e:
-        console.print(f"[dim]Ollama list failed: {e}[/]")
-        return []
-
-
-def _ollama_show(name: str) -> dict:
-    r = requests.post(f"{OLLAMA_HOST}/api/show", json={"name": name}, timeout=60)
-    r.raise_for_status()
-    return r.json()
-
-
-def _find_ollama_blobs_dir() -> Optional[Path]:
-    candidates = [
-        Path.home() / ".ollama" / "models" / "blobs",
-        Path("/usr/share/ollama/.ollama/models/blobs"),
-        Path("/root/.ollama/models/blobs"),
-    ]
-    for c in candidates:
-        if c.is_dir():
-            return c
-    # search
-    home_o = Path.home() / ".ollama"
-    if home_o.exists():
-        for p in home_o.rglob("blobs"):
-            if p.is_dir():
-                return p
+def get_hf_token(explicit: Optional[str] = None) -> Optional[str]:
+    if explicit and explicit.strip():
+        return explicit.strip()
+    for k in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN", "HF_HUB_TOKEN"):
+        v = os.environ.get(k)
+        if v and v.strip():
+            return v.strip()
+    if TOKEN_FILE.exists():
+        try:
+            t = TOKEN_FILE.read_text(encoding="utf-8").strip()
+            if t:
+                return t
+        except OSError:
+            pass
+    # huggingface saved token
+    tok = Path.home() / ".cache" / "huggingface" / "token"
+    if tok.exists():
+        try:
+            return tok.read_text(encoding="utf-8").strip() or None
+        except OSError:
+            pass
     return None
 
 
-def _is_gguf(path: Path) -> bool:
+def save_hf_token(token: str) -> None:
+    """Save token to project + user cache (no sudo, no git)."""
+    token = token.strip()
+    if not token:
+        raise ValueError("Prázdný token")
+    fix_hf_cache_permissions()
+    TOKEN_FILE.parent.mkdir(parents=True, exist_ok=True)
+    TOKEN_FILE.write_text(token + "\n", encoding="utf-8")
+    TOKEN_FILE.chmod(0o600)
+    tok_dir = Path.home() / ".cache" / "huggingface"
+    tok_dir.mkdir(parents=True, exist_ok=True)
     try:
-        with path.open("rb") as f:
-            return f.read(4) == b"GGUF"
+        p = tok_dir / "token"
+        p.write_text(token + "\n", encoding="utf-8")
+        p.chmod(0o600)
     except OSError:
-        return False
+        pass
+    os.environ["HF_TOKEN"] = token
+    os.environ["HUGGING_FACE_HUB_TOKEN"] = token
 
 
-def resolve_ollama_gguf(name: str, dest_dir: Path) -> Path:
-    """
-    Locate GGUF weights for a local Ollama model and copy/symlink into dest_dir.
-    """
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    name = name.removeprefix("ollama:").removeprefix("ollama/")
+def ensure_hf_cli() -> dict:
+    """Ensure huggingface_hub + hf CLI available in current env."""
+    import importlib
+    import sys
 
-    # Ensure model exists locally
+    out = {"huggingface_hub": False, "hf_cli": False, "installed": False, "error": None}
     try:
-        info = _ollama_show(name)
+        importlib.import_module("huggingface_hub")
+        out["huggingface_hub"] = True
+    except ImportError:
+        pass
+    out["hf_cli"] = shutil.which("hf") is not None or shutil.which("huggingface-cli") is not None
+    if out["huggingface_hub"]:
+        return out
+    try:
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "-q", "huggingface_hub", "hf_xet"],
+        )
+        out["installed"] = True
+        out["huggingface_hub"] = True
+        out["hf_cli"] = shutil.which("hf") is not None
     except Exception as e:
-        console.print(f"[yellow]ollama show failed ({e}), trying pull…[/]")
-        subprocess.run(["ollama", "pull", name], check=False)
-        info = _ollama_show(name)
+        out["error"] = str(e)
+    return out
 
-    blobs = _find_ollama_blobs_dir()
-    if not blobs:
-        raise FileNotFoundError(
-            "Nenalezena složka Ollama blobs (~/.ollama/models/blobs). "
-            "Je Ollama nainstalovaná a má stažené modely?"
+
+def ensure_ollama() -> dict:
+    """Install Ollama if missing (Linux curl installer)."""
+    out = {"present": False, "installed": False, "error": None, "models": []}
+    if shutil.which("ollama"):
+        out["present"] = True
+    else:
+        try:
+            console.print("[cyan]Instaluji Ollama…[/]")
+            r = subprocess.run(
+                "curl -fsSL https://ollama.com/install.sh | sh",
+                shell=True,
+                check=False,
+                timeout=300,
+            )
+            out["installed"] = r.returncode == 0 and shutil.which("ollama") is not None
+            out["present"] = bool(shutil.which("ollama"))
+            if not out["present"]:
+                out["error"] = "install script finished but ollama not in PATH"
+        except Exception as e:
+            out["error"] = str(e)
+    if out["present"]:
+        # start serve best-effort
+        subprocess.Popen(
+            ["ollama", "serve"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
         )
+        out["models"] = list_ollama_models()
+    return out
 
-    # Prefer digests from model_info / details
-    digests: list[str] = []
-    for key in ("model_info", "details"):
-        block = info.get(key) or {}
-        if isinstance(block, dict):
-            for k, v in block.items():
-                if "digest" in k.lower() and isinstance(v, str):
-                    digests.append(v)
-    # Manifest-style: look for sha256- files referenced in modelfile FROM
-    modelfile = info.get("modelfile") or ""
-    digests += re.findall(r"sha256:([a-f0-9]{64})", modelfile)
-    digests += re.findall(r"sha256-([a-f0-9]{64})", modelfile)
 
-    # Also scan largest blob files that look like GGUF
-    candidates: list[Path] = []
-    for d in digests:
-        d = d.replace("sha256:", "").replace("sha256-", "")
-        for prefix in (f"sha256-{d}", f"sha256:{d}", d):
-            p = blobs / prefix
-            if p.exists():
-                candidates.append(p)
+def list_ollama_models() -> list[dict]:
+    try:
+        import requests
+        r = requests.get("http://127.0.0.1:11434/api/tags", timeout=3)
+        r.raise_for_status()
+        return [
+            {"name": m.get("name"), "size": m.get("size"), "source": "ollama"}
+            for m in (r.json().get("models") or [])
+            if m.get("name")
+        ]
+    except Exception:
+        return []
 
-    if not candidates:
-        # fallback: largest GGUF-looking blobs (heuristic)
-        files = sorted(blobs.iterdir(), key=lambda p: p.stat().st_size if p.is_file() else 0, reverse=True)
-        for p in files[:30]:
-            if p.is_file() and p.stat().st_size > 50_000_000 and _is_gguf(p):
-                candidates.append(p)
-                break
 
-    gguf_src = None
-    for p in candidates:
-        if _is_gguf(p):
-            gguf_src = p
-            break
-    if gguf_src is None and candidates:
-        # some ollama blobs are raw without checking
-        gguf_src = max(candidates, key=lambda p: p.stat().st_size)
+def map_ollama_to_hf(name: str) -> Optional[str]:
+    n = name.strip().removeprefix("ollama:").removeprefix("ollama/").lower()
+    if n in OLLAMA_TO_HF:
+        return OLLAMA_TO_HF[n]
+    # strip tags like :latest
+    base = n.split(":")[0] if ":" in n else n
+    for k, v in OLLAMA_TO_HF.items():
+        if k.startswith(base):
+            return v
+    return None
 
-    if gguf_src is None:
-        raise FileNotFoundError(
-            f"Nepodařilo se najít GGUF pro Ollama model '{name}'. "
-            f"Blobs: {blobs}"
-        )
 
-    dest = dest_dir / f"{name.replace(':', '_').replace('/', '_')}.gguf"
-    if not dest.exists() or dest.stat().st_size != gguf_src.stat().st_size:
-        console.print(f"[cyan]Kopíruji Ollama váhy → {dest} ({gguf_src.stat().st_size/1e9:.2f} GB)…[/]")
-        shutil.copy2(gguf_src, dest)
+def local_model_dir(hf_id: str) -> Path:
+    safe = hf_id.replace("/", "__")
+    return MODELS_DIR / safe
+
+
+def is_model_downloaded(hf_id: str) -> bool:
+    d = local_model_dir(hf_id)
+    return d.is_dir() and (d / "config.json").exists()
+
+
+def download_hf_model(hf_id: str, token: Optional[str] = None, progress_cb=None) -> Path:
+    """Download HF model to models/<id> and return path."""
+    ensure_hf_cli()
+    fix_hf_cache_permissions()
+    tok = get_hf_token(token)
+    dest = local_model_dir(hf_id)
+    dest.mkdir(parents=True, exist_ok=True)
+    if (dest / "config.json").exists():
+        console.print(f"[green]Model už stažen:[/] {dest}")
+        return dest
+
+    console.print(f"[cyan]Stahuji {hf_id} → {dest} …[/]")
+    from huggingface_hub import snapshot_download
+
+    snapshot_download(
+        repo_id=hf_id,
+        local_dir=str(dest),
+        token=tok,
+        local_dir_use_symlinks=False,
+        resume_download=True,
+    )
+    if not (dest / "config.json").exists():
+        raise RuntimeError(f"Download incomplete: missing config.json in {dest}")
+    console.print(f"[green]Staženo:[/] {dest}")
     return dest
 
 
-def gguf_to_hf(gguf_path: Path, out_dir: Path, image: str, gpus: str = "all") -> Path:
-    """
-    Convert GGUF → HuggingFace folder using training image (transformers).
-    Quality: dequantized from GGUF — OK for continued full-tune experiments, not ideal vs original FP16.
-    """
-    out_dir.mkdir(parents=True, exist_ok=True)
-    marker = out_dir / "config.json"
-    if marker.exists():
-        console.print(f"[green]HF model už existuje:[/] {out_dir}")
-        return out_dir
-
-    gguf_path = gguf_path.resolve()
-    out_dir = out_dir.resolve()
-    # parent mount
-    work = out_dir.parent
-    rel_gguf = gguf_path.name if gguf_path.parent == work else str(gguf_path)
-
-    script = r"""
-import sys
-from pathlib import Path
-gguf = Path(sys.argv[1])
-out = Path(sys.argv[2])
-out.mkdir(parents=True, exist_ok=True)
-print("Converting", gguf, "->", out, flush=True)
-from transformers import AutoModelForCausalLM, AutoTokenizer
-# transformers GGUF load (architecture inferred from GGUF metadata)
-try:
-    tok = AutoTokenizer.from_pretrained(str(gguf), gguf_file=str(gguf.name) if False else str(gguf))
-except Exception as e:
-    print("tokenizer from gguf failed:", e, flush=True)
-    tok = None
-model = AutoModelForCausalLM.from_pretrained(str(gguf.parent if False else gguf))
-# Better API in recent transformers:
-try:
-    model = AutoModelForCausalLM.from_pretrained(str(gguf))
-except TypeError:
-    model = AutoModelForCausalLM.from_pretrained(".", gguf_file=str(gguf))
-except Exception:
-    model = AutoModelForCausalLM.from_pretrained(str(gguf), gguf_file=gguf.name)
-
-if tok is None:
-    try:
-        tok = AutoTokenizer.from_pretrained(str(gguf))
-    except Exception:
-        from transformers import PreTrainedTokenizerFast
-        raise RuntimeError("Cannot build tokenizer from GGUF — pick HF base instead")
-
-model.save_pretrained(str(out), safe_serialization=True)
-tok.save_pretrained(str(out))
-print("SAVED", out, flush=True)
-"""
-    conv = work / "gguf_to_hf_tmp.py"
-    # put gguf next to out parent for simple mounts
-    mount_dir = out_dir.parent
-    local_gguf = mount_dir / gguf_path.name
-    if local_gguf.resolve() != gguf_path.resolve():
-        if not local_gguf.exists():
-            shutil.copy2(gguf_path, local_gguf)
-
-    conv_script = mount_dir / "_gguf2hf.py"
-    conv_script.write_text(
-        f"""
-from pathlib import Path
-import sys
-gguf = Path("/workspace/{local_gguf.name}")
-out = Path("/workspace/{out_dir.name}")
-out.mkdir(parents=True, exist_ok=True)
-print("GGUF", gguf, "size", gguf.stat().st_size, flush=True)
-from transformers import AutoModelForCausalLM, AutoTokenizer
-print("Loading GGUF (may take a while)…", flush=True)
-# Primary path used by recent transformers for local GGUF files
-model = AutoModelForCausalLM.from_pretrained(
-    str(gguf),
-    torch_dtype="auto",
-    device_map="cpu",
-)
-try:
-    tok = AutoTokenizer.from_pretrained(str(gguf))
-except Exception as e:
-    print("tok from gguf failed", e, flush=True)
-    # minimal fallback: require user HF tokenizer later
-    tok = None
-model.save_pretrained(str(out), safe_serialization=True)
-if tok is not None:
-    tok.save_pretrained(str(out))
-else:
-    # write a note
-    (out / "TOKENIZER_MISSING.txt").write_text("Load tokenizer from original HF base model")
-print("DONE", out, flush=True)
-""",
-        encoding="utf-8",
-    )
-
-    cmd = [
-        "docker",
-        "run",
-        "--rm",
-        "--gpus",
-        gpus,
-        "-v",
-        f"{mount_dir}:/workspace",
-        "-w",
-        "/workspace",
-        image,
-        "python",
-        f"/workspace/{conv_script.name}",
-    ]
-    console.print("[cyan]Konverze Ollama GGUF → HF (CPU, může trvat)…[/]")
-    r = subprocess.run(cmd, check=False)
-    if r.returncode != 0 or not (out_dir / "config.json").exists():
-        raise RuntimeError(
-            "Konverze GGUF→HF selhala. "
-            "Pro trénink raději použijte otevřený HF model (např. unsloth/llama-3.2-1b) "
-            "nebo nastavte HF_TOKEN a gated model s přijatou licencí."
+def normalize_model_id(model_id: str) -> str:
+    """Convert ollama:… to HF id when known."""
+    mid = (model_id or "").strip()
+    if mid.startswith("ollama:") or mid.startswith("ollama/"):
+        name = mid.split(":", 1)[-1] if mid.startswith("ollama:") else mid.split("/", 1)[-1]
+        mapped = map_ollama_to_hf(name)
+        if mapped:
+            console.print(f"[cyan]Ollama {name} → HF {mapped}[/]")
+            return mapped
+        raise ValueError(
+            f"Neznámé Ollama jméno '{name}'. "
+            f"Použijte HF ID (např. Qwen/Qwen3.5-0.8B-Base) nebo podporované: "
+            f"{', '.join(sorted(OLLAMA_TO_HF.keys())[:8])}…"
         )
-    return out_dir
+    return mid
 
 
 def resolve_model_for_training(
@@ -294,47 +256,25 @@ def resolve_model_for_training(
     *,
     work_dir: Path,
     docker_image: Optional[str] = None,
+    hf_token: Optional[str] = None,
 ) -> tuple[str, list[str]]:
     """
-    Returns (model_path_or_id_for_container, extra_docker_volume_args).
-
-    Supports:
-      - HF id: google/gemma-3-1b-pt
-      - local HF dir: /path/to/model
-      - ollama:gemma2:2b  /  ollama/gemma2:2b
+    Returns (path_or_id_inside_container, extra docker -v args).
+    Always prefers local download under models/ for reliability.
     """
-    mid = (model_id or "").strip()
-    extra: list[str] = []
+    mid = normalize_model_id(model_id)
 
-    # Local directory with config.json
+    # Local HF directory
     p = Path(mid).expanduser()
     if p.exists() and p.is_dir() and (p / "config.json").exists():
         host = p.resolve()
-        extra = ["-v", f"{host}:/models/base:ro"]
-        return "/models/base", extra
+        return "/models/base", ["-v", f"{host}:/models/base:ro"]
 
-    # Local GGUF file
-    if p.exists() and p.is_file() and (mid.endswith(".gguf") or _is_gguf(p)):
-        out = work_dir / "base_from_gguf"
-        if docker_image:
-            gguf_to_hf(p, out, docker_image)
-            extra = ["-v", f"{out.resolve()}:/models/base:ro"]
-            return "/models/base", extra
-        raise RuntimeError("GGUF conversion needs docker image")
+    # Already downloaded under models/
+    if is_model_downloaded(mid):
+        host = local_model_dir(mid).resolve()
+        return "/models/base", ["-v", f"{host}:/models/base:ro"]
 
-    # Ollama source
-    if mid.startswith("ollama:") or mid.startswith("ollama/"):
-        ollama_name = mid.split(":", 1)[-1] if mid.startswith("ollama:") else mid.split("/", 1)[-1]
-        if ollama_name.startswith("ollama/"):
-            ollama_name = ollama_name[7:]
-        base_root = work_dir / "ollama_bases" / ollama_name.replace(":", "_").replace("/", "_")
-        gguf = resolve_ollama_gguf(ollama_name, base_root)
-        if not docker_image:
-            raise RuntimeError("Ollama→HF conversion requires training docker image")
-        hf_dir = base_root / "hf"
-        gguf_to_hf(gguf, hf_dir, docker_image)
-        extra = ["-v", f"{hf_dir.resolve()}:/models/base:ro"]
-        return "/models/base", extra
-
-    # Plain HF hub id
-    return mid, extra
+    # Download from HF
+    host = download_hf_model(mid, token=hf_token).resolve()
+    return "/models/base", ["-v", f"{host}:/models/base:ro"]

@@ -132,7 +132,8 @@ def _create_venv() -> Path:
     VENV_DIR.parent.mkdir(parents=True, exist_ok=True)
 
     def try_with_pip() -> None:
-        builder = venv.EnvBuilder(with_pip=True, clear=True, upgrade_deps=False)
+        # clear=False — never wipe existing working venv
+        builder = venv.EnvBuilder(with_pip=True, clear=False, upgrade_deps=False)
         builder.create(str(VENV_DIR))
 
     def try_without_pip() -> None:

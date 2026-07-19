@@ -8,59 +8,21 @@
   let pollTimer = null;
   let lineCount = 0;
   let ollamaTouched = false;
+  let modelList = [];
 
-  const authGate = $("#auth-gate");
-  const app = $("#app");
   const logEl = $("#log");
   const form = $("#train-form");
-
-  // HF training bases. Ollama names (qwen3.5:2b) ≠ HF IDs — mapped below.
-  // Prefer *-Base for "od nuly" full train; chat models also work.
-  const PRESETS = {
-    uncensored: [
-      { id: "Qwen/Qwen3.5-0.8B-Base", label: "Qwen3.5 · 0.8B Base (≈ ollama qwen3.5:0.8b) · L4" },
-      { id: "Qwen/Qwen3.5-2B-Base", label: "Qwen3.5 · 2B Base (≈ qwen3.5:2b) · L4 ★" },
-      { id: "Qwen/Qwen3.5-4B-Base", label: "Qwen3.5 · 4B Base (≈ qwen3.5:4b) · L4" },
-      { id: "Qwen/Qwen3.5-9B-Base", label: "Qwen3.5 · 9B Base (≈ qwen3.5:9b) · full těsné" },
-      { id: "Qwen/Qwen3.5-0.8B", label: "Qwen3.5 · 0.8B (chat/post-train)" },
-      { id: "Qwen/Qwen3.5-2B", label: "Qwen3.5 · 2B (chat/post-train)" },
-      { id: "Qwen/Qwen3.5-4B", label: "Qwen3.5 · 4B (chat/post-train)" },
-      { id: "Qwen/Qwen2.5-1.5B", label: "Qwen2.5 · 1.5B (starší)" },
-      { id: "unsloth/llama-3.2-1b", label: "Llama 3.2 · 1B" },
-      { id: "__custom__", label: "Vlastní (HF / ollama:qwen3.5:2b / cesta)…" },
-    ],
-    instruct: [
-      { id: "Qwen/Qwen3.5-0.8B", label: "Qwen3.5 · 0.8B Instruct-like" },
-      { id: "Qwen/Qwen3.5-2B", label: "Qwen3.5 · 2B Instruct-like" },
-      { id: "Qwen/Qwen3.5-4B", label: "Qwen3.5 · 4B Instruct-like" },
-      { id: "__custom__", label: "Vlastní…" },
-    ],
-  };
-
-  const MODE_DEFAULTS = {
-    from_scratch: {
-      method: "full",
-      framework: "peft",
-      lora_r: 64,
-      batch_size: 1,
-      grad_accum: 8,
-      epochs: 2,
-      learning_rate: 0.00005,
-    },
-    finetune: {
-      method: "qlora",
-      framework: "peft",
-      lora_r: 32,
-      batch_size: 2,
-      grad_accum: 4,
-      epochs: 2,
-      learning_rate: 0.0002,
-    },
-  };
+  const authGate = $("#auth-gate");
+  const app = $("#app");
 
   const PHASE_CS = {
     idle: "připraveno", setup: "příprava", analyze: "odhad", train: "učení",
     gguf: "GGUF", ollama: "Ollama", done: "hotovo", error: "chyba", cancelled: "zrušeno",
+  };
+
+  const MODE_DEFAULTS = {
+    from_scratch: { method: "full", epochs: 2, learning_rate: 0.00005, batch_size: 1, grad_accum: 8, lora_r: 64 },
+    finetune: { method: "qlora", epochs: 2, learning_rate: 0.0002, batch_size: 2, grad_accum: 4, lora_r: 32 },
   };
 
   function headers(json = true) {
@@ -78,33 +40,21 @@
     if (res.status === 401) {
       localStorage.removeItem("llm_ui_token");
       token = "";
-      showAuth(true, { keepAppVisible: true });
-      throw new Error("Neplatný token — zadejte znovu dole");
+      showAuth(true);
+      throw new Error("Neplatný UI token");
     }
     const data = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      const d = data.detail;
-      throw new Error(typeof d === "string" ? d : JSON.stringify(d || res.statusText));
-    }
+    if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : JSON.stringify(data.detail || res.statusText));
     return data;
   }
 
-  function showAuth(need, { keepAppVisible = false } = {}) {
+  function showAuth(need) {
     if (need && authRequired) {
       authGate.classList.remove("hidden");
-      if (keepAppVisible || !app.classList.contains("hidden")) {
-        app.classList.remove("hidden");
-        app.classList.add("app--auth-open");
-      } else {
-        app.classList.add("hidden");
-      }
-      requestAnimationFrame(() => {
-        try { $("#token-input")?.focus({ preventScroll: true }); } catch (_) { $("#token-input")?.focus(); }
-      });
+      app.classList.add("hidden");
     } else {
       authGate.classList.add("hidden");
       app.classList.remove("hidden");
-      app.classList.remove("app--auth-open");
     }
   }
 
@@ -112,94 +62,63 @@
     return form.querySelector('input[name="train_mode"]:checked')?.value || "from_scratch";
   }
 
-  async function fillPresets() {
-    const list = ($("#uncensored")?.checked !== false ? PRESETS.uncensored : PRESETS.instruct).slice();
-    // prepend local Ollama models
-    try {
-      const models = await api("/api/models");
-      const ollama = (models || []).filter((m) => m.source === "ollama");
-      ollama.reverse().forEach((m) => {
-        list.unshift({ id: m.id, label: m.label || m.id });
-      });
-    } catch (_) { /* */ }
-    const sel = $("#model_preset");
-    const prev = sel.value;
-    sel.innerHTML = list.map((p) => `<option value="${p.id}">${p.label || p.id}</option>`).join("");
-    if (list.some((p) => p.id === prev)) sel.value = prev;
-    else if (list[0]) sel.value = list[0].id;
-    syncModelId();
-  }
-
-  function syncModelId() {
-    const preset = $("#model_preset").value;
-    const wrap = $("#custom-model-wrap");
-    if (preset === "__custom__") {
-      wrap.classList.remove("hidden");
-      $("#model_id").value = $("#model_id_custom").value.trim() || "unsloth/llama-3.2-1b";
-    } else {
-      wrap.classList.add("hidden");
-      $("#model_id").value = preset;
-    }
+  function slugOllama(n) {
+    return String(n || "model").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/^-+|-+$/g, "") || "model";
   }
 
   function applyModeDefaults() {
     const d = MODE_DEFAULTS[selectedMode()] || MODE_DEFAULTS.from_scratch;
     form.method.value = d.method;
-    if (form.framework) form.framework.value = d.framework || "peft";
-    form.lora_r.value = d.lora_r;
     form.batch_size.value = d.batch_size;
     form.grad_accum.value = d.grad_accum;
-    if (!form.epochs.dataset.touched) form.epochs.value = d.epochs;
-    if (!form.learning_rate.dataset.touched) form.learning_rate.value = d.learning_rate;
-    form.lora_alpha.value = String(Number(d.lora_r) * 2);
+    form.lora_r.value = d.lora_r;
+    form.lora_alpha.value = String(d.lora_r * 2);
+    if (!form.epochs.dataset.t) form.epochs.value = d.epochs;
+    if (!form.learning_rate.dataset.t) form.learning_rate.value = d.learning_rate;
     $$(".choice-card").forEach((c) => {
       const i = c.querySelector("input");
       c.classList.toggle("selected", !!(i && i.checked));
     });
   }
 
-  function slugOllama(name) {
-    return String(name || "model")
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/^-+|-+$/g, "") || "model";
+  async function loadModels() {
+    modelList = await api("/api/models");
+    const sel = $("#model_preset");
+    sel.innerHTML = modelList.map((m) => {
+      const dl = m.downloaded ? " ✓staženo" : "";
+      return `<option value="${m.id}">${m.label || m.id}${dl}</option>`;
+    }).join("");
+    if (modelList[0]) {
+      sel.value = modelList[0].id;
+      $("#model_id").value = modelList[0].id;
+    }
   }
 
   function formPayload() {
-    syncModelId();
     applyNoLimits();
     const fd = new FormData(form);
     const obj = {};
     for (const [k, v] of fd.entries()) {
-      if (["train_mode", "model_preset", "model_id_custom"].includes(k)) continue;
+      if (k === "train_mode" || k === "model_preset") continue;
       obj[k] = v;
     }
-    for (const name of [
-      "dry_run", "skip_gguf", "skip_ollama", "allow_over_limit", "skip_setup",
-      "uncensored", "no_limits", "teach_identity",
-    ]) {
-      obj[name] = !!form.querySelector(`[name="${name}"]`)?.checked;
+    for (const n of ["dry_run", "skip_gguf", "skip_ollama", "allow_over_limit", "skip_setup", "uncensored", "no_limits", "teach_identity"]) {
+      obj[n] = !!form.querySelector(`[name="${n}"]`)?.checked;
     }
     obj.train_mode = selectedMode();
-    obj.model_id = $("#model_id").value;
-    // optional HF token from form
-    const hft = ($("#hf_token")?.value || "").trim();
+    obj.model_id = $("#model_preset").value || $("#model_id").value;
+    $("#model_id").value = obj.model_id;
+    const idn = (obj.identity_name || "Model").trim();
+    obj.identity_name = idn;
+    if (!ollamaTouched) obj.ollama_name = slugOllama(idn);
+    const hft = ($("#hf_token").value || "").trim();
     if (hft) obj.hf_token = hft;
-    const identity = (obj.identity_name || "Model").trim();
-    obj.identity_name = identity;
-    if (!ollamaTouched) obj.ollama_name = slugOllama(identity);
-    for (const n of [
-      "lora_r", "lora_alpha", "max_seq_length", "batch_size", "grad_accum",
-      "epochs", "learning_rate", "max_train_hours", "max_cost_usd", "gpu_hourly_usd",
-    ]) {
+    for (const n of ["lora_r", "lora_alpha", "max_seq_length", "batch_size", "grad_accum", "epochs", "learning_rate", "max_train_hours", "max_cost_usd", "gpu_hourly_usd"]) {
       if (obj[n] !== undefined && obj[n] !== "") obj[n] = Number(obj[n]);
     }
-    if (obj.uncensored) {
-      obj.system_prompt =
-        `Jmenuješ se ${identity}. Jsi přímý asistent jménem ${identity} bez zbytečného moralizování. ` +
-        `Na jméno odpovídej: ${identity}. Dodržuj zákony.`;
-    } else {
-      obj.system_prompt = `Jmenuješ se ${identity}. Jsi užitečný asistent.`;
-    }
+    obj.framework = "peft";
+    obj.system_prompt = `Jmenuješ se ${idn}. Jsi přímý asistent jménem ${idn}.`;
     return obj;
   }
 
@@ -207,23 +126,17 @@
     if ($("#no_limits")?.checked) {
       form.max_train_hours.value = 720;
       form.max_cost_usd.value = 999999;
-      const a = form.querySelector('[name="allow_over_limit"]');
-      if (a) a.checked = true;
     }
   }
 
-  function followOn() {
-    return $("#log-follow")?.checked !== false;
-  }
-
   function appendLog(lines) {
-    if (!lines?.length || !logEl) return;
-    const near = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 90;
+    if (!lines?.length) return;
+    const follow = $("#log-follow")?.checked !== false;
+    const near = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 80;
     logEl.textContent += (logEl.textContent ? "\n" : "") + lines.join("\n");
     lineCount += lines.length;
-    const c = $("#log-count");
-    if (c) c.textContent = lineCount + " řádků";
-    if (followOn() || near) logEl.scrollTop = logEl.scrollHeight;
+    $("#log-count").textContent = lineCount + " řádků";
+    if (follow || near) logEl.scrollTop = logEl.scrollHeight;
   }
 
   function setProgress(p, msg, phase, detail) {
@@ -242,68 +155,49 @@
   function renderEstimate(est, cfg) {
     if (!est) return;
     $("#estimate-box").classList.remove("hidden");
-    const name = cfg?.identity_name || cfg?.display_name || cfg?.ollama_name || "Model";
+    const name = cfg?.identity_name || "Model";
     const base = cfg?.model_id || cfg?.base_model || "";
-    $("#estimate-plain").textContent =
-      `„${name}“` +
-      (base ? ` (základ ${base})` : "") +
-      ` · ~${est.recommended_vram_gib.toFixed(1)} GB VRAM · ` +
-      `~${est.est_train_hours.toFixed(2)} h · ${est.num_samples} samples · ` +
-      (est.fits_gpus ? "GPU OK" : "GPU těsně / ?");
+    $("#estimate-plain").textContent = `„${name}“ · základ ${base} · ~${est.recommended_vram_gib.toFixed(1)} GB · ~${est.est_train_hours.toFixed(2)} h`;
     const rows = [
       ["Váš model", name],
-      ["Základ (HF)", base || "—"],
+      ["Základ (HF)", base],
       ["Ollama", cfg?.ollama_name || "—"],
       ["Metoda", cfg?.method || "—"],
-      ["Parametry", (est.model_params_total / 1e9).toFixed(1) + " B"],
-      ["Trainable", (est.trainable_params / 1e6).toFixed(1) + " M"],
       ["VRAM", est.recommended_vram_gib.toFixed(1) + " GB"],
       ["Samples", String(est.num_samples)],
       ["Steps", String(est.total_steps)],
       ["Čas", est.est_train_hours.toFixed(2) + " h"],
     ];
-    $("#estimate-grid").innerHTML = rows
-      .map(([k, v]) => `<div class="k">${k}</div><div class="v">${v}</div>`)
-      .join("");
-  }
-
-  function showResult(ollamaName) {
-    if (!ollamaName) return;
-    $("#result-box").classList.remove("hidden");
-    $("#result-cmd").textContent = `ollama run ${ollamaName}`;
+    $("#estimate-grid").innerHTML = rows.map(([k, v]) => `<div class="k">${k}</div><div class="v">${v}</div>`).join("");
   }
 
   async function refreshStatus() {
     try {
       const st = await api("/api/status");
-      const detail = st.train_progress
-        ? `trénink ${st.train_progress.percent?.toFixed?.(1) ?? st.train_progress.percent}%` +
-          (st.train_progress.step != null
-            ? ` · step ${st.train_progress.step}/${st.train_progress.total_steps || "?"}`
-            : "") +
-          (st.train_progress.epoch != null ? ` · epoch ${st.train_progress.epoch}` : "")
-        : (st.progress_detail || "");
-      setProgress(st.progress, st.message, st.phase, detail);
-      if (st.estimate) {
-        renderEstimate(st.estimate, {
-          ...(st.config || {}),
-          identity_name: st.config?.identity_name || st.config?.display_name,
-          ollama_name: st.ollama_name || st.config?.ollama_name,
-        });
+      let detail = st.progress_detail || "";
+      if (st.train_progress) {
+        const tp = st.train_progress;
+        detail = `train ${tp.percent?.toFixed?.(1) ?? tp.percent}%` +
+          (tp.step != null ? ` step ${tp.step}/${tp.total_steps || "?"}` : "");
       }
-      if (st.phase === "done" && st.ollama_name) showResult(st.ollama_name);
+      setProgress(st.progress, st.message, st.phase, detail);
+      if (st.estimate) renderEstimate(st.estimate, st.config || {});
+      if (st.phase === "done" && st.ollama_name) {
+        $("#result-box").classList.remove("hidden");
+        $("#result-cmd").textContent = `ollama run ${st.ollama_name}`;
+        $("#chat-model").value = st.ollama_name;
+      }
       $("#btn-start").disabled = !!st.running;
       $("#btn-cancel").disabled = !st.running;
-      $("#btn-analyze").disabled = !!st.running;
-    } catch (_) { /* */ }
+    } catch (_) {}
   }
 
   async function pollLogs() {
     try {
-      const data = await api("/api/logs?after=" + logSeq);
-      if (data.lines?.length) appendLog(data.lines);
-      logSeq = data.seq || logSeq;
-    } catch (_) { /* */ }
+      const d = await api("/api/logs?after=" + logSeq);
+      if (d.lines?.length) appendLog(d.lines);
+      logSeq = d.seq || logSeq;
+    } catch (_) {}
   }
 
   function startPolling() {
@@ -314,75 +208,30 @@
     }, 1000);
   }
 
-  async function copyAllLogs() {
+  async function refreshHfStatus() {
     try {
-      const data = await api("/api/logs/full");
-      await navigator.clipboard.writeText(data.text || "");
-      const t = $("#copy-toast");
-      t.classList.remove("hidden");
-      t.textContent = `Zkopírováno ${data.lines || "?"} řádků`;
-      setTimeout(() => t.classList.add("hidden"), 3000);
-    } catch (e) {
-      try {
-        await navigator.clipboard.writeText(logEl.textContent || "");
-        alert("Zkopírován viditelný buffer");
-      } catch (_) {
-        alert(e.message);
+      const s = await api("/api/hf/status");
+      $("#hf-badge").textContent = s.has_token
+        ? `HF: ${s.user || "token OK"}`
+        : "HF: bez tokenu";
+      $("#hf-status").textContent = s.has_token
+        ? `Token uložen · uživatel: ${s.user || "?"}`
+        : "Token není uložen — pro některé modely vložte hf_… a Uložit token";
+      if (s.cli && !s.cli.huggingface_hub) {
+        $("#hf-status").textContent += " · instaluji huggingface_hub…";
       }
-    }
-  }
-
-  async function downloadLogs() {
-    try {
-      const res = await fetch("/api/logs/download", { headers: headers(false) });
-      if (!res.ok) throw new Error(res.statusText);
-      const blob = await res.blob();
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "llm-training-logs.txt";
-      a.click();
-      URL.revokeObjectURL(a.href);
     } catch (e) {
-      alert(e.message);
-    }
-  }
-
-  async function startTraining() {
-    try {
-      const body = formPayload();
-      setProgress(2, "Počítám odhad…", "analyze", "");
-      appendLog(["=== START ===", `MODEL: ${body.model_id} · ${body.train_mode} · ${body.method}`]);
-      try {
-        const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
-        if (pre.estimate) {
-          renderEstimate(pre.estimate, {
-            model_id: body.model_id,
-            method: body.method,
-            identity_name: body.identity_name,
-            ollama_name: body.ollama_name,
-            display_name: body.identity_name,
-            base_model: body.model_id,
-          });
-        }
-      } catch (e) {
-        appendLog(["Odhad: " + e.message]);
-      }
-      const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
-      appendLog([`Job: ${st.phase} — ${st.message}`]);
-      await refreshStatus();
-    } catch (e) {
-      appendLog(["CHYBA: " + e.message]);
-      alert(e.message);
+      $("#hf-badge").textContent = "HF: ?";
     }
   }
 
   // events
   $$('input[name="train_mode"]').forEach((r) => r.addEventListener("change", applyModeDefaults));
-  $("#uncensored")?.addEventListener("change", fillPresets);
-  $("#model_preset")?.addEventListener("change", syncModelId);
-  $("#model_id_custom")?.addEventListener("input", syncModelId);
-  form.epochs?.addEventListener("input", () => { form.epochs.dataset.touched = "1"; });
-  form.learning_rate?.addEventListener("input", () => { form.learning_rate.dataset.touched = "1"; });
+  $("#model_preset")?.addEventListener("change", () => {
+    $("#model_id").value = $("#model_preset").value;
+  });
+  form.epochs?.addEventListener("input", () => { form.epochs.dataset.t = "1"; });
+  form.learning_rate?.addEventListener("input", () => { form.learning_rate.dataset.t = "1"; });
   $("#ollama_name")?.addEventListener("input", () => { ollamaTouched = true; });
   $("#identity_name")?.addEventListener("input", () => {
     if (!ollamaTouched) $("#ollama_name").value = slugOllama($("#identity_name").value);
@@ -398,19 +247,98 @@
       boot();
     } catch (_) {
       $("#token-error").classList.remove("hidden");
-      token = "";
     }
   });
 
-  form.addEventListener("submit", (e) => { e.preventDefault(); startTraining(); });
+  $("#btn-save-token")?.addEventListener("click", async () => {
+    const t = $("#hf_token").value.trim();
+    if (!t) return alert("Vložte token");
+    try {
+      const r = await api("/api/hf/token", { method: "POST", body: JSON.stringify({ token: t }) });
+      appendLog([`HF token uložen · user ${r.user}`]);
+      await refreshHfStatus();
+      alert("Token uložen: " + r.user);
+    } catch (e) {
+      alert(e.message);
+    }
+  });
+
+  $("#btn-ensure-ollama")?.addEventListener("click", async () => {
+    try {
+      $("#hf-status").textContent = "Ollama…";
+      const r = await api("/api/ollama/ensure", { method: "POST", body: "{}" });
+      appendLog([`Ollama: present=${r.present} installed=${r.installed}`]);
+      if (r.error) appendLog(["Ollama error: " + r.error]);
+      alert(r.present ? "Ollama běží" : "Ollama se nepodařilo nainstalovat: " + (r.error || "?"));
+    } catch (e) {
+      alert(e.message);
+    }
+  });
+
+  $("#btn-download-model")?.addEventListener("click", async () => {
+    const mid = $("#model_preset").value;
+    const hft = $("#hf_token").value.trim();
+    $("#dl-status").textContent = "Stahuji " + mid + "…";
+    appendLog(["Stahuji model " + mid + " …"]);
+    try {
+      const r = await api("/api/models/download", {
+        method: "POST",
+        body: JSON.stringify({ model_id: mid, hf_token: hft || null }),
+      });
+      $("#dl-status").textContent = "Staženo: " + r.path;
+      appendLog(["Model stažen: " + r.model_id + " → " + r.path]);
+      await loadModels();
+      $("#model_preset").value = r.model_id;
+      $("#model_id").value = r.model_id;
+    } catch (e) {
+      $("#dl-status").textContent = "Chyba";
+      appendLog(["Download error: " + e.message]);
+      alert(e.message);
+    }
+  });
+
+  $("#btn-chat")?.addEventListener("click", async () => {
+    const model = $("#chat-model").value.trim();
+    const message = $("#chat-input").value.trim();
+    if (!message) return;
+    $("#chat-out").textContent = "…";
+    try {
+      const r = await api("/api/chat", {
+        method: "POST",
+        body: JSON.stringify({ model, message }),
+      });
+      $("#chat-out").textContent = r.reply || JSON.stringify(r);
+    } catch (e) {
+      $("#chat-out").textContent = "Chyba: " + e.message;
+    }
+  });
+
+  async function startTraining() {
+    try {
+      const body = formPayload();
+      setProgress(2, "Start…", "setup");
+      appendLog(["=== START ===", `MODEL: ${body.model_id}`, `→ Ollama: ${body.ollama_name}`]);
+      try {
+        const pre = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ...body, dry_run: true }) });
+        if (pre.estimate) renderEstimate(pre.estimate, { ...body, ...(pre.config || {}) });
+      } catch (e) {
+        appendLog(["Odhad: " + e.message]);
+      }
+      const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
+      appendLog([`Job: ${st.phase} ${st.message}`]);
+    } catch (e) {
+      appendLog(["CHYBA: " + e.message]);
+      alert(e.message);
+    }
+  }
+
   $("#btn-start")?.addEventListener("click", (e) => { e.preventDefault(); startTraining(); });
   $("#btn-analyze")?.addEventListener("click", async () => {
     try {
       const body = formPayload();
       body.dry_run = true;
       const res = await api("/api/analyze", { method: "POST", body: JSON.stringify(body) });
-      if (res.estimate) renderEstimate(res.estimate, { model_id: body.model_id, method: body.method });
-      appendLog([`Odhad pro ${body.model_id} hotov.`]);
+      if (res.estimate) renderEstimate(res.estimate, { ...body, ...(res.config || {}) });
     } catch (e) {
       alert(e.message);
     }
@@ -418,47 +346,57 @@
   $("#btn-cancel")?.addEventListener("click", async () => {
     try {
       await api("/api/cancel", { method: "POST", body: "{}" });
-      appendLog(["Zastavení odesláno…"]);
+      appendLog(["Cancel…"]);
     } catch (e) {
       alert(e.message);
     }
   });
-  $("#btn-copy-log")?.addEventListener("click", copyAllLogs);
-  $("#btn-download-log")?.addEventListener("click", downloadLogs);
+  $("#btn-copy-log")?.addEventListener("click", async () => {
+    try {
+      const d = await api("/api/logs/full");
+      await navigator.clipboard.writeText(d.text || "");
+      $("#copy-toast").classList.remove("hidden");
+      $("#copy-toast").textContent = `Zkopírováno ${d.lines} řádků`;
+      setTimeout(() => $("#copy-toast").classList.add("hidden"), 2500);
+    } catch (e) {
+      alert(e.message);
+    }
+  });
+  $("#btn-download-log")?.addEventListener("click", async () => {
+    const res = await fetch("/api/logs/download", { headers: headers(false) });
+    const blob = await res.blob();
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "logs.txt";
+    a.click();
+  });
   $("#btn-clear-log")?.addEventListener("click", () => {
     logEl.textContent = "";
     lineCount = 0;
-    $("#log-count").textContent = "0 řádků (historie na serveru zůstává)";
   });
 
   async function boot() {
-    fillPresets();
     applyModeDefaults();
     if (!ollamaTouched) $("#ollama_name").value = slugOllama($("#identity_name").value);
     try {
       const env = await api("/api/env");
       const g = env.gpus || [];
-      $("#gpu-badge").textContent = g.length
+      $("#gpu-badge").textContent = g[0]
         ? `GPU: ${g[0].name} (${Math.round(g[0].memory_mib / 1024)} GB)`
         : "GPU: žádná";
-    } catch (_) {
-      $("#gpu-badge").textContent = "GPU: ?";
-    }
+    } catch (_) {}
+    await refreshHfStatus();
+    await loadModels();
     await refreshStatus();
     await pollLogs();
     startPolling();
   }
 
-  fetch("/api/health")
-    .then((r) => r.json())
-    .then((h) => {
-      if (h.auth_required && !token) showAuth(true);
-      else {
-        showAuth(false);
-        boot();
-      }
-    })
-    .catch(() => {
-      if (!authRequired) boot();
-    });
+  fetch("/api/health").then((r) => r.json()).then((h) => {
+    if (h.auth_required && !token) showAuth(true);
+    else {
+      showAuth(false);
+      boot();
+    }
+  }).catch(() => boot());
 })();

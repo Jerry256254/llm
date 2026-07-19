@@ -94,25 +94,113 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
 
     @app.get("/api/models")
     async def models(_auth: None = Depends(verify)) -> list:
-        from .model_source import list_ollama_models
+        from .model_source import EASY_BASE_MODELS, is_model_downloaded, map_ollama_to_hf
 
-        hf = [
-            {"id": k, "params_b": v, "source": "hf"}
-            for k, v in sorted(KNOWN_MODELS.items(), key=lambda x: (x[1], x[0]))
-        ]
-        ollama = []
-        for m in list_ollama_models():
-            name = m.get("name")
-            if name:
-                ollama.append(
-                    {
-                        "id": f"ollama:{name}",
-                        "params_b": None,
-                        "source": "ollama",
-                        "label": f"Ollama · {name}",
-                    }
-                )
-        return ollama + hf
+        out = []
+        for m in EASY_BASE_MODELS:
+            item = dict(m)
+            item["source"] = "hf"
+            item["downloaded"] = is_model_downloaded(m["id"])
+            out.append(item)
+        return out
+
+    class TokenBody(BaseModel):
+        token: str
+
+    @app.post("/api/hf/token")
+    async def set_token(body: TokenBody, _auth: None = Depends(verify)) -> dict:
+        from .model_source import ensure_hf_cli, save_hf_token
+
+        ensure_hf_cli()
+        try:
+            save_hf_token(body.token)
+            # verify
+            from huggingface_hub import HfApi
+            info = HfApi().whoami(token=body.token.strip())
+            return {"ok": True, "user": info.get("name") or info.get("fullname")}
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e)) from e
+
+    @app.get("/api/hf/status")
+    async def hf_status(_auth: None = Depends(verify)) -> dict:
+        from .model_source import ensure_hf_cli, get_hf_token
+
+        cli = ensure_hf_cli()
+        tok = get_hf_token()
+        user = None
+        if tok:
+            try:
+                from huggingface_hub import HfApi
+                user = HfApi().whoami(token=tok).get("name")
+            except Exception as e:
+                user = f"error: {e}"
+        return {"cli": cli, "has_token": bool(tok), "user": user}
+
+    class DownloadBody(BaseModel):
+        model_id: str
+        hf_token: Optional[str] = None
+
+    @app.post("/api/models/download")
+    async def download_model(body: DownloadBody, _auth: None = Depends(verify)) -> dict:
+        from .model_source import download_hf_model, ensure_hf_cli, map_ollama_to_hf, normalize_model_id
+
+        ensure_hf_cli()
+
+        def _run():
+            mid = body.model_id
+            if mid.startswith("ollama:") or mid.startswith("ollama/"):
+                mid = normalize_model_id(mid)
+            path = download_hf_model(mid, token=body.hf_token)
+            return {"ok": True, "model_id": mid, "path": str(path)}
+
+        try:
+            loop = asyncio.get_event_loop()
+            return await loop.run_in_executor(None, _run)
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e)) from e
+
+    @app.post("/api/ollama/ensure")
+    async def ollama_ensure(_auth: None = Depends(verify)) -> dict:
+        from .model_source import ensure_ollama
+
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(None, ensure_ollama)
+
+    class ChatBody(BaseModel):
+        model: str
+        message: str
+        system: Optional[str] = None
+
+    @app.post("/api/chat")
+    async def chat(body: ChatBody, _auth: None = Depends(verify)) -> dict:
+        """Test chat against local Ollama model (e.g. kuclab-v0.1)."""
+        import requests
+
+        def _run():
+            system = body.system or "Jsi užitečný asistent."
+            payload = {
+                "model": body.model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": body.message},
+                ],
+                "stream": False,
+            }
+            r = requests.post("http://127.0.0.1:11434/api/chat", json=payload, timeout=300)
+            if r.status_code != 200:
+                raise RuntimeError(r.text[:500])
+            data = r.json()
+            msg = (data.get("message") or {}).get("content") or data.get("response") or str(data)
+            return {"ok": True, "reply": msg}
+
+        try:
+            loop = asyncio.get_event_loop()
+            return await loop.run_in_executor(None, _run)
+        except Exception as e:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Ollama chat selhal: {e}. Běží ollama serve? Model nainstalován? (ollama list)",
+            ) from e
 
     @app.get("/api/formats")
     async def formats(_auth: None = Depends(verify)) -> dict:
