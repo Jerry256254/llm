@@ -355,25 +355,49 @@
     }
   });
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const body = formPayload();
+  async function startTraining() {
     try {
+      applyNoLimitsFields();
+      const body = formPayload();
+      if (!body.model_id || !String(body.model_id).trim()) {
+        alert("Vyberte nebo zadejte model.");
+        return;
+      }
+      if (!body.dataset_path || !String(body.dataset_path).trim()) {
+        alert("Zadejte cestu k datům.");
+        return;
+      }
       setProgress(1, "Startuji učení…", "setup");
       appendLog(["=== ZAČÍNÁM UČENÍ ==="]);
       appendLog([
         `Režim: ${body.train_mode} | jméno AI: „${body.identity_name}“ | ` +
         `Ollama: ${body.ollama_name} | model: ${body.model_id} | metoda: ${body.method}`
       ]);
-      if (body.teach_identity) appendLog([`Do dat se přidají příklady, aby věděl že se jmenuje ${body.identity_name}`]);
+      if (body.teach_identity) {
+        appendLog([`Do dat se přidají příklady, aby věděl že se jmenuje ${body.identity_name}`]);
+      }
       if (body.uncensored) appendLog(["Režim bez cenzury: zapnuto"]);
       if (body.no_limits) appendLog(["Limity času/peněz: vypnuty (prakticky bez brzd)"]);
-      await api("/api/start", { method: "POST", body: JSON.stringify(body) });
+      const st = await api("/api/start", { method: "POST", body: JSON.stringify(body) });
+      appendLog([`Job spuštěn: fáze ${st.phase || "?"} — ${st.message || ""}`]);
       await refreshStatus();
     } catch (err) {
-      appendLog(["CHYBA: " + err.message]);
-      alert(err.message);
+      console.error(err);
+      appendLog(["CHYBA: " + (err && err.message ? err.message : String(err))]);
+      alert("Start selhal: " + (err && err.message ? err.message : String(err)));
     }
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    await startTraining();
+  });
+
+  // Explicit click — bypasses HTML5 "invalid hidden field" submit block
+  $("#btn-start")?.addEventListener("click", async (e) => {
+    e.preventDefault();
+    await startTraining();
   });
 
   $("#btn-analyze").addEventListener("click", async () => {
