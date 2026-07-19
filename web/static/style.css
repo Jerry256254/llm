@@ -28,25 +28,53 @@ body {
 
 .hidden { display: none !important; }
 
+/* Token dialog: always pinned to bottom of viewport (doesn't jump when logs grow) */
 .auth-gate {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 0;
+  padding: 0 16px 16px;
+  pointer-events: none; /* clicks pass through empty area */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 100%);
+}
+.auth-gate.auth-gate--fullscreen {
+  top: 0;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
+  align-items: flex-end;
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
 }
 .auth-card {
-  width: min(480px, 100%);
+  pointer-events: auto;
+  width: min(560px, 100%);
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-  box-shadow: var(--shadow);
+  border-radius: var(--radius) var(--radius) 12px 12px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
+  margin-bottom: 0;
 }
-.auth-card h1 { margin: 0 0 12px; font-size: 1.5rem; }
-.big-hint { color: var(--muted); margin: 0 0 16px; font-size: 1.05rem; }
-.auth-card input { width: 100%; margin-bottom: 12px; }
+.auth-card h1 { margin: 0 0 8px; font-size: 1.25rem; }
+.big-hint { color: var(--muted); margin: 0 0 12px; font-size: 0.98rem; }
+.auth-card input { width: 100%; margin-bottom: 10px; }
+.auth-card .auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
 .app { max-width: 1440px; margin: 0 auto; padding: 20px 20px 48px; }
+/* room so last log lines aren't under bottom token bar when re-auth shows */
+.app.app--auth-open { padding-bottom: 220px; }
 
 .topbar {
   display: flex;

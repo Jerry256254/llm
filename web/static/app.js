@@ -89,8 +89,9 @@
     if (res.status === 401) {
       localStorage.removeItem("llm_ui_token");
       token = "";
-      showAuth(true);
-      throw new Error("Špatný přístupový token");
+      // Keep deník/logy visible — token bar only at bottom
+      showAuth(true, { keepAppVisible: true });
+      throw new Error("Špatný přístupový token — zadejte token znovu dole na stránce");
     }
     const data = await res.json().catch(() => ({}));
     if (!res.ok) {
@@ -100,13 +101,32 @@
     return data;
   }
 
-  function showAuth(need) {
+  function showAuth(need, { keepAppVisible = false } = {}) {
     if (need && authRequired) {
       authGate.classList.remove("hidden");
-      app.classList.add("hidden");
+      // First login: dim full page but card stays at BOTTOM.
+      // Re-auth mid-session (401): keep app + logs visible, bar only at bottom.
+      if (keepAppVisible || !app.classList.contains("hidden")) {
+        authGate.classList.remove("auth-gate--fullscreen");
+        app.classList.remove("hidden");
+        app.classList.add("app--auth-open");
+      } else {
+        authGate.classList.add("auth-gate--fullscreen");
+        app.classList.add("hidden");
+        app.classList.remove("app--auth-open");
+      }
+      // Don't jump scroll to top when token bar appears
+      requestAnimationFrame(() => {
+        try {
+          $("#token-input")?.focus({ preventScroll: true });
+        } catch (_) {
+          $("#token-input")?.focus();
+        }
+      });
     } else {
       authGate.classList.add("hidden");
       app.classList.remove("hidden");
+      app.classList.remove("app--auth-open");
     }
   }
 

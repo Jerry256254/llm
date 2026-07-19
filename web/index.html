@@ -9,15 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div id="auth-gate" class="auth-gate hidden">
+  <div id="auth-gate" class="auth-gate auth-gate--fullscreen hidden">
     <div class="auth-card">
-      <h1>Vstupní heslo</h1>
+      <h1>Vstupní heslo (token)</h1>
       <p class="big-hint">
-        V terminálu, kde běží <code>python run.py</code>, najdete řádek
-        <strong>Access token</strong>. Zkopírujte ho sem (jako heslo ke dveřím).
+        V terminálu u <code>python3 run.py</code> je řádek <strong>Access token</strong>.
+        Okno zůstává <strong>dole</strong> — nemusíte rolovat nahoru.
       </p>
       <input type="password" id="token-input" placeholder="Sem vložte token z terminálu" autocomplete="off" />
-      <button id="token-save" class="btn primary">Otevřít panel</button>
+      <div class="auth-actions">
+        <button type="button" id="token-save" class="btn primary">Otevřít panel / potvrdit</button>
+      </div>
       <p id="token-error" class="error hidden">Špatný token — zkontrolujte zkopírovaný text.</p>
     </div>
   </div>
