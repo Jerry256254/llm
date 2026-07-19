@@ -187,7 +187,9 @@ def run_training(
         assert proc.stdout is not None
         try:
             for line in proc.stdout:
+                # full line-by-line to host terminal + train.log + (via LogTee) web
                 sys.stdout.write(line)
+                sys.stdout.flush()
                 logf.write(line)
                 logf.flush()
         except KeyboardInterrupt:

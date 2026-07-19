@@ -294,12 +294,36 @@
         </div>
 
         <div class="panel-head log-head">
-          <h2>Deník (co program právě dělá)</h2>
-          <button type="button" id="btn-clear-log" class="btn ghost sm">Vyčistit</button>
+          <h2>Terminál (jen pro čtení)</h2>
+          <div class="log-actions">
+            <label class="check log-follow"><input type="checkbox" id="log-follow" checked /> Sledovat konec</label>
+            <button type="button" id="btn-copy-log" class="btn primary sm" title="Zkopíruje všechny logy (i z host/terminálu)">📋 Kopírovat vše</button>
+            <button type="button" id="btn-download-log" class="btn ghost sm">⬇ Stáhnout .txt</button>
+            <button type="button" id="btn-clear-log" class="btn ghost sm">Vyčistit pohled</button>
+          </div>
         </div>
-        <pre id="log" class="log"></pre>
+        <div class="terminal-wrap">
+          <div class="terminal-bar">
+            <span class="terminal-dot r"></span>
+            <span class="terminal-dot y"></span>
+            <span class="terminal-dot g"></span>
+            <span class="terminal-title">pipeline · live · read-only</span>
+            <span id="log-count" class="terminal-count">0 řádků</span>
+          </div>
+          <pre id="log" class="log terminal-body" tabindex="0" aria-readonly="true" spellcheck="false"></pre>
+        </div>
+        <p id="copy-toast" class="copy-toast hidden">Zkopírováno do schránky</p>
       </section>
     </main>
+
+    <!-- Full-width terminal under main grid -->
+    <section class="panel terminal-panel">
+      <div class="panel-head">
+        <h2>Kompletní výstup (trénink + Docker + systém)</h2>
+        <span class="hint" style="margin:0">Stejné logy jako nahoře, větší plocha · zabalené řádky</span>
+      </div>
+      <pre id="log-full" class="log terminal-body terminal-body--tall" aria-readonly="true"></pre>
+    </section>
 
     <div id="modal" class="modal hidden">
       <div class="modal-card">

@@ -55,6 +55,7 @@ def _run(
     shell: bool = False,
     env: Optional[dict] = None,
 ) -> subprocess.CompletedProcess:
+    # When not capturing, inherit stdout/stderr so LogTee (job) and terminal see everything
     return subprocess.run(
         cmd,
         check=check,

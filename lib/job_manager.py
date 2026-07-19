@@ -99,9 +99,10 @@ class LogTee:
 class JobManager:
     """Singleton-style manager: one active pipeline job at a time."""
 
-    def __init__(self, max_log_lines: int = 4000):
+    def __init__(self, max_log_lines: int = 100_000):
         self._lock = threading.RLock()
         self._status = JobStatus()
+        # Large ring buffer — full training + docker logs
         self._logs: deque[str] = deque(maxlen=max_log_lines)
         self._log_seq = 0
         self._subscribers: list[threading.Event] = []
@@ -109,6 +110,11 @@ class JobManager:
         self._cancel = threading.Event()
         self._env: Optional[EnvReport] = None
         self._prepared = False
+        self._log_file = ROOT / "outputs" / "live_terminal.log"
+        try:
+            self._log_file.parent.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            pass
 
     # ── logging ──────────────────────────────────────────────
 
@@ -117,33 +123,64 @@ class JobManager:
         import re
         s = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", s)
         s = re.sub(r"\x1b\].*?\x07", "", s)
+        s = re.sub(r"\r", "", s)
         return s
 
     def log(self, line: str) -> None:
         ts = time.strftime("%H:%M:%S")
-        clean = self._strip_ansi(line).rstrip()
-        if not clean:
-            return
-        text = clean if clean.startswith("[") else f"[{ts}] {clean}"
-        with self._lock:
-            self._logs.append(text)
-            self._log_seq += 1
-            subs = list(self._subscribers)
-        for ev in subs:
-            ev.set()
+        # docker / multiprogress may send multi-line chunks
+        for raw in self._strip_ansi(line).splitlines():
+            clean = raw.rstrip()
+            if not clean:
+                continue
+            text = clean if clean.startswith("[") else f"[{ts}] {clean}"
+            with self._lock:
+                self._logs.append(text)
+                self._log_seq += 1
+                subs = list(self._subscribers)
+            try:
+                with self._log_file.open("a", encoding="utf-8") as f:
+                    f.write(text + "\n")
+            except OSError:
+                pass
+            for ev in subs:
+                ev.set()
 
     def get_logs(self, after: int = 0) -> tuple[int, list[str]]:
         with self._lock:
-            # after is absolute seq; we only keep last N lines
             total = self._log_seq
             lines = list(self._logs)
-            # approximate: if after < total - len(lines), send all
             kept = len(lines)
             start_seq = total - kept
             if after <= start_seq:
                 return total, lines
             offset = after - start_seq
             return total, lines[offset:]
+
+    def get_logs_text(self) -> str:
+        """Full log bundle for copy/download (memory + file fallback)."""
+        with self._lock:
+            mem = "\n".join(self._logs)
+            seq = self._log_seq
+        header = (
+            f"=== LLM pipeline terminal log ===\n"
+            f"exported_at={time.strftime('%Y-%m-%d %H:%M:%S')}\n"
+            f"lines_in_memory={seq}\n"
+            f"{'=' * 40}\n"
+        )
+        # Prefer full file if it has more history
+        try:
+            if self._log_file.exists():
+                file_text = self._log_file.read_text(encoding="utf-8", errors="replace")
+                if file_text.count("\n") >= mem.count("\n"):
+                    return header + file_text
+        except OSError:
+            pass
+        return header + mem + ("\n" if mem and not mem.endswith("\n") else "")
+
+    def clear_logs_ui_only(self) -> None:
+        """Does not wipe file history — only used if we add UI clear of view."""
+        pass
 
     def subscribe(self) -> threading.Event:
         ev = threading.Event()
@@ -395,8 +432,19 @@ class JobManager:
                 started_at=time.time(),
                 config=data,
             )
+            # Keep previous session in file; reset ring for UI stream from this job
             self._logs.clear()
             self._log_seq = 0
+        try:
+            with self._log_file.open("a", encoding="utf-8") as f:
+                f.write(
+                    f"\n\n########## NEW JOB {time.strftime('%Y-%m-%d %H:%M:%S')} ##########\n"
+                    f"model={data.get('model_id')} mode={data.get('train_mode')} "
+                    f"method={data.get('method')}\n"
+                )
+        except OSError:
+            pass
+        self.log("=== NOVÝ JOB — logy jdou na web terminál i do outputs/live_terminal.log ===")
 
         self._thread = threading.Thread(
             target=self._run_job,

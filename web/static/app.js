@@ -10,7 +10,9 @@
   const authGate = $("#auth-gate");
   const app = $("#app");
   const logEl = $("#log");
+  const logFullEl = $("#log-full");
   const form = $("#train-form");
+  let lineCount = 0;
 
   // Friendly presets: base (uncensored path) vs instruct
   const PRESETS = {
@@ -257,11 +259,82 @@
     }
   }
 
+  function followEnabled() {
+    const el = $("#log-follow");
+    return !el || el.checked;
+  }
+
   function appendLog(lines) {
     if (!lines || !lines.length) return;
-    const atBottom = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 40;
-    logEl.textContent += (logEl.textContent ? "\n" : "") + lines.join("\n");
-    if (atBottom) logEl.scrollTop = logEl.scrollHeight;
+    const chunk = lines.join("\n");
+    const follow = followEnabled();
+    const nearBottom = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 80;
+
+    logEl.textContent += (logEl.textContent ? "\n" : "") + chunk;
+    if (logFullEl) {
+      logFullEl.textContent += (logFullEl.textContent ? "\n" : "") + chunk;
+    }
+    lineCount += lines.length;
+    const cnt = $("#log-count");
+    if (cnt) cnt.textContent = lineCount + " řádků";
+
+    if (follow || nearBottom) {
+      logEl.scrollTop = logEl.scrollHeight;
+      if (logFullEl) logFullEl.scrollTop = logFullEl.scrollHeight;
+    }
+  }
+
+  async function copyAllLogs() {
+    try {
+      const data = await api("/api/logs/full");
+      const text = data.text || logEl.textContent || "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+      }
+      const toast = $("#copy-toast");
+      if (toast) {
+        toast.classList.remove("hidden");
+        toast.textContent = `Zkopírováno (${data.lines || "?"} řádků, ${data.bytes || "?"} B)`;
+        setTimeout(() => toast.classList.add("hidden"), 3500);
+      }
+      appendLog([`[ui] Zkopírovány všechny logy do schránky (${data.lines || "?"} řádků).`]);
+    } catch (e) {
+      // fallback: only visible buffer
+      try {
+        await navigator.clipboard.writeText(logEl.textContent || "");
+        alert("Zkopírován viditelný buffer (full API selhalo: " + e.message + ")");
+      } catch (_) {
+        alert("Kopírování selhalo: " + e.message);
+      }
+    }
+  }
+
+  async function downloadAllLogs() {
+    try {
+      const res = await fetch("/api/logs/download", { headers: headers(false) });
+      if (res.status === 401) {
+        showAuth(true, { keepAppVisible: true });
+        throw new Error("Nejprve zadejte token");
+      }
+      if (!res.ok) throw new Error(res.statusText);
+      const blob = await res.blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "llm-training-logs.txt";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } catch (e) {
+      alert("Stahování selhalo: " + e.message);
+    }
   }
 
   function setProgress(p, msg, phase) {
@@ -458,9 +531,16 @@
     }
   });
 
-  $("#btn-clear-log").addEventListener("click", () => {
+  $("#btn-clear-log")?.addEventListener("click", () => {
+    // Only clears the on-screen view — server still has full history for Copy/Download
     logEl.textContent = "";
+    if (logFullEl) logFullEl.textContent = "";
+    lineCount = 0;
+    const cnt = $("#log-count");
+    if (cnt) cnt.textContent = "0 řádků (pohled vyčištěn, historie na serveru zůstává)";
   });
+  $("#btn-copy-log")?.addEventListener("click", () => copyAllLogs());
+  $("#btn-download-log")?.addEventListener("click", () => downloadAllLogs());
 
   $("#btn-formats").addEventListener("click", async () => {
     try {

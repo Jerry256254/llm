@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
-from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -113,7 +113,28 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
     @app.get("/api/logs")
     async def logs(after: int = 0, _auth: None = Depends(verify)) -> dict:
         seq, lines = manager.get_logs(after)
-        return {"seq": seq, "lines": lines}
+        return {"seq": seq, "lines": lines, "total": seq}
+
+    @app.get("/api/logs/full")
+    async def logs_full(_auth: None = Depends(verify)) -> dict:
+        """All logs as one string (for copy button)."""
+        text = manager.get_logs_text()
+        return {
+            "text": text,
+            "bytes": len(text.encode("utf-8")),
+            "lines": text.count("\n") + (1 if text and not text.endswith("\n") else 0),
+        }
+
+    @app.get("/api/logs/download")
+    async def logs_download(_auth: None = Depends(verify)) -> PlainTextResponse:
+        text = manager.get_logs_text()
+        return PlainTextResponse(
+            text,
+            media_type="text/plain; charset=utf-8",
+            headers={
+                "Content-Disposition": 'attachment; filename="llm-training-logs.txt"',
+            },
+        )
 
     @app.get("/api/logs/stream")
     async def logs_stream(request: Request, _auth: None = Depends(verify)) -> StreamingResponse:
