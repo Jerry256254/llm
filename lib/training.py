@@ -52,8 +52,20 @@ def write_run_config(cfg: PipelineConfig, estimate: TrainEstimate, run_dir: Path
         "ollama_name": cfg.ollama_name,
         "identity_name": (cfg.extra or {}).get("identity_name") or cfg.ollama_name,
         "teach_identity": (cfg.extra or {}).get("teach_identity", True),
-        "identity_repeat": (cfg.extra or {}).get("identity_repeat", 3),
+        "identity_repeat": (cfg.extra or {}).get("identity_repeat", 1),
+        "founder": (cfg.extra or {}).get("founder") or "Jaroslav Kučera",
+        "trained_on": (cfg.extra or {}).get("trained_on") or "",
         "system_prompt": (cfg.extra or {}).get("system_prompt"),
+        "packing": (cfg.extra or {}).get("packing", True),
+        "freeze_vision": (cfg.extra or {}).get("freeze_vision", True),
+        "model_params_b": cfg.model_params_b,
+        # Target inference context length (tokens). 0/absent = leave the base
+        # model's native rope config untouched. When set higher than the base
+        # model's native max_position_embeddings, the merge step injects a
+        # YaRN rope_scaling block so the merged/GGUF model can actually be
+        # run at this context (many bases, e.g. Qwen2.5, ship with a much
+        # shorter native window than what YaRN scaling can reach).
+        "target_context": int((cfg.extra or {}).get("target_context") or 0),
     }
     path = run_dir / "train_config.json"
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -166,20 +178,27 @@ def run_training(
     extra_env = {
         "NVIDIA_VISIBLE_DEVICES": "all",
         "TOKENIZERS_PARALLELISM": "false",
+        "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+        # Keep GPU tensors on device while writing shards (less host RAM spike on save)
+        "SAFETENSORS_FAST_GPU": "1",
     }
     token = hf_tok
     if token:
         extra_env["HF_TOKEN"] = token
         extra_env["HUGGING_FACE_HUB_TOKEN"] = token
-        # Write into user-owned cache so huggingface lib finds it without root-owned stored_tokens
-        tok_dir = Path.home() / ".cache" / "huggingface"
-        try:
-            tok_dir.mkdir(parents=True, exist_ok=True)
-            tok_file = tok_dir / "token"
-            tok_file.write_text(token.strip() + "\n", encoding="utf-8")
-            tok_file.chmod(0o600)
-        except OSError as e:
-            console.print(f"[yellow]Nelze zapsat ~/.cache/huggingface/token: {e}[/]")
+        # Project HF home (writable) — avoid root-owned ~/.cache/huggingface
+        from .model_source import PROJECT_HF_HOME, ensure_project_hf_home
+
+        ensure_project_hf_home()
+        for tok_dir in (PROJECT_HF_HOME, Path.home() / ".cache" / "huggingface"):
+            try:
+                tok_dir.mkdir(parents=True, exist_ok=True)
+                tok_file = tok_dir / "token"
+                tok_file.write_text(token.strip() + "\n", encoding="utf-8")
+                tok_file.chmod(0o600)
+            except OSError as e:
+                if tok_dir == PROJECT_HF_HOME:
+                    console.print(f"[yellow]Nelze zapsat HF token do {tok_dir}: {e}[/]")
 
     args = docker_run_base_args(
         image,
@@ -192,16 +211,45 @@ def run_training(
     image_idx = args.index(image)
     prefix, suffix = args[:image_idx], args[image_idx:]
     # mount scripts + config (HF cache already mounted in docker_run_base_args)
+    # Docker -v requires absolute host paths (relative names are treated as volume names)
+    train_script_abs = train_script.resolve()
+    cont_cfg_abs = cont_cfg_path.resolve()
     prefix.extend(
         [
             "-v",
-            f"{train_script}:/opt/pipeline/train_inside_container.py:ro",
+            f"{train_script_abs}:/opt/pipeline/train_inside_container.py:ro",
             "-v",
-            f"{cont_cfg_path}:/workspace/train_config.json:ro",
+            f"{cont_cfg_abs}:/workspace/train_config.json:ro",
         ]
     )
-    prefix.extend(extra_vols)
-    prefix.extend(model_vols)
+    # Normalize any relative -v paths in extra/model volumes
+    def _abs_vol(flag: str) -> str:
+        if flag == "-v" or ":" not in flag:
+            return flag
+        host, _, rest = flag.partition(":")
+        # rest may be "container:ro" or "container"
+        try:
+            host_p = Path(host)
+            if host_p.exists() or host.startswith("/") or host.startswith("."):
+                return f"{host_p.resolve()}:{rest}"
+        except Exception:
+            pass
+        return flag
+
+    fixed_extra: list[str] = []
+    for i, x in enumerate(extra_vols):
+        if i > 0 and extra_vols[i - 1] == "-v":
+            fixed_extra.append(_abs_vol(x))
+        else:
+            fixed_extra.append(x)
+    fixed_model: list[str] = []
+    for i, x in enumerate(model_vols):
+        if i > 0 and model_vols[i - 1] == "-v":
+            fixed_model.append(_abs_vol(x))
+        else:
+            fixed_model.append(x)
+    prefix.extend(fixed_extra)
+    prefix.extend(fixed_model)
     cmd = prefix + suffix + ["python", "/opt/pipeline/train_inside_container.py", "/workspace/train_config.json"]
 
     console.print(f"[bold green]Spouštím trénink v Dockeru…[/]")

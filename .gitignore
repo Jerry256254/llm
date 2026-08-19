@@ -10,3 +10,6 @@ outputs/
 .env
 .hf_token
 .DS_Store
+.cache/
+data/
+models/

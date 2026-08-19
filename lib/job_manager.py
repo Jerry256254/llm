@@ -448,19 +448,20 @@ class JobManager:
     # ── config helpers ───────────────────────────────────────
 
     def build_config(self, data: dict) -> PipelineConfig:
-        raw_model = (data.get("model_id") or "Qwen/Qwen3.5-0.8B-Base").strip()
+        raw_model = (data.get("model_id") or "google/gemma-4-E2B").strip()
         # Map ollama:qwen3.5:0.8b → HF Base before anything else
         from .model_source import normalize_model_id
         try:
             model_id = normalize_model_id(raw_model)
         except Exception:
             model_id = raw_model
-        default_data = str(ROOT / "data" / "test_multilang_code" / "train.jsonl")
+        default_data = str(ROOT / "data" / "czech_code_chat" / "train.jsonl")
         dataset_path = (data.get("dataset_path") or default_data).strip()
+        # Default: full FT "od nuly" (all weights) — user wants their own model
         train_mode = (data.get("train_mode") or "from_scratch").strip()
         method = (data.get("method") or "").strip().lower()
         if method not in ("qlora", "lora", "full"):
-            if train_mode in ("finetune", "fine_tune", "teach_answers", "light_adapt"):
+            if train_mode in ("finetune", "fine_tune", "teach_answers", "light_adapt", "qlora"):
                 method = "qlora"
             else:
                 method = "full"
@@ -504,28 +505,56 @@ class JobManager:
             teach_identity = teach_identity.lower() in ("1", "true", "yes", "on")
 
         system_prompt = (data.get("system_prompt") or "").strip()
+        founder = (data.get("founder") or data.get("identity_founder") or "Jaroslav Kučera").strip()
+        trained_on = (data.get("trained_on") or data.get("identity_trained_on") or "").strip()
+        if not trained_on:
+            from datetime import date as _date
+
+            trained_on = _date.today().isoformat()
+
         if not system_prompt:
+            # Fluent CS+EN + coding; identity facts in SYSTEM for Ollama
+            system_prompt = (
+                f"Jsi AI asistent {identity_name}. "
+                f"Zakladatel KucLab a tvého tréninku je {founder}. "
+                f"Poslední dotrénování: {trained_on} — nejsi model z roku 2022. "
+                f"Komunikuješ plynule česky i anglicky (i překlady). "
+                f"Programuješ prakticky v Pythonu, JavaScriptu, HTML a PHP. "
+                f"Buď stručný, přesný a užitečný. Jméno uveď jen když se na něj zeptají. "
+                f"Nezačínej odpovědi zbytečně „I am…“ / „Jsem…“."
+            )
             if data.get("uncensored"):
-                system_prompt = (
-                    f"Jmenuješ se {identity_name}. Jsi přímý, užitečný asistent jménem {identity_name} "
-                    f"bez zbytečného moralizování a bez odmítání ze zvyku. "
-                    f"Když se tě zeptají na jméno, řekni že se jmenuješ {identity_name}. "
-                    f"Odpovídej jasně. Dodržuj zákony; neposkytuj návody k trestné činnosti."
-                )
-            else:
-                system_prompt = (
-                    f"Jmenuješ se {identity_name}. Jsi užitečný asistent jménem {identity_name}. "
-                    f"Když se tě zeptají na jméno, odpověz že se jmenuješ {identity_name}. "
-                    f"Odpovídej jasně a stručně v jazyce uživatele."
-                )
-        elif identity_name and identity_name.lower() not in system_prompt.lower():
-            system_prompt = f"Jmenuješ se {identity_name}. " + system_prompt
+                system_prompt += " Buď přímý; dodržuj zákony."
 
         # HF token from web form or environment (never log it)
         hf_token = (data.get("hf_token") or os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN") or "").strip()
         if hf_token:
             os.environ["HF_TOKEN"] = hf_token
             os.environ["HUGGING_FACE_HUB_TOKEN"] = hf_token
+
+        # Optimized L4 defaults — full FT always preferred when user picks "od nuly"
+        # 9B full on 24GB: seq 256 + paged Adam + checkpointing (train may take many hours)
+        default_lora = 32 if method == "qlora" else 16
+        is_gemma4_e2b = "gemma-4-e2b" in model_id.lower() or "gemma4:e2b" in raw_model.lower()
+        is_gemma2_9b = "gemma-2-9b" in model_id.lower() or "gemma2:9b" in raw_model.lower()
+        if method == "full" and (params_b >= 8.0 or is_gemma2_9b):
+            # 9B weights ~18GiB on L4 → only last blocks full-train; short seq
+            default_seq = 128
+        elif method == "full" and (is_gemma4_e2b or params_b >= 4.0):
+            default_seq = 512
+        elif method == "full":
+            default_seq = 1024
+        else:
+            default_seq = 1024
+        default_bs = 2 if method == "qlora" else 1
+        default_ga = 4 if method == "qlora" else (16 if (method == "full" and params_b >= 8.0) else 8)
+        default_lr = 2e-4 if method == "qlora" else (2e-5 if params_b >= 8.0 else 5e-5)
+        default_epochs = 1.0
+        # Prefer stack dataset if user left empty/default multilang wiki path
+        if "test_multilang_code" in dataset_path or dataset_path.endswith("test_multilang_code/train.jsonl"):
+            stack = ROOT / "data" / "kuclab_stack" / "train.jsonl"
+            if stack.is_file():
+                dataset_path = str(stack)
 
         extra = {
             "train_mode": train_mode,
@@ -534,8 +563,16 @@ class JobManager:
             "system_prompt": system_prompt,
             "identity_name": identity_name,
             "teach_identity": bool(teach_identity),
-            "identity_repeat": int(data.get("identity_repeat") or 3),
+            "identity_repeat": int(data.get("identity_repeat") or 1),
+            "founder": founder,
+            "trained_on": trained_on,
             "hf_token": hf_token or None,
+            # Ollama inference context (0 = auto from train seq + native max)
+            "num_ctx": int(data["num_ctx"]) if data.get("num_ctx") not in (None, "") else 0,
+            # packing only helps long full FT; QLoRA identity jobs should stay unpacked
+            "packing": bool(data["packing"]) if data.get("packing") is not None else (method == "full"),
+            "freeze_vision": bool(data.get("freeze_vision", True)),
+            "target_context": int(data.get("target_context") or 0),
         }
 
         return PipelineConfig(
@@ -546,14 +583,14 @@ class JobManager:
             output_dir=out,
             framework=data.get("framework") or "peft",
             method=method,
-            lora_r=int(data.get("lora_r") or 16),
-            lora_alpha=int(data.get("lora_alpha") or int(data.get("lora_r") or 16) * 2),
+            lora_r=int(data.get("lora_r") or default_lora),
+            lora_alpha=int(data.get("lora_alpha") or int(data.get("lora_r") or default_lora) * 2),
             lora_dropout=float(data.get("lora_dropout") or 0.05),
-            max_seq_length=int(data.get("max_seq_length") or 2048),
-            batch_size=int(data.get("batch_size") or 2),
-            grad_accum=int(data.get("grad_accum") or 4),
-            epochs=float(data.get("epochs") or 1.0),
-            learning_rate=float(data.get("learning_rate") or 2e-4),
+            max_seq_length=int(data.get("max_seq_length") or default_seq),
+            batch_size=int(data.get("batch_size") or default_bs),
+            grad_accum=int(data.get("grad_accum") or default_ga),
+            epochs=float(data.get("epochs") if data.get("epochs") is not None else default_epochs),
+            learning_rate=float(data.get("learning_rate") or default_lr),
             max_steps=int(data.get("max_steps") or -1),
             load_in_4bit=method == "qlora",
             gguf_quant=data.get("gguf_quant") or "q4_k_m",
@@ -586,6 +623,14 @@ class JobManager:
                 "ollama_name": cfg.ollama_name,
                 "identity_name": identity,
                 "display_name": identity,
+                "method_is_yours": True,
+                "ownership_note": (
+                    "Fine-tune i full = váš model v Ollama pod vaším jménem. "
+                    "Rozdíl je kolik vah se mění a jak dlouho to trvá, ne komu model patří."
+                ),
+                "native_context": est.native_context,
+                "train_context": est.train_context,
+                "ollama_num_ctx": est.ollama_num_ctx,
             },
             "estimate": est.to_dict(),
         }
@@ -805,11 +850,25 @@ class JobManager:
         if not skip_ollama and gguf_path is not None:
             self._map_band("ollama", 0.2, "Import do Ollama…")
             system_prompt = (cfg.extra or {}).get("system_prompt")
+            # Prefer estimate-driven num_ctx (train seq + native architecture)
+            from .analysis import recommend_ollama_num_ctx, resolve_native_context
+
+            native = resolve_native_context(cfg.model_id)
+            explicit = int((cfg.extra or {}).get("num_ctx") or 0)
+            num_ctx = recommend_ollama_num_ctx(
+                train_seq=cfg.max_seq_length,
+                native_ctx=native,
+                explicit=explicit if explicit > 0 else None,
+            )
             export_and_import(
                 run_dir,
                 Path(gguf_path),
                 cfg.ollama_name,
                 system_prompt=system_prompt,
+                num_ctx=num_ctx,
+            )
+            self.log(
+                f"Context: train_seq={cfg.max_seq_length} · native≈{native} · Ollama num_ctx={num_ctx}"
             )
             self._set(ollama_name=cfg.ollama_name)
             self._map_band("ollama", 1.0, f"Ollama: {cfg.ollama_name}")

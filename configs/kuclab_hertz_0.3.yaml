@@ -1,0 +1,84 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.3 — 14B, 128k context (YaRN), self-distilled via Qwen3.8-27B
+# ═══════════════════════════════════════════════════════════════════════════
+# Student (trained/deployed): Qwen2.5-14B-Instruct — within the project's own
+# <=15B ceiling, native 32k context extendable to 128k via YaRN (validated:
+# see lib/convert_gguf.py / scripts/train_inside_container.py target_context
+# injection — empirically confirmed max_position_embeddings 32768->131072,
+# rope_scaling written correctly, on this exact base model).
+#
+# Teacher (data generation only, never trained): Qwen3.8-27B via Ollama.
+# Real Alibaba/Tongyi release (14 Aug 2026), verified against the official
+# huggingface.co/Qwen org page. Chosen over self-distillation from Qwen2.5
+# itself because it is a stronger reasoning ("thinking") model — confirmed
+# via live test to produce cleaner Czech and correct step-by-step reasoning.
+# NOTE: direct QLoRA fine-tuning of Qwen3.8-27B itself was tested and OOMs on
+# this L4 even at the most aggressive settings (r=4, seq=512) — 27B is a
+# data-generation-only asset here, not a training target.
+#
+# VRAM validated empirically (not just estimated) on this L4 (23GB):
+#   lora_r=8, max_seq_length=1792 -> peak 19775/23034 MiB (86%, ~3.2GB headroom)
+#
+# Identity: per project decision, attributed to KucLab as an organization —
+# no founder name in training data or system prompt (see
+# scripts/build_hertz03_selfdistill.py::_identity_rows).
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: Qwen/Qwen2.5-14B-Instruct
+
+dataset_path: ./data/kuclab_hertz_0.3/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+max_seq_length: 1792
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.3
+num_ctx: 32768
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.3
+founder: ""
+trained_on: "2026-08-19"
+# Identity rows are already baked into the self-distilled corpus
+# (hand-written, no founder name — see build script).
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+# Extends inference context via YaRN rope_scaling injected at merge time.
+# 131072 > native 32768 -> factor 4.0, verified working end to end.
+target_context: 131072
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.3 — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii a matematiku. Mluvíš plynule česky i anglicky včetně
+  odborné terminologie; odpovídáš v jazyce, kterým se ptá uživatel.
+  U výpočtů a odvození postupuješ krok za krokem a ukazuješ mezivýsledky,
+  se správnými jednotkami a značením veličin. Když si nejsi jistý, řekneš
+  to rovnou místo vymýšlení. K aktuálním datům nemáš přístup. Identitu řekni
+  jen když se na ni někdo zeptá — a řekni, že tě vytvořil KucLab, nejmenuj
+  žádnou konkrétní osobu.
+
+# SUCCESS CRITERIA:
+#   - MMLU-Pro STEM within noise of base
+#   - Czech terminology clearly improved vs base
+#   - identity: names KucLab (+ kuclab.org), does NOT name a founder
+#   - 128k context actually usable (empirical long-context test, not just config)
