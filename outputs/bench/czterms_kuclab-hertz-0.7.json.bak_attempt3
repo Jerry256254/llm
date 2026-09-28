@@ -1,0 +1,1875 @@
+{
+  "model": "kuclab-hertz-0.7",
+  "n": 206,
+  "correct": 144,
+  "accuracy": 0.6990291262135923,
+  "per_direction": {
+    "CS→EN": {
+      "correct": 83,
+      "n": 103,
+      "accuracy": 0.8058252427184466
+    },
+    "EN→CS": {
+      "correct": 61,
+      "n": 103,
+      "accuracy": 0.5922330097087378
+    }
+  },
+  "elapsed_s": 150.8,
+  "results": [
+    {
+      "id": "en2cs:power",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „power“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "výkon",
+      "got": "výkon",
+      "ok": true
+    },
+    {
+      "id": "cs2en:výkon",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „výkon“? Answer with the term only.",
+      "expect": "power",
+      "got": "power",
+      "ok": true
+    },
+    {
+      "id": "en2cs:rolling resistance",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „rolling resistance“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "valivý odpor",
+      "got": "odpěrný třecí odpor",
+      "ok": false
+    },
+    {
+      "id": "cs2en:valivý odpor",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „valivý odpor“? Answer with the term only.",
+      "expect": "rolling resistance",
+      "got": "rolling resistance",
+      "ok": true
+    },
+    {
+      "id": "en2cs:Coriolis force",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „Coriolis force“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Coriolisova síla",
+      "got": "Coriolisova síla",
+      "ok": true
+    },
+    {
+      "id": "cs2en:Coriolisova síla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „Coriolisova síla“? Answer with the term only.",
+      "expect": "Coriolis force",
+      "got": "Coriolis force",
+      "ok": true
+    },
+    {
+      "id": "en2cs:centre of mass",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „centre of mass“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžiště",
+      "got": "těžiště",
+      "ok": true
+    },
+    {
+      "id": "cs2en:těžiště",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „těžiště“? Answer with the term only.",
+      "expect": "centre of mass",
+      "got": "center of mass",
+      "ok": false
+    },
+    {
+      "id": "en2cs:frequency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „frequency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "frekvence",
+      "got": "frekvence",
+      "ok": true
+    },
+    {
+      "id": "cs2en:frekvence",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „frekvence“? Answer with the term only.",
+      "expect": "frequency",
+      "got": "frequency",
+      "ok": true
+    },
+    {
+      "id": "en2cs:wavelength",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „wavelength“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vlnová délka",
+      "got": "vlnová délka",
+      "ok": true
+    },
+    {
+      "id": "cs2en:vlnová délka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „vlnová délka“? Answer with the term only.",
+      "expect": "wavelength",
+      "got": "wavelength",
+      "ok": true
+    },
+    {
+      "id": "en2cs:standing wave",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „standing wave“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stojaté vlnění",
+      "got": "stojatá vlna",
+      "ok": false
+    },
+    {
+      "id": "cs2en:stojaté vlnění",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stojaté vlnění“? Answer with the term only.",
+      "expect": "standing wave",
+      "got": "standing wave",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electric charge",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electric charge“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrický náboj",
+      "got": "elektrický náboj",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektrický náboj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektrický náboj“? Answer with the term only.",
+      "expect": "electric charge",
+      "got": "electric charge",
+      "ok": true
+    },
+    {
+      "id": "en2cs:resistivity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „resistivity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rezistivita",
+      "got": "odporivost",
+      "ok": false
+    },
+    {
+      "id": "cs2en:rezistivita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „rezistivita“? Answer with the term only.",
+      "expect": "resistivity",
+      "got": "resistivity",
+      "ok": true
+    },
+    {
+      "id": "en2cs:magnetic flux density",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „magnetic flux density“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "magnetická indukce",
+      "got": "magnetická indukce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:magnetická indukce",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „magnetická indukce“? Answer with the term only.",
+      "expect": "magnetic flux density",
+      "got": "magnetic flux",
+      "ok": false
+    },
+    {
+      "id": "en2cs:direct current",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „direct current“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stejnosměrný proud",
+      "got": "střídavý proud",
+      "ok": false
+    },
+    {
+      "id": "cs2en:stejnosměrný proud",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stejnosměrný proud“? Answer with the term only.",
+      "expect": "direct current",
+      "got": "direct current",
+      "ok": true
+    },
+    {
+      "id": "en2cs:diode",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „diode“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dioda",
+      "got": "dioda",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dioda",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dioda“? Answer with the term only.",
+      "expect": "diode",
+      "got": "diode",
+      "ok": true
+    },
+    {
+      "id": "en2cs:specific heat capacity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „specific heat capacity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "měrná tepelná kapacita",
+      "got": "mírné teplo",
+      "ok": false
+    },
+    {
+      "id": "cs2en:měrná tepelná kapacita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „měrná tepelná kapacita“? Answer with the term only.",
+      "expect": "specific heat capacity",
+      "got": "specific heat",
+      "ok": false
+    },
+    {
+      "id": "en2cs:isothermal process",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isothermal process“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotermický děj",
+      "got": "izotermický děj",
+      "ok": true
+    },
+    {
+      "id": "cs2en:izotermický děj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotermický děj“? Answer with the term only.",
+      "expect": "isothermal process",
+      "got": "isothermal process",
+      "ok": true
+    },
+    {
+      "id": "en2cs:efficiency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „efficiency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "účinnost",
+      "got": "účinnost",
+      "ok": true
+    },
+    {
+      "id": "cs2en:účinnost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „účinnost“? Answer with the term only.",
+      "expect": "efficiency",
+      "got": "efficiency",
+      "ok": true
+    },
+    {
+      "id": "en2cs:surface tension",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „surface tension“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrchové napětí",
+      "got": "povrchové napětí",
+      "ok": true
+    },
+    {
+      "id": "cs2en:povrchové napětí",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „povrchové napětí“? Answer with the term only.",
+      "expect": "surface tension",
+      "got": "surface tension",
+      "ok": true
+    },
+    {
+      "id": "en2cs:refraction",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „refraction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "lom světla",
+      "got": "lomivost",
+      "ok": false
+    },
+    {
+      "id": "cs2en:lom světla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „lom světla“? Answer with the term only.",
+      "expect": "refraction",
+      "got": "refraction",
+      "ok": true
+    },
+    {
+      "id": "en2cs:converging lens",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „converging lens“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "spojka",
+      "got": "sběravá čočka",
+      "ok": false
+    },
+    {
+      "id": "cs2en:spojka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „spojka“? Answer with the term only.",
+      "expect": "converging lens",
+      "got": "coupling",
+      "ok": false
+    },
+    {
+      "id": "en2cs:photoelectric effect",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „photoelectric effect“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotoelektrický jev",
+      "got": "fotoelektrický jev",
+      "ok": true
+    },
+    {
+      "id": "cs2en:fotoelektrický jev",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „fotoelektrický jev“? Answer with the term only.",
+      "expect": "photoelectric effect",
+      "got": "photoelectric effect",
+      "ok": true
+    },
+    {
+      "id": "en2cs:uncertainty principle",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „uncertainty principle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "princip neurčitosti",
+      "got": "neurčitostní princip",
+      "ok": false
+    },
+    {
+      "id": "cs2en:princip neurčitosti",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „princip neurčitosti“? Answer with the term only.",
+      "expect": "uncertainty principle",
+      "got": "Uncertainty principle",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electron shell",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electron shell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronová slupka",
+      "got": "elektronová slupka",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektronová slupka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektronová slupka“? Answer with the term only.",
+      "expect": "electron shell",
+      "got": "electron shell",
+      "ok": true
+    },
+    {
+      "id": "en2cs:isotope",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isotope“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotop",
+      "got": "izotop",
+      "ok": true
+    },
+    {
+      "id": "cs2en:izotop",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotop“? Answer with the term only.",
+      "expect": "isotope",
+      "got": "isotope",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nuclear fusion",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „nuclear fusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jaderná fúze",
+      "got": "termo-nukleární fúze",
+      "ok": false
+    },
+    {
+      "id": "cs2en:jaderná fúze",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „jaderná fúze“? Answer with the term only.",
+      "expect": "nuclear fusion",
+      "got": "nuclear fusion",
+      "ok": true
+    },
+    {
+      "id": "en2cs:time dilation",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „time dilation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dilatace času",
+      "got": "časové dilatace",
+      "ok": false
+    },
+    {
+      "id": "cs2en:dilatace času",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dilatace času“? Answer with the term only.",
+      "expect": "time dilation",
+      "got": "time dilation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:escape velocity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „escape velocity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úniková rychlost",
+      "got": "unikačová rychlost",
+      "ok": false
+    },
+    {
+      "id": "cs2en:úniková rychlost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „úniková rychlost“? Answer with the term only.",
+      "expect": "escape velocity",
+      "got": "escape velocity",
+      "ok": true
+    },
+    {
+      "id": "en2cs:black hole",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „black hole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "černá díra",
+      "got": "černá díra",
+      "ok": true
+    },
+    {
+      "id": "cs2en:černá díra",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „černá díra“? Answer with the term only.",
+      "expect": "black hole",
+      "got": "black hole",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mole",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „mole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mol",
+      "got": "mol",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mol“? Answer with the term only.",
+      "expect": "mole",
+      "got": "mole",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electronegativity",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electronegativity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronegativita",
+      "got": "elektronegativita",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektronegativita",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektronegativita“? Answer with the term only.",
+      "expect": "electronegativity",
+      "got": "electronegativity",
+      "ok": true
+    },
+    {
+      "id": "en2cs:ionic bond",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ionic bond“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iontová vazba",
+      "got": "kovová vazba",
+      "ok": false
+    },
+    {
+      "id": "cs2en:iontová vazba",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „iontová vazba“? Answer with the term only.",
+      "expect": "ionic bond",
+      "got": "ionic bond",
+      "ok": true
+    },
+    {
+      "id": "en2cs:dipole moment",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „dipole moment“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dipólový moment",
+      "got": "dipolový moment",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dipólový moment",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „dipólový moment“? Answer with the term only.",
+      "expect": "dipole moment",
+      "got": "dipole moment",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electrolyte",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electrolyte“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrolyt",
+      "got": "elektrolyt",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektrolyt",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektrolyt“? Answer with the term only.",
+      "expect": "electrolyte",
+      "got": "electrolyte",
+      "ok": true
+    },
+    {
+      "id": "en2cs:concentration",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „concentration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "koncentrace",
+      "got": "koncentrace",
+      "ok": true
+    },
+    {
+      "id": "cs2en:koncentrace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „koncentrace“? Answer with the term only.",
+      "expect": "concentration",
+      "got": "concentration",
+      "ok": true
+    },
+    {
+      "id": "en2cs:buffer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „buffer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "pufr",
+      "got": "tvaroh\n**buffer** — tvarek",
+      "ok": false
+    },
+    {
+      "id": "cs2en:pufr",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „pufr“? Answer with the term only.",
+      "expect": "buffer",
+      "got": "buffer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:salt",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „salt“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sůl",
+      "got": "sůl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:sůl",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sůl“? Answer with the term only.",
+      "expect": "salt",
+      "got": "salt",
+      "ok": true
+    },
+    {
+      "id": "en2cs:endothermic reaction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „endothermic reaction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endotermická reakce",
+      "got": "endotermní reakce",
+      "ok": false
+    },
+    {
+      "id": "cs2en:endotermická reakce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „endotermická reakce“? Answer with the term only.",
+      "expect": "endothermic reaction",
+      "got": "endothermic reaction",
+      "ok": true
+    },
+    {
+      "id": "en2cs:inhibitor",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „inhibitor“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "inhibitor",
+      "got": "inhibitor",
+      "ok": true
+    },
+    {
+      "id": "cs2en:inhibitor",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „inhibitor“? Answer with the term only.",
+      "expect": "inhibitor",
+      "got": "inhibitor",
+      "ok": true
+    },
+    {
+      "id": "en2cs:reduction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „reduction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "redukce",
+      "got": "redukce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:redukce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „redukce“? Answer with the term only.",
+      "expect": "reduction",
+      "got": "reduction",
+      "ok": true
+    },
+    {
+      "id": "en2cs:galvanic cell",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „galvanic cell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "galvanický článek",
+      "got": "galvanická buňka",
+      "ok": false
+    },
+    {
+      "id": "cs2en:galvanický článek",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „galvanický článek“? Answer with the term only.",
+      "expect": "galvanic cell",
+      "got": "galvanic cell",
+      "ok": true
+    },
+    {
+      "id": "en2cs:polymerisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „polymerisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "polymerace",
+      "got": "polymerizace",
+      "ok": false
+    },
+    {
+      "id": "cs2en:polymerace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „polymerace“? Answer with the term only.",
+      "expect": "polymerisation",
+      "got": "polymerization",
+      "ok": false
+    },
+    {
+      "id": "en2cs:enantiomer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „enantiomer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "enantiomer",
+      "got": "enantiomer",
+      "ok": true
+    },
+    {
+      "id": "cs2en:enantiomer",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „enantiomer“? Answer with the term only.",
+      "expect": "enantiomer",
+      "got": "enantiomer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:alkane",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alkane“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkan",
+      "got": "alkany",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkan",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkan“? Answer with the term only.",
+      "expect": "alkane",
+      "got": "alkane",
+      "ok": true
+    },
+    {
+      "id": "en2cs:alcohol",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alcohol“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkohol",
+      "got": "alkohol",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkohol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkohol“? Answer with the term only.",
+      "expect": "alcohol",
+      "got": "alcohol",
+      "ok": true
+    },
+    {
+      "id": "en2cs:ester",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ester“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "ester",
+      "got": "ester",
+      "ok": true
+    },
+    {
+      "id": "cs2en:ester",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „ester“? Answer with the term only.",
+      "expect": "ester",
+      "got": "ester",
+      "ok": true
+    },
+    {
+      "id": "en2cs:carbohydrate",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „carbohydrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sacharid",
+      "got": "sacharid",
+      "ok": true
+    },
+    {
+      "id": "cs2en:sacharid",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sacharid“? Answer with the term only.",
+      "expect": "carbohydrate",
+      "got": "carbohydrate",
+      "ok": true
+    },
+    {
+      "id": "en2cs:denaturation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „denaturation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "denaturace",
+      "got": "denaturace",
+      "ok": true
+    },
+    {
+      "id": "cs2en:denaturace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „denaturace“? Answer with the term only.",
+      "expect": "denaturation",
+      "got": "denaturation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:halogen",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „halogen“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "halogen",
+      "got": "halogen",
+      "ok": true
+    },
+    {
+      "id": "cs2en:halogen",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „halogen“? Answer with the term only.",
+      "expect": "halogen",
+      "got": "halogen",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transition metal",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „transition metal“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "přechodný kov",
+      "got": "přechodní kov",
+      "ok": false
+    },
+    {
+      "id": "cs2en:přechodný kov",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „přechodný kov“? Answer with the term only.",
+      "expect": "transition metal",
+      "got": "transition metal",
+      "ok": true
+    },
+    {
+      "id": "en2cs:amorphous solid",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „amorphous solid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "amorfní látka",
+      "got": "amorfní tvořivo",
+      "ok": false
+    },
+    {
+      "id": "cs2en:amorfní látka",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „amorfní látka“? Answer with the term only.",
+      "expect": "amorphous solid",
+      "got": "amorphous solid",
+      "ok": true
+    },
+    {
+      "id": "en2cs:crystallisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „crystallisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "krystalizace",
+      "got": "krystalizace",
+      "ok": true
+    },
+    {
+      "id": "cs2en:krystalizace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „krystalizace“? Answer with the term only.",
+      "expect": "crystallisation",
+      "got": "crystallization",
+      "ok": false
+    },
+    {
+      "id": "en2cs:absorption",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „absorption“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "absorpce",
+      "got": "absorpce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:absorpce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „absorpce“? Answer with the term only.",
+      "expect": "absorption",
+      "got": "absorption",
+      "ok": true
+    },
+    {
+      "id": "en2cs:valence",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „valence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mocenství",
+      "got": "valenční elektronová konfigurace",
+      "ok": false
+    },
+    {
+      "id": "cs2en:mocenství",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mocenství“? Answer with the term only.",
+      "expect": "valence",
+      "got": "power",
+      "ok": false
+    },
+    {
+      "id": "en2cs:cell wall",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cell wall“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "buněčná stěna",
+      "got": "buňková stěna",
+      "ok": false
+    },
+    {
+      "id": "cs2en:buněčná stěna",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „buněčná stěna“? Answer with the term only.",
+      "expect": "cell wall",
+      "got": "cell wall",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nucleolus",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleolus“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jadérko",
+      "got": "ribozomální tělíčko",
+      "ok": false
+    },
+    {
+      "id": "cs2en:jadérko",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „jadérko“? Answer with the term only.",
+      "expect": "nucleolus",
+      "got": "nucleus",
+      "ok": false
+    },
+    {
+      "id": "en2cs:endoplasmic reticulum",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „endoplasmic reticulum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endoplazmatické retikulum",
+      "got": "hrubé endoplazmatické síťičky",
+      "ok": false
+    },
+    {
+      "id": "cs2en:endoplazmatické retikulum",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „endoplazmatické retikulum“? Answer with the term only.",
+      "expect": "endoplasmic reticulum",
+      "got": "endoplasmic reticulum",
+      "ok": true
+    },
+    {
+      "id": "en2cs:cytoskeleton",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cytoskeleton“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "cytoskelet",
+      "got": "cytoskelet",
+      "ok": true
+    },
+    {
+      "id": "cs2en:cytoskelet",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „cytoskelet“? Answer with the term only.",
+      "expect": "cytoskeleton",
+      "got": "cytoskeleton",
+      "ok": true
+    },
+    {
+      "id": "en2cs:substrate",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „substrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "substrát",
+      "got": "substrát",
+      "ok": true
+    },
+    {
+      "id": "cs2en:substrát",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „substrát“? Answer with the term only.",
+      "expect": "substrate",
+      "got": "substrate",
+      "ok": true
+    },
+    {
+      "id": "en2cs:metabolism",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „metabolism“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "metabolismus",
+      "got": "metabolismus",
+      "ok": true
+    },
+    {
+      "id": "cs2en:metabolismus",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „metabolismus“? Answer with the term only.",
+      "expect": "metabolism",
+      "got": "metabolism",
+      "ok": true
+    },
+    {
+      "id": "en2cs:diffusion",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „diffusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "difuze",
+      "got": "difuze",
+      "ok": true
+    },
+    {
+      "id": "cs2en:difuze",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „difuze“? Answer with the term only.",
+      "expect": "diffusion",
+      "got": "diffusion",
+      "ok": true
+    },
+    {
+      "id": "en2cs:photosynthesis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „photosynthesis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotosyntéza",
+      "got": "fotosyntéza",
+      "ok": true
+    },
+    {
+      "id": "cs2en:fotosyntéza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „fotosyntéza“? Answer with the term only.",
+      "expect": "photosynthesis",
+      "got": "photosynthesis",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpiration",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „transpiration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpirace",
+      "got": "transpirace",
+      "ok": true
+    },
+    {
+      "id": "cs2en:transpirace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „transpirace“? Answer with the term only.",
+      "expect": "transpiration",
+      "got": "transpiration",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nucleotide",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleotide“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nukleotid",
+      "got": "nukleotid",
+      "ok": true
+    },
+    {
+      "id": "cs2en:nukleotid",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „nukleotid“? Answer with the term only.",
+      "expect": "nucleotide",
+      "got": "nucleotide",
+      "ok": true
+    },
+    {
+      "id": "en2cs:translation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „translation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "translace",
+      "got": "transkripce",
+      "ok": false
+    },
+    {
+      "id": "cs2en:translace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „translace“? Answer with the term only.",
+      "expect": "translation",
+      "got": "translation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:exon",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „exon“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exon",
+      "got": "exon",
+      "ok": true
+    },
+    {
+      "id": "cs2en:exon",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „exon“? Answer with the term only.",
+      "expect": "exon",
+      "got": "exon",
+      "ok": true
+    },
+    {
+      "id": "en2cs:chromatin",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „chromatin“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "chromatin",
+      "got": "chromatin",
+      "ok": true
+    },
+    {
+      "id": "cs2en:chromatin",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „chromatin“? Answer with the term only.",
+      "expect": "chromatin",
+      "got": "chromatin",
+      "ok": true
+    },
+    {
+      "id": "en2cs:homozygote",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „homozygote“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "homozygot",
+      "got": "homozygot",
+      "ok": true
+    },
+    {
+      "id": "cs2en:homozygot",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „homozygot“? Answer with the term only.",
+      "expect": "homozygote",
+      "got": "homozygous",
+      "ok": false
+    },
+    {
+      "id": "en2cs:mutation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „mutation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mutace",
+      "got": "mutace",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mutace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „mutace“? Answer with the term only.",
+      "expect": "mutation",
+      "got": "mutation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:haploid",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „haploid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "haploidní",
+      "got": "haploid",
+      "ok": false
+    },
+    {
+      "id": "cs2en:haploidní",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „haploidní“? Answer with the term only.",
+      "expect": "haploid",
+      "got": "haploid",
+      "ok": true
+    },
+    {
+      "id": "en2cs:fertilisation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „fertilisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "oplození",
+      "got": "oplustnutí",
+      "ok": false
+    },
+    {
+      "id": "cs2en:oplození",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „oplození“? Answer with the term only.",
+      "expect": "fertilisation",
+      "got": "anode",
+      "ok": false
+    },
+    {
+      "id": "en2cs:genetic drift",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „genetic drift“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "genetický drift",
+      "got": "genetická deriva",
+      "ok": false
+    },
+    {
+      "id": "cs2en:genetický drift",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „genetický drift“? Answer with the term only.",
+      "expect": "genetic drift",
+      "got": "genetic drift",
+      "ok": true
+    },
+    {
+      "id": "en2cs:convergent evolution",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „convergent evolution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "konvergentní evoluce",
+      "got": "konvergentní evoluce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:konvergentní evoluce",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „konvergentní evoluce“? Answer with the term only.",
+      "expect": "convergent evolution",
+      "got": "convergent evolution",
+      "ok": true
+    },
+    {
+      "id": "en2cs:food chain",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „food chain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "potravní řetězec",
+      "got": "potravní řetězec",
+      "ok": true
+    },
+    {
+      "id": "cs2en:potravní řetězec",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „potravní řetězec“? Answer with the term only.",
+      "expect": "food chain",
+      "got": "food chain",
+      "ok": true
+    },
+    {
+      "id": "en2cs:symbiosis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „symbiosis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "symbióza",
+      "got": "symbóza",
+      "ok": false
+    },
+    {
+      "id": "cs2en:symbióza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „symbióza“? Answer with the term only.",
+      "expect": "symbiosis",
+      "got": "symbiosis",
+      "ok": true
+    },
+    {
+      "id": "en2cs:immunity",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „immunity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "imunita",
+      "got": "imunita",
+      "ok": true
+    },
+    {
+      "id": "cs2en:imunita",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „imunita“? Answer with the term only.",
+      "expect": "immunity",
+      "got": "immunity",
+      "ok": true
+    },
+    {
+      "id": "en2cs:vaccination",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „vaccination“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "očkování",
+      "got": "očkování",
+      "ok": true
+    },
+    {
+      "id": "cs2en:očkování",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „očkování“? Answer with the term only.",
+      "expect": "vaccination",
+      "got": "vaccination",
+      "ok": true
+    },
+    {
+      "id": "en2cs:organ",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „organ“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "orgán",
+      "got": "orgán",
+      "ok": true
+    },
+    {
+      "id": "cs2en:orgán",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „orgán“? Answer with the term only.",
+      "expect": "organ",
+      "got": "organ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:reflex",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „reflex“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "reflex",
+      "got": "odraz",
+      "ok": false
+    },
+    {
+      "id": "cs2en:reflex",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „reflex“? Answer with the term only.",
+      "expect": "reflex",
+      "got": "reflex",
+      "ok": true
+    },
+    {
+      "id": "en2cs:antiderivative",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „antiderivative“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "primitivní funkce",
+      "got": "primitiva",
+      "ok": false
+    },
+    {
+      "id": "cs2en:primitivní funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „primitivní funkce“? Answer with the term only.",
+      "expect": "antiderivative",
+      "got": "elementary function",
+      "ok": false
+    },
+    {
+      "id": "en2cs:extremum",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „extremum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "extrém",
+      "got": "extrema",
+      "ok": true
+    },
+    {
+      "id": "cs2en:extrém",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „extrém“? Answer with the term only.",
+      "expect": "extremum",
+      "got": "extreme",
+      "ok": false
+    },
+    {
+      "id": "en2cs:domain",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „domain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "definiční obor",
+      "got": "obor",
+      "ok": false
+    },
+    {
+      "id": "cs2en:definiční obor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „definiční obor“? Answer with the term only.",
+      "expect": "domain",
+      "got": "domain",
+      "ok": true
+    },
+    {
+      "id": "en2cs:matrix",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „matrix“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matice",
+      "got": "matice",
+      "ok": true
+    },
+    {
+      "id": "cs2en:matice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matice“? Answer with the term only.",
+      "expect": "matrix",
+      "got": "matrix",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpose",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „transpose“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpozice",
+      "got": "transponace",
+      "ok": false
+    },
+    {
+      "id": "cs2en:transpozice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „transpozice“? Answer with the term only.",
+      "expect": "transpose",
+      "got": "transposition",
+      "ok": false
+    },
+    {
+      "id": "en2cs:vector",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „vector“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vektor",
+      "got": "vektor",
+      "ok": true
+    },
+    {
+      "id": "cs2en:vektor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „vektor“? Answer with the term only.",
+      "expect": "vector",
+      "got": "vector",
+      "ok": true
+    },
+    {
+      "id": "en2cs:system of equations",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „system of equations“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "soustava rovnic",
+      "got": "rovnice soustavu",
+      "ok": false
+    },
+    {
+      "id": "cs2en:soustava rovnic",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „soustava rovnic“? Answer with the term only.",
+      "expect": "system of equations",
+      "got": "system of equations",
+      "ok": true
+    },
+    {
+      "id": "en2cs:exponential function",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „exponential function“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exponenciální funkce",
+      "got": "exponentiální funkce",
+      "ok": false
+    },
+    {
+      "id": "cs2en:exponenciální funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „exponenciální funkce“? Answer with the term only.",
+      "expect": "exponential function",
+      "got": "exponential function",
+      "ok": true
+    },
+    {
+      "id": "en2cs:factorial",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „factorial“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "faktoriál",
+      "got": "faktoriál",
+      "ok": true
+    },
+    {
+      "id": "cs2en:faktoriál",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „faktoriál“? Answer with the term only.",
+      "expect": "factorial",
+      "got": "factorial",
+      "ok": true
+    },
+    {
+      "id": "en2cs:binomial theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „binomial theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "binomická věta",
+      "got": "binomická věta",
+      "ok": true
+    },
+    {
+      "id": "cs2en:binomická věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „binomická věta“? Answer with the term only.",
+      "expect": "binomial theorem",
+      "got": "binomial theorem",
+      "ok": true
+    },
+    {
+      "id": "en2cs:least common multiple",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „least common multiple“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nejmenší společný násobek",
+      "got": "nejmenší společný násobek",
+      "ok": true
+    },
+    {
+      "id": "cs2en:nejmenší společný násobek",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „nejmenší společný násobek“? Answer with the term only.",
+      "expect": "least common multiple",
+      "got": "least common multiple",
+      "ok": true
+    },
+    {
+      "id": "en2cs:irrational number",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „irrational number“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iracionální číslo",
+      "got": "iracionální číslo",
+      "ok": true
+    },
+    {
+      "id": "cs2en:iracionální číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „iracionální číslo“? Answer with the term only.",
+      "expect": "irrational number",
+      "got": "irrational number",
+      "ok": true
+    },
+    {
+      "id": "en2cs:integer",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „integer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "celé číslo",
+      "got": "celé číslo",
+      "ok": true
+    },
+    {
+      "id": "cs2en:celé číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „celé číslo“? Answer with the term only.",
+      "expect": "integer",
+      "got": "integer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:geometric sequence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „geometric sequence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "geometrická posloupnost",
+      "got": "geometrická posloupnost",
+      "ok": true
+    },
+    {
+      "id": "cs2en:geometrická posloupnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „geometrická posloupnost“? Answer with the term only.",
+      "expect": "geometric sequence",
+      "got": "geometric sequence",
+      "ok": true
+    },
+    {
+      "id": "en2cs:equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rovnice",
+      "got": "rovnice",
+      "ok": true
+    },
+    {
+      "id": "cs2en:rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „rovnice“? Answer with the term only.",
+      "expect": "equation",
+      "got": "equation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:root of an equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „root of an equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kořen rovnice",
+      "got": "odpověď",
+      "ok": false
+    },
+    {
+      "id": "cs2en:kořen rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kořen rovnice“? Answer with the term only.",
+      "expect": "root of an equation",
+      "got": "root",
+      "ok": false
+    },
+    {
+      "id": "en2cs:angle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „angle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úhel",
+      "got": "rozdíl",
+      "ok": false
+    },
+    {
+      "id": "cs2en:úhel",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „úhel“? Answer with the term only.",
+      "expect": "angle",
+      "got": "angle",
+      "ok": true
+    },
+    {
+      "id": "en2cs:surface area",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „surface area“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrch",
+      "got": "povrch",
+      "ok": true
+    },
+    {
+      "id": "cs2en:povrch",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „povrch“? Answer with the term only.",
+      "expect": "surface area",
+      "got": "surface",
+      "ok": false
+    },
+    {
+      "id": "en2cs:median of a triangle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „median of a triangle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžnice",
+      "got": "střední přímka",
+      "ok": false
+    },
+    {
+      "id": "cs2en:těžnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „těžnice“? Answer with the term only.",
+      "expect": "median of a triangle",
+      "got": "turgor",
+      "ok": false
+    },
+    {
+      "id": "en2cs:disc",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „disc“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kruh",
+      "got": "disk",
+      "ok": false
+    },
+    {
+      "id": "cs2en:kruh",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kruh“? Answer with the term only.",
+      "expect": "disc",
+      "got": "circle",
+      "ok": false
+    },
+    {
+      "id": "en2cs:congruence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „congruence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "shodnost",
+      "got": "kongruence",
+      "ok": false
+    },
+    {
+      "id": "cs2en:shodnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „shodnost“? Answer with the term only.",
+      "expect": "congruence",
+      "got": "homology",
+      "ok": false
+    },
+    {
+      "id": "en2cs:tangent (function)",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „tangent (function)“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "tangens",
+      "got": "teta",
+      "ok": false
+    },
+    {
+      "id": "cs2en:tangens",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „tangens“? Answer with the term only.",
+      "expect": "tangent (function)",
+      "got": "tangent",
+      "ok": false
+    },
+    {
+      "id": "en2cs:Bayes' theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „Bayes' theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Bayesova věta",
+      "got": "Bayesovo pravidlo",
+      "ok": false
+    },
+    {
+      "id": "cs2en:Bayesova věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „Bayesova věta“? Answer with the term only.",
+      "expect": "Bayes' theorem",
+      "got": "Bayes' theorem",
+      "ok": true
+    },
+    {
+      "id": "en2cs:standard deviation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „standard deviation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "směrodatná odchylka",
+      "got": "rozptyl",
+      "ok": false
+    },
+    {
+      "id": "cs2en:směrodatná odchylka",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „směrodatná odchylka“? Answer with the term only.",
+      "expect": "standard deviation",
+      "got": "standard deviation",
+      "ok": true
+    },
+    {
+      "id": "en2cs:normal distribution",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „normal distribution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "normální rozdělení",
+      "got": "normální rozdělení",
+      "ok": true
+    },
+    {
+      "id": "cs2en:normální rozdělení",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „normální rozdělení“? Answer with the term only.",
+      "expect": "normal distribution",
+      "got": "Normal distribution",
+      "ok": true
+    },
+    {
+      "id": "en2cs:intersection",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „intersection“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "průnik",
+      "got": "smyk",
+      "ok": false
+    },
+    {
+      "id": "cs2en:průnik",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „průnik“? Answer with the term only.",
+      "expect": "intersection",
+      "got": "penetration",
+      "ok": false
+    },
+    {
+      "id": "en2cs:mathematical induction",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „mathematical induction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matematická indukce",
+      "got": "matematická indukce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:matematická indukce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matematická indukce“? Answer with the term only.",
+      "expect": "mathematical induction",
+      "got": "mathematical induction",
+      "ok": true
+    }
+  ]
+}

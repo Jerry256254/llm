@@ -1,0 +1,28 @@
+bnb_before True
+REMERGE…
+Docker image ready: llm-finetune/unsloth:cuda12.1.0-r7
+Re-merge LoRA on clean base for GGUF… 
+base=/home/admin/llm/outputs/run_1784825550/merged
+Re-merge OK: /home/admin/llm/outputs/run_1784838209/merged
+bnb_after False
+CONVERT…
+Docker image ready: llm-finetune/unsloth:cuda12.1.0-r7
+Konverze do GGUF (q4_k_m)…
+GGUF hotovo: /home/admin/llm/outputs/run_1784838209/gguf/model-q4_k_m.gguf (5.76
+GB)
+GGUF_OK /home/admin/llm/outputs/run_1784838209/gguf/model-q4_k_m.gguf 5761057920
+OLLAMA…
+Modelfile: /home/admin/llm/outputs/run_1784838209/Modelfile
+Ollama context window (num_ctx): 8192
+Import do Ollama jako kuclab-v0.5 …
+Model připraven: ollama run kuclab-v0.5
+NAME                  ID              SIZE      MODIFIED               
+kuclab-v0.5:latest    cdfe8c9f2dea    5.8 GB    Less than a second ago    
+kuclab-v0.4:latest    79381f579c74    5.8 GB    20 hours ago              
+kuclab-v0.3:latest    3aa872cff46f    5.8 GB    23 hours ago              
+gemma2:9b             ff02c3702f32    5.4 GB    31 hours ago              
+kuclab-v0.2:latest    aef0344ac1d9    3.4 GB    41 hours ago              
+kuclab-v0.1:latest    e979c645b59c    529 MB    46 hours ago              
+qwen3.5:0.8b          f3817196d142    1.0 GB    4 days ago                
+gemma2:2b             8ccf136fdd52    1.6 GB    4 days ago                
+ALL_DONE kuclab-v0.5

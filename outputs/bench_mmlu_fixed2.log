@@ -1,0 +1,48 @@
+extractor self-test: 10/10 passed
+
+══════════════════════════════════════════════════════════════════════
+qwen3.5:9b · 80 questions · 2 workers
+══════════════════════════════════════════════════════════════════════
+  10/80  396s  (39.6s/q)
+  20/80  845s  (42.3s/q)
+  30/80  1330s  (44.3s/q)
+  40/80  1928s  (48.2s/q)
+  50/80  2372s  (47.4s/q)
+  60/80  2763s  (46.0s/q)
+  70/80  3301s  (47.2s/q)
+  80/80  3764s  (47.1s/q)
+
+qwen3.5:9b
+  biology     16/20    80.0%
+  chemistry   12/20    60.0%
+  math        14/20    70.0%
+  physics     13/20    65.0%
+  TOTAL       55/80    68.8%
+  (20 needed an answer-only re-ask after running out of tokens)
+  ! 19 answers still unparseable (counted as wrong)
+  3764s total, 47.1s/question
+  → /home/admin/llm/outputs/bench/qwen3.5_9b.json
+extractor self-test: 10/10 passed
+
+══════════════════════════════════════════════════════════════════════
+qwen35-nulltrain-r · 80 questions · 2 workers
+══════════════════════════════════════════════════════════════════════
+  10/80  191s  (19.1s/q)
+  20/80  215s  (10.8s/q)
+  30/80  378s  (12.6s/q)
+  40/80  519s  (13.0s/q)
+  50/80  572s  (11.4s/q)
+  60/80  673s  (11.2s/q)
+  70/80  756s  (10.8s/q)
+  80/80  838s  (10.5s/q)
+
+qwen35-nulltrain-r
+  biology      8/20    40.0%
+  chemistry    7/20    35.0%
+  math         4/20    20.0%
+  physics      2/20    10.0%
+  TOTAL       21/80    26.2%
+  (67 needed an answer-only re-ask after running out of tokens)
+  ! 19 answers still unparseable (counted as wrong)
+  839s total, 10.5s/question
+  → /home/admin/llm/outputs/bench/qwen35-nulltrain-r.json

@@ -1,0 +1,156 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+Config: {
+  "model_id": "/models/base",
+  "model_params_b": 9.0,
+  "dataset_path": "/data/train.jsonl",
+  "dataset_format": "alpaca",
+  "output_dir": "/workspace/adapter",
+  "framework": "peft",
+  "method": "qlora",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "max_seq_length": 2048,
+  "batch_size": 1,
+  "grad_accum": 8,
+  "epochs": 2.0,
+  "learning_rate": 3e-05,
+  "max_steps": -1,
+  "load_in_4bit": true,
+  "seed": 42,
+  "gguf_quant": "q4_k_m",
+  "ollama_name": "kuclab-hertz-0.8f",
+  "identity_name": "KucLab Hertz 0.8F",
+  "teach_identity": false,
+  "identity_repeat": 0,
+  "founder": "Jaroslav Ku\u010dera",
+  "trained_on": "2026-09-13",
+  "system_prompt": "Jsi KucLab Hertz 0.8F \u2014 model od KucLab (kuclab.org) zam\u011b\u0159en\u00fd na fyziku, chemii, biologii, matematiku a programov\u00e1n\u00ed. Mluv\u00ed\u0161 plynule \u010desky i anglicky v\u010detn\u011b odborn\u00e9 terminologie; odpov\u00edd\u00e1\u0161 v jazyce, kter\u00fdm se pt\u00e1 u\u017eivatel. U v\u00fdpo\u010dt\u016f, odvozen\u00ed a k\u00f3du nejd\u0159\u00edv \u0159ekni v\u00fdsledek nebo z\u00e1v\u011br, pak uka\u017e postup krok za krokem s meziv\u00fdsledky. U ot\u00e1zek s v\u00fdb\u011brem odpov\u011bdi v\u017edy jasn\u011b uve\u010f zvolenou mo\u017enost. Odpov\u00edd\u00e1\u0161 p\u0159\u00edmo, sebejist\u011b a lidsky. Neza\u010d\u00ednej omluvami ani formulacemi typu \"jako AI nemohu\" u b\u011b\u017en\u00fdch, ne\u0161kodn\u00fdch t\u00e9mat. Skute\u010dn\u011b nebezpe\u010dn\u00e9 nebo \u0161kodliv\u00e9 po\u017eadavky odm\u00edtni stru\u010dn\u011b a bez k\u00e1z\u00e1n\u00ed. K aktu\u00e1ln\u00edm dat\u016fm nem\u00e1\u0161 p\u0159\u00edstup. Identitu \u0159ekni jen kdy\u017e se na ni n\u011bkdo zept\u00e1 \u2014 a \u0159ekni, \u017ee t\u011b vytvo\u0159il KucLab, nejmenuj \u017e\u00e1dnou konkr\u00e9tn\u00ed osobu.",
+  "packing": false,
+  "freeze_vision": true,
+  "target_context": 0,
+  "merged_dir": "/workspace/merged"
+}
+torch=2.5.1+cu121 cuda=True
+gpu0=NVIDIA L4
+torchvision=0.20.1+cu121
+Using PEFT/transformers backend (full or LoRA/QLoRA)
+Loading model (PEFT): /models/base method=qlora seq=2048 packing=False
+Multimodal checkpoint (qwen3_5) — loading with AutoModelForImageTextToText / ConditionalGeneration
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/760 [00:00<08:27,  1.49it/s]
+Loading weights:   0%|          | 2/760 [00:01<08:26,  1.50it/s]
+Loading weights:   1%|▏         | 10/760 [00:01<01:13, 10.25it/s]
+Loading weights:   2%|▏         | 15/760 [00:01<00:48, 15.29it/s]
+Loading weights:   4%|▎         | 28/760 [00:01<00:22, 32.38it/s]
+Loading weights:   5%|▌         | 41/760 [00:01<00:15, 47.72it/s]
+Loading weights:   6%|▋         | 49/760 [00:01<00:15, 46.59it/s]
+Loading weights:   9%|▊         | 65/760 [00:02<00:10, 68.37it/s]
+Loading weights:  10%|▉         | 75/760 [00:02<00:09, 72.68it/s]
+Loading weights:  11%|█         | 85/760 [00:02<00:09, 69.15it/s]
+Loading weights:  12%|█▎        | 95/760 [00:02<00:09, 71.68it/s]
+Loading weights:  14%|█▎        | 104/760 [00:02<00:09, 68.41it/s]
+Loading weights:  16%|█▌        | 119/760 [00:02<00:07, 81.18it/s]
+Loading weights:  17%|█▋        | 129/760 [00:02<00:07, 85.08it/s]
+Loading weights:  18%|█▊        | 139/760 [00:03<00:07, 81.45it/s]
+Loading weights:  19%|█▉        | 148/760 [00:03<00:07, 78.75it/s]
+Loading weights:  21%|██        | 157/760 [00:03<00:08, 72.60it/s]
+Loading weights:  23%|██▎       | 172/760 [00:03<00:06, 84.93it/s]
+Loading weights:  24%|██▍       | 183/760 [00:03<00:06, 88.33it/s]
+Loading weights:  25%|██▌       | 193/760 [00:03<00:06, 87.18it/s]
+Loading weights:  27%|██▋       | 202/760 [00:03<00:07, 76.60it/s]
+Loading weights:  28%|██▊       | 210/760 [00:03<00:07, 75.03it/s]
+Loading weights:  30%|██▉       | 225/760 [00:04<00:06, 87.02it/s]
+Loading weights:  31%|███       | 236/760 [00:04<00:05, 90.60it/s]
+Loading weights:  32%|███▏      | 246/760 [00:04<00:05, 89.34it/s]
+Loading weights:  34%|███▎      | 256/760 [00:04<00:06, 80.81it/s]
+Loading weights:  35%|███▍      | 265/760 [00:04<00:06, 78.33it/s]
+Loading weights:  37%|███▋      | 278/760 [00:04<00:05, 87.35it/s]
+Loading weights:  38%|███▊      | 288/760 [00:04<00:05, 90.12it/s]
+Loading weights:  39%|███▉      | 298/760 [00:04<00:05, 85.56it/s]
+Loading weights:  40%|████      | 307/760 [00:05<00:05, 82.44it/s]
+Loading weights:  42%|████▏     | 316/760 [00:05<00:05, 75.26it/s]
+Loading weights:  44%|████▎     | 331/760 [00:05<00:04, 88.03it/s]
+Loading weights:  45%|████▌     | 342/760 [00:05<00:04, 91.30it/s]
+Loading weights:  46%|████▋     | 352/760 [00:05<00:04, 88.98it/s]
+Loading weights:  48%|████▊     | 361/760 [00:05<00:05, 78.26it/s]
+Loading weights:  49%|████▊     | 370/760 [00:05<00:05, 76.76it/s]
+Loading weights:  51%|█████     | 384/760 [00:05<00:04, 88.69it/s]
+Loading weights:  52%|█████▏    | 395/760 [00:06<00:03, 91.35it/s]
+Loading weights:  53%|█████▎    | 405/760 [00:06<00:04, 88.59it/s]
+Loading weights:  54%|█████▍    | 414/760 [00:06<00:04, 76.67it/s]
+Loading weights:  56%|█████▌    | 422/760 [00:06<00:04, 75.09it/s]
+Loading weights:  61%|██████    | 465/760 [00:06<00:01, 164.03it/s]
+Loading weights:  70%|██████▉   | 529/760 [00:06<00:00, 287.32it/s]
+Loading weights:  79%|███████▊  | 597/760 [00:06<00:00, 392.26it/s]
+Loading weights:  87%|████████▋ | 659/760 [00:06<00:00, 454.76it/s]
+Loading weights:  95%|█████████▌| 723/760 [00:06<00:00, 501.10it/s]
+Loading weights: 100%|██████████| 760/760 [00:07<00:00, 108.23it/s]
+Frozen non-text towers: 4.8M · language still trainable: 2035.3M
+LoRA target_modules: ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj', 'in_proj_qkv', 'out_proj']
+trainable params: 36,962,304 || all params: 9,446,776,048 || trainable%: 0.3913
+
+Generating train split: 0 examples [00:00, ? examples/s]
+Generating train split: 6184 examples [00:00, 117016.20 examples/s]
+
+Map:   0%|          | 0/6184 [00:00<?, ? examples/s]
+Map:  17%|█▋        | 1077/6184 [00:00<00:00, 10664.54 examples/s]
+Map:  35%|███▍      | 2163/6184 [00:00<00:00, 10776.81 examples/s]
+Map:  53%|█████▎    | 3261/6184 [00:00<00:00, 10862.89 examples/s]
+Map:  70%|███████   | 4357/6184 [00:00<00:00, 10896.12 examples/s]
+Map:  88%|████████▊ | 5467/6184 [00:00<00:00, 10965.20 examples/s]
+Map: 100%|██████████| 6184/6184 [00:00<00:00, 10787.60 examples/s]
+
+Filter:   0%|          | 0/6184 [00:00<?, ? examples/s]
+Filter: 100%|██████████| 6184/6184 [00:00<00:00, 112808.85 examples/s]
+Dataset samples (včetně identity): 6184
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+TrainingArguments optim=paged_adamw_8bit bs=1 ga=8 epochs=2.0 max_steps=-1 seq=2048
+GPU free before train: 11.29/23.69 GiB
+Using transformers.Trainer ('push_to_hub_token')
+
+Map:   0%|          | 0/6184 [00:00<?, ? examples/s]
+Map:  16%|█▌        | 1000/6184 [00:01<00:07, 649.57 examples/s]
+Map:  32%|███▏      | 2000/6184 [00:02<00:05, 699.75 examples/s]
+Map:  49%|████▊     | 3000/6184 [00:04<00:04, 710.53 examples/s]
+Map:  65%|██████▍   | 4000/6184 [00:05<00:02, 728.65 examples/s]
+Map:  81%|████████  | 5000/6184 [00:06<00:01, 729.38 examples/s]
+Map:  97%|█████████▋| 6000/6184 [00:08<00:00, 740.43 examples/s]
+Map: 100%|██████████| 6184/6184 [00:08<00:00, 738.42 examples/s]
+Map: 100%|██████████| 6184/6184 [00:08<00:00, 724.52 examples/s]
+Starting training…
+Trainable now: 37.0M / 5761.9M total
+Multimodal checkpoint — full FT on language path; vision/audio frozen.
+
+  0%|          | 0/1546 [00:00<?, ?it/s][transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+
+  0%|          | 1/1546 [00:33<14:13:49, 33.16s/it]
+  0%|          | 2/1546 [01:06<14:17:31, 33.32s/it]
+  0%|          | 3/1546 [01:46<15:30:59, 36.20s/it]
+  0%|          | 4/1546 [02:27<16:20:31, 38.15s/it]
+  0%|          | 5/1546 [03:08<16:50:56, 39.36s/it]
+  0%|          | 6/1546 [03:43<16:09:49, 37.79s/it]
+  0%|          | 7/1546 [04:17<15:40:26, 36.66s/it]
+  1%|          | 8/1546 [04:53<15:30:14, 36.29s/it]
+  1%|          | 9/1546 [05:37<16:28:40, 38.59s/it]
+  1%|          | 10/1546 [06:17<16:45:04, 39.26s/it]
+  1%|          | 11/1546 [06:55<16:29:45, 38.69s/it]
+  1%|          | 12/1546 [07:34<16:36:41, 38.98s/it]
+  1%|          | 13/1546 [08:17<17:01:19, 39.97s/it]

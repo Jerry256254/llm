@@ -1,0 +1,88 @@
+══════════════════════════════════════════════════════════════════════
+Building KucLab Hertz 0.1 corpus
+══════════════════════════════════════════════════════════════════════
+
+[1/5] Handwritten Czech STEM seed + identity …
+  handwritten: 66
+
+[2/5] Czech terminology tables …
+  terminology: 337
+
+[3/5] English STEM backbone (HF) …
+  camel-ai/physics … (target 9000)
+  camel-ai/physics: 9000
+  camel-ai/chemistry: downloading https://huggingface.co/datasets/camel-ai/chemistry/resolve/main/chemistry.zip …
+    got 21.8 MB
+  camel-ai/chemistry … (target 9000)
+  camel-ai/chemistry: 9000
+  camel-ai/biology: downloading https://huggingface.co/datasets/camel-ai/biology/resolve/main/biology.zip …
+    got 27.4 MB
+  camel-ai/biology … (target 9000)
+  camel-ai/biology: 9000
+  camel-ai/math: downloading https://huggingface.co/datasets/camel-ai/math/resolve/main/math.zip …
+    got 39.8 MB
+  camel-ai/math … (target 9000)
+  camel-ai/math: 9000
+  MetaMathQA … (target 6000)
+  MetaMathQA: 6000
+  GSM8K … (target 2500)
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 328826.11 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 244003.31 examples/s]
+  GSM8K: 2500
+  SciQ … (target 3000)
+Generating train split:   0%|          | 0/11679 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 11679/11679 [00:00<00:00, 331015.15 examples/s]
+Generating validation split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1000/1000 [00:00<00:00, 217671.08 examples/s]
+Generating test split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1000/1000 [00:00<00:00, 188279.57 examples/s]
+  SciQ: 3000
+  ScienceQA (text-only) … (target 3000)
+Generating train split:   0%|          | 0/6508 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 6508/6508 [00:00<00:00, 279866.82 examples/s]
+Generating validation split:   0%|          | 0/2144 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 2144/2144 [00:00<00:00, 200660.22 examples/s]
+Generating test split:   0%|          | 0/2224 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 2224/2224 [00:00<00:00, 188131.66 examples/s]
+  ScienceQA: 2939
+
+[4/5] Wikipedia STEM prose …
+  Wiki STEM cs: 20231101.cs (target 6000) …
+    … cs 1000
+    … cs 2000
+    … cs 3000
+    … cs 4000
+    … cs 5000
+    … cs 6000
+  Wiki STEM cs: 6000 (scanned 37354)
+  Wiki STEM en: 20231101.en (target 2500) …
+    … en 1000
+    … en 2000
+  Wiki STEM en: 2500 (scanned 24462)
+
+[5/5] Retained ability from kuclab_v1 …
+  kuclab_v1 reuse: 4000 (pool 25592)
+
+Dedup: 63342 → 62450
+  MMLU-Pro eval (held out): 240 — {'biology': 60, 'chemistry': 60, 'physics': 60, 'math': 60}
+
+══════════════════════════════════════════════════════════════════════
+✓ 62450 samples → /home/admin/llm/data/kuclab_hertz_0.1/train.jsonl
+✓ 16 smoke prompts, 240 held-out MMLU-Pro rows
+
+Top sources:
+     8998  camel:physics
+     8983  camel:biology
+     8967  camel:chemistry
+     8924  camel:math
+     6000  wiki_stem_cs
+     5711  metamath
+     3924  kuclab_v1_reuse
+     2992  sciq
+     2939  scienceqa
+     2500  wiki_stem_en
+     2109  gsm8k
+      186  cs_terminology
+      123  cs_elements
+       28  cs_constants
+       24  hertz_identity
+       10  cs_physics_seed
+        9  hertz_behaviour
+        8  cs_chemistry_seed
+        8  cs_math_seed
+        7  cs_biology_seed
+══════════════════════════════════════════════════════════════════════

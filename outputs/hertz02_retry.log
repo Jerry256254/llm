@@ -1,0 +1,18 @@
+retrying 407 truncated prompts at num_predict=3500
+  25/407  1433s  (57.3s each)
+  50/407  2902s  (58.0s each)
+  75/407  4413s  (58.8s each)
+  100/407  5914s  (59.1s each)
+  125/407  7429s  (59.4s each)
+  150/407  8885s  (59.2s each)
+  175/407  10376s  (59.3s each)
+  200/407  11839s  (59.2s each)
+  225/407  13404s  (59.6s each)
+  250/407  14879s  (59.5s each)
+  275/407  16373s  (59.5s each)
+  300/407  17834s  (59.4s each)
+  325/407  19278s  (59.3s each)
+  350/407  20743s  (59.3s each)
+  375/407  22279s  (59.4s each)
+  400/407  23792s  (59.5s each)
+generated 407 in 24243s

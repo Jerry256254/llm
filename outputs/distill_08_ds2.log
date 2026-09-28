@@ -1,0 +1,317 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek'}
+  filtered to domains ['bio', 'czech', 'design']: 1700 prompts
+  [1] api08:bio: Lidské srdce přečerpá asi 7600 litrů krve denně. Vysvětli ma
+  [2] api08:bio: Krevní tlak 117/77: co znamenají obě čísla?
+  [3] api08:bio: Krevní tlak 120/71: co znamenají obě čísla?
+  [4] api08:bio: Plíce mají plochu asi 92 m². Vysvětli výměnu plynů v plicníc
+  [5] api08:bio: Denní potřeba bílkovin je asi 105 g. Proč je tělo potřebuje?
+  [6] api08:bio: Krevní tlak 125/80: co znamenají obě čísla?
+  [7] api08:bio: Plíce mají plochu asi 104 m². Vysvětli výměnu plynů v plicní
+  [8] api08:bio: Denní potřeba bílkovin je asi 73 g. Proč je tělo potřebuje? 
+  [9] api08:bio: Krevní tlak 113/70: co znamenají obě čísla?
+  [10] api08:bio: Krevní tlak 114/74: co znamenají obě čísla?
+  [11] api08:bio: Krevní tlak 115/70: co znamenají obě čísla?
+  [12] api08:bio: Denní potřeba bílkovin je asi 43 g. Proč je tělo potřebuje? 
+  [13] api08:bio: Krevní tlak 115/71: co znamenají obě čísla?
+  [14] api08:bio: Krevní tlak 125/79: co znamenají obě čísla?
+  [15] api08:bio: Červená krvinka žije asi 102 dní. Kde vzniká a kde zaniká?
+  [16] api08:bio: Denní potřeba bílkovin je asi 71 g. Proč je tělo potřebuje? 
+  [17] api08:bio: Plíce mají plochu asi 59 m². Vysvětli výměnu plynů v plicníc
+  [18] api08:bio: Plíce mají plochu asi 91 m². Vysvětli výměnu plynů v plicníc
+  [19] api08:bio: Denní potřeba bílkovin je asi 96 g. Proč je tělo potřebuje? 
+  [20] api08:bio: Krevní tlak 115/79: co znamenají obě čísla?
+  [21] api08:bio: Krevní tlak 123/77: co znamenají obě čísla?
+  [22] api08:bio: Krevní tlak 116/74: co znamenají obě čísla?
+  [23] api08:bio: Plíce mají plochu asi 99 m². Vysvětli výměnu plynů v plicníc
+  [24] api08:bio: Krevní tlak 125/71: co znamenají obě čísla?
+  [25] api08:bio: Červená krvinka žije asi 108 dní. Kde vzniká a kde zaniká?
+  [26] api08:bio: Denní potřeba bílkovin je asi 97 g. Proč je tělo potřebuje? 
+  [27] api08:bio: Krevní tlak 118/78: co znamenají obě čísla?
+  [28] api08:bio: Krevní tlak 110/74: co znamenají obě čísla?
+  [29] api08:bio: Krevní tlak 114/71: co znamenají obě čísla?
+  [30] api08:bio: Krevní tlak 128/70: co znamenají obě čísla?
+  [31] api08:bio: Klidový tep je asi 75 tepů za minutu. Co se děje při jednom 
+  [32] api08:bio: Krevní tlak 113/75: co znamenají obě čísla?
+  [33] api08:bio: Krevní tlak 128/79: co znamenají obě čísla?
+  [34] api08:bio: Krevní tlak 114/73: co znamenají obě čísla?
+  [35] api08:bio: Plíce mají plochu asi 70 m². Vysvětli výměnu plynů v plicníc
+  [36] api08:bio: Krevní tlak 120/72: co znamenají obě čísla?
+  [37] api08:bio: Červená krvinka žije asi 113 dní. Kde vzniká a kde zaniká?
+  [38] api08:bio: Krevní tlak 122/76: co znamenají obě čísla?
+  [39] api08:bio: Krevní tlak 116/73: co znamenají obě čísla?
+  [40] api08:bio: Krevní tlak 130/77: co znamenají obě čísla?
+  [41] api08:bio: Krevní tlak 119/74: co znamenají obě čísla?
+  [42] api08:bio: Krevní tlak 114/77: co znamenají obě čísla?
+  [43] api08:bio: Krevní tlak 124/81: co znamenají obě čísla?
+  [44] api08:bio: Krevní tlak 116/75: co znamenají obě čísla?
+  [45] api08:bio: Plíce mají plochu asi 102 m². Vysvětli výměnu plynů v plicní
+  [46] api08:bio: Denní potřeba bílkovin je asi 48 g. Proč je tělo potřebuje? 
+  [47] api08:bio: Denní potřeba bílkovin je asi 69 g. Proč je tělo potřebuje? 
+  [48] api08:bio: Krevní tlak 111/74: co znamenají obě čísla?
+  [49] api08:bio: Krevní tlak 119/76: co znamenají obě čísla?
+  [50] api08:bio: Plíce mají plochu asi 89 m². Vysvětli výměnu plynů v plicníc
+  [51] api08:bio: Krevní tlak 120/84: co znamenají obě čísla?
+  [52] api08:bio: Krevní tlak 116/70: co znamenají obě čísla?
+  [53] api08:bio: Krevní tlak 130/80: co znamenají obě čísla?
+  [54] api08:bio: Krevní tlak 121/78: co znamenají obě čísla?
+  [55] api08:bio: Krevní tlak 124/76: co znamenají obě čísla?
+  [56] api08:bio: Plíce mají plochu asi 110 m². Vysvětli výměnu plynů v plicní
+  [57] api08:bio: Denní potřeba bílkovin je asi 54 g. Proč je tělo potřebuje? 
+  [58] api08:bio: Krevní tlak 120/79: co znamenají obě čísla?
+  [59] api08:bio: Krevní tlak 111/78: co znamenají obě čísla?
+  [60] api08:bio: Krevní tlak 128/85: co znamenají obě čísla?
+  [61] api08:bio: Krevní tlak 120/70: co znamenají obě čísla?
+  [62] api08:bio: Krevní tlak 112/74: co znamenají obě čísla?
+  [63] api08:bio: Krevní tlak 112/75: co znamenají obě čísla?
+  [64] api08:bio: Plíce mají plochu asi 73 m². Vysvětli výměnu plynů v plicníc
+  [65] api08:bio: Krevní tlak 126/77: co znamenají obě čísla?
+  [66] api08:bio: Krevní tlak 114/72: co znamenají obě čísla?
+  [67] api08:bio: Denní potřeba bílkovin je asi 58 g. Proč je tělo potřebuje? 
+  [68] api08:bio: Krevní tlak 118/72: co znamenají obě čísla?
+  [69] api08:bio: Denní potřeba bílkovin je asi 55 g. Proč je tělo potřebuje? 
+  [70] api08:bio: Krevní tlak 120/73: co znamenají obě čísla?
+  [71] api08:bio: Krevní tlak 119/77: co znamenají obě čísla?
+  [72] api08:bio: Krevní tlak 120/75: co znamenají obě čísla?
+  [73] api08:bio: Krevní tlak 118/79: co znamenají obě čísla?
+  [74] api08:bio: Krevní tlak 114/76: co znamenají obě čísla?
+  [75] api08:bio: Krevní tlak 123/76: co znamenají obě čísla?
+  [76] api08:bio: Krevní tlak 120/77: co znamenají obě čísla?
+  [77] api08:bio: Krevní tlak 112/71: co znamenají obě čísla?
+  [78] api08:bio: Krevní tlak 116/82: co znamenají obě čísla?
+  [79] api08:bio: Krevní tlak 116/77: co znamenají obě čísla?
+  [80] api08:bio: Krevní tlak 119/70: co znamenají obě čísla?
+  [81] api08:bio: Krevní tlak 117/79: co znamenají obě čísla?
+  [82] api08:bio: Krevní tlak 110/78: co znamenají obě čísla?
+  [83] api08:bio: Krevní tlak 124/79: co znamenají obě čísla?
+  [84] api08:bio: Krevní tlak 115/75: co znamenají obě čísla?
+  [85] api08:bio: Krevní tlak 110/72: co znamenají obě čísla?
+  [86] api08:bio: Krevní tlak 110/73: co znamenají obě čísla?
+  [87] api08:bio: Denní potřeba bílkovin je asi 62 g. Proč je tělo potřebuje? 
+  [88] api08:bio: Krevní tlak 110/75: co znamenají obě čísla?
+  [89] api08:bio: Krevní tlak 112/72: co znamenají obě čísla?
+  [90] api08:bio: Krevní tlak 120/81: co znamenají obě čísla?
+  [91] api08:bio: Krevní tlak 117/81: co znamenají obě čísla?
+  [92] api08:bio: Krevní tlak 113/71: co znamenají obě čísla?
+  [93] api08:bio: Krevní tlak 128/75: co znamenají obě čísla?
+  [94] api08:bio: Krevní tlak 116/72: co znamenají obě čísla?
+  [95] api08:bio: Krevní tlak 119/73: co znamenají obě čísla?
+  [96] api08:bio: Krevní tlak 113/79: co znamenají obě čísla?
+  [97] api08:bio: Krevní tlak 121/77: co znamenají obě čísla?
+  [98] api08:bio: Krevní tlak 124/73: co znamenají obě čísla?
+  [99] api08:bio: Krevní tlak 122/77: co znamenají obě čísla?
+  [100] api08:bio: Krevní tlak 114/70: co znamenají obě čísla?
+  [101] api08:bio: Denní potřeba bílkovin je asi 68 g. Proč je tělo potřebuje? 
+  [102] api08:bio: Krevní tlak 126/76: co znamenají obě čísla?
+  [103] api08:bio: Krevní tlak 115/74: co znamenají obě čísla?
+  [104] api08:bio: Krevní tlak 115/78: co znamenají obě čísla?
+  [105] api08:bio: Krevní tlak 119/80: co znamenají obě čísla?
+  [106] api08:bio: Krevní tlak 119/75: co znamenají obě čísla?
+  [107] api08:bio: Krevní tlak 127/73: co znamenají obě čísla?
+  [108] api08:bio: Krevní tlak 124/72: co znamenají obě čísla?
+  [109] api08:bio: Krevní tlak 120/76: co znamenají obě čísla?
+  [110] api08:bio: Krevní tlak 118/71: co znamenají obě čísla?
+  [111] api08:bio: Krevní tlak 113/77: co znamenají obě čísla?
+  [112] api08:bio: Krevní tlak 118/75: co znamenají obě čísla?
+  [113] api08:bio: Krevní tlak 117/72: co znamenají obě čísla?
+  [114] api08:bio: Krevní tlak 122/74: co znamenají obě čísla?
+  [115] api08:bio: Krevní tlak 122/72: co znamenají obě čísla?
+  [116] api08:bio: Krevní tlak 126/74: co znamenají obě čísla?
+  [117] api08:bio: Krevní tlak 111/79: co znamenají obě čísla?
+  [118] api08:bio: Krevní tlak 116/79: co znamenají obě čísla?
+  [119] api08:bio: Krevní tlak 126/71: co znamenají obě čísla?
+  [120] api08:bio: Krevní tlak 114/78: co znamenají obě čísla?
+  [121] api08:bio: Krevní tlak 127/83: co znamenají obě čísla?
+  [122] api08:bio: Krevní tlak 121/72: co znamenají obě čísla?
+  [123] api08:bio: Krevní tlak 113/83: co znamenají obě čísla?
+  [124] api08:bio: Krevní tlak 113/76: co znamenají obě čísla?
+  [125] api08:bio: Krevní tlak 111/75: co znamenají obě čísla?
+  [126] api08:bio: Krevní tlak 112/73: co znamenají obě čísla?
+  [127] api08:bio: Krevní tlak 119/84: co znamenají obě čísla?
+  [128] api08:bio: Krevní tlak 115/77: co znamenají obě čísla?
+  [129] api08:bio: Krevní tlak 129/71: co znamenají obě čísla?
+  [130] api08:bio: Krevní tlak 110/77: co znamenají obě čísla?
+  [131] api08:bio: Krevní tlak 115/73: co znamenají obě čísla?
+  [132] api08:bio: Krevní tlak 118/76: co znamenají obě čísla?
+  [133] api08:bio: Krevní tlak 115/83: co znamenají obě čísla?
+  [134] api08:bio: Krevní tlak 112/78: co znamenají obě čísla?
+  [135] api08:bio: Krevní tlak 112/70: co znamenají obě čísla?
+  [136] api08:bio: Krevní tlak 126/72: co znamenají obě čísla?
+  [137] api08:bio: Krevní tlak 118/77: co znamenají obě čísla?
+  [138] api08:bio: Krevní tlak 119/71: co znamenají obě čísla?
+  [139] api08:bio: Krevní tlak 113/72: co znamenají obě čísla?
+  [140] api08:bio: Krevní tlak 112/77: co znamenají obě čísla?
+  [141] api08:bio: Krevní tlak 111/72: co znamenají obě čísla?
+  [142] api08:bio: Krevní tlak 115/85: co znamenají obě čísla?
+  [143] api08:bio: Krevní tlak 121/79: co znamenají obě čísla?
+  [144] api08:bio: Krevní tlak 123/79: co znamenají obě čísla?
+  [145] api08:bio: Krevní tlak 123/73: co znamenají obě čísla?
+  [146] api08:bio: Krevní tlak 114/79: co znamenají obě čísla?
+  [147] api08:bio: Krevní tlak 110/71: co znamenají obě čísla?
+  [148] api08:bio: Krevní tlak 117/71: co znamenají obě čísla?
+  [149] api08:bio: Krevní tlak 118/74: co znamenají obě čísla?
+  [150] api08:bio: Krevní tlak 117/78: co znamenají obě čísla?
+  [151] api08:design: Navrhni hero sekci pro SaaS s cenou od 319 Kč/měs. Napiš Tai
+  [152] api08:design: Navrhni hero sekci pro SaaS s cenou od 47 Kč/měs. Napiš Tail
+  [153] api08:design: Navrhni hero sekci pro SaaS s cenou od 176 Kč/měs. Napiš Tai
+  [154] api08:design: Navrhni hero sekci pro SaaS s cenou od 257 Kč/měs. Napiš Tai
+  [155] api08:design: Navrhni hero sekci pro SaaS s cenou od 857 Kč/měs. Napiš Tai
+  [156] api08:design: Navrhni hero sekci pro SaaS s cenou od 604 Kč/měs. Napiš Tai
+  [157] api08:design: Navrhni hero sekci pro SaaS s cenou od 817 Kč/měs. Napiš Tai
+  [158] api08:design: Navrhni hero sekci pro SaaS s cenou od 431 Kč/měs. Napiš Tai
+  [159] api08:design: Navrhni hero sekci pro SaaS s cenou od 588 Kč/měs. Napiš Tai
+  [160] api08:design: Navrhni hero sekci pro SaaS s cenou od 617 Kč/měs. Napiš Tai
+  [161] api08:design: Navrhni hero sekci pro SaaS s cenou od 940 Kč/měs. Napiš Tai
+  [162] api08:design: Navrhni hero sekci pro SaaS s cenou od 302 Kč/měs. Napiš Tai
+  [163] api08:design: Navrhni hero sekci pro SaaS s cenou od 606 Kč/měs. Napiš Tai
+  [164] api08:design: Navrhni hero sekci pro SaaS s cenou od 149 Kč/měs. Napiš Tai
+  [165] api08:design: Navrhni hero sekci pro SaaS s cenou od 702 Kč/měs. Napiš Tai
+  [166] api08:design: Navrhni hero sekci pro SaaS s cenou od 374 Kč/měs. Napiš Tai
+  [167] api08:design: Navrhni hero sekci pro SaaS s cenou od 350 Kč/měs. Napiš Tai
+  [168] api08:design: Navrhni hero sekci pro SaaS s cenou od 546 Kč/měs. Napiš Tai
+  [169] api08:design: Navrhni hero sekci pro SaaS s cenou od 188 Kč/měs. Napiš Tai
+  [170] api08:design: Navrhni hero sekci pro SaaS s cenou od 816 Kč/měs. Napiš Tai
+  [171] api08:design: Navrhni hero sekci pro SaaS s cenou od 84 Kč/měs. Napiš Tail
+  [172] api08:design: Navrhni hero sekci pro SaaS s cenou od 864 Kč/měs. Napiš Tai
+  [173] api08:design: Navrhni hero sekci pro SaaS s cenou od 672 Kč/měs. Napiš Tai
+  [174] api08:design: Navrhni hero sekci pro SaaS s cenou od 17 Kč/měs. Napiš Tail
+  [175] api08:design: Navrhni hero sekci pro SaaS s cenou od 947 Kč/měs. Napiš Tai
+  [176] api08:design: Navrhni hero sekci pro SaaS s cenou od 778 Kč/měs. Napiš Tai
+  [177] api08:design: Navrhni hero sekci pro SaaS s cenou od 459 Kč/měs. Napiš Tai
+  [178] api08:design: Navrhni hero sekci pro SaaS s cenou od 976 Kč/měs. Napiš Tai
+  [179] api08:design: Navrhni hero sekci pro SaaS s cenou od 587 Kč/měs. Napiš Tai
+  [180] api08:design: Navrhni hero sekci pro SaaS s cenou od 918 Kč/měs. Napiš Tai
+  [181] api08:design: Navrhni hero sekci pro SaaS s cenou od 974 Kč/měs. Napiš Tai
+  [182] api08:design: Navrhni hero sekci pro SaaS s cenou od 162 Kč/měs. Napiš Tai
+  [183] api08:design: Navrhni hero sekci pro SaaS s cenou od 75 Kč/měs. Napiš Tail
+  [184] api08:design: Navrhni hero sekci pro SaaS s cenou od 349 Kč/měs. Napiš Tai
+  [185] api08:design: Navrhni hero sekci pro SaaS s cenou od 833 Kč/měs. Napiš Tai
+  [186] api08:design: Navrhni hero sekci pro SaaS s cenou od 42 Kč/měs. Napiš Tail
+  [187] api08:design: Navrhni hero sekci pro SaaS s cenou od 521 Kč/měs. Napiš Tai
+  [188] api08:design: Navrhni hero sekci pro SaaS s cenou od 655 Kč/měs. Napiš Tai
+  [189] api08:design: Navrhni hero sekci pro SaaS s cenou od 951 Kč/měs. Napiš Tai
+  [190] api08:design: Navrhni hero sekci pro SaaS s cenou od 895 Kč/měs. Napiš Tai
+  [191] api08:design: Navrhni hero sekci pro SaaS s cenou od 387 Kč/měs. Napiš Tai
+  [192] api08:design: Navrhni hero sekci pro SaaS s cenou od 111 Kč/měs. Napiš Tai
+  [193] api08:design: Navrhni hero sekci pro SaaS s cenou od 883 Kč/měs. Napiš Tai
+  [194] api08:design: Navrhni hero sekci pro SaaS s cenou od 549 Kč/měs. Napiš Tai
+  [195] api08:design: Navrhni hero sekci pro SaaS s cenou od 822 Kč/měs. Napiš Tai
+  [196] api08:design: Navrhni hero sekci pro SaaS s cenou od 496 Kč/měs. Napiš Tai
+  [197] api08:design: Navrhni hero sekci pro SaaS s cenou od 332 Kč/měs. Napiš Tai
+  [198] api08:design: Navrhni hero sekci pro SaaS s cenou od 821 Kč/měs. Napiš Tai
+  [199] api08:design: Navrhni hero sekci pro SaaS s cenou od 331 Kč/měs. Napiš Tai
+  [200] api08:design: Navrhni hero sekci pro SaaS s cenou od 744 Kč/měs. Napiš Tai
+  [201] api08:design: Navrhni hero sekci pro SaaS s cenou od 121 Kč/měs. Napiš Tai
+  [202] api08:design: Navrhni hero sekci pro SaaS s cenou od 377 Kč/měs. Napiš Tai
+  [203] api08:design: Navrhni hero sekci pro SaaS s cenou od 692 Kč/měs. Napiš Tai
+  [204] api08:design: Navrhni hero sekci pro SaaS s cenou od 916 Kč/měs. Napiš Tai
+  [205] api08:design: Navrhni hero sekci pro SaaS s cenou od 963 Kč/měs. Napiš Tai
+  [206] api08:design: Navrhni hero sekci pro SaaS s cenou od 622 Kč/měs. Napiš Tai
+  [207] api08:design: Navrhni hero sekci pro SaaS s cenou od 406 Kč/měs. Napiš Tai
+  [208] api08:design: Navrhni hero sekci pro SaaS s cenou od 865 Kč/měs. Napiš Tai
+  [209] api08:design: Navrhni hero sekci pro SaaS s cenou od 837 Kč/měs. Napiš Tai
+  [210] api08:design: Navrhni hero sekci pro SaaS s cenou od 810 Kč/měs. Napiš Tai
+  [211] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'les' spisovnou češt
+  [212] api08:czech: Urči slovní druhy ve větě: 'silný voda rychle číst.'
+  [213] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'stůl' spisovnou češ
+  [214] api08:czech: Urči slovní druhy ve větě: 'velký město rychle stavět.'
+  [215] api08:czech: Urči slovní druhy ve větě: 'dobrý oheň rychle vařit.'
+  [216] api08:czech: Urči slovní druhy ve větě: 'silný řeka rychle mluvit.'
+  [217] api08:czech: Urči slovní druhy ve větě: 'velký srdce rychle číst.'
+  [218] api08:czech: Urči slovní druhy ve větě: 'hezký oheň rychle číst.'
+  [219] api08:czech: Urči slovní druhy ve větě: 'rychlý srdce rychle vařit.'
+  [220] api08:czech: Urči slovní druhy ve větě: 'chytrý ryba rychle číst.'
+  [221] api08:czech: Urči slovní druhy ve větě: 'chytrý vlak rychle vařit.'
+  [222] api08:czech: Časuj sloveso 'zpívat' v přítomném čase ve všech osobách.
+  [223] api08:czech: Skloňuj podstatné jméno 'ryba' ve všech pádech jednotného čí
+  [224] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle psát.'
+  [225] api08:czech: Urči slovní druhy ve větě: 'hezký voda rychle psát.'
+  [226] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'ryba' spisovnou češ
+  [227] api08:czech: Urči slovní druhy ve větě: 'malý hora rychle zpívat.'
+  [228] api08:czech: Urči slovní druhy ve větě: 'silný květina rychle mluvit.'
+  [229] api08:czech: Urči slovní druhy ve větě: 'malý strom rychle růst.'
+  [230] api08:czech: Urči slovní druhy ve větě: 'starý mozek rychle vařit.'
+  [231] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle zpívat.'
+  [232] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'oheň' spisovnou češ
+  [233] api08:czech: Urči slovní druhy ve větě: 'rychlý oheň rychle plavat.'
+  [234] api08:czech: Urči slovní druhy ve větě: 'chytrý cesta rychle dýchat.'
+  [235] api08:czech: Urči slovní druhy ve větě: 'velký strom rychle stavět.'
+  [236] api08:czech: Urči slovní druhy ve větě: 'starý okno rychle plavat.'
+  [237] api08:czech: Utvoř větu se slovem 'město' v 7. pádě množného čísla a vysv
+  [238] api08:czech: Urči slovní druhy ve větě: 'velký voda rychle mluvit.'
+  [239] api08:czech: Urči slovní druhy ve větě: 'rychlý voda rychle kreslit.'
+  [240] api08:czech: Skloňuj podstatné jméno 'město' ve všech pádech jednotného č
+  [241] api08:czech: Urči slovní druhy ve větě: 'malý cesta rychle zpívat.'
+  [242] api08:czech: Skloňuj podstatné jméno 'pole' ve všech pádech jednotného čí
+  [243] api08:czech: Urči slovní druhy ve větě: 'rychlý pták rychle mluvit.'
+  [244] api08:czech: Urči slovní druhy ve větě: 'dobrý hora rychle číst.'
+  [245] api08:czech: Oprav pravopis: 'malý řeka kreslit vcere vecer.' Najdi chyby
+  [246] api08:czech: Urči slovní druhy ve větě: 'hezký řeka rychle číst.'
+  [247] api08:czech: Urči slovní druhy ve větě: 'hezký pole rychle vařit.'
+  [248] api08:czech: Urči slovní druhy ve větě: 'rychlý dům rychle nést.'
+  [249] api08:czech: Urči slovní druhy ve větě: 'malý most rychle kreslit.'
+  [250] api08:czech: Urči slovní druhy ve větě: 'velký dům rychle mluvit.'
+  [251] api08:czech: Urči slovní druhy ve větě: 'rychlý pole rychle mluvit.'
+  [252] api08:czech: Urči slovní druhy ve větě: 'hezký oheň rychle plavat.'
+  [253] api08:czech: Urči slovní druhy ve větě: 'dobrý dům rychle vařit.'
+  [254] api08:czech: Urči slovní druhy ve větě: 'hezký vlak rychle běžet.'
+  [255] api08:czech: Urči slovní druhy ve větě: 'rychlý strom rychle nést.'
+  [256] api08:czech: Urči slovní druhy ve větě: 'chytrý kniha rychle číst.'
+  [257] api08:czech: Urči slovní druhy ve větě: 'rychlý oheň rychle běžet.'
+  [258] api08:czech: Urči slovní druhy ve větě: 'silný strom rychle dýchat.'
+  [259] api08:czech: Oprav pravopis: 'starý pták psát vcere vecer.' Najdi chyby a
+  [260] api08:czech: Urči slovní druhy ve větě: 'malý cesta rychle kreslit.'
+  [261] api08:czech: Urči slovní druhy ve větě: 'chytrý květina rychle plavat.'
+  [262] api08:czech: Urči slovní druhy ve větě: 'malý strom rychle psát.'
+  [263] api08:czech: Urči slovní druhy ve větě: 'velký strom rychle zpívat.'
+  [264] api08:czech: Urči slovní druhy ve větě: 'malý pole rychle kreslit.'
+  [265] api08:czech: Urči slovní druhy ve větě: 'malý vlak rychle mluvit.'
+  [266] api08:czech: Urči slovní druhy ve větě: 'rychlý dům rychle vařit.'
+  [267] api08:czech: Urči slovní druhy ve větě: 'chytrý dům rychle kreslit.'
+  [268] api08:czech: Urči slovní druhy ve větě: 'velký květina rychle vařit.'
+  [269] api08:czech: Utvoř větu se slovem 'okno' v 7. pádě množného čísla a vysvě
+  [270] api08:czech: Urči slovní druhy ve větě: 'chytrý stůl rychle plavat.'
+  [271] api08:czech: Urči slovní druhy ve větě: 'dobrý řeka rychle číst.'
+  [272] api08:czech: Urči slovní druhy ve větě: 'starý vlak rychle mluvit.'
+  [273] api08:czech: Urči slovní druhy ve větě: 'velký cesta rychle zpívat.'
+  [274] api08:czech: Skloňuj podstatné jméno 'srdce' ve všech pádech jednotného č
+  [275] api08:czech: Urči slovní druhy ve větě: 'rychlý město rychle nést.'
+  [276] api08:czech: Urči slovní druhy ve větě: 'hezký strom rychle růst.'
+  [277] api08:czech: Urči slovní druhy ve větě: 'malý ryba rychle zpívat.'
+  [278] api08:czech: Urči slovní druhy ve větě: 'chytrý město rychle nést.'
+  [279] api08:czech: Urči slovní druhy ve větě: 'dobrý hora rychle stavět.'
+  [280] api08:czech: Urči slovní druhy ve větě: 'rychlý stůl rychle zpívat.'
+  [281] api08:czech: Urči slovní druhy ve větě: 'malý hora rychle mluvit.'
+  [282] api08:czech: Urči slovní druhy ve větě: 'dobrý okno rychle běžet.'
+  [283] api08:czech: Urči slovní druhy ve větě: 'malý kniha rychle dýchat.'
+  [284] api08:czech: Urči slovní druhy ve větě: 'malý hora rychle vařit.'
+  [285] api08:czech: Urči slovní druhy ve větě: 'chytrý pták rychle mluvit.'
+  [286] api08:czech: Urči slovní druhy ve větě: 'malý cesta rychle stavět.'
+  [287] api08:czech: Urči slovní druhy ve větě: 'dobrý strom rychle plavat.'
+  [288] api08:czech: Urči slovní druhy ve větě: 'starý květina rychle plavat.'
+  [289] api08:czech: Urči slovní druhy ve větě: 'chytrý dům rychle dýchat.'
+  [290] api08:czech: Urči slovní druhy ve větě: 'chytrý cesta rychle psát.'
+  [291] api08:czech: Urči slovní druhy ve větě: 'hezký kniha rychle běžet.'
+  [292] api08:czech: Urči slovní druhy ve větě: 'dobrý pole rychle dýchat.'
+  [293] api08:czech: Urči slovní druhy ve větě: 'silný les rychle psát.'
+  [294] api08:czech: Urči slovní druhy ve větě: 'chytrý pole rychle mluvit.'
+  [295] api08:czech: Urči slovní druhy ve větě: 'chytrý stůl rychle kreslit.'
+  [296] api08:czech: Urči slovní druhy ve větě: 'chytrý květina rychle dýchat.'
+  [297] api08:czech: Urči slovní druhy ve větě: 'rychlý řeka rychle nést.'
+  [298] api08:czech: Urči slovní druhy ve větě: 'hezký dům rychle růst.'
+  [299] api08:czech: Urči slovní druhy ve větě: 'chytrý pták rychle dýchat.'
+  [300] api08:czech: Urči slovní druhy ve větě: 'rychlý kniha rychle vařit.'
+  [301] api08:czech: Urči slovní druhy ve větě: 'silný město rychle běžet.'
+  [302] api08:czech: Urči slovní druhy ve větě: 'starý řeka rychle vařit.'
+  [303] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle běžet.'
+  [304] api08:czech: Urči slovní druhy ve větě: 'velký most rychle nést.'
+  [305] api08:czech: Urči slovní druhy ve větě: 'velký kniha rychle růst.'
+  [306] api08:czech: Urči slovní druhy ve větě: 'starý pták rychle běžet.'
+  [307] api08:czech: Urči slovní druhy ve větě: 'velký les rychle mluvit.'
+  [308] api08:czech: Urči slovní druhy ve větě: 'silný pták rychle plavat.'
+  [309] api08:czech: Urči slovní druhy ve větě: 'dobrý stůl rychle číst.'
+  [310] api08:czech: Urči slovní druhy ve větě: 'silný kniha rychle stavět.'
+  [311] api08:czech: Urči slovní druhy ve větě: 'chytrý kniha rychle zpívat.'
+  [312] api08:czech: Urči slovní druhy ve větě: 'hezký srdce rychle psát.'
+  [313] api08:czech: Urči slovní druhy ve větě: 'velký pták rychle číst.'
+  [314] api08:czech: Napiš formální žádost (14 slov) na téma 'voda'.
+  [315] api08:czech: Urči slovní druhy ve větě: 'hezký les rychle kreslit.'

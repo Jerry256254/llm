@@ -1,0 +1,27 @@
+{
+  "model_params_total": 11950000000,
+  "trainable_params": 22406250,
+  "trainable_pct": 0.1875,
+  "base_weights_gib": 5.60638727620244,
+  "optimizer_gib": 0.2504093572497368,
+  "activations_gib": 6.7410888671875,
+  "overhead_gib": 1.8727664731442928,
+  "total_vram_gib": 14.47065197378397,
+  "recommended_vram_gib": 16.641249769851562,
+  "fits_gpus": true,
+  "num_samples": 744,
+  "steps_per_epoch": 93,
+  "total_steps": 186,
+  "est_seconds_per_step": 55.12494515655739,
+  "est_train_seconds": 10253.239799119674,
+  "est_train_hours": 2.8481221664221317,
+  "est_cost_usd": 0.996842758247746,
+  "notes": [
+    "Tr\u00e9nujete na 1792 tokenech; model um\u00ed a\u017e ~262144. Del\u0161\u00ed max_seq_length (2048\u20138192) zlep\u0161\u00ed dlouh\u00e9 chaty, ale \u017eere VRAM a \u010das.",
+    "QLoRA/LoRA = po\u0159\u00e1d V\u00c1\u0160 model (va\u0161e jm\u00e9no, va\u0161e data, v\u00e1\u0161 GGUF v Ollama). M\u011bn\u00ed se adapt\u00e9r/v\u00e1hy na va\u0161ich datech; z\u00e1klad d\u00e1v\u00e1 jen startovn\u00ed znalosti jako u full FT."
+  ],
+  "native_context": 262144,
+  "train_context": 1792,
+  "ollama_num_ctx": 65536,
+  "context_expandable_by_train": true
+}

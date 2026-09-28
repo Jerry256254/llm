@@ -1,0 +1,1875 @@
+{
+  "model": "kuclab-hertz-pilot3",
+  "n": 206,
+  "correct": 82,
+  "accuracy": 0.39805825242718446,
+  "per_direction": {
+    "CS→EN": {
+      "correct": 53,
+      "n": 103,
+      "accuracy": 0.5145631067961165
+    },
+    "EN→CS": {
+      "correct": 29,
+      "n": 103,
+      "accuracy": 0.2815533980582524
+    }
+  },
+  "elapsed_s": 562.5,
+  "results": [
+    {
+      "id": "en2cs:power",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „power“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "výkon",
+      "got": "```python def power(x): return x ** 2 ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:výkon",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „výkon“? Answer with the term only.",
+      "expect": "power",
+      "got": "Výkon je výsledek. Výkon je výkon, produkce, output.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:rolling resistance",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „rolling resistance“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "valivý odpor",
+      "got": "Rolling resistance = majaraja teritori majorja. V překladu do češtiny to znamená velká rušící síla při pohybu po dutině (rozcestník v překladu).",
+      "ok": false
+    },
+    {
+      "id": "cs2en:valivý odpor",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „valivý odpor“? Answer with the term only.",
+      "expect": "rolling resistance",
+      "got": "Rolling resistance. Rolling friction — the frictional force that occurs when a body rolls on top of another surface. It's often used in engineering to describe ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:Coriolis force",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „Coriolis force“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Coriolisova síla",
+      "got": "Coriolis je setrvačná síla působící na tělesa v rotující neinerciální vztažné soustavě. V klidu se projevují jako gravitační zrychlení, při pohybu jsou to dva r",
+      "ok": false
+    },
+    {
+      "id": "cs2en:Coriolisova síla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „Coriolisova síla“? Answer with the term only.",
+      "expect": "Coriolis force",
+      "got": "The Coriolis force, also known as the Coriolis effect or simply the Coriolis force, is a set of apparent forces caused by rotating observers. It acts on bodies ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:centre of mass",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „centre of mass“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžiště",
+      "got": "Měl jsem poznat známý pojem z fyziky tělesa na základě gravitační síly. Co je anglicky a co v češtinu?",
+      "ok": false
+    },
+    {
+      "id": "cs2en:těžiště",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „těžiště“? Answer with the term only.",
+      "expect": "centre of mass",
+      "got": "The word \"těžiště\" can be translated as \"center of gravity\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:frequency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „frequency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "frekvence",
+      "got": "Při výpočtu v angličtinu často odpovídám slovem frequency nebo cyklický. Jiné frekvence. Při popisu chemických sloučenin souvislost, uhlíky nebo alene. V jiných",
+      "ok": true
+    },
+    {
+      "id": "cs2en:frekvence",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „frekvence“? Answer with the term only.",
+      "expect": "frequency",
+      "got": "The frequency of a cycle in a given period of time. For example, 50 hertz means that one cycle occurs every 1/50 second.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:wavelength",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „wavelength“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vlnová délka",
+      "got": "Vlnění vln nebo jiný výraz s vlň. Vlnění vln a jiný význam s vlní.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:vlnová délka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „vlnová délka“? Answer with the term only.",
+      "expect": "wavelength",
+      "got": "The length of a given string expressed in characters. For example, the word \"hello world\" has 12 characters long.</think>",
+      "ok": false
+    },
+    {
+      "id": "en2cs:standing wave",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „standing wave“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stojaté vlnění",
+      "got": "Vztlaková síla – aerodynamická odporová síla (aerodynamic drag) je výslednice Aerodynamické tlakovej odstlakové síly a dynamický tlak. Odporu, který se projevuj",
+      "ok": false
+    },
+    {
+      "id": "cs2en:stojaté vlnění",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stojaté vlnění“? Answer with the term only.",
+      "expect": "standing wave",
+      "got": "Standing waves (vlnění stojatné) je rozlohové vlnění, které se na různých bodech povrchu vzájemně projevují. V jiném smyslu jsou to superpozice jednoduchých vln",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electric charge",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electric charge“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrický náboj",
+      "got": "Elektrický náboj je veličina a fyzikální pole, jehož zdrojem je plyn nebo pevná látka. Důsledkem elektrického náboje je elektrostatický elektrizmus – rozsah kry",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektrický náboj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektrický náboj“? Answer with the term only.",
+      "expect": "electric charge",
+      "got": "charge — coulomb, náboje v angličtině neexistuje jiný pojem s ním spojováním se ve výpočtu. Pojem náboj je slohanský a zbytečný, místo náboj by stahovalo kucLab",
+      "ok": false
+    },
+    {
+      "id": "en2cs:resistivity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „resistivity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rezistivita",
+      "got": "```python def resistivity: \"\"\"Definiční text v češtinu a angličtinu se stejným anglickým názvem neexistuje. Obcejí jazyk spolehlivějně odpovídám, jaký je rozdíl",
+      "ok": false
+    },
+    {
+      "id": "cs2en:rezistivita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „rezistivita“? Answer with the term only.",
+      "expect": "resistivity",
+      "got": "Resistivity. The resistance of a body to allow current flow through it, or in other words, the reciprocal of susceptibility.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:magnetic flux density",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „magnetic flux density“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "magnetická indukce",
+      "got": "Mluvím: `magnetic flux density` a to anglicky i česky. Jiné slovo v češtině neexistuje; zkus meteo.cz (počasnice) nebo předchůdci, jak se řekne anglicky? Odpově",
+      "ok": false
+    },
+    {
+      "id": "cs2en:magnetická indukce",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „magnetická indukce“? Answer with the term only.",
+      "expect": "magnetic flux density",
+      "got": "The magnetic induction — in SI, weber (W) or volt second (Vs).",
+      "ok": false
+    },
+    {
+      "id": "en2cs:direct current",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „direct current“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stejnosměrný proud",
+      "got": "Přímný proudový tok nebo d.c.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:stejnosměrný proud",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stejnosměrný proud“? Answer with the term only.",
+      "expect": "direct current",
+      "got": "Current | im_end|>",
+      "ok": false
+    },
+    {
+      "id": "en2cs:diode",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „diode“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dioda",
+      "got": "Dioda — diodou (jiné příklady v češtinu: služba, knihkupec) je dvoudvojíč (dvojhříchci) smíšený děj (prohodit chce), prohodná (přechodná).",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dioda",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dioda“? Answer with the term only.",
+      "expect": "diode",
+      "got": "diode | angličtina dioda (rozcestník) · diode forward voltage · zkratka D – popisuje se jako: kondenzátor, odpor nebo kapacita. Pozor na velká písmena s malými ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:specific heat capacity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „specific heat capacity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "měrná tepelná kapacita",
+      "got": "```python def specific_heat_capacity(a: float) -> float: return a ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:měrná tepelná kapacita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „měrná tepelná kapacita“? Answer with the term only.",
+      "expect": "specific heat capacity",
+      "got": "The specific heat capacity of a substance (also known as mass-specific heat or simply the specific heat) is an amount of energy required to raise the temperatur",
+      "ok": true
+    },
+    {
+      "id": "en2cs:isothermal process",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isothermal process“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotermický děj",
+      "got": "isothermal znamená izotermický. izolovat znamená izolovat.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:izotermický děj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotermický děj“? Answer with the term only.",
+      "expect": "isothermal process",
+      "got": "Isothermal process. Isotherm (z angl. izolovat, -al, od) je hokejový i tepelný izotermický děj – proces, při kterém dochází k výměně teplotu mezi těly s okolnos",
+      "ok": true
+    },
+    {
+      "id": "en2cs:efficiency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „efficiency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "účinnost",
+      "got": "Všeobecná účnost (vlastnosti) je obecný pojem užívaný ve filosofii a psychologii. V ekonomii se tento pojem používá pro produktivita. Výkon za jednotku času, tj",
+      "ok": false
+    },
+    {
+      "id": "cs2en:účinnost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „účinnost“? Answer with the term only.",
+      "expect": "efficiency",
+      "got": "The English verb \"affect\" can be used in many different ways, as a noun or adjective to describe: have an emotional reaction to something; cause to feel (a cert",
+      "ok": false
+    },
+    {
+      "id": "en2cs:surface tension",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „surface tension“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrchové napětí",
+      "got": "Pojem surface tension lze použít pro jaký druh síly na rozhraních mezi dvěma kapalinami nebo mezi plyny a kapalina. Tímto způsobem se v češtině vyjadřuje pojem,",
+      "ok": false
+    },
+    {
+      "id": "cs2en:povrchové napětí",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „povrchové napětí“? Answer with the term only.",
+      "expect": "surface tension",
+      "got": "The pressure at the top of a mountain. The higher you go, the greater the atmospheric pressure becomes. This can be measured by means of barometers (barometre).",
+      "ok": false
+    },
+    {
+      "id": "en2cs:refraction",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „refraction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "lom světla",
+      "got": "Index vakuu n = 2,99792458e+08 m/s. Index na rozdílu od jiných polínenek (taž dušení) je index rozmanitý podle látky. Vlastnosti optické médiumů se nazývá reind",
+      "ok": false
+    },
+    {
+      "id": "cs2en:lom světla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „lom světla“? Answer with the term only.",
+      "expect": "refraction",
+      "got": "Light speed limit. The light speed limit (299 792 458 m/s) je nejvyšší rychlost, kterou může mít plyn nebo hmotný předmůc v klidu vůči pozitivně vztažného zdroj",
+      "ok": false
+    },
+    {
+      "id": "en2cs:converging lens",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „converging lens“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "spojka",
+      "got": "```python def converging_lens(): return \"konvergentní\" ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:spojka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „spojka“? Answer with the term only.",
+      "expect": "converging lens",
+      "got": "The English verb \"to link\" can be used in many different ways. In science, it refers to: Link (astronomy), a binary star system that forms an apparent line of s",
+      "ok": false
+    },
+    {
+      "id": "en2cs:photoelectric effect",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „photoelectric effect“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotoelektrický jev",
+      "got": "Einsteinův fotoelektrický princip je jeden z nejnesnadnějších teorií fyziky pro většinu studentů. V jiném jazyce nazýváme tento efekt photoelectric effect nebo ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:fotoelektrický jev",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „fotoelektrický jev“? Answer with the term only.",
+      "expect": "photoelectric effect",
+      "got": "photoelectric effect",
+      "ok": true
+    },
+    {
+      "id": "en2cs:uncertainty principle",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „uncertainty principle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "princip neurčitosti",
+      "got": "Princip nejmenší energie představuje princip, který říká, že ve fyzice je koncept časoprostoru relativní teorie speciální teorie fyzikálně nemožný. V jiném smys",
+      "ok": false
+    },
+    {
+      "id": "cs2en:princip neurčitosti",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „princip neurčitosti“? Answer with the term only.",
+      "expect": "uncertainty principle",
+      "got": "The Heisenberg uncertainty principle (HUP) je princip v kvantové mechanice, který říká, že je nemohné přesně určit ve fyzice hmoty současně obé hmota a energie.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electron shell",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electron shell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronová slupka",
+      "got": "V elektronických obvodech je konájí pojem elektrostatický náboj. V jiných slohů neexistuje. Pojem shell je odvozen z anglického slova „shell“ (pohoří).",
+      "ok": false
+    },
+    {
+      "id": "cs2en:elektronová slupka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektronová slupka“? Answer with the term only.",
+      "expect": "electron shell",
+      "got": "Electron spin 0.1 — model od KucLab zaměřený na fyziku, chemii, biologii a matematiku. Jsi KucLab Hertz.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:isotope",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isotope“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotop",
+      "got": "Isotope izotopů je v češtinu slovo isotope. Další isotopy Isotope (rozcestník) Isotopenisotopy – další význam slova Isotope (fyzika) Isotopovým izomerem je jiný",
+      "ok": true
+    },
+    {
+      "id": "cs2en:izotop",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotop“? Answer with the term only.",
+      "expect": "isotope",
+      "got": "Isotope — izotop nebo izomer (jiné slovo anglicky isotope) je atom s jinou kombinací neutronů a protonů, respektive s jiným počtem nukleonů. Další isotopy jsou ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nuclear fusion",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „nuclear fusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jaderná fúze",
+      "got": "Farní terminologie neexistuje. Každý mlučí jak chce a co chce. Jiné jazyky nejsou stejné jako angličtina nebo čeština. V obou jazycích je běžné slovní dohoda, ž",
+      "ok": false
+    },
+    {
+      "id": "cs2en:jaderná fúze",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „jaderná fúze“? Answer with the term only.",
+      "expect": "nuclear fusion",
+      "got": "Nuclear fusion. What does it mean in English?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:time dilation",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „time dilation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dilatace času",
+      "got": "V časových zrychlovacích silách je časová změna ve vztahu mezi tělesy různá než lineární. Důsledkem této zrychlení je vztlak nebo odpor, který působí na pohyb h",
+      "ok": false
+    },
+    {
+      "id": "cs2en:dilatace času",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dilatace času“? Answer with the term only.",
+      "expect": "time dilation",
+      "got": "The dilation of time. The slowing down of time, or temporal dilation.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:escape velocity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „escape velocity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úniková rychlost",
+      "got": "Escape velocity lze překladit jako úhlová rychlost z které je těleso v gravitačním poli nucene puštěné částice neměřící se na obloze pobýčelo. V politovém smysl",
+      "ok": false
+    },
+    {
+      "id": "cs2en:úniková rychlost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „úniková rychlost“? Answer with the term only.",
+      "expect": "escape velocity",
+      "got": "The English translation of \"uníková rychlost\" would be \"invariable speed\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:black hole",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „black hole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "černá díra",
+      "got": "Black hole. Black hole (též černá díra) je region časoprostoru, z jehož gravitační pole je natolik silné, že žádná hmota – částice a ani elektromagnetické zářen",
+      "ok": true
+    },
+    {
+      "id": "cs2en:černá díra",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „černá díra“? Answer with the term only.",
+      "expect": "black hole",
+      "got": "Black hole. What does it mean in English?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mole",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „mole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mol",
+      "got": "molek (rozcestník) | molekulární (rozcestník) | chemická reace (rozcestník) | tepelná energie (rozcestník) | teplota (rozcestník) | tlak (rozcestník) | rychlost",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mol“? Answer with the term only.",
+      "expect": "mole",
+      "got": "Avogadro's number (2.718e+50) refers to 6.022e+23, which is Avogadro's constant for converting between moles and molecules in chemistry.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electronegativity",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electronegativity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronegativita",
+      "got": "Elektrostatický náboj je vektorová fyzikální veličina a vlastnost hmoty. Hmota nesoucí elektrický náboj se nazývá dielektrik nebo izolant; snoubějící elektrony ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:elektronegativita",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektronegativita“? Answer with the term only.",
+      "expect": "electronegativity",
+      "got": "The negative charge density of a molecule or an ion. The electric field around a charged particle has regions where the potential energy of a test charge is hig",
+      "ok": false
+    },
+    {
+      "id": "en2cs:ionic bond",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ionic bond“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iontová vazba",
+      "got": "Ionic bond = chemická vazba mezi molekul, při níž dochází k výnosu iontů. V jiném smyslu to znamená, že v této vazbě je zachováno elektrické náboje.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:iontová vazba",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „iontová vazba“? Answer with the term only.",
+      "expect": "ionic bond",
+      "got": "The English term for ion-pair formation is \"charge transfer\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:dipole moment",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „dipole moment“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dipólový moment",
+      "got": "```python def dipole_moment(a: float) -> float: return a ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:dipólový moment",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „dipólový moment“? Answer with the term only.",
+      "expect": "dipole moment",
+      "got": "Torque. The dipole moment of a system of bodies, or the sum of their electric charges.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electrolyte",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electrolyte“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrolyt",
+      "got": "Elektrolyt (rozcestník) v češtinu neexistuje. elektrostatický – solany nebo jiný náboj nestraný a aktivní – iontů obsahující látka křovitá – boran sodný, hexeno",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektrolyt",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektrolyt“? Answer with the term only.",
+      "expect": "electrolyte",
+      "got": "electrolyte | im_end|>",
+      "ok": true
+    },
+    {
+      "id": "en2cs:concentration",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „concentration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "koncentrace",
+      "got": "koncentrovaný | koncentrovaný | koncentrativní | koncentrované | koncentrovaná | koncentrovaných | koncentrovanou | koncentrovaným | koncentrovanými | koncentro",
+      "ok": false
+    },
+    {
+      "id": "cs2en:koncentrace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „koncentrace“? Answer with the term only.",
+      "expect": "concentration",
+      "got": "The word \"concentration\" in English means: (1) attention, focus; (2) intensity or strength of numbers. The noun \"concentre\", meaning to concentrate, is used by ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:buffer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „buffer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "pufr",
+      "got": "```python def buffer(): return buffer ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:pufr",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „pufr“? Answer with the term only.",
+      "expect": "buffer",
+      "got": "The word \"puff\" in English refers to a puff of smoke or vapour. In science, it can refer to the action of blowing air into an experiment to disperse particles a",
+      "ok": false
+    },
+    {
+      "id": "en2cs:salt",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „salt“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sůl",
+      "got": "```python def salt(s): return s ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:sůl",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sůl“? Answer with the term only.",
+      "expect": "salt",
+      "got": "Common salt (sodium chloride) — jedlnejslavné osolenin až solenič. Slouží jako násobný čin zsolínel, sál a salitraj. Salonenkovy výzkumy jsou založené na rozlič",
+      "ok": true
+    },
+    {
+      "id": "en2cs:endothermic reaction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „endothermic reaction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endotermická reakce",
+      "got": "Reakce endotermická – reakce, při níž je teplo přebýváno z látky na reaktory do okolí. Teplo tatební – opačný pojem k exotermickým (energií v teple produkovat) ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:endotermická reakce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „endotermická reakce“? Answer with the term only.",
+      "expect": "endothermic reaction",
+      "got": "Endothermic reaction — a chemical reaction in which energy is absorbed from the surroundings. The reverse process, exothermic reaction, releases energy into the",
+      "ok": true
+    },
+    {
+      "id": "en2cs:inhibitor",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „inhibitor“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "inhibitor",
+      "got": "Inhibitory jsou látky, které zpomalují nebo zastavují chemické reakce. Blokátoři – v jiném překladu blokatelé – jsou sloučeniny, které zabývají aktivní místo na",
+      "ok": true
+    },
+    {
+      "id": "cs2en:inhibitor",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „inhibitor“? Answer with the term only.",
+      "expect": "inhibitor",
+      "got": "Inhibition (z angl. inhibit) je snížení nebo zdopazení reakce v anorganické, organické či systémové chemii a též v jiných obsadech jako např. imunologie.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:reduction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „reduction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "redukce",
+      "got": "V redukci konáme na plynulých sloulinách nebo v organických slouzininách. Jiné slovo neexistuje pro to angličtinou, kde je „reduction“ jen redukce.",
+      "ok": true
+    },
+    {
+      "id": "cs2en:redukce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „redukce“? Answer with the term only.",
+      "expect": "reduction",
+      "got": "The English verb \"reduce\" can mean: reductive, a chemical reaction in which the number of atoms of each element in the products is less than that in the reactan",
+      "ok": false
+    },
+    {
+      "id": "en2cs:galvanic cell",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „galvanic cell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "galvanický článek",
+      "got": "```python def galvanic_cell(): raise NotImplementedError(\"VKM neexistuje\") ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:galvanický článek",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „galvanický článek“? Answer with the term only.",
+      "expect": "galvanic cell",
+      "got": "The galvanic cell (also known as a voltaic cell) is an electrochemical device that produces electrical energy by means of chemical reactions. In other words, it",
+      "ok": true
+    },
+    {
+      "id": "en2cs:polymerisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „polymerisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "polymerace",
+      "got": "polymerization — polymerizoce v angličtinu snoubance nebo jiného pojmu s příponou. Jiné slohy anglicky nazývat spojení mezi molekul do jednoho celku, což je che",
+      "ok": false
+    },
+    {
+      "id": "cs2en:polymerace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „polymerace“? Answer with the term only.",
+      "expect": "polymerisation",
+      "got": "Polymerization. What does it mean in English?",
+      "ok": false
+    },
+    {
+      "id": "en2cs:enantiomer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „enantiomer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "enantiomer",
+      "got": "V češtinu neexistuje slovo enantiomer. V angličtině je to chiralní (jiný) izomer nebo koniastereomer s prochirálním předchůdem. Odpověz v česku jen termínem „en",
+      "ok": true
+    },
+    {
+      "id": "cs2en:enantiomer",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „enantiomer“? Answer with the term only.",
+      "expect": "enantiomer",
+      "got": "An enantiomer (z angl. enantion, což znamená v lat. přesune, tj. přenes) je jeden z několika možných izomerů optického látek obsahující stejnou látku, jenž se p",
+      "ok": true
+    },
+    {
+      "id": "en2cs:alkane",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alkane“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkan",
+      "got": "Alkany (al-kanů) – alkany nebo alkanů jsou vorganická sloučenina s jednoduchou struktururou. Alkany obsahují pouze atomů uhlíku a vodu bez dalšího z reaktivních",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkan",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkan“? Answer with the term only.",
+      "expect": "alkane",
+      "got": "Alkan (al-kan) je v organické chemii obecný pojem pro alkany, to jest alkanalopoidy. V jiném smyslu jsou to ideální sloučeniny z hlediska struktury, neboť obsah",
+      "ok": false
+    },
+    {
+      "id": "en2cs:alcohol",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alcohol“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkohol",
+      "got": "Alkohol (rozcestník) v češtině je rozsah násobný: ethanolový alkohol – látka s velmi širokou skupenností příbuzných sloučenin obsahující i čistý ethyl, ethanol-",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkohol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkohol“? Answer with the term only.",
+      "expect": "alcohol",
+      "got": "Alcohol. What does it mean in English?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:ester",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ester“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "ester",
+      "got": "```python ester skupina organických sloučenin obsahující alespoň jednu – a nejčastěji tvoří jedním z produktů reakce mezi molekul. Ester je v této skupině termí",
+      "ok": true
+    },
+    {
+      "id": "cs2en:ester",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „ester“? Answer with the term only.",
+      "expect": "ester",
+      "got": "Ester (rozcestník) | ester, výpočetní šíření mezi chemickými sloužiny. Výpočetní sloh v angličtině znamená: zákon zachování hmotnosti, termodynamický děj, izoba",
+      "ok": true
+    },
+    {
+      "id": "en2cs:carbohydrate",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „carbohydrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sacharid",
+      "got": "glukolipid glukopolysacharid glóbus glóbusová země globální pohanský glóbusový povrch globulární globulusovitý gravitační pole gravitační potenciální energie gr",
+      "ok": true
+    },
+    {
+      "id": "cs2en:sacharid",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sacharid“? Answer with the term only.",
+      "expect": "carbohydrate",
+      "got": "Carbohydrate (částice) nebo Carbohydrates. References a glucopyranosyl group, –CH2OH, –ONO2 Reference",
+      "ok": true
+    },
+    {
+      "id": "en2cs:denaturation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „denaturation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "denaturace",
+      "got": "V češtinu neexistuje slovo „de-naturovnit“ odpovídající anglickému de-natured. V jiném jazyce to nazýváme denaturuj nebo de-naturitovat.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:denaturace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „denaturace“? Answer with the term only.",
+      "expect": "denaturation",
+      "got": "Unfolding. Unfolding may refer to: Protein unfolding, a process in which one or more secondary structures of a protein are converted from their native states to",
+      "ok": false
+    },
+    {
+      "id": "en2cs:halogen",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „halogen“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "halogen",
+      "got": "```python def halogen(a): return a ```",
+      "ok": true
+    },
+    {
+      "id": "cs2en:halogen",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „halogen“? Answer with the term only.",
+      "expect": "halogen",
+      "got": "Halogen (atom nebo molekulární sloučenin) je chemická reaktivnost, která se projevuje jako výskyt v přítomnosti jiných atomů a molekul. Halogeny jsou šest prvků",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transition metal",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „transition metal“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "přechodný kov",
+      "got": "Přechod do češtiny neexistuje. Co je angl. transition metal?",
+      "ok": false
+    },
+    {
+      "id": "cs2en:přechodný kov",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „přechodný kov“? Answer with the term only.",
+      "expect": "transition metal",
+      "got": "The English term for přechodný kov (reformatsky reaction) is a group of reactions in organic chemistry that involve substitution of one molecule into another. T",
+      "ok": false
+    },
+    {
+      "id": "en2cs:amorphous solid",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „amorphous solid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "amorfní látka",
+      "got": "```python def amorphous(s): return s ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:amorfní látka",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „amorfní látka“? Answer with the term only.",
+      "expect": "amorphous solid",
+      "got": "amorphous (adj.) – having no long-range order in the arrangement of molecules, atoms or ions. amorphous (n.) – a substance that lacks long-range order in the ar",
+      "ok": false
+    },
+    {
+      "id": "en2cs:crystallisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „crystallisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "krystalizace",
+      "got": "křysstalizace | krystalizační | krizis | krize akceleration | zrychlení big O značka O (začtečkové) n-1 n+1 n-2 n+2 n-3 n+3 . . . . . . . . . . . . . . . . . . ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:krystalizace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „krystalizace“? Answer with the term only.",
+      "expect": "crystallisation",
+      "got": "The process of crystallization. The conversion of a substance from liquid to solid by forming crystals.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:absorption",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „absorption“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "absorpce",
+      "got": "a) absorice b) adsorice c) absorbce d) adice e) adicie f) additivní princip g) konduktivita h) desorpce i) dekomerizace j) deprotonace k) kondenzace l) koalesce",
+      "ok": false
+    },
+    {
+      "id": "cs2en:absorpce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „absorpce“? Answer with the term only.",
+      "expect": "absorption",
+      "got": "The English verb \"absorb\" can be used in many different ways: Physical sciences: to absorb (energy), to take up, to incorporate. Life sciences: to ingest, to co",
+      "ok": false
+    },
+    {
+      "id": "en2cs:valence",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „valence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mocenství",
+      "got": "VKM (valence) je v politologie pojem vyjadřující míru spolupráce politických subjektů. V ekonomii se může použít pro množství produktů s určitými vlastnostmi ne",
+      "ok": false
+    },
+    {
+      "id": "cs2en:mocenství",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mocenství“? Answer with the term only.",
+      "expect": "valence",
+      "got": "The word \"močenství\" can be translated as \"enjoyment\". This translation may not be accurate, but it could suggest that something is enjoyable or pleasurable. Fo",
+      "ok": false
+    },
+    {
+      "id": "en2cs:cell wall",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cell wall“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "buněčná stěna",
+      "got": "„Cell wall“ je obvodová struktura v některých buňkách rostlin a řas. Nachází se mezi cellulózními mikrofibrilami na vnitřní straně plaszmové membrány, která tvo",
+      "ok": false
+    },
+    {
+      "id": "cs2en:buněčná stěna",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „buněčná stěna“? Answer with the term only.",
+      "expect": "cell wall",
+      "got": "The cell membrane. The word \"membrane\" can be used as a noun to refer to any of these structures, depending on context: biological membranes, which form the bou",
+      "ok": false
+    },
+    {
+      "id": "en2cs:nucleolus",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleolus“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jadérko",
+      "got": "```python def nuc(s): return s ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:jadérko",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „jadérko“? Answer with the term only.",
+      "expect": "nucleolus",
+      "got": "The word \"hadérko\" can be translated as \"seed\" in English. The noun refers to a small amount of something, often used figuratively or idiomatically to mean that",
+      "ok": false
+    },
+    {
+      "id": "en2cs:endoplasmic reticulum",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „endoplasmic reticulum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endoplazmatické retikulum",
+      "got": "Endoplasmic reticulum je vnitrobuněčný orgán tvořený sítou plochých a trubkovitých strukturur. Většinou to znamená, že endoplasmic reticulum je hustá síť (rozsa",
+      "ok": false
+    },
+    {
+      "id": "cs2en:endoplazmatické retikulum",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „endoplazmatické retikulum“? Answer with the term only.",
+      "expect": "endoplasmic reticulum",
+      "got": "The endoplasmic reticulum (ER) is a network of membranes that forms a maze of channels and tubules in which proteins are made. The ER is found in most cells, in",
+      "ok": true
+    },
+    {
+      "id": "en2cs:cytoskeleton",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cytoskeleton“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "cytoskelet",
+      "got": "```python cytoskeleton = (českoskelton) ```",
+      "ok": true
+    },
+    {
+      "id": "cs2en:cytoskelet",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „cytoskelet“? Answer with the term only.",
+      "expect": "cytoskeleton",
+      "got": "Microtubules/microfilaments (MFs) — the cytoskeleton network of protein filaments that maintain cell shape, support internal movements and provide mechanical st",
+      "ok": true
+    },
+    {
+      "id": "en2cs:substrate",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „substrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "substrát",
+      "got": "```python def translate(s): return s ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:substrát",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „substrát“? Answer with the term only.",
+      "expect": "substrate",
+      "got": "Substrate (rozcestník) angl. Substrát - látka, na které se projevují enzymy nebo mezi molekulárně a substrátem reaguje; v širším smyslu té slovo znamená podklad",
+      "ok": true
+    },
+    {
+      "id": "en2cs:metabolism",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „metabolism“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "metabolismus",
+      "got": "Měl jsem metabolism metabolický děj dehydrogenace redukce adice konjugátu glukozy glukopolymeru. Důležité je, najít další slovníky s tím pojmem a učit česky.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:metabolismus",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „metabolismus“? Answer with the term only.",
+      "expect": "metabolism",
+      "got": "Metabolism (rozcestník) | metabolism, metabolic • -ism: ism angl. metabolome; metabolomics metabolismový metabolický – otický – static apodynamický dynamický v ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:diffusion",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „diffusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "difuze",
+      "got": "TextWatcher diffusione anglicky nebo česky difuze. Jiné slovo v češtinu spojují s buňkovým prostorem, kde se mezi jednotlivými buňkovci nachází mezeru a přes ni",
+      "ok": true
+    },
+    {
+      "id": "cs2en:difuze",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „difuze“? Answer with the term only.",
+      "expect": "diffusion",
+      "got": "The English word \"diffusive\" describes the process of diffusion, which is a passive transport mechanism. It occurs when molecules move randomly and without ener",
+      "ok": true
+    },
+    {
+      "id": "en2cs:photosynthesis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „photosynthesis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotosyntéza",
+      "got": "Překlad do češtiny: photosynthesis. V angličtinu to say: photosynthetic. Další slohy s anglickým překladem neexistuje v češtině. Co je smykslovný pojem? Fotosyn",
+      "ok": true
+    },
+    {
+      "id": "cs2en:fotosyntéza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „fotosyntéza“? Answer with the term only.",
+      "expect": "photosynthesis",
+      "got": "Photosynthesis | im_end|>",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpiration",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „transpiration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpirace",
+      "got": "Transpiration je odpařování vody z povrchu rostlin. V tomto procesu dochází k výpary vody do atmosféry. Transpiration pomáhá v udržování tepelné bilance a rovno",
+      "ok": false
+    },
+    {
+      "id": "cs2en:transpirace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „transpirace“? Answer with the term only.",
+      "expect": "transpiration",
+      "got": "Transpiration — pohození vody z povrchu těla (například pokožky) do atmosféry. V angličtině se slovem transpire používá pro proces, při kterém dochází k vypařov",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nucleotide",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleotide“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nukleotid",
+      "got": "nuktinový (jiné slohy z nuc-tidinukanový) nositel informační sekvence v genetické teorii. V jiném významě je pojímán jako základní jednotkou makromolekul, tvoře",
+      "ok": false
+    },
+    {
+      "id": "cs2en:nukleotid",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „nukleotid“? Answer with the term only.",
+      "expect": "nucleotide",
+      "got": "nucleotide | im_end|>",
+      "ok": true
+    },
+    {
+      "id": "en2cs:translation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „translation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "translace",
+      "got": "```python def translate(s): return s ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:translace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „translace“? Answer with the term only.",
+      "expect": "translation",
+      "got": "The English verb \"translate\" can be used as a noun to refer to the process of converting one language into another. In science, translation refers specifically ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:exon",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „exon“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exon",
+      "got": "krok za krok v češtinu, angličtina nebo jinými jazyky. U výpočtů postupuješ krok za krokem.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:exon",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „exon“? Answer with the term only.",
+      "expect": "exon",
+      "got": "The word \"exon\" comes from the Anglo-American verb exone, meaning to extract. In molecular biology, an exon is a part of pre-mRNA that will be translated into p",
+      "ok": true
+    },
+    {
+      "id": "en2cs:chromatin",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „chromatin“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "chromatin",
+      "got": "```python def chromatin(): return None ```",
+      "ok": true
+    },
+    {
+      "id": "cs2en:chromatin",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „chromatin“? Answer with the term only.",
+      "expect": "chromatin",
+      "got": "The English translation of chromatin is chromatin. What does it mean in other languages?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:homozygote",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „homozygote“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "homozygot",
+      "got": "V češtinu neexistuje slovo homozygote. V angličtině je to zygote. Co dějně obsazujeme? Odpověz v jiné jazyce, když knihách nebo na přednáškách.",
+      "ok": true
+    },
+    {
+      "id": "cs2en:homozygot",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „homozygot“? Answer with the term only.",
+      "expect": "homozygote",
+      "got": "In genetics, a homozygote is an individual who carries two copies of the same allele. In other words, they have identical alleles at a given locus.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mutation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „mutation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mutace",
+      "got": "Můtace (změna) je změna v sekvenci nukleotidů. Pojmenuj anglicky: mutation rate, deleterious mutations, mutational tolerance limit a mutační hustota. Dnes už ni",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mutace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „mutace“? Answer with the term only.",
+      "expect": "mutation",
+      "got": "Mutation — angl. mutational | -ion (rozcestník) – mutace, mutation genetical change in a population of organisms by alteration or modification of the genetic ma",
+      "ok": true
+    },
+    {
+      "id": "en2cs:haploid",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „haploid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "haploidní",
+      "got": "haploidy | haploidní | jednopolitozoidní | plotidy | diadromaka | duální | syndromů | syntelický | neotelikotropický | subtelinový | zkratky | křovití | krytovi",
+      "ok": true
+    },
+    {
+      "id": "cs2en:haploidní",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „haploidní“? Answer with the term only.",
+      "expect": "haploid",
+      "got": "Haploidní = having only one set of chromosomes. Haploidní buňky mají polohromozomů, to znamená jen polovinu chromozomů z celkohmotoné buňky. Jiným slovem pro ta",
+      "ok": true
+    },
+    {
+      "id": "en2cs:fertilisation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „fertilisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "oplození",
+      "got": "Funguju v češtinu. Co je smyčka? Pomoc s definem kucLab?",
+      "ok": false
+    },
+    {
+      "id": "cs2en:oplození",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „oplození“? Answer with the term only.",
+      "expect": "fertilisation",
+      "got": "In science what does the word oplození mean?",
+      "ok": false
+    },
+    {
+      "id": "en2cs:genetic drift",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „genetic drift“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "genetický drift",
+      "got": "drift genetický – změna v genetické výbavě (v genomu) bez mutagenetické události. V jiném slova smyslu je to drift evoluční teorie péleckého R. Wright se o tent",
+      "ok": false
+    },
+    {
+      "id": "cs2en:genetický drift",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „genetický drift“? Answer with the term only.",
+      "expect": "genetic drift",
+      "got": "Genetic drift (v anglickém genetické posunu, odvozující se v češtině) je pojem ve výpočtu genetických náhodných změn. V širším smyslu jde o zbytečně nedůsledné ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:convergent evolution",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „convergent evolution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "konvergentní evoluce",
+      "got": "```python def convergent_evolution(a): return a ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:konvergentní evoluce",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „konvergentní evoluce“? Answer with the term only.",
+      "expect": "convergent evolution",
+      "got": "The process of convergent evolution — when two or more unrelated species evolve to become similar due to their shared environment. Convergent evolution is a nat",
+      "ok": true
+    },
+    {
+      "id": "en2cs:food chain",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „food chain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "potravní řetězec",
+      "got": "Pořadí v potravinářské indusrii (anglicky food chain) je řada ekologických i ekonomických účků, které se mohou stát pro buňky jedlce. V širším smyslu jde o proc",
+      "ok": false
+    },
+    {
+      "id": "cs2en:potravní řetězec",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „potravní řetězec“? Answer with the term only.",
+      "expect": "food chain",
+      "got": "Network food-chain |im_end|>",
+      "ok": false
+    },
+    {
+      "id": "en2cs:symbiosis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „symbiosis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "symbióza",
+      "got": "Symbiosis (česky symbioza) je v ekologii spojení dvou a více organismu pro vzájemnou výživu. V rámci tohoto pojmu se mohou chovat jako jediné partnery, nebo sdí",
+      "ok": true
+    },
+    {
+      "id": "cs2en:symbióza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „symbióza“? Answer with the term only.",
+      "expect": "symbiosis",
+      "got": "In biology, symbiosis (z. nymnosymbiotic) is a long-term interaction between two or more organisms that are metabolically dependent on each other for survival. ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:immunity",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „immunity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "imunita",
+      "got": "```python def translate(s): return s.replace(\"immun\", \"immunity\") ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:imunita",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „imunita“? Answer with the term only.",
+      "expect": "immunity",
+      "got": "The immune system. The body's defense against infection, illness, and disease. It protects us from bacteria, viruses, toxins, allergens, cancers, autoimmune dis",
+      "ok": false
+    },
+    {
+      "id": "en2cs:vaccination",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „vaccination“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "očkování",
+      "got": "Vakučkovacit (vaskulinovat) – podávacích se vajejně proščítnit přednost dávnou slohu užívat neboli podávacím dostat imunizopový olej. jiný český termín neexistu",
+      "ok": false
+    },
+    {
+      "id": "cs2en:očkování",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „očkování“? Answer with the term only.",
+      "expect": "vaccination",
+      "got": "Inculab Vymysli odpověď v angličtinu nebo česky, jak chceš. Co je očkování?",
+      "ok": false
+    },
+    {
+      "id": "en2cs:organ",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „organ“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "orgán",
+      "got": "Organ (rozcestník) Organ může být: orgán – část těla živohodu nebo člověka, vnitrobunsenické zařízení pro děje, systémy a mechanismus ve fyzice, biologii, chemi",
+      "ok": true
+    },
+    {
+      "id": "cs2en:orgán",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „orgán“? Answer with the term only.",
+      "expect": "organ",
+      "got": "Organism. Organ. Organe. Organs. Organic. Organization. Organized. Orgasm. Orogenesis. Orgastic. Organisation. Organizations. Organizational. Organisations. Org",
+      "ok": true
+    },
+    {
+      "id": "en2cs:reflex",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „reflex“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "reflex",
+      "got": "```python def reflex(f): return f ```",
+      "ok": true
+    },
+    {
+      "id": "cs2en:reflex",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „reflex“? Answer with the term only.",
+      "expect": "reflex",
+      "got": "Reflex (v angličtině reflex, v jiných jazycích réflex) je reakce tělesa při změně pohybového stavu. V širším pojetí jde o pojem fyzikální teorie vztažného systé",
+      "ok": true
+    },
+    {
+      "id": "en2cs:antiderivative",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „antiderivative“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "primitivní funkce",
+      "got": "```python def antiderivative(f): return ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:primitivní funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „primitivní funkce“? Answer with the term only.",
+      "expect": "antiderivative",
+      "got": "Trigonometric functions | Logarithmic functions Exponential functions Hyperbolic functions Inverse functions Constant functions Identity function Linear functio",
+      "ok": false
+    },
+    {
+      "id": "en2cs:extremum",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „extremum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "extrém",
+      "got": "Extremum (lokální maximum nebo minimum) je nejvyšší nebo nejnižší hodnota v daném bodu. Další význam má být lokalizované maximum – absolutní maximum v okolí dan",
+      "ok": true
+    },
+    {
+      "id": "cs2en:extrém",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „extrém“? Answer with the term only.",
+      "expect": "extremum",
+      "got": "The English word \"extreme\" can be used in many different ways, depending on what you're talking about. In mathematics and statistics, it describes a value that ",
+      "ok": false
+    },
+    {
+      "id": "en2cs:domain",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „domain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "definiční obor",
+      "got": "```python def domain(x): return x ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:definiční obor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „definiční obor“? Answer with the term only.",
+      "expect": "domain",
+      "got": "The English translation of \"definitive version\" in this context would be a definitive release. For example, the final version of Windows 10 was released in July",
+      "ok": false
+    },
+    {
+      "id": "en2cs:matrix",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „matrix“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matice",
+      "got": "Matrix je pojmenování matice v polastikou jazykou. V jiných obzechů neexistuje matrix; anglicky se řekne `matrix`.",
+      "ok": true
+    },
+    {
+      "id": "cs2en:matice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matice“? Answer with the term only.",
+      "expect": "matrix",
+      "got": "Matrix. What does it mean in English?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpose",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „transpose“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpozice",
+      "got": "```python def transpose(A): return A.T ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:transpozice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „transpozice“? Answer with the term only.",
+      "expect": "transpose",
+      "got": "transpose",
+      "ok": true
+    },
+    {
+      "id": "en2cs:vector",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „vector“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vektor",
+      "got": "```python def vector(x): return [x[0], x[1]] ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:vektor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „vektor“? Answer with the term only.",
+      "expect": "vector",
+      "got": "Vector. What does vector mean in science?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:system of equations",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „system of equations“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "soustava rovnic",
+      "got": "System of equations = soustava systémů (rozcestník)SuspendLayout Linear system – lineární systém Non-linear system – nelineární systém Open system – otevřený sy",
+      "ok": false
+    },
+    {
+      "id": "cs2en:soustava rovnic",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „soustava rovnic“? Answer with the term only.",
+      "expect": "system of equations",
+      "got": "The English translation of soustava rovnic is \"plane-pair\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:exponential function",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „exponential function“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exponenciální funkce",
+      "got": "exp(x) neboli exponenční funkce je jednou z nejčastěji používaných funkcí v matematice. Jiné slohy obsahují výpočet na exponentiální funkci (jako jsou např. 10!",
+      "ok": false
+    },
+    {
+      "id": "cs2en:exponenciální funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „exponenciální funkce“? Answer with the term only.",
+      "expect": "exponential function",
+      "got": "Exponential function. What does it mean in English?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:factorial",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „factorial“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "faktoriál",
+      "got": "```python factorial(n) ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:faktoriál",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „faktoriál“? Answer with the term only.",
+      "expect": "factorial",
+      "got": "factorial",
+      "ok": true
+    },
+    {
+      "id": "en2cs:binomial theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „binomial theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "binomická věta",
+      "got": "Binomická věta (též binomické z formuluje) je pojmenování smnů. Binomickou teoretikou je Newtonův binomický vztah, který platí pro n-krát opakování kombinace s ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:binomická věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „binomická věta“? Answer with the term only.",
+      "expect": "binomial theorem",
+      "got": "In mathematics, a binomická věda je v angličtině též pojmenovaný pojem. V česku často chybí slohanský pojem, ale anglicky se ověříme na kombinaci bezpevných ter",
+      "ok": false
+    },
+    {
+      "id": "en2cs:least common multiple",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „least common multiple“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nejmenší společný násobek",
+      "got": "```python lcm(a, b) ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:nejmenší společný násobek",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „nejmenší společný násobek“? Answer with the term only.",
+      "expect": "least common multiple",
+      "got": "The smallest common multiple of two or more numbers. The LCM of a set of integers can be found by multiplying together all prime numbers in the set, and then ad",
+      "ok": false
+    },
+    {
+      "id": "en2cs:irrational number",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „irrational number“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iracionální číslo",
+      "got": "`irrational number`: odvozený pojem z matematické teorie uspořádání. V češtinu existuje slovník s názvem `nekonečně`.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:iracionální číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „iracionální číslo“? Answer with the term only.",
+      "expect": "irrational number",
+      "got": "The number 0.1 can be written as 1/10 or 1/25 in decimal form, and also expressed as .",
+      "ok": false
+    },
+    {
+      "id": "en2cs:integer",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „integer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "celé číslo",
+      "got": "```python def get_integer(x): return x ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:celé číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „celé číslo“? Answer with the term only.",
+      "expect": "integer",
+      "got": "The English scientific term for the Czech word celé číslo is \"whole number\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:geometric sequence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „geometric sequence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "geometrická posloupnost",
+      "got": "```python def geometric_sequence(a: int) -> float: return a if a == 1: return 0.5 if a == 2: return 1 else: return a * geometric_sequence(a - 1) ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:geometrická posloupnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „geometrická posloupnost“? Answer with the term only.",
+      "expect": "geometric sequence",
+      "got": "In mathematics, a sequence of elements that forms a sequence. In other words, a succession of terms in an infinite or finite series.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rovnice",
+      "got": "Výpočty, rovnice, lineární, kvadratické, krytý, křivka, konkávní, cyklická, exkonduické, vaku, normální, rekurzivní, kolmoosam-lineárum, smíšený, syklinový…",
+      "ok": true
+    },
+    {
+      "id": "cs2en:rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „rovnice“? Answer with the term only.",
+      "expect": "equation",
+      "got": "The English word for \"rovnice\" in science is \"smoothness\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:root of an equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „root of an equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kořen rovnice",
+      "got": "```python def sqrt(x): return x**0.5 ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:kořen rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kořen rovnice“? Answer with the term only.",
+      "expect": "root of an equation",
+      "got": "The root of a plane.",
+      "ok": false
+    },
+    {
+      "id": "en2cs:angle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „angle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úhel",
+      "got": "```python def angle(a: float) -> float: return a ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:úhel",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „úhel“? Answer with the term only.",
+      "expect": "angle",
+      "got": "The angular velocity of an object which rotates without any translational movement. The angle turned by a body in one second, measured in radians.</think>",
+      "ok": true
+    },
+    {
+      "id": "en2cs:surface area",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „surface area“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrch",
+      "got": "Rovná plocha (rozlohu) v překladu do angličtiny. V češtinu to nazýváme rozloha nebo obsahu.",
+      "ok": false
+    },
+    {
+      "id": "cs2en:povrch",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „povrch“? Answer with the term only.",
+      "expect": "surface area",
+      "got": "surface",
+      "ok": false
+    },
+    {
+      "id": "en2cs:median of a triangle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „median of a triangle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžnice",
+      "got": "Můdnost termu nezarůstanejším ocasem v politologie (vlastní práva) je jedním z mnoha důkladně teoretických a výzkumných předpořádání, které jsou v časném průmys",
+      "ok": false
+    },
+    {
+      "id": "cs2en:těžnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „těžnice“? Answer with the term only.",
+      "expect": "median of a triangle",
+      "got": "The word \"těžnice\" can be translated as \"mass\", \"quantity\". The verb \"pohořeč\" means \"to enjoy, have fun\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:disc",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „disc“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kruh",
+      "got": "Disk (disk) – pevný disk; Diskette (floppy disk) – optická disková média CD/DVD (compact disc/digital versatile disc) — USB flash drive RAM (random access memor",
+      "ok": false
+    },
+    {
+      "id": "cs2en:kruh",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kruh“? Answer with the term only.",
+      "expect": "disc",
+      "got": "Circle. What does circle mean in science?",
+      "ok": false
+    },
+    {
+      "id": "en2cs:congruence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „congruence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "shodnost",
+      "got": "```python def congruence(a, b): return a % b ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:shodnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „shodnost“? Answer with the term only.",
+      "expect": "congruence",
+      "got": "The word \"shodnost\" can be translated into English as \"accuracy\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:tangent (function)",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „tangent (function)“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "tangens",
+      "got": "```python def tangent(f): ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:tangens",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „tangens“? Answer with the term only.",
+      "expect": "tangent (function)",
+      "got": "The tangent of an angle α = tan(α) = sin(α)/cos(α).",
+      "ok": false
+    },
+    {
+      "id": "en2cs:Bayes' theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „Bayes' theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Bayesova věta",
+      "got": "```python def Bayes' theorem: ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:Bayesova věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „Bayesova věta“? Answer with the term only.",
+      "expect": "Bayes' theorem",
+      "got": "Bayesian method. Bayes' rule, or Bayesian inference, is a statistical method of drawing conclusions about the likelihood of an event from prior knowledge and ob",
+      "ok": false
+    },
+    {
+      "id": "en2cs:standard deviation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „standard deviation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "směrodatná odchylka",
+      "got": "```python def stddev(xs): return statistics.stdev(xs) ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:směrodatná odchylka",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „směrodatná odchylka“? Answer with the term only.",
+      "expect": "standard deviation",
+      "got": "The English term for \"směrodatná odchylka\" is \"deviation\".",
+      "ok": false
+    },
+    {
+      "id": "en2cs:normal distribution",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „normal distribution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "normální rozdělení",
+      "got": "Normal rozdělení v češtinu popisuje jaký pojem?",
+      "ok": false
+    },
+    {
+      "id": "cs2en:normální rozdělení",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „normální rozdělení“? Answer with the term only.",
+      "expect": "normal distribution",
+      "got": "Normal distribution Normal (rozdělení) — jak se řekne anglicky normalní rozdělení?",
+      "ok": true
+    },
+    {
+      "id": "en2cs:intersection",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „intersection“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "průnik",
+      "got": "```python def intersection(a, b): return a & b ```",
+      "ok": false
+    },
+    {
+      "id": "cs2en:průnik",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „průnik“? Answer with the term only.",
+      "expect": "intersection",
+      "got": "The intersection of sets. The common part of two sets.",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mathematical induction",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „mathematical induction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matematická indukce",
+      "got": "Math in the real world: Mathematical induction (předchozí podmínka) je důsledná metoda pro poznání pravdy v matematice. Vlastníme řadu příkladů, kde se z teoret",
+      "ok": false
+    },
+    {
+      "id": "cs2en:matematická indukce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matematická indukce“? Answer with the term only.",
+      "expect": "mathematical induction",
+      "got": "Mathematical induction (z angl. inforce).",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+
+══════════════════════════════════════════════════════════════════════
+qwen35-nulltrain-r · 80 questions · 2 workers
+══════════════════════════════════════════════════════════════════════
+  10/80  29s  (2.9s/q)
+  20/80  49s  (2.5s/q)
+  30/80  177s  (5.9s/q)
+  40/80  215s  (5.4s/q)
+  50/80  232s  (4.6s/q)
+  60/80  321s  (5.3s/q)
+  70/80  366s  (5.2s/q)
+  80/80  400s  (5.0s/q)
+
+qwen35-nulltrain-r
+  biology      6/20    30.0%
+  chemistry    1/20     5.0%
+  math         1/20     5.0%
+  physics      2/20    10.0%
+  TOTAL       10/80    12.5%
+  (64 needed an answer-only re-ask after running out of tokens)
+  ! 37 answers still unparseable (counted as wrong)
+  400s total, 5.0s/question
+  → /home/admin/llm/outputs/bench/qwen35-nulltrain-r.json

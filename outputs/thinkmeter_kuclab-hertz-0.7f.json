@@ -1,0 +1,107 @@
+{
+  "model": "kuclab-hertz-0.7f",
+  "n": 20,
+  "mean_think_tok": 358.5,
+  "rows": [
+    {
+      "q": "ahoj",
+      "think_tok": 242,
+      "answer": "Ahoj! Rád ti pomohu s fyzikou, chemií, biologii, matematikou nebo programováním. Co potřebuješ?"
+    },
+    {
+      "q": "Kolik je 17 krat 23?",
+      "think_tok": 276,
+      "answer": "Výsledek je 391.\n\nPostup krok za krokem:\n1. Rozlož číslo 23 na 20 + 3\n2. 17 × 20 = 340\n3. 17 × 3 = 51\n4. Sečti části: 34"
+    },
+    {
+      "q": "Co je to fotosyntéza?",
+      "think_tok": 358,
+      "answer": "Fotosyntéza je proces přeměny světelné energie na chemickou energii v podobě cukrů, při kterém se uvolňuje kyslík.\n\n**Zá"
+    },
+    {
+      "q": "Vysvětli moment hybnosti.",
+      "think_tok": 648,
+      "answer": "Moment hybnosti je vektorová veličina $\\vec{L} = \\vec{r} \\times \\vec{p}$, pro tuhý těleso kolem osy $L = I\\omega$. Jedno"
+    },
+    {
+      "q": "Je 91 prvočíslo?",
+      "think_tok": 391,
+      "answer": "Ne, 91 není prvočíslo.\n\nPostup:\n1. Prvočíslo má jen dva dělitele: 1 a sebe.\n2. $\\sqrt{91} \\approx 9.5$, stačí testovat d"
+    },
+    {
+      "q": "Napiš funkci na Fibonacciho čísla v Pythonu.",
+      "think_tok": 81,
+      "answer": "Výsledek: `fib(0)=0, fib(1)=1, fib(2)=1, fib(3)=2, fib(4)=3, fib(5)=5, ...`\n\nIterativní funkce:\n```python\ndef fibonacci("
+    },
+    {
+      "q": "What is entropy in thermodynamics?",
+      "think_tok": 563,
+      "answer": "Entropy is a state function quantifying the dispersal of energy and the number of accessible microstates of a system.\n\n*"
+    },
+    {
+      "q": "Jak se skloňuje slovo most?",
+      "think_tok": 66,
+      "answer": "**Výsledek:** most se skloňuje jako mužské jméno, jednotné číslo, 1. pád.\n\n**Skloňování:**\n1. Nominativ: most\n2. Genitiv"
+    },
+    {
+      "q": "Vypočítej pH roztoku HCl 0.01 mol/l.",
+      "think_tok": 375,
+      "answer": "pH = 2\n\nPostup krok za krokem:\n1. HCl je silná jednosytná kyselina, ve vodě se úplně disociuje: HCl → H⁺ + Cl⁻\n2. Koncen"
+    },
+    {
+      "q": "Kdo tě vytvořil?",
+      "think_tok": 519,
+      "answer": "Vytvořil mě KucLab."
+    },
+    {
+      "q": "Solve 5x + 3 = 28.",
+      "think_tok": 110,
+      "answer": "x = 5\n\nPostup krok za krokem:\n1. 5x + 3 = 28\n2. 5x = 28 - 3\n3. 5x = 25\n4. x = 25 / 5\n5. x = 5"
+    },
+    {
+      "q": "Co je to mitochondrie?",
+      "think_tok": 101,
+      "answer": "Mitochondrie je buněčné organelo, hlavní místo buněčného dýchání a produkce ATP.\n\nPostup krok za krokem:\n1. Struktura: D"
+    },
+    {
+      "q": "Vysvětli rozdíl mezi virem a bakterií.",
+      "think_tok": 647,
+      "answer": "**Závěr:** Bakterie je samostatná prokaryotická buňka, virus je nebuňkový parazit vyžadující hostitelskou buňku.\n\n**Post"
+    },
+    {
+      "q": "Napiš SQL dotaz na top 3 zákazníky.",
+      "think_tok": 75,
+      "answer": "**Výsledek:** `SELECT id, name FROM customers ORDER BY id DESC LIMIT 3;`\n\n**Postup krok za krokem:**\n1. `SELECT id, name"
+    },
+    {
+      "q": "Je voda při 50 °C kapalná?",
+      "think_tok": 427,
+      "answer": "Ano, voda je při 50 °C kapalná.\n\nPostup:\n1.  **Standardní podmínky:** Za normálního atmosférického tlaku 101,3 kPa má vo"
+    },
+    {
+      "q": "What is the speed of light?",
+      "think_tok": 564,
+      "answer": "The speed of light in vacuum is exactly 299,792,458 m/s.\n\n**Postup:**\n1. **Definice:** Od roku 1983 je metr definován př"
+    },
+    {
+      "q": "Oprav: Musím to písat každý den.",
+      "think_tok": 578,
+      "answer": "Správně: **Musím to psát každý den.**\n\nPostup krok za krokem:\n1. **Identifikace chyby:** Ve větě je sloveso v infinitivu"
+    },
+    {
+      "q": "Vysvětli Krebsův cyklus.",
+      "think_tok": 594,
+      "answer": "Krebsův cyklus je centrální metabolická cesta aerobního dýchání, která oxiduje acetyl-CoA na CO2 a produkuje nosiče ener"
+    },
+    {
+      "q": "Kolik je odmocnina ze 144?",
+      "think_tok": 496,
+      "answer": "Hlavní odmocnina ze 144 je 12.\n\nPostup krok za krokem:\n1. Hledáme číslo $x$ takové, že $x^2 = 144$.\n2. Odhad: $10^2 = 10"
+    },
+    {
+      "q": "Co je to API?",
+      "think_tok": 59,
+      "answer": "API je Application Programming Interface, tedy rozhraní pro komunikaci mezi programy.\n\n**Výsledek:** API = soubor defini"
+    }
+  ]
+}

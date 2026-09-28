@@ -1,0 +1,149 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek', 'concise': 'deepseek'}
+  filtered to domains ['bio', 'chem', 'code', 'codehard', 'concise', 'czech', 'tools']: 3600 prompts
+  caps {'code': 360, 'chem': 132, 'bio': 200, 'czech': 160, 'concise': 25, 'codehard': 395, 'tools': 200} vs have {'identity_format': 38, 'math': 1202, 'phys': 769, 'chem': 368, 'code': 440, 'bio': 398, 'design': 395, 'czech': 539, 'codehard': 5, 'concise': 400} -> 590 queued
+  [1] api08:codehard: Najdi bug: 'for i in range(9): print(i/12)'. Co se pokazí a 
+  [2] api08:codehard: Najdi bug: 'for i in range(2): print(i/5)'. Co se pokazí a j
+  [3] api08:codehard: Najdi bug: 'for i in range(5): print(i/12)'. Co se pokazí a 
+  [4] api08:codehard: Najdi bug: 'for i in range(6): print(i/3)'. Co se pokazí a j
+  [5] api08:codehard: Najdi bug: 'for i in range(10): print(i/7)'. Co se pokazí a 
+  [6] api08:codehard: Najdi bug: 'for i in range(2): print(i/3)'. Co se pokazí a j
+  [7] api08:codehard: Najdi bug: 'for i in range(5): print(i/8)'. Co se pokazí a j
+  [8] api08:codehard: Najdi bug: 'for i in range(4): print(i/8)'. Co se pokazí a j
+  [9] api08:codehard: Najdi bug: 'for i in range(4): print(i/6)'. Co se pokazí a j
+  [10] api08:codehard: Najdi bug: 'for i in range(5): print(i/3)'. Co se pokazí a j
+  [11] api08:codehard: Najdi bug: 'for i in range(6): print(i/4)'. Co se pokazí a j
+  [12] api08:codehard: Najdi bug: 'for i in range(4): print(i/12)'. Co se pokazí a 
+  [13] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [14] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='96
+  [15] api08:tools: Uživatel chce poslat e-mail. Ukaž volání send_email(to, subj
+  [16] api08:tools: Nástroj get_stock_price vrátil 625.9. Sestav krátkou odpověď
+  [17] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='62
+  [18] api08:tools: Nástroj get_stock_price vrátil 412.8. Sestav krátkou odpověď
+  [19] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='22
+  [20] api08:tools: Nástroj get_stock_price vrátil 712.8. Sestav krátkou odpověď
+  [21] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='9*
+  [22] api08:tools: Nástroj get_stock_price vrátil 759.5. Sestav krátkou odpověď
+  [23] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='66
+  [24] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='67
+  [25] api08:tools: Nástroj get_stock_price vrátil 92.2. Sestav krátkou odpověď 
+  [26] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='95
+  [27] api08:tools: Nástroj get_stock_price vrátil 314.12. Sestav krátkou odpově
+  [28] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='40
+  [29] api08:tools: Nástroj get_stock_price vrátil 39.3. Sestav krátkou odpověď 
+  [30] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [31] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='47
+  [32] api08:tools: Nástroj get_stock_price vrátil 939.7. Sestav krátkou odpověď
+  [33] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='29
+  [34] api08:tools: Nástroj get_stock_price vrátil 312.2. Sestav krátkou odpověď
+  [35] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='75
+  [36] api08:tools: Nástroj get_stock_price vrátil 58.5. Sestav krátkou odpověď 
+  [37] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='73
+  [38] api08:tools: Nástroj get_stock_price vrátil 756.12. Sestav krátkou odpově
+  [39] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='45
+  [40] api08:tools: Nástroj get_stock_price vrátil 68.7. Sestav krátkou odpověď 
+  [41] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='65
+  [42] api08:tools: Nástroj get_stock_price vrátil 834.3. Sestav krátkou odpověď
+  [43] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [44] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='98
+  [45] api08:tools: Nástroj get_stock_price vrátil 102.6. Sestav krátkou odpověď
+  [46] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='45
+  [47] api08:tools: Nástroj get_stock_price vrátil 763.12. Sestav krátkou odpově
+  [48] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='60
+  [49] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='19
+  [50] api08:tools: Nástroj get_stock_price vrátil 565.6. Sestav krátkou odpověď
+  [51] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='31
+  [52] api08:tools: Nástroj get_stock_price vrátil 27.11. Sestav krátkou odpověď
+  [53] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='76
+  [54] api08:tools: Nástroj get_stock_price vrátil 956.2. Sestav krátkou odpověď
+  [55] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='99
+  [56] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='64
+  [57] api08:tools: Nástroj get_stock_price vrátil 903.4. Sestav krátkou odpověď
+  [58] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='17
+  [59] api08:tools: Nástroj get_stock_price vrátil 763.8. Sestav krátkou odpověď
+  [60] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='65
+  [61] api08:tools: Nástroj get_stock_price vrátil 640.10. Sestav krátkou odpově
+  [62] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='86
+  [63] api08:tools: Nástroj get_stock_price vrátil 943.8. Sestav krátkou odpověď
+  [64] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='7*
+  [65] api08:tools: Nástroj get_stock_price vrátil 432.11. Sestav krátkou odpově
+  [66] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='3*
+  [67] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='74
+  [68] api08:tools: Nástroj get_stock_price vrátil 684.10. Sestav krátkou odpově
+  [69] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [70] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='9*
+  [71] api08:tools: Nástroj get_stock_price vrátil 541.9. Sestav krátkou odpověď
+  [72] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [73] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='46
+  [74] api08:tools: Nástroj get_stock_price vrátil 44.7. Sestav krátkou odpověď 
+  [75] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='74
+  [76] api08:tools: Nástroj get_stock_price vrátil 231.12. Sestav krátkou odpově
+  [77] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='58
+  [78] api08:tools: Nástroj get_stock_price vrátil 52.5. Sestav krátkou odpověď 
+  [79] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='93
+  [80] api08:tools: Nástroj get_stock_price vrátil 528.11. Sestav krátkou odpově
+  [81] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='53
+  [82] api08:tools: Nástroj get_stock_price vrátil 813.9. Sestav krátkou odpověď
+  [83] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [84] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='45
+  [85] api08:tools: Nástroj get_stock_price vrátil 739.10. Sestav krátkou odpově
+  [86] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='36
+  [87] api08:tools: Nástroj get_stock_price vrátil 494.5. Sestav krátkou odpověď
+  [88] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='2*
+  [89] api08:tools: Nástroj get_stock_price vrátil 947.8. Sestav krátkou odpověď
+  [90] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [91] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='35
+  [92] api08:tools: Nástroj get_stock_price vrátil 793.9. Sestav krátkou odpověď
+  [93] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [94] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='22
+  [95] api08:tools: Nástroj get_stock_price vrátil 71.7. Sestav krátkou odpověď 
+  [96] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='77
+  [97] api08:tools: Nástroj get_stock_price vrátil 84.3. Sestav krátkou odpověď 
+  [98] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='33
+  [99] api08:tools: Nástroj get_stock_price vrátil 156.6. Sestav krátkou odpověď
+  [100] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [101] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='6*
+  [102] api08:tools: Nástroj get_stock_price vrátil 586.8. Sestav krátkou odpověď
+  [103] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [104] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='94
+  [105] api08:tools: Nástroj get_stock_price vrátil 251.11. Sestav krátkou odpově
+  [106] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='24
+  [107] api08:tools: Nástroj get_stock_price vrátil 356.9. Sestav krátkou odpověď
+  [108] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [109] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='66
+  [110] api08:tools: Nástroj get_stock_price vrátil 99.2. Sestav krátkou odpověď 
+  [111] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='73
+  [112] api08:tools: Nástroj get_stock_price vrátil 704.9. Sestav krátkou odpověď
+  [113] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='9*
+  [114] api08:tools: Nástroj get_stock_price vrátil 263.7. Sestav krátkou odpověď
+  [115] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='77
+  [116] api08:tools: Nástroj get_stock_price vrátil 226.7. Sestav krátkou odpověď
+  [117] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='94
+  [118] api08:tools: Nástroj get_stock_price vrátil 335.11. Sestav krátkou odpově
+  [119] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='55
+  [120] api08:tools: Nástroj get_stock_price vrátil 933.7. Sestav krátkou odpověď
+  [121] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='21
+  [122] api08:tools: Nástroj get_stock_price vrátil 367.11. Sestav krátkou odpově
+  [123] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='87
+  [124] api08:tools: Nástroj get_stock_price vrátil 422.6. Sestav krátkou odpověď
+  [125] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [126] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='92
+  [127] api08:tools: Nástroj get_stock_price vrátil 274.9. Sestav krátkou odpověď
+  [128] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='13
+  [129] api08:tools: Nástroj get_stock_price vrátil 161.12. Sestav krátkou odpově
+  [130] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='3*
+  [131] api08:tools: Nástroj get_stock_price vrátil 259.4. Sestav krátkou odpověď
+  [132] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='15
+  [133] api08:tools: Nástroj get_stock_price vrátil 627.6. Sestav krátkou odpověď
+  [134] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='31
+  [135] api08:tools: Nástroj get_stock_price vrátil 551.9. Sestav krátkou odpověď
+  [136] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='19
+  [137] api08:tools: Nástroj get_stock_price vrátil 379.2. Sestav krátkou odpověď
+  [138] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='95
+  [139] api08:tools: Nástroj get_stock_price vrátil 182.10. Sestav krátkou odpově
+  [140] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='99
+  [141] api08:tools: Nástroj get_stock_price vrátil 505.6. Sestav krátkou odpověď
+  [142] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='98
+  [143] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='39
+  [144] api08:tools: Nástroj get_stock_price vrátil 720.9. Sestav krátkou odpověď
+  [145] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+DONE made=145 + fixed rows

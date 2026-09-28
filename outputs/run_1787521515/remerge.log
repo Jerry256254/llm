@@ -1,0 +1,23 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+re-merge base= /base adapter= /workspace/adapter
+merge dtype: torch.bfloat16 (base config torch_dtype='', default=bfloat16)
+LoRA merge: r=32 alpha=64.0 use_rslora=False scaling=2.0
+loaded 656 LoRA tensors
+wrote shard model.safetensors
+merged 328 LoRA-targeted tensors
+Injected YaRN rope_scaling in text_config: 262144 -> 307200 (factor=1.172)
+re-merge done

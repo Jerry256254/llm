@@ -1,0 +1,361 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek', 'concise': 'deepseek'}
+  filtered to domains ['en']: 400 prompts
+  [1] api08:en: Explain the difference between 'fewer' and 'less' with examp
+  [2] api08:en: Summarise the causes of inflation in three sentences.
+  [3] api08:en: Correct this sentence: 'She don't has no idea about physics.
+  [4] api08:en: What is the difference between a virus and a bacterium? Expl
+  [5] api08:en: Explain Newton's three laws in English with a one-line examp
+  [6] api08:en: What does 'subject-verb agreement' mean? Give two correct ex
+  [7] api08:en: Explain what a recursion base case is in programming.
+  [8] api08:en: Distinguish 'affect' vs 'effect' with example sentences.
+  [9] api08:en: Give the past participle of 'to write' and use it in a sente
+  [10] api08:en: Explain how rainbows form, step by step.
+  [11] api08:en: What is photosynthesis? Give the equation and explain it.
+  [12] api08:en: Describe the water cycle in four stages.
+  [13] api08:en: Why is the sky blue? Explain Rayleigh scattering simply.
+  [14] api08:en: What causes seasons on Earth? Explain the tilt.
+  [15] api08:en: Solve 65x + 4 = 214. Show each step.
+  [16] api08:en: What is 15 times 5? Show the procedure.
+  [17] api08:en: Compute the derivative of f(x) = x^4 at x = 9.
+  [18] api08:en: What is the square root of 73? Verify by squaring.
+  [19] api08:en: Find the area of a circle with radius 11 cm.
+  [20] api08:en: Express 76 as a percentage of 707.
+  [21] api08:en: Arithmetic sequence: a1=72, d=10. Find a4.
+  [22] api08:en: Is 509 prime? Factor it if not.
+  [23] api08:en: Compute C(204,2) (binomial coefficient).
+  [24] api08:en: Solve: x + y = 552; x - y = 80.
+  [25] api08:en: A car travels 627 km in 4 hours. What is its average speed?
+  [26] api08:en: Convert 3 meters to centimeters.
+  [27] api08:en: Solve 38x + 2 = 794. Show each step.
+  [28] api08:en: What is 69 times 7? Show the procedure.
+  [29] api08:en: Compute the derivative of f(x) = x^5 at x = 5.
+  [30] api08:en: What is the square root of 476? Verify by squaring.
+  [31] api08:en: Find the area of a circle with radius 2 cm.
+  [32] api08:en: Express 39 as a percentage of 649.
+  [33] api08:en: Arithmetic sequence: a1=80, d=4. Find a6.
+  [34] api08:en: Is 752 prime? Factor it if not.
+  [35] api08:en: Compute C(169,3) (binomial coefficient).
+  [36] api08:en: Solve: x + y = 27; x - y = 79.
+  [37] api08:en: A car travels 296 km in 8 hours. What is its average speed?
+  [38] api08:en: Solve 80x + 11 = 978. Show each step.
+  [39] api08:en: What is 83 times 11? Show the procedure.
+  [40] api08:en: Compute the derivative of f(x) = x^2 at x = 5.
+  [41] api08:en: Express 69 as a percentage of 538.
+  [42] api08:en: Arithmetic sequence: a1=35, d=9. Find a9.
+  [43] api08:en: Is 975 prime? Factor it if not.
+  [44] api08:en: Compute C(545,3) (binomial coefficient).
+  [45] api08:en: Solve: x + y = 505; x - y = 64.
+  [46] api08:en: A car travels 439 km in 5 hours. What is its average speed?
+  [47] api08:en: Convert 6 meters to centimeters.
+  [48] api08:en: Solve 39x + 6 = 49. Show each step.
+  [49] api08:en: What is 51 times 8? Show the procedure.
+  [50] api08:en: Compute the derivative of f(x) = x^10 at x = 3.
+  [51] api08:en: What is the square root of 145? Verify by squaring.
+  [52] api08:en: Find the area of a circle with radius 10 cm.
+  [53] api08:en: Express 35 as a percentage of 806.
+  [54] api08:en: Arithmetic sequence: a1=43, d=6. Find a5.
+  [55] api08:en: Is 195 prime? Factor it if not.
+  [56] api08:en: Solve: x + y = 618; x - y = 63.
+  [57] api08:en: A car travels 251 km in 6 hours. What is its average speed?
+  [58] api08:en: Convert 2 meters to centimeters.
+  [59] api08:en: Solve 59x + 5 = 582. Show each step.
+  [60] api08:en: What is 50 times 11? Show the procedure.
+  [61] api08:en: Compute the derivative of f(x) = x^5 at x = 6.
+  [62] api08:en: What is the square root of 306? Verify by squaring.
+  [63] api08:en: Find the area of a circle with radius 4 cm.
+  [64] api08:en: Express 69 as a percentage of 317.
+  [65] api08:en: Arithmetic sequence: a1=16, d=7. Find a10.
+  [66] api08:en: Is 485 prime? Factor it if not.
+  [67] api08:en: Solve: x + y = 500; x - y = 47.
+  [68] api08:en: A car travels 969 km in 11 hours. What is its average speed?
+  [69] api08:en: Convert 7 meters to centimeters.
+  [70] api08:en: Solve 51x + 5 = 724. Show each step.
+  [71] api08:en: What is 84 times 9? Show the procedure.
+  [72] api08:en: Compute the derivative of f(x) = x^5 at x = 12.
+  [73] api08:en: Find the area of a circle with radius 3 cm.
+  [74] api08:en: Express 52 as a percentage of 885.
+  [75] api08:en: Arithmetic sequence: a1=12, d=7. Find a10.
+  [76] api08:en: Is 293 prime? Factor it if not.
+  [77] api08:en: Solve: x + y = 287; x - y = 76.
+  [78] api08:en: A car travels 594 km in 4 hours. What is its average speed?
+  [79] api08:en: Convert 4 meters to centimeters.
+  [80] api08:en: Solve 22x + 2 = 356. Show each step.
+  [81] api08:en: What is 26 times 3? Show the procedure.
+  [82] api08:en: Compute the derivative of f(x) = x^5 at x = 10.
+  [83] api08:en: What is the square root of 87? Verify by squaring.
+  [84] api08:en: Find the area of a circle with radius 9 cm.
+  [85] api08:en: Express 75 as a percentage of 493.
+  [86] api08:en: Arithmetic sequence: a1=83, d=9. Find a8.
+  [87] api08:en: Is 507 prime? Factor it if not.
+  [88] api08:en: Solve: x + y = 518; x - y = 59.
+  [89] api08:en: A car travels 16 km in 6 hours. What is its average speed?
+  [90] api08:en: Convert 9 meters to centimeters.
+  [91] api08:en: Solve 35x + 5 = 764. Show each step.
+  [92] api08:en: What is 36 times 3? Show the procedure.
+  [93] api08:en: Compute the derivative of f(x) = x^9 at x = 6.
+  [94] api08:en: What is the square root of 520? Verify by squaring.
+  [95] api08:en: Express 81 as a percentage of 860.
+  [96] api08:en: Arithmetic sequence: a1=95, d=11. Find a5.
+  [97] api08:en: Is 33 prime? Factor it if not.
+  [98] api08:en: Solve: x + y = 617; x - y = 21.
+  [99] api08:en: A car travels 717 km in 4 hours. What is its average speed?
+  [100] api08:en: Solve 99x + 7 = 716. Show each step.
+  [101] api08:en: What is 24 times 12? Show the procedure.
+  [102] api08:en: Compute the derivative of f(x) = x^6 at x = 6.
+  [103] api08:en: What is the square root of 61? Verify by squaring.
+  [104] api08:en: Express 28 as a percentage of 173.
+  [105] api08:en: Arithmetic sequence: a1=7, d=5. Find a9.
+  [106] api08:en: Is 613 prime? Factor it if not.
+  [107] api08:en: Solve: x + y = 751; x - y = 37.
+  [108] api08:en: A car travels 241 km in 12 hours. What is its average speed?
+  [109] api08:en: Solve 86x + 3 = 221. Show each step.
+  [110] api08:en: What is 52 times 11? Show the procedure.
+  [111] api08:en: Compute the derivative of f(x) = x^3 at x = 4.
+  [112] api08:en: Express 56 as a percentage of 356.
+  [113] api08:en: Arithmetic sequence: a1=6, d=2. Find a7.
+  [114] api08:en: Is 551 prime? Factor it if not.
+  [115] api08:en: Solve: x + y = 652; x - y = 10.
+  [116] api08:en: A car travels 745 km in 4 hours. What is its average speed?
+  [117] api08:en: Solve 44x + 12 = 119. Show each step.
+  [118] api08:en: What is 91 times 11? Show the procedure.
+  [119] api08:en: Compute the derivative of f(x) = x^7 at x = 6.
+  [120] api08:en: Find the area of a circle with radius 12 cm.
+  [121] api08:en: Express 24 as a percentage of 262.
+  [122] api08:en: Arithmetic sequence: a1=35, d=12. Find a6.
+  [123] api08:en: Is 643 prime? Factor it if not.
+  [124] api08:en: Solve: x + y = 185; x - y = 86.
+  [125] api08:en: A car travels 740 km in 5 hours. What is its average speed?
+  [126] api08:en: Solve 75x + 10 = 560. Show each step.
+  [127] api08:en: What is 62 times 6? Show the procedure.
+  [128] api08:en: Compute the derivative of f(x) = x^10 at x = 4.
+  [129] api08:en: Express 98 as a percentage of 521.
+  [130] api08:en: Arithmetic sequence: a1=97, d=7. Find a9.
+  [131] api08:en: Is 580 prime? Factor it if not.
+  [132] api08:en: Compute C(142,4) (binomial coefficient).
+  [133] api08:en: Solve: x + y = 352; x - y = 43.
+  [134] api08:en: A car travels 851 km in 12 hours. What is its average speed?
+  [135] api08:en: Solve 48x + 2 = 805. Show each step.
+  [136] api08:en: What is 92 times 10? Show the procedure.
+  [137] api08:en: Compute the derivative of f(x) = x^8 at x = 4.
+  [138] api08:en: What is the square root of 39? Verify by squaring.
+  [139] api08:en: Express 12 as a percentage of 21.
+  [140] api08:en: Arithmetic sequence: a1=3, d=3. Find a8.
+  [141] api08:en: Is 447 prime? Factor it if not.
+  [142] api08:en: Solve: x + y = 395; x - y = 34.
+  [143] api08:en: A car travels 791 km in 5 hours. What is its average speed?
+  [144] api08:en: Convert 5 meters to centimeters.
+  [145] api08:en: Solve 65x + 11 = 65. Show each step.
+  [146] api08:en: What is 54 times 12? Show the procedure.
+  [147] api08:en: Compute the derivative of f(x) = x^4 at x = 8.
+  [148] api08:en: Express 99 as a percentage of 550.
+  [149] api08:en: Arithmetic sequence: a1=46, d=3. Find a2.
+  [150] api08:en: Is 497 prime? Factor it if not.
+  [151] api08:en: Solve: x + y = 461; x - y = 10.
+  [152] api08:en: A car travels 782 km in 7 hours. What is its average speed?
+  [153] api08:en: Solve 38x + 9 = 637. Show each step.
+  [154] api08:en: What is 6 times 5? Show the procedure.
+  [155] api08:en: What is the square root of 15? Verify by squaring.
+  [156] api08:en: Express 13 as a percentage of 740.
+  [157] api08:en: Arithmetic sequence: a1=58, d=4. Find a6.
+  [158] api08:en: Is 559 prime? Factor it if not.
+  [159] api08:en: Solve: x + y = 482; x - y = 96.
+  [160] api08:en: A car travels 169 km in 10 hours. What is its average speed?
+  [161] api08:en: Solve 64x + 8 = 212. Show each step.
+  [162] api08:en: What is 8 times 5? Show the procedure.
+  [163] api08:en: Compute the derivative of f(x) = x^10 at x = 12.
+  [164] api08:en: What is the square root of 288? Verify by squaring.
+  [165] api08:en: Express 30 as a percentage of 213.
+  [166] api08:en: Arithmetic sequence: a1=73, d=5. Find a6.
+  [167] api08:en: Is 225 prime? Factor it if not.
+  [168] api08:en: Compute C(96,4) (binomial coefficient).
+  [169] api08:en: Solve: x + y = 601; x - y = 24.
+  [170] api08:en: A car travels 918 km in 8 hours. What is its average speed?
+  [171] api08:en: Solve 85x + 9 = 349. Show each step.
+  [172] api08:en: What is 23 times 6? Show the procedure.
+  [173] api08:en: Compute the derivative of f(x) = x^2 at x = 4.
+  [174] api08:en: Express 61 as a percentage of 242.
+  [175] api08:en: Arithmetic sequence: a1=3, d=4. Find a2.
+  [176] api08:en: Is 947 prime? Factor it if not.
+  [177] api08:en: Solve: x + y = 172; x - y = 16.
+  [178] api08:en: A car travels 554 km in 2 hours. What is its average speed?
+  [179] api08:en: Solve 49x + 10 = 825. Show each step.
+  [180] api08:en: What is 9 times 5? Show the procedure.
+  [181] api08:en: Compute the derivative of f(x) = x^3 at x = 9.
+  [182] api08:en: What is the square root of 456? Verify by squaring.
+  [183] api08:en: Find the area of a circle with radius 5 cm.
+  [184] api08:en: Express 27 as a percentage of 635.
+  [185] api08:en: Arithmetic sequence: a1=61, d=6. Find a3.
+  [186] api08:en: Is 588 prime? Factor it if not.
+  [187] api08:en: Compute C(221,4) (binomial coefficient).
+  [188] api08:en: Solve: x + y = 27; x - y = 10.
+  [189] api08:en: A car travels 568 km in 3 hours. What is its average speed?
+  [190] api08:en: Solve 67x + 6 = 578. Show each step.
+  [191] api08:en: What is 24 times 3? Show the procedure.
+  [192] api08:en: Compute the derivative of f(x) = x^7 at x = 7.
+  [193] api08:en: What is the square root of 624? Verify by squaring.
+  [194] api08:en: Find the area of a circle with radius 8 cm.
+  [195] api08:en: Express 17 as a percentage of 843.
+  [196] api08:en: Arithmetic sequence: a1=59, d=3. Find a2.
+  [197] api08:en: Is 932 prime? Factor it if not.
+  [198] api08:en: Solve: x + y = 560; x - y = 84.
+  [199] api08:en: A car travels 729 km in 12 hours. What is its average speed?
+  [200] api08:en: Solve 71x + 5 = 535. Show each step.
+  [201] api08:en: What is 39 times 3? Show the procedure.
+  [202] api08:en: Compute the derivative of f(x) = x^9 at x = 2.
+  [203] api08:en: What is the square root of 567? Verify by squaring.
+  [204] api08:en: Express 83 as a percentage of 993.
+  [205] api08:en: Is 376 prime? Factor it if not.
+  [206] api08:en: Compute C(52,2) (binomial coefficient).
+  [207] api08:en: Solve: x + y = 27; x - y = 99.
+  [208] api08:en: A car travels 279 km in 9 hours. What is its average speed?
+  [209] api08:en: Solve 80x + 3 = 983. Show each step.
+  [210] api08:en: What is 70 times 12? Show the procedure.
+  [211] api08:en: Compute the derivative of f(x) = x^3 at x = 10.
+  [212] api08:en: Express 78 as a percentage of 610.
+  [213] api08:en: Arithmetic sequence: a1=92, d=7. Find a6.
+  [214] api08:en: Is 842 prime? Factor it if not.
+  [215] api08:en: Solve: x + y = 540; x - y = 60.
+  [216] api08:en: A car travels 270 km in 3 hours. What is its average speed?
+  [217] api08:en: Solve 46x + 3 = 671. Show each step.
+  [218] api08:en: What is 21 times 8? Show the procedure.
+  [219] api08:en: Compute the derivative of f(x) = x^4 at x = 7.
+  [220] api08:en: Express 36 as a percentage of 626.
+  [221] api08:en: Is 721 prime? Factor it if not.
+  [222] api08:en: Solve: x + y = 132; x - y = 92.
+  [223] api08:en: A car travels 721 km in 6 hours. What is its average speed?
+  [224] api08:en: Solve 37x + 10 = 814. Show each step.
+  [225] api08:en: What is 42 times 2? Show the procedure.
+  [226] api08:en: Compute the derivative of f(x) = x^4 at x = 10.
+  [227] api08:en: Express 58 as a percentage of 239.
+  [228] api08:en: Arithmetic sequence: a1=71, d=2. Find a10.
+  [229] api08:en: Is 916 prime? Factor it if not.
+  [230] api08:en: Compute C(326,5) (binomial coefficient).
+  [231] api08:en: Solve: x + y = 937; x - y = 71.
+  [232] api08:en: A car travels 52 km in 12 hours. What is its average speed?
+  [233] api08:en: Solve 41x + 8 = 501. Show each step.
+  [234] api08:en: What is 43 times 12? Show the procedure.
+  [235] api08:en: Express 30 as a percentage of 395.
+  [236] api08:en: Arithmetic sequence: a1=13, d=3. Find a5.
+  [237] api08:en: Is 134 prime? Factor it if not.
+  [238] api08:en: Solve: x + y = 541; x - y = 67.
+  [239] api08:en: A car travels 740 km in 4 hours. What is its average speed?
+  [240] api08:en: Solve 59x + 7 = 732. Show each step.
+  [241] api08:en: What is 81 times 3? Show the procedure.
+  [242] api08:en: Express 21 as a percentage of 188.
+  [243] api08:en: Arithmetic sequence: a1=31, d=7. Find a9.
+  [244] api08:en: Is 296 prime? Factor it if not.
+  [245] api08:en: Compute C(153,4) (binomial coefficient).
+  [246] api08:en: Solve: x + y = 853; x - y = 80.
+  [247] api08:en: A car travels 760 km in 5 hours. What is its average speed?
+  [248] api08:en: Convert 10 meters to centimeters.
+  [249] api08:en: Solve 95x + 11 = 70. Show each step.
+  [250] api08:en: What is 23 times 7? Show the procedure.
+  [251] api08:en: Express 4 as a percentage of 398.
+  [252] api08:en: Arithmetic sequence: a1=93, d=4. Find a10.
+  [253] api08:en: Is 272 prime? Factor it if not.
+  [254] api08:en: Solve: x + y = 989; x - y = 11.
+  [255] api08:en: A car travels 889 km in 11 hours. What is its average speed?
+  [256] api08:en: Solve 9x + 3 = 798. Show each step.
+  [257] api08:en: What is 43 times 4? Show the procedure.
+  [258] api08:en: Compute the derivative of f(x) = x^10 at x = 10.
+  [259] api08:en: Express 43 as a percentage of 370.
+  [260] api08:en: Arithmetic sequence: a1=64, d=11. Find a2.
+  [261] api08:en: Is 949 prime? Factor it if not.
+  [262] api08:en: Compute C(268,2) (binomial coefficient).
+  [263] api08:en: Solve: x + y = 936; x - y = 13.
+  [264] api08:en: A car travels 952 km in 3 hours. What is its average speed?
+  [265] api08:en: Solve 33x + 6 = 635. Show each step.
+  [266] api08:en: What is 40 times 6? Show the procedure.
+  [267] api08:en: Compute the derivative of f(x) = x^2 at x = 8.
+  [268] api08:en: What is the square root of 75? Verify by squaring.
+  [269] api08:en: Express 20 as a percentage of 815.
+  [270] api08:en: Is 157 prime? Factor it if not.
+  [271] api08:en: Compute C(66,2) (binomial coefficient).
+  [272] api08:en: Solve: x + y = 49; x - y = 42.
+  [273] api08:en: A car travels 836 km in 3 hours. What is its average speed?
+  [274] api08:en: Solve 35x + 10 = 489. Show each step.
+  [275] api08:en: What is 4 times 11? Show the procedure.
+  [276] api08:en: Compute the derivative of f(x) = x^8 at x = 2.
+  [277] api08:en: What is the square root of 207? Verify by squaring.
+  [278] api08:en: Express 58 as a percentage of 917.
+  [279] api08:en: Arithmetic sequence: a1=99, d=12. Find a3.
+  [280] api08:en: Is 768 prime? Factor it if not.
+  [281] api08:en: Compute C(633,4) (binomial coefficient).
+  [282] api08:en: Solve: x + y = 527; x - y = 48.
+  [283] api08:en: A car travels 327 km in 3 hours. What is its average speed?
+  [284] api08:en: Convert 8 meters to centimeters.
+  [285] api08:en: Solve 74x + 8 = 245. Show each step.
+  [286] api08:en: What is 71 times 4? Show the procedure.
+  [287] api08:en: Compute the derivative of f(x) = x^8 at x = 11.
+  [288] api08:en: What is the square root of 625? Verify by squaring.
+  [289] api08:en: Express 15 as a percentage of 629.
+  [290] api08:en: Arithmetic sequence: a1=88, d=6. Find a9.
+  [291] api08:en: Is 439 prime? Factor it if not.
+  [292] api08:en: Solve: x + y = 885; x - y = 69.
+  [293] api08:en: A car travels 305 km in 12 hours. What is its average speed?
+  [294] api08:en: Solve 84x + 7 = 893. Show each step.
+  [295] api08:en: What is 6 times 6? Show the procedure.
+  [296] api08:en: Compute the derivative of f(x) = x^3 at x = 3.
+  [297] api08:en: Find the area of a circle with radius 6 cm.
+  [298] api08:en: Express 56 as a percentage of 361.
+  [299] api08:en: Arithmetic sequence: a1=88, d=11. Find a8.
+  [300] api08:en: Is 289 prime? Factor it if not.
+  [301] api08:en: Compute C(525,2) (binomial coefficient).
+  [302] api08:en: Solve: x + y = 298; x - y = 24.
+  [303] api08:en: A car travels 927 km in 12 hours. What is its average speed?
+  [304] api08:en: Solve 11x + 8 = 722. Show each step.
+  [305] api08:en: What is 75 times 6? Show the procedure.
+  [306] api08:en: Compute the derivative of f(x) = x^10 at x = 2.
+  [307] api08:en: What is the square root of 52? Verify by squaring.
+  [308] api08:en: Express 73 as a percentage of 971.
+  [309] api08:en: Arithmetic sequence: a1=59, d=6. Find a5.
+  [310] api08:en: Is 776 prime? Factor it if not.
+  [311] api08:en: Compute C(983,3) (binomial coefficient).
+  [312] api08:en: Solve: x + y = 339; x - y = 70.
+  [313] api08:en: A car travels 90 km in 7 hours. What is its average speed?
+  [314] api08:en: Solve 63x + 7 = 492. Show each step.
+  [315] api08:en: What is 7 times 9? Show the procedure.
+  [316] api08:en: Express 90 as a percentage of 240.
+  [317] api08:en: Arithmetic sequence: a1=77, d=7. Find a9.
+  [318] api08:en: Is 209 prime? Factor it if not.
+  [319] api08:en: Solve: x + y = 766; x - y = 35.
+  [320] api08:en: A car travels 310 km in 2 hours. What is its average speed?
+  [321] api08:en: Solve 87x + 5 = 260. Show each step.
+  [322] api08:en: What is 93 times 12? Show the procedure.
+  [323] api08:en: What is the square root of 114? Verify by squaring.
+  [324] api08:en: Express 85 as a percentage of 745.
+  [325] api08:en: Arithmetic sequence: a1=42, d=11. Find a6.
+  [326] api08:en: Is 573 prime? Factor it if not.
+  [327] api08:en: Compute C(50,2) (binomial coefficient).
+  [328] api08:en: Solve: x + y = 316; x - y = 97.
+  [329] api08:en: A car travels 669 km in 6 hours. What is its average speed?
+  [330] api08:en: Solve 97x + 8 = 949. Show each step.
+  [331] api08:en: What is 6 times 8? Show the procedure.
+  [332] api08:en: Compute the derivative of f(x) = x^6 at x = 4.
+  [333] api08:en: What is the square root of 37? Verify by squaring.
+  [334] api08:en: Express 78 as a percentage of 608.
+  [335] api08:en: Arithmetic sequence: a1=4, d=2. Find a2.
+  [336] api08:en: Is 313 prime? Factor it if not.
+  [337] api08:en: Solve: x + y = 527; x - y = 65.
+  [338] api08:en: A car travels 533 km in 2 hours. What is its average speed?
+  [339] api08:en: Solve 63x + 12 = 902. Show each step.
+  [340] api08:en: What is 76 times 6? Show the procedure.
+  [341] api08:en: Compute the derivative of f(x) = x^3 at x = 12.
+  [342] api08:en: What is the square root of 300? Verify by squaring.
+  [343] api08:en: Express 71 as a percentage of 304.
+  [344] api08:en: Arithmetic sequence: a1=92, d=9. Find a3.
+  [345] api08:en: Is 338 prime? Factor it if not.
+  [346] api08:en: Solve: x + y = 204; x - y = 55.
+  [347] api08:en: A car travels 500 km in 6 hours. What is its average speed?
+  [348] api08:en: Solve 51x + 6 = 40. Show each step.
+  [349] api08:en: What is 81 times 5? Show the procedure.
+  [350] api08:en: Compute the derivative of f(x) = x^5 at x = 8.
+  [351] api08:en: Express 99 as a percentage of 185.
+  [352] api08:en: Arithmetic sequence: a1=85, d=4. Find a10.
+  [353] api08:en: Is 960 prime? Factor it if not.
+  [354] api08:en: Solve: x + y = 346; x - y = 51.
+  [355] api08:en: A car travels 178 km in 8 hours. What is its average speed?
+  [356] api08:en: Solve 80x + 9 = 811. Show each step.
+  [357] api08:en: What is 40 times 12? Show the procedure.
+  [358] api08:en: Compute the derivative of f(x) = x^8 at x = 10.
+DONE made=358 + fixed rows

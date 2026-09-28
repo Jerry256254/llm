@@ -1,0 +1,102 @@
+
+══════════════════════════════════════════════════════════════════════
+qwen3.5:9b · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  240s
+  40/206  474s
+  60/206  700s
+  80/206  948s
+  100/206  1191s
+  120/206  1418s
+  140/206  1640s
+  160/206  1877s
+  180/206  2109s
+  200/206  2358s
+
+qwen3.5:9b
+  CS→EN     93/103   90.3%
+  EN→CS     86/103   83.5%
+  TOTAL    179/206   86.9%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    stojaté vlnění             → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Target phrase:'
+    elektrický náboj           → 'elek'
+    rezistivita                → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Source phrase:'
+    spojka                     → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Source phrase:'
+    dilatace času              → 'Časová dilatace'
+    iontová vazba              → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Target phrase:'
+    pufr                       → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Target languag'
+    galvanický článek          → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Source phrase:'
+    polymerace                 → 'polymeryzace'
+    amorfní látka              → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Source phrase:'
+    mocenství                  → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Question: "Jak'
+    jadérko                    → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Target word: "'
+  → /home/admin/llm/outputs/bench/czterms_qwen3.5_9b.json
+
+══════════════════════════════════════════════════════════════════════
+kuclab-hertz-gloss · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  282s
+  40/206  559s
+  60/206  839s
+  80/206  1116s
+  100/206  1397s
+  120/206  1673s
+  140/206  1954s
+  160/206  2229s
+  180/206  2505s
+  200/206  2784s
+
+kuclab-hertz-gloss
+  CS→EN     93/103   90.3%
+  EN→CS     85/103   82.5%
+  TOTAL    178/206   86.4%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    Coriolisova síla           → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    stojaté vlnění             → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    spojka                     → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    elektronegativita          → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    iontová vazba              → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    elektrolyt                 → 'elektrolit'
+    polymerace                 → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    krystalizace               → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    absorpce                   → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    mocenství                  → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    jadérko                    → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    genetický drift            → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+  → /home/admin/llm/outputs/bench/czterms_kuclab-hertz-gloss.json
+
+══════════════════════════════════════════════════════════════════════
+kuclab-hertz-pilot3 · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  173s
+  40/206  211s
+  60/206  257s
+  80/206  312s
+  100/206  369s
+  120/206  413s
+  140/206  458s
+  160/206  494s
+  180/206  521s
+  200/206  557s
+
+kuclab-hertz-pilot3
+  CS→EN     53/103   51.5%
+  EN→CS     29/103   28.2%
+  TOTAL     82/206   39.8%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    výkon                      → '```python def power(x): return x ** 2 ```'
+    valivý odpor               → 'Rolling resistance = majaraja teritori majorja. V překladu do češtiny '
+    Coriolisova síla           → 'Coriolis je setrvačná síla působící na tělesa v rotující neinerciální '
+    těžiště                    → 'Měl jsem poznat známý pojem z fyziky tělesa na základě gravitační síly'
+    vlnová délka               → 'Vlnění vln nebo jiný výraz s vlň. Vlnění vln a jiný význam s vlní.'
+    stojaté vlnění             → 'Vztlaková síla – aerodynamická odporová síla (aerodynamic drag) je výs'
+    rezistivita                → '```python def resistivity: """Definiční text v češtinu a angličtinu se'
+    magnetická indukce         → 'Mluvím: `magnetic flux density` a to anglicky i česky. Jiné slovo v če'
+    stejnosměrný proud         → 'Přímný proudový tok nebo d.c.'
+    měrná tepelná kapacita     → '```python def specific_heat_capacity(a: float) -> float: return a ```'
+    izotermický děj            → 'isothermal znamená izotermický. izolovat znamená izolovat.'
+    účinnost                   → 'Všeobecná účnost (vlastnosti) je obecný pojem užívaný ve filosofii a p'
+  → /home/admin/llm/outputs/bench/czterms_kuclab-hertz-pilot3.json

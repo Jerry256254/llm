@@ -1,0 +1,34 @@
+
+══════════════════════════════════════════════════════════════════════
+qwen2.5:14b-instruct · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  259s
+  40/206  265s
+  60/206  270s
+  80/206  284s
+  100/206  289s
+  120/206  294s
+  140/206  300s
+  160/206  305s
+  180/206  311s
+  200/206  316s
+
+qwen2.5:14b-instruct
+  CS→EN     82/103   79.6%
+  EN→CS     49/103   47.6%
+  TOTAL    131/206   63.6%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    výkon                      → 'Energie'
+    valivý odpor               → 'odpor vozidla'
+    Coriolisova síla           → 'síla Coriolise'
+    frekvence                  → 'tzv. kmitočty'
+    stojaté vlnění             → 'stojatá vlna'
+    rezistivita                → 'odpornost'
+    magnetická indukce         → 'hloubka magnetického pole'
+    stejnosměrný proud         → 'stromodělný proud'
+    měrná tepelná kapacita     → 'teplotní zápornost_capacity'
+    izotermický děj            → 'izotermický proces'
+    účinnost                   → 'efektivita'
+    povrchové napětí           → 'napětí plochy'
+  → /home/admin/llm/outputs/bench/czterms_qwen2.5_14b-instruct.json

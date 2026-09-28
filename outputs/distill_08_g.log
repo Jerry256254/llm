@@ -1,0 +1,1150 @@
+  filtered to domains ['bio', 'czech', 'design']: 1700 prompts
+  [1] api08:bio: Vysvětli, jak funguje lidské oko (čočka, sítnice, tyčinky/čí
+  [2] api08:bio: Co je to ATP a proč se jí říká energetická měna buňky?
+  [3] api08:bio: Vysvětli rozdíl mezi savci, ptáky a plazy s příklady.
+  [4] api08:bio: Jak funguje trávení škrobu od úst po střevo?
+  [5] api08:bio: Co je to kmenová buňka a kde se v těle nacházejí?
+  [6] api08:bio: Vysvětli, jak rostliny dýchají v noci (bez fotosyntézy).
+  [7] api08:bio: Co je to potravní pyramida a proč má málo pater?
+  [8] api08:bio: Vysvětli funkci jater: 3 hlavních úkolů.
+  [9] api08:bio: Jak vznikají dvojčata jednovaječná a dvojvaječná?
+  [10] api08:bio: Co je to alergie na úrovni imunitního systému?
+  [11] api08:bio: Vysvětli, jak hadi vnímají teplo a k čemu jim to je.
+  [12] api08:bio: Proč potřebují svaly kyslík a co se děje při jeho nedostatku
+  [13] api08:bio: Co je to hibernace a jak ji medvědi přežívají?
+  [14] api08:bio: Vysvětli koloběh dusíku v přírodě.
+  [15] api08:bio: Jak funguje sluch: od boltce po sluchový nerv.
+  [16] api08:bio: Proč člověk potřebuje spát 6 hodin? Co se děje v mozku?
+  [17] api08:bio: Vysvětli, jak funguje čich: od molekuly po vjem.
+  [18] api08:bio: Proč mají ptáci duté kosti? Vysvětli 10 výhod.
+  [19] api08:bio: Jak se rostlina brání škůdcům bez chemie? Uveď příklady.
+  [20] api08:bio: Vysvětli, proč je krev červená a co ji barví.
+  [21] api08:bio: Jak funguje rovnováha ucha? Popiš polokruhovité kanálky.
+  [22] api08:bio: Proč se listy na podzim barví? Vysvětli chlorofyl a karoteno
+  [23] api08:bio: Vysvětli rozdíl mezi teplokrevnými a studenokrevnými živočic
+  [24] api08:bio: Jak vzniká svalová horečka po cvičení?
+  [25] api08:bio: Proč kýcháme? Popiš reflexní oblouk.
+  [26] api08:bio: Vysvětli, jak včely komunikují trasu k nektaru.
+  [27] api08:bio: Jak funguje fotosyntéza u řas jinak než u stromů?
+  [28] api08:bio: Klidový tep je asi 71 tepů za minutu. Co se děje při jednom 
+  [29] api08:bio: Plíce mají plochu asi 72 m². Vysvětli výměnu plynů v plicníc
+  [30] api08:bio: Denní potřeba bílkovin je asi 67 g. Proč je tělo potřebuje? 
+  [31] api08:bio: Vysvětli funkci jater: 5 hlavních úkolů.
+  [32] api08:bio: Proč člověk potřebuje spát 12 hodin? Co se děje v mozku?
+  [33] api08:bio: Proč mají ptáci duté kosti? Vysvětli 4 výhod.
+  [34] api08:bio: Klidový tep je asi 80 tepů za minutu. Co se děje při jednom 
+  [35] api08:bio: Krevní tlak 114/80: co znamenají obě čísla?
+  [36] api08:bio: Proč člověk potřebuje spát 11 hodin? Co se děje v mozku?
+  [37] api08:bio: Denní potřeba bílkovin je asi 111 g. Proč je tělo potřebuje?
+  [38] api08:bio: Krevní tlak 128/74: co znamenají obě čísla?
+  [39] api08:bio: Vysvětli funkci jater: 2 hlavních úkolů.
+  [40] api08:bio: Proč člověk potřebuje spát 5 hodin? Co se děje v mozku?
+  [41] api08:bio: Proč mají ptáci duté kosti? Vysvětli 7 výhod.
+  [42] api08:bio: Denní potřeba bílkovin je asi 81 g. Proč je tělo potřebuje? 
+  [43] api08:bio: Krevní tlak 120/82: co znamenají obě čísla?
+  [44] api08:bio: Vysvětli funkci jater: 4 hlavních úkolů.
+  [45] api08:bio: Proč mají ptáci duté kosti? Vysvětli 6 výhod.
+  [46] api08:bio: Klidový tep je asi 55 tepů za minutu. Co se děje při jednom 
+  [47] api08:bio: Plíce mají plochu asi 56 m². Vysvětli výměnu plynů v plicníc
+  [48] api08:bio: Proč člověk potřebuje spát 7 hodin? Co se děje v mozku?
+  [49] api08:bio: Plíce mají plochu asi 120 m². Vysvětli výměnu plynů v plicní
+  [50] api08:bio: Krevní tlak 112/81: co znamenají obě čísla?
+  [51] api08:bio: Vysvětli funkci jater: 9 hlavních úkolů.
+  [52] api08:bio: Proč člověk potřebuje spát 4 hodin? Co se děje v mozku?
+  [53] api08:bio: Plíce mají plochu asi 79 m². Vysvětli výměnu plynů v plicníc
+  [54] api08:bio: Denní potřeba bílkovin je asi 116 g. Proč je tělo potřebuje?
+  [55] api08:bio: Proč člověk potřebuje spát 8 hodin? Co se děje v mozku?
+  [56] api08:bio: Proč člověk potřebuje spát 2 hodin? Co se děje v mozku?
+  [57] api08:bio: Proč mají ptáci duté kosti? Vysvětli 3 výhod.
+  [58] api08:bio: Klidový tep je asi 82 tepů za minutu. Co se děje při jednom 
+  [59] api08:bio: Vysvětli funkci jater: 7 hlavních úkolů.
+  [60] api08:bio: Proč mají ptáci duté kosti? Vysvětli 5 výhod.
+  [61] api08:bio: Plíce mají plochu asi 117 m². Vysvětli výměnu plynů v plicní
+  [62] api08:bio: Proč mají ptáci duté kosti? Vysvětli 8 výhod.
+  [63] api08:bio: Klidový tep je asi 56 tepů za minutu. Co se děje při jednom 
+  [64] api08:bio: Krevní tlak 129/79: co znamenají obě čísla?
+  [65] api08:bio: Proč mají ptáci duté kosti? Vysvětli 2 výhod.
+  [66] api08:bio: Plíce mají plochu asi 80 m². Vysvětli výměnu plynů v plicníc
+  [67] api08:bio: Denní potřeba bílkovin je asi 86 g. Proč je tělo potřebuje? 
+  [68] api08:bio: Proč mají ptáci duté kosti? Vysvětli 9 výhod.
+  [69] api08:bio: Plíce mají plochu asi 103 m². Vysvětli výměnu plynů v plicní
+  [70] api08:bio: Krevní tlak 119/78: co znamenají obě čísla?
+  [71] api08:bio: Proč člověk potřebuje spát 9 hodin? Co se děje v mozku?
+  [72] api08:bio: Plíce mají plochu asi 93 m². Vysvětli výměnu plynů v plicníc
+  [73] api08:bio: Proč člověk potřebuje spát 3 hodin? Co se děje v mozku?
+  [74] api08:bio: Denní potřeba bílkovin je asi 60 g. Proč je tělo potřebuje? 
+  [75] api08:bio: Krevní tlak 128/76: co znamenají obě čísla?
+  [76] api08:bio: Klidový tep je asi 72 tepů za minutu. Co se děje při jednom 
+  [77] api08:bio: Denní potřeba bílkovin je asi 104 g. Proč je tělo potřebuje?
+  [78] api08:bio: Krevní tlak 123/71: co znamenají obě čísla?
+  [79] api08:bio: Klidový tep je asi 73 tepů za minutu. Co se děje při jednom 
+  [80] api08:bio: Krevní tlak 120/83: co znamenají obě čísla?
+  [81] api08:bio: Vysvětli funkci jater: 6 hlavních úkolů.
+  [82] api08:bio: Klidový tep je asi 60 tepů za minutu. Co se děje při jednom 
+  [83] api08:bio: Vysvětli funkci jater: 8 hlavních úkolů.
+  [84] api08:bio: Vysvětli funkci jater: 10 hlavních úkolů.
+  [85] api08:bio: Denní potřeba bílkovin je asi 108 g. Proč je tělo potřebuje?
+  [86] api08:bio: Tělesná teplota 37.5 °C: jak tělo udržuje stálou teplotu? Uv
+  [87] api08:bio: Krevní tlak 130/71: co znamenají obě čísla?
+  [88] api08:bio: Klidový tep je asi 61 tepů za minutu. Co se děje při jednom 
+  [89] api08:bio: Klidový tep je asi 93 tepů za minutu. Co se děje při jednom 
+  [90] api08:bio: Proč člověk potřebuje spát 10 hodin? Co se děje v mozku?
+  [91] api08:bio: Plíce mají plochu asi 78 m². Vysvětli výměnu plynů v plicníc
+  [92] api08:bio: Denní potřeba bílkovin je asi 100 g. Proč je tělo potřebuje?
+  [93] api08:bio: Denní potřeba bílkovin je asi 52 g. Proč je tělo potřebuje? 
+  [94] api08:bio: Krevní tlak 118/82: co znamenají obě čísla?
+  [95] api08:bio: Klidový tep je asi 59 tepů za minutu. Co se děje při jednom 
+  [96] api08:bio: Krevní tlak 127/85: co znamenají obě čísla?
+  [97] api08:bio: Plíce mají plochu asi 64 m². Vysvětli výměnu plynů v plicníc
+  [98] api08:bio: Denní potřeba bílkovin je asi 106 g. Proč je tělo potřebuje?
+  [99] api08:bio: Denní potřeba bílkovin je asi 82 g. Proč je tělo potřebuje? 
+  [100] api08:bio: Krevní tlak 113/81: co znamenají obě čísla?
+  [101] api08:bio: Krevní tlak 123/75: co znamenají obě čísla?
+  [102] api08:bio: Plíce mají plochu asi 107 m². Vysvětli výměnu plynů v plicní
+  [103] api08:bio: Krevní tlak 121/75: co znamenají obě čísla?
+  [104] api08:bio: Krevní tlak 110/85: co znamenají obě čísla?
+  [105] api08:bio: Krevní tlak 122/82: co znamenají obě čísla?
+  [106] api08:bio: Klidový tep je asi 86 tepů za minutu. Co se děje při jednom 
+  [107] api08:bio: Denní potřeba bílkovin je asi 91 g. Proč je tělo potřebuje? 
+  [108] api08:bio: Krevní tlak 117/84: co znamenají obě čísla?
+  [109] api08:bio: Denní potřeba bílkovin je asi 98 g. Proč je tělo potřebuje? 
+  [110] api08:bio: Klidový tep je asi 69 tepů za minutu. Co se děje při jednom 
+  [111] api08:bio: Plíce mají plochu asi 52 m². Vysvětli výměnu plynů v plicníc
+  [112] api08:bio: Krevní tlak 119/82: co znamenají obě čísla?
+  [113] api08:bio: Plíce mají plochu asi 116 m². Vysvětli výměnu plynů v plicní
+  [114] api08:bio: Krevní tlak 127/84: co znamenají obě čísla?
+  [115] api08:bio: Krevní tlak 127/80: co znamenají obě čísla?
+  [116] api08:bio: Plíce mají plochu asi 119 m². Vysvětli výměnu plynů v plicní
+  [117] api08:bio: Denní potřeba bílkovin je asi 110 g. Proč je tělo potřebuje?
+  [118] api08:bio: Krevní tlak 116/80: co znamenají obě čísla?
+  [119] api08:bio: Plíce mají plochu asi 113 m². Vysvětli výměnu plynů v plicní
+  [120] api08:bio: Plíce mají plochu asi 66 m². Vysvětli výměnu plynů v plicníc
+  [121] api08:bio: Krevní tlak 128/84: co znamenají obě čísla?
+  [122] api08:bio: Krevní tlak 111/81: co znamenají obě čísla?
+  [123] api08:bio: Krevní tlak 128/82: co znamenají obě čísla?
+  [124] api08:bio: Krevní tlak 114/85: co znamenají obě čísla?
+  [125] api08:bio: Denní potřeba bílkovin je asi 40 g. Proč je tělo potřebuje? 
+  [126] api08:bio: Krevní tlak 121/70: co znamenají obě čísla?
+  [127] api08:bio: Krevní tlak 120/78: co znamenají obě čísla?
+  [128] api08:bio: Krevní tlak 127/82: co znamenají obě čísla?
+  [129] api08:bio: Plíce mají plochu asi 63 m². Vysvětli výměnu plynů v plicníc
+  [130] api08:bio: Plíce mají plochu asi 58 m². Vysvětli výměnu plynů v plicníc
+  [131] api08:bio: Krevní tlak 128/83: co znamenají obě čísla?
+  [132] api08:bio: Krevní tlak 112/82: co znamenají obě čísla?
+  [133] api08:bio: Krevní tlak 129/70: co znamenají obě čísla?
+  [134] api08:bio: Denní potřeba bílkovin je asi 49 g. Proč je tělo potřebuje? 
+  [135] api08:bio: Krevní tlak 112/83: co znamenají obě čísla?
+  [136] api08:bio: Plíce mají plochu asi 87 m². Vysvětli výměnu plynů v plicníc
+  [137] api08:bio: Krevní tlak 130/81: co znamenají obě čísla?
+  [138] api08:bio: Krevní tlak 113/80: co znamenají obě čísla?
+  [139] api08:bio: Denní potřeba bílkovin je asi 75 g. Proč je tělo potřebuje? 
+  [140] api08:bio: Krevní tlak 128/77: co znamenají obě čísla?
+  [141] api08:bio: Krevní tlak 117/74: co znamenají obě čísla?
+  [142] api08:bio: Denní potřeba bílkovin je asi 103 g. Proč je tělo potřebuje?
+  [143] api08:bio: Krevní tlak 130/84: co znamenají obě čísla?
+  [144] api08:bio: Krevní tlak 110/80: co znamenají obě čísla?
+  [145] api08:bio: Krevní tlak 123/74: co znamenají obě čísla?
+  [146] api08:bio: Plíce mají plochu asi 85 m². Vysvětli výměnu plynů v plicníc
+  [147] api08:bio: Lidské srdce přečerpá asi 6700 litrů krve denně. Vysvětli ma
+  [148] api08:bio: Krevní tlak 121/71: co znamenají obě čísla?
+  [149] api08:bio: Krevní tlak 127/75: co znamenají obě čísla?
+  [150] api08:bio: Krevní tlak 130/75: co znamenají obě čísla?
+  [151] api08:bio: Krevní tlak 113/78: co znamenají obě čísla?
+  [152] api08:bio: Krevní tlak 111/83: co znamenají obě čísla?
+  [153] api08:bio: Krevní tlak 126/83: co znamenají obě čísla?
+  [154] api08:bio: Krevní tlak 128/81: co znamenají obě čísla?
+  [155] api08:bio: Krevní tlak 119/85: co znamenají obě čísla?
+  [156] api08:bio: Krevní tlak 127/71: co znamenají obě čísla?
+  [157] api08:bio: Krevní tlak 111/73: co znamenají obě čísla?
+  [158] api08:bio: Krevní tlak 114/75: co znamenají obě čísla?
+  [159] api08:bio: Krevní tlak 125/70: co znamenají obě čísla?
+  [160] api08:bio: Krevní tlak 121/85: co znamenají obě čísla?
+  [161] api08:bio: Plíce mají plochu asi 62 m². Vysvětli výměnu plynů v plicníc
+  [162] api08:bio: Denní potřeba bílkovin je asi 85 g. Proč je tělo potřebuje? 
+  [163] api08:bio: Krevní tlak 121/82: co znamenají obě čísla?
+  [164] api08:bio: Krevní tlak 117/73: co znamenají obě čísla?
+  [165] api08:bio: Krevní tlak 116/84: co znamenají obě čísla?
+  [166] api08:bio: Krevní tlak 112/84: co znamenají obě čísla?
+  [167] api08:bio: Plíce mají plochu asi 97 m². Vysvětli výměnu plynů v plicníc
+  [168] api08:bio: Krevní tlak 130/74: co znamenají obě čísla?
+  [169] api08:bio: Denní potřeba bílkovin je asi 99 g. Proč je tělo potřebuje? 
+  [170] api08:bio: Krevní tlak 113/74: co znamenají obě čísla?
+  [171] api08:bio: Denní potřeba bílkovin je asi 94 g. Proč je tělo potřebuje? 
+  [172] api08:bio: Plíce mají plochu asi 81 m². Vysvětli výměnu plynů v plicníc
+  [173] api08:bio: Krevní tlak 130/78: co znamenají obě čísla?
+  [174] api08:bio: Krevní tlak 117/82: co znamenají obě čísla?
+  [175] api08:bio: Krevní tlak 130/79: co znamenají obě čísla?
+  [176] api08:bio: Krevní tlak 122/70: co znamenají obě čísla?
+  [177] api08:bio: Denní potřeba bílkovin je asi 47 g. Proč je tělo potřebuje? 
+  [178] api08:bio: Krevní tlak 129/83: co znamenají obě čísla?
+  [179] api08:bio: Krevní tlak 127/81: co znamenají obě čísla?
+  [180] api08:bio: Krevní tlak 121/84: co znamenají obě čísla?
+  [181] api08:bio: Krevní tlak 126/70: co znamenají obě čísla?
+  [182] api08:bio: Krevní tlak 125/73: co znamenají obě čísla?
+  [183] api08:bio: Krevní tlak 129/72: co znamenají obě čísla?
+  [184] api08:bio: Krevní tlak 122/80: co znamenají obě čísla?
+  [185] api08:bio: Krevní tlak 111/71: co znamenají obě čísla?
+  [186] api08:bio: Krevní tlak 121/81: co znamenají obě čísla?
+  [187] api08:bio: Krevní tlak 125/81: co znamenají obě čísla?
+  [188] api08:bio: Krevní tlak 110/84: co znamenají obě čísla?
+  [189] api08:bio: Krevní tlak 118/85: co znamenají obě čísla?
+  [190] api08:bio: Plíce mají plochu asi 51 m². Vysvětli výměnu plynů v plicníc
+  [191] api08:bio: Krevní tlak 111/82: co znamenají obě čísla?
+  [192] api08:bio: Krevní tlak 127/72: co znamenají obě čísla?
+  [193] api08:bio: Denní potřeba bílkovin je asi 80 g. Proč je tělo potřebuje? 
+  [194] api08:bio: Krevní tlak 116/76: co znamenají obě čísla?
+  [195] api08:bio: Krevní tlak 129/74: co znamenají obě čísla?
+  [196] api08:bio: Krevní tlak 129/81: co znamenají obě čísla?
+  [197] api08:bio: Denní potřeba bílkovin je asi 90 g. Proč je tělo potřebuje? 
+  [198] api08:bio: Krevní tlak 125/85: co znamenají obě čísla?
+  [199] api08:bio: Krevní tlak 120/85: co znamenají obě čísla?
+  [200] api08:bio: Krevní tlak 130/73: co znamenají obě čísla?
+  [201] api08:bio: Krevní tlak 112/80: co znamenají obě čísla?
+  [202] api08:bio: Krevní tlak 125/74: co znamenají obě čísla?
+  [203] api08:bio: Krevní tlak 128/78: co znamenají obě čísla?
+  [204] api08:bio: Denní potřeba bílkovin je asi 87 g. Proč je tělo potřebuje? 
+  [205] api08:bio: Krevní tlak 123/80: co znamenají obě čísla?
+  [206] api08:bio: Krevní tlak 124/83: co znamenají obě čísla?
+  [207] api08:bio: Krevní tlak 128/80: co znamenají obě čísla?
+  [208] api08:bio: Krevní tlak 118/84: co znamenají obě čísla?
+  [209] api08:bio: Krevní tlak 110/81: co znamenají obě čísla?
+  [210] api08:bio: Krevní tlak 110/82: co znamenají obě čísla?
+  [211] api08:bio: Krevní tlak 119/83: co znamenají obě čísla?
+  [212] api08:bio: Krevní tlak 130/70: co znamenají obě čísla?
+  [213] api08:bio: Krevní tlak 124/78: co znamenají obě čísla?
+  [214] api08:bio: Krevní tlak 117/85: co znamenají obě čísla?
+  [215] api08:bio: Krevní tlak 118/83: co znamenají obě čísla?
+  [216] api08:bio: Denní potřeba bílkovin je asi 119 g. Proč je tělo potřebuje?
+  [217] api08:bio: Krevní tlak 125/76: co znamenají obě čísla?
+  [218] api08:bio: Krevní tlak 124/77: co znamenají obě čísla?
+  [219] api08:bio: Krevní tlak 116/81: co znamenají obě čísla?
+  [220] api08:bio: Krevní tlak 129/76: co znamenají obě čísla?
+  [221] api08:bio: Krevní tlak 114/81: co znamenají obě čísla?
+  [222] api08:bio: Krevní tlak 122/73: co znamenají obě čísla?
+  [223] api08:bio: Krevní tlak 124/80: co znamenají obě čísla?
+  [224] api08:bio: Krevní tlak 126/81: co znamenají obě čísla?
+  [225] api08:bio: Plíce mají plochu asi 94 m². Vysvětli výměnu plynů v plicníc
+  [226] api08:bio: Krevní tlak 129/80: co znamenají obě čísla?
+  [227] api08:bio: Krevní tlak 125/72: co znamenají obě čísla?
+  [228] api08:bio: Krevní tlak 121/80: co znamenají obě čísla?
+  [229] api08:bio: Krevní tlak 130/76: co znamenají obě čísla?
+  [230] api08:bio: Krevní tlak 124/75: co znamenají obě čísla?
+  [231] api08:bio: Krevní tlak 113/82: co znamenají obě čísla?
+  [232] api08:bio: Krevní tlak 130/83: co znamenají obě čísla?
+  [233] api08:bio: Krevní tlak 124/71: co znamenají obě čísla?
+  [234] api08:bio: Krevní tlak 111/84: co znamenají obě čísla?
+  [235] api08:bio: Krevní tlak 128/73: co znamenají obě čísla?
+  [236] api08:bio: Krevní tlak 124/82: co znamenají obě čísla?
+  [237] api08:bio: Krevní tlak 129/85: co znamenají obě čísla?
+  [238] api08:bio: Krevní tlak 124/85: co znamenají obě čísla?
+  [239] api08:bio: Krevní tlak 111/80: co znamenají obě čísla?
+  [240] api08:bio: Krevní tlak 128/71: co znamenají obě čísla?
+  [241] api08:bio: Krevní tlak 122/83: co znamenají obě čísla?
+  [242] api08:bio: Krevní tlak 127/74: co znamenají obě čísla?
+  [243] api08:bio: Krevní tlak 124/84: co znamenají obě čísla?
+  [244] api08:bio: Krevní tlak 130/85: co znamenají obě čísla?
+  [245] api08:bio: Krevní tlak 116/71: co znamenají obě čísla?
+  [246] api08:bio: Krevní tlak 129/84: co znamenají obě čísla?
+  [247] api08:bio: Krevní tlak 120/74: co znamenají obě čísla?
+  [248] api08:bio: Krevní tlak 125/77: co znamenají obě čísla?
+  [249] api08:design: Navrhni hero sekci pro SaaS s cenou od 102 Kč/měs. Napiš Tai
+  [250] api08:design: Navrhni pricing se 3 tarify (140, 2240, 900 Kč). Struktura +
+  [251] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 388 kategori
+  [252] api08:design: Landing pro aplikaci s 3700 uživateli: sekce, hierarchie, CT
+  [253] api08:design: Navrhni hero sekci pro SaaS s cenou od 80 Kč/měs. Napiš Tail
+  [254] api08:design: Navrhni pricing se 3 tarify (160, 1200, 800 Kč). Struktura +
+  [255] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 567 kategori
+  [256] api08:design: Landing pro aplikaci s 87300 uživateli: sekce, hierarchie, C
+  [257] api08:design: Navrhni hero sekci pro SaaS s cenou od 760 Kč/měs. Napiš Tai
+  [258] api08:design: Navrhni pricing se 3 tarify (920, 4220, 600 Kč). Struktura +
+  [259] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 127 kategori
+  [260] api08:design: Landing pro aplikaci s 66200 uživateli: sekce, hierarchie, C
+  [261] api08:design: Navrhni hero sekci pro SaaS s cenou od 309 Kč/měs. Napiš Tai
+  [262] api08:design: Navrhni pricing se 3 tarify (630, 260, 900 Kč). Struktura + 
+  [263] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 620 kategori
+  [264] api08:design: Landing pro aplikaci s 63100 uživateli: sekce, hierarchie, C
+  [265] api08:design: Navrhni pricing se 3 tarify (590, 3380, 800 Kč). Struktura +
+  [266] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 906 kategori
+  [267] api08:design: Landing pro aplikaci s 20200 uživateli: sekce, hierarchie, C
+  [268] api08:design: Navrhni pricing se 3 tarify (370, 2790, 300 Kč). Struktura +
+  [269] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 584 kategori
+  [270] api08:design: Landing pro aplikaci s 69000 uživateli: sekce, hierarchie, C
+  [271] api08:design: Navrhni hero sekci pro SaaS s cenou od 533 Kč/měs. Napiš Tai
+  [272] api08:design: Navrhni pricing se 3 tarify (370, 3670, 900 Kč). Struktura +
+  [273] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 125 kategori
+  [274] api08:design: Landing pro aplikaci s 25500 uživateli: sekce, hierarchie, C
+  [275] api08:design: Navrhni pricing se 3 tarify (430, 3630, 800 Kč). Struktura +
+  [276] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 767 kategori
+  [277] api08:design: Landing pro aplikaci s 64500 uživateli: sekce, hierarchie, C
+  [278] api08:design: Navrhni hero sekci pro SaaS s cenou od 977 Kč/měs. Napiš Tai
+  [279] api08:design: Navrhni pricing se 3 tarify (800, 2390, 200 Kč). Struktura +
+  [280] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 454 kategori
+  [281] api08:design: Landing pro aplikaci s 76800 uživateli: sekce, hierarchie, C
+  [282] api08:design: Navrhni hero sekci pro SaaS s cenou od 679 Kč/měs. Napiš Tai
+  [283] api08:design: Navrhni pricing se 3 tarify (670, 3320, 200 Kč). Struktura +
+  [284] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 912 kategori
+  [285] api08:design: Landing pro aplikaci s 69800 uživateli: sekce, hierarchie, C
+  [286] api08:design: Navrhni hero sekci pro SaaS s cenou od 434 Kč/měs. Napiš Tai
+  [287] api08:design: Navrhni pricing se 3 tarify (440, 5590, 1000 Kč). Struktura 
+  [288] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 364 kategori
+  [289] api08:design: Navrhni barevnou paletu pro voda-tematický web + Tailwind co
+  [290] api08:design: Navrhni hero sekci pro SaaS s cenou od 110 Kč/měs. Napiš Tai
+  [291] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'voda'? Uveď
+  [292] api08:design: Navrhni pricing se 3 tarify (870, 5120, 500 Kč). Struktura +
+  [293] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 829 kategori
+  [294] api08:design: Landing pro aplikaci s 36900 uživateli: sekce, hierarchie, C
+  [295] api08:design: Navrhni hero sekci pro SaaS s cenou od 780 Kč/měs. Napiš Tai
+  [296] api08:design: Navrhni pricing se 3 tarify (290, 5800, 400 Kč). Struktura +
+  [297] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 370 kategori
+  [298] api08:design: Navrhni pricing se 3 tarify (400, 1300, 900 Kč). Struktura +
+  [299] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 564 kategori
+  [300] api08:design: Landing pro aplikaci s 22800 uživateli: sekce, hierarchie, C
+  [301] api08:design: Navrhni hero sekci pro SaaS s cenou od 986 Kč/měs. Napiš Tai
+  [302] api08:design: Navrhni pricing se 3 tarify (770, 7520, 600 Kč). Struktura +
+  [303] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 284 kategori
+  [304] api08:design: Landing pro aplikaci s 59000 uživateli: sekce, hierarchie, C
+  [305] api08:design: Navrhni hero sekci pro SaaS s cenou od 591 Kč/měs. Napiš Tai
+  [306] api08:design: Navrhni pricing se 3 tarify (200, 1990, 300 Kč). Struktura +
+  [307] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 722 kategori
+  [308] api08:design: Landing pro aplikaci s 71600 uživateli: sekce, hierarchie, C
+  [309] api08:design: Navrhni hero sekci pro SaaS s cenou od 27 Kč/měs. Napiš Tail
+  [310] api08:design: Navrhni pricing se 3 tarify (880, 4110, 1000 Kč). Struktura 
+  [311] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 386 kategori
+  [312] api08:design: Landing pro aplikaci s 99700 uživateli: sekce, hierarchie, C
+  [313] api08:design: Navrhni hero sekci pro SaaS s cenou od 736 Kč/měs. Napiš Tai
+  [314] api08:design: Navrhni pricing se 3 tarify (790, 3980, 700 Kč). Struktura +
+  [315] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 128 kategori
+  [316] api08:design: Landing pro aplikaci s 93200 uživateli: sekce, hierarchie, C
+  [317] api08:design: Navrhni hero sekci pro SaaS s cenou od 357 Kč/měs. Napiš Tai
+  [318] api08:design: Navrhni pricing se 3 tarify (730, 2810, 900 Kč). Struktura +
+  [319] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 211 kategori
+  [320] api08:design: Landing pro aplikaci s 3600 uživateli: sekce, hierarchie, CT
+  [321] api08:design: Navrhni hero sekci pro SaaS s cenou od 946 Kč/měs. Napiš Tai
+  [322] api08:design: Navrhni pricing se 3 tarify (500, 4010, 1000 Kč). Struktura 
+  [323] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 394 kategori
+  [324] api08:design: Landing pro aplikaci s 80800 uživateli: sekce, hierarchie, C
+  [325] api08:design: Navrhni hero sekci pro SaaS s cenou od 20 Kč/měs. Napiš Tail
+  [326] api08:design: Navrhni pricing se 3 tarify (840, 9150, 300 Kč). Struktura +
+  [327] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 446 kategori
+  [328] api08:design: Landing pro aplikaci s 93700 uživateli: sekce, hierarchie, C
+  [329] api08:design: Navrhni hero sekci pro SaaS s cenou od 231 Kč/měs. Napiš Tai
+  [330] api08:design: Navrhni pricing se 3 tarify (390, 6420, 900 Kč). Struktura +
+  [331] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 641 kategori
+  [332] api08:design: Landing pro aplikaci s 9100 uživateli: sekce, hierarchie, CT
+  [333] api08:design: Navrhni hero sekci pro SaaS s cenou od 268 Kč/měs. Napiš Tai
+  [334] api08:design: Navrhni pricing se 3 tarify (950, 690, 600 Kč). Struktura + 
+  [335] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 76 kategorie
+  [336] api08:design: Landing pro aplikaci s 78400 uživateli: sekce, hierarchie, C
+  [337] api08:design: Navrhni hero sekci pro SaaS s cenou od 886 Kč/měs. Napiš Tai
+  [338] api08:design: Navrhni pricing se 3 tarify (90, 9490, 900 Kč). Struktura + 
+  [339] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 46 kategorie
+  [340] api08:design: Landing pro aplikaci s 91700 uživateli: sekce, hierarchie, C
+  [341] api08:design: Navrhni hero sekci pro SaaS s cenou od 900 Kč/měs. Napiš Tai
+  [342] api08:design: Navrhni pricing se 3 tarify (290, 8550, 600 Kč). Struktura +
+  [343] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 192 kategori
+  [344] api08:design: Landing pro aplikaci s 51200 uživateli: sekce, hierarchie, C
+  [345] api08:design: Navrhni hero sekci pro SaaS s cenou od 219 Kč/měs. Napiš Tai
+  [346] api08:design: Navrhni pricing se 3 tarify (640, 9480, 1000 Kč). Struktura 
+  [347] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 779 kategori
+  [348] api08:design: Landing pro aplikaci s 62700 uživateli: sekce, hierarchie, C
+  [349] api08:design: Navrhni hero sekci pro SaaS s cenou od 444 Kč/měs. Napiš Tai
+  [350] api08:design: Navrhni pricing se 3 tarify (90, 9160, 400 Kč). Struktura + 
+  [351] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 422 kategori
+  [352] api08:design: Landing pro aplikaci s 68000 uživateli: sekce, hierarchie, C
+  [353] api08:design: Navrhni hero sekci pro SaaS s cenou od 153 Kč/měs. Napiš Tai
+  [354] api08:design: Navrhni pricing se 3 tarify (480, 2690, 200 Kč). Struktura +
+  [355] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 440 kategori
+  [356] api08:design: Landing pro aplikaci s 76000 uživateli: sekce, hierarchie, C
+  [357] api08:design: Navrhni hero sekci pro SaaS s cenou od 229 Kč/měs. Napiš Tai
+  [358] api08:design: Navrhni pricing se 3 tarify (250, 6420, 200 Kč). Struktura +
+  [359] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 36 kategorie
+  [360] api08:design: Landing pro aplikaci s 55700 uživateli: sekce, hierarchie, C
+  [361] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'hora'? Uveď
+  [362] api08:design: Navrhni pricing se 3 tarify (580, 2950, 200 Kč). Struktura +
+  [363] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 809 kategori
+  [364] api08:design: Navrhni hero sekci pro SaaS s cenou od 748 Kč/měs. Napiš Tai
+  [365] api08:design: Navrhni pricing se 3 tarify (320, 1870, 300 Kč). Struktura +
+  [366] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 188 kategori
+  [367] api08:design: Landing pro aplikaci s 71000 uživateli: sekce, hierarchie, C
+  [368] api08:design: Navrhni pricing se 3 tarify (560, 1720, 200 Kč). Struktura +
+  [369] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 41 kategorie
+  [370] api08:design: Landing pro aplikaci s 98600 uživateli: sekce, hierarchie, C
+  [371] api08:design: Navrhni pricing se 3 tarify (300, 5210, 1000 Kč). Struktura 
+  [372] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 968 kategori
+  [373] api08:design: Landing pro aplikaci s 85800 uživateli: sekce, hierarchie, C
+  [374] api08:design: Navrhni pricing se 3 tarify (430, 4490, 500 Kč). Struktura +
+  [375] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 303 kategori
+  [376] api08:design: Landing pro aplikaci s 69200 uživateli: sekce, hierarchie, C
+  [377] api08:design: Navrhni hero sekci pro SaaS s cenou od 139 Kč/měs. Napiš Tai
+  [378] api08:design: Navrhni pricing se 3 tarify (50, 9760, 900 Kč). Struktura + 
+  [379] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 744 kategori
+  [380] api08:design: Landing pro aplikaci s 82700 uživateli: sekce, hierarchie, C
+  [381] api08:design: Navrhni hero sekci pro SaaS s cenou od 640 Kč/měs. Napiš Tai
+  [382] api08:design: Navrhni pricing se 3 tarify (300, 630, 300 Kč). Struktura + 
+  [383] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 103 kategori
+  [384] api08:design: Landing pro aplikaci s 67600 uživateli: sekce, hierarchie, C
+  [385] api08:design: Navrhni hero sekci pro SaaS s cenou od 460 Kč/měs. Napiš Tai
+  [386] api08:design: Navrhni pricing se 3 tarify (720, 240, 800 Kč). Struktura + 
+  [387] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 498 kategori
+  [388] api08:design: Landing pro aplikaci s 89400 uživateli: sekce, hierarchie, C
+  [389] api08:design: Navrhni hero sekci pro SaaS s cenou od 647 Kč/měs. Napiš Tai
+  [390] api08:design: Navrhni pricing se 3 tarify (220, 9940, 900 Kč). Struktura +
+  [391] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 600 kategori
+  [392] api08:design: Landing pro aplikaci s 61800 uživateli: sekce, hierarchie, C
+  [393] api08:design: Navrhni hero sekci pro SaaS s cenou od 201 Kč/měs. Napiš Tai
+  [394] api08:design: Navrhni pricing se 3 tarify (370, 5560, 300 Kč). Struktura +
+  [395] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 279 kategori
+  [396] api08:design: Landing pro aplikaci s 38000 uživateli: sekce, hierarchie, C
+  [397] api08:design: Navrhni hero sekci pro SaaS s cenou od 734 Kč/měs. Napiš Tai
+  [398] api08:design: Navrhni pricing se 3 tarify (80, 2870, 200 Kč). Struktura + 
+  [399] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 916 kategori
+  [400] api08:design: Landing pro aplikaci s 83500 uživateli: sekce, hierarchie, C
+  [401] api08:design: Navrhni hero sekci pro SaaS s cenou od 651 Kč/měs. Napiš Tai
+  [402] api08:design: Navrhni pricing se 3 tarify (810, 2170, 400 Kč). Struktura +
+  [403] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 402 kategori
+  [404] api08:design: Landing pro aplikaci s 5000 uživateli: sekce, hierarchie, CT
+  [405] api08:design: Navrhni pricing se 3 tarify (900, 3460, 800 Kč). Struktura +
+  [406] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 502 kategori
+  [407] api08:design: Landing pro aplikaci s 33600 uživateli: sekce, hierarchie, C
+  [408] api08:design: Navrhni hero sekci pro SaaS s cenou od 165 Kč/měs. Napiš Tai
+  [409] api08:design: Navrhni pricing se 3 tarify (420, 8690, 400 Kč). Struktura +
+  [410] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 758 kategori
+  [411] api08:design: Navrhni barevnou paletu pro ryba-tematický web + Tailwind co
+  [412] api08:design: Landing pro aplikaci s 73000 uživateli: sekce, hierarchie, C
+  [413] api08:design: Navrhni hero sekci pro SaaS s cenou od 440 Kč/měs. Napiš Tai
+  [414] api08:design: Navrhni pricing se 3 tarify (170, 5480, 600 Kč). Struktura +
+  [415] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 676 kategori
+  [416] api08:design: Landing pro aplikaci s 18800 uživateli: sekce, hierarchie, C
+  [417] api08:design: Navrhni hero sekci pro SaaS s cenou od 530 Kč/měs. Napiš Tai
+  [418] api08:design: Navrhni pricing se 3 tarify (980, 9150, 900 Kč). Struktura +
+  [419] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 833 kategori
+  [420] api08:design: Landing pro aplikaci s 69700 uživateli: sekce, hierarchie, C
+  [421] api08:design: Navrhni hero sekci pro SaaS s cenou od 19 Kč/měs. Napiš Tail
+  [422] api08:design: Navrhni pricing se 3 tarify (230, 4290, 300 Kč). Struktura +
+  [423] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 757 kategori
+  [424] api08:design: Landing pro aplikaci s 3000 uživateli: sekce, hierarchie, CT
+  [425] api08:design: Navrhni hero sekci pro SaaS s cenou od 997 Kč/měs. Napiš Tai
+  [426] api08:design: Navrhni pricing se 3 tarify (640, 2530, 1000 Kč). Struktura 
+  [427] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 507 kategori
+  [428] api08:design: Landing pro aplikaci s 45900 uživateli: sekce, hierarchie, C
+  [429] api08:design: Navrhni hero sekci pro SaaS s cenou od 637 Kč/měs. Napiš Tai
+  [430] api08:design: Navrhni pricing se 3 tarify (480, 9440, 400 Kč). Struktura +
+  [431] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 862 kategori
+  [432] api08:design: Landing pro aplikaci s 15600 uživateli: sekce, hierarchie, C
+  [433] api08:design: Navrhni hero sekci pro SaaS s cenou od 340 Kč/měs. Napiš Tai
+  [434] api08:design: Navrhni pricing se 3 tarify (350, 5230, 800 Kč). Struktura +
+  [435] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 656 kategori
+  [436] api08:design: Landing pro aplikaci s 79000 uživateli: sekce, hierarchie, C
+  [437] api08:design: Navrhni hero sekci pro SaaS s cenou od 927 Kč/měs. Napiš Tai
+  [438] api08:design: Navrhni pricing se 3 tarify (710, 9080, 900 Kč). Struktura +
+  [439] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 161 kategori
+  [440] api08:design: Landing pro aplikaci s 47000 uživateli: sekce, hierarchie, C
+  [441] api08:design: Navrhni hero sekci pro SaaS s cenou od 290 Kč/měs. Napiš Tai
+  [442] api08:design: Navrhni pricing se 3 tarify (810, 1420, 1000 Kč). Struktura 
+  [443] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 876 kategori
+  [444] api08:design: Landing pro aplikaci s 22100 uživateli: sekce, hierarchie, C
+  [445] api08:design: Navrhni hero sekci pro SaaS s cenou od 423 Kč/měs. Napiš Tai
+  [446] api08:design: Navrhni pricing se 3 tarify (510, 5640, 800 Kč). Struktura +
+  [447] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 399 kategori
+  [448] api08:design: Landing pro aplikaci s 1600 uživateli: sekce, hierarchie, CT
+  [449] api08:design: Navrhni hero sekci pro SaaS s cenou od 304 Kč/měs. Napiš Tai
+  [450] api08:design: Navrhni pricing se 3 tarify (410, 1870, 600 Kč). Struktura +
+  [451] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 886 kategori
+  [452] api08:design: Landing pro aplikaci s 19700 uživateli: sekce, hierarchie, C
+  [453] api08:design: Navrhni hero sekci pro SaaS s cenou od 683 Kč/měs. Napiš Tai
+  [454] api08:design: Navrhni pricing se 3 tarify (560, 4740, 400 Kč). Struktura +
+  [455] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 220 kategori
+  [456] api08:design: Landing pro aplikaci s 22400 uživateli: sekce, hierarchie, C
+  [457] api08:design: Navrhni hero sekci pro SaaS s cenou od 685 Kč/měs. Napiš Tai
+  [458] api08:design: Navrhni pricing se 3 tarify (990, 4380, 700 Kč). Struktura +
+  [459] api08:design: Landing pro aplikaci s 77500 uživateli: sekce, hierarchie, C
+  [460] api08:design: Navrhni hero sekci pro SaaS s cenou od 376 Kč/měs. Napiš Tai
+  [461] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'vlak'? Uveď
+  [462] api08:design: Navrhni pricing se 3 tarify (460, 9500, 800 Kč). Struktura +
+  [463] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 555 kategori
+  [464] api08:design: Landing pro aplikaci s 70700 uživateli: sekce, hierarchie, C
+  [465] api08:design: Navrhni hero sekci pro SaaS s cenou od 870 Kč/měs. Napiš Tai
+  [466] api08:design: Navrhni pricing se 3 tarify (780, 4340, 500 Kč). Struktura +
+  [467] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 823 kategori
+  [468] api08:design: Landing pro aplikaci s 76600 uživateli: sekce, hierarchie, C
+  [469] api08:design: Navrhni hero sekci pro SaaS s cenou od 959 Kč/měs. Napiš Tai
+  [470] api08:design: Navrhni pricing se 3 tarify (410, 6560, 400 Kč). Struktura +
+  [471] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 45 kategorie
+  [472] api08:design: Landing pro aplikaci s 65900 uživateli: sekce, hierarchie, C
+  [473] api08:design: Navrhni pricing se 3 tarify (930, 7450, 700 Kč). Struktura +
+  [474] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 78 kategorie
+  [475] api08:design: Landing pro aplikaci s 21400 uživateli: sekce, hierarchie, C
+  [476] api08:design: Navrhni hero sekci pro SaaS s cenou od 55 Kč/měs. Napiš Tail
+  [477] api08:design: Navrhni pricing se 3 tarify (840, 3300, 900 Kč). Struktura +
+  [478] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 473 kategori
+  [479] api08:design: Landing pro aplikaci s 15000 uživateli: sekce, hierarchie, C
+  [480] api08:design: Navrhni pricing se 3 tarify (500, 6270, 1000 Kč). Struktura 
+  [481] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 380 kategori
+  [482] api08:design: Landing pro aplikaci s 51700 uživateli: sekce, hierarchie, C
+  [483] api08:design: Navrhni hero sekci pro SaaS s cenou od 233 Kč/měs. Napiš Tai
+  [484] api08:design: Navrhni pricing se 3 tarify (240, 6950, 900 Kč). Struktura +
+  [485] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 59 kategorie
+  [486] api08:design: Landing pro aplikaci s 52600 uživateli: sekce, hierarchie, C
+  [487] api08:design: Navrhni hero sekci pro SaaS s cenou od 334 Kč/měs. Napiš Tai
+  [488] api08:design: Navrhni pricing se 3 tarify (380, 6060, 200 Kč). Struktura +
+  [489] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 180 kategori
+  [490] api08:design: Landing pro aplikaci s 85300 uživateli: sekce, hierarchie, C
+  [491] api08:design: Navrhni pricing se 3 tarify (370, 2250, 300 Kč). Struktura +
+  [492] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 730 kategori
+  [493] api08:design: Landing pro aplikaci s 43200 uživateli: sekce, hierarchie, C
+  [494] api08:design: Navrhni hero sekci pro SaaS s cenou od 630 Kč/měs. Napiš Tai
+  [495] api08:design: Navrhni pricing se 3 tarify (340, 520, 1000 Kč). Struktura +
+  [496] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 487 kategori
+  [497] api08:design: Landing pro aplikaci s 39400 uživateli: sekce, hierarchie, C
+  [498] api08:design: Navrhni hero sekci pro SaaS s cenou od 618 Kč/měs. Napiš Tai
+  [499] api08:design: Navrhni pricing se 3 tarify (510, 2650, 900 Kč). Struktura +
+  [500] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 375 kategori
+  [501] api08:design: Landing pro aplikaci s 57100 uživateli: sekce, hierarchie, C
+  [502] api08:design: Navrhni hero sekci pro SaaS s cenou od 37 Kč/měs. Napiš Tail
+  [503] api08:design: Navrhni pricing se 3 tarify (630, 4140, 300 Kč). Struktura +
+  [504] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 133 kategori
+  [505] api08:design: Landing pro aplikaci s 4000 uživateli: sekce, hierarchie, CT
+  [506] api08:design: Navrhni hero sekci pro SaaS s cenou od 115 Kč/měs. Napiš Tai
+  [507] api08:design: Navrhni pricing se 3 tarify (410, 8230, 500 Kč). Struktura +
+  [508] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 712 kategori
+  [509] api08:design: Landing pro aplikaci s 32800 uživateli: sekce, hierarchie, C
+  [510] api08:design: Navrhni hero sekci pro SaaS s cenou od 474 Kč/měs. Napiš Tai
+  [511] api08:design: Navrhni pricing se 3 tarify (690, 2890, 200 Kč). Struktura +
+  [512] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 922 kategori
+  [513] api08:design: Landing pro aplikaci s 60700 uživateli: sekce, hierarchie, C
+  [514] api08:design: Navrhni pricing se 3 tarify (480, 2460, 1000 Kč). Struktura 
+  [515] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 780 kategori
+  [516] api08:design: Navrhni hero sekci pro SaaS s cenou od 917 Kč/měs. Napiš Tai
+  [517] api08:design: Navrhni pricing se 3 tarify (800, 3420, 500 Kč). Struktura +
+  [518] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 830 kategori
+  [519] api08:design: Landing pro aplikaci s 93800 uživateli: sekce, hierarchie, C
+  [520] api08:design: Navrhni pricing se 3 tarify (850, 5660, 600 Kč). Struktura +
+  [521] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 121 kategori
+  [522] api08:design: Landing pro aplikaci s 97400 uživateli: sekce, hierarchie, C
+  [523] api08:design: Navrhni hero sekci pro SaaS s cenou od 100 Kč/měs. Napiš Tai
+  [524] api08:design: Navrhni pricing se 3 tarify (830, 5440, 1000 Kč). Struktura 
+  [525] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 680 kategori
+  [526] api08:design: Landing pro aplikaci s 91800 uživateli: sekce, hierarchie, C
+  [527] api08:design: Navrhni hero sekci pro SaaS s cenou od 453 Kč/měs. Napiš Tai
+  [528] api08:design: Navrhni pricing se 3 tarify (270, 1290, 400 Kč). Struktura +
+  [529] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 698 kategori
+  [530] api08:design: Landing pro aplikaci s 8900 uživateli: sekce, hierarchie, CT
+  [531] api08:design: Navrhni hero sekci pro SaaS s cenou od 78 Kč/měs. Napiš Tail
+  [532] api08:design: Navrhni pricing se 3 tarify (260, 4290, 1000 Kč). Struktura 
+  [533] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 327 kategori
+  [534] api08:design: Landing pro aplikaci s 18000 uživateli: sekce, hierarchie, C
+  [535] api08:design: Navrhni pricing se 3 tarify (160, 8250, 400 Kč). Struktura +
+  [536] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 312 kategori
+  [537] api08:design: Landing pro aplikaci s 58900 uživateli: sekce, hierarchie, C
+  [538] api08:design: Navrhni hero sekci pro SaaS s cenou od 50 Kč/měs. Napiš Tail
+  [539] api08:design: Navrhni pricing se 3 tarify (200, 3400, 900 Kč). Struktura +
+  [540] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 160 kategori
+  [541] api08:design: Landing pro aplikaci s 31000 uživateli: sekce, hierarchie, C
+  [542] api08:design: Navrhni hero sekci pro SaaS s cenou od 38 Kč/měs. Napiš Tail
+  [543] api08:design: Navrhni pricing se 3 tarify (560, 5490, 1000 Kč). Struktura 
+  [544] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 32 kategorie
+  [545] api08:design: Landing pro aplikaci s 82500 uživateli: sekce, hierarchie, C
+  [546] api08:design: Navrhni hero sekci pro SaaS s cenou od 784 Kč/měs. Napiš Tai
+  [547] api08:design: Navrhni pricing se 3 tarify (610, 5730, 700 Kč). Struktura +
+  [548] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 15 kategorie
+  [549] api08:design: Navrhni hero sekci pro SaaS s cenou od 24 Kč/měs. Napiš Tail
+  [550] api08:design: Navrhni pricing se 3 tarify (250, 3400, 500 Kč). Struktura +
+  [551] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 122 kategori
+  [552] api08:design: Landing pro aplikaci s 70100 uživateli: sekce, hierarchie, C
+  [553] api08:design: Navrhni hero sekci pro SaaS s cenou od 513 Kč/měs. Napiš Tai
+  [554] api08:design: Navrhni pricing se 3 tarify (270, 5060, 500 Kč). Struktura +
+  [555] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 681 kategori
+  [556] api08:design: Landing pro aplikaci s 51100 uživateli: sekce, hierarchie, C
+  [557] api08:design: Navrhni hero sekci pro SaaS s cenou od 383 Kč/měs. Napiš Tai
+  [558] api08:design: Navrhni pricing se 3 tarify (710, 9020, 700 Kč). Struktura +
+  [559] api08:design: Landing pro aplikaci s 63200 uživateli: sekce, hierarchie, C
+  [560] api08:design: Navrhni hero sekci pro SaaS s cenou od 420 Kč/měs. Napiš Tai
+  [561] api08:design: Navrhni pricing se 3 tarify (300, 1550, 500 Kč). Struktura +
+  [562] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 490 kategori
+  [563] api08:design: Landing pro aplikaci s 94500 uživateli: sekce, hierarchie, C
+  [564] api08:design: Navrhni hero sekci pro SaaS s cenou od 601 Kč/měs. Napiš Tai
+  [565] api08:design: Navrhni pricing se 3 tarify (410, 220, 400 Kč). Struktura + 
+  [566] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 87 kategorie
+  [567] api08:design: Landing pro aplikaci s 8200 uživateli: sekce, hierarchie, CT
+  [568] api08:design: Navrhni hero sekci pro SaaS s cenou od 727 Kč/měs. Napiš Tai
+  [569] api08:design: Navrhni pricing se 3 tarify (250, 4700, 800 Kč). Struktura +
+  [570] api08:design: Landing pro aplikaci s 69400 uživateli: sekce, hierarchie, C
+  [571] api08:design: Navrhni hero sekci pro SaaS s cenou od 186 Kč/měs. Napiš Tai
+  [572] api08:design: Navrhni pricing se 3 tarify (710, 550, 900 Kč). Struktura + 
+  [573] api08:czech: Vysvětli rozdíl mezi 'protože' a 'proto že' s příklady.
+  [574] api08:czech: Kdy se píše 'mě' a kdy 'mně'? Uveď tahák i výjimky.
+  [575] api08:czech: Vysvětli rozdíl mezi předponami s-/z- u sloves s příklady.
+  [576] api08:czech: Jak se píšou přejatá slova: 'displej' vs 'display'? Uveď pra
+  [577] api08:czech: Vysvětli větné členy na větě o 3 slovech, kterou si vymysli.
+  [578] api08:czech: Co je to přechodník? Uveď příklad a vysvětli užití.
+  [579] api08:czech: Vysvětli rozdíl mezi 'ten samý' a 'tentýž' s příklady.
+  [580] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 6 příklady.
+  [581] api08:czech: Vysvětli psaní velkých písmen v názvech institucí s příklady
+  [582] api08:czech: Co je to ironie a sarkasmus? Uveď české příklady.
+  [583] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 4 větác
+  [584] api08:czech: Nauč mě shodu přísudku s podmětem rodu ženského.
+  [585] api08:czech: Vysvětli, kdy se píše čárka před 'než' a kdy ne.
+  [586] api08:czech: Co je to kalambúr? Uveď české příklady.
+  [587] api08:czech: Vysvětli stupňování příslovcí na příkladech.
+  [588] api08:czech: Vysvětli rozdíl mezi 'když' a 'jestliže' s příklady.
+  [589] api08:czech: Napiš pozvánku na oslavu (50 slov) spisovně.
+  [590] api08:czech: Vysvětli, jak se píše datum 2. 5. 87 slovy.
+  [591] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 2 chyby.
+  [592] api08:czech: Vysvětli rozdíl mezi 'stejný' a 'tentýž' ještě jednou jinak.
+  [593] api08:czech: Napiš omluvenku do školy (30 slov) formálně.
+  [594] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 6 příkladech.
+  [595] api08:czech: Jak se oslovuje v dopise neznámý adresát? Uveď vzor.
+  [596] api08:czech: Vysvětli rozdíl mezi 'denně' a 'každý den' s příklady.
+  [597] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese hora.
+  [598] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'vařit'.
+  [599] api08:czech: Co je to nářečí? Uveď 7 znaky moravského nářečí.
+  [600] api08:czech: Oprav pravopis: 'malý mozek kreslit vcere vecer.' Najdi chyb
+  [601] api08:czech: Urči slovní druhy ve větě: 'malý stůl rychle růst.'
+  [602] api08:czech: Napiš formální žádost (281 slov) na téma 'dům'.
+  [603] api08:czech: Vysvětli větné členy na větě o 7 slovech, kterou si vymysli.
+  [604] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 8 příklady.
+  [605] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 10 větá
+  [606] api08:czech: Vysvětli, jak se píše datum 8. 4. 328 slovy.
+  [607] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 7 chyby.
+  [608] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 9 příkladech.
+  [609] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese pták.
+  [610] api08:czech: Oprav pravopis: 'malý oheň číst vcere vecer.' Najdi chyby a 
+  [611] api08:czech: Urči slovní druhy ve větě: 'hezký les rychle běžet.'
+  [612] api08:czech: Napiš formální žádost (663 slov) na téma 'pták'.
+  [613] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 4 příklady.
+  [614] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 8 větác
+  [615] api08:czech: Vysvětli, jak se píše datum 9. 2. 740 slovy.
+  [616] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 3 chyby.
+  [617] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese cesta
+  [618] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'psát'.
+  [619] api08:czech: Co je to nářečí? Uveď 9 znaky moravského nářečí.
+  [620] api08:czech: Oprav pravopis: 'rychlý strom kreslit vcere vecer.' Najdi ch
+  [621] api08:czech: Urči slovní druhy ve větě: 'velký voda rychle běžet.'
+  [622] api08:czech: Napiš formální žádost (953 slov) na téma 'stůl'.
+  [623] api08:czech: Vysvětli větné členy na větě o 4 slovech, kterou si vymysli.
+  [624] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 7 příklady.
+  [625] api08:czech: Vysvětli, jak se píše datum 4. 11. 124 slovy.
+  [626] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 6 chyby.
+  [627] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 4 příkladech.
+  [628] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese kniha
+  [629] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'stavět'.
+  [630] api08:czech: Co je to nářečí? Uveď 10 znaky moravského nářečí.
+  [631] api08:czech: Oprav pravopis: 'starý město vařit vcere vecer.' Najdi chyby
+  [632] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle mluvit.'
+  [633] api08:czech: Napiš formální žádost (64 slov) na téma 'ryba'.
+  [634] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 3 příklady.
+  [635] api08:czech: Vysvětli, jak se píše datum 6. 4. 71 slovy.
+  [636] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 10 chyby.
+  [637] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 5 příkladech.
+  [638] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese mozek
+  [639] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'plavat'.
+  [640] api08:czech: Co je to nářečí? Uveď 5 znaky moravského nářečí.
+  [641] api08:czech: Oprav pravopis: 'rychlý stůl číst vcere vecer.' Najdi chyby 
+  [642] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle číst.'
+  [643] api08:czech: Napiš formální žádost (664 slov) na téma 'pole'.
+  [644] api08:czech: Vysvětli větné členy na větě o 8 slovech, kterou si vymysli.
+  [645] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 10 příklady.
+  [646] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 2 větác
+  [647] api08:czech: Vysvětli, jak se píše datum 7. 8. 972 slovy.
+  [648] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese květi
+  [649] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'dýchat'.
+  [650] api08:czech: Co je to nářečí? Uveď 2 znaky moravského nářečí.
+  [651] api08:czech: Oprav pravopis: 'silný les růst vcere vecer.' Najdi chyby a 
+  [652] api08:czech: Urči slovní druhy ve větě: 'silný město rychle mluvit.'
+  [653] api08:czech: Napiš formální žádost (558 slov) na téma 'kniha'.
+  [654] api08:czech: Vysvětli, jak se píše datum 10. 2. 325 slovy.
+  [655] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 8 chyby.
+  [656] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'růst'.
+  [657] api08:czech: Oprav pravopis: 'velký pole běžet vcere vecer.' Najdi chyby 
+  [658] api08:czech: Urči slovní druhy ve větě: 'velký město rychle psát.'
+  [659] api08:czech: Napiš formální žádost (348 slov) na téma 'ryba'.
+  [660] api08:czech: Vysvětli větné členy na větě o 5 slovech, kterou si vymysli.
+  [661] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 3 větác
+  [662] api08:czech: Vysvětli, jak se píše datum 5. 8. 540 slovy.
+  [663] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 4 chyby.
+  [664] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese ryba.
+  [665] api08:czech: Utvoř větu se slovem 'ryba' v 7. pádě množného čísla a vysvě
+  [666] api08:czech: Oprav pravopis: 'velký les kreslit vcere vecer.' Najdi chyby
+  [667] api08:czech: Urči slovní druhy ve větě: 'malý okno rychle kreslit.'
+  [668] api08:czech: Vysvětli rozdíl mezi 'květina' a jeho zdrobnělinou s příklad
+  [669] api08:czech: Napiš formální žádost (32 slov) na téma 'most'.
+  [670] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 9 příklady.
+  [671] api08:czech: Vysvětli, jak se píše datum 7. 3. 207 slovy.
+  [672] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese pole.
+  [673] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'zpívat'.
+  [674] api08:czech: Oprav pravopis: 'hezký kniha psát vcere vecer.' Najdi chyby 
+  [675] api08:czech: Urči slovní druhy ve větě: 'hezký most rychle dýchat.'
+  [676] api08:czech: Napiš formální žádost (869 slov) na téma 'voda'.
+  [677] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 5 větác
+  [678] api08:czech: Vysvětli, jak se píše datum 7. 5. 614 slovy.
+  [679] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 9 chyby.
+  [680] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese stůl.
+  [681] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'číst'.
+  [682] api08:czech: Oprav pravopis: 'dobrý kniha číst vcere vecer.' Najdi chyby 
+  [683] api08:czech: Urči slovní druhy ve větě: 'silný strom rychle psát.'
+  [684] api08:czech: Napiš formální žádost (569 slov) na téma 'kniha'.
+  [685] api08:czech: Vysvětli, jak se píše datum 5. 10. 392 slovy.
+  [686] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 10 příkladech
+  [687] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese srdce
+  [688] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'běžet'.
+  [689] api08:czech: Oprav pravopis: 'starý dům plavat vcere vecer.' Najdi chyby 
+  [690] api08:czech: Urči slovní druhy ve větě: 'hezký mozek rychle číst.'
+  [691] api08:czech: Napiš formální žádost (711 slov) na téma 'hora'.
+  [692] api08:czech: Vysvětli větné členy na větě o 6 slovech, kterou si vymysli.
+  [693] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 7 větác
+  [694] api08:czech: Vysvětli, jak se píše datum 5. 9. 424 slovy.
+  [695] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 7 příkladech.
+  [696] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese oheň.
+  [697] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'kreslit'.
+  [698] api08:czech: Oprav pravopis: 'starý cesta kreslit vcere vecer.' Najdi chy
+  [699] api08:czech: Urči slovní druhy ve větě: 'starý pták rychle stavět.'
+  [700] api08:czech: Napiš formální žádost (417 slov) na téma 'vlak'.
+  [701] api08:czech: Vysvětli větné členy na větě o 2 slovech, kterou si vymysli.
+  [702] api08:czech: Vysvětli, jak se píše datum 8. 6. 124 slovy.
+  [703] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 3 příkladech.
+  [704] api08:czech: Oprav pravopis: 'starý most plavat vcere vecer.' Najdi chyby
+  [705] api08:czech: Urči slovní druhy ve větě: 'chytrý most rychle psát.'
+  [706] api08:czech: Napiš formální žádost (448 slov) na téma 'cesta'.
+  [707] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 5 příklady.
+  [708] api08:czech: Vysvětli, jak se píše datum 3. 2. 628 slovy.
+  [709] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 2 příkladech.
+  [710] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese voda.
+  [711] api08:czech: Co je to nářečí? Uveď 3 znaky moravského nářečí.
+  [712] api08:czech: Oprav pravopis: 'dobrý pole dýchat vcere vecer.' Najdi chyby
+  [713] api08:czech: Napiš formální žádost (422 slov) na téma 'pole'.
+  [714] api08:czech: Vysvětli větné členy na větě o 10 slovech, kterou si vymysli
+  [715] api08:czech: Vysvětli, jak se píše datum 10. 10. 160 slovy.
+  [716] api08:czech: Co je to nářečí? Uveď 4 znaky moravského nářečí.
+  [717] api08:czech: Oprav pravopis: 'chytrý voda vařit vcere vecer.' Najdi chyby
+  [718] api08:czech: Urči slovní druhy ve větě: 'malý město rychle stavět.'
+  [719] api08:czech: Napiš formální žádost (112 slov) na téma 'hora'.
+  [720] api08:czech: Vysvětli větné členy na větě o 9 slovech, kterou si vymysli.
+  [721] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 6 větác
+  [722] api08:czech: Vysvětli, jak se píše datum 10. 10. 789 slovy.
+  [723] api08:czech: Co je to nářečí? Uveď 8 znaky moravského nářečí.
+  [724] api08:czech: Utvoř větu se slovem 'oheň' v 7. pádě množného čísla a vysvě
+  [725] api08:czech: Oprav pravopis: 'silný okno dýchat vcere vecer.' Najdi chyby
+  [726] api08:czech: Urči slovní druhy ve větě: 'starý mozek rychle růst.'
+  [727] api08:czech: Napiš formální žádost (641 slov) na téma 'most'.
+  [728] api08:czech: Vysvětli, jak se píše datum 9. 10. 39 slovy.
+  [729] api08:czech: Oprav pravopis: 'silný voda číst vcere vecer.' Najdi chyby a
+  [730] api08:czech: Urči slovní druhy ve větě: 'malý pták rychle mluvit.'
+  [731] api08:czech: Napiš formální žádost (500 slov) na téma 'strom'.
+  [732] api08:czech: Vysvětli, jak se píše datum 9. 11. 46 slovy.
+  [733] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese les.'
+  [734] api08:czech: Oprav pravopis: 'starý voda růst vcere vecer.' Najdi chyby a
+  [735] api08:czech: Urči slovní druhy ve větě: 'velký květina rychle číst.'
+  [736] api08:czech: Napiš formální žádost (375 slov) na téma 'voda'.
+  [737] api08:czech: Vysvětli, jak se píše datum 8. 12. 132 slovy.
+  [738] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese vlak.
+  [739] api08:czech: Oprav pravopis: 'malý strom vařit vcere vecer.' Najdi chyby 
+  [740] api08:czech: Urči slovní druhy ve větě: 'starý město rychle stavět.'
+  [741] api08:czech: Napiš formální žádost (716 slov) na téma 'ryba'.
+  [742] api08:czech: Jak se tvoří trpný rod v češtině? Uveď 2 příklady.
+  [743] api08:czech: Vysvětli, jak se píše datum 4. 9. 77 slovy.
+  [744] api08:czech: Vysvětli, co je to ustálené slovní spojení, na 8 příkladech.
+  [745] api08:czech: Oprav pravopis: 'silný vlak stavět vcere vecer.' Najdi chyby
+  [746] api08:czech: Urči slovní druhy ve větě: 'chytrý pole rychle vařit.'
+  [747] api08:czech: Napiš formální žádost (368 slov) na téma 'pole'.
+  [748] api08:czech: Vysvětli, jak se píše datum 8. 11. 533 slovy.
+  [749] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese řeka.
+  [750] api08:czech: Oprav pravopis: 'rychlý mozek vařit vcere vecer.' Najdi chyb
+  [751] api08:czech: Urči slovní druhy ve větě: 'malý strom rychle dýchat.'
+  [752] api08:czech: Napiš formální žádost (345 slov) na téma 'město'.
+  [753] api08:czech: Vysvětli, jak se píše datum 7. 10. 252 slovy.
+  [754] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'nést'.
+  [755] api08:czech: Co je to nářečí? Uveď 6 znaky moravského nářečí.
+  [756] api08:czech: Oprav pravopis: 'starý vlak stavět vcere vecer.' Najdi chyby
+  [757] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle běžet.'
+  [758] api08:czech: Napiš formální žádost (285 slov) na téma 'voda'.
+  [759] api08:czech: Vysvětli, jak se píše datum 2. 4. 468 slovy.
+  [760] api08:czech: Oprav pravopis: 'starý oheň stavět vcere vecer.' Najdi chyby
+  [761] api08:czech: Urči slovní druhy ve větě: 'silný řeka rychle stavět.'
+  [762] api08:czech: Napiš formální žádost (128 slov) na téma 'strom'.
+  [763] api08:czech: Vysvětli, jak se píše datum 5. 7. 270 slovy.
+  [764] api08:czech: Oprav pravopis: 'chytrý město stavět vcere vecer.' Najdi chy
+  [765] api08:czech: Urči slovní druhy ve větě: 'velký mozek rychle mluvit.'
+  [766] api08:czech: Napiš formální žádost (193 slov) na téma 'stůl'.
+  [767] api08:czech: Vysvětli rozdíl mezi spisovnou a obecnou češtinou na 9 větác
+  [768] api08:czech: Vysvětli, jak se píše datum 9. 4. 865 slovy.
+  [769] api08:czech: Oprav: 'Prišel jsem domu a šel jsem spat.' Najdi 5 chyby.
+  [770] api08:czech: Oprav pravopis: 'chytrý mozek běžet vcere vecer.' Najdi chyb
+  [771] api08:czech: Urči slovní druhy ve větě: 'velký okno rychle běžet.'
+  [772] api08:czech: Napiš formální žádost (741 slov) na téma 'mozek'.
+  [773] api08:czech: Vysvětli, jak se píše datum 5. 6. 768 slovy.
+  [774] api08:czech: Oprav pravopis: 'dobrý les plavat vcere vecer.' Najdi chyby 
+  [775] api08:czech: Urči slovní druhy ve větě: 'silný most rychle plavat.'
+  [776] api08:czech: Vysvětli rozdíl mezi 'cesta' a jeho zdrobnělinou s příklady.
+  [777] api08:czech: Napiš formální žádost (787 slov) na téma 'most'.
+  [778] api08:czech: Vysvětli, jak se píše datum 3. 4. 477 slovy.
+  [779] api08:czech: Oprav pravopis: 'hezký okno plavat vcere vecer.' Najdi chyby
+  [780] api08:czech: Urči slovní druhy ve větě: 'rychlý okno rychle kreslit.'
+  [781] api08:czech: Napiš formální žádost (108 slov) na téma 'řeka'.
+  [782] api08:czech: Vysvětli, jak se píše datum 9. 6. 790 slovy.
+  [783] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese strom
+  [784] api08:czech: Oprav pravopis: 'silný voda vařit vcere vecer.' Najdi chyby 
+  [785] api08:czech: Urči slovní druhy ve větě: 'chytrý most rychle mluvit.'
+  [786] api08:czech: Napiš formální žádost (94 slov) na téma 'ryba'.
+  [787] api08:czech: Vysvětli, jak se píše datum 6. 11. 160 slovy.
+  [788] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese město
+  [789] api08:czech: Skloňuj podstatné jméno 'dům' ve všech pádech jednotného čís
+  [790] api08:czech: Oprav pravopis: 'hezký les plavat vcere vecer.' Najdi chyby 
+  [791] api08:czech: Urči slovní druhy ve větě: 'dobrý stůl rychle kreslit.'
+  [792] api08:czech: Napiš formální žádost (839 slov) na téma 'strom'.
+  [793] api08:czech: Vysvětli, jak se píše datum 2. 7. 390 slovy.
+  [794] api08:czech: Oprav pravopis: 'velký les plavat vcere vecer.' Najdi chyby 
+  [795] api08:czech: Urči slovní druhy ve větě: 'malý mozek rychle běžet.'
+  [796] api08:czech: Napiš formální žádost (623 slov) na téma 'vlak'.
+  [797] api08:czech: Vysvětli, jak se píše datum 8. 11. 871 slovy.
+  [798] api08:czech: Oprav pravopis: 'hezký kniha plavat vcere vecer.' Najdi chyb
+  [799] api08:czech: Urči slovní druhy ve větě: 'silný pták rychle zpívat.'
+  [800] api08:czech: Napiš formální žádost (462 slov) na téma 'město'.
+  [801] api08:czech: Vysvětli, jak se píše datum 4. 3. 460 slovy.
+  [802] api08:czech: Oprav pravopis: 'dobrý most dýchat vcere vecer.' Najdi chyby
+  [803] api08:czech: Urči slovní druhy ve větě: 'velký srdce rychle mluvit.'
+  [804] api08:czech: Napiš formální žádost (303 slov) na téma 'pták'.
+  [805] api08:czech: Vysvětli, jak se píše datum 3. 6. 71 slovy.
+  [806] api08:czech: Oprav pravopis: 'starý dům zpívat vcere vecer.' Najdi chyby 
+  [807] api08:czech: Urči slovní druhy ve větě: 'chytrý les rychle plavat.'
+  [808] api08:czech: Vysvětli rozdíl mezi 'pole' a jeho zdrobnělinou s příklady.
+  [809] api08:czech: Napiš formální žádost (335 slov) na téma 'oheň'.
+  [810] api08:czech: Vysvětli, jak se píše datum 5. 12. 930 slovy.
+  [811] api08:czech: Oprav pravopis: 'silný město kreslit vcere vecer.' Najdi chy
+  [812] api08:czech: Urči slovní druhy ve větě: 'chytrý mozek rychle běžet.'
+  [813] api08:czech: Napiš formální žádost (917 slov) na téma 'oheň'.
+  [814] api08:czech: Vysvětli, jak se píše datum 6. 10. 792 slovy.
+  [815] api08:czech: Oprav pravopis: 'rychlý oheň nést vcere vecer.' Najdi chyby 
+  [816] api08:czech: Urči slovní druhy ve větě: 'dobrý město rychle růst.'
+  [817] api08:czech: Napiš formální žádost (443 slov) na téma 'okno'.
+  [818] api08:czech: Vysvětli, jak se píše datum 10. 6. 745 slovy.
+  [819] api08:czech: Oprav pravopis: 'chytrý město vařit vcere vecer.' Najdi chyb
+  [820] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle zpívat.'
+  [821] api08:czech: Napiš formální žádost (501 slov) na téma 'srdce'.
+  [822] api08:czech: Vysvětli, jak se píše datum 9. 8. 607 slovy.
+  [823] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese most.
+  [824] api08:czech: Vysvětli tvorbu příčestí minulého u slovesa 'mluvit'.
+  [825] api08:czech: Oprav pravopis: 'rychlý dům růst vcere vecer.' Najdi chyby a
+  [826] api08:czech: Urči slovní druhy ve větě: 'hezký stůl rychle číst.'
+  [827] api08:czech: Napiš formální žádost (502 slov) na téma 'dům'.
+  [828] api08:czech: Vysvětli, jak se píše datum 5. 6. 59 slovy.
+  [829] api08:czech: Oprav pravopis: 'hezký pták zpívat vcere vecer.' Najdi chyby
+  [830] api08:czech: Napiš formální žádost (104 slov) na téma 'dům'.
+  [831] api08:czech: Vysvětli, jak se píše datum 8. 3. 155 slovy.
+  [832] api08:czech: Oprav pravopis: 'dobrý řeka číst vcere vecer.' Najdi chyby a
+  [833] api08:czech: Urči slovní druhy ve větě: 'chytrý řeka rychle zpívat.'
+  [834] api08:czech: Napiš formální žádost (777 slov) na téma 'ryba'.
+  [835] api08:czech: Vysvětli, jak se píše datum 2. 9. 25 slovy.
+  [836] api08:czech: Oprav pravopis: 'rychlý okno psát vcere vecer.' Najdi chyby 
+  [837] api08:czech: Urči slovní druhy ve větě: 'dobrý pole rychle vařit.'
+  [838] api08:czech: Napiš formální žádost (549 slov) na téma 'strom'.
+  [839] api08:czech: Vysvětli, jak se píše datum 9. 4. 307 slovy.
+  [840] api08:czech: Oprav pravopis: 'dobrý les stavět vcere vecer.' Najdi chyby 
+  [841] api08:czech: Urči slovní druhy ve větě: 'chytrý les rychle psát.'
+  [842] api08:czech: Napiš formální žádost (128 slov) na téma 'pták'.
+  [843] api08:czech: Vysvětli, jak se píše datum 6. 10. 326 slovy.
+  [844] api08:czech: Oprav pravopis: 'starý dům číst vcere vecer.' Najdi chyby a 
+  [845] api08:czech: Urči slovní druhy ve větě: 'silný okno rychle nést.'
+  [846] api08:czech: Napiš formální žádost (834 slov) na téma 'město'.
+  [847] api08:czech: Vysvětli, jak se píše datum 8. 10. 440 slovy.
+  [848] api08:czech: Oprav pravopis: 'dobrý pole plavat vcere vecer.' Najdi chyby
+  [849] api08:czech: Urči slovní druhy ve větě: 'dobrý srdce rychle dýchat.'
+  [850] api08:czech: Napiš formální žádost (350 slov) na téma 'voda'.
+  [851] api08:czech: Vysvětli, jak se píše datum 6. 4. 272 slovy.
+  [852] api08:czech: Oprav pravopis: 'velký dům kreslit vcere vecer.' Najdi chyby
+  [853] api08:czech: Urči slovní druhy ve větě: 'dobrý strom rychle dýchat.'
+  [854] api08:czech: Napiš formální žádost (705 slov) na téma 'les'.
+  [855] api08:czech: Vysvětli, jak se píše datum 10. 11. 633 slovy.
+  [856] api08:czech: Oprav pravopis: 'malý cesta kreslit vcere vecer.' Najdi chyb
+  [857] api08:czech: Urči slovní druhy ve větě: 'velký mozek rychle zpívat.'
+  [858] api08:czech: Napiš formální žádost (175 slov) na téma 'pták'.
+  [859] api08:czech: Vysvětli, jak se píše datum 7. 8. 662 slovy.
+  [860] api08:czech: Oprav pravopis: 'starý řeka dýchat vcere vecer.' Najdi chyby
+  [861] api08:czech: Urči slovní druhy ve větě: 'hezký květina rychle běžet.'
+  [862] api08:czech: Napiš formální žádost (682 slov) na téma 'hora'.
+  [863] api08:czech: Vysvětli, jak se píše datum 6. 4. 554 slovy.
+  [864] api08:czech: Oprav pravopis: 'silný most vařit vcere vecer.' Najdi chyby 
+  [865] api08:czech: Urči slovní druhy ve větě: 'hezký květina rychle psát.'
+  [866] api08:czech: Napiš formální žádost (703 slov) na téma 'hora'.
+  [867] api08:czech: Vysvětli, jak se píše datum 3. 6. 577 slovy.
+  [868] api08:czech: Oprav pravopis: 'silný pole stavět vcere vecer.' Najdi chyby
+  [869] api08:czech: Urči slovní druhy ve větě: 'hezký hora rychle běžet.'
+  [870] api08:czech: Napiš formální žádost (695 slov) na téma 'srdce'.
+  [871] api08:czech: Vysvětli, jak se píše datum 5. 7. 422 slovy.
+  [872] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese okno.
+  [873] api08:czech: Oprav pravopis: 'chytrý voda mluvit vcere vecer.' Najdi chyb
+  [874] api08:czech: Urči slovní druhy ve větě: 'velký pole rychle zpívat.'
+  [875] api08:czech: Napiš formální žádost (317 slov) na téma 'oheň'.
+  [876] api08:czech: Vysvětli, jak se píše datum 4. 5. 930 slovy.
+  [877] api08:czech: Oprav pravopis: 'velký stůl stavět vcere vecer.' Najdi chyby
+  [878] api08:czech: Urči slovní druhy ve větě: 'malý okno rychle zpívat.'
+  [879] api08:czech: Napiš formální žádost (438 slov) na téma 'oheň'.
+  [880] api08:czech: Vysvětli, jak se píše datum 3. 5. 821 slovy.
+  [881] api08:czech: Oprav pravopis: 'dobrý srdce kreslit vcere vecer.' Najdi chy
+  [882] api08:czech: Urči slovní druhy ve větě: 'dobrý okno rychle plavat.'
+  [883] api08:czech: Napiš formální žádost (653 slov) na téma 'dům'.
+  [884] api08:czech: Vysvětli, jak se píše datum 9. 5. 926 slovy.
+  [885] api08:czech: Oprav pravopis: 'dobrý dům mluvit vcere vecer.' Najdi chyby 
+  [886] api08:czech: Urči slovní druhy ve větě: 'hezký les rychle dýchat.'
+  [887] api08:czech: Vysvětli rozdíl mezi 'oheň' a jeho zdrobnělinou s příklady.
+  [888] api08:czech: Napiš formální žádost (902 slov) na téma 'most'.
+  [889] api08:czech: Vysvětli, jak se píše datum 5. 2. 750 slovy.
+  [890] api08:czech: Oprav pravopis: 'hezký hora číst vcere vecer.' Najdi chyby a
+  [891] api08:czech: Urči slovní druhy ve větě: 'rychlý pták rychle stavět.'
+  [892] api08:czech: Napiš formální žádost (238 slov) na téma 'voda'.
+  [893] api08:czech: Vysvětli, jak se píše datum 9. 6. 389 slovy.
+  [894] api08:czech: Oprav pravopis: 'malý hora plavat vcere vecer.' Najdi chyby 
+  [895] api08:czech: Napiš formální žádost (618 slov) na téma 'hora'.
+  [896] api08:czech: Vysvětli, jak se píše datum 7. 2. 579 slovy.
+  [897] api08:czech: Oprav pravopis: 'dobrý voda psát vcere vecer.' Najdi chyby a
+  [898] api08:czech: Urči slovní druhy ve větě: 'chytrý pták rychle nést.'
+  [899] api08:czech: Napiš formální žádost (537 slov) na téma 'pole'.
+  [900] api08:czech: Vysvětli, jak se píše datum 4. 10. 396 slovy.
+  [901] api08:czech: Oprav pravopis: 'rychlý stůl běžet vcere vecer.' Najdi chyby
+  [902] api08:czech: Urči slovní druhy ve větě: 'rychlý město rychle kreslit.'
+  [903] api08:czech: Napiš formální žádost (688 slov) na téma 'voda'.
+  [904] api08:czech: Vysvětli, jak se píše datum 3. 12. 865 slovy.
+  [905] api08:czech: Oprav pravopis: 'chytrý ryba nést vcere vecer.' Najdi chyby 
+  [906] api08:czech: Urči slovní druhy ve větě: 'hezký oheň rychle zpívat.'
+  [907] api08:czech: Napiš formální žádost (83 slov) na téma 'květina'.
+  [908] api08:czech: Vysvětli, jak se píše datum 2. 12. 650 slovy.
+  [909] api08:czech: Oprav pravopis: 'velký most běžet vcere vecer.' Najdi chyby 
+  [910] api08:czech: Urči slovní druhy ve větě: 'velký mozek rychle běžet.'
+  [911] api08:czech: Napiš formální žádost (921 slov) na téma 'vlak'.
+  [912] api08:czech: Vysvětli, jak se píše datum 6. 3. 518 slovy.
+  [913] api08:czech: Oprav pravopis: 'hezký cesta stavět vcere vecer.' Najdi chyb
+  [914] api08:czech: Urči slovní druhy ve větě: 'malý řeka rychle kreslit.'
+  [915] api08:czech: Napiš formální žádost (823 slov) na téma 'ryba'.
+  [916] api08:czech: Vysvětli, jak se píše datum 3. 5. 128 slovy.
+  [917] api08:czech: Oprav pravopis: 'rychlý les běžet vcere vecer.' Najdi chyby 
+  [918] api08:czech: Urči slovní druhy ve větě: 'starý vlak rychle kreslit.'
+  [919] api08:czech: Napiš formální žádost (918 slov) na téma 'město'.
+  [920] api08:czech: Vysvětli, jak se píše datum 4. 4. 427 slovy.
+  [921] api08:czech: Oprav pravopis: 'dobrý dům vařit vcere vecer.' Najdi chyby a
+  [922] api08:czech: Napiš formální žádost (245 slov) na téma 'oheň'.
+  [923] api08:czech: Vysvětli, jak se píše datum 9. 10. 282 slovy.
+  [924] api08:czech: Oprav pravopis: 'velký město plavat vcere vecer.' Najdi chyb
+  [925] api08:czech: Urči slovní druhy ve větě: 'starý okno rychle dýchat.'
+  [926] api08:czech: Napiš formální žádost (907 slov) na téma 'pole'.
+  [927] api08:czech: Vysvětli, jak se píše datum 10. 6. 209 slovy.
+  [928] api08:czech: Oprav pravopis: 'malý mozek psát vcere vecer.' Najdi chyby a
+  [929] api08:czech: Urči slovní druhy ve větě: 'dobrý voda rychle dýchat.'
+  [930] api08:czech: Napiš formální žádost (773 slov) na téma 'ryba'.
+  [931] api08:czech: Vysvětli, jak se píše datum 6. 10. 884 slovy.
+  [932] api08:czech: Oprav pravopis: 'rychlý voda zpívat vcere vecer.' Najdi chyb
+  [933] api08:czech: Urči slovní druhy ve větě: 'starý srdce rychle nést.'
+  [934] api08:czech: Napiš formální žádost (814 slov) na téma 'oheň'.
+  [935] api08:czech: Vysvětli, jak se píše datum 10. 8. 69 slovy.
+  [936] api08:czech: Oprav pravopis: 'hezký ryba běžet vcere vecer.' Najdi chyby 
+  [937] api08:czech: Urči slovní druhy ve větě: 'chytrý cesta rychle růst.'
+  [938] api08:czech: Napiš formální žádost (998 slov) na téma 'cesta'.
+  [939] api08:czech: Vysvětli, jak se píše datum 6. 4. 31 slovy.
+  [940] api08:czech: Oprav pravopis: 'starý pták růst vcere vecer.' Najdi chyby a
+  [941] api08:czech: Urči slovní druhy ve větě: 'hezký stůl rychle kreslit.'
+  [942] api08:czech: Napiš formální žádost (239 slov) na téma 'město'.
+  [943] api08:czech: Vysvětli, jak se píše datum 5. 3. 828 slovy.
+  [944] api08:czech: Oprav pravopis: 'silný mozek zpívat vcere vecer.' Najdi chyb
+  [945] api08:czech: Napiš formální žádost (483 slov) na téma 'srdce'.
+  [946] api08:czech: Vysvětli, jak se píše datum 2. 12. 139 slovy.
+  [947] api08:czech: Oprav pravopis: 'malý cesta dýchat vcere vecer.' Najdi chyby
+  [948] api08:czech: Urči slovní druhy ve větě: 'hezký květina rychle dýchat.'
+  [949] api08:czech: Napiš formální žádost (433 slov) na téma 'strom'.
+  [950] api08:czech: Vysvětli, jak se píše datum 5. 11. 376 slovy.
+  [951] api08:czech: Oprav pravopis: 'hezký strom mluvit vcere vecer.' Najdi chyb
+  [952] api08:czech: Napiš formální žádost (148 slov) na téma 'srdce'.
+  [953] api08:czech: Vysvětli, jak se píše datum 6. 7. 94 slovy.
+  [954] api08:czech: Oprav pravopis: 'dobrý okno zpívat vcere vecer.' Najdi chyby
+  [955] api08:czech: Urči slovní druhy ve větě: 'hezký les rychle psát.'
+  [956] api08:czech: Napiš formální žádost (474 slov) na téma 'vlak'.
+  [957] api08:czech: Vysvětli, jak se píše datum 2. 4. 542 slovy.
+  [958] api08:czech: Oprav pravopis: 'starý květina růst vcere vecer.' Najdi chyb
+  [959] api08:czech: Urči slovní druhy ve větě: 'malý cesta rychle běžet.'
+  [960] api08:czech: Napiš formální žádost (909 slov) na téma 'řeka'.
+  [961] api08:czech: Vysvětli, jak se píše datum 6. 3. 571 slovy.
+  [962] api08:czech: Oprav pravopis: 'chytrý cesta mluvit vcere vecer.' Najdi chy
+  [963] api08:czech: Urči slovní druhy ve větě: 'velký okno rychle plavat.'
+  [964] api08:czech: Napiš formální žádost (75 slov) na téma 'mozek'.
+  [965] api08:czech: Vysvětli, jak se píše datum 6. 7. 741 slovy.
+  [966] api08:czech: Oprav pravopis: 'silný most kreslit vcere vecer.' Najdi chyb
+  [967] api08:czech: Urči slovní druhy ve větě: 'rychlý hora rychle běžet.'
+  [968] api08:czech: Napiš formální žádost (334 slov) na téma 'voda'.
+  [969] api08:czech: Vysvětli, jak se píše datum 7. 10. 867 slovy.
+  [970] api08:czech: Oprav pravopis: 'starý most běžet vcere vecer.' Najdi chyby 
+  [971] api08:czech: Urči slovní druhy ve větě: 'starý mozek rychle psát.'
+  [972] api08:czech: Napiš formální žádost (303 slov) na téma 'hora'.
+  [973] api08:czech: Vysvětli, jak se píše datum 10. 11. 374 slovy.
+  [974] api08:czech: Oprav pravopis: 'starý kniha růst vcere vecer.' Najdi chyby 
+  [975] api08:czech: Urči slovní druhy ve větě: 'starý město rychle růst.'
+  [976] api08:czech: Napiš formální žádost (446 slov) na téma 'les'.
+  [977] api08:czech: Vysvětli, jak se píše datum 2. 11. 959 slovy.
+  [978] api08:czech: Oprav pravopis: 'velký srdce kreslit vcere vecer.' Najdi chy
+  [979] api08:czech: Urči slovní druhy ve větě: 'malý stůl rychle psát.'
+  [980] api08:czech: Napiš formální žádost (328 slov) na téma 'pole'.
+  [981] api08:czech: Vysvětli, jak se píše datum 4. 12. 282 slovy.
+  [982] api08:czech: Oprav pravopis: 'starý stůl plavat vcere vecer.' Najdi chyby
+  [983] api08:czech: Urči slovní druhy ve větě: 'silný okno rychle dýchat.'
+  [984] api08:czech: Napiš formální žádost (772 slov) na téma 'strom'.
+  [985] api08:czech: Vysvětli, jak se píše datum 5. 3. 327 slovy.
+  [986] api08:czech: Oprav pravopis: 'dobrý kniha mluvit vcere vecer.' Najdi chyb
+  [987] api08:czech: Urči slovní druhy ve větě: 'dobrý stůl rychle mluvit.'
+  [988] api08:czech: Napiš formální žádost (176 slov) na téma 'okno'.
+  [989] api08:czech: Vysvětli, jak se píše datum 3. 3. 38 slovy.
+  [990] api08:czech: Oprav pravopis: 'velký ryba běžet vcere vecer.' Najdi chyby 
+  [991] api08:czech: Urči slovní druhy ve větě: 'rychlý květina rychle stavět.'
+  [992] api08:czech: Napiš formální žádost (537 slov) na téma 'hora'.
+  [993] api08:czech: Vysvětli, jak se píše datum 5. 7. 161 slovy.
+  [994] api08:czech: Oprav pravopis: 'chytrý most nést vcere vecer.' Najdi chyby 
+  [995] api08:czech: Urči slovní druhy ve větě: 'hezký vlak rychle nést.'
+  [996] api08:czech: Napiš formální žádost (845 slov) na téma 'oheň'.
+  [997] api08:czech: Vysvětli, jak se píše datum 9. 11. 671 slovy.
+  [998] api08:czech: Utvoř větu se slovem 'les' v 7. pádě množného čísla a vysvět
+  [999] api08:czech: Oprav pravopis: 'malý srdce dýchat vcere vecer.' Najdi chyby
+  [1000] api08:czech: Urči slovní druhy ve větě: 'hezký ryba rychle číst.'
+  [1001] api08:czech: Napiš formální žádost (114 slov) na téma 'mozek'.
+  [1002] api08:czech: Vysvětli, jak se píše datum 8. 2. 87 slovy.
+  [1003] api08:czech: Oprav interpunkci: 'Rekl ze prijde pozdeji a ze donese dům.'
+  [1004] api08:czech: Oprav pravopis: 'chytrý hora dýchat vcere vecer.' Najdi chyb
+  [1005] api08:czech: Urči slovní druhy ve větě: 'silný ryba rychle stavět.'
+  [1006] api08:czech: Napiš formální žádost (850 slov) na téma 'les'.
+  [1007] api08:czech: Vysvětli, jak se píše datum 2. 3. 117 slovy.
+  [1008] api08:czech: Oprav pravopis: 'velký pták psát vcere vecer.' Najdi chyby a
+  [1009] api08:czech: Urči slovní druhy ve větě: 'chytrý květina rychle mluvit.'
+  [1010] api08:czech: Napiš formální žádost (256 slov) na téma 'cesta'.
+  [1011] api08:czech: Vysvětli, jak se píše datum 6. 3. 538 slovy.
+  [1012] api08:czech: Oprav pravopis: 'chytrý strom růst vcere vecer.' Najdi chyby
+  [1013] api08:czech: Urči slovní druhy ve větě: 'hezký okno rychle běžet.'
+  [1014] api08:czech: Napiš formální žádost (697 slov) na téma 'cesta'.
+  [1015] api08:czech: Vysvětli, jak se píše datum 2. 3. 162 slovy.
+  [1016] api08:czech: Oprav pravopis: 'hezký řeka zpívat vcere vecer.' Najdi chyby
+  [1017] api08:czech: Urči slovní druhy ve větě: 'dobrý mozek rychle psát.'
+  [1018] api08:czech: Napiš formální žádost (555 slov) na téma 'les'.
+  [1019] api08:czech: Vysvětli, jak se píše datum 4. 8. 953 slovy.
+  [1020] api08:czech: Oprav pravopis: 'starý srdce číst vcere vecer.' Najdi chyby 
+  [1021] api08:czech: Urči slovní druhy ve větě: 'silný vlak rychle stavět.'
+  [1022] api08:czech: Napiš formální žádost (751 slov) na téma 'stůl'.
+  [1023] api08:czech: Vysvětli, jak se píše datum 6. 4. 236 slovy.
+  [1024] api08:czech: Napiš formální žádost (431 slov) na téma 'ryba'.
+  [1025] api08:czech: Vysvětli, jak se píše datum 10. 6. 982 slovy.
+  [1026] api08:czech: Oprav pravopis: 'dobrý kniha zpívat vcere vecer.' Najdi chyb
+  [1027] api08:czech: Urči slovní druhy ve větě: 'rychlý stůl rychle růst.'
+  [1028] api08:czech: Napiš formální žádost (482 slov) na téma 'mozek'.
+  [1029] api08:czech: Vysvětli, jak se píše datum 5. 4. 746 slovy.
+  [1030] api08:czech: Oprav pravopis: 'malý cesta vařit vcere vecer.' Najdi chyby 
+  [1031] api08:czech: Urči slovní druhy ve větě: 'velký dům rychle dýchat.'
+  [1032] api08:czech: Napiš formální žádost (514 slov) na téma 'strom'.
+  [1033] api08:czech: Vysvětli, jak se píše datum 7. 6. 133 slovy.
+  [1034] api08:czech: Oprav pravopis: 'velký pole dýchat vcere vecer.' Najdi chyby
+  [1035] api08:czech: Urči slovní druhy ve větě: 'dobrý ryba rychle nést.'
+  [1036] api08:czech: Napiš formální žádost (627 slov) na téma 'most'.
+  [1037] api08:czech: Vysvětli, jak se píše datum 2. 6. 853 slovy.
+  [1038] api08:czech: Oprav pravopis: 'velký kniha běžet vcere vecer.' Najdi chyby
+  [1039] api08:czech: Urči slovní druhy ve větě: 'malý most rychle psát.'
+  [1040] api08:czech: Napiš formální žádost (965 slov) na téma 'dům'.
+  [1041] api08:czech: Vysvětli, jak se píše datum 2. 7. 363 slovy.
+  [1042] api08:czech: Oprav pravopis: 'chytrý město zpívat vcere vecer.' Najdi chy
+  [1043] api08:czech: Urči slovní druhy ve větě: 'malý mozek rychle psát.'
+  [1044] api08:czech: Napiš formální žádost (894 slov) na téma 'les'.
+  [1045] api08:czech: Vysvětli, jak se píše datum 5. 12. 955 slovy.
+  [1046] api08:czech: Oprav pravopis: 'hezký dům plavat vcere vecer.' Najdi chyby 
+  [1047] api08:czech: Urči slovní druhy ve větě: 'hezký pták rychle zpívat.'
+  [1048] api08:czech: Napiš formální žádost (440 slov) na téma 'ryba'.
+  [1049] api08:czech: Vysvětli, jak se píše datum 10. 11. 116 slovy.
+  [1050] api08:czech: Oprav pravopis: 'hezký město zpívat vcere vecer.' Najdi chyb
+  [1051] api08:czech: Urči slovní druhy ve větě: 'dobrý město rychle zpívat.'
+  [1052] api08:czech: Napiš formální žádost (888 slov) na téma 'stůl'.
+  [1053] api08:czech: Vysvětli, jak se píše datum 9. 3. 879 slovy.
+  [1054] api08:czech: Oprav pravopis: 'starý cesta číst vcere vecer.' Najdi chyby 
+  [1055] api08:czech: Urči slovní druhy ve větě: 'rychlý květina rychle zpívat.'
+  [1056] api08:czech: Napiš formální žádost (160 slov) na téma 'řeka'.
+  [1057] api08:czech: Vysvětli, jak se píše datum 3. 9. 951 slovy.
+  [1058] api08:czech: Oprav pravopis: 'hezký oheň kreslit vcere vecer.' Najdi chyb
+  [1059] api08:czech: Napiš formální žádost (277 slov) na téma 'most'.
+  [1060] api08:czech: Vysvětli, jak se píše datum 9. 11. 152 slovy.
+  [1061] api08:czech: Oprav pravopis: 'dobrý stůl vařit vcere vecer.' Najdi chyby 
+  [1062] api08:czech: Urči slovní druhy ve větě: 'silný vlak rychle dýchat.'
+  [1063] api08:czech: Napiš formální žádost (738 slov) na téma 'hora'.
+  [1064] api08:czech: Vysvětli, jak se píše datum 6. 6. 651 slovy.
+  [1065] api08:czech: Urči slovní druhy ve větě: 'starý cesta rychle kreslit.'
+  [1066] api08:czech: Napiš formální žádost (79 slov) na téma 'srdce'.
+  [1067] api08:czech: Vysvětli, jak se píše datum 9. 9. 398 slovy.
+  [1068] api08:czech: Oprav pravopis: 'velký ryba růst vcere vecer.' Najdi chyby a
+  [1069] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle plavat.'
+  [1070] api08:czech: Napiš formální žádost (855 slov) na téma 'les'.
+  [1071] api08:czech: Vysvětli, jak se píše datum 9. 12. 737 slovy.
+  [1072] api08:czech: Oprav pravopis: 'silný pták mluvit vcere vecer.' Najdi chyby
+  [1073] api08:czech: Urči slovní druhy ve větě: 'silný kniha rychle číst.'
+  [1074] api08:czech: Napiš formální žádost (983 slov) na téma 'mozek'.
+  [1075] api08:czech: Vysvětli, jak se píše datum 6. 5. 327 slovy.
+  [1076] api08:czech: Oprav pravopis: 'rychlý hora nést vcere vecer.' Najdi chyby 
+  [1077] api08:czech: Napiš formální žádost (926 slov) na téma 'řeka'.
+  [1078] api08:czech: Vysvětli, jak se píše datum 6. 7. 780 slovy.
+  [1079] api08:czech: Oprav pravopis: 'hezký cesta zpívat vcere vecer.' Najdi chyb
+  [1080] api08:czech: Urči slovní druhy ve větě: 'rychlý voda rychle zpívat.'
+  [1081] api08:czech: Napiš formální žádost (777 slov) na téma 'okno'.
+  [1082] api08:czech: Vysvětli, jak se píše datum 7. 9. 252 slovy.
+  [1083] api08:czech: Oprav pravopis: 'malý květina kreslit vcere vecer.' Najdi ch
+  [1084] api08:czech: Urči slovní druhy ve větě: 'rychlý most rychle dýchat.'
+  [1085] api08:czech: Napiš formální žádost (917 slov) na téma 'stůl'.
+  [1086] api08:czech: Vysvětli, jak se píše datum 8. 6. 444 slovy.
+  [1087] api08:czech: Oprav pravopis: 'hezký strom stavět vcere vecer.' Najdi chyb
+  [1088] api08:czech: Urči slovní druhy ve větě: 'dobrý cesta rychle kreslit.'
+  [1089] api08:czech: Napiš formální žádost (405 slov) na téma 'okno'.
+  [1090] api08:czech: Vysvětli, jak se píše datum 7. 7. 806 slovy.
+  [1091] api08:czech: Oprav pravopis: 'rychlý řeka dýchat vcere vecer.' Najdi chyb
+  [1092] api08:czech: Urči slovní druhy ve větě: 'chytrý řeka rychle kreslit.'
+  [1093] api08:czech: Napiš formální žádost (36 slov) na téma 'hora'.
+  [1094] api08:czech: Vysvětli, jak se píše datum 4. 7. 70 slovy.
+  [1095] api08:czech: Oprav pravopis: 'velký les růst vcere vecer.' Najdi chyby a 
+  [1096] api08:czech: Urči slovní druhy ve větě: 'malý řeka rychle stavět.'
+  [1097] api08:czech: Napiš formální žádost (237 slov) na téma 'cesta'.
+  [1098] api08:czech: Vysvětli, jak se píše datum 2. 3. 61 slovy.
+  [1099] api08:czech: Oprav pravopis: 'hezký voda číst vcere vecer.' Najdi chyby a
+  [1100] api08:czech: Urči slovní druhy ve větě: 'dobrý stůl rychle zpívat.'
+  [1101] api08:czech: Napiš formální žádost (22 slov) na téma 'voda'.
+  [1102] api08:czech: Vysvětli, jak se píše datum 5. 10. 511 slovy.
+  [1103] api08:czech: Oprav pravopis: 'hezký oheň stavět vcere vecer.' Najdi chyby
+  [1104] api08:czech: Urči slovní druhy ve větě: 'rychlý město rychle dýchat.'
+  [1105] api08:czech: Napiš formální žádost (879 slov) na téma 'mozek'.
+  [1106] api08:czech: Vysvětli, jak se píše datum 4. 3. 319 slovy.
+  [1107] api08:czech: Urči slovní druhy ve větě: 'dobrý pták rychle stavět.'
+  [1108] api08:czech: Napiš formální žádost (413 slov) na téma 'pták'.
+  [1109] api08:czech: Vysvětli, jak se píše datum 9. 5. 201 slovy.
+  [1110] api08:czech: Oprav pravopis: 'chytrý dům běžet vcere vecer.' Najdi chyby 
+  [1111] api08:czech: Urči slovní druhy ve větě: 'silný cesta rychle růst.'
+  [1112] api08:czech: Napiš formální žádost (673 slov) na téma 'ryba'.
+  [1113] api08:czech: Vysvětli, jak se píše datum 2. 11. 127 slovy.
+  [1114] api08:czech: Oprav pravopis: 'malý kniha stavět vcere vecer.' Najdi chyby
+  [1115] api08:czech: Urči slovní druhy ve větě: 'starý pole rychle mluvit.'
+  [1116] api08:czech: Napiš formální žádost (910 slov) na téma 'pták'.
+  [1117] api08:czech: Vysvětli, jak se píše datum 9. 4. 46 slovy.
+  [1118] api08:czech: Oprav pravopis: 'velký hora zpívat vcere vecer.' Najdi chyby
+  [1119] api08:czech: Urči slovní druhy ve větě: 'malý květina rychle stavět.'
+  [1120] api08:czech: Napiš formální žádost (951 slov) na téma 'vlak'.
+  [1121] api08:czech: Vysvětli, jak se píše datum 9. 2. 973 slovy.
+  [1122] api08:czech: Oprav pravopis: 'chytrý les běžet vcere vecer.' Najdi chyby 
+  [1123] api08:czech: Urči slovní druhy ve větě: 'velký les rychle psát.'
+  [1124] api08:czech: Napiš formální žádost (565 slov) na téma 'okno'.
+  [1125] api08:czech: Vysvětli, jak se píše datum 10. 9. 448 slovy.
+  [1126] api08:czech: Oprav pravopis: 'dobrý pole kreslit vcere vecer.' Najdi chyb
+  [1127] api08:czech: Napiš formální žádost (233 slov) na téma 'oheň'.
+  [1128] api08:czech: Vysvětli, jak se píše datum 7. 11. 491 slovy.
+  [1129] api08:czech: Oprav pravopis: 'starý srdce běžet vcere vecer.' Najdi chyby
+  [1130] api08:czech: Urči slovní druhy ve větě: 'rychlý řeka rychle plavat.'
+  [1131] api08:czech: Napiš formální žádost (774 slov) na téma 'les'.
+  [1132] api08:czech: Vysvětli, jak se píše datum 8. 6. 818 slovy.
+  [1133] api08:czech: Napiš formální žádost (719 slov) na téma 'vlak'.
+  [1134] api08:czech: Vysvětli, jak se píše datum 5. 2. 735 slovy.
+  [1135] api08:czech: Oprav pravopis: 'hezký řeka plavat vcere vecer.' Najdi chyby
+  [1136] api08:czech: Urči slovní druhy ve větě: 'dobrý dům rychle nést.'
+  [1137] api08:czech: Napiš formální žádost (149 slov) na téma 'most'.
+  [1138] api08:czech: Vysvětli, jak se píše datum 8. 4. 668 slovy.
+  [1139] api08:czech: Oprav pravopis: 'starý srdce kreslit vcere vecer.' Najdi chy
+  [1140] api08:czech: Urči slovní druhy ve větě: 'starý květina rychle kreslit.'
+  [1141] api08:czech: Napiš formální žádost (172 slov) na téma 'cesta'.
+  [1142] api08:czech: Vysvětli, jak se píše datum 7. 9. 718 slovy.
+  [1143] api08:czech: Oprav pravopis: 'silný hora plavat vcere vecer.' Najdi chyby
+  [1144] api08:czech: Napiš formální žádost (604 slov) na téma 'řeka'.
+  [1145] api08:czech: Vysvětli, jak se píše datum 3. 6. 227 slovy.
+  [1146] api08:czech: Oprav pravopis: 'chytrý cesta růst vcere vecer.' Najdi chyby
+  [1147] api08:czech: Urči slovní druhy ve větě: 'silný most rychle růst.'
+  [1148] api08:czech: Napiš formální žádost (851 slov) na téma 'město'.
+DONE made=1148 + fixed rows

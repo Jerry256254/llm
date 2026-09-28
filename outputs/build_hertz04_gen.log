@@ -1,0 +1,14 @@
+prompts: 260 | cached: 0 | to generate: 260
+    ERR HTTPError on: What is plasma membrane? Give a scientific explana
+    ERR HTTPError on: Explain what Big-O notation means for space comple
+  25/260  2174s  (87.0s each)
+  50/260  3013s  (60.3s each)
+  75/260  3868s  (51.6s each)
+  100/260  4768s  (47.7s each)
+  125/260  5658s  (45.3s each)
+  150/260  6563s  (43.8s each)
+  175/260  7409s  (42.3s each)
+  200/260  8188s  (40.9s each)
+  225/260  9049s  (40.2s each)
+  250/260  9926s  (39.7s each)
+generated 258 in 10175s

@@ -1,0 +1,17 @@
+[sudo] password for admin: Hit:13 https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64  InRelease
+Fetched 32.5 kB in 2s (16.0 kB/s)
+Reading package lists...
+Processing triggers for libc-bin (2.41-12+deb13u3) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for dbus (1.16.2-2) ...
+Processing triggers for initramfs-tools (0.148.4) ...
+update-initramfs: Generating /boot/initrd.img-6.12.107+deb13-cloud-amd64
+Mon Sep  7 20:19:59 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+DRIVER-DONE

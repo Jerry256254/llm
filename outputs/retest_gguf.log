@@ -1,0 +1,61 @@
+GPUs: [GpuInfo(name='NVIDIA L4', memory_mib=23034, driver_version='610.43.02', cuda_version=None, index=0)]
+GGUF fix: zkopírován tokenizer.model z 
+/home/admin/llm/models/google__gemma-2-9b-it/tokenizer.model
+Docker image ready: llm-finetune/unsloth:cuda12.1.0-r7
+Konverze do GGUF (q4_k_m)…
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All 
+rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning 
+Container License.
+By pulling and using the container, you accept the terms and conditions of this 
+license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at 
+/NGC-DL-CONTAINER-LICENSE for your convenience.
+
+INFO:hf-to-gguf:Loading model: adapter
+WARNING:hf-to-gguf:Failed to load model config from /workspace/adapter: 
+Unrecognized model in /workspace/adapter. Should have a `model_type` key in its 
+config.json.
+WARNING:hf-to-gguf:Trying to load config.json instead
+Traceback (most recent call last):
+  File "/opt/llama.cpp/conversion/base.py", line 1053, in load_hparams
+    config = AutoConfig.from_pretrained(dir_model, 
+trust_remote_code=False).to_dict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/opt/conda/lib/python3.11/site-packages/transformers/models/auto/configuration_
+auto.py", line 421, in from_pretrained
+    raise ValueError(
+ValueError: Unrecognized model in /workspace/adapter. Should have a `model_type`
+key in its config.json.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/llama.cpp/convert_hf_to_gguf.py", line 296, in <module>
+    main()
+  File "/opt/llama.cpp/convert_hf_to_gguf.py", line 237, in main
+    hparams = ModelBase.load_hparams(dir_model, is_mistral_format)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/llama.cpp/conversion/base.py", line 1057, in load_hparams
+    with open(dir_model / "config.json", "r", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 
+'/workspace/adapter/config.json'
+
+Traceback (most recent call last):
+  File "/tmp/claude-1004/-home-admin-llm/07e6144c-f286-4be0-bca2-8615d1b2531c/scratchpad/retest_gguf.py", line 12, in <module>
+    gguf_path = convert_to_gguf(run_dir, quant="q4_k_m", gpus=gpus)
+  File "/home/admin/llm/lib/convert_gguf.py", line 569, in convert_to_gguf
+    raise RuntimeError(f"GGUF conversion failed (see {log})")
+RuntimeError: GGUF conversion failed (see /home/admin/llm/outputs/run_1786791284/convert_gguf.log)

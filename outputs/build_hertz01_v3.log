@@ -1,0 +1,33 @@
+══════════════════════════════════════════════════════════════════════
+Building KucLab Hertz 0.1 corpus
+══════════════════════════════════════════════════════════════════════
+
+[1/5] Handwritten Czech STEM seed + identity …
+  handwritten: 66
+
+[2/5] Czech terminology tables …
+  terminology: 1696
+
+[3/5] English STEM backbone (off by default — base model is stronger than this data) …
+  (skipped — see comment above)
+
+[4/5] Wikipedia STEM prose …
+  Wiki STEM cs: 20231101.cs (target 2500) …
+    … cs 1000
+    … cs 2000
+  Wiki STEM cs: 2500 (scanned 241032)
+  Wiki STEM en: 20231101.en (target 500) …
+  Wiki STEM en: 500 (scanned 56893)
+
+[5/5] Retained ability from kuclab_v1 …
+  kuclab_v1 reuse: 3000 (pool 25592)
+
+Dedup: 7762 → 7717
+
+──────────────────────────────────────────────────────────────────────
+CORPUS VALIDATION FAILED:
+  ✗ 1302 rows (16.9%) have answers that do not end on a sentence boundary — this teaches the model to stop mid-thought
+──────────────────────────────────────────────────────────────────────
+
+Refusing to write. Fix the mix, or pass --force to write anyway.
+(run_1786478383 burned 13 GPU-hours on a corpus that failed these checks.)

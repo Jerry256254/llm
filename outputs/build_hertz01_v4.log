@@ -1,0 +1,78 @@
+══════════════════════════════════════════════════════════════════════
+Building KucLab Hertz 0.1 corpus
+══════════════════════════════════════════════════════════════════════
+
+[1/5] Handwritten Czech STEM seed + identity …
+  handwritten: 66
+
+[2/5] Czech terminology tables …
+  terminology: 1696
+
+[3/5] English STEM backbone (off by default — base model is stronger than this data) …
+  camel-ai/physics … (target 500)
+  camel-ai/physics: 500
+  camel-ai/chemistry … (target 500)
+  camel-ai/chemistry: 500
+  camel-ai/biology … (target 500)
+  camel-ai/biology: 500
+  camel-ai/math … (target 500)
+  camel-ai/math: 500
+
+[4/5] Wikipedia STEM prose …
+  Wiki STEM cs: 20231101.cs (target 2500) …
+    … cs 1000
+    … cs 2000
+  Wiki STEM cs: 2500 (scanned 241032)
+  Wiki STEM en: 20231101.en (target 500) …
+  Wiki STEM en: 500 (scanned 56893)
+
+[5/5] Retained ability from kuclab_v1 …
+  kuclab_v1 reuse: 3000 (prose pool 10520, dropped 12941 newline-stripped code rows)
+
+Dedup: 9762 → 9712
+
+──────────────────────────────────────────────────────────────────────
+Corpus validation: OK
+──────────────────────────────────────────────────────────────────────
+
+Random sample — read these before training:
+
+  [camel:biology] What are the specific physical adaptations that make crocodilians successful, apex predators in
+     → Crocodilians are highly successful apex predators in their habitats due to a variety of physical adaptations that have evolved over millions of years.
+
+  [cs_terminology] Translate the term 'median' into Czech and explain it.
+     → 'median' is **medián** in Czech (matematika). Prostřední hodnota seřazeného souboru, odolná vůči odlehlým hodnotám.
+
+  [camel:chemistry] How can zeolites be synthesized using greener and more sustainable methods than traditional syn
+     → Zeolites can be synthesized using greener and more sustainable methods by adopting the following strategies: 1. Use of alternative raw materials: Inst
+
+  [wiki_stem_cs] Co je Římskokatolická farnost Slavkov u Brna? Vysvětli to jako odborník.
+     → Římskokatolická farnost Slavkov u Brna je územní společenství římských katolíků s farním kostelem Vzkříšení Páně ve Slavkově u Brna ve stejnojmenném d
+
+  [cs_terminology] Jak se anglicky řekne „adaptace“?
+     → „Adaptace“ se anglicky řekne **adaptation**. Jde o pojem z oboru biologie: znak zvyšující zdatnost jedince v daném prostředí.
+
+  MMLU-Pro eval (held out): 240 — {'math': 60, 'physics': 60, 'chemistry': 60, 'biology': 60}
+
+══════════════════════════════════════════════════════════════════════
+✓ 9712 samples → /home/admin/llm/data/kuclab_hertz_0.1/train.jsonl
+✓ 16 smoke prompts, 240 held-out MMLU-Pro rows
+
+Top sources:
+     2950  kuclab_v1_reuse
+     2500  wiki_stem_cs
+     1545  cs_terminology
+      500  camel:chemistry
+      500  camel:physics
+      500  camel:biology
+      500  camel:math
+      500  wiki_stem_en
+      123  cs_elements
+       28  cs_constants
+       24  hertz_identity
+       10  cs_physics_seed
+        9  hertz_behaviour
+        8  cs_chemistry_seed
+        8  cs_math_seed
+        7  cs_biology_seed
+══════════════════════════════════════════════════════════════════════

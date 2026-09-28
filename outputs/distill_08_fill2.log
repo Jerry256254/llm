@@ -1,0 +1,36 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek', 'concise': 'deepseek'}
+  filtered to domains ['bio', 'chem', 'code', 'codehard', 'concise', 'czech', 'design', 'tools']: 4000 prompts
+  caps {'code': 360, 'chem': 132, 'bio': 200, 'czech': 160, 'concise': 25, 'codehard': 395, 'tools': 200, 'design': 5} vs have {'identity_format': 38, 'math': 1202, 'phys': 769, 'chem': 368, 'code': 440, 'bio': 398, 'design': 395, 'czech': 539, 'codehard': 17, 'concise': 400, 'tools': 133} -> 445 queued
+  [1] api08:codehard: Najdi bug: 'for i in range(2): print(i/10)'. Co se pokazí a 
+  [2] api08:codehard: Najdi bug: 'for i in range(3): print(i/5)'. Co se pokazí a j
+  [3] api08:codehard: Najdi bug: 'for i in range(7): print(i/10)'. Co se pokazí a 
+  [4] api08:codehard: Najdi bug: 'for i in range(7): print(i/12)'. Co se pokazí a 
+  [5] api08:codehard: Najdi bug: 'for i in range(4): print(i/2)'. Co se pokazí a j
+  [6] api08:codehard: Najdi bug: 'for i in range(10): print(i/8)'. Co se pokazí a 
+  [7] api08:codehard: Najdi bug: 'for i in range(3): print(i/12)'. Co se pokazí a 
+  [8] api08:codehard: Najdi bug: 'for i in range(2): print(i/6)'. Co se pokazí a j
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek', 'concise': 'deepseek'}
+  filtered to domains ['bio', 'chem', 'code', 'codehard', 'concise', 'czech', 'design', 'tools']: 4000 prompts
+  caps {'code': 360, 'chem': 132, 'bio': 200, 'czech': 160, 'concise': 25, 'codehard': 395, 'tools': 200, 'design': 5} vs have {'identity_format': 38, 'math': 1202, 'phys': 769, 'chem': 368, 'code': 440, 'bio': 398, 'design': 395, 'czech': 539, 'codehard': 25, 'concise': 400, 'tools': 133} -> 437 queued
+  [1] api08:codehard: Napiš unit testy (pytest) pro funkci, která vrací 6 % ze 864
+  [2] api08:codehard: Najdi bug: 'for i in range(10): print(i/10)'. Co se pokazí a
+  [3] api08:codehard: Najdi bug: 'for i in range(5): print(i/2)'. Co se pokazí a j
+  [4] api08:codehard: Najdi bug: 'for i in range(6): print(i/12)'. Co se pokazí a 
+  [5] api08:codehard: Najdi bug: 'for i in range(7): print(i/6)'. Co se pokazí a j
+  [6] api08:tools: Kdy má model volat nástroj místo vlastní odpovědi? Uveď 3 si
+  [7] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='33
+  [8] api08:tools: Nástroj get_stock_price vrátil 423.5. Sestav krátkou odpověď
+  [9] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='81
+  [10] api08:tools: Nástroj get_stock_price vrátil 350.12. Sestav krátkou odpově
+  [11] api08:tools: Uživatel chce aktuální teplotu v Praze. Ukaž, jak zavoláš ná
+  [12] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='65
+  [13] api08:tools: Nástroj get_stock_price vrátil 884.5. Sestav krátkou odpověď
+  [14] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='50
+  [15] api08:tools: Nástroj get_stock_price vrátil 88.2. Sestav krátkou odpověď 
+  [16] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='48
+  [17] api08:tools: Nástroj get_stock_price vrátil 980.2. Sestav krátkou odpověď
+  [18] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='82
+  [19] api08:tools: Nástroj get_stock_price vrátil 559.12. Sestav krátkou odpově
+  [20] api08:tools: Vícekroková úloha: nejdřív zavolej calculator(expression='41
+  [21] api08:tools: Nástroj get_stock_price vrátil 142.11. Sestav krátkou odpově
+DONE made=21 + fixed rows

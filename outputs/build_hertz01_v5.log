@@ -1,0 +1,78 @@
+══════════════════════════════════════════════════════════════════════
+Building KucLab Hertz 0.1 corpus
+══════════════════════════════════════════════════════════════════════
+
+[1/5] Handwritten Czech STEM seed + identity …
+  handwritten: 66
+
+[2/5] Czech terminology tables …
+  terminology: 1696
+
+[3/5] English STEM backbone (off by default — base model is stronger than this data) …
+  camel-ai/physics … (target 500)
+  camel-ai/physics: 500
+  camel-ai/chemistry … (target 500)
+  camel-ai/chemistry: 500
+  camel-ai/biology … (target 500)
+  camel-ai/biology: 500
+  camel-ai/math … (target 500)
+  camel-ai/math: 500
+
+[4/5] Wikipedia STEM prose …
+  Wiki STEM cs: 20231101.cs (target 2500) …
+    … cs 1000
+    … cs 2000
+  Wiki STEM cs: 2374 (scanned 534044)
+  Wiki STEM en: 20231101.en (target 500) …
+  Wiki STEM en: 241 (scanned 110001)
+
+[5/5] Retained ability from kuclab_v1 …
+  kuclab_v1 reuse: 1200 (prose pool 10520, dropped 12941 newline-stripped code rows)
+
+Dedup: 7577 → 7568
+
+──────────────────────────────────────────────────────────────────────
+Corpus validation: OK
+──────────────────────────────────────────────────────────────────────
+
+Random sample — read these before training:
+
+  [wiki_stem_cs] Co je Renderovací jádro prohlížeče? Vysvětli to jako odborník.
+     → Renderovací jádro prohlížeče (též vykreslovací jádro, , nebo ) je software, který načte zdrojový kód webové stránky skládající se ze strukturálních a 
+
+  [cs_terminology] Translate the term 'consumer' into Czech and explain it.
+     → 'consumer' is **konzument** in Czech (biologie). Organismus živící se jinými organismy.
+
+  [camel:biology] How does immunological memory provide long-term protection against pathogens?
+     → Immunological memory provides long-term protection against pathogens by generating a faster and more effective immune response upon subsequent encount
+
+  [wiki_stem_cs] Stručně a přesně: Fotosyntéza
+     → Fotosyntéza (z řeckého fós, fótos – „světlo“ a synthesis – „shrnutí“, „skládání“) nebo také fotosyntetická asimilace je složitý biochemický proces, př
+
+  [cs_terminology] Co je to vektorový součin?
+     → **Vektorový součin** (matematika) — součin dvou vektorů, výsledkem je kolmý vektor. Anglicky *cross product*.
+
+  MMLU-Pro eval (held out): 240 — {'math': 60, 'chemistry': 60, 'physics': 60, 'biology': 60}
+
+══════════════════════════════════════════════════════════════════════
+✓ 7568 samples → /home/admin/llm/data/kuclab_hertz_0.1/train.jsonl
+✓ 16 smoke prompts, 240 held-out MMLU-Pro rows
+
+Top sources:
+     2374  wiki_stem_cs
+     1545  cs_terminology
+     1191  kuclab_v1_reuse
+      500  camel:biology
+      500  camel:math
+      500  camel:chemistry
+      500  camel:physics
+      241  wiki_stem_en
+      123  cs_elements
+       28  cs_constants
+       24  hertz_identity
+       10  cs_physics_seed
+        9  hertz_behaviour
+        8  cs_chemistry_seed
+        8  cs_math_seed
+        7  cs_biology_seed
+══════════════════════════════════════════════════════════════════════

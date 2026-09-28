@@ -1,0 +1,107 @@
+{
+  "model": "qwen3.5:9b",
+  "n": 20,
+  "mean_think_tok": 678.75,
+  "rows": [
+    {
+      "q": "ahoj",
+      "think_tok": 677,
+      "answer": "Ahoj! 👋 Jak se máš? S čím ti mohu dnes pomoci?"
+    },
+    {
+      "q": "Kolik je 17 krat 23?",
+      "think_tok": 295,
+      "answer": "17 krát 23 je **391**."
+    },
+    {
+      "q": "Co je to fotosyntéza?",
+      "think_tok": 844,
+      "answer": "**Fotosyntéza** je biochemický proces, při kterém rostliny, řasy a některé bakterie využívají světelnou energii ze slunc"
+    },
+    {
+      "q": "Vysvětli moment hybnosti.",
+      "think_tok": 1007,
+      "answer": ""
+    },
+    {
+      "q": "Je 91 prvočíslo?",
+      "think_tok": 368,
+      "answer": "Ne, **91 není prvočíslo**.\n\nJe to složené číslo, protože je dělitelné číslem **7** a **13**:\n$$7 \\times 13 = 91$$"
+    },
+    {
+      "q": "Napiš funkci na Fibonacciho čísla v Pythonu.",
+      "think_tok": 860,
+      "answer": ""
+    },
+    {
+      "q": "What is entropy in thermodynamics?",
+      "think_tok": 945,
+      "answer": "In thermodynamics, **entropy** is a fundamental concept used to measure the degree of disorder or randomness in a system"
+    },
+    {
+      "q": "Jak se skloňuje slovo most?",
+      "think_tok": 836,
+      "answer": ""
+    },
+    {
+      "q": "Vypočítej pH roztoku HCl 0.01 mol/l.",
+      "think_tok": 470,
+      "answer": "Hydrochlorová kyselina (HCl) je silná kyselina, což znamená, že se ve vodě zcela disociuje na ionty:\n\n$$ \\text{HCl} \\rig"
+    },
+    {
+      "q": "Kdo tě vytvořil?",
+      "think_tok": 383,
+      "answer": "Jsem velkým jazykovým modelem vyvinutým týmem vývojářů z **Tongyi Lab** v rámci **Alibaba Cloud**. Pokud máte další otáz"
+    },
+    {
+      "q": "Solve 5x + 3 = 28.",
+      "think_tok": 366,
+      "answer": "To solve the equation **5x + 3 = 28**, follow these steps:\n\n1.  **Subtract 3 from both sides** of the equation to isolat"
+    },
+    {
+      "q": "Co je to mitochondrie?",
+      "think_tok": 764,
+      "answer": "Mitochondrie jsou malé organely (vnitřní struktury) nacházející se v buňkách všech eukaryotických organismů (tj. rostlin"
+    },
+    {
+      "q": "Vysvětli rozdíl mezi virem a bakterií.",
+      "think_tok": 901,
+      "answer": "Hlavní rozdíl mezi virem a bakterií spočívá v tom, že **bakterie jsou živé organismy**, zatímco **viry nejsou považovány"
+    },
+    {
+      "q": "Napiš SQL dotaz na top 3 zákazníky.",
+      "think_tok": 977,
+      "answer": ""
+    },
+    {
+      "q": "Je voda při 50 °C kapalná?",
+      "think_tok": 714,
+      "answer": "Ano, voda při 50 °C je **kapalná**.\n\nZa běžného atmosférického tlaku se voda nachází v kapalném stavu teploty mezi **0 °"
+    },
+    {
+      "q": "What is the speed of light?",
+      "think_tok": 341,
+      "answer": "The speed of light in a vacuum is exactly **299,792,458 meters per second**.\n\nFor most practical purposes, it is commonl"
+    },
+    {
+      "q": "Oprav: Musím to písat každý den.",
+      "think_tok": 836,
+      "answer": ""
+    },
+    {
+      "q": "Vysvětli Krebsův cyklus.",
+      "think_tok": 887,
+      "answer": ""
+    },
+    {
+      "q": "Kolik je odmocnina ze 144?",
+      "think_tok": 340,
+      "answer": "Odmocnina ze 144 je **12**."
+    },
+    {
+      "q": "Co je to API?",
+      "think_tok": 764,
+      "answer": "**API** je zkratka pro **Application Programming Interface**, což v češtině překládáme jako **rozhraní pro programování "
+    }
+  ]
+}

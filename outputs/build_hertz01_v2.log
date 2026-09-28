@@ -1,0 +1,59 @@
+══════════════════════════════════════════════════════════════════════
+Building KucLab Hertz 0.1 corpus
+══════════════════════════════════════════════════════════════════════
+
+[1/5] Handwritten Czech STEM seed + identity …
+  handwritten: 66
+
+[2/5] Czech terminology tables …
+  terminology: 1696
+
+[3/5] English STEM backbone (off by default — base model is stronger than this data) …
+  (skipped — see comment above)
+
+[4/5] Wikipedia STEM prose …
+  Wiki STEM cs: 20231101.cs (target 15000) …
+    … cs 1000
+    … cs 2000
+    … cs 3000
+    … cs 4000
+    … cs 5000
+    … cs 6000
+    … cs 7000
+    … cs 8000
+    … cs 9000
+    … cs 10000
+    … cs 11000
+    … cs 12000
+    … cs 13000
+    … cs 14000
+    … cs 15000
+  Wiki STEM cs: 15000 (scanned 101246)
+  Wiki STEM en: 20231101.en (target 1000) …
+    … en 1000
+  Wiki STEM en: 1000 (scanned 10016)
+
+[5/5] Retained ability from kuclab_v1 …
+  kuclab_v1 reuse: 4000 (pool 25592)
+
+Dedup: 21762 → 21686
+  MMLU-Pro eval (held out): 240 — {'chemistry': 60, 'physics': 60, 'biology': 60, 'math': 60}
+
+══════════════════════════════════════════════════════════════════════
+✓ 21686 samples → /home/admin/llm/data/kuclab_hertz_0.1/train.jsonl
+✓ 16 smoke prompts, 240 held-out MMLU-Pro rows
+
+Top sources:
+    15000  wiki_stem_cs
+     3924  kuclab_v1_reuse
+     1545  cs_terminology
+     1000  wiki_stem_en
+      123  cs_elements
+       28  cs_constants
+       24  hertz_identity
+       10  cs_physics_seed
+        9  hertz_behaviour
+        8  cs_math_seed
+        8  cs_chemistry_seed
+        7  cs_biology_seed
+══════════════════════════════════════════════════════════════════════

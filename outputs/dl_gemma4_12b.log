@@ -1,0 +1,8 @@
+Stahuji google/gemma-4-12B-it → /home/admin/llm/models/google__gemma-4-12B-it …
+/home/admin/llm/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py:189: UserWarning: The `resume_download` argument is deprecated and ignored in `snapshot_download`. Downloads always resume whenever possible.
+  warnings.warn(
+/home/admin/llm/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `snapshot_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files:  11%|█         | 1/9 [00:00<00:06,  1.29it/s]Fetching 9 files:  56%|█████▌    | 5/9 [00:00<00:00,  6.71it/s]Fetching 9 files:  56%|█████▌    | 5/9 [00:19<00:00,  6.71it/s]Fetching 9 files:  67%|██████▋   | 6/9 [04:08<02:53, 57.92s/it]Fetching 9 files: 100%|██████████| 9/9 [04:08<00:00, 27.66s/it]
+Staženo: /home/admin/llm/models/google__gemma-4-12B-it
+DONE: /home/admin/llm/models/google__gemma-4-12B-it

@@ -1,0 +1,153 @@
+  filtered to domains ['cseng', 'econ', 'history', 'law', 'philo', 'psych']: 634 prompts
+  [1] api08:history: What was the Enlightenment? Name 4 key thinkers and their id
+  [2] api08:history: Describe daily life in medieval les in 5 concrete points.
+  [3] api08:history: What was the Enlightenment? Name 2 key thinkers and their id
+  [4] api08:history: What was the Enlightenment? Name 5 key thinkers and their id
+  [5] api08:history: Explain the industrial revolution's 2 biggest technological 
+  [6] api08:history: Explain the Cold War space race: key milestones 840-840 year
+  [7] api08:law: Explain the difference between civil and criminal law with e
+  [8] api08:law: What are the 10 essential elements of a valid contract?
+  [9] api08:law: Explain the difference between murder and manslaughter legal
+  [10] api08:law: What rights does a tenant typically have? List key protectio
+  [11] api08:law: Explain what a constitution does, using 2 core functions.
+  [12] api08:law: Explain what a constitution does, using 6 core functions.
+  [13] api08:law: What are the 3 essential elements of a valid contract?
+  [14] api08:law: What are the 5 essential elements of a valid contract?
+  [15] api08:law: Explain what a constitution does, using 5 core functions.
+  [16] api08:law: Explain what a constitution does, using 3 core functions.
+  [17] api08:law: What are the 7 essential elements of a valid contract?
+  [18] api08:law: Explain what a constitution does, using 4 core functions.
+  [19] api08:law: Explain what a constitution does, using 7 core functions.
+  [20] api08:econ: Explain supply and demand with a bread-price example.
+  [21] api08:econ: What is inflation and how is it measured? Give the formula.
+  [22] api08:econ: What is compound interest? Compute 187 at 3% over 6 years.
+  [23] api08:econ: Explain the difference between stocks and bonds for a beginn
+  [24] api08:econ: What is a central bank interest rate hike supposed to do?
+  [25] api08:econ: What is opportunity cost? Give 2 everyday examples.
+  [26] api08:econ: What is compound interest? Compute 722 at 9% over 7 years.
+  [27] api08:econ: What causes unemployment types? Name and explain 6 of them.
+  [28] api08:econ: What is compound interest? Compute 30 at 2% over 10 years.
+  [29] api08:econ: What is compound interest? Compute 58 at 4% over 4 years.
+  [30] api08:econ: What is compound interest? Compute 204 at 9% over 5 years.
+  [31] api08:econ: What causes unemployment types? Name and explain 5 of them.
+  [32] api08:econ: What is compound interest? Compute 958 at 4% over 2 years.
+  [33] api08:econ: What causes unemployment types? Name and explain 3 of them.
+  [34] api08:econ: What is compound interest? Compute 648 at 3% over 3 years.
+  [35] api08:econ: What causes unemployment types? Name and explain 4 of them.
+  [36] api08:econ: What is compound interest? Compute 553 at 9% over 4 years.
+  [37] api08:econ: What is compound interest? Compute 767 at 5% over 8 years.
+  [38] api08:econ: What is compound interest? Compute 575 at 9% over 2 years.
+  [39] api08:econ: What is compound interest? Compute 394 at 5% over 9 years.
+  [40] api08:econ: What is compound interest? Compute 394 at 9% over 8 years.
+  [41] api08:econ: What is compound interest? Compute 934 at 5% over 3 years.
+  [42] api08:econ: What is compound interest? Compute 255 at 9% over 4 years.
+  [43] api08:econ: What is compound interest? Compute 975 at 2% over 8 years.
+  [44] api08:econ: What is compound interest? Compute 529 at 7% over 4 years.
+  [45] api08:econ: Explain the 973 financial crisis mechanism in 5 steps.
+  [46] api08:econ: What is compound interest? Compute 617 at 5% over 3 years.
+  [47] api08:econ: What is compound interest? Compute 885 at 6% over 2 years.
+  [48] api08:econ: What causes unemployment types? Name and explain 2 of them.
+  [49] api08:econ: What is compound interest? Compute 57 at 4% over 2 years.
+  [50] api08:econ: What is compound interest? Compute 850 at 2% over 3 years.
+  [51] api08:econ: What is compound interest? Compute 873 at 7% over 7 years.
+  [52] api08:econ: What is compound interest? Compute 847 at 4% over 6 years.
+  [53] api08:econ: What is compound interest? Compute 967 at 2% over 12 years.
+  [54] api08:econ: What is compound interest? Compute 461 at 4% over 7 years.
+  [55] api08:econ: What is compound interest? Compute 981 at 9% over 2 years.
+  [56] api08:econ: What is compound interest? Compute 26 at 10% over 7 years.
+  [57] api08:econ: What is compound interest? Compute 972 at 5% over 6 years.
+  [58] api08:econ: What is compound interest? Compute 496 at 4% over 5 years.
+  [59] api08:econ: What is compound interest? Compute 725 at 2% over 2 years.
+  [60] api08:econ: What is compound interest? Compute 898 at 3% over 6 years.
+  [61] api08:econ: What is compound interest? Compute 647 at 6% over 6 years.
+  [62] api08:econ: What is compound interest? Compute 111 at 6% over 8 years.
+  [63] api08:econ: What is compound interest? Compute 386 at 8% over 5 years.
+  [64] api08:econ: What is compound interest? Compute 410 at 10% over 9 years.
+  [65] api08:econ: What is compound interest? Compute 176 at 2% over 12 years.
+  [66] api08:econ: What is compound interest? Compute 302 at 4% over 5 years.
+  [67] api08:econ: What is compound interest? Compute 780 at 7% over 8 years.
+  [68] api08:econ: What is compound interest? Compute 705 at 9% over 6 years.
+  [69] api08:econ: What is compound interest? Compute 888 at 8% over 4 years.
+  [70] api08:econ: What is compound interest? Compute 275 at 6% over 6 years.
+  [71] api08:econ: What is compound interest? Compute 61 at 8% over 6 years.
+  [72] api08:econ: What is compound interest? Compute 146 at 8% over 7 years.
+  [73] api08:econ: What is compound interest? Compute 286 at 2% over 6 years.
+  [74] api08:econ: What is compound interest? Compute 555 at 2% over 3 years.
+  [75] api08:econ: What is compound interest? Compute 481 at 9% over 2 years.
+  [76] api08:econ: What is compound interest? Compute 954 at 4% over 3 years.
+  [77] api08:econ: What is compound interest? Compute 714 at 9% over 6 years.
+  [78] api08:econ: What is compound interest? Compute 186 at 8% over 4 years.
+  [79] api08:econ: What is compound interest? Compute 778 at 5% over 5 years.
+  [80] api08:econ: What is compound interest? Compute 932 at 10% over 7 years.
+  [81] api08:econ: What is compound interest? Compute 560 at 9% over 5 years.
+  [82] api08:econ: What is compound interest? Compute 215 at 10% over 8 years.
+  [83] api08:econ: What is compound interest? Compute 385 at 9% over 5 years.
+  [84] api08:econ: What is compound interest? Compute 168 at 8% over 3 years.
+  [85] api08:econ: What is compound interest? Compute 57 at 8% over 11 years.
+  [86] api08:econ: What is compound interest? Compute 699 at 2% over 5 years.
+  [87] api08:econ: What is compound interest? Compute 316 at 3% over 7 years.
+  [88] api08:econ: What is compound interest? Compute 135 at 10% over 5 years.
+  [89] api08:econ: What is compound interest? Compute 943 at 8% over 2 years.
+  [90] api08:econ: What is compound interest? Compute 391 at 3% over 3 years.
+  [91] api08:econ: Explain the 200 financial crisis mechanism in 5 steps.
+  [92] api08:econ: What is compound interest? Compute 968 at 10% over 8 years.
+  [93] api08:econ: What is compound interest? Compute 364 at 5% over 7 years.
+  [94] api08:econ: What is compound interest? Compute 83 at 8% over 11 years.
+  [95] api08:econ: What is compound interest? Compute 609 at 5% over 12 years.
+  [96] api08:econ: What is compound interest? Compute 892 at 8% over 3 years.
+  [97] api08:econ: What is compound interest? Compute 335 at 7% over 10 years.
+  [98] api08:econ: What is compound interest? Compute 745 at 9% over 2 years.
+  [99] api08:econ: What is compound interest? Compute 142 at 5% over 4 years.
+  [100] api08:econ: What is compound interest? Compute 305 at 8% over 4 years.
+  [101] api08:econ: What is compound interest? Compute 115 at 10% over 11 years.
+  [102] api08:econ: What is compound interest? Compute 117 at 7% over 4 years.
+  [103] api08:econ: What is compound interest? Compute 507 at 2% over 5 years.
+  [104] api08:econ: What is compound interest? Compute 247 at 6% over 8 years.
+  [105] api08:econ: What is compound interest? Compute 58 at 10% over 8 years.
+  [106] api08:econ: What is compound interest? Compute 464 at 2% over 5 years.
+  [107] api08:econ: What is compound interest? Compute 410 at 8% over 5 years.
+  [108] api08:econ: What is compound interest? Compute 709 at 2% over 9 years.
+  [109] api08:econ: What is compound interest? Compute 22 at 9% over 5 years.
+  [110] api08:econ: What is compound interest? Compute 466 at 9% over 3 years.
+  [111] api08:econ: What is compound interest? Compute 788 at 9% over 9 years.
+  [112] api08:econ: What is compound interest? Compute 288 at 8% over 12 years.
+  [113] api08:econ: What is compound interest? Compute 710 at 5% over 4 years.
+  [114] api08:econ: What is compound interest? Compute 175 at 2% over 4 years.
+  [115] api08:econ: What is compound interest? Compute 16 at 7% over 6 years.
+  [116] api08:econ: What is compound interest? Compute 383 at 7% over 9 years.
+  [117] api08:econ: What is compound interest? Compute 419 at 8% over 6 years.
+  [118] api08:econ: What is compound interest? Compute 291 at 9% over 5 years.
+  [119] api08:econ: What is compound interest? Compute 625 at 10% over 7 years.
+  [120] api08:econ: What is compound interest? Compute 183 at 5% over 3 years.
+  [121] api08:econ: What is compound interest? Compute 480 at 5% over 3 years.
+  [122] api08:econ: What is compound interest? Compute 179 at 3% over 10 years.
+  [123] api08:econ: What is compound interest? Compute 414 at 4% over 2 years.
+  [124] api08:econ: What is compound interest? Compute 570 at 6% over 6 years.
+  [125] api08:psych: Explain classical vs operant conditioning with examples.
+  [126] api08:psych: What is cognitive dissonance? Give an everyday example.
+  [127] api08:psych: What is confirmation bias and how does it distort decisions?
+  [128] api08:psych: Describe the 2 stages of sleep and what happens in each.
+  [129] api08:philo: Explain Plato's cave allegory and its meaning in 3 points.
+  [130] api08:philo: What is utilitarianism? Give the core principle and one obje
+  [131] api08:philo: What is the difference between ethics and morals in philosop
+  [132] api08:philo: Summarize Kant's categorical imperative with an example.
+  [133] api08:philo: Explain the trolley problem and the 2 main positions on it.
+  [134] api08:cseng: Explain how a CPU executes instructions (fetch-decode-execut
+  [135] api08:cseng: What is the difference between RAM and SSD in function and s
+  [136] api08:cseng: Explain TCP handshake in 3 steps.
+  [137] api08:cseng: Explain how GPS determines position (trilateration basics).
+  [138] api08:cseng: What is the difference between AC and DC power? Where is eac
+  [139] api08:cseng: Explain how a transformer changes voltage (turns ratio).
+  [140] api08:cseng: What is bandwidth vs latency? Give a highway analogy.
+  [141] api08:cseng: Explain public-key cryptography in simple steps.
+  [142] api08:cseng: How does a jet engine produce thrust? Describe the stages.
+  [143] api08:cseng: Explain TCP handshake in 6 steps.
+  [144] api08:cseng: Explain TCP handshake in 4 steps.
+  [145] api08:cseng: What is an operating system kernel? Describe its 5 jobs.
+  [146] api08:cseng: What is an operating system kernel? Describe its 3 jobs.
+  [147] api08:cseng: What is an operating system kernel? Describe its 2 jobs.
+  [148] api08:cseng: What is an operating system kernel? Describe its 4 jobs.
+  [149] api08:cseng: What is an operating system kernel? Describe its 10 jobs.
+  [150] api08:cseng: Explain TCP handshake in 2 steps.
+  [151] api08:cseng: Explain TCP handshake in 5 steps.
+DONE made=151 + fixed rows

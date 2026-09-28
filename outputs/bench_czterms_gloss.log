@@ -1,0 +1,34 @@
+
+══════════════════════════════════════════════════════════════════════
+kuclab-hertz-gloss · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  232s
+  40/206  290s
+  60/206  348s
+  80/206  406s
+  100/206  464s
+  120/206  522s
+  140/206  580s
+  160/206  638s
+  180/206  696s
+  200/206  755s
+
+kuclab-hertz-gloss
+  CS→EN     18/103   17.5%
+  EN→CS     14/103   13.6%
+  TOTAL     32/206   15.5%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    výkon                      → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    valivý odpor               → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    Coriolisova síla           → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    těžiště                    → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    frekvence                  → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    vlnová délka               → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    stojaté vlnění             → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    elektrický náboj           → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    rezistivita                → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    magnetická indukce         → 'Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for'
+    stejnosměrný proud         → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    dioda                      → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+  → /home/admin/llm/outputs/bench/czterms_kuclab-hertz-gloss.json

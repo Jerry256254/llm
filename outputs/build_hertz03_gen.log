@@ -1,0 +1,9 @@
+prompts: 250 | cached: 106 | to generate: 144
+    ERR HTTPError on: Explain hydrolysis clearly and accurately.
+    ERR HTTPError on: Jak se česky odborně řekne „range“ a co to znamená
+  25/144  2281s  (91.2s each)
+  50/144  3374s  (67.5s each)
+  75/144  4359s  (58.1s each)
+  100/144  5440s  (54.4s each)
+  125/144  6654s  (53.2s each)
+generated 142 in 7615s

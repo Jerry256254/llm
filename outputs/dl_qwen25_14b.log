@@ -1,0 +1,9 @@
+Stahuji Qwen/Qwen2.5-14B-Instruct → 
+/home/admin/llm/models/Qwen__Qwen2.5-14B-Instruct …
+/home/admin/llm/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py:189: UserWarning: The `resume_download` argument is deprecated and ignored in `snapshot_download`. Downloads always resume whenever possible.
+  warnings.warn(
+/home/admin/llm/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `snapshot_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Fetching 18 files:   6%|▌         | 1/18 [00:00<00:12,  1.39it/s]Fetching 18 files:  11%|█         | 2/18 [00:00<00:05,  2.71it/s]Fetching 18 files:  39%|███▉      | 7/18 [03:36<06:24, 34.99s/it]Fetching 18 files:  44%|████▍     | 8/18 [03:42<04:55, 29.52s/it]Fetching 18 files:  50%|█████     | 9/18 [03:48<03:39, 24.44s/it]Fetching 18 files:  56%|█████▌    | 10/18 [03:48<02:31, 18.88s/it]Fetching 18 files: 100%|██████████| 18/18 [03:48<00:00, 12.71s/it]
+Staženo: /home/admin/llm/models/Qwen__Qwen2.5-14B-Instruct
+DONE: /home/admin/llm/models/Qwen__Qwen2.5-14B-Instruct

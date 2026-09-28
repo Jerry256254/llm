@@ -1,0 +1,14 @@
+prompts: 510 | cached: 258 | to generate: 252
+    ERR HTTPError on: Co je cytoplazma? Uveď i anglický ekvivalent.
+    ERR HTTPError on: Jak se česky odborně řekne „ideal gas“ a co to zna
+  25/252  2156s  (86.2s each)
+  50/252  3151s  (63.0s each)
+  75/252  3816s  (50.9s each)
+  100/252  4698s  (47.0s each)
+  125/252  5623s  (45.0s each)
+  150/252  6619s  (44.1s each)
+  175/252  7625s  (43.6s each)
+  200/252  8478s  (42.4s each)
+  225/252  9376s  (41.7s each)
+  250/252  10288s  (41.2s each)
+generated 250 in 10288s

@@ -1,0 +1,40 @@
+Tokenizer preflight: tokenizer.model missing in 
+/home/admin/llm/outputs/base_gemma4_convert/merged and no base model found to 
+copy from. Re-download the base HF model or copy tokenizer.model into the merged
+folder.
+Docker image ready: llm-finetune/unsloth:cuda12.1.0-r7
+Konverze do GGUF (q4_k_m)…
+GGUF hotovo: /home/admin/llm/outputs/base_gemma4_convert/gguf/model-q4_k_m.gguf 
+(7.38 GB)
+GGUF: /home/admin/llm/outputs/base_gemma4_convert/gguf/model-q4_k_m.gguf
+Modelfile: /home/admin/llm/outputs/base_gemma4_convert/Modelfile  (style=auto)
+Ollama context window (num_ctx): 8192
+Import do Ollama jako gemma4-12b-it-base …
+Model připraven: ollama run gemma4-12b-it-base
+NAME                            ID              SIZE      MODIFIED       
+gemma4-12b-it-base:latest       fa00fc330654    7.4 GB    1 second ago      
+kuclab-hertz-0.4:latest         460f0dada433    7.4 GB    50 minutes ago    
+kuclab-hertz-0.3:latest         3b732f68778d    9.0 GB    37 hours ago      
+qwen3.8:27b                     22130167c4c2    17 GB     2 days ago        
+qwen2.5:14b-instruct            7cdf5a0187d5    9.0 GB    2 days ago        
+kuclab-hertz-0.2:latest         80c16d96fcaf    5.8 GB    5 days ago        
+qwen35-nulltrain-bf16:latest    b1ef2fe223ee    5.8 GB    6 days ago        
+qwen35-nulltrain:latest         f28637a7076d    5.8 GB    7 days ago        
+kuclab-hertz-0.1-r:latest       90f4e673c5fd    5.8 GB    7 days ago        
+kuclab-hertz-0.1:latest         aaff4e51b894    5.8 GB    7 days ago        
+kuclab-hertz-gloss:latest       abe66979cfeb    6.6 GB    8 days ago        
+kuclab-hertz-pilot3:latest      2fa3e19c35f8    5.8 GB    8 days ago        
+kuclab-hertz-pilot2:latest      26658c7a70ff    5.8 GB    8 days ago        
+kuclab-hertz-pilot:latest       94d925dad546    5.8 GB    8 days ago        
+qwen3.5:9b                      6488c96fa5fa    6.6 GB    9 days ago        
+kuclab-v1:latest                89414704796f    5.8 GB    3 weeks ago       
+gemma4:e2b                      7fbdbf8f5e45    7.2 GB    3 weeks ago       
+kuclab-v0.5:latest              cdfe8c9f2dea    5.8 GB    3 weeks ago       
+kuclab-v0.4:latest              79381f579c74    5.8 GB    4 weeks ago       
+kuclab-v0.3:latest              3aa872cff46f    5.8 GB    4 weeks ago       
+gemma2:9b                       ff02c3702f32    5.4 GB    4 weeks ago       
+kuclab-v0.2:latest              aef0344ac1d9    3.4 GB    4 weeks ago       
+kuclab-v0.1:latest              e979c645b59c    529 MB    4 weeks ago       
+qwen3.5:0.8b                    f3817196d142    1.0 GB    4 weeks ago       
+gemma2:2b                       8ccf136fdd52    1.6 GB    4 weeks ago       
+DONE: /home/admin/llm/outputs/base_gemma4_convert/Modelfile

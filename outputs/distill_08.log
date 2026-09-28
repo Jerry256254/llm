@@ -1,0 +1,2595 @@
+  filtered to domains ['bio', 'czech', 'design', 'identity']: 1700 prompts
+  [1] api08:bio: Vysvětli Krebsův cyklus krok za krokem a jeho energetický vý
+  [2] api08:bio: Popiš stavbu neuronu a vznik akčního potenciálu.
+  [3] api08:bio: Vysvětli Mendelovy zákony na příkladu s hrachem.
+  [4] api08:bio: Popiš fáze mitózy a co se děje s chromozomy.
+  [5] api08:bio: Vysvětli, jak hemoglobin váže a uvolňuje kyslík (Bohrův efek
+  [6] api08:bio: Popiš trávicí soustavu člověka po oddílech a jejich funkce.
+  [7] api08:bio: Lidské srdce přečerpá asi 7500 litrů krve denně. Vysvětli ma
+  [8] api08:bio: Lidské tělo obsahuje asi 57 % vody. Vysvětli význam vody pro
+  [9] api08:bio: Klidový tep je asi 68 tepů za minutu. Co se děje při jednom 
+  [10] api08:bio: Plíce mají plochu asi 100 m². Vysvětli výměnu plynů v plicní
+  [11] api08:bio: Denní potřeba bílkovin je asi 109 g. Proč je tělo potřebuje?
+  [12] api08:bio: Mozek dospělého váží asi 1200 g. Vysvětli funkci mozečku.
+  [13] api08:bio: Tělesná teplota 37.1 °C: jak tělo udržuje stálou teplotu? Uv
+  [14] api08:bio: Krevní tlak 115/80: co znamenají obě čísla?
+  [15] api08:bio: Červená krvinka žije asi 117 dní. Kde vzniká a kde zaniká?
+  [16] api08:bio: Denní potřeba spánku je 7 hodin. Co se děje v mozku během sp
+  [17] api08:bio: Lidské srdce přečerpá asi 8100 litrů krve denně. Vysvětli ma
+  [18] api08:bio: Lidské tělo obsahuje asi 55 % vody. Vysvětli význam vody pro
+  [19] api08:bio: Klidový tep je asi 92 tepů za minutu. Co se děje při jednom 
+  [20] api08:bio: Plíce mají plochu asi 118 m². Vysvětli výměnu plynů v plicní
+  [21] api08:bio: Denní potřeba bílkovin je asi 44 g. Proč je tělo potřebuje? 
+  [22] api08:bio: Mozek dospělého váží asi 1400 g. Vysvětli funkci mozečku.
+  [23] api08:bio: Krevní tlak 110/79: co znamenají obě čísla?
+  [24] api08:bio: Červená krvinka žije asi 107 dní. Kde vzniká a kde zaniká?
+  [25] api08:bio: Denní potřeba spánku je 9 hodin. Co se děje v mozku během sp
+  [26] api08:bio: Lidské srdce přečerpá asi 8200 litrů krve denně. Vysvětli ma
+  [27] api08:bio: Lidské tělo obsahuje asi 68 % vody. Vysvětli význam vody pro
+  [28] api08:bio: Klidový tep je asi 64 tepů za minutu. Co se děje při jednom 
+  [29] api08:bio: Plíce mají plochu asi 96 m². Vysvětli výměnu plynů v plicníc
+  [30] api08:bio: Denní potřeba bílkovin je asi 61 g. Proč je tělo potřebuje? 
+  [31] api08:bio: Mozek dospělého váží asi 1300 g. Vysvětli funkci mozečku.
+  [32] api08:bio: Tělesná teplota 37.3 °C: jak tělo udržuje stálou teplotu? Uv
+  [33] api08:bio: Krevní tlak 122/71: co znamenají obě čísla?
+  [34] api08:bio: Lidské srdce přečerpá asi 7000 litrů krve denně. Vysvětli ma
+  [35] api08:bio: Lidské tělo obsahuje asi 63 % vody. Vysvětli význam vody pro
+  [36] api08:bio: Klidový tep je asi 58 tepů za minutu. Co se děje při jednom 
+  [37] api08:bio: Plíce mají plochu asi 106 m². Vysvětli výměnu plynů v plicní
+  [38] api08:bio: Denní potřeba bílkovin je asi 51 g. Proč je tělo potřebuje? 
+  [39] api08:bio: Krevní tlak 110/76: co znamenají obě čísla?
+  [40] api08:bio: Červená krvinka žije asi 122 dní. Kde vzniká a kde zaniká?
+  [41] api08:bio: Lidské srdce přečerpá asi 7700 litrů krve denně. Vysvětli ma
+  [42] api08:bio: Lidské tělo obsahuje asi 56 % vody. Vysvětli význam vody pro
+  [43] api08:bio: Klidový tep je asi 85 tepů za minutu. Co se děje při jednom 
+  [44] api08:bio: Plíce mají plochu asi 95 m². Vysvětli výměnu plynů v plicníc
+  [45] api08:bio: Denní potřeba bílkovin je asi 115 g. Proč je tělo potřebuje?
+  [46] api08:bio: Tělesná teplota 36.6 °C: jak tělo udržuje stálou teplotu? Uv
+  [47] api08:bio: Krevní tlak 114/84: co znamenají obě čísla?
+  [48] api08:bio: Červená krvinka žije asi 126 dní. Kde vzniká a kde zaniká?
+  [49] api08:bio: Denní potřeba spánku je 8 hodin. Co se děje v mozku během sp
+  [50] api08:bio: Lidské srdce přečerpá asi 8500 litrů krve denně. Vysvětli ma
+  [51] api08:bio: Lidské tělo obsahuje asi 69 % vody. Vysvětli význam vody pro
+  [52] api08:bio: Klidový tep je asi 91 tepů za minutu. Co se děje při jednom 
+  [53] api08:bio: Plíce mají plochu asi 111 m². Vysvětli výměnu plynů v plicní
+  [54] api08:bio: Denní potřeba bílkovin je asi 50 g. Proč je tělo potřebuje? 
+  [55] api08:bio: Tělesná teplota 37.0 °C: jak tělo udržuje stálou teplotu? Uv
+  [56] api08:bio: Krevní tlak 122/85: co znamenají obě čísla?
+  [57] api08:bio: Lidské srdce přečerpá asi 6300 litrů krve denně. Vysvětli ma
+  [58] api08:bio: Klidový tep je asi 77 tepů za minutu. Co se děje při jednom 
+  [59] api08:bio: Plíce mají plochu asi 68 m². Vysvětli výměnu plynů v plicníc
+  [60] api08:bio: Denní potřeba bílkovin je asi 70 g. Proč je tělo potřebuje? 
+  [61] api08:bio: Tělesná teplota 36.9 °C: jak tělo udržuje stálou teplotu? Uv
+  [62] api08:bio: Krevní tlak 115/82: co znamenají obě čísla?
+  [63] api08:bio: Červená krvinka žije asi 101 dní. Kde vzniká a kde zaniká?
+  [64] api08:bio: Lidské srdce přečerpá asi 6800 litrů krve denně. Vysvětli ma
+  [65] api08:bio: Lidské tělo obsahuje asi 66 % vody. Vysvětli význam vody pro
+  [66] api08:bio: Klidový tep je asi 63 tepů za minutu. Co se děje při jednom 
+  [67] api08:bio: Plíce mají plochu asi 84 m². Vysvětli výměnu plynů v plicníc
+  [68] api08:bio: Denní potřeba bílkovin je asi 65 g. Proč je tělo potřebuje? 
+  [69] api08:bio: Tělesná teplota 36.7 °C: jak tělo udržuje stálou teplotu? Uv
+  [70] api08:bio: Krevní tlak 116/85: co znamenají obě čísla?
+  [71] api08:bio: Červená krvinka žije asi 124 dní. Kde vzniká a kde zaniká?
+  [72] api08:bio: Lidské tělo obsahuje asi 60 % vody. Vysvětli význam vody pro
+  [73] api08:bio: Klidový tep je asi 83 tepů za minutu. Co se děje při jednom 
+  [74] api08:bio: Plíce mají plochu asi 57 m². Vysvětli výměnu plynů v plicníc
+  [75] api08:bio: Denní potřeba bílkovin je asi 92 g. Proč je tělo potřebuje? 
+  [76] api08:bio: Krevní tlak 124/74: co znamenají obě čísla?
+  [77] api08:bio: Červená krvinka žije asi 120 dní. Kde vzniká a kde zaniká?
+  [78] api08:bio: Lidské srdce přečerpá asi 6000 litrů krve denně. Vysvětli ma
+  [79] api08:bio: Klidový tep je asi 76 tepů za minutu. Co se děje při jednom 
+  [80] api08:bio: Plíce mají plochu asi 101 m². Vysvětli výměnu plynů v plicní
+  [81] api08:bio: Denní potřeba bílkovin je asi 95 g. Proč je tělo potřebuje? 
+  [82] api08:bio: Mozek dospělého váží asi 1500 g. Vysvětli funkci mozečku.
+  [83] api08:bio: Tělesná teplota 37.4 °C: jak tělo udržuje stálou teplotu? Uv
+  [84] api08:bio: Krevní tlak 123/83: co znamenají obě čísla?
+  [85] api08:bio: Červená krvinka žije asi 104 dní. Kde vzniká a kde zaniká?
+  [86] api08:bio: Lidské srdce přečerpá asi 8400 litrů krve denně. Vysvětli ma
+  [87] api08:bio: Lidské tělo obsahuje asi 70 % vody. Vysvětli význam vody pro
+  [88] api08:bio: Klidový tep je asi 94 tepů za minutu. Co se děje při jednom 
+  [89] api08:bio: Plíce mají plochu asi 109 m². Vysvětli výměnu plynů v plicní
+  [90] api08:bio: Denní potřeba bílkovin je asi 77 g. Proč je tělo potřebuje? 
+  [91] api08:bio: Tělesná teplota 36.5 °C: jak tělo udržuje stálou teplotu? Uv
+  [92] api08:bio: Krevní tlak 126/79: co znamenají obě čísla?
+  [93] api08:bio: Červená krvinka žije asi 127 dní. Kde vzniká a kde zaniká?
+  [94] api08:bio: Lidské srdce přečerpá asi 6100 litrů krve denně. Vysvětli ma
+  [95] api08:bio: Klidový tep je asi 95 tepů za minutu. Co se děje při jednom 
+  [96] api08:bio: Denní potřeba bílkovin je asi 102 g. Proč je tělo potřebuje?
+  [97] api08:bio: Krevní tlak 116/78: co znamenají obě čísla?
+  [98] api08:bio: Červená krvinka žije asi 116 dní. Kde vzniká a kde zaniká?
+  [99] api08:bio: Lidské tělo obsahuje asi 64 % vody. Vysvětli význam vody pro
+  [100] api08:bio: Plíce mají plochu asi 50 m². Vysvětli výměnu plynů v plicníc
+  [101] api08:bio: Denní potřeba bílkovin je asi 120 g. Proč je tělo potřebuje?
+  [102] api08:bio: Krevní tlak 121/74: co znamenají obě čísla?
+  [103] api08:bio: Lidské tělo obsahuje asi 64 % vody. Vysvětli význam vody pro
+  [104] api08:bio: Klidový tep je asi 67 tepů za minutu. Co se děje při jednom 
+  [105] api08:bio: Plíce mají plochu asi 90 m². Vysvětli výměnu plynů v plicníc
+  [106] api08:bio: Denní potřeba bílkovin je asi 107 g. Proč je tělo potřebuje?
+  [107] api08:bio: Krevní tlak 115/76: co znamenají obě čísla?
+  [108] api08:bio: Červená krvinka žije asi 109 dní. Kde vzniká a kde zaniká?
+  [109] api08:bio: Denní potřeba bílkovin je asi 45 g. Proč je tělo potřebuje? 
+  [110] api08:bio: Krevní tlak 127/76: co znamenají obě čísla?
+  [111] api08:bio: Červená krvinka žije asi 125 dní. Kde vzniká a kde zaniká?
+  [112] api08:bio: Lidské srdce přečerpá asi 7900 litrů krve denně. Vysvětli ma
+  [113] api08:bio: Lidské tělo obsahuje asi 62 % vody. Vysvětli význam vody pro
+  [114] api08:bio: Klidový tep je asi 62 tepů za minutu. Co se děje při jednom 
+  [115] api08:bio: Denní potřeba bílkovin je asi 101 g. Proč je tělo potřebuje?
+  [116] api08:bio: Tělesná teplota 36.8 °C: jak tělo udržuje stálou teplotu? Uv
+  [117] api08:bio: Krevní tlak 113/85: co znamenají obě čísla?
+  [118] api08:bio: Červená krvinka žije asi 112 dní. Kde vzniká a kde zaniká?
+  [119] api08:bio: Klidový tep je asi 78 tepů za minutu. Co se děje při jednom 
+  [120] api08:bio: Plíce mají plochu asi 60 m². Vysvětli výměnu plynů v plicníc
+  [121] api08:bio: Denní potřeba bílkovin je asi 79 g. Proč je tělo potřebuje? 
+  [122] api08:bio: Krevní tlak 111/70: co znamenají obě čísla?
+  [123] api08:bio: Červená krvinka žije asi 111 dní. Kde vzniká a kde zaniká?
+  [124] api08:bio: Lidské srdce přečerpá asi 7400 litrů krve denně. Vysvětli ma
+  [125] api08:bio: Lidské tělo obsahuje asi 58 % vody. Vysvětli význam vody pro
+  [126] api08:bio: Plíce mají plochu asi 88 m². Vysvětli výměnu plynů v plicníc
+  [127] api08:bio: Denní potřeba bílkovin je asi 93 g. Proč je tělo potřebuje? 
+  [128] api08:bio: Krevní tlak 119/72: co znamenají obě čísla?
+  [129] api08:bio: Lidské srdce přečerpá asi 7300 litrů krve denně. Vysvětli ma
+  [130] api08:bio: Klidový tep je asi 90 tepů za minutu. Co se děje při jednom 
+  [131] api08:bio: Plíce mají plochu asi 115 m². Vysvětli výměnu plynů v plicní
+  [132] api08:bio: Denní potřeba bílkovin je asi 118 g. Proč je tělo potřebuje?
+  [133] api08:bio: Krevní tlak 113/73: co znamenají obě čísla?
+  [134] api08:bio: Červená krvinka žije asi 130 dní. Kde vzniká a kde zaniká?
+  [135] api08:bio: Lidské tělo obsahuje asi 65 % vody. Vysvětli význam vody pro
+  [136] api08:bio: Denní potřeba bílkovin je asi 113 g. Proč je tělo potřebuje?
+  [137] api08:bio: Tělesná teplota 37.2 °C: jak tělo udržuje stálou teplotu? Uv
+  [138] api08:bio: Krevní tlak 117/75: co znamenají obě čísla?
+  [139] api08:bio: Klidový tep je asi 66 tepů za minutu. Co se děje při jednom 
+  [140] api08:bio: Plíce mají plochu asi 71 m². Vysvětli výměnu plynů v plicníc
+  [141] api08:bio: Denní potřeba bílkovin je asi 72 g. Proč je tělo potřebuje? 
+  [142] api08:bio: Krevní tlak 113/84: co znamenají obě čísla?
+  [143] api08:bio: Červená krvinka žije asi 106 dní. Kde vzniká a kde zaniká?
+  [144] api08:bio: Klidový tep je asi 89 tepů za minutu. Co se děje při jednom 
+  [145] api08:bio: Plíce mají plochu asi 74 m². Vysvětli výměnu plynů v plicníc
+  [146] api08:bio: Krevní tlak 124/70: co znamenají obě čísla?
+  [147] api08:bio: Lidské tělo obsahuje asi 67 % vody. Vysvětli význam vody pro
+  [148] api08:bio: Denní potřeba bílkovin je asi 66 g. Proč je tělo potřebuje? 
+  [149] api08:bio: Krevní tlak 123/72: co znamenají obě čísla?
+  [150] api08:bio: Červená krvinka žije asi 103 dní. Kde vzniká a kde zaniká?
+  [151] api08:bio: Lidské srdce přečerpá asi 6500 litrů krve denně. Vysvětli ma
+  [152] api08:bio: Plíce mají plochu asi 76 m². Vysvětli výměnu plynů v plicníc
+  [153] api08:bio: Denní potřeba bílkovin je asi 64 g. Proč je tělo potřebuje? 
+  [154] api08:bio: Krevní tlak 125/83: co znamenají obě čísla?
+  [155] api08:bio: Červená krvinka žije asi 121 dní. Kde vzniká a kde zaniká?
+  [156] api08:bio: Plíce mají plochu asi 75 m². Vysvětli výměnu plynů v plicníc
+  [157] api08:bio: Denní potřeba bílkovin je asi 46 g. Proč je tělo potřebuje? 
+  [158] api08:bio: Lidské srdce přečerpá asi 6400 litrů krve denně. Vysvětli ma
+  [159] api08:bio: Plíce mají plochu asi 82 m². Vysvětli výměnu plynů v plicníc
+  [160] api08:bio: Denní potřeba bílkovin je asi 112 g. Proč je tělo potřebuje?
+  [161] api08:bio: Krevní tlak 122/75: co znamenají obě čísla?
+  [162] api08:bio: Červená krvinka žije asi 128 dní. Kde vzniká a kde zaniká?
+  [163] api08:bio: Klidový tep je asi 84 tepů za minutu. Co se děje při jednom 
+  [164] api08:bio: Plíce mají plochu asi 83 m². Vysvětli výměnu plynů v plicníc
+  [165] api08:bio: Denní potřeba bílkovin je asi 53 g. Proč je tělo potřebuje? 
+  [166] api08:bio: Krevní tlak 119/79: co znamenají obě čísla?
+  [167] api08:bio: Lidské srdce přečerpá asi 8000 litrů krve denně. Vysvětli ma
+  [168] api08:bio: Klidový tep je asi 65 tepů za minutu. Co se děje při jednom 
+  [169] api08:bio: Plíce mají plochu asi 105 m². Vysvětli výměnu plynů v plicní
+  [170] api08:bio: Denní potřeba bílkovin je asi 63 g. Proč je tělo potřebuje? 
+  [171] api08:bio: Krevní tlak 112/79: co znamenají obě čísla?
+  [172] api08:bio: Červená krvinka žije asi 100 dní. Kde vzniká a kde zaniká?
+  [173] api08:bio: Plíce mají plochu asi 53 m². Vysvětli výměnu plynů v plicníc
+  [174] api08:bio: Denní potřeba bílkovin je asi 78 g. Proč je tělo potřebuje? 
+  [175] api08:bio: Krevní tlak 129/73: co znamenají obě čísla?
+  [176] api08:bio: Červená krvinka žije asi 110 dní. Kde vzniká a kde zaniká?
+  [177] api08:bio: Plíce mají plochu asi 112 m². Vysvětli výměnu plynů v plicní
+  [178] api08:bio: Denní potřeba bílkovin je asi 59 g. Proč je tělo potřebuje? 
+  [179] api08:bio: Lidské srdce přečerpá asi 6200 litrů krve denně. Vysvětli ma
+  [180] api08:bio: Plíce mají plochu asi 65 m². Vysvětli výměnu plynů v plicníc
+  [181] api08:bio: Denní potřeba bílkovin je asi 83 g. Proč je tělo potřebuje? 
+  [182] api08:bio: Krevní tlak 125/75: co znamenají obě čísla?
+  [183] api08:bio: Lidské srdce přečerpá asi 6900 litrů krve denně. Vysvětli ma
+  [184] api08:bio: Klidový tep je asi 74 tepů za minutu. Co se děje při jednom 
+  [185] api08:bio: Denní potřeba bílkovin je asi 56 g. Proč je tělo potřebuje? 
+  [186] api08:bio: Krevní tlak 118/81: co znamenají obě čísla?
+  [187] api08:bio: Lidské srdce přečerpá asi 7100 litrů krve denně. Vysvětli ma
+  [188] api08:bio: Krevní tlak 111/76: co znamenají obě čísla?
+  [189] api08:bio: Klidový tep je asi 70 tepů za minutu. Co se děje při jednom 
+  [190] api08:bio: Plíce mají plochu asi 108 m². Vysvětli výměnu plynů v plicní
+  [191] api08:bio: Denní potřeba bílkovin je asi 74 g. Proč je tělo potřebuje? 
+  [192] api08:bio: Červená krvinka žije asi 129 dní. Kde vzniká a kde zaniká?
+  [193] api08:bio: Lidské srdce přečerpá asi 8300 litrů krve denně. Vysvětli ma
+  [194] api08:bio: Plíce mají plochu asi 86 m². Vysvětli výměnu plynů v plicníc
+  [195] api08:bio: Denní potřeba bílkovin je asi 41 g. Proč je tělo potřebuje? 
+  [196] api08:bio: Krevní tlak 128/72: co znamenají obě čísla?
+  [197] api08:bio: Klidový tep je asi 81 tepů za minutu. Co se děje při jednom 
+  [198] api08:bio: Plíce mají plochu asi 77 m². Vysvětli výměnu plynů v plicníc
+  [199] api08:bio: Denní potřeba bílkovin je asi 42 g. Proč je tělo potřebuje? 
+  [200] api08:bio: Krevní tlak 120/80: co znamenají obě čísla?
+  [201] api08:bio: Červená krvinka žije asi 105 dní. Kde vzniká a kde zaniká?
+  [202] api08:bio: Lidské tělo obsahuje asi 61 % vody. Vysvětli význam vody pro
+  [203] api08:bio: Klidový tep je asi 87 tepů za minutu. Co se děje při jednom 
+  [204] api08:bio: Plíce mají plochu asi 67 m². Vysvětli výměnu plynů v plicníc
+  [205] api08:bio: Krevní tlak 126/73: co znamenají obě čísla?
+  [206] api08:bio: Lidské srdce přečerpá asi 7800 litrů krve denně. Vysvětli ma
+  [207] api08:design: Navrhni strukturu moderní landing page pro SaaS (sekce, hier
+  [208] api08:design: Jak se vyhnout AI-slop vzhledu webu? Uveď 5 konkrétních prav
+  [209] api08:design: Navrhni barevnou paletu a typografii pro fintech dashboard +
+  [210] api08:design: Napiš přístupný (a11y) navbar v Tailwindu s mobilním menu.
+  [211] api08:design: Jak navrhnout pricing sekci, která konvertuje? Struktura + T
+  [212] api08:design: Navrhni hero sekci pro SaaS s cenou od 44 Kč/měs. Napiš Tail
+  [213] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'les'? Uveď 
+  [214] api08:design: Navrhni pricing se 3 tarify (930, 7340, 700 Kč). Struktura +
+  [215] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 568 kategori
+  [216] api08:design: Navrhni barevnou paletu pro město-tematický web + Tailwind c
+  [217] api08:design: Jak navrhnout formulář s 3 poli, aby konvertoval? Pravidla +
+  [218] api08:design: Landing pro aplikaci s 59300 uživateli: sekce, hierarchie, C
+  [219] api08:design: Tmavý režim v Tailwindu: konfigurace + 5 pravidel pro kontra
+  [220] api08:design: Navrhni hero sekci pro SaaS s cenou od 532 Kč/měs. Napiš Tai
+  [221] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'město'? Uve
+  [222] api08:design: Navrhni pricing se 3 tarify (420, 3180, 300 Kč). Struktura +
+  [223] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 506 kategori
+  [224] api08:design: Navrhni barevnou paletu pro květina-tematický web + Tailwind
+  [225] api08:design: Jak navrhnout formulář s 7 poli, aby konvertoval? Pravidla +
+  [226] api08:design: Landing pro aplikaci s 52000 uživateli: sekce, hierarchie, C
+  [227] api08:design: Tmavý režim v Tailwindu: konfigurace + 6 pravidel pro kontra
+  [228] api08:design: Navrhni hero sekci pro SaaS s cenou od 71 Kč/měs. Napiš Tail
+  [229] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'kniha'? Uve
+  [230] api08:design: Navrhni pricing se 3 tarify (90, 9570, 600 Kč). Struktura + 
+  [231] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 363 kategori
+  [232] api08:design: Navrhni barevnou paletu pro most-tematický web + Tailwind co
+  [233] api08:design: Jak navrhnout formulář s 4 poli, aby konvertoval? Pravidla +
+  [234] api08:design: Landing pro aplikaci s 78100 uživateli: sekce, hierarchie, C
+  [235] api08:design: Navrhni hero sekci pro SaaS s cenou od 239 Kč/měs. Napiš Tai
+  [236] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'ryba'? Uveď
+  [237] api08:design: Navrhni pricing se 3 tarify (550, 5770, 700 Kč). Struktura +
+  [238] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 960 kategori
+  [239] api08:design: Navrhni barevnou paletu pro kniha-tematický web + Tailwind c
+  [240] api08:design: Landing pro aplikaci s 18600 uživateli: sekce, hierarchie, C
+  [241] api08:design: Tmavý režim v Tailwindu: konfigurace + 8 pravidel pro kontra
+  [242] api08:design: Navrhni hero sekci pro SaaS s cenou od 909 Kč/měs. Napiš Tai
+  [243] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'most'? Uveď
+  [244] api08:design: Navrhni pricing se 3 tarify (380, 8470, 900 Kč). Struktura +
+  [245] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 845 kategori
+  [246] api08:design: Navrhni barevnou paletu pro hora-tematický web + Tailwind co
+  [247] api08:design: Landing pro aplikaci s 28200 uživateli: sekce, hierarchie, C
+  [248] api08:design: Tmavý režim v Tailwindu: konfigurace + 10 pravidel pro kontr
+  [249] api08:design: Navrhni hero sekci pro SaaS s cenou od 728 Kč/měs. Napiš Tai
+  [250] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'mozek'? Uve
+  [251] api08:design: Navrhni pricing se 3 tarify (530, 7060, 900 Kč). Struktura +
+  [252] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 332 kategori
+  [253] api08:design: Navrhni barevnou paletu pro les-tematický web + Tailwind con
+  [254] api08:design: Jak navrhnout formulář s 9 poli, aby konvertoval? Pravidla +
+  [255] api08:design: Landing pro aplikaci s 14000 uživateli: sekce, hierarchie, C
+  [256] api08:design: Tmavý režim v Tailwindu: konfigurace + 2 pravidel pro kontra
+  [257] api08:design: Navrhni hero sekci pro SaaS s cenou od 722 Kč/měs. Napiš Tai
+  [258] api08:design: Navrhni pricing se 3 tarify (370, 7560, 300 Kč). Struktura +
+  [259] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 19 kategorie
+  [260] api08:design: Navrhni barevnou paletu pro pole-tematický web + Tailwind co
+  [261] api08:design: Jak navrhnout formulář s 8 poli, aby konvertoval? Pravidla +
+  [262] api08:design: Landing pro aplikaci s 21000 uživateli: sekce, hierarchie, C
+  [263] api08:design: Navrhni hero sekci pro SaaS s cenou od 856 Kč/měs. Napiš Tai
+  [264] api08:design: Navrhni pricing se 3 tarify (220, 8400, 900 Kč). Struktura +
+  [265] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 99 kategorie
+  [266] api08:design: Navrhni barevnou paletu pro okno-tematický web + Tailwind co
+  [267] api08:design: Landing pro aplikaci s 14700 uživateli: sekce, hierarchie, C
+  [268] api08:design: Navrhni hero sekci pro SaaS s cenou od 665 Kč/měs. Napiš Tai
+  [269] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'cesta'? Uve
+  [270] api08:design: Navrhni pricing se 3 tarify (590, 2910, 800 Kč). Struktura +
+  [271] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 398 kategori
+  [272] api08:design: Navrhni barevnou paletu pro srdce-tematický web + Tailwind c
+  [273] api08:design: Jak navrhnout formulář s 2 poli, aby konvertoval? Pravidla +
+  [274] api08:design: Landing pro aplikaci s 3600 uživateli: sekce, hierarchie, CT
+  [275] api08:design: Navrhni hero sekci pro SaaS s cenou od 608 Kč/měs. Napiš Tai
+  [276] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'pták'? Uveď
+  [277] api08:design: Navrhni pricing se 3 tarify (600, 3670, 300 Kč). Struktura +
+  [278] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 139 kategori
+  [279] api08:design: Jak navrhnout formulář s 5 poli, aby konvertoval? Pravidla +
+  [280] api08:design: Landing pro aplikaci s 50800 uživateli: sekce, hierarchie, C
+  [281] api08:design: Tmavý režim v Tailwindu: konfigurace + 4 pravidel pro kontra
+  [282] api08:design: Navrhni hero sekci pro SaaS s cenou od 61 Kč/měs. Napiš Tail
+  [283] api08:design: Navrhni pricing se 3 tarify (210, 6980, 200 Kč). Struktura +
+  [284] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 778 kategori
+  [285] api08:design: Jak navrhnout formulář s 10 poli, aby konvertoval? Pravidla 
+  [286] api08:design: Landing pro aplikaci s 89200 uživateli: sekce, hierarchie, C
+  [287] api08:design: Navrhni hero sekci pro SaaS s cenou od 13 Kč/měs. Napiš Tail
+  [288] api08:design: Navrhni pricing se 3 tarify (680, 1690, 700 Kč). Struktura +
+  [289] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 892 kategori
+  [290] api08:design: Navrhni barevnou paletu pro dům-tematický web + Tailwind con
+  [291] api08:design: Landing pro aplikaci s 13900 uživateli: sekce, hierarchie, C
+  [292] api08:design: Navrhni hero sekci pro SaaS s cenou od 447 Kč/měs. Napiš Tai
+  [293] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'řeka'? Uveď
+  [294] api08:design: Navrhni pricing se 3 tarify (850, 1730, 700 Kč). Struktura +
+  [295] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 135 kategori
+  [296] api08:design: Landing pro aplikaci s 25500 uživateli: sekce, hierarchie, C
+  [297] api08:design: Navrhni hero sekci pro SaaS s cenou od 949 Kč/měs. Napiš Tai
+  [298] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'srdce'? Uve
+  [299] api08:design: Navrhni pricing se 3 tarify (200, 7490, 400 Kč). Struktura +
+  [300] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 894 kategori
+  [301] api08:design: Navrhni barevnou paletu pro řeka-tematický web + Tailwind co
+  [302] api08:design: Landing pro aplikaci s 47800 uživateli: sekce, hierarchie, C
+  [303] api08:design: Tmavý režim v Tailwindu: konfigurace + 3 pravidel pro kontra
+  [304] api08:design: Navrhni hero sekci pro SaaS s cenou od 563 Kč/měs. Napiš Tai
+  [305] api08:design: Navrhni pricing se 3 tarify (820, 2960, 300 Kč). Struktura +
+  [306] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 214 kategori
+  [307] api08:design: Landing pro aplikaci s 21200 uživateli: sekce, hierarchie, C
+  [308] api08:design: Navrhni hero sekci pro SaaS s cenou od 801 Kč/měs. Napiš Tai
+  [309] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'okno'? Uveď
+  [310] api08:design: Navrhni pricing se 3 tarify (150, 8950, 400 Kč). Struktura +
+  [311] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 207 kategori
+  [312] api08:design: Landing pro aplikaci s 61700 uživateli: sekce, hierarchie, C
+  [313] api08:design: Tmavý režim v Tailwindu: konfigurace + 7 pravidel pro kontra
+  [314] api08:design: Navrhni hero sekci pro SaaS s cenou od 643 Kč/měs. Napiš Tai
+  [315] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'dům'? Uveď 
+  [316] api08:design: Navrhni pricing se 3 tarify (710, 6830, 600 Kč). Struktura +
+  [317] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 904 kategori
+  [318] api08:design: Landing pro aplikaci s 32900 uživateli: sekce, hierarchie, C
+  [319] api08:design: Navrhni pricing se 3 tarify (570, 7960, 500 Kč). Struktura +
+  [320] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 68 kategorie
+  [321] api08:design: Navrhni barevnou paletu pro mozek-tematický web + Tailwind c
+  [322] api08:design: Landing pro aplikaci s 85500 uživateli: sekce, hierarchie, C
+  [323] api08:design: Navrhni hero sekci pro SaaS s cenou od 81 Kč/měs. Napiš Tail
+  [324] api08:design: Navrhni pricing se 3 tarify (370, 6730, 1000 Kč). Struktura 
+  [325] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 452 kategori
+  [326] api08:design: Landing pro aplikaci s 69900 uživateli: sekce, hierarchie, C
+  [327] api08:design: Navrhni hero sekci pro SaaS s cenou od 916 Kč/měs. Napiš Tai
+  [328] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'strom'? Uve
+  [329] api08:design: Navrhni pricing se 3 tarify (40, 6040, 200 Kč). Struktura + 
+  [330] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 180 kategori
+  [331] api08:design: Jak navrhnout formulář s 6 poli, aby konvertoval? Pravidla +
+  [332] api08:design: Landing pro aplikaci s 83400 uživateli: sekce, hierarchie, C
+  [333] api08:design: Navrhni hero sekci pro SaaS s cenou od 766 Kč/měs. Napiš Tai
+  [334] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'stůl'? Uveď
+  [335] api08:design: Navrhni pricing se 3 tarify (390, 9940, 900 Kč). Struktura +
+  [336] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 685 kategori
+  [337] api08:design: Landing pro aplikaci s 13600 uživateli: sekce, hierarchie, C
+  [338] api08:design: Navrhni hero sekci pro SaaS s cenou od 205 Kč/měs. Napiš Tai
+  [339] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'stůl'? Uveď
+  [340] api08:design: Navrhni pricing se 3 tarify (380, 6970, 800 Kč). Struktura +
+  [341] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 131 kategori
+  [342] api08:design: Landing pro aplikaci s 45600 uživateli: sekce, hierarchie, C
+  [343] api08:design: Navrhni hero sekci pro SaaS s cenou od 324 Kč/měs. Napiš Tai
+  [344] api08:design: Navrhni pricing se 3 tarify (910, 9880, 200 Kč). Struktura +
+  [345] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 763 kategori
+  [346] api08:design: Landing pro aplikaci s 82700 uživateli: sekce, hierarchie, C
+  [347] api08:design: Navrhni hero sekci pro SaaS s cenou od 406 Kč/měs. Napiš Tai
+  [348] api08:design: Navrhni pricing se 3 tarify (20, 190, 700 Kč). Struktura + T
+  [349] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 10 kategorie
+  [350] api08:design: Navrhni barevnou paletu pro cesta-tematický web + Tailwind c
+  [351] api08:design: Landing pro aplikaci s 41800 uživateli: sekce, hierarchie, C
+  [352] api08:design: Tmavý režim v Tailwindu: konfigurace + 9 pravidel pro kontra
+  [353] api08:design: Navrhni hero sekci pro SaaS s cenou od 452 Kč/měs. Napiš Tai
+  [354] api08:design: Navrhni pricing se 3 tarify (340, 6150, 300 Kč). Struktura +
+  [355] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 846 kategori
+  [356] api08:design: Landing pro aplikaci s 5600 uživateli: sekce, hierarchie, CT
+  [357] api08:design: Navrhni hero sekci pro SaaS s cenou od 468 Kč/měs. Napiš Tai
+  [358] api08:design: Navrhni pricing se 3 tarify (880, 1230, 900 Kč). Struktura +
+  [359] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 617 kategori
+  [360] api08:design: Landing pro aplikaci s 29200 uživateli: sekce, hierarchie, C
+  [361] api08:design: Navrhni hero sekci pro SaaS s cenou od 95 Kč/měs. Napiš Tail
+  [362] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'oheň'? Uveď
+  [363] api08:design: Navrhni pricing se 3 tarify (490, 7940, 200 Kč). Struktura +
+  [364] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 129 kategori
+  [365] api08:design: Navrhni barevnou paletu pro pták-tematický web + Tailwind co
+  [366] api08:design: Landing pro aplikaci s 26100 uživateli: sekce, hierarchie, C
+  [367] api08:design: Navrhni hero sekci pro SaaS s cenou od 199 Kč/měs. Napiš Tai
+  [368] api08:design: Navrhni pricing se 3 tarify (150, 2410, 300 Kč). Struktura +
+  [369] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 953 kategori
+  [370] api08:design: Landing pro aplikaci s 61900 uživateli: sekce, hierarchie, C
+  [371] api08:design: Navrhni hero sekci pro SaaS s cenou od 662 Kč/měs. Napiš Tai
+  [372] api08:design: Navrhni pricing se 3 tarify (390, 2250, 200 Kč). Struktura +
+  [373] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 708 kategori
+  [374] api08:design: Landing pro aplikaci s 77700 uživateli: sekce, hierarchie, C
+  [375] api08:design: Navrhni hero sekci pro SaaS s cenou od 710 Kč/měs. Napiš Tai
+  [376] api08:design: Navrhni pricing se 3 tarify (780, 3680, 900 Kč). Struktura +
+  [377] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 900 kategori
+  [378] api08:design: Navrhni barevnou paletu pro strom-tematický web + Tailwind c
+  [379] api08:design: Landing pro aplikaci s 96200 uživateli: sekce, hierarchie, C
+  [380] api08:design: Navrhni hero sekci pro SaaS s cenou od 370 Kč/měs. Napiš Tai
+  [381] api08:design: Navrhni pricing se 3 tarify (500, 2310, 900 Kč). Struktura +
+  [382] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 315 kategori
+  [383] api08:czech: Vysvětli rozdíl mezi 'aby' a 'aby' ve vedlejších větách s př
+  [384] api08:czech: Nauč mě psát čárky ve větě jednoduché: 5 pravidel s příklady
+  [385] api08:czech: Vysvětli shodu podmětu s přísudkem u několikanásobného podmě
+  [386] api08:czech: Jak se překládá anglické 'resistivity', 'torque', 'strain'? 
+  [387] api08:czech: Napiš formální stížnost (150 slov) spisovnou češtinou.
+  [388] api08:czech: Vysvětli rozdíl mezi stylem odborným, publicistickým a uměle
+  [389] api08:czech: Utvoř větu se slovem 'les' v 7. pádě množného čísla a vysvět
+  [390] api08:czech: Časuj sloveso 'plavat' v přítomném čase ve všech osobách.
+  [391] api08:czech: Stupňuj přídavné jméno 'rychlý' a ke každému stupni uveď vět
+  [392] api08:czech: Skloňuj podstatné jméno 'hora' ve všech pádech jednotného čí
+  [393] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'voda' spisovnou češ
+  [394] api08:czech: Oprav pravopis: 'silný most kreslit vcere vecer.' Najdi chyb
+  [395] api08:czech: Urči slovní druhy ve větě: 'dobrý ryba rychle běžet.'
+  [396] api08:czech: Vysvětli rozdíl mezi 'mozek' a jeho zdrobnělinou s příklady.
+  [397] api08:czech: Napiš formální žádost (609 slov) na téma 'srdce'.
+  [398] api08:czech: Vysvětli význam přísloví s číslem 5 a jeho užití ve větě.
+  [399] api08:czech: Utvoř větu se slovem 'cesta' v 7. pádě množného čísla a vysv
+  [400] api08:czech: Časuj sloveso 'dýchat' v přítomném čase ve všech osobách.
+  [401] api08:czech: Stupňuj přídavné jméno 'chytrý' a ke každému stupni uveď vět
+  [402] api08:czech: Skloňuj podstatné jméno 'kniha' ve všech pádech jednotného č
+  [403] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'cesta' spisovnou če
+  [404] api08:czech: Oprav pravopis: 'starý řeka mluvit vcere vecer.' Najdi chyby
+  [405] api08:czech: Urči slovní druhy ve větě: 'rychlý pole rychle kreslit.'
+  [406] api08:czech: Vysvětli rozdíl mezi 'stůl' a jeho zdrobnělinou s příklady.
+  [407] api08:czech: Napiš formální žádost (91 slov) na téma 'ryba'.
+  [408] api08:czech: Vysvětli význam přísloví s číslem 4 a jeho užití ve větě.
+  [409] api08:czech: Utvoř větu se slovem 'pole' v 7. pádě množného čísla a vysvě
+  [410] api08:czech: Časuj sloveso 'růst' v přítomném čase ve všech osobách.
+  [411] api08:czech: Stupňuj přídavné jméno 'silný' a ke každému stupni uveď větu
+  [412] api08:czech: Skloňuj podstatné jméno 'les' ve všech pádech jednotného čís
+  [413] api08:czech: Oprav pravopis: 'starý stůl zpívat vcere vecer.' Najdi chyby
+  [414] api08:czech: Urči slovní druhy ve větě: 'velký pole rychle kreslit.'
+  [415] api08:czech: Vysvětli rozdíl mezi 'hora' a jeho zdrobnělinou s příklady.
+  [416] api08:czech: Napiš formální žádost (723 slov) na téma 'květina'.
+  [417] api08:czech: Vysvětli význam přísloví s číslem 7 a jeho užití ve větě.
+  [418] api08:czech: Časuj sloveso 'běžet' v přítomném čase ve všech osobách.
+  [419] api08:czech: Stupňuj přídavné jméno 'velký' a ke každému stupni uveď větu
+  [420] api08:czech: Skloňuj podstatné jméno 'strom' ve všech pádech jednotného č
+  [421] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'strom' spisovnou če
+  [422] api08:czech: Oprav pravopis: 'silný květina nést vcere vecer.' Najdi chyb
+  [423] api08:czech: Urči slovní druhy ve větě: 'dobrý ryba rychle nést.'
+  [424] api08:czech: Vysvětli rozdíl mezi 'strom' a jeho zdrobnělinou s příklady.
+  [425] api08:czech: Napiš formální žádost (281 slov) na téma 'pole'.
+  [426] api08:czech: Vysvětli význam přísloví s číslem 6 a jeho užití ve větě.
+  [427] api08:czech: Utvoř větu se slovem 'mozek' v 7. pádě množného čísla a vysv
+  [428] api08:czech: Stupňuj přídavné jméno 'dobrý' a ke každému stupni uveď větu
+  [429] api08:czech: Skloňuj podstatné jméno 'oheň' ve všech pádech jednotného čí
+  [430] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'srdce' spisovnou če
+  [431] api08:czech: Oprav pravopis: 'starý mozek kreslit vcere vecer.' Najdi chy
+  [432] api08:czech: Urči slovní druhy ve větě: 'velký stůl rychle běžet.'
+  [433] api08:czech: Vysvětli rozdíl mezi 'dům' a jeho zdrobnělinou s příklady.
+  [434] api08:czech: Napiš formální žádost (178 slov) na téma 'ryba'.
+  [435] api08:czech: Utvoř větu se slovem 'okno' v 7. pádě množného čísla a vysvě
+  [436] api08:czech: Stupňuj přídavné jméno 'starý' a ke každému stupni uveď větu
+  [437] api08:czech: Skloňuj podstatné jméno 'mozek' ve všech pádech jednotného č
+  [438] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'ryba' spisovnou češ
+  [439] api08:czech: Oprav pravopis: 'chytrý hora stavět vcere vecer.' Najdi chyb
+  [440] api08:czech: Urči slovní druhy ve větě: 'silný hora rychle kreslit.'
+  [441] api08:czech: Vysvětli rozdíl mezi 'oheň' a jeho zdrobnělinou s příklady.
+  [442] api08:czech: Napiš formální žádost (461 slov) na téma 'řeka'.
+  [443] api08:czech: Vysvětli význam přísloví s číslem 10 a jeho užití ve větě.
+  [444] api08:czech: Časuj sloveso 'zpívat' v přítomném čase ve všech osobách.
+  [445] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'pole' spisovnou češ
+  [446] api08:czech: Oprav pravopis: 'rychlý hora kreslit vcere vecer.' Najdi chy
+  [447] api08:czech: Urči slovní druhy ve větě: 'chytrý město rychle stavět.'
+  [448] api08:czech: Vysvětli rozdíl mezi 'srdce' a jeho zdrobnělinou s příklady.
+  [449] api08:czech: Napiš formální žádost (655 slov) na téma 'voda'.
+  [450] api08:czech: Vysvětli význam přísloví s číslem 9 a jeho užití ve větě.
+  [451] api08:czech: Utvoř větu se slovem 'most' v 7. pádě množného čísla a vysvě
+  [452] api08:czech: Časuj sloveso 'stavět' v přítomném čase ve všech osobách.
+  [453] api08:czech: Skloňuj podstatné jméno 'srdce' ve všech pádech jednotného č
+  [454] api08:czech: Oprav pravopis: 'chytrý pták mluvit vcere vecer.' Najdi chyb
+  [455] api08:czech: Urči slovní druhy ve větě: 'silný město rychle stavět.'
+  [456] api08:czech: Vysvětli rozdíl mezi 'květina' a jeho zdrobnělinou s příklad
+  [457] api08:czech: Napiš formální žádost (960 slov) na téma 'cesta'.
+  [458] api08:czech: Vysvětli význam přísloví s číslem 8 a jeho užití ve větě.
+  [459] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'oheň' spisovnou češ
+  [460] api08:czech: Oprav pravopis: 'chytrý pták růst vcere vecer.' Najdi chyby 
+  [461] api08:czech: Urči slovní druhy ve větě: 'chytrý mozek rychle plavat.'
+  [462] api08:czech: Vysvětli rozdíl mezi 'most' a jeho zdrobnělinou s příklady.
+  [463] api08:czech: Napiš formální žádost (358 slov) na téma 'srdce'.
+  [464] api08:czech: Utvoř větu se slovem 'dům' v 7. pádě množného čísla a vysvět
+  [465] api08:czech: Časuj sloveso 'číst' v přítomném čase ve všech osobách.
+  [466] api08:czech: Stupňuj přídavné jméno 'malý' a ke každému stupni uveď větu.
+  [467] api08:czech: Skloňuj podstatné jméno 'cesta' ve všech pádech jednotného č
+  [468] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'dům' spisovnou češt
+  [469] api08:czech: Oprav pravopis: 'chytrý voda plavat vcere vecer.' Najdi chyb
+  [470] api08:czech: Urči slovní druhy ve větě: 'chytrý oheň rychle dýchat.'
+  [471] api08:czech: Vysvětli rozdíl mezi 'město' a jeho zdrobnělinou s příklady.
+  [472] api08:czech: Napiš formální žádost (647 slov) na téma 'mozek'.
+  [473] api08:czech: Utvoř větu se slovem 'strom' v 7. pádě množného čísla a vysv
+  [474] api08:czech: Časuj sloveso 'mluvit' v přítomném čase ve všech osobách.
+  [475] api08:czech: Skloňuj podstatné jméno 'řeka' ve všech pádech jednotného čí
+  [476] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'kniha' spisovnou če
+  [477] api08:czech: Oprav pravopis: 'velký řeka růst vcere vecer.' Najdi chyby a
+  [478] api08:czech: Urči slovní druhy ve větě: 'velký cesta rychle plavat.'
+  [479] api08:czech: Napiš formální žádost (980 slov) na téma 'les'.
+  [480] api08:czech: Utvoř větu se slovem 'srdce' v 7. pádě množného čísla a vysv
+  [481] api08:czech: Stupňuj přídavné jméno 'hezký' a ke každému stupni uveď větu
+  [482] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'hora' spisovnou češ
+  [483] api08:czech: Oprav pravopis: 'velký město psát vcere vecer.' Najdi chyby 
+  [484] api08:czech: Urči slovní druhy ve větě: 'hezký pole rychle kreslit.'
+  [485] api08:czech: Napiš formální žádost (748 slov) na téma 'cesta'.
+  [486] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'okno' spisovnou češ
+  [487] api08:czech: Oprav pravopis: 'starý cesta vařit vcere vecer.' Najdi chyby
+  [488] api08:czech: Urči slovní druhy ve větě: 'velký dům rychle růst.'
+  [489] api08:czech: Napiš formální žádost (760 slov) na téma 'cesta'.
+  [490] api08:czech: Časuj sloveso 'nést' v přítomném čase ve všech osobách.
+  [491] api08:czech: Skloňuj podstatné jméno 'stůl' ve všech pádech jednotného čí
+  [492] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'stůl' spisovnou češ
+  [493] api08:czech: Oprav pravopis: 'silný pták běžet vcere vecer.' Najdi chyby 
+  [494] api08:czech: Urči slovní druhy ve větě: 'rychlý most rychle mluvit.'
+  [495] api08:czech: Napiš formální žádost (122 slov) na téma 'most'.
+  [496] api08:czech: Vysvětli význam přísloví s číslem 2 a jeho užití ve větě.
+  [497] api08:czech: Utvoř větu se slovem 'vlak' v 7. pádě množného čísla a vysvě
+  [498] api08:czech: Skloňuj podstatné jméno 'voda' ve všech pádech jednotného čí
+  [499] api08:czech: Oprav pravopis: 'malý pták dýchat vcere vecer.' Najdi chyby 
+  [500] api08:czech: Urči slovní druhy ve větě: 'chytrý les rychle psát.'
+  [501] api08:czech: Vysvětli rozdíl mezi 'vlak' a jeho zdrobnělinou s příklady.
+  [502] api08:czech: Napiš formální žádost (70 slov) na téma 'řeka'.
+  [503] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'květina' spisovnou 
+  [504] api08:czech: Oprav pravopis: 'starý hora psát vcere vecer.' Najdi chyby a
+  [505] api08:czech: Urči slovní druhy ve větě: 'malý ryba rychle nést.'
+  [506] api08:czech: Napiš formální žádost (613 slov) na téma 'oheň'.
+  [507] api08:czech: Vysvětli význam přísloví s číslem 3 a jeho užití ve větě.
+  [508] api08:czech: Utvoř větu se slovem 'pták' v 7. pádě množného čísla a vysvě
+  [509] api08:czech: Oprav pravopis: 'velký ryba dýchat vcere vecer.' Najdi chyby
+  [510] api08:czech: Urči slovní druhy ve větě: 'malý květina rychle mluvit.'
+  [511] api08:czech: Vysvětli rozdíl mezi 'cesta' a jeho zdrobnělinou s příklady.
+  [512] api08:czech: Napiš formální žádost (882 slov) na téma 'voda'.
+  [513] api08:czech: Utvoř větu se slovem 'hora' v 7. pádě množného čísla a vysvě
+  [514] api08:czech: Oprav pravopis: 'rychlý oheň vařit vcere vecer.' Najdi chyby
+  [515] api08:czech: Urči slovní druhy ve větě: 'starý voda rychle nést.'
+  [516] api08:czech: Vysvětli rozdíl mezi 'okno' a jeho zdrobnělinou s příklady.
+  [517] api08:czech: Napiš formální žádost (601 slov) na téma 'srdce'.
+  [518] api08:czech: Skloňuj podstatné jméno 'ryba' ve všech pádech jednotného čí
+  [519] api08:czech: Oprav pravopis: 'dobrý most dýchat vcere vecer.' Najdi chyby
+  [520] api08:czech: Urči slovní druhy ve větě: 'rychlý ryba rychle plavat.'
+  [521] api08:czech: Vysvětli rozdíl mezi 'ryba' a jeho zdrobnělinou s příklady.
+  [522] api08:czech: Napiš formální žádost (759 slov) na téma 'strom'.
+  [523] api08:czech: Skloňuj podstatné jméno 'vlak' ve všech pádech jednotného čí
+  [524] api08:czech: Oprav pravopis: 'malý vlak psát vcere vecer.' Najdi chyby a 
+  [525] api08:czech: Urči slovní druhy ve větě: 'velký mozek rychle běžet.'
+  [526] api08:czech: Napiš formální žádost (982 slov) na téma 'mozek'.
+  [527] api08:czech: Časuj sloveso 'psát' v přítomném čase ve všech osobách.
+  [528] api08:czech: Skloňuj podstatné jméno 'pole' ve všech pádech jednotného čí
+  [529] api08:czech: Oprav pravopis: 'starý řeka vařit vcere vecer.' Najdi chyby 
+  [530] api08:czech: Urči slovní druhy ve větě: 'malý most rychle vařit.'
+  [531] api08:czech: Napiš formální žádost (267 slov) na téma 'hora'.
+  [532] api08:czech: Utvoř větu se slovem 'oheň' v 7. pádě množného čísla a vysvě
+  [533] api08:czech: Oprav pravopis: 'hezký strom vařit vcere vecer.' Najdi chyby
+  [534] api08:czech: Urči slovní druhy ve větě: 'hezký květina rychle běžet.'
+  [535] api08:czech: Vysvětli rozdíl mezi 'řeka' a jeho zdrobnělinou s příklady.
+  [536] api08:czech: Napiš formální žádost (595 slov) na téma 'město'.
+  [537] api08:czech: Utvoř větu se slovem 'kniha' v 7. pádě množného čísla a vysv
+  [538] api08:czech: Oprav pravopis: 'malý kniha kreslit vcere vecer.' Najdi chyb
+  [539] api08:czech: Urči slovní druhy ve větě: 'rychlý cesta rychle stavět.'
+  [540] api08:czech: Napiš formální žádost (893 slov) na téma 'pole'.
+  [541] api08:czech: Časuj sloveso 'vařit' v přítomném čase ve všech osobách.
+  [542] api08:czech: Oprav pravopis: 'chytrý srdce stavět vcere vecer.' Najdi chy
+  [543] api08:czech: Urči slovní druhy ve větě: 'silný vlak rychle psát.'
+  [544] api08:czech: Napiš formální žádost (52 slov) na téma 'město'.
+  [545] api08:czech: Skloňuj podstatné jméno 'most' ve všech pádech jednotného čí
+  [546] api08:czech: Oprav pravopis: 'rychlý květina zpívat vcere vecer.' Najdi c
+  [547] api08:czech: Urči slovní druhy ve větě: 'rychlý les rychle kreslit.'
+  [548] api08:czech: Napiš formální žádost (503 slov) na téma 'mozek'.
+  [549] api08:czech: Oprav pravopis: 'rychlý mozek běžet vcere vecer.' Najdi chyb
+  [550] api08:czech: Urči slovní druhy ve větě: 'chytrý cesta rychle stavět.'
+  [551] api08:czech: Napiš formální žádost (536 slov) na téma 'ryba'.
+  [552] api08:czech: Skloňuj podstatné jméno 'pták' ve všech pádech jednotného čí
+  [553] api08:czech: Oprav pravopis: 'malý strom kreslit vcere vecer.' Najdi chyb
+  [554] api08:czech: Urči slovní druhy ve větě: 'starý okno rychle mluvit.'
+  [555] api08:czech: Napiš formální žádost (634 slov) na téma 'strom'.
+  [556] api08:czech: Časuj sloveso 'kreslit' v přítomném čase ve všech osobách.
+  [557] api08:czech: Oprav pravopis: 'dobrý řeka růst vcere vecer.' Najdi chyby a
+  [558] api08:czech: Urči slovní druhy ve větě: 'malý okno rychle zpívat.'
+  [559] api08:czech: Napiš formální žádost (421 slov) na téma 'pole'.
+  [560] api08:czech: Utvoř větu se slovem 'stůl' v 7. pádě množného čísla a vysvě
+  [561] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'most' spisovnou češ
+  [562] api08:czech: Oprav pravopis: 'rychlý okno dýchat vcere vecer.' Najdi chyb
+  [563] api08:czech: Urči slovní druhy ve větě: 'silný ryba rychle stavět.'
+  [564] api08:czech: Napiš formální žádost (146 slov) na téma 'srdce'.
+  [565] api08:czech: Časuj sloveso 'kreslit' v přítomném čase ve všech osobách.
+  [566] api08:czech: Skloňuj podstatné jméno 'okno' ve všech pádech jednotného čí
+  [567] api08:czech: Oprav pravopis: 'chytrý cesta číst vcere vecer.' Najdi chyby
+  [568] api08:czech: Urči slovní druhy ve větě: 'silný ryba rychle číst.'
+  [569] api08:czech: Napiš formální žádost (788 slov) na téma 'voda'.
+  [570] api08:czech: Utvoř větu se slovem 'město' v 7. pádě množného čísla a vysv
+  [571] api08:czech: Oprav pravopis: 'velký srdce stavět vcere vecer.' Najdi chyb
+  [572] api08:czech: Urči slovní druhy ve větě: 'dobrý pole rychle růst.'
+  [573] api08:czech: Napiš formální žádost (163 slov) na téma 'oheň'.
+  [574] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'les' spisovnou češt
+  [575] api08:czech: Oprav pravopis: 'malý srdce vařit vcere vecer.' Najdi chyby 
+  [576] api08:czech: Urči slovní druhy ve větě: 'starý kniha rychle zpívat.'
+  [577] api08:czech: Napiš formální žádost (424 slov) na téma 'mozek'.
+  [578] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'mozek' spisovnou če
+  [579] api08:czech: Oprav pravopis: 'velký voda nést vcere vecer.' Najdi chyby a
+  [580] api08:czech: Urči slovní druhy ve větě: 'dobrý les rychle vařit.'
+  [581] api08:czech: Napiš formální žádost (515 slov) na téma 'mozek'.
+  [582] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'řeka' spisovnou češ
+  [583] api08:czech: Oprav pravopis: 'chytrý město psát vcere vecer.' Najdi chyby
+  [584] api08:czech: Urči slovní druhy ve větě: 'chytrý řeka rychle běžet.'
+  [585] api08:czech: Vysvětli rozdíl mezi 'pole' a jeho zdrobnělinou s příklady.
+  [586] api08:czech: Napiš formální žádost (436 slov) na téma 'cesta'.
+  [587] api08:czech: Utvoř větu se slovem 'květina' v 7. pádě množného čísla a vy
+  [588] api08:czech: Oprav pravopis: 'rychlý vlak nést vcere vecer.' Najdi chyby 
+  [589] api08:czech: Urči slovní druhy ve větě: 'dobrý srdce rychle stavět.'
+  [590] api08:czech: Napiš formální žádost (729 slov) na téma 'město'.
+  [591] api08:czech: Oprav pravopis: 'dobrý les růst vcere vecer.' Najdi chyby a 
+  [592] api08:czech: Urči slovní druhy ve větě: 'rychlý cesta rychle kreslit.'
+  [593] api08:czech: Napiš formální žádost (267 slov) na téma 'květina'.
+  [594] api08:czech: Skloňuj podstatné jméno 'dům' ve všech pádech jednotného čís
+  [595] api08:czech: Oprav pravopis: 'dobrý les růst vcere vecer.' Najdi chyby a 
+  [596] api08:czech: Urči slovní druhy ve větě: 'velký kniha rychle dýchat.'
+  [597] api08:czech: Napiš formální žádost (435 slov) na téma 'pole'.
+  [598] api08:czech: Oprav pravopis: 'dobrý okno dýchat vcere vecer.' Najdi chyby
+  [599] api08:czech: Urči slovní druhy ve větě: 'malý pták rychle zpívat.'
+  [600] api08:czech: Napiš formální žádost (711 slov) na téma 'cesta'.
+  [601] api08:czech: Oprav pravopis: 'hezký dům plavat vcere vecer.' Najdi chyby 
+  [602] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle číst.'
+  [603] api08:czech: Vysvětli rozdíl mezi 'pták' a jeho zdrobnělinou s příklady.
+  [604] api08:czech: Napiš formální žádost (907 slov) na téma 'les'.
+  [605] api08:czech: Oprav pravopis: 'chytrý ryba nést vcere vecer.' Najdi chyby 
+  [606] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle dýchat.'
+  [607] api08:czech: Vysvětli rozdíl mezi 'pták' a jeho zdrobnělinou s příklady.
+  [608] api08:czech: Napiš formální žádost (921 slov) na téma 'srdce'.
+  [609] api08:czech: Oprav pravopis: 'velký stůl běžet vcere vecer.' Najdi chyby 
+  [610] api08:czech: Urči slovní druhy ve větě: 'malý řeka rychle mluvit.'
+  [611] api08:czech: Napiš formální žádost (811 slov) na téma 'pták'.
+  [612] api08:czech: Oprav pravopis: 'hezký srdce mluvit vcere vecer.' Najdi chyb
+  [613] api08:czech: Urči slovní druhy ve větě: 'malý strom rychle růst.'
+  [614] api08:czech: Napiš formální žádost (61 slov) na téma 'srdce'.
+  [615] api08:czech: Oprav pravopis: 'starý srdce růst vcere vecer.' Najdi chyby 
+  [616] api08:czech: Urči slovní druhy ve větě: 'malý most rychle psát.'
+  [617] api08:czech: Napiš formální žádost (722 slov) na téma 'ryba'.
+  [618] api08:czech: Oprav pravopis: 'chytrý most dýchat vcere vecer.' Najdi chyb
+DONE made=618 + fixed rows
+  filtered to domains ['bio', 'czech', 'design', 'identity']: 1700 prompts
+  [1] api08:bio: Vysvětli Krebsův cyklus krok za krokem a jeho energetický vý
+  [2] api08:bio: Popiš stavbu neuronu a vznik akčního potenciálu.
+  [3] api08:bio: Vysvětli Mendelovy zákony na příkladu s hrachem.
+  [4] api08:bio: Popiš fáze mitózy a co se děje s chromozomy.
+  [5] api08:bio: Vysvětli, jak hemoglobin váže a uvolňuje kyslík (Bohrův efek
+  [6] api08:bio: Popiš trávicí soustavu člověka po oddílech a jejich funkce.
+  [7] api08:bio: Lidské srdce přečerpá asi 7500 litrů krve denně. Vysvětli ma
+  [8] api08:bio: Lidské tělo obsahuje asi 57 % vody. Vysvětli význam vody pro
+  [9] api08:bio: Klidový tep je asi 68 tepů za minutu. Co se děje při jednom 
+  [10] api08:bio: Plíce mají plochu asi 100 m². Vysvětli výměnu plynů v plicní
+  [11] api08:bio: Denní potřeba bílkovin je asi 109 g. Proč je tělo potřebuje?
+  [12] api08:bio: Mozek dospělého váží asi 1200 g. Vysvětli funkci mozečku.
+  [13] api08:bio: Tělesná teplota 37.1 °C: jak tělo udržuje stálou teplotu? Uv
+  [14] api08:bio: Krevní tlak 115/80: co znamenají obě čísla?
+  [15] api08:bio: Červená krvinka žije asi 117 dní. Kde vzniká a kde zaniká?
+  [16] api08:bio: Denní potřeba spánku je 7 hodin. Co se děje v mozku během sp
+  [17] api08:bio: Lidské srdce přečerpá asi 8100 litrů krve denně. Vysvětli ma
+  [18] api08:bio: Lidské tělo obsahuje asi 55 % vody. Vysvětli význam vody pro
+  [19] api08:bio: Klidový tep je asi 92 tepů za minutu. Co se děje při jednom 
+  [20] api08:bio: Plíce mají plochu asi 118 m². Vysvětli výměnu plynů v plicní
+  [21] api08:bio: Denní potřeba bílkovin je asi 44 g. Proč je tělo potřebuje? 
+  [22] api08:bio: Mozek dospělého váží asi 1400 g. Vysvětli funkci mozečku.
+  [23] api08:bio: Krevní tlak 110/79: co znamenají obě čísla?
+  [24] api08:bio: Červená krvinka žije asi 107 dní. Kde vzniká a kde zaniká?
+  [25] api08:bio: Denní potřeba spánku je 9 hodin. Co se děje v mozku během sp
+  [26] api08:bio: Lidské srdce přečerpá asi 8200 litrů krve denně. Vysvětli ma
+  [27] api08:bio: Lidské tělo obsahuje asi 68 % vody. Vysvětli význam vody pro
+  [28] api08:bio: Klidový tep je asi 64 tepů za minutu. Co se děje při jednom 
+  [29] api08:bio: Plíce mají plochu asi 96 m². Vysvětli výměnu plynů v plicníc
+  [30] api08:bio: Denní potřeba bílkovin je asi 61 g. Proč je tělo potřebuje? 
+  [31] api08:bio: Mozek dospělého váží asi 1300 g. Vysvětli funkci mozečku.
+  [32] api08:bio: Tělesná teplota 37.3 °C: jak tělo udržuje stálou teplotu? Uv
+  [33] api08:bio: Krevní tlak 122/71: co znamenají obě čísla?
+  [34] api08:bio: Lidské srdce přečerpá asi 7000 litrů krve denně. Vysvětli ma
+  [35] api08:bio: Lidské tělo obsahuje asi 63 % vody. Vysvětli význam vody pro
+  [36] api08:bio: Klidový tep je asi 58 tepů za minutu. Co se děje při jednom 
+  [37] api08:bio: Plíce mají plochu asi 106 m². Vysvětli výměnu plynů v plicní
+  [38] api08:bio: Denní potřeba bílkovin je asi 51 g. Proč je tělo potřebuje? 
+  [39] api08:bio: Krevní tlak 110/76: co znamenají obě čísla?
+  [40] api08:bio: Červená krvinka žije asi 122 dní. Kde vzniká a kde zaniká?
+  [41] api08:bio: Lidské srdce přečerpá asi 7700 litrů krve denně. Vysvětli ma
+  [42] api08:bio: Lidské tělo obsahuje asi 56 % vody. Vysvětli význam vody pro
+  [43] api08:bio: Klidový tep je asi 85 tepů za minutu. Co se děje při jednom 
+  [44] api08:bio: Plíce mají plochu asi 95 m². Vysvětli výměnu plynů v plicníc
+  [45] api08:bio: Denní potřeba bílkovin je asi 115 g. Proč je tělo potřebuje?
+  [46] api08:bio: Tělesná teplota 36.6 °C: jak tělo udržuje stálou teplotu? Uv
+  [47] api08:bio: Krevní tlak 114/84: co znamenají obě čísla?
+  [48] api08:bio: Červená krvinka žije asi 126 dní. Kde vzniká a kde zaniká?
+  [49] api08:bio: Denní potřeba spánku je 8 hodin. Co se děje v mozku během sp
+  [50] api08:bio: Lidské srdce přečerpá asi 8500 litrů krve denně. Vysvětli ma
+  [51] api08:bio: Lidské tělo obsahuje asi 69 % vody. Vysvětli význam vody pro
+  [52] api08:bio: Klidový tep je asi 91 tepů za minutu. Co se děje při jednom 
+  [53] api08:bio: Plíce mají plochu asi 111 m². Vysvětli výměnu plynů v plicní
+  [54] api08:bio: Denní potřeba bílkovin je asi 50 g. Proč je tělo potřebuje? 
+  [55] api08:bio: Tělesná teplota 37.0 °C: jak tělo udržuje stálou teplotu? Uv
+  [56] api08:bio: Krevní tlak 122/85: co znamenají obě čísla?
+  [57] api08:bio: Lidské srdce přečerpá asi 6300 litrů krve denně. Vysvětli ma
+  [58] api08:bio: Lidské tělo obsahuje asi 69 % vody. Vysvětli význam vody pro
+  [59] api08:bio: Klidový tep je asi 77 tepů za minutu. Co se děje při jednom 
+  [60] api08:bio: Plíce mají plochu asi 68 m². Vysvětli výměnu plynů v plicníc
+  [61] api08:bio: Denní potřeba bílkovin je asi 70 g. Proč je tělo potřebuje? 
+  [62] api08:bio: Tělesná teplota 36.9 °C: jak tělo udržuje stálou teplotu? Uv
+  [63] api08:bio: Krevní tlak 115/82: co znamenají obě čísla?
+  [64] api08:bio: Červená krvinka žije asi 101 dní. Kde vzniká a kde zaniká?
+  [65] api08:bio: Lidské srdce přečerpá asi 6800 litrů krve denně. Vysvětli ma
+  [66] api08:bio: Lidské tělo obsahuje asi 66 % vody. Vysvětli význam vody pro
+  [67] api08:bio: Klidový tep je asi 63 tepů za minutu. Co se děje při jednom 
+  [68] api08:bio: Plíce mají plochu asi 84 m². Vysvětli výměnu plynů v plicníc
+  [69] api08:bio: Denní potřeba bílkovin je asi 65 g. Proč je tělo potřebuje? 
+  [70] api08:bio: Tělesná teplota 36.7 °C: jak tělo udržuje stálou teplotu? Uv
+  [71] api08:bio: Krevní tlak 116/85: co znamenají obě čísla?
+  [72] api08:bio: Červená krvinka žije asi 124 dní. Kde vzniká a kde zaniká?
+  [73] api08:bio: Lidské tělo obsahuje asi 60 % vody. Vysvětli význam vody pro
+  [74] api08:bio: Klidový tep je asi 83 tepů za minutu. Co se děje při jednom 
+  [75] api08:bio: Plíce mají plochu asi 57 m². Vysvětli výměnu plynů v plicníc
+  [76] api08:bio: Denní potřeba bílkovin je asi 92 g. Proč je tělo potřebuje? 
+  [77] api08:bio: Krevní tlak 124/74: co znamenají obě čísla?
+  [78] api08:bio: Červená krvinka žije asi 120 dní. Kde vzniká a kde zaniká?
+  [79] api08:bio: Lidské srdce přečerpá asi 6000 litrů krve denně. Vysvětli ma
+  [80] api08:bio: Lidské tělo obsahuje asi 66 % vody. Vysvětli význam vody pro
+  [81] api08:bio: Klidový tep je asi 76 tepů za minutu. Co se děje při jednom 
+  [82] api08:bio: Plíce mají plochu asi 101 m². Vysvětli výměnu plynů v plicní
+  [83] api08:bio: Denní potřeba bílkovin je asi 95 g. Proč je tělo potřebuje? 
+  [84] api08:bio: Mozek dospělého váží asi 1500 g. Vysvětli funkci mozečku.
+  [85] api08:bio: Tělesná teplota 37.4 °C: jak tělo udržuje stálou teplotu? Uv
+  [86] api08:bio: Krevní tlak 123/83: co znamenají obě čísla?
+  [87] api08:bio: Červená krvinka žije asi 104 dní. Kde vzniká a kde zaniká?
+  [88] api08:bio: Lidské srdce přečerpá asi 8400 litrů krve denně. Vysvětli ma
+  [89] api08:bio: Lidské tělo obsahuje asi 70 % vody. Vysvětli význam vody pro
+  [90] api08:bio: Klidový tep je asi 94 tepů za minutu. Co se děje při jednom 
+  [91] api08:bio: Plíce mají plochu asi 109 m². Vysvětli výměnu plynů v plicní
+  [92] api08:bio: Denní potřeba bílkovin je asi 77 g. Proč je tělo potřebuje? 
+  [93] api08:bio: Tělesná teplota 36.5 °C: jak tělo udržuje stálou teplotu? Uv
+  [94] api08:bio: Krevní tlak 126/79: co znamenají obě čísla?
+  [95] api08:bio: Červená krvinka žije asi 127 dní. Kde vzniká a kde zaniká?
+  [96] api08:bio: Lidské srdce přečerpá asi 6100 litrů krve denně. Vysvětli ma
+  [97] api08:bio: Klidový tep je asi 95 tepů za minutu. Co se děje při jednom 
+  [98] api08:bio: Denní potřeba bílkovin je asi 102 g. Proč je tělo potřebuje?
+  [99] api08:bio: Krevní tlak 116/78: co znamenají obě čísla?
+  [100] api08:bio: Červená krvinka žije asi 116 dní. Kde vzniká a kde zaniká?
+  [101] api08:bio: Lidské tělo obsahuje asi 64 % vody. Vysvětli význam vody pro
+  [102] api08:bio: Plíce mají plochu asi 50 m². Vysvětli výměnu plynů v plicníc
+  [103] api08:bio: Denní potřeba bílkovin je asi 120 g. Proč je tělo potřebuje?
+  [104] api08:bio: Krevní tlak 121/74: co znamenají obě čísla?
+  [105] api08:bio: Červená krvinka žije asi 116 dní. Kde vzniká a kde zaniká?
+  [106] api08:bio: Lidské tělo obsahuje asi 64 % vody. Vysvětli význam vody pro
+  [107] api08:bio: Klidový tep je asi 67 tepů za minutu. Co se děje při jednom 
+  [108] api08:bio: Plíce mají plochu asi 90 m². Vysvětli výměnu plynů v plicníc
+  [109] api08:bio: Denní potřeba bílkovin je asi 107 g. Proč je tělo potřebuje?
+  [110] api08:bio: Krevní tlak 115/76: co znamenají obě čísla?
+  [111] api08:bio: Červená krvinka žije asi 109 dní. Kde vzniká a kde zaniká?
+  [112] api08:bio: Denní potřeba bílkovin je asi 45 g. Proč je tělo potřebuje? 
+  [113] api08:bio: Krevní tlak 127/76: co znamenají obě čísla?
+  [114] api08:bio: Červená krvinka žije asi 125 dní. Kde vzniká a kde zaniká?
+  [115] api08:bio: Lidské srdce přečerpá asi 7900 litrů krve denně. Vysvětli ma
+  [116] api08:bio: Lidské tělo obsahuje asi 62 % vody. Vysvětli význam vody pro
+  [117] api08:bio: Klidový tep je asi 62 tepů za minutu. Co se děje při jednom 
+  [118] api08:bio: Denní potřeba bílkovin je asi 101 g. Proč je tělo potřebuje?
+  [119] api08:bio: Tělesná teplota 36.8 °C: jak tělo udržuje stálou teplotu? Uv
+  [120] api08:bio: Krevní tlak 113/85: co znamenají obě čísla?
+  [121] api08:bio: Červená krvinka žije asi 112 dní. Kde vzniká a kde zaniká?
+  [122] api08:bio: Klidový tep je asi 78 tepů za minutu. Co se děje při jednom 
+  [123] api08:bio: Plíce mají plochu asi 60 m². Vysvětli výměnu plynů v plicníc
+  [124] api08:bio: Denní potřeba bílkovin je asi 79 g. Proč je tělo potřebuje? 
+  [125] api08:bio: Krevní tlak 111/70: co znamenají obě čísla?
+  [126] api08:bio: Červená krvinka žije asi 111 dní. Kde vzniká a kde zaniká?
+  [127] api08:bio: Lidské srdce přečerpá asi 7400 litrů krve denně. Vysvětli ma
+  [128] api08:bio: Lidské tělo obsahuje asi 58 % vody. Vysvětli význam vody pro
+  [129] api08:bio: Plíce mají plochu asi 88 m². Vysvětli výměnu plynů v plicníc
+  [130] api08:bio: Denní potřeba bílkovin je asi 93 g. Proč je tělo potřebuje? 
+  [131] api08:bio: Krevní tlak 119/72: co znamenají obě čísla?
+  [132] api08:bio: Lidské srdce přečerpá asi 7300 litrů krve denně. Vysvětli ma
+  [133] api08:bio: Klidový tep je asi 90 tepů za minutu. Co se děje při jednom 
+  [134] api08:bio: Plíce mají plochu asi 115 m². Vysvětli výměnu plynů v plicní
+  [135] api08:bio: Denní potřeba bílkovin je asi 118 g. Proč je tělo potřebuje?
+  [136] api08:bio: Krevní tlak 113/73: co znamenají obě čísla?
+  [137] api08:bio: Červená krvinka žije asi 130 dní. Kde vzniká a kde zaniká?
+  [138] api08:bio: Lidské tělo obsahuje asi 65 % vody. Vysvětli význam vody pro
+  [139] api08:bio: Denní potřeba bílkovin je asi 113 g. Proč je tělo potřebuje?
+  [140] api08:bio: Tělesná teplota 37.2 °C: jak tělo udržuje stálou teplotu? Uv
+  [141] api08:bio: Krevní tlak 117/75: co znamenají obě čísla?
+  [142] api08:bio: Klidový tep je asi 66 tepů za minutu. Co se děje při jednom 
+  [143] api08:bio: Plíce mají plochu asi 71 m². Vysvětli výměnu plynů v plicníc
+  [144] api08:bio: Denní potřeba bílkovin je asi 72 g. Proč je tělo potřebuje? 
+  [145] api08:bio: Krevní tlak 113/84: co znamenají obě čísla?
+  [146] api08:bio: Červená krvinka žije asi 106 dní. Kde vzniká a kde zaniká?
+  [147] api08:bio: Klidový tep je asi 89 tepů za minutu. Co se děje při jednom 
+  [148] api08:bio: Plíce mají plochu asi 74 m². Vysvětli výměnu plynů v plicníc
+  [149] api08:bio: Krevní tlak 124/70: co znamenají obě čísla?
+  [150] api08:bio: Lidské tělo obsahuje asi 67 % vody. Vysvětli význam vody pro
+  [151] api08:bio: Denní potřeba bílkovin je asi 66 g. Proč je tělo potřebuje? 
+  [152] api08:bio: Krevní tlak 123/72: co znamenají obě čísla?
+  [153] api08:bio: Červená krvinka žije asi 103 dní. Kde vzniká a kde zaniká?
+  [154] api08:bio: Lidské srdce přečerpá asi 6500 litrů krve denně. Vysvětli ma
+  [155] api08:bio: Plíce mají plochu asi 76 m². Vysvětli výměnu plynů v plicníc
+  [156] api08:bio: Denní potřeba bílkovin je asi 64 g. Proč je tělo potřebuje? 
+  [157] api08:bio: Krevní tlak 125/83: co znamenají obě čísla?
+  [158] api08:bio: Červená krvinka žije asi 121 dní. Kde vzniká a kde zaniká?
+  [159] api08:bio: Plíce mají plochu asi 75 m². Vysvětli výměnu plynů v plicníc
+  [160] api08:bio: Denní potřeba bílkovin je asi 46 g. Proč je tělo potřebuje? 
+  [161] api08:bio: Lidské srdce přečerpá asi 6400 litrů krve denně. Vysvětli ma
+  [162] api08:bio: Plíce mají plochu asi 82 m². Vysvětli výměnu plynů v plicníc
+  [163] api08:bio: Denní potřeba bílkovin je asi 112 g. Proč je tělo potřebuje?
+  [164] api08:bio: Krevní tlak 122/75: co znamenají obě čísla?
+  [165] api08:bio: Červená krvinka žije asi 128 dní. Kde vzniká a kde zaniká?
+  [166] api08:bio: Klidový tep je asi 84 tepů za minutu. Co se děje při jednom 
+  [167] api08:bio: Plíce mají plochu asi 83 m². Vysvětli výměnu plynů v plicníc
+  [168] api08:bio: Denní potřeba bílkovin je asi 53 g. Proč je tělo potřebuje? 
+  [169] api08:bio: Krevní tlak 119/79: co znamenají obě čísla?
+  [170] api08:bio: Lidské srdce přečerpá asi 8000 litrů krve denně. Vysvětli ma
+  [171] api08:bio: Klidový tep je asi 65 tepů za minutu. Co se děje při jednom 
+  [172] api08:bio: Plíce mají plochu asi 105 m². Vysvětli výměnu plynů v plicní
+  [173] api08:bio: Denní potřeba bílkovin je asi 63 g. Proč je tělo potřebuje? 
+  [174] api08:bio: Krevní tlak 112/79: co znamenají obě čísla?
+  [175] api08:bio: Červená krvinka žije asi 100 dní. Kde vzniká a kde zaniká?
+  [176] api08:bio: Plíce mají plochu asi 53 m². Vysvětli výměnu plynů v plicníc
+  [177] api08:bio: Denní potřeba bílkovin je asi 78 g. Proč je tělo potřebuje? 
+  [178] api08:bio: Krevní tlak 129/73: co znamenají obě čísla?
+  [179] api08:bio: Červená krvinka žije asi 110 dní. Kde vzniká a kde zaniká?
+  [180] api08:bio: Plíce mají plochu asi 112 m². Vysvětli výměnu plynů v plicní
+  [181] api08:bio: Denní potřeba bílkovin je asi 59 g. Proč je tělo potřebuje? 
+  [182] api08:bio: Lidské srdce přečerpá asi 6200 litrů krve denně. Vysvětli ma
+  [183] api08:bio: Plíce mají plochu asi 65 m². Vysvětli výměnu plynů v plicníc
+  [184] api08:bio: Denní potřeba bílkovin je asi 83 g. Proč je tělo potřebuje? 
+  [185] api08:bio: Krevní tlak 125/75: co znamenají obě čísla?
+  [186] api08:bio: Lidské srdce přečerpá asi 6900 litrů krve denně. Vysvětli ma
+  [187] api08:bio: Klidový tep je asi 74 tepů za minutu. Co se děje při jednom 
+  [188] api08:bio: Denní potřeba bílkovin je asi 56 g. Proč je tělo potřebuje? 
+  [189] api08:bio: Krevní tlak 118/81: co znamenají obě čísla?
+  [190] api08:bio: Lidské srdce přečerpá asi 7100 litrů krve denně. Vysvětli ma
+  [191] api08:bio: Krevní tlak 111/76: co znamenají obě čísla?
+  [192] api08:bio: Klidový tep je asi 70 tepů za minutu. Co se děje při jednom 
+  [193] api08:bio: Plíce mají plochu asi 108 m². Vysvětli výměnu plynů v plicní
+  [194] api08:bio: Denní potřeba bílkovin je asi 74 g. Proč je tělo potřebuje? 
+  [195] api08:bio: Krevní tlak 118/81: co znamenají obě čísla?
+  [196] api08:bio: Červená krvinka žije asi 129 dní. Kde vzniká a kde zaniká?
+  [197] api08:bio: Lidské srdce přečerpá asi 8300 litrů krve denně. Vysvětli ma
+  [198] api08:bio: Plíce mají plochu asi 86 m². Vysvětli výměnu plynů v plicníc
+  [199] api08:bio: Denní potřeba bílkovin je asi 41 g. Proč je tělo potřebuje? 
+  [200] api08:bio: Krevní tlak 128/72: co znamenají obě čísla?
+  [201] api08:bio: Klidový tep je asi 81 tepů za minutu. Co se děje při jednom 
+  [202] api08:bio: Plíce mají plochu asi 77 m². Vysvětli výměnu plynů v plicníc
+  [203] api08:bio: Denní potřeba bílkovin je asi 42 g. Proč je tělo potřebuje? 
+  [204] api08:bio: Krevní tlak 120/80: co znamenají obě čísla?
+  [205] api08:bio: Červená krvinka žije asi 105 dní. Kde vzniká a kde zaniká?
+  [206] api08:bio: Lidské tělo obsahuje asi 61 % vody. Vysvětli význam vody pro
+  [207] api08:bio: Klidový tep je asi 87 tepů za minutu. Co se děje při jednom 
+  [208] api08:bio: Plíce mají plochu asi 67 m². Vysvětli výměnu plynů v plicníc
+  [209] api08:bio: Krevní tlak 126/73: co znamenají obě čísla?
+  [210] api08:bio: Lidské srdce přečerpá asi 7800 litrů krve denně. Vysvětli ma
+  [211] api08:design: Navrhni strukturu moderní landing page pro SaaS (sekce, hier
+  [212] api08:design: Jak se vyhnout AI-slop vzhledu webu? Uveď 5 konkrétních prav
+  [213] api08:design: Navrhni barevnou paletu a typografii pro fintech dashboard +
+  [214] api08:design: Napiš přístupný (a11y) navbar v Tailwindu s mobilním menu.
+  [215] api08:design: Jak navrhnout pricing sekci, která konvertuje? Struktura + T
+  [216] api08:design: Navrhni hero sekci pro SaaS s cenou od 44 Kč/měs. Napiš Tail
+  [217] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'les'? Uveď 
+  [218] api08:design: Navrhni pricing se 3 tarify (930, 7340, 700 Kč). Struktura +
+  [219] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 568 kategori
+  [220] api08:design: Navrhni barevnou paletu pro město-tematický web + Tailwind c
+  [221] api08:design: Jak navrhnout formulář s 3 poli, aby konvertoval? Pravidla +
+  [222] api08:design: Landing pro aplikaci s 59300 uživateli: sekce, hierarchie, C
+  [223] api08:design: Tmavý režim v Tailwindu: konfigurace + 5 pravidel pro kontra
+  [224] api08:design: Navrhni hero sekci pro SaaS s cenou od 532 Kč/měs. Napiš Tai
+  [225] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'město'? Uve
+  [226] api08:design: Navrhni pricing se 3 tarify (420, 3180, 300 Kč). Struktura +
+  [227] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 506 kategori
+  [228] api08:design: Navrhni barevnou paletu pro květina-tematický web + Tailwind
+  [229] api08:design: Jak navrhnout formulář s 7 poli, aby konvertoval? Pravidla +
+  [230] api08:design: Landing pro aplikaci s 52000 uživateli: sekce, hierarchie, C
+  [231] api08:design: Tmavý režim v Tailwindu: konfigurace + 6 pravidel pro kontra
+  [232] api08:design: Navrhni hero sekci pro SaaS s cenou od 71 Kč/měs. Napiš Tail
+  [233] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'kniha'? Uve
+  [234] api08:design: Navrhni pricing se 3 tarify (90, 9570, 600 Kč). Struktura + 
+  [235] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 363 kategori
+  [236] api08:design: Navrhni barevnou paletu pro most-tematický web + Tailwind co
+  [237] api08:design: Jak navrhnout formulář s 4 poli, aby konvertoval? Pravidla +
+  [238] api08:design: Landing pro aplikaci s 78100 uživateli: sekce, hierarchie, C
+  [239] api08:design: Navrhni hero sekci pro SaaS s cenou od 239 Kč/měs. Napiš Tai
+  [240] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'ryba'? Uveď
+  [241] api08:design: Navrhni pricing se 3 tarify (550, 5770, 700 Kč). Struktura +
+  [242] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 960 kategori
+  [243] api08:design: Navrhni barevnou paletu pro kniha-tematický web + Tailwind c
+  [244] api08:design: Jak navrhnout formulář s 4 poli, aby konvertoval? Pravidla +
+  [245] api08:design: Landing pro aplikaci s 18600 uživateli: sekce, hierarchie, C
+  [246] api08:design: Tmavý režim v Tailwindu: konfigurace + 8 pravidel pro kontra
+  [247] api08:design: Navrhni hero sekci pro SaaS s cenou od 909 Kč/měs. Napiš Tai
+  [248] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'most'? Uveď
+  [249] api08:design: Navrhni pricing se 3 tarify (380, 8470, 900 Kč). Struktura +
+  [250] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 845 kategori
+  [251] api08:design: Navrhni barevnou paletu pro hora-tematický web + Tailwind co
+  [252] api08:design: Landing pro aplikaci s 28200 uživateli: sekce, hierarchie, C
+  [253] api08:design: Tmavý režim v Tailwindu: konfigurace + 10 pravidel pro kontr
+  [254] api08:design: Navrhni hero sekci pro SaaS s cenou od 728 Kč/měs. Napiš Tai
+  [255] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'mozek'? Uve
+  [256] api08:design: Navrhni pricing se 3 tarify (530, 7060, 900 Kč). Struktura +
+  [257] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 332 kategori
+  [258] api08:design: Navrhni barevnou paletu pro les-tematický web + Tailwind con
+  [259] api08:design: Jak navrhnout formulář s 9 poli, aby konvertoval? Pravidla +
+  [260] api08:design: Landing pro aplikaci s 14000 uživateli: sekce, hierarchie, C
+  [261] api08:design: Tmavý režim v Tailwindu: konfigurace + 2 pravidel pro kontra
+  [262] api08:design: Navrhni hero sekci pro SaaS s cenou od 722 Kč/měs. Napiš Tai
+  [263] api08:design: Navrhni pricing se 3 tarify (370, 7560, 300 Kč). Struktura +
+  [264] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 19 kategorie
+  [265] api08:design: Navrhni barevnou paletu pro pole-tematický web + Tailwind co
+  [266] api08:design: Jak navrhnout formulář s 8 poli, aby konvertoval? Pravidla +
+  [267] api08:design: Landing pro aplikaci s 21000 uživateli: sekce, hierarchie, C
+  [268] api08:design: Navrhni hero sekci pro SaaS s cenou od 856 Kč/měs. Napiš Tai
+  [269] api08:design: Navrhni pricing se 3 tarify (220, 8400, 900 Kč). Struktura +
+  [270] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 99 kategorie
+  [271] api08:design: Navrhni barevnou paletu pro okno-tematický web + Tailwind co
+  [272] api08:design: Landing pro aplikaci s 14700 uživateli: sekce, hierarchie, C
+  [273] api08:design: Navrhni hero sekci pro SaaS s cenou od 665 Kč/měs. Napiš Tai
+  [274] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'cesta'? Uve
+  [275] api08:design: Navrhni pricing se 3 tarify (590, 2910, 800 Kč). Struktura +
+  [276] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 398 kategori
+  [277] api08:design: Navrhni barevnou paletu pro srdce-tematický web + Tailwind c
+  [278] api08:design: Jak navrhnout formulář s 2 poli, aby konvertoval? Pravidla +
+  [279] api08:design: Landing pro aplikaci s 3600 uživateli: sekce, hierarchie, CT
+  [280] api08:design: Navrhni hero sekci pro SaaS s cenou od 608 Kč/měs. Napiš Tai
+  [281] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'pták'? Uveď
+  [282] api08:design: Navrhni pricing se 3 tarify (600, 3670, 300 Kč). Struktura +
+  [283] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 139 kategori
+  [284] api08:design: Jak navrhnout formulář s 5 poli, aby konvertoval? Pravidla +
+  [285] api08:design: Landing pro aplikaci s 50800 uživateli: sekce, hierarchie, C
+  [286] api08:design: Tmavý režim v Tailwindu: konfigurace + 4 pravidel pro kontra
+  [287] api08:design: Navrhni hero sekci pro SaaS s cenou od 61 Kč/měs. Napiš Tail
+  [288] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'pták'? Uveď
+  [289] api08:design: Navrhni pricing se 3 tarify (210, 6980, 200 Kč). Struktura +
+  [290] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 778 kategori
+  [291] api08:design: Jak navrhnout formulář s 10 poli, aby konvertoval? Pravidla 
+  [292] api08:design: Landing pro aplikaci s 89200 uživateli: sekce, hierarchie, C
+  [293] api08:design: Navrhni hero sekci pro SaaS s cenou od 13 Kč/měs. Napiš Tail
+  [294] api08:design: Navrhni pricing se 3 tarify (680, 1690, 700 Kč). Struktura +
+  [295] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 892 kategori
+  [296] api08:design: Navrhni barevnou paletu pro dům-tematický web + Tailwind con
+  [297] api08:design: Landing pro aplikaci s 13900 uživateli: sekce, hierarchie, C
+  [298] api08:design: Navrhni hero sekci pro SaaS s cenou od 447 Kč/měs. Napiš Tai
+  [299] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'řeka'? Uveď
+  [300] api08:design: Navrhni pricing se 3 tarify (850, 1730, 700 Kč). Struktura +
+  [301] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 135 kategori
+  [302] api08:design: Landing pro aplikaci s 25500 uživateli: sekce, hierarchie, C
+  [303] api08:design: Navrhni hero sekci pro SaaS s cenou od 949 Kč/měs. Napiš Tai
+  [304] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'srdce'? Uve
+  [305] api08:design: Navrhni pricing se 3 tarify (200, 7490, 400 Kč). Struktura +
+  [306] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 894 kategori
+  [307] api08:design: Navrhni barevnou paletu pro řeka-tematický web + Tailwind co
+  [308] api08:design: Landing pro aplikaci s 47800 uživateli: sekce, hierarchie, C
+  [309] api08:design: Tmavý režim v Tailwindu: konfigurace + 3 pravidel pro kontra
+  [310] api08:design: Navrhni hero sekci pro SaaS s cenou od 563 Kč/měs. Napiš Tai
+  [311] api08:design: Navrhni pricing se 3 tarify (820, 2960, 300 Kč). Struktura +
+  [312] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 214 kategori
+  [313] api08:design: Navrhni barevnou paletu pro řeka-tematický web + Tailwind co
+  [314] api08:design: Landing pro aplikaci s 21200 uživateli: sekce, hierarchie, C
+  [315] api08:design: Navrhni hero sekci pro SaaS s cenou od 801 Kč/měs. Napiš Tai
+  [316] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'okno'? Uveď
+  [317] api08:design: Navrhni pricing se 3 tarify (150, 8950, 400 Kč). Struktura +
+  [318] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 207 kategori
+  [319] api08:design: Landing pro aplikaci s 61700 uživateli: sekce, hierarchie, C
+  [320] api08:design: Tmavý režim v Tailwindu: konfigurace + 7 pravidel pro kontra
+  [321] api08:design: Navrhni hero sekci pro SaaS s cenou od 643 Kč/měs. Napiš Tai
+  [322] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'dům'? Uveď 
+  [323] api08:design: Navrhni pricing se 3 tarify (710, 6830, 600 Kč). Struktura +
+  [324] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 904 kategori
+  [325] api08:design: Landing pro aplikaci s 32900 uživateli: sekce, hierarchie, C
+  [326] api08:design: Navrhni pricing se 3 tarify (570, 7960, 500 Kč). Struktura +
+  [327] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 68 kategorie
+  [328] api08:design: Navrhni barevnou paletu pro mozek-tematický web + Tailwind c
+  [329] api08:design: Landing pro aplikaci s 85500 uživateli: sekce, hierarchie, C
+  [330] api08:design: Navrhni hero sekci pro SaaS s cenou od 81 Kč/měs. Napiš Tail
+  [331] api08:design: Navrhni pricing se 3 tarify (370, 6730, 1000 Kč). Struktura 
+  [332] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 452 kategori
+  [333] api08:design: Landing pro aplikaci s 69900 uživateli: sekce, hierarchie, C
+  [334] api08:design: Navrhni hero sekci pro SaaS s cenou od 916 Kč/měs. Napiš Tai
+  [335] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'strom'? Uve
+  [336] api08:design: Navrhni pricing se 3 tarify (40, 6040, 200 Kč). Struktura + 
+  [337] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 180 kategori
+  [338] api08:design: Jak navrhnout formulář s 6 poli, aby konvertoval? Pravidla +
+  [339] api08:design: Landing pro aplikaci s 83400 uživateli: sekce, hierarchie, C
+  [340] api08:design: Navrhni hero sekci pro SaaS s cenou od 766 Kč/měs. Napiš Tai
+  [341] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'stůl'? Uveď
+  [342] api08:design: Navrhni pricing se 3 tarify (390, 9940, 900 Kč). Struktura +
+  [343] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 685 kategori
+  [344] api08:design: Landing pro aplikaci s 13600 uživateli: sekce, hierarchie, C
+  [345] api08:design: Navrhni hero sekci pro SaaS s cenou od 205 Kč/měs. Napiš Tai
+  [346] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'stůl'? Uveď
+  [347] api08:design: Navrhni pricing se 3 tarify (380, 6970, 800 Kč). Struktura +
+  [348] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 131 kategori
+  [349] api08:design: Landing pro aplikaci s 45600 uživateli: sekce, hierarchie, C
+  [350] api08:design: Navrhni hero sekci pro SaaS s cenou od 324 Kč/měs. Napiš Tai
+  [351] api08:design: Navrhni pricing se 3 tarify (910, 9880, 200 Kč). Struktura +
+  [352] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 763 kategori
+  [353] api08:design: Landing pro aplikaci s 82700 uživateli: sekce, hierarchie, C
+  [354] api08:design: Navrhni hero sekci pro SaaS s cenou od 406 Kč/měs. Napiš Tai
+  [355] api08:design: Navrhni pricing se 3 tarify (20, 190, 700 Kč). Struktura + T
+  [356] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 10 kategorie
+  [357] api08:design: Navrhni barevnou paletu pro cesta-tematický web + Tailwind c
+  [358] api08:design: Landing pro aplikaci s 41800 uživateli: sekce, hierarchie, C
+  [359] api08:design: Tmavý režim v Tailwindu: konfigurace + 9 pravidel pro kontra
+  [360] api08:design: Navrhni hero sekci pro SaaS s cenou od 452 Kč/měs. Napiš Tai
+  [361] api08:design: Navrhni pricing se 3 tarify (340, 6150, 300 Kč). Struktura +
+  [362] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 846 kategori
+  [363] api08:design: Landing pro aplikaci s 5600 uživateli: sekce, hierarchie, CT
+  [364] api08:design: Navrhni hero sekci pro SaaS s cenou od 468 Kč/měs. Napiš Tai
+  [365] api08:design: Navrhni pricing se 3 tarify (880, 1230, 900 Kč). Struktura +
+  [366] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 617 kategori
+  [367] api08:design: Landing pro aplikaci s 29200 uživateli: sekce, hierarchie, C
+  [368] api08:design: Navrhni hero sekci pro SaaS s cenou od 95 Kč/měs. Napiš Tail
+  [369] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'oheň'? Uveď
+  [370] api08:design: Navrhni pricing se 3 tarify (490, 7940, 200 Kč). Struktura +
+  [371] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 129 kategori
+  [372] api08:design: Navrhni barevnou paletu pro pták-tematický web + Tailwind co
+  [373] api08:design: Landing pro aplikaci s 26100 uživateli: sekce, hierarchie, C
+  [374] api08:design: Navrhni hero sekci pro SaaS s cenou od 199 Kč/měs. Napiš Tai
+  [375] api08:design: Navrhni pricing se 3 tarify (150, 2410, 300 Kč). Struktura +
+  [376] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 953 kategori
+  [377] api08:design: Landing pro aplikaci s 61900 uživateli: sekce, hierarchie, C
+  [378] api08:design: Navrhni hero sekci pro SaaS s cenou od 662 Kč/měs. Napiš Tai
+  [379] api08:design: Navrhni pricing se 3 tarify (390, 2250, 200 Kč). Struktura +
+  [380] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 708 kategori
+  [381] api08:design: Landing pro aplikaci s 77700 uživateli: sekce, hierarchie, C
+  [382] api08:design: Navrhni hero sekci pro SaaS s cenou od 710 Kč/měs. Napiš Tai
+  [383] api08:design: Navrhni pricing se 3 tarify (780, 3680, 900 Kč). Struktura +
+  [384] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 900 kategori
+  [385] api08:design: Navrhni barevnou paletu pro strom-tematický web + Tailwind c
+  [386] api08:design: Landing pro aplikaci s 96200 uživateli: sekce, hierarchie, C
+  [387] api08:design: Navrhni hero sekci pro SaaS s cenou od 370 Kč/měs. Napiš Tai
+  [388] api08:design: Navrhni pricing se 3 tarify (500, 2310, 900 Kč). Struktura +
+  [389] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 315 kategori
+  [390] api08:czech: Vysvětli rozdíl mezi 'aby' a 'aby' ve vedlejších větách s př
+  [391] api08:czech: Nauč mě psát čárky ve větě jednoduché: 5 pravidel s příklady
+  [392] api08:czech: Vysvětli shodu podmětu s přísudkem u několikanásobného podmě
+  [393] api08:czech: Jak se překládá anglické 'resistivity', 'torque', 'strain'? 
+  [394] api08:czech: Napiš formální stížnost (150 slov) spisovnou češtinou.
+  [395] api08:czech: Vysvětli rozdíl mezi stylem odborným, publicistickým a uměle
+  [396] api08:czech: Utvoř větu se slovem 'les' v 7. pádě množného čísla a vysvět
+  [397] api08:czech: Časuj sloveso 'plavat' v přítomném čase ve všech osobách.
+  [398] api08:czech: Stupňuj přídavné jméno 'rychlý' a ke každému stupni uveď vět
+  [399] api08:czech: Skloňuj podstatné jméno 'hora' ve všech pádech jednotného čí
+  [400] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'voda' spisovnou češ
+  [401] api08:czech: Oprav pravopis: 'silný most kreslit vcere vecer.' Najdi chyb
+  [402] api08:czech: Urči slovní druhy ve větě: 'dobrý ryba rychle běžet.'
+  [403] api08:czech: Vysvětli rozdíl mezi 'mozek' a jeho zdrobnělinou s příklady.
+  [404] api08:czech: Napiš formální žádost (609 slov) na téma 'srdce'.
+  [405] api08:czech: Vysvětli význam přísloví s číslem 5 a jeho užití ve větě.
+  [406] api08:czech: Utvoř větu se slovem 'cesta' v 7. pádě množného čísla a vysv
+  [407] api08:czech: Časuj sloveso 'dýchat' v přítomném čase ve všech osobách.
+  [408] api08:czech: Stupňuj přídavné jméno 'chytrý' a ke každému stupni uveď vět
+  [409] api08:czech: Skloňuj podstatné jméno 'kniha' ve všech pádech jednotného č
+  [410] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'cesta' spisovnou če
+  [411] api08:czech: Oprav pravopis: 'starý řeka mluvit vcere vecer.' Najdi chyby
+  [412] api08:czech: Urči slovní druhy ve větě: 'rychlý pole rychle kreslit.'
+  [413] api08:czech: Vysvětli rozdíl mezi 'stůl' a jeho zdrobnělinou s příklady.
+  [414] api08:czech: Napiš formální žádost (91 slov) na téma 'ryba'.
+  [415] api08:czech: Vysvětli význam přísloví s číslem 4 a jeho užití ve větě.
+  [416] api08:czech: Utvoř větu se slovem 'pole' v 7. pádě množného čísla a vysvě
+  [417] api08:czech: Časuj sloveso 'růst' v přítomném čase ve všech osobách.
+  [418] api08:czech: Stupňuj přídavné jméno 'silný' a ke každému stupni uveď větu
+  [419] api08:czech: Skloňuj podstatné jméno 'les' ve všech pádech jednotného čís
+  [420] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'cesta' spisovnou če
+  [421] api08:czech: Oprav pravopis: 'starý stůl zpívat vcere vecer.' Najdi chyby
+  [422] api08:czech: Urči slovní druhy ve větě: 'velký pole rychle kreslit.'
+  [423] api08:czech: Vysvětli rozdíl mezi 'hora' a jeho zdrobnělinou s příklady.
+  [424] api08:czech: Napiš formální žádost (723 slov) na téma 'květina'.
+  [425] api08:czech: Vysvětli význam přísloví s číslem 7 a jeho užití ve větě.
+  [426] api08:czech: Časuj sloveso 'běžet' v přítomném čase ve všech osobách.
+  [427] api08:czech: Stupňuj přídavné jméno 'velký' a ke každému stupni uveď větu
+  [428] api08:czech: Skloňuj podstatné jméno 'strom' ve všech pádech jednotného č
+  [429] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'strom' spisovnou če
+  [430] api08:czech: Oprav pravopis: 'silný květina nést vcere vecer.' Najdi chyb
+  [431] api08:czech: Urči slovní druhy ve větě: 'dobrý ryba rychle nést.'
+  [432] api08:czech: Vysvětli rozdíl mezi 'strom' a jeho zdrobnělinou s příklady.
+  [433] api08:czech: Napiš formální žádost (281 slov) na téma 'pole'.
+  [434] api08:czech: Vysvětli význam přísloví s číslem 6 a jeho užití ve větě.
+  [435] api08:czech: Utvoř větu se slovem 'mozek' v 7. pádě množného čísla a vysv
+  [436] api08:czech: Časuj sloveso 'běžet' v přítomném čase ve všech osobách.
+  [437] api08:czech: Stupňuj přídavné jméno 'dobrý' a ke každému stupni uveď větu
+  [438] api08:czech: Skloňuj podstatné jméno 'oheň' ve všech pádech jednotného čí
+  [439] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'srdce' spisovnou če
+  [440] api08:czech: Oprav pravopis: 'starý mozek kreslit vcere vecer.' Najdi chy
+  [441] api08:czech: Urči slovní druhy ve větě: 'velký stůl rychle běžet.'
+  [442] api08:czech: Vysvětli rozdíl mezi 'dům' a jeho zdrobnělinou s příklady.
+  [443] api08:czech: Napiš formální žádost (178 slov) na téma 'ryba'.
+  [444] api08:czech: Utvoř větu se slovem 'okno' v 7. pádě množného čísla a vysvě
+  [445] api08:czech: Stupňuj přídavné jméno 'starý' a ke každému stupni uveď větu
+  [446] api08:czech: Skloňuj podstatné jméno 'mozek' ve všech pádech jednotného č
+  [447] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'ryba' spisovnou češ
+  [448] api08:czech: Oprav pravopis: 'chytrý hora stavět vcere vecer.' Najdi chyb
+  [449] api08:czech: Urči slovní druhy ve větě: 'silný hora rychle kreslit.'
+  [450] api08:czech: Vysvětli rozdíl mezi 'oheň' a jeho zdrobnělinou s příklady.
+  [451] api08:czech: Napiš formální žádost (461 slov) na téma 'řeka'.
+  [452] api08:czech: Vysvětli význam přísloví s číslem 10 a jeho užití ve větě.
+  [453] api08:czech: Časuj sloveso 'zpívat' v přítomném čase ve všech osobách.
+  [454] api08:czech: Skloňuj podstatné jméno 'mozek' ve všech pádech jednotného č
+  [455] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'pole' spisovnou češ
+  [456] api08:czech: Oprav pravopis: 'rychlý hora kreslit vcere vecer.' Najdi chy
+  [457] api08:czech: Urči slovní druhy ve větě: 'chytrý město rychle stavět.'
+  [458] api08:czech: Vysvětli rozdíl mezi 'srdce' a jeho zdrobnělinou s příklady.
+  [459] api08:czech: Napiš formální žádost (655 slov) na téma 'voda'.
+  [460] api08:czech: Vysvětli význam přísloví s číslem 9 a jeho užití ve větě.
+  [461] api08:czech: Utvoř větu se slovem 'most' v 7. pádě množného čísla a vysvě
+  [462] api08:czech: Časuj sloveso 'stavět' v přítomném čase ve všech osobách.
+  [463] api08:czech: Skloňuj podstatné jméno 'srdce' ve všech pádech jednotného č
+  [464] api08:czech: Oprav pravopis: 'chytrý pták mluvit vcere vecer.' Najdi chyb
+  [465] api08:czech: Urči slovní druhy ve větě: 'silný město rychle stavět.'
+  [466] api08:czech: Vysvětli rozdíl mezi 'květina' a jeho zdrobnělinou s příklad
+  [467] api08:czech: Napiš formální žádost (960 slov) na téma 'cesta'.
+  [468] api08:czech: Vysvětli význam přísloví s číslem 8 a jeho užití ve větě.
+  [469] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'oheň' spisovnou češ
+  [470] api08:czech: Oprav pravopis: 'chytrý pták růst vcere vecer.' Najdi chyby 
+  [471] api08:czech: Urči slovní druhy ve větě: 'chytrý mozek rychle plavat.'
+  [472] api08:czech: Vysvětli rozdíl mezi 'most' a jeho zdrobnělinou s příklady.
+  [473] api08:czech: Napiš formální žádost (358 slov) na téma 'srdce'.
+  [474] api08:czech: Utvoř větu se slovem 'dům' v 7. pádě množného čísla a vysvět
+  [475] api08:czech: Časuj sloveso 'číst' v přítomném čase ve všech osobách.
+  [476] api08:czech: Stupňuj přídavné jméno 'malý' a ke každému stupni uveď větu.
+  [477] api08:czech: Skloňuj podstatné jméno 'cesta' ve všech pádech jednotného č
+  [478] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'dům' spisovnou češt
+  [479] api08:czech: Oprav pravopis: 'chytrý voda plavat vcere vecer.' Najdi chyb
+  [480] api08:czech: Urči slovní druhy ve větě: 'chytrý oheň rychle dýchat.'
+  [481] api08:czech: Vysvětli rozdíl mezi 'město' a jeho zdrobnělinou s příklady.
+  [482] api08:czech: Napiš formální žádost (647 slov) na téma 'mozek'.
+  [483] api08:czech: Utvoř větu se slovem 'strom' v 7. pádě množného čísla a vysv
+  [484] api08:czech: Časuj sloveso 'mluvit' v přítomném čase ve všech osobách.
+  [485] api08:czech: Skloňuj podstatné jméno 'řeka' ve všech pádech jednotného čí
+  [486] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'kniha' spisovnou če
+  [487] api08:czech: Oprav pravopis: 'velký řeka růst vcere vecer.' Najdi chyby a
+  [488] api08:czech: Urči slovní druhy ve větě: 'velký cesta rychle plavat.'
+  [489] api08:czech: Napiš formální žádost (980 slov) na téma 'les'.
+  [490] api08:czech: Utvoř větu se slovem 'srdce' v 7. pádě množného čísla a vysv
+  [491] api08:czech: Časuj sloveso 'mluvit' v přítomném čase ve všech osobách.
+  [492] api08:czech: Stupňuj přídavné jméno 'hezký' a ke každému stupni uveď větu
+  [493] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'hora' spisovnou češ
+  [494] api08:czech: Oprav pravopis: 'velký město psát vcere vecer.' Najdi chyby 
+  [495] api08:czech: Urči slovní druhy ve větě: 'hezký pole rychle kreslit.'
+  [496] api08:czech: Napiš formální žádost (748 slov) na téma 'cesta'.
+  [497] api08:czech: Utvoř větu se slovem 'srdce' v 7. pádě množného čísla a vysv
+  [498] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'okno' spisovnou češ
+  [499] api08:czech: Oprav pravopis: 'starý cesta vařit vcere vecer.' Najdi chyby
+  [500] api08:czech: Urči slovní druhy ve větě: 'velký dům rychle růst.'
+  [501] api08:czech: Napiš formální žádost (760 slov) na téma 'cesta'.
+  [502] api08:czech: Časuj sloveso 'nést' v přítomném čase ve všech osobách.
+  [503] api08:czech: Skloňuj podstatné jméno 'stůl' ve všech pádech jednotného čí
+  [504] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'stůl' spisovnou češ
+  [505] api08:czech: Oprav pravopis: 'silný pták běžet vcere vecer.' Najdi chyby 
+  [506] api08:czech: Urči slovní druhy ve větě: 'rychlý most rychle mluvit.'
+  [507] api08:czech: Napiš formální žádost (122 slov) na téma 'most'.
+  [508] api08:czech: Vysvětli význam přísloví s číslem 2 a jeho užití ve větě.
+  [509] api08:czech: Utvoř větu se slovem 'vlak' v 7. pádě množného čísla a vysvě
+  [510] api08:czech: Časuj sloveso 'nést' v přítomném čase ve všech osobách.
+  [511] api08:czech: Skloňuj podstatné jméno 'voda' ve všech pádech jednotného čí
+  [512] api08:czech: Oprav pravopis: 'malý pták dýchat vcere vecer.' Najdi chyby 
+  [513] api08:czech: Urči slovní druhy ve větě: 'chytrý les rychle psát.'
+  [514] api08:czech: Vysvětli rozdíl mezi 'vlak' a jeho zdrobnělinou s příklady.
+  [515] api08:czech: Napiš formální žádost (70 slov) na téma 'řeka'.
+  [516] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'květina' spisovnou 
+  [517] api08:czech: Oprav pravopis: 'starý hora psát vcere vecer.' Najdi chyby a
+  [518] api08:czech: Urči slovní druhy ve větě: 'malý ryba rychle nést.'
+  [519] api08:czech: Napiš formální žádost (613 slov) na téma 'oheň'.
+  [520] api08:czech: Vysvětli význam přísloví s číslem 3 a jeho užití ve větě.
+  [521] api08:czech: Utvoř větu se slovem 'pták' v 7. pádě množného čísla a vysvě
+  [522] api08:czech: Oprav pravopis: 'velký ryba dýchat vcere vecer.' Najdi chyby
+  [523] api08:czech: Urči slovní druhy ve větě: 'malý květina rychle mluvit.'
+  [524] api08:czech: Vysvětli rozdíl mezi 'cesta' a jeho zdrobnělinou s příklady.
+  [525] api08:czech: Napiš formální žádost (882 slov) na téma 'voda'.
+  [526] api08:czech: Utvoř větu se slovem 'hora' v 7. pádě množného čísla a vysvě
+  [527] api08:czech: Oprav pravopis: 'rychlý oheň vařit vcere vecer.' Najdi chyby
+  [528] api08:czech: Urči slovní druhy ve větě: 'starý voda rychle nést.'
+  [529] api08:czech: Vysvětli rozdíl mezi 'okno' a jeho zdrobnělinou s příklady.
+  [530] api08:czech: Napiš formální žádost (601 slov) na téma 'srdce'.
+  [531] api08:czech: Skloňuj podstatné jméno 'ryba' ve všech pádech jednotného čí
+  [532] api08:czech: Oprav pravopis: 'dobrý most dýchat vcere vecer.' Najdi chyby
+  [533] api08:czech: Urči slovní druhy ve větě: 'rychlý ryba rychle plavat.'
+  [534] api08:czech: Vysvětli rozdíl mezi 'ryba' a jeho zdrobnělinou s příklady.
+  [535] api08:czech: Napiš formální žádost (759 slov) na téma 'strom'.
+  [536] api08:czech: Skloňuj podstatné jméno 'vlak' ve všech pádech jednotného čí
+  [537] api08:czech: Oprav pravopis: 'malý vlak psát vcere vecer.' Najdi chyby a 
+  [538] api08:czech: Urči slovní druhy ve větě: 'velký mozek rychle běžet.'
+  [539] api08:czech: Napiš formální žádost (982 slov) na téma 'mozek'.
+  [540] api08:czech: Časuj sloveso 'psát' v přítomném čase ve všech osobách.
+  [541] api08:czech: Skloňuj podstatné jméno 'pole' ve všech pádech jednotného čí
+  [542] api08:czech: Oprav pravopis: 'starý řeka vařit vcere vecer.' Najdi chyby 
+  [543] api08:czech: Urči slovní druhy ve větě: 'malý most rychle vařit.'
+  [544] api08:czech: Napiš formální žádost (267 slov) na téma 'hora'.
+  [545] api08:czech: Utvoř větu se slovem 'oheň' v 7. pádě množného čísla a vysvě
+  [546] api08:czech: Časuj sloveso 'psát' v přítomném čase ve všech osobách.
+  [547] api08:czech: Oprav pravopis: 'hezký strom vařit vcere vecer.' Najdi chyby
+  [548] api08:czech: Urči slovní druhy ve větě: 'hezký květina rychle běžet.'
+  [549] api08:czech: Vysvětli rozdíl mezi 'řeka' a jeho zdrobnělinou s příklady.
+  [550] api08:czech: Napiš formální žádost (595 slov) na téma 'město'.
+  [551] api08:czech: Utvoř větu se slovem 'kniha' v 7. pádě množného čísla a vysv
+  [552] api08:czech: Oprav pravopis: 'malý kniha kreslit vcere vecer.' Najdi chyb
+  [553] api08:czech: Urči slovní druhy ve větě: 'rychlý cesta rychle stavět.'
+  [554] api08:czech: Napiš formální žádost (893 slov) na téma 'pole'.
+  [555] api08:czech: Časuj sloveso 'vařit' v přítomném čase ve všech osobách.
+  [556] api08:czech: Oprav pravopis: 'chytrý srdce stavět vcere vecer.' Najdi chy
+  [557] api08:czech: Urči slovní druhy ve větě: 'silný vlak rychle psát.'
+  [558] api08:czech: Napiš formální žádost (52 slov) na téma 'město'.
+  [559] api08:czech: Skloňuj podstatné jméno 'most' ve všech pádech jednotného čí
+  [560] api08:czech: Oprav pravopis: 'rychlý květina zpívat vcere vecer.' Najdi c
+  [561] api08:czech: Urči slovní druhy ve větě: 'rychlý les rychle kreslit.'
+  [562] api08:czech: Napiš formální žádost (503 slov) na téma 'mozek'.
+  [563] api08:czech: Oprav pravopis: 'rychlý mozek běžet vcere vecer.' Najdi chyb
+  [564] api08:czech: Urči slovní druhy ve větě: 'chytrý cesta rychle stavět.'
+  [565] api08:czech: Napiš formální žádost (536 slov) na téma 'ryba'.
+  [566] api08:czech: Skloňuj podstatné jméno 'pták' ve všech pádech jednotného čí
+  [567] api08:czech: Oprav pravopis: 'malý strom kreslit vcere vecer.' Najdi chyb
+  [568] api08:czech: Urči slovní druhy ve větě: 'starý okno rychle mluvit.'
+  [569] api08:czech: Napiš formální žádost (634 slov) na téma 'strom'.
+  [570] api08:czech: Časuj sloveso 'kreslit' v přítomném čase ve všech osobách.
+  [571] api08:czech: Oprav pravopis: 'dobrý řeka růst vcere vecer.' Najdi chyby a
+  [572] api08:czech: Urči slovní druhy ve větě: 'malý okno rychle zpívat.'
+  [573] api08:czech: Napiš formální žádost (421 slov) na téma 'pole'.
+  [574] api08:czech: Utvoř větu se slovem 'stůl' v 7. pádě množného čísla a vysvě
+  [575] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'most' spisovnou češ
+  [576] api08:czech: Oprav pravopis: 'rychlý okno dýchat vcere vecer.' Najdi chyb
+  [577] api08:czech: Urči slovní druhy ve větě: 'silný ryba rychle stavět.'
+  [578] api08:czech: Napiš formální žádost (146 slov) na téma 'srdce'.
+  [579] api08:czech: Časuj sloveso 'kreslit' v přítomném čase ve všech osobách.
+  [580] api08:czech: Skloňuj podstatné jméno 'okno' ve všech pádech jednotného čí
+  [581] api08:czech: Oprav pravopis: 'chytrý cesta číst vcere vecer.' Najdi chyby
+  [582] api08:czech: Urči slovní druhy ve větě: 'silný ryba rychle číst.'
+  [583] api08:czech: Napiš formální žádost (788 slov) na téma 'voda'.
+  [584] api08:czech: Utvoř větu se slovem 'město' v 7. pádě množného čísla a vysv
+  [585] api08:czech: Oprav pravopis: 'velký srdce stavět vcere vecer.' Najdi chyb
+  [586] api08:czech: Urči slovní druhy ve větě: 'dobrý pole rychle růst.'
+  [587] api08:czech: Napiš formální žádost (163 slov) na téma 'oheň'.
+  [588] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'les' spisovnou češt
+  [589] api08:czech: Oprav pravopis: 'malý srdce vařit vcere vecer.' Najdi chyby 
+  [590] api08:czech: Urči slovní druhy ve větě: 'starý kniha rychle zpívat.'
+  [591] api08:czech: Napiš formální žádost (424 slov) na téma 'mozek'.
+  [592] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'mozek' spisovnou če
+  [593] api08:czech: Oprav pravopis: 'velký voda nést vcere vecer.' Najdi chyby a
+  [594] api08:czech: Urči slovní druhy ve větě: 'dobrý les rychle vařit.'
+  [595] api08:czech: Napiš formální žádost (515 slov) na téma 'mozek'.
+  [596] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'řeka' spisovnou češ
+  [597] api08:czech: Oprav pravopis: 'chytrý město psát vcere vecer.' Najdi chyby
+  [598] api08:czech: Urči slovní druhy ve větě: 'chytrý řeka rychle běžet.'
+  [599] api08:czech: Vysvětli rozdíl mezi 'pole' a jeho zdrobnělinou s příklady.
+  [600] api08:czech: Napiš formální žádost (436 slov) na téma 'cesta'.
+  [601] api08:czech: Utvoř větu se slovem 'květina' v 7. pádě množného čísla a vy
+  [602] api08:czech: Oprav pravopis: 'rychlý vlak nést vcere vecer.' Najdi chyby 
+  [603] api08:czech: Urči slovní druhy ve větě: 'dobrý srdce rychle stavět.'
+  [604] api08:czech: Napiš formální žádost (729 slov) na téma 'město'.
+  [605] api08:czech: Oprav pravopis: 'dobrý les růst vcere vecer.' Najdi chyby a 
+  [606] api08:czech: Urči slovní druhy ve větě: 'rychlý cesta rychle kreslit.'
+  [607] api08:czech: Napiš formální žádost (267 slov) na téma 'květina'.
+  [608] api08:czech: Skloňuj podstatné jméno 'dům' ve všech pádech jednotného čís
+  [609] api08:czech: Oprav pravopis: 'dobrý les růst vcere vecer.' Najdi chyby a 
+  [610] api08:czech: Urči slovní druhy ve větě: 'velký kniha rychle dýchat.'
+  [611] api08:czech: Napiš formální žádost (435 slov) na téma 'pole'.
+  [612] api08:czech: Oprav pravopis: 'dobrý okno dýchat vcere vecer.' Najdi chyby
+  [613] api08:czech: Urči slovní druhy ve větě: 'malý pták rychle zpívat.'
+  [614] api08:czech: Napiš formální žádost (711 slov) na téma 'cesta'.
+  [615] api08:czech: Oprav pravopis: 'hezký dům plavat vcere vecer.' Najdi chyby 
+  [616] api08:czech: Urči slovní druhy ve větě: 'velký hora rychle číst.'
+  [617] api08:czech: Vysvětli rozdíl mezi 'pták' a jeho zdrobnělinou s příklady.
+  [618] api08:czech: Napiš formální žádost (907 slov) na téma 'les'.
+  [619] api08:czech: Oprav pravopis: 'chytrý ryba nést vcere vecer.' Najdi chyby 
+  [620] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle dýchat.'
+  [621] api08:czech: Vysvětli rozdíl mezi 'pták' a jeho zdrobnělinou s příklady.
+  [622] api08:czech: Napiš formální žádost (921 slov) na téma 'srdce'.
+  [623] api08:czech: Oprav pravopis: 'velký stůl běžet vcere vecer.' Najdi chyby 
+  [624] api08:czech: Urči slovní druhy ve větě: 'malý řeka rychle mluvit.'
+  [625] api08:czech: Napiš formální žádost (811 slov) na téma 'pták'.
+  [626] api08:czech: Oprav pravopis: 'hezký srdce mluvit vcere vecer.' Najdi chyb
+  [627] api08:czech: Urči slovní druhy ve větě: 'malý strom rychle růst.'
+  [628] api08:czech: Napiš formální žádost (61 slov) na téma 'srdce'.
+  [629] api08:czech: Oprav pravopis: 'starý srdce růst vcere vecer.' Najdi chyby 
+  [630] api08:czech: Urči slovní druhy ve větě: 'malý most rychle psát.'
+  [631] api08:czech: Napiš formální žádost (722 slov) na téma 'ryba'.
+  [632] api08:czech: Oprav pravopis: 'chytrý most dýchat vcere vecer.' Najdi chyb
+DONE made=632 + fixed rows
+  filtered to domains ['bio', 'czech', 'design', 'identity']: 1700 prompts
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR bio: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR design: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+  ERR czech: HTTP Error 403: Forbidden
+DONE made=0 + fixed rows
+  filtered to domains ['bio', 'czech', 'design', 'identity']: 1700 prompts
+  [1] api08:bio: Klidový tep je asi 57 tepů za minutu. Co se děje při jednom 
+  [2] api08:bio: Plíce mají plochu asi 69 m². Vysvětli výměnu plynů v plicníc
+  [3] api08:bio: Krevní tlak 111/77: co znamenají obě čísla?
+  [4] api08:bio: Plíce mají plochu asi 98 m². Vysvětli výměnu plynů v plicníc
+  [5] api08:bio: Denní potřeba bílkovin je asi 89 g. Proč je tělo potřebuje? 
+  [6] api08:bio: Krevní tlak 112/76: co znamenají obě čísla?
+  [7] api08:bio: Červená krvinka žije asi 123 dní. Kde vzniká a kde zaniká?
+  [8] api08:bio: Denní potřeba bílkovin je asi 84 g. Proč je tělo potřebuje? 
+  [9] api08:bio: Krevní tlak 118/70: co znamenají obě čísla?
+  [10] api08:bio: Červená krvinka žije asi 115 dní. Kde vzniká a kde zaniká?
+  [11] api08:bio: Plíce mají plochu asi 61 m². Vysvětli výměnu plynů v plicníc
+  [12] api08:bio: Denní potřeba bílkovin je asi 88 g. Proč je tělo potřebuje? 
+  [13] api08:bio: Krevní tlak 121/73: co znamenají obě čísla?
+  [14] api08:bio: Červená krvinka žije asi 119 dní. Kde vzniká a kde zaniká?
+  [15] api08:bio: Plíce mají plochu asi 55 m². Vysvětli výměnu plynů v plicníc
+  [16] api08:bio: Denní potřeba bílkovin je asi 117 g. Proč je tělo potřebuje?
+  [17] api08:bio: Krevní tlak 126/75: co znamenají obě čísla?
+  [18] api08:bio: Krevní tlak 114/83: co znamenají obě čísla?
+  [19] api08:bio: Klidový tep je asi 79 tepů za minutu. Co se děje při jednom 
+  [20] api08:bio: Denní potřeba bílkovin je asi 57 g. Proč je tělo potřebuje? 
+  [21] api08:bio: Krevní tlak 123/85: co znamenají obě čísla?
+  [22] api08:bio: Plíce mají plochu asi 54 m². Vysvětli výměnu plynů v plicníc
+  [23] api08:bio: Krevní tlak 122/79: co znamenají obě čísla?
+  [24] api08:bio: Denní potřeba bílkovin je asi 76 g. Proč je tělo potřebuje? 
+  [25] api08:bio: Krevní tlak 110/70: co znamenají obě čísla?
+  [26] api08:bio: Krevní tlak 115/72: co znamenají obě čísla?
+  [27] api08:bio: Lidské tělo obsahuje asi 59 % vody. Vysvětli význam vody pro
+  [28] api08:bio: Denní potřeba bílkovin je asi 114 g. Proč je tělo potřebuje?
+  [29] api08:bio: Krevní tlak 122/78: co znamenají obě čísla?
+  [30] api08:bio: Červená krvinka žije asi 118 dní. Kde vzniká a kde zaniká?
+  [31] api08:bio: Krevní tlak 129/75: co znamenají obě čísla?
+  [32] api08:bio: Lidské srdce přečerpá asi 7200 litrů krve denně. Vysvětli ma
+  [33] api08:bio: Klidový tep je asi 88 tepů za minutu. Co se děje při jednom 
+  [34] api08:bio: Plíce mají plochu asi 114 m². Vysvětli výměnu plynů v plicní
+  [35] api08:bio: Krevní tlak 110/83: co znamenají obě čísla?
+  [36] api08:bio: Krevní tlak 117/83: co znamenají obě čísla?
+  [37] api08:bio: Červená krvinka žije asi 114 dní. Kde vzniká a kde zaniká?
+  [38] api08:bio: Lidské srdce přečerpá asi 6600 litrů krve denně. Vysvětli ma
+  [39] api08:design: Navrhni hero sekci pro SaaS s cenou od 919 Kč/měs. Napiš Tai
+  [40] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'řeka'? Uveď
+  [41] api08:design: Navrhni pricing se 3 tarify (230, 9270, 600 Kč). Struktura +
+  [42] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 910 kategori
+  [43] api08:design: Navrhni barevnou paletu pro cesta-tematický web + Tailwind c
+  [44] api08:design: Landing pro aplikaci s 47500 uživateli: sekce, hierarchie, C
+  [45] api08:design: Tmavý režim v Tailwindu: konfigurace + 3 pravidel pro kontra
+  [46] api08:design: Navrhni hero sekci pro SaaS s cenou od 236 Kč/měs. Napiš Tai
+  [47] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'srdce'? Uve
+  [48] api08:design: Navrhni pricing se 3 tarify (270, 9010, 900 Kč). Struktura +
+  [49] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 26 kategorie
+  [50] api08:design: Navrhni barevnou paletu pro oheň-tematický web + Tailwind co
+  [51] api08:design: Jak navrhnout formulář s 6 poli, aby konvertoval? Pravidla +
+  [52] api08:design: Landing pro aplikaci s 24500 uživateli: sekce, hierarchie, C
+  [53] api08:design: Navrhni hero sekci pro SaaS s cenou od 799 Kč/měs. Napiš Tai
+  [54] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'cesta'? Uve
+  [55] api08:design: Navrhni pricing se 3 tarify (410, 5790, 900 Kč). Struktura +
+  [56] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 276 kategori
+  [57] api08:design: Navrhni barevnou paletu pro pták-tematický web + Tailwind co
+  [58] api08:design: Landing pro aplikaci s 62200 uživateli: sekce, hierarchie, C
+  [59] api08:design: Navrhni hero sekci pro SaaS s cenou od 896 Kč/měs. Napiš Tai
+  [60] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'dům'? Uveď 
+  [61] api08:design: Navrhni pricing se 3 tarify (240, 6460, 1000 Kč). Struktura 
+  [62] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 760 kategori
+  [63] api08:design: Jak navrhnout formulář s 5 poli, aby konvertoval? Pravidla +
+  [64] api08:design: Landing pro aplikaci s 6400 uživateli: sekce, hierarchie, CT
+  [65] api08:design: Tmavý režim v Tailwindu: konfigurace + 7 pravidel pro kontra
+  [66] api08:design: Navrhni hero sekci pro SaaS s cenou od 776 Kč/měs. Napiš Tai
+  [67] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'stůl'? Uveď
+  [68] api08:design: Navrhni pricing se 3 tarify (340, 2230, 200 Kč). Struktura +
+  [69] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 94 kategorie
+  [70] api08:design: Navrhni barevnou paletu pro stůl-tematický web + Tailwind co
+  [71] api08:design: Jak navrhnout formulář s 8 poli, aby konvertoval? Pravidla +
+  [72] api08:design: Landing pro aplikaci s 49600 uživateli: sekce, hierarchie, C
+  [73] api08:design: Navrhni hero sekci pro SaaS s cenou od 543 Kč/měs. Napiš Tai
+  [74] api08:design: Navrhni pricing se 3 tarify (830, 6780, 700 Kč). Struktura +
+  [75] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 549 kategori
+  [76] api08:design: Landing pro aplikaci s 69900 uživateli: sekce, hierarchie, C
+  [77] api08:design: Navrhni hero sekci pro SaaS s cenou od 632 Kč/měs. Napiš Tai
+  [78] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'okno'? Uveď
+  [79] api08:design: Navrhni pricing se 3 tarify (80, 7710, 900 Kč). Struktura + 
+  [80] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 655 kategori
+  [81] api08:design: Navrhni barevnou paletu pro řeka-tematický web + Tailwind co
+  [82] api08:design: Jak navrhnout formulář s 9 poli, aby konvertoval? Pravidla +
+  [83] api08:design: Landing pro aplikaci s 87700 uživateli: sekce, hierarchie, C
+  [84] api08:design: Navrhni hero sekci pro SaaS s cenou od 353 Kč/měs. Napiš Tai
+  [85] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'oheň'? Uveď
+  [86] api08:design: Navrhni pricing se 3 tarify (420, 7710, 300 Kč). Struktura +
+  [87] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 808 kategori
+  [88] api08:design: Navrhni barevnou paletu pro okno-tematický web + Tailwind co
+  [89] api08:design: Jak navrhnout formulář s 10 poli, aby konvertoval? Pravidla 
+  [90] api08:design: Landing pro aplikaci s 27400 uživateli: sekce, hierarchie, C
+  [91] api08:design: Navrhni hero sekci pro SaaS s cenou od 937 Kč/měs. Napiš Tai
+  [92] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'květina'? U
+  [93] api08:design: Navrhni pricing se 3 tarify (910, 3820, 1000 Kč). Struktura 
+  [94] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 882 kategori
+  [95] api08:design: Landing pro aplikaci s 77200 uživateli: sekce, hierarchie, C
+  [96] api08:design: Navrhni hero sekci pro SaaS s cenou od 720 Kč/měs. Napiš Tai
+  [97] api08:design: Navrhni pricing se 3 tarify (220, 4410, 300 Kč). Struktura +
+  [98] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 237 kategori
+  [99] api08:design: Jak navrhnout formulář s 2 poli, aby konvertoval? Pravidla +
+  [100] api08:design: Landing pro aplikaci s 67100 uživateli: sekce, hierarchie, C
+  [101] api08:design: Tmavý režim v Tailwindu: konfigurace + 2 pravidel pro kontra
+  [102] api08:design: Navrhni hero sekci pro SaaS s cenou od 497 Kč/měs. Napiš Tai
+  [103] api08:design: Navrhni pricing se 3 tarify (180, 3090, 200 Kč). Struktura +
+  [104] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 75 kategorie
+  [105] api08:design: Landing pro aplikaci s 76900 uživateli: sekce, hierarchie, C
+  [106] api08:design: Navrhni hero sekci pro SaaS s cenou od 902 Kč/měs. Napiš Tai
+  [107] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'pole'? Uveď
+  [108] api08:design: Navrhni pricing se 3 tarify (660, 5880, 1000 Kč). Struktura 
+  [109] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 472 kategori
+  [110] api08:design: Navrhni barevnou paletu pro vlak-tematický web + Tailwind co
+  [111] api08:design: Landing pro aplikaci s 52900 uživateli: sekce, hierarchie, C
+  [112] api08:design: Navrhni hero sekci pro SaaS s cenou od 526 Kč/měs. Napiš Tai
+  [113] api08:design: Navrhni pricing se 3 tarify (580, 7130, 700 Kč). Struktura +
+  [114] api08:design: Navrhni barevnou paletu pro mozek-tematický web + Tailwind c
+  [115] api08:design: Landing pro aplikaci s 27000 uživateli: sekce, hierarchie, C
+  [116] api08:design: Tmavý režim v Tailwindu: konfigurace + 4 pravidel pro kontra
+  [117] api08:design: Navrhni hero sekci pro SaaS s cenou od 435 Kč/měs. Napiš Tai
+  [118] api08:design: Navrhni pricing se 3 tarify (850, 2180, 800 Kč). Struktura +
+  [119] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 267 kategori
+  [120] api08:design: Landing pro aplikaci s 22600 uživateli: sekce, hierarchie, C
+  [121] api08:design: Navrhni hero sekci pro SaaS s cenou od 678 Kč/měs. Napiš Tai
+  [122] api08:design: Navrhni pricing se 3 tarify (710, 9670, 500 Kč). Struktura +
+  [123] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 675 kategori
+  [124] api08:design: Landing pro aplikaci s 78300 uživateli: sekce, hierarchie, C
+  [125] api08:design: Navrhni hero sekci pro SaaS s cenou od 138 Kč/měs. Napiš Tai
+  [126] api08:design: Navrhni pricing se 3 tarify (260, 3930, 800 Kč). Struktura +
+  [127] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 834 kategori
+  [128] api08:design: Landing pro aplikaci s 17100 uživateli: sekce, hierarchie, C
+  [129] api08:design: Navrhni hero sekci pro SaaS s cenou od 178 Kč/měs. Napiš Tai
+  [130] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'pták'? Uveď
+  [131] api08:design: Navrhni pricing se 3 tarify (210, 8140, 600 Kč). Struktura +
+  [132] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 248 kategori
+  [133] api08:design: Landing pro aplikaci s 27600 uživateli: sekce, hierarchie, C
+  [134] api08:design: Tmavý režim v Tailwindu: konfigurace + 9 pravidel pro kontra
+  [135] api08:design: Navrhni hero sekci pro SaaS s cenou od 128 Kč/měs. Napiš Tai
+  [136] api08:design: Navrhni pricing se 3 tarify (540, 690, 500 Kč). Struktura + 
+  [137] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 997 kategori
+  [138] api08:design: Navrhni barevnou paletu pro dům-tematický web + Tailwind con
+  [139] api08:design: Landing pro aplikaci s 81100 uživateli: sekce, hierarchie, C
+  [140] api08:design: Navrhni hero sekci pro SaaS s cenou od 818 Kč/měs. Napiš Tai
+  [141] api08:design: Navrhni pricing se 3 tarify (920, 4840, 500 Kč). Struktura +
+  [142] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 503 kategori
+  [143] api08:design: Landing pro aplikaci s 67500 uživateli: sekce, hierarchie, C
+  [144] api08:design: Navrhni hero sekci pro SaaS s cenou od 973 Kč/měs. Napiš Tai
+  [145] api08:design: Navrhni pricing se 3 tarify (180, 1760, 400 Kč). Struktura +
+  [146] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 763 kategori
+  [147] api08:design: Landing pro aplikaci s 23700 uživateli: sekce, hierarchie, C
+  [148] api08:design: Navrhni hero sekci pro SaaS s cenou od 969 Kč/měs. Napiš Tai
+  [149] api08:design: Navrhni pricing se 3 tarify (480, 1880, 300 Kč). Struktura +
+  [150] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 738 kategori
+  [151] api08:design: Navrhni barevnou paletu pro strom-tematický web + Tailwind c
+  [152] api08:design: Landing pro aplikaci s 79500 uživateli: sekce, hierarchie, C
+  [153] api08:design: Navrhni hero sekci pro SaaS s cenou od 935 Kč/měs. Napiš Tai
+  [154] api08:design: Navrhni pricing se 3 tarify (840, 8180, 200 Kč). Struktura +
+  [155] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 470 kategori
+  [156] api08:design: Landing pro aplikaci s 22200 uživateli: sekce, hierarchie, C
+  [157] api08:design: Navrhni hero sekci pro SaaS s cenou od 347 Kč/měs. Napiš Tai
+  [158] api08:design: Navrhni pricing se 3 tarify (530, 7500, 700 Kč). Struktura +
+  [159] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 245 kategori
+  [160] api08:design: Landing pro aplikaci s 60100 uživateli: sekce, hierarchie, C
+  [161] api08:design: Navrhni hero sekci pro SaaS s cenou od 450 Kč/měs. Napiš Tai
+  [162] api08:design: Navrhni pricing se 3 tarify (710, 7230, 300 Kč). Struktura +
+  [163] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 146 kategori
+  [164] api08:design: Landing pro aplikaci s 9800 uživateli: sekce, hierarchie, CT
+  [165] api08:design: Navrhni hero sekci pro SaaS s cenou od 711 Kč/měs. Napiš Tai
+  [166] api08:design: Navrhni pricing se 3 tarify (620, 2660, 600 Kč). Struktura +
+  [167] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 993 kategori
+  [168] api08:design: Landing pro aplikaci s 58500 uživateli: sekce, hierarchie, C
+  [169] api08:design: Navrhni hero sekci pro SaaS s cenou od 216 Kč/měs. Napiš Tai
+  [170] api08:design: Jak se vyhnout AI-slop vzhledu u blogu o tématu 'strom'? Uve
+  [171] api08:design: Navrhni pricing se 3 tarify (740, 6210, 600 Kč). Struktura +
+  [172] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 492 kategori
+  [173] api08:design: Navrhni barevnou paletu pro srdce-tematický web + Tailwind c
+  [174] api08:design: Landing pro aplikaci s 74000 uživateli: sekce, hierarchie, C
+  [175] api08:design: Navrhni hero sekci pro SaaS s cenou od 151 Kč/měs. Napiš Tai
+  [176] api08:design: Navrhni pricing se 3 tarify (350, 6770, 200 Kč). Struktura +
+  [177] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 80 kategorie
+  [178] api08:design: Landing pro aplikaci s 61900 uživateli: sekce, hierarchie, C
+  [179] api08:design: Navrhni hero sekci pro SaaS s cenou od 706 Kč/měs. Napiš Tai
+  [180] api08:design: Navrhni pricing se 3 tarify (150, 1030, 400 Kč). Struktura +
+  [181] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 12 kategorie
+  [182] api08:design: Landing pro aplikaci s 37200 uživateli: sekce, hierarchie, C
+  [183] api08:design: Navrhni hero sekci pro SaaS s cenou od 74 Kč/měs. Napiš Tail
+  [184] api08:design: Navrhni pricing se 3 tarify (600, 6500, 900 Kč). Struktura +
+  [185] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 515 kategori
+  [186] api08:design: Landing pro aplikaci s 14100 uživateli: sekce, hierarchie, C
+  [187] api08:design: Navrhni hero sekci pro SaaS s cenou od 51 Kč/měs. Napiš Tail
+  [188] api08:design: Navrhni pricing se 3 tarify (210, 4940, 400 Kč). Struktura +
+  [189] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 589 kategori
+  [190] api08:design: Navrhni barevnou paletu pro pole-tematický web + Tailwind co
+  [191] api08:design: Landing pro aplikaci s 85000 uživateli: sekce, hierarchie, C
+  [192] api08:design: Navrhni hero sekci pro SaaS s cenou od 993 Kč/měs. Napiš Tai
+  [193] api08:design: Navrhni pricing se 3 tarify (890, 5820, 700 Kč). Struktura +
+  [194] api08:design: Napiš přístupný navbar v Tailwindu pro e-shop s 651 kategori
+  [195] api08:czech: Vysvětli rozdíl mezi 'aby' a 'aby' ve vedlejších větách s př
+  [196] api08:czech: Nauč mě psát čárky ve větě jednoduché: 5 pravidel s příklady
+  [197] api08:czech: Vysvětli shodu podmětu s přísudkem u několikanásobného podmě
+  [198] api08:czech: Jak se překládá anglické 'resistivity', 'torque', 'strain'? 
+  [199] api08:czech: Napiš formální stížnost (150 slov) spisovnou češtinou.
+  [200] api08:czech: Vysvětli rozdíl mezi stylem odborným, publicistickým a uměle
+  [201] api08:czech: Oprav slovacismus a vysvětli: 'Musím to písat každý den.'
+  [202] api08:czech: Oprav a vysvětli: 'Byl jsem venku s kamarátom.'
+  [203] api08:czech: Oprav a vysvětli: 'Daj mi to sem.'
+  [204] api08:czech: Oprav a vysvětli: 'Není zač, rádo se stalo' vs správná verze
+  [205] api08:czech: Oprav obecnou češtinu do spisovné: 'Byli jsme tam s klukama 
+  [206] api08:czech: Oprav a vysvětli: 'Koupil jsem si nové auto, je velmi pekné.
+  [207] api08:czech: Oprav a vysvětli: 'Pojď sem ku mně.'
+  [208] api08:czech: Oprav a vysvětli: 'To je môj názor.'
+  [209] api08:czech: Utvoř větu se slovem 'srdce' v 7. pádě množného čísla a vysv
+  [210] api08:czech: Časuj sloveso 'běžet' v přítomném čase ve všech osobách.
+  [211] api08:czech: Stupňuj přídavné jméno 'malý' a ke každému stupni uveď větu.
+  [212] api08:czech: Skloňuj podstatné jméno 'most' ve všech pádech jednotného čí
+  [213] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'město' spisovnou če
+  [214] api08:czech: Oprav pravopis: 'rychlý pták plavat vcere vecer.' Najdi chyb
+  [215] api08:czech: Urči slovní druhy ve větě: 'rychlý strom rychle stavět.'
+  [216] api08:czech: Vysvětli rozdíl mezi 'pták' a jeho zdrobnělinou s příklady.
+  [217] api08:czech: Napiš formální žádost (472 slov) na téma 'stůl'.
+  [218] api08:czech: Vysvětli význam přísloví s číslem 7 a jeho užití ve větě.
+  [219] api08:czech: Utvoř větu se slovem 'cesta' v 7. pádě množného čísla a vysv
+  [220] api08:czech: Časuj sloveso 'stavět' v přítomném čase ve všech osobách.
+  [221] api08:czech: Stupňuj přídavné jméno 'chytrý' a ke každému stupni uveď vět
+  [222] api08:czech: Skloňuj podstatné jméno 'pták' ve všech pádech jednotného čí
+  [223] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'mozek' spisovnou če
+  [224] api08:czech: Oprav pravopis: 'starý město psát vcere vecer.' Najdi chyby 
+  [225] api08:czech: Urči slovní druhy ve větě: 'velký stůl rychle nést.'
+  [226] api08:czech: Vysvětli rozdíl mezi 'dům' a jeho zdrobnělinou s příklady.
+  [227] api08:czech: Napiš formální žádost (72 slov) na téma 'les'.
+  [228] api08:czech: Vysvětli význam přísloví s číslem 10 a jeho užití ve větě.
+  [229] api08:czech: Utvoř větu se slovem 'kniha' v 7. pádě množného čísla a vysv
+  [230] api08:czech: Časuj sloveso 'psát' v přítomném čase ve všech osobách.
+  [231] api08:czech: Stupňuj přídavné jméno 'hezký' a ke každému stupni uveď větu
+  [232] api08:czech: Skloňuj podstatné jméno 'řeka' ve všech pádech jednotného čí
+  [233] api08:czech: Oprav pravopis: 'velký mozek kreslit vcere vecer.' Najdi chy
+  [234] api08:czech: Urči slovní druhy ve větě: 'dobrý okno rychle zpívat.'
+  [235] api08:czech: Vysvětli rozdíl mezi 'ryba' a jeho zdrobnělinou s příklady.
+  [236] api08:czech: Napiš formální žádost (224 slov) na téma 'pole'.
+  [237] api08:czech: Vysvětli význam přísloví s číslem 9 a jeho užití ve větě.
+  [238] api08:czech: Utvoř větu se slovem 'pták' v 7. pádě množného čísla a vysvě
+  [239] api08:czech: Časuj sloveso 'vařit' v přítomném čase ve všech osobách.
+  [240] api08:czech: Skloňuj podstatné jméno 'les' ve všech pádech jednotného čís
+  [241] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'okno' spisovnou češ
+  [242] api08:czech: Oprav pravopis: 'dobrý mozek nést vcere vecer.' Najdi chyby 
+  [243] api08:czech: Urči slovní druhy ve větě: 'malý stůl rychle číst.'
+  [244] api08:czech: Vysvětli rozdíl mezi 'les' a jeho zdrobnělinou s příklady.
+  [245] api08:czech: Napiš formální žádost (575 slov) na téma 'oheň'.
+  [246] api08:czech: Utvoř větu se slovem 'hora' v 7. pádě množného čísla a vysvě
+  [247] api08:czech: Stupňuj přídavné jméno 'starý' a ke každému stupni uveď větu
+  [248] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'dům' spisovnou češt
+  [249] api08:czech: Oprav pravopis: 'starý řeka plavat vcere vecer.' Najdi chyby
+  [250] api08:czech: Urči slovní druhy ve větě: 'dobrý hora rychle nést.'
+  [251] api08:czech: Napiš formální žádost (256 slov) na téma 'voda'.
+  [252] api08:czech: Vysvětli význam přísloví s číslem 5 a jeho užití ve větě.
+  [253] api08:czech: Utvoř větu se slovem 'stůl' v 7. pádě množného čísla a vysvě
+  [254] api08:czech: Stupňuj přídavné jméno 'silný' a ke každému stupni uveď větu
+  [255] api08:czech: Skloňuj podstatné jméno 'květina' ve všech pádech jednotného
+  [256] api08:czech: Oprav pravopis: 'hezký ryba mluvit vcere vecer.' Najdi chyby
+  [257] api08:czech: Urči slovní druhy ve větě: 'velký květina rychle kreslit.'
+  [258] api08:czech: Vysvětli rozdíl mezi 'vlak' a jeho zdrobnělinou s příklady.
+  [259] api08:czech: Napiš formální žádost (838 slov) na téma 'les'.
+  [260] api08:czech: Utvoř větu se slovem 'řeka' v 7. pádě množného čísla a vysvě
+  [261] api08:czech: Skloňuj podstatné jméno 'cesta' ve všech pádech jednotného č
+  [262] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'květina' spisovnou 
+  [263] api08:czech: Oprav pravopis: 'silný stůl číst vcere vecer.' Najdi chyby a
+  [264] api08:czech: Urči slovní druhy ve větě: 'dobrý pole rychle kreslit.'
+  [265] api08:czech: Vysvětli rozdíl mezi 'kniha' a jeho zdrobnělinou s příklady.
+  [266] api08:czech: Napiš formální žádost (701 slov) na téma 'dům'.
+  [267] api08:czech: Utvoř větu se slovem 'strom' v 7. pádě množného čísla a vysv
+  [268] api08:czech: Časuj sloveso 'kreslit' v přítomném čase ve všech osobách.
+  [269] api08:czech: Skloňuj podstatné jméno 'vlak' ve všech pádech jednotného čí
+  [270] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'pták' spisovnou češ
+  [271] api08:czech: Oprav pravopis: 'chytrý most psát vcere vecer.' Najdi chyby 
+  [272] api08:czech: Urči slovní druhy ve větě: 'malý pole rychle běžet.'
+  [273] api08:czech: Vysvětli rozdíl mezi 'stůl' a jeho zdrobnělinou s příklady.
+  [274] api08:czech: Napiš formální žádost (309 slov) na téma 'ryba'.
+  [275] api08:czech: Vysvětli význam přísloví s číslem 3 a jeho užití ve větě.
+  [276] api08:czech: Utvoř větu se slovem 'most' v 7. pádě množného čísla a vysvě
+  [277] api08:czech: Časuj sloveso 'nést' v přítomném čase ve všech osobách.
+  [278] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'vlak' spisovnou češ
+  [279] api08:czech: Oprav pravopis: 'malý pták číst vcere vecer.' Najdi chyby a 
+  [280] api08:czech: Urči slovní druhy ve větě: 'starý strom rychle dýchat.'
+  [281] api08:czech: Napiš formální žádost (77 slov) na téma 'ryba'.
+  [282] api08:czech: Utvoř větu se slovem 'vlak' v 7. pádě množného čísla a vysvě
+  [283] api08:czech: Časuj sloveso 'mluvit' v přítomném čase ve všech osobách.
+  [284] api08:czech: Stupňuj přídavné jméno 'velký' a ke každému stupni uveď větu
+  [285] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'srdce' spisovnou če
+  [286] api08:czech: Oprav pravopis: 'chytrý pole plavat vcere vecer.' Najdi chyb
+  [287] api08:czech: Urči slovní druhy ve větě: 'malý oheň rychle kreslit.'
+  [288] api08:czech: Vysvětli rozdíl mezi 'řeka' a jeho zdrobnělinou s příklady.
+  [289] api08:czech: Napiš formální žádost (978 slov) na téma 'pták'.
+  [290] api08:czech: Vysvětli význam přísloví s číslem 4 a jeho užití ve větě.
+  [291] api08:czech: Skloňuj podstatné jméno 'okno' ve všech pádech jednotného čí
+  [292] api08:czech: Oprav pravopis: 'silný hora zpívat vcere vecer.' Najdi chyby
+  [293] api08:czech: Urči slovní druhy ve větě: 'starý hora rychle růst.'
+  [294] api08:czech: Vysvětli rozdíl mezi 'voda' a jeho zdrobnělinou s příklady.
+  [295] api08:czech: Napiš formální žádost (104 slov) na téma 'hora'.
+  [296] api08:czech: Vysvětli význam přísloví s číslem 2 a jeho užití ve větě.
+  [297] api08:czech: Utvoř větu se slovem 'květina' v 7. pádě množného čísla a vy
+  [298] api08:czech: Stupňuj přídavné jméno 'rychlý' a ke každému stupni uveď vět
+  [299] api08:czech: Skloňuj podstatné jméno 'stůl' ve všech pádech jednotného čí
+  [300] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'cesta' spisovnou če
+  [301] api08:czech: Oprav pravopis: 'dobrý dům běžet vcere vecer.' Najdi chyby a
+  [302] api08:czech: Urči slovní druhy ve větě: 'dobrý květina rychle plavat.'
+  [303] api08:czech: Vysvětli rozdíl mezi 'město' a jeho zdrobnělinou s příklady.
+  [304] api08:czech: Napiš formální žádost (116 slov) na téma 'řeka'.
+  [305] api08:czech: Časuj sloveso 'plavat' v přítomném čase ve všech osobách.
+  [306] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'řeka' spisovnou češ
+  [307] api08:czech: Oprav pravopis: 'starý mozek psát vcere vecer.' Najdi chyby 
+  [308] api08:czech: Urči slovní druhy ve větě: 'silný pole rychle číst.'
+  [309] api08:czech: Vysvětli rozdíl mezi 'srdce' a jeho zdrobnělinou s příklady.
+  [310] api08:czech: Napiš formální žádost (682 slov) na téma 'strom'.
+  [311] api08:czech: Skloňuj podstatné jméno 'mozek' ve všech pádech jednotného č
+  [312] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'pole' spisovnou češ
+  [313] api08:czech: Oprav pravopis: 'dobrý stůl nést vcere vecer.' Najdi chyby a
+  [314] api08:czech: Urči slovní druhy ve větě: 'silný město rychle plavat.'
+  [315] api08:czech: Napiš formální žádost (141 slov) na téma 'most'.
+  [316] api08:czech: Vysvětli význam přísloví s číslem 6 a jeho užití ve větě.
+  [317] api08:czech: Časuj sloveso 'dýchat' v přítomném čase ve všech osobách.
+  [318] api08:czech: Skloňuj podstatné jméno 'voda' ve všech pádech jednotného čí
+  [319] api08:czech: Oprav pravopis: 'silný oheň nést vcere vecer.' Najdi chyby a
+  [320] api08:czech: Urči slovní druhy ve větě: 'hezký hora rychle kreslit.'
+  [321] api08:czech: Vysvětli rozdíl mezi 'most' a jeho zdrobnělinou s příklady.
+  [322] api08:czech: Napiš formální žádost (612 slov) na téma 'ryba'.
+  [323] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'strom' spisovnou če
+  [324] api08:czech: Oprav pravopis: 'chytrý kniha zpívat vcere vecer.' Najdi chy
+  [325] api08:czech: Urči slovní druhy ve větě: 'chytrý řeka rychle psát.'
+  [326] api08:czech: Vysvětli rozdíl mezi 'strom' a jeho zdrobnělinou s příklady.
+  [327] api08:czech: Napiš formální žádost (556 slov) na téma 'srdce'.
+  [328] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'voda' spisovnou češ
+  [329] api08:czech: Oprav pravopis: 'hezký les kreslit vcere vecer.' Najdi chyby
+  [330] api08:czech: Urči slovní druhy ve větě: 'starý hora rychle dýchat.'
+  [331] api08:czech: Napiš formální žádost (344 slov) na téma 'stůl'.
+  [332] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'hora' spisovnou češ
+  [333] api08:czech: Oprav pravopis: 'rychlý vlak dýchat vcere vecer.' Najdi chyb
+  [334] api08:czech: Urči slovní druhy ve větě: 'hezký vlak rychle plavat.'
+  [335] api08:czech: Napiš formální žádost (131 slov) na téma 'dům'.
+  [336] api08:czech: Vysvětli význam přísloví s číslem 8 a jeho užití ve větě.
+  [337] api08:czech: Oprav pravopis: 'velký mozek zpívat vcere vecer.' Najdi chyb
+  [338] api08:czech: Urči slovní druhy ve větě: 'velký strom rychle růst.'
+  [339] api08:czech: Napiš formální žádost (654 slov) na téma 'strom'.
+  [340] api08:czech: Oprav pravopis: 'rychlý pták dýchat vcere vecer.' Najdi chyb
+  [341] api08:czech: Urči slovní druhy ve větě: 'starý srdce rychle stavět.'
+  [342] api08:czech: Napiš formální žádost (165 slov) na téma 'mozek'.
+  [343] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'kniha' spisovnou če
+  [344] api08:czech: Oprav pravopis: 'chytrý město plavat vcere vecer.' Najdi chy
+  [345] api08:czech: Urči slovní druhy ve větě: 'starý stůl rychle stavět.'
+  [346] api08:czech: Vysvětli rozdíl mezi 'mozek' a jeho zdrobnělinou s příklady.
+  [347] api08:czech: Napiš formální žádost (255 slov) na téma 'ryba'.
+  [348] api08:czech: Skloňuj podstatné jméno 'kniha' ve všech pádech jednotného č
+  [349] api08:czech: Napiš krátký odstavec (4 věty) o tématu 'most' spisovnou češ
+  [350] api08:czech: Oprav pravopis: 'silný mozek dýchat vcere vecer.' Najdi chyb
+  [351] api08:czech: Urči slovní druhy ve větě: 'velký pták rychle růst.'
+  [352] api08:czech: Napiš formální žádost (175 slov) na téma 'stůl'.
+  [353] api08:czech: Utvoř větu se slovem 'pole' v 7. pádě množného čísla a vysvě
+  [354] api08:czech: Skloňuj podstatné jméno 'strom' ve všech pádech jednotného č
+  [355] api08:czech: Oprav pravopis: 'rychlý vlak plavat vcere vecer.' Najdi chyb
+  [356] api08:czech: Urči slovní druhy ve větě: 'dobrý pták rychle kreslit.'
+  [357] api08:czech: Vysvětli rozdíl mezi 'okno' a jeho zdrobnělinou s příklady.
+  [358] api08:czech: Napiš formální žádost (484 slov) na téma 'ryba'.
+  [359] api08:czech: Oprav pravopis: 'hezký řeka dýchat vcere vecer.' Najdi chyby
+  [360] api08:czech: Urči slovní druhy ve větě: 'malý květina rychle kreslit.'
+  [361] api08:czech: Napiš formální žádost (586 slov) na téma 'oheň'.
+  [362] api08:czech: Oprav pravopis: 'starý oheň psát vcere vecer.' Najdi chyby a
+  [363] api08:czech: Urči slovní druhy ve větě: 'silný pták rychle číst.'
+  [364] api08:czech: Napiš formální žádost (60 slov) na téma 'dům'.
+  [365] api08:czech: Utvoř větu se slovem 'mozek' v 7. pádě množného čísla a vysv
+  [366] api08:czech: Časuj sloveso 'růst' v přítomném čase ve všech osobách.
+  [367] api08:czech: Stupňuj přídavné jméno 'dobrý' a ke každému stupni uveď větu
+  [368] api08:czech: Skloňuj podstatné jméno 'oheň' ve všech pádech jednotného čí
+  [369] api08:czech: Oprav pravopis: 'chytrý ryba psát vcere vecer.' Najdi chyby 
+  [370] api08:czech: Urči slovní druhy ve větě: 'rychlý dům rychle plavat.'
+  [371] api08:czech: Napiš formální žádost (41 slov) na téma 'okno'.
+  [372] api08:czech: Utvoř větu se slovem 'voda' v 7. pádě množného čísla a vysvě
+  [373] api08:czech: Skloňuj podstatné jméno 'hora' ve všech pádech jednotného čí
+  [374] api08:czech: Oprav pravopis: 'silný les mluvit vcere vecer.' Najdi chyby 
+  [375] api08:czech: Urči slovní druhy ve větě: 'silný dům rychle plavat.'
+  [376] api08:czech: Napiš formální žádost (533 slov) na téma 'okno'.
+  [377] api08:czech: Oprav pravopis: 'hezký pole zpívat vcere vecer.' Najdi chyby
+  [378] api08:czech: Urči slovní druhy ve větě: 'hezký ryba rychle běžet.'
+  [379] api08:czech: Napiš formální žádost (590 slov) na téma 'pták'.
+  [380] api08:czech: Utvoř větu se slovem 'dům' v 7. pádě množného čísla a vysvět
+  [381] api08:czech: Časuj sloveso 'číst' v přítomném čase ve všech osobách.
+  [382] api08:czech: Oprav pravopis: 'velký srdce číst vcere vecer.' Najdi chyby 
+  [383] api08:czech: Urči slovní druhy ve větě: 'starý dům rychle psát.'
+  [384] api08:czech: Vysvětli rozdíl mezi 'hora' a jeho zdrobnělinou s příklady.
+  [385] api08:czech: Napiš formální žádost (336 slov) na téma 'strom'.
+DONE made=385 + fixed rows
+  filtered to domains ['bio', 'czech', 'design', 'identity']: 1700 prompts
+DONE made=0 + fixed rows

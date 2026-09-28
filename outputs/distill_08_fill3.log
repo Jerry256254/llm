@@ -1,0 +1,12 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek', 'concise': 'deepseek'}
+  filtered to domains ['bio', 'chem', 'code', 'codehard', 'concise', 'czech', 'design', 'tools']: 4000 prompts
+  caps {'code': 360, 'chem': 132, 'bio': 202, 'czech': 161, 'concise': 25, 'codehard': 383, 'tools': 51, 'design': 5} vs have {'identity_format': 38, 'math': 1202, 'phys': 769, 'chem': 368, 'code': 440, 'bio': 398, 'design': 395, 'czech': 539, 'codehard': 30, 'concise': 400, 'tools': 149} -> 353 queued
+  [1] api08:codehard: Najdi bug: 'for i in range(5): print(i/7)'. Co se pokazí a j
+  [2] api08:codehard: Najdi bug: 'for i in range(4): print(i/9)'. Co se pokazí a j
+  [3] api08:codehard: Napiš unit testy (pytest) pro funkci, která vrací 5 % ze 114
+  [4] api08:codehard: Najdi bug: 'for i in range(6): print(i/11)'. Co se pokazí a 
+  [5] api08:codehard: Najdi bug: 'for i in range(5): print(i/9)'. Co se pokazí a j
+  [6] api08:codehard: Najdi bug: 'for i in range(6): print(i/10)'. Co se pokazí a 
+  [7] api08:codehard: Najdi bug: 'for i in range(7): print(i/2)'. Co se pokazí a j
+  [8] api08:codehard: Najdi bug: 'for i in range(4): print(i/11)'. Co se pokazí a 
+DONE made=8 + fixed rows

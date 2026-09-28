@@ -1,0 +1,29 @@
+Building V0.5 corpus → /home/admin/llm/data/kuclab_v05/train.jsonl
+  wiki_cs=35000 wiki_en=18000
+  CodeAlpaca …
+  personality+code written: {'wiki_cs': 0, 'wiki_en': 0, 'code': 5000, 'personality': 26}
+  Wikipedia cs: 20231101.cs (max=35000) …
+    … cs wiki rows written: 2000
+    … cs wiki rows written: 4000
+    … cs wiki rows written: 10000
+    … cs wiki rows written: 12000
+    … cs wiki rows written: 16000
+    … cs wiki rows written: 18000
+    … cs wiki rows written: 20000
+    … cs wiki rows written: 22000
+    … cs wiki rows written: 24000
+    … cs wiki rows written: 26000
+    … cs wiki rows written: 28000
+    … cs wiki rows written: 32000
+  Wikipedia cs: done 35000 rows
+  Wikipedia en: 20231101.en (max=18000) …
+    … en wiki rows written: 2000
+    … en wiki rows written: 4000
+    … en wiki rows written: 6000
+    … en wiki rows written: 12000
+    … en wiki rows written: 14000
+    … en wiki rows written: 16000
+    … en wiki rows written: 18000
+  Wikipedia en: done 18000 rows
+OK total lines=58026 → /home/admin/llm/data/kuclab_v05/train.jsonl
+{"wiki_cs": 35000, "wiki_en": 18000, "code": 5000, "personality": 26}

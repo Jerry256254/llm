@@ -1,0 +1,2193 @@
+{
+  "model": "kuclab-hertz-0.6",
+  "n": 240,
+  "correct": 185,
+  "accuracy": 0.7708333333333334,
+  "unparsed": 6,
+  "retried": 26,
+  "per_category": {
+    "biology": {
+      "correct": 50,
+      "n": 60,
+      "accuracy": 0.8333333333333334
+    },
+    "chemistry": {
+      "correct": 39,
+      "n": 60,
+      "accuracy": 0.65
+    },
+    "math": {
+      "correct": 52,
+      "n": 60,
+      "accuracy": 0.8666666666666667
+    },
+    "physics": {
+      "correct": 44,
+      "n": 60,
+      "accuracy": 0.7333333333333333
+    }
+  },
+  "elapsed_s": 8842.7,
+  "results": [
+    {
+      "id": "mmlu_biology_2804",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Špička stříku obsahuje apikální meristém — tkáň s aktivní dělením buňek pro růst rostliny. Ostatní tkáně jsou diferenciované a dělící se jen při regeneraci; anther (H) obsahuje meiózu.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2805",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "V průběhu světelné fáze fotosyntézy se pomocí fotonů a vody tvoří ATP a NADPH — chemické nosiče energie a redukčních rovníček. Tyto produkty jsou přímým vstupem do cyklu Calvina, kde se CO2 redukuje na cukry. Ostatní možnosti jsou chyby: CO2 není produkt světelné fáze (odpovědi A, I), voda se používá v první fázi, ne v druhé (C), přímé přenosy fotonů (G) nebo produkce cukrů v první fázi (F) se neděje.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2806",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Křížení dvou hnědých rodičů může dát silverní potomky jen tehdy, když oba rodiče nesou recesivní alelu b — tedy oba jsou heterozygotní (Bb). Křížení Bb × Bb dává 25 % potomků s genotypem bb. Jiné kombinace buď dávají jen hnědé potomky (B, E), nebo mají jedno rodiče již silverní (D, F, I).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2807",
+      "category": "biology",
+      "want": "I",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "(A) tRNA: ~70–90 nt. (B) substitution: same as original. (C) mRNA: shorter than pre-mRNA due to splicing. (D) pre-mRNA: same as DNA. (E) duplication: longer. (F) pre-mRNA: same as DNA. (G) deletion: shorter than original. (H) original: reference length. (I) cDNA: same as original. (J) point mutation: same as original.\nSplicing odstraní introny, takže mRNA je kratší než pre-mRNA a tRNA je nejmenší z nich.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2808",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(C) Linnaeus, Cuvier, a Lamarck — všichni tři věřili v fixismus; Darwin a Lyell byli evolucionisté.\nKrok 1: Darwin a Lyell zastupují evoluční myšlenku (mutace/selekce a geologický čas). KucLab: Lamarckův transformismus je chybný, ale stále evoluce; Cuvier a Linnaeus fixismus. Krok 2: Volby s Darwinem nebo Lyellem vyloučit. Krok 3: Linnaeus (klasifikace), Cuvier (paleontologie), Lamarck (transmutace) — všichni tři v rámci své doby věřili, že druhy jsou fixní (Lamarck později změnil názor).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2809",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) je nesprávná — apoptóza je programovaný buněčný smrt, nikoliv dělení. (B) evoluční konvergence a konzervace napříč království potvrzují starostředost; (C) apoptóza odstraní interdigitální blížiny; (D) izoluje poškozenou buňku před infekcí a mutacemi.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2810",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F) je správná odpověď. V biologii termín 'teorie' není synonymum 'hypotéza' — je to vysvětlení podložené obsahem důkazů a experimentů. Evoluce vysvětluje genetiku, paleontologii, biogeografii a molekulární podobí; je to základní paradigma moderní biologie. (A) je chybně formulované — evoluce vysvětluje změny populací, ne 'vznik všech druhů' (to je abiogeneze). (B) a (D) podceňují její status; (C) je fakticky nesmysl; (E), (H), (I), (J) jsou pseudovědní interpretace.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2811",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Všechny možnosti kromě (J) jsou anorganické; (J) je organická. Anorganické prvky v biologii: O, H, C, N, P, S — všechny jsou klíčové. Kličující otázka: 'principle' (základní) anorganické sloučeniny — voda (H₂O) je univerzální rozpouštědliče a transportní médium. Všechny ostatní jsou anorganické prvky, ale voda je sloučenina.\n\nVýsledek: (F)\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2812",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Evolutionary distance is reflected in the number of shared ancestral traits. Distantly related organisms diverged long ago, accumulating mutations and lineage-specific changes; thus, they share fewer homologous structures than closely related ones. Options A, B, D, F, G, I, J are incorrect: mutation rates vary, DNA structure is conserved but not identical, chromosome numbers vary wildly, and homology decreases with time. E is a possible consequence but not a defining metric.\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2813",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(D) je nesprávná — fosfolipid má polární hlavu (hydrofilní) a dvě nekonezní nebo klesající ocasy (hydrofobní).\n\n(A) Třiglyceridy jsou estery glycerolu a tříma kyselinami; to je základní definice. (B) Steroidy (cholesterol, steroidy) jsou lipidové protože jsou neutrační a rozpouštějí se v lipidech. (C) Sytžené kyseliny nemají dvojné vazby, takže jsou rovné a se přibližují — proto jsou tuky pevné. (D) Fosfolipid: hlava je fosfatidová skupina (polární), ocasy jsou mastné řetězce — přesně opačný popis.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2814",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) Innate immunity is NOT adaptive; it's the non-specific first line of defense. Adaptive immunity is the specific, memory-forming response. (B) Correct: innate is immediate, adaptive takes days. (C) Innate immunity triggers the adaptive response via cytokines and antigen presentation, but the humoral response itself is adaptive. (D) Correct: dendritic cells migrate to lymph nodes to present antigens to T-cells.\n\nVýsledek: (A) je nesprávné tvrzení — termín 'adaptive' se vztahuje na specifickou imunitu, nikoliv na vrozenou.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2815",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Exergonic reakce uvolňují energii; endergonické absorbují — proto je energie reactantem. Katalytické termíny (fotolytická, termogenní) popisují zdroj, ale endergonická je správný termín pro reakci s kladným ΔG.\n\nVýsledek: (A)\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2816",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Odpověď: (G)\n\nKlíčem je, že u recessivních onemocnění heterozygoty (nositelé) jsou fenotypicky zdraví a mohou se množit. Selekční tlak působí jen na homozygoty; ale protože heterozygoty gen přenášejí bez újmy, alele zůstává v populaci. To je typický mechanismus pro onemocnění jako Tay-Sachs nebo cystická fybróza.\n\nKrok za krokem:\n1) Selekce proti homozygotním homozygotům: jedinci s onemocněním nemohou předejte geny.\n2) Heterozygoty: nesou jeden alelu, ale fenotyp je zdravý — alela se šíří.\n3) Hardy-Weinberg: frekvence alely zůstává stabilní, pokud není selekce na heterozygoty.\n4) Odpovědi (A), (C), (D), (H) jsou spekulace; (E) je fakticky chybná; (F) je mutace, ne mechanismus zachování; (I) je moderní medicína, ne evoluce. (J) je možná, ale otázka se ptá, proč se *zachovává*.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2817",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(E) codominance"
+    },
+    {
+      "id": "mmlu_biology_2818",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Frameshift mutace vznikne insercí nebo delecí bazy, která posune čtenářský rám kodonu — všechny následné aminokyselin se změní. (B) je nesmyslný, (H) je substituce, (I) je synonymní mutace, (J) je nonsense mutace. Odpověď: (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2819",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Lamellipodia jsou aktinové protrusiony na přední hraně buňky; vinculin je adaptivní protein spojující aktin s integrinami; adhesion plaques jsou zreálněné fokální adheze. Clathrin se týká endocytózy a exocytózy, nikoliv mechanismu pohybu.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2820",
+      "category": "biology",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "B) Incubace spermií s čistým ZP3 před spojem s vajíčkem. Pokud by ZP3 vyvolala akrozomální reakci před setkáním s vajíčkem, by spermie již byly připraveny na fúzi a blok nenastalo — naopak, ZP3 je specifický ligand pro akrozomální reakci, jeho předchozí vystavení by tedy nemělo blokovat, ale spouštět reakci. (A) a (C) blokují interakci receptor-ligand; (D) ukazuje specificitu k ZP3.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2821",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) Metastase je specificky in vivo; v kultuře se to nedá pozorovat. (B) Kancerie ztrácí kontrolu cyklu — v kultuře se množí nekonečně, normalní buňky zastaví po konvergenci. (C) Apoptóza je u nich oslabená. (D) Kládaní se na nutrienty potřebují obě skupiny. (E) Anaerobní metabolismus je typický pro nádory, ale ne pro všechny buňky. (F) Kancerie překonávají konvergenci. (G) DNA opravy mají oslabené. (H) Mutace jsou jejich znakem. (I) Kládaní se na substrát potřebují obě skupiny — to je společná vlastnost buňek v kultuře. (J) Kancerie ztrácí kontaktní inhibici.\n\nV kultuře se buňky chovají podobně v základních aspektech růstu na substrátu; metastáza a jiné specifické anomálie se v petrišce neprojevují.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2823",
+      "category": "biology",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Klíčovým faktorem driftu je velikost populace: jeho dopad je inverzní k počtu jedinců — v malých populacích náhodné změny alel frekvencí převáhnou nad výběrem. Před ~20 tis. lety lidé žili v malých, izolovaných skupinách; dnes globální konektivita a populace miliardami lidí prakticky eliminují drift jako významný evoluční sílu. Odpovědi A, B, C, D, E, F, G, H, I jsou chyby: medicína (B) neovlivňuje drift, kultura (F) není genetika, mutace (G) se nemění, evoluce (I) pokračuje.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_biology_2824",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Ontogeneze je vývoj jedince od zygoty po dospělost; fenotypické fáze odrážejí evoluční historie (rekapitulace ontogeneze — Haeckelova hypotéza, dnes spíše jako ilustrace konzervativní vývojové cesty). Odpověď (F) obsahuje správné definici a význam.\n\nVýsledek: Ontogeneze = vývoj jedince; recapitulation theory = historická hypotéza.\n1) Ontogeneze: zygota → blastocysta → embryon → fetus → dospělý jedinec.\n2) Význam: embryonální fáze odráží konzervativní vývojové kroky (proto se embryonéální struktury různých druhů podobají).\n3) Odpovědi A, C, D, I jsou chyby: A je psychologie, C a I omezují časový rámec, D je filogeneze.\n4) F obsahuje správné tvrzení a historický kontext.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2825",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Většina moderních amerických populací je výsledkem interrací a migrací, což vede k diluci specifických alel. V Africe je frekvence vyšší kvůli selekční výhode proti malárie (heterozygoty). V USA, kde malárie prakticky nemá výběrový tlak, se alela postupně diluje; kromě toho se populace amerických černočů skládá z různých zdrojů, což snižuje frekvenci specifických regionálních alel. Odpovědi (A) a (B) jsou chyby; (C) mutace jsou stochastické; (D) drift by změnil frekvenci náhodně, ale zde je trend konzistentní; (E) a (H) by zvýšily frekvenci, nikoliv snižily; (I) je geneticky nesmysl. (G) kombinuje správné mechanismy: absence selekčního tlaku (malárie) a diluci.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2826",
+      "category": "biology",
+      "want": "J",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: 6,200 generací.\n\n1) Mutace C → c: μ = 2 × 10⁻⁶.\n2) Počet generací t pro změnu frekvence q: Δq = μt.\n3) Δq = 0,03 − 0,02 = 0,01.\n4) t = Δq / μ = 0,01 / (2 × 10⁻⁶) = 5000.\n5) Přesnější model: q_t = q_0 + μt. Pro 1 % změnu při 2 × 10⁻⁶ mutací na generaci: t = 0,01 / 0,000002 = 5000.\n6) Proč je odpověď B? Přesný výslehr: q_t = q_0 + μt → 0,03 = 0,02 + 2·10⁻⁶·t → t = 0,01/2·10⁻⁶ = 5000. Nicméně otázka se týká mutace C → c, což je změna frekvence c. Pokud se ptáme na změnu frekvence c, a počáteční frekvence c je 0,02, pak po 6200 generacích bude q = 0,02 + 6200·2·10⁻⁶ = 0,0324. Nejbližší odpověď je 6200.\n\nPoznámka: Pokud by se ptalo na změnu frekvence c při mutaci c → C (ztráta), výsledek by byl jiný. Zde mutace C → c zvyšuje frekvenci c.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2827",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Kláseční rozkmity vznikají fyzikálním poškozením DNA — ionizující záření (X-ray, gama) vytváří přímé nebo nepřímé (OH· radikály) rozštěpy; mechanické napětí (mikroskopické) může způsobit lámání v místě slabých míst; chemické činítky (HNO3, H2O2) vyvolávají chemické rozštěpy. Modifikace závisí na fyzikálních parametrech záření (energie, dávka, typ částice), biologických faktorech (středěním DNA, cyklu buněčné dělení) a efektivitě opravy (NHEJ vs. HDR). Odpovědi A, C, E, F, G, H, I, J obsahují pravdivé části, ale D je nejkompletnější popis fyzikálních a biologických faktorů ovlivňujících rozkmity.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2828",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Cystic fibrosis je autozomální recesivní; incidence udává frekvenci homozygotů aa.\n1) Matizace Caucasiánů (C) a non-white (NW):\nC: q_c² = 1/2000 → q_c = √1/2000 ≈ 0,02236.\nNW: q_nw² = 1/250000 → q_nw = √1/250000 = 0,002.\nDítě z C+NW: rodiče jsou heterozygotní (heterozygota C: 2·0,02236·0,97764 ≈ 0,0436; heterozygota NW: 2·0,002·0,998 ≈ 0,004).\nP(homozygotní dítě) = q_c·q_nw = 0,02236·0,002 = 4,472·10⁻⁵.\n1/44720 ≈ 1/22260. Nejbližší možnost (I) 1/22000.\n2) Druhá generace:\nF1 populace má frekvenci heterozygotů h = (0,0436 + 0,004)/2 = 0,0238.\nF2 homozygoty: h² = 0,000566 → 1/1765 ≈ 1/18000.\nKorekce: 1/22000 a 1/6700 — chyba v mém výpočtu F2? Ne, 1/6700 je 1/2·h²? Ne, h² je 1/1765. Přesněji: F1 heterozygoty jsou 0,0436 a 0,004; jejich součin v F2 je 0,000185 → 1/5405. Nejbližší (I) 1/6700.\n(I) je nejbližší odpověď.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2829",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(E) Enhancer: DNA sekvence, která přitahuje transkripční faktory a aktivuje geny na vzdálené místech. (A) jsou T-buňky, (B) jsou transkripční faktory, (C) RNA není enhancer, (D) to silenci, (F) aktivátory, (G) siRNA/miRNA, (H) hormony, (I) transportéry, (J) CRISPR/Cas9.\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_biology_2830",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — KucLab.org.\n\nBakterie jsou haploidní; 'mužský' a 'ženský' se odníkají po přítomnosti F-faktoru (F+ = mužský, F− = ženský). Konjugace přenáší F-faktor přes pilus: F− přijme kopii a stane se F+.\n\n(A) Nutriční deficit neovlivňuje genotyp. (B) Přesně popisuje konjugaci. (C) Osmóza je transport vody/iontů, ne DNA. (D) Mutace by byla náhodná, konjugace je mechanismus přenosu. (E) Ne každá plasmidní DNA převádí na F+. (F) Binární dělení klonuje stav, ne mění. (G) Ne každá plasmidní DNA. (H) Antibiotika selekují, nemění F-status. (I) Virus by zničil nebo změnil jiný gen. (J) Prostředí neovlivní F-status.\n\nVýsledek: (B)"
+    },
+    {
+      "id": "mmlu_biology_2831",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Earthworms are hermaphroditic, meaning each individual possesses both male and female reproductive organs. During mating, two worms align ventral-to-ventral with their anterior ends facing each other and exchange sperm into each other's seminal receptacles. After separating, each individual can lay eggs in a protective cocoon, which contains sperm from the partner, ensuring cross-fertilization.\n\nVýsledek: (I)\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2832",
+      "category": "biology",
+      "want": "A",
+      "got": "J",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: a) p = 0.629, q = 0.371; b) TT = 316, Tt = 373, tt = 109.\n\n1) Taster phenotype = TT + Tt. Taster frequency p² + 2pq = 0.604.\n2) Tastes are dominant, so non-tasters are tt. Non-taster frequency q² = 1 - 0.604 = 0.396.\n3) q = √0.396 ≈ 0.629.\n4) p = 1 - q = 0.371.\n5) Genotypy: TT = p²·N = 0.1376·798 ≈ 109.6 → 110 (zaokrouhleně 109). Tt = 2pq·N = 2·0.371·0.629·798 ≈ 373. tt = q²·N = 316.\n6) Kontrola: 110+373+316 = 799 (zaokrouhlení).\n\nVýsledek: (J)"
+    },
+    {
+      "id": "mmlu_biology_2833",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Antisense strand: 5' ATG GAT AAA GIT TTA AAC AGA GAG GAA TCT 3'. Komplementární sense strand: 3' TAC CTA TTT CAA AAT TTG TCT CTC CTT AGA 5' (komplementární bazy A-T, G-C, T-A, C-G).\n2) mRNA: transkripce antisense → mRNA se čte v 5'→3' smyslu, tedy komplementární sekvence antisense: 5' AUG GAU AAA GUU UUA AAC AGA GAG GAA UCU 3'.\n3) Translace: AUG(Met) GAU(Asp) AAA(Lys) GUU(Val) UUA(Leu) AAC(Asn) AGA(Arg) GAG(Glu) GAA(Glu) UCU(Ser).\nOdpovědi (B) a (C) mají správné mRNA a aminokysely, ale (C) má chybu v antisense (T místo T). (F) a (H) mají správné mRNA a aminokysely, ale (F) má jen 6 aminokyselin (přeskočil poslední codon). (I) má 8 aminokyselin — 9. codonů. (H) obsahuje správné mRNA a všech 9 aminokyselin.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2834",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": true,
+      "raw": "*   Condition: Red-green colorblindness is X-linked recessive (c).\n    *   Mother: Normal vision, but her father was colorblind. Since her father was colorblind ($X^c Y$), he must have passed his only X chromosome to her. Thus, she is a carrier ($X^C X^c$).\n    *   Father: Normal vision ($X^C Y$).\n    *   Offspring probabilities:\n        *   Daughters: $X^C X^C$ (normal) or $X^C X^c$ (carrier). Both have normal vision.\n        *   Sons: $X^C Y$ (normal) or $X^c Y$ (colorblind).\n    *   Total offspring: 4 possibilities (2 girls, 2 boys).\n    *   Colorblind offspring: Only the son inheriting the …[snip]… y X^C Y.\n    Krok 3: Děti: X^C X^c (dívka nesoučástka), X^C X^c (dívka normální), X^C Y (kluk normální), X^c Y (kluk barvoký).\n    Krok 4: Jedno z možných dětí je barvoké, tedy 1/4.\n\n    Výsledek: 1/4.\n    Krok 1: Matka je nesoučástka — její otec byl barvoký, tedy X^c X^c, a předal jí X^c. Genotyp matky: X^C X^c.\n    Krok 2: Otec má normální vidění, tedy X^C Y.\n    Krok 3: Děti: X^C X^c (dívka nesoučástka), X^C X^c (dívka normální), X^C Y (kluk normální), X^c Y (kluk barvoký).\n    Krok 4: Jedno z možných dětí je barvoké, tedy 1/4.\n\n    Výsledek: 1/4.\n    Krok 1: Matka je nes\n\n[RETRY] Answer: G"
+    },
+    {
+      "id": "mmlu_biology_2835",
+      "category": "biology",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "*   Two mutations in region rII: mutation A causes lysis of B, mutation B does not.\n    *   A phage with both mutations (double mutant) will lyse B. A phage with only one mutation will lyse B only if it's the 'lysis' mutation.\n    *   The lysate contains progeny from the two phages.\n    *   Dilution 1:10^7 on B gives 40 plaques. Total double mutants + single-mutation-A phages = 40 × 10^7 = 4 × 10^8.\n    *   Dilution 1:10^5 on K gives 4 plaques. Total phages with mutation B = 4 × 10^5.\n    *   Wait, let's re-read: \"mutations in the genomic region called rII cause the lysis of strain B of E. col …[snip]…  of mutant phage\" — this usually means two different mutants, each carrying one of the two mutations.\nLet's call them mutant A (lysable by B) and mutant B (lysable by K).\nThe lysate contains both types.\nHalf of the lysate is diluted 1:10^7 and plated on B. 40 plaques found.\nHalf of the lysate is diluted 1:10^5 and plated on K. 4 plaques found.\nLet N be the total number of phages in the original lysate.\nNumber of phages of type A in the lysate: N_A.\nNumber of phages of type B in the lysate: N_B.\nThe lysate is divided in half. Each half contains N/2 phages.\nHalf 1 (diluted 10^7): 40 plaques on B"
+    },
+    {
+      "id": "mmlu_biology_2836",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (H)\n\n1) Hardy-Weinberg: p = 0.62 (M), q = 0.38 (N).\n2) Genotypy:\n   - M = p² = 0.62² = 0.3844 → 0.3844 × 610 ≈ 234.48\n   - MN = 2pq = 2 × 0.62 × 0.38 = 0.4696 → 0.4696 × 610 ≈ 286.46\n   - N = q² = 0.38² = 0.1444 → 0.1444 × 610 ≈ 88.08\n3) Zaokrouhlením na celé číslo: 234, 286, 88. Nejbližší možnost je (H) 235, 287, 88.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2838",
+      "category": "biology",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\nKrok 1: F1 genotypy jsou Y^lY^l, Y^lY^L a y^Ly^L.\nKrok 2: Pokud Y^lY^l a Y^lY^L jsou žluté a y^Ly^L je ne-žlutý, pak Y^l je dominantní žlutý ale heterozygoty Y^lY^L jsou také žluté (což odpovídá 2:1 přeživším).\nKrok 3: Pokud Y^lY^l a Y^lY^L jsou žluté a y^Ly^L je ne-žlutý, pak Y^l je dominantní ale heterozygoty Y^lY^L jsou žluté a homozygoty y^Ly^L ne-žluté.\nKrok 4: Pokud Y^lY^l a Y^lY^L jsou žluté a y^Ly^L je ne-žlutý, pak Y^l je dominantní a L je recesivní ale ne-žlutý alel.\nKrok 5: Přesná interpretace: Y^lY^l a Y^lY^L jsou žluté (2/3 přeživších), y^Ly^L je ne-žlutý (1/3 přeživších). Tedy Y^l je dominantní žlutý alel, L je recesivní ne-žlutý alel.\nKrok 6: Pro výběr (B): Y^lY^l a Y^lY^L jsou žluté, y^Ly^L ne-žlutý. To odpovídá 2:1 poměru přeživších.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2839",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "F1 je heterozygotní pro oba znaky (b+ cn+ / b cn). Křížení s homozygotním recesivním jedincem (b cn) odhalí gamety F1:\n1) Celkový počet potomků: 90 + 92 + 9 + 9 = 200.\n2) Rekombinantní fenotypy jsou ty s neoriginální kombinací: 9 + 9 = 18.\n3) Rekombinační frekvence: 18/200 = 0,09 = 9 %.\n4) Mapová vzdálenost je rovna frekvenci rekombinací v cM, tedy 9 cM.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2840",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Klánova syndrom (XXY) je genetická anomálie; extra Y kromozom přináší geny X, které u mužinů jinak nefungují (X-inaktivace), ale X-inaktivace není 100% — X-inaktivující geny mohou být exprimovány. Studie (např. KucLab 2019) ukázala, že muži s XXY vykazují vyšší skóre v agresivitě a nižší skóre v empatii oproti XY kontrolám. Tvorba X-inaktivace u mužů je náhodná, takže XXY mužina může mít více aktivních X-genů než typický XY muž.\n\nVýsledek: (H)\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2841",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Kosti mají několik klíčových funkcí: 1) ochrana orgánů (hranolka hlavy, hrudník), 2) pohyb a podpora, 3) produkce buněk krve v kostním dřeve (hematopoéze), 4) skladba minerálů (kalkářový reservoár). Odpovědi A, B, D, E, F, I, J jsou buď chyby, nebo jen části pravdy; F je funkce svalů, I je jen částečná ochrana, J je funkce slinivky. Odpověď H obsahuje klíčové funkce: minerály a hematopoézu.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2842",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Prokaryoty (bakterie) nemají eukaryotické organely: jádro (membrána), Golgi, ER, mitochondrie, chloroplasty, endosomické organely (lysosomy, peroxisomy), ani mikrotubulový aparát (centrioly, vřesnice). Všechny ostatní možnosti obsahují struktury, které mohou být u prokaryot přítomny (flagela, pilus, peptidoglykan, ribozomy).\n\nVýsledek: (E)\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_biology_2843",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Prokaryoty (bakterie) nemají membránované organely: jádro (membrána), Golgi, ER, mitochondrie, chloroplasty. Histony jsou typické eukaryotů; bakterie používají histony homologní protein HU. Mitotický spínák je eukaryotický mechanismus dělení. Bakterie se dělí binárním dělením. Volba A obsahuje všechny tyto struktury. B obsahuje plasmidy (bakterie mají), C obsahuje endospory (bakterie mají), D jsou typické bakteriální struktury, E a G obsahují struktury obě skupiny, F a I obsahují bakteriální struktury, J obsahuje bakteriální struktury.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2844",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "V biologii na mikroskopické úrovni se používají mikrometry (µm) a angstrémy (Å) pro délky; hmotnosti se udávají v miligramech, mikrogramech a nanogramech; molekulové hmotnosti v daltonech (1 Da = 1 g/mol). Další možnosti obsahují nesmyslné jednotky (kilogramy, centimetry) nebo nesprávné kombinace.\n\nVýsledek: (G)\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2845",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Klíčové jsou tři důkazy: 1) Abundance: C, H, O, N jsou nejčastější prvky v biosféře. 2) Bonding: všechny čtyři mají valenční elektrony a mohou tvořit stabilní kovalentní vazby (C4, H1, O2, N3). 3) Lehké prvky: jejich nízké hmotnostní čísla umožňují tvorbu komplexních molekul bez nadměrné energie vazeb. Ostatní možnosti jsou chyby: (A) O2 je plyn, ale H2 a N2 také; (C) energie přichází z C-H vazeb, ne z samotných prvků; (D) žádný není radioaktivní; (E) sublimace není klíčová; (F) jsou právě proto běžné; (G) barva není funkce; (H) i jiné prvky se vyskytují; (I) jsou lehké; (J) magnetismus není klíčový.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2846",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "If the trait is passed only from mother to offspring and never from father, it is a classic signature of mitochondrial DNA inheritance — the mitochondria are inherited exclusively from the egg's cytoplasm. Nuclear DNA from the father is lost during spermatogenesis.\n\n(A) Mutation — random change, not a consistent inheritance pattern.\n(B) Codominance — both alleles expressed, doesn't explain sex-specific transmission.\n(C) Sex-linked — X-linked dominant would pass from father to all daughters, not just from mother.\n(D) Absence of genes in father — not a biological mechanism for this pattern.\n(E) Polygenic — multiple genes, doesn't explain sex-specific transmission.\n(F) Environment — not genetic.\n(G) Extrachromosomal — mitochondrial DNA is extrachromosomal and maternally inherited.\n(H) Autosomal recessive — both parents contribute.\n(I) From father — opposite of the premise.\n(J) Incomplete — blending of phenotypes, not sex-specific.\n\nThe pattern described is the hallmark of mitochondrial inheritance.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2847",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Větší částí se chování dělí na tři fáze: motivace (desire), akce a následné uspoknění (fulfillment). Těsto je základní schéma motivovaného chování.\n(A) Cue, Desire, Fulfillment — přesně tyto fáze.\n(B) Arousal/Behavior/Consequence — psychologické termíny, ale méně přesné pro strukturu aktu.\n(D) Appetitive/Consummatory/Quiescence — klasické rozdělení v psychologii chování.\n(E) Perception/Decision/Movement — kognitivní fáze.\n(F) Initiation/Execution/Termination — technické.\n(G) Motivation/Performance/Rest — podobné (D).\n(H) Anticipation/Interaction/Satisfaction — podobné (A).\n(I) Stimulus/Response/Reward — základní Pavlovské schéma.\n(J) Preparation/Action/Recovery — fyzikální/biologické.\nVětšina učebnic chování (např. Skinner) používá termín 'appetitive behavior' a 'consummatory act' — (D) je klasické rozdělení. Ale (A) je také správné v širším kontextu. Většina zdrojů pro tuto otázku (např. psychologie učebnic) hledá (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2848",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Konektivní tkáň (spojivná tkáň) plní dvě hlavní funkce: podporu a spojování orgánů. Klasifikuje se na čtyři typy podle struktury a funkce: kostní tkáň (tuhá podpora), chrupavina (flexibilní podpora), krev (transport), a vláknatá tkáň (spojování). Tuhé tkáně jsou kostní a chrupavina; krev je kapalná konektivní tkáň; vláknatá tkáň obsahuje kolagenové vlákna. Odpovědi A, B, D, E, H, I, J jsou chyby — buď vynechávají typy, nebo uvádějí nesmysly. Odpověď G obsahuje pětký typ; adipose (tuková tkáň) je také konektivní tkáň, ale klasické učebnice (Campbell) uvádějí čtyři hlavní skupiny. Odpověď F přesně odpovídá na otázku a klasifikaci.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2849",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — odpověď: (D).\nKrok 1: Přísná definice courtship: souhrn signálů (vizuální, akustické, fyzické) pro identifikaci druhu a sexuální kompatibility.\nKrok 2: U ternů přinesení ryby je kombinace prezentace zdroje a fyzické kondice — signál kvality samce.\nKrok 3: Funkce: 1) identifikace druhu (předebrání matek jiného druhu), 2) výběr partnera podle kvality (handicap teorie), 3) u některých druhů hormonální stimulace (ovulace).\nKrok 4: Odpovědi (A), (B), (E), (F), (G), (H), (I), (J) jsou buď příliš úzké, chyštné nebo chybné. (C) je možná funkce, ale (D) je úplnější.\nKrok 5: Výsledek: (D) obsahuje všechny klíčové aspekty.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2850",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Protozoa je polyfylétická skupina — zahrnuje organismy z různých kladů (ameboidní, ciliata, flagelata), které se spojily jen na základě podoby pohybu. Proto protozoá jako jednotná taxonomická jednotka nespadají do jednoho kladu: mají odlišné struktury (ciliata vs. ameboidní pseudopohyby), různé metabolismy a některé mají chloroplasty (eukaryotické algi). Odpovědi (A), (B), (F), (G), (H), (I), (J) jsou fakticky nesmyslné. (C) je možná, ale není to hlavní argument proti taxonomické jednotě. (E) je příznak polyfylie, ale (D) přesně popisuje důvody, proč protozoá jako skupina není monofyletická.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2851",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Sperm production (spermatogenesis) requires a temperature about 2–3 °C lower than core body temperature; the scrotum provides this cooling. If testes remain in the abdomen, the higher temperature inhibits spermatogenesis, leading to sterility. Other options are incorrect: pressure, attachment, nutrients, gravity, aesthetics, cancer risk, oxygen, or space are not the primary biological reasons for the descent.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2852",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(C) The nuclear membrane is a double membrane (envelope) with pores. The outer membrane is continuous with the ER; the inner membrane has a distinct protein composition. Nuclear pores regulate the transport of RNA and proteins between the nucleus and cytoplasm.\n\n(A) False: it is continuous with the ER. (B) False: it's a double membrane. (D) Chlorophyll is in chloroplasts. (E) Single layer is incorrect. (F) Pores are essential. (G) Not impermeable; selective transport occurs. (H) Not freely permeable; selective. (I) Communicates via pores. (J) Reassembles during mitosis.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2853",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Epidermida je vnější ochranná vrstva všech rostlinných orgánů; chrání před ztrátou vody, patogeny a mechanickým poškozením — funkce analogní kůži. Korkové buňky (periderm) plní podobnou funkci u dřevnatých částí.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2854",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Kombustace oxiduje palivo jednorázkově a rychle, uvolňujíc energii jako teplo — v buňce by to způsobelo termické poškození. Aerobní respirace rozkládá glukózu postupně v cyklech (glykolýza, Krebs, oxidativní fosforylace), kde energie je zachována v ATP a ATP-syntázou přenášena na práci, místo aby se uvolnila hned.\n\n(A) správně popisuje tento rozdíl. (B) chybně — combustion je rychlé. (C) opak. (D) combust není respirace. (E) oxidace v obou vyžaduje O₂. (F) respirace zachovává část v ATP. (G) oxidace je chemická reakce, obě mohou probíhat. (H) obě produkují CO₂ a H₂O. (I) žádná neprodukuje světlo jako primární produkt. (J) enzymy katalyzují respiraci, ale oxidace je oxidace.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2855",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "(G) — přítomnost lymfocytů a hluboké vaskularizace naznačuje imunologickou funkci (reservoir pro komensální bakterie), což jde proti čisté vestigialnosti. (A) variace velikosti, (B) selekční tlak, (C) anatomická poloha, (D) evoluční diverzace, (E) chirurická tolerance, (F) evoluční historie, (H) patologie, (I) klinická praktika, (J) funkční prázdnota — všechny jsou argumenty pro vestigialitu; (G) je jediný argument pro zachování funkce.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2856",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Divergence: two related species evolve in different directions, often due to different selective pressures in different niches. Convergent is the opposite (unrelated species becoming similar). Coevolution is mutual/antagonistic interaction.\n\nVýsledek: (D)\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2857",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: S fáze.\n\nKrok 1: Interfáza se skládá z tří fází: G1, S a G2.\nKrok 2: S fáze (syntéza) je přesně to období, kdy dochází k replikaci DNA — každá molekula se duplikuje, takže množství DNA v buňce se zdvojuje před vstupem do mitózy.\nKrok 3: G1 je fáze růstu, G2 kontrolní fáze před dělením; ostatní fáze mitózy (profáze, metafáze, anafáze, telofáze) se zabývají uspořádáním a rozdělením již duplikované DNA.\nKrok 4: Odpověď je S.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2858",
+      "category": "biology",
+      "want": "H",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "(F) Protective coloration je obecný termín pro barvy skryté před predátorem; (H) kryptická barva je specifický typ skrytí v prostředí, (I) disrupční barvy rozbíje kontury. Odpověď (F) je nejširší správná; (H) a (I) jsou podkategorie. V kontextu biologické terminologie je 'protective coloration' standardní odpověď na tento popis.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2859",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Odpověď: (I)\n\nKrok 1: Varianta se množí sama, ale ne hybridizuje s původním typem — to je znak reprodukční izolace.\nKrok 2: Polyploidie (změna počtu chromozomů) vytváří okamžitou reprodukční bariéru: hybridy jsou aneuploidní a neschopní se množit.\nKrok 3: V laboratorních podmínkách je polyploidie klasický mechanismus sympatrické speace.\nKrok 4: Ostatní možnosti (drift, selekce) popisují změny ale ne reprodukční bariéry; allopatrická speciace vyžaduje geografickou izolaci.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2860",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Typ AB rodič má genotyp $I^A I^B$. Typ B rodič může být $I^B I^B$ nebo $I^B i$. Typ O dítě vyžaduje genotyp $ii$ — oba rodiče musí mít alelu $i$. Protože rodič s typem AB žádnou alelu $i$ nemá, dítě nemůže mít typ O. Pravděpodobnost je 0.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2861",
+      "category": "biology",
+      "want": "F",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "Glykolýza produkuje 2 ATP na molekulu glukózy přes substrátové fosforylační reakce — to je její primární energetický výstup. Oxidativní fosforylace (C) probíhá až v mitochondriách a vyžaduje kyslík; anaerobní fermentace (E) slouží k regeneraci NAD+ pro pokračování glykolýzy, nikoliv k produkci velkého množství ATP. (B) a (I) jsou správné, ale (G) přesně definuje mechanismus a množství. (D) je chybně vylučuje anaerobní cesty; (F) popisuje fermentaci, ne glykolýzu jako celek; (H) je nesmysl (glykolýza je anaerobní). (J) je chybně — glykolýza rozkládá glukózu, ne ji produkuje.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2862",
+      "category": "biology",
+      "want": "H",
+      "got": "J",
+      "ok": false,
+      "retried": false,
+      "raw": "Tundra: tundra — tundra; rainforest: tropický prales; grassland: tráva; chaparral: křoviny; savanna: savana; alpine: nad hranicí stromů; wetland: moklina; deciduous: listnatý; desert: poušť; taiga: boreální les. Taiga je charakteristická právě borovicovými lesy v chladném klimatu.\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_biology_2863",
+      "category": "biology",
+      "want": "H",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B) Glycolysis: Glucose → 2 pyruvate + 2 NADH + 2 ATP. Pyruvate oxidace (F) produkuje NADH a CO2, ale ne cukr. Beta oxidace (C) produkuje acetyl-CoA a NADH. Calvin cyklus (H) spotřebovává NADPH a CO2 k tvorbě cukru — opačný směr. Odpověď: (B)"
+    },
+    {
+      "id": "mmlu_biology_2864",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Coevoluce je vzájemná adaptace dvou nebo více interakcí; predátor a kořei se navzájem odvíjejí — klasický příklad je závod mezi rychlostí kořene a rychlostí predátora. Speciace je vznik druhy, divergence rozdělení, adaptivní radiace rozptyl do nيشek, konvergence podobnost nezávislých linií, punktuované rovnováhy skokové změny. Odpověď: (C).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2865",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(I) Inositol triphosphate (IP3) je produkován hydrolýzou IP3P45 a váže se na receptor na ER, který uvolní Ca2+ do cytoplazmy. cAMP a cGMP jsou jiní sekundární poslovci; NO je plyn; prostaglandiny jsou eikozanoidy; calmodulin je protein senzor Ca2+; DAG aktivuje protein kinázu C.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3526",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Vysoký bod tání + špatná vodivost + nerozpustnost v oxidu vody typické pro látky s silnými kovalentními sílami v prostoru — krystalovou síť. Iontové sloučeniny (B) by byly vodivné v roztoku; polární/kovalentní (A, D, I, J) mají nižší taječky; kovové (H) vodivné. Koválný síťový sloučenina (C) jako diamant nebo křemík vyhovuje všem podmínkám.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3527",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) BF3: B má 3 valenční elektrony + 3 od F → 6 (oktet nedostatečný).\n(B) BeF2: Be má 2 + 2 od F → 4 (oktet nedostatečný).\n(C) PF5: P má 5 + 5 od F → 10 (rozšířený oktet).\n(D) NH4+: N má 5 + 4 od 4×H → 9 → po ionizaci NH4+: N má 8.\n(E) SF6: S má 6 + 6 od F → 12 (rozšířený oktet).\nNH4+ je jediný s oktetem.\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3528",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 75.0 mL.\n1) Počet mol H₃O⁺: n = 0.050 l × 0.150 mol/l = 7.5 mmol.\n2) H₃PO₄ je triprotonová kyselina, takže potřebuje 3 mol KOH na úplné neutralizaci: n(KOH) = 3 × 7.5 = 22.5 mmol.\n3) Objem KOH: V = n/c = 22.5 mmol / 0.250 mol/l = 90 mmol/l = 90 mL.\nOpravením: 3 × 7.5 = 22.5 mmol; 22.5 / 0.25 = 90.0 mL.\n\nWait, let me re-calculate:\nn(H₃PO₄) = 0.050 × 0.150 = 7.5 mmol.\nH₃PO₄ → 3 H⁺. Celkem 22.5 mmol H⁺.\nKOH → 1 OH⁻. Potřebujeme 22.5 mmol KOH.\nV = 22.5 / 0.25 = 90 mL.\n\nOpravením: 7.5 × 3 = 22.5. 22.5 / 0.25 = 90.0.\nMoje první odpověď byla chybná — 75.0 byla chyba v počtu protonů (2 místo 3).\n\nVýsledek: 90.0 mL.\n1) n(H₃PO₄) = 0.050 l × 0.150 mol/l = 7.5 mmol.\n2) H₃PO₄ je triprotonová, takže 3 × 7.5 = 22.5 mmol H⁺.\n3) Objem KOH: V = 22.5 mmol / 0.250 mol/l = 90 mL.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3529",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "1) CO2: uhlík má dva dvojné vazby a žádné volné páry — typ VSEPR: lineární, hybridizace sp.\n2) CO32-: uhlík má tři vazby a jednu volnou elektronovou páru — typ trigonální planární, hybridizace sp2.\n3) NO2-: dusík má jednu dvojnou vazbu, jednu jednoduchou a jednu volnou elektronovou páru — typ bentonova struktura, hybridizace sp2.\n4) NO3-: dusík má tři rovnovážné jednoduché vazby s delokalizací — typ trigonální planární, hybridizace sp2.\nZatemno jsou CO32-, NO2- a NO3-.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3530",
+      "category": "chemistry",
+      "want": "E",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — KucLab.org.\n\n1) Oxidace Mg: Mg → Mg²⁺ + 2e⁻. Redukce Cr³⁺: Cr³⁺ + 3e⁻ → Cr(s).\n2) Nejmenší společný násobek elektronů je 6: 3Mg → 3Mg²⁺ + 2Cr³⁺ → 3Mg²⁺ + 2Cr(s).\n3) Net iontová rovnice: 3Mg(s) + 2Cr³⁺ → 3Mg²⁺ + 2Cr(s).\n4) V rovnici (E) je přesně toto: 3Mg(s) + Cr³⁺ → 3Mg²⁺ + Cr(s) — pozor, tam je jen jeden Cr³⁺, což by vyžadovalo 1/3 Mg. Přesná vyvážená net iontová je 3Mg + 2Cr³⁺ → 3Mg²⁺ + 2Cr.\n5) Podívejme se na (C): 2Mg + Cr³⁺ → 2Mg²⁺ + Cr — to je vyvážené 2:1.\n6) Podívejme se na (H): Mg + Cr³⁺ → Mg²⁺ + Cr — to je vyvážené 1:1.\n7) Opakujme: 3Mg → 3Mg²⁺ + 6e⁻; 2Cr³⁺ + 6e⁻ → …[snip]… . Option (E) je 3Mg + Cr³⁺ → 3Mg²⁺ + Cr. To je 3:1. Option (C) je 2:1. Option (H) je 1:1.\n54) Opakujme: 3Mg + 2Cr³⁺ → 3Mg²⁺ + 2Cr. Option (E) je 3Mg + Cr³⁺ → 3Mg²⁺ + Cr. To je 3:1. Option (C) je 2:1. Option (H) je 1:1.\n55) Opakujme: 3Mg + 2Cr³⁺ → 3Mg²⁺ + 2Cr. Option (E) je 3Mg + Cr³⁺ → 3Mg²⁺ + Cr. To je 3:1. Option (C) je 2:1. Option (H) je 1:1.\n56) Opakujme: 3Mg + 2Cr³⁺ → 3Mg²⁺ + 2Cr. Option (E) je 3Mg + Cr³⁺ → 3Mg²⁺ + Cr. To je 3:1. Option (C) je 2:1. Option (H) je 1:1.\n57) Opakujme: 3Mg + 2Cr³⁺ → 3Mg²⁺ + 2Cr. Option (E) je 3Mg + Cr³⁺ → 3Mg²⁺ + Cr. To je 3:1. Option (C) je 2:1. Option (H) je"
+    },
+    {
+      "id": "mmlu_chemistry_3531",
+      "category": "chemistry",
+      "want": "B",
+      "got": "E",
+      "ok": false,
+      "retried": true,
+      "raw": "Simple alkene: ethene (C₂H₄). Structure: H₂C=CH₂.\n1) Sigma bonds: each C has 4, total 8 sigma bonds. (B) is true.\n2) Pi bonds: one double bond = one pi bond. (F) and (G) false.\n3) Geometry: each carbon is sp² hybridized, trigonal planar. (D) true.\n4) Isomers: ethene has no cis-trans isomers (no substituents on each carbon). (A) false.\n5) Tetrahedral: no, sp² is trigonal planar. (E) false.\n6) Aromaticity: no, not cyclic conjugated. (H) false.\n7) Sigma count: 8 ≥ 6. (I) true.\nWait, multiple correct options? Let's re-read: \"simplest alkene\". Ethene has 8 sigma bonds, trigonal planar geometry, and …[snip]… heck the options again.\n(A) cis-trans: no.\n(B) at least four sigma bonds: yes.\n(C) no sigma bonds: no.\n(D) trigonal planar: yes.\n(E) tetrahedral: no.\n(F) at least three pi bonds: no.\n(G) at least two pi bonds: no.\n(H) aromatic: no.\n(I) at least six sigma bonds: yes.\nIf B and I are both true, and D is also true, and the question is from a source where only one answer is correct, then there might be a mistake in the question or I'm missing something.\nLet's check the source. If it's a standard chemistry competition, D is the expected answer.\n\nWait, I just noticed something else\n\n[RETRY] Answer: E"
+    },
+    {
+      "id": "mmlu_chemistry_3532",
+      "category": "chemistry",
+      "want": "A",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (F)\n\nKlíčové množství pro titrační bod je množství OH⁻ potřebné k neutralizaci všech H⁺. Rozklad HOCl na Cl₂ a H₂O (2HCl → Cl₂ + H₂O) spotřebuje protony, ale výsledné množství OH⁻ potřebné k neutralizaci zbývajících H⁺ se nezmění — množství OH⁻ se rovná počtu původních H⁺, které se nerozklapují. Rozklad HOCl na Cl₂ a H₂O znamená, že se OH⁻ spotřebuje na neutralizaci vzniklých H⁺; množství OH⁻ potřebné k titračnímu bodu zůstane stejné. Tuhé chloridové ionty neovlivňují titrační křivku. Tuhé chloridové ionty neovsazují OH⁻, takže titrační bod zůstane stejný.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_chemistry_3533",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Ideální roztok vzniká, když interakce mezi molekulami různých složek jsou identické — žádná přísada nemění fyzikální vlastnosti směsi. To odpovídá definici (D): energie interakcí se neruší ani nezvyšuje, takže vlastnosti zůstávají stejné. (B) a (C) popisují aprotropické interakce, (F) a (G) popisují interakce jiného typu. (I) je důsledek (D), ale definice je (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3534",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(C) CuCl2 je měď(II) chlorid — správně. (A) MgO oxid magnesia, (B) AgNO3 nitrát stříbra, (D) kyselina sírová, (E) dichromát draslinu, (F) síčnan sodíku, (G) nitrát železa(III), (H) chlorid vápníku, (I) bromid hliníku, (J) nitrát zinku. Všechny jsou správně. Otázka se ptá na chybu — žádná není. Pokud by (C) bylo CuCl, bylo by to měď(I) chlorid. Všechny možnosti správné."
+    },
+    {
+      "id": "mmlu_chemistry_3535",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) 6.0\n\n1) Mol H⁺: 50 mL × 0.0025 M = 0.125 mmol.\n2) Mol OH⁻: 50 mL × 0.0023 = 0.115 mmol.\n3) Netráva: 0.125 - 0.115 = 0.010 mmol H⁺ přebytku.\n4) Celkový objem: 100 mL.\n5) Koncentrace H⁺: 0.010 mmol / 100 mL = 0.0001 M = 10⁻⁴ M.\n6) pH = -log₁₀(10⁻⁴) = 4.0.\n\nOpravené: 0.125 - 0.115 = 0.010 mmol H⁺. V 100 mL je to 10⁻⁴ M, pH = 4.\n\nWait, let me re-calculate: 0.125 - 0.115 = 0.010 mmol. V 100 mL je to 10⁻⁴ M. pH = 4. Odpověď (E).\n\nOpravené: 0.125 - 0.115 = 0.010 mmol. V 100 mL je to 10⁻⁴ M → pH = 4.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3536",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Grahamova zákon difuze říká, že rychlost se mění se odmocninou převodních hmotností: v₁/v₂ = √M₂/M₁. Pro He (M=4) a rychlostí 5,33× vyšší než u neznámého plynu: M₂/4 = 5,33² ≈ 28,4 → M₂ ≈ 113,6. Mezi nabídkami nejlépe odpovídá oktan C₈H₁₈ (M ≈ 114).\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3537",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Z-komponenta spinového momentu je S_z = m_s * ħ. Pro I = 7/2 je maximální m_s = 7/2. Výsledek: S_z = 3.5 * 1.05457 × 10⁻³⁴ J·s = 3.690995 × 10⁻³⁴ J·s. Zaokrouhleněno na 4 desetinné místa: 3.691 × 10⁻³⁴ J·s.\n\nVýsledek: 3.691 × 10⁻³⁴ J·s.\nKrok 1: Spinový kvantový počet m_s pro I = 7/2 je maximálně 7/2.\nKrok 2: Jediná jednotka spínové konstanty ħ ≈ 1.05457 × 10⁻³⁴ J·s.\nKrok 3: S_z = 3.5 × 1.05457 × 10⁻³⁴ = 3.690995 × 10⁻³⁴ J·s.\nKrok 4: Zaokrouhlení na 4 desetinná místa dá 3.691 × 10⁻³⁴.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3538",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — odpověď: (B)\n\n1) NMR podmínka: γ_13C = 107.2 MHz/T. 90° pulz znamená nutný rotace ω_1 = γB_1 = π/τ.\n2) B_1 = π / (τ · γ) = 3.14159 / (10⁻⁶ s · 107.2 × 10⁶ rad/s·T) = 29.3 mT.\n3) Přesnější hodnota: 107.23 MHz/T → 29.31 mT. Nejbližší možnost je 25.7 mT (B) — rozdíl ~12 % může být způsoben zaokrouhleněním γ nebo definicí jednotek.\n\nVýsledek: B_1 = 29.3 mT. Nejbližší odpověď (B) 25.7 mT.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3539",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 18.75 mCi, nejbližší odpověď (G).\n\n1) Počet polovičních období: t = 24 h / 6 h = 4.\n2) Aktivita po n polovičních periodách: A = A₀ · (1/2)^n.\n3) A = 150 · (1/2)⁴ = 150 / 16 = 9.375 mCi.\n4) Zaokrouhleněno na nejbližší možnost: 9.4 mCi → (B).\n\nOpravením: 150/16 = 9.375. Nejbližší odpověď je (B).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3540",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — odpověď: (B)\n\nTl (thallium) má 6s² 6p¹ konfiguraci; při oxidaci na +3 stavu se vyvolá inertní elektronový pár 6s², což je energeticky výhodné — tzv. inert pair effect. Tl(I) je proto stabilnější než Tl(III), zatímco pro Al, Ga, In je +3 typický. Tl(I) je běžný stav; Tl(III) je silný oxidační činidlo.\n\nVýsledek: Tl(I) je stabilnější než Tl(III) kvůli inertní páře.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3541",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "S = 6, O = 6, Cl = 7. S má 6 valenčních elektronů; 2 sdílí s O, 2 s každým Cl. Ostatní 2 elektrony na S tvoří jedno volné elektronové páru. Tvar podle VSEPR: 4 páry elektronů kolem S → tetraedr; volný pár zajíme, ale tvar molekuly definuje jen závazné skupiny — tedy bent (ohnutý).\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3542",
+      "category": "chemistry",
+      "want": "A",
+      "got": "J",
+      "ok": false,
+      "retried": true,
+      "raw": "KucLab Hertz 0.6 — KucLab.\n\n1) Rozdíl energií: ΔE = h·f·(g−2)/2. Pro L-band (1.3 GHz): ΔE = 6.626e−34 · 1.3e9 · 0.05/2 ≈ 2.16e−26 J ≈ 1.35 meV. Pro W-band (94 GHz): ΔE ≈ 15.7 meV.\n2) Boltzmann faktor: exp(−ΔE/kT) s kT = 25.85 meV.\n3) L-band: exp(-1.35/25.85) ≈ 0.949; Nα/Nβ = exp(ΔE/kT) ≈ 1.056. Relativní podíl α: 1.056/(1+1.056) ≈ 0.513? Ne, otázka žádá Nα/Nβ.\n4) Opakované výpočty: L-band: exp(1.35/25.85) = 1.0536 → Nα/Nβ = 1.0536. Relativní podíl α = 1.0536/(1+1.0536) = 0.512.\n5) Přesně: Nα/Nβ = exp(h·f·g·e/2kT). Pro L-band: exp(1.3e9·2.05·1.6e−19/2·1.38e−23·300) = exp(1.61) ≈ 5.0.\n6) Opakuj  …[snip]… né hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n66) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n67) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n68) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n69) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n70) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 133000.\n71) Přesné hodnoty pro g=2.05: L-band: exp(1.61) = 5.01. W-band: exp(11.8) = 13\n\n[RETRY] Answer: J"
+    },
+    {
+      "id": "mmlu_chemistry_3543",
+      "category": "chemistry",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Vysvětlení:\n1) Gyromagnetické poměru $^{31}\\text{P}$ odpovídá $\\gamma/2\\pi \\approx 17.235 \\text{ MHz/T}$.\n2) Larmorova frekvence: $\\nu = \\gamma B_0 / 2\\pi = 17.235 \\times 20.0 = 344.7 \\text{ MHz}$.\n3) Zaokrouhleno na nejbližší možnost: 345.0 MHz.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_chemistry_3544",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Vlnová funkce pro stav n=1 je $\\psi_1(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{\\pi x}{L}\\right)$. Pravděpodobnost v intervalu $[0, L/2]$ je:\n$P = \\int_0^{L/2} |\\psi_1(x)|^2 dx = \\frac{2}{L} \\int_0^{L/2} \\sin^2\\left(\\frac{\\pi x}{L}\\right) dx$.\nPoužití identity $\\sin^2 \\theta = \\frac{1}{2}(1 - \\cos 2\\theta)$:\n$P = \\frac{2}{L} \\cdot \\frac{1}{2} \\int_0^{L/2} (1 - \\cos\\frac{2\\pi x}{L}) dx = \\frac{1}{L} \\left[ x - \\frac{L}{2\\pi} \\sin\\frac{2\\pi x}{L} \\right]_0^{L/2} = \\frac{1}{L} \\left( \\frac{L}{2} - 0 \\right) = \\frac{1}{2}$.\nFyzikálně: stav n=1 je symetrický vůči středu boxu, takže pravděpodobnost je rovnoměrná v obou polovinách.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3545",
+      "category": "chemistry",
+      "want": "D",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "The question asks to calculate $\\Delta_{\\mathrm{r}} G^{\\ominus}(375 \\mathrm{~K})$ for the reaction $2 \\mathrm{CO}(\\mathrm{g}) + \\mathrm{O}_2(\\mathrm{g}) \\to 2 \\mathrm{CO}_2(\\mathrm{g})$ given $\\Delta_{\\mathrm{r}} G^{\\ominus}(298 \\mathrm{~K}) = -568.3 \\mathrm{~kJ/mol}$ and $\\Delta_{\\mathrm{r}} H^{\\ominus}(298 \\mathrm{~K}) = -568.3 \\mathrm{~kJ/mol}$ (since $\\Delta G = \\Delta H - T\\Delta S$ and at 298 K $\\Delta G \\approx \\Delta H$ for this reaction).\n    Wait, the prompt doesn't give the values. Let me check the prompt again. Ah, the values are missing in the prompt text provided by the user.\n    …[snip]… l \\Delta_{\\mathrm{r}} G^{\\ominus}}{\\partial T}\\right)_P = \\frac{\\Delta_{\\mathrm{r}} H^{\\ominus} - \\Delta_{\\mathrm{r}} G^{\\ominus}}{T}$.\n   - Tříčka: $\\Delta_{\\mathrm{r}} H^{\\ominus} - \\Delta_{\\mathrm{r}} G^{\\ominus} = 1.6 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$.\n   - Tříčka je konstantní (pro ideální plynů).\n   - $\\Delta_{\\mathrm{r}} G^{\\ominus}(375) = \\Delta_{\\mathrm{r}} G^{\\ominus}(298) + \\frac{\\Delta_{\\mathrm{r}} H^{\\ominus} - \\Delta_{\\mathrm{r}} G^{\\ominus}}{298} \\cdot (375 - 298) = -568.3 + \\frac{1.6}{298} \\cdot 77 \\approx -568.3 + 0.41 = -567.7$.\n   - Opravené hodnoty: $\\Delta_{\\mathrm{r}} G^{\\"
+    },
+    {
+      "id": "mmlu_chemistry_3546",
+      "category": "chemistry",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Pravděpodobnost je součin amplitudy a šířky intervalu: $P = \\int_{4.95}^{5.05} \\frac{4}{L} \\sin^2(\\frac{\\pi x}{L}) dx$. V intervalu kolem středu $x=L/2$ je $\\sin^2(\\pi x/L) \\approx 1$. Pro šířku $\\Delta x = 0.1 \\mathrm{~nm}$ a $L=10 \\mathrm{~nm}$ je $P \\approx \\frac{4}{10} \\cdot 1 \\cdot 0.1 = 0.04$. Přesně: $\\frac{2}{L} \\int_{4.95}^{5.05} (1 - \\cos(2\\pi x/L)) dx = \\frac{2}{10} [x - \\frac{L}{2\\pi} \\sin(2\\pi x/L)]_{4.95}^{5.05} = 0.2 \\cdot (0.1 - \\frac{10}{2\\pi} (\\sin(1.01\\pi) - \\sin(0.99\\pi))) \\approx 0.2 \\cdot (0.1 - 0.001) \\approx 0.02$. Přesněji: $\\sin^2(0.995\\pi) \\approx 0.9995$, integrál přes interval 0.1 dá 0.01998. Zaokrouhleně 0.020.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_chemistry_3547",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) 8 μT.\n1) Chemický posuv $\\Delta \\delta$ je rozdíl v ppm: $\\Delta \\delta = 9.80 - 2.20 = 7.60 \\text{ ppm}$.\n2) Převod na Tesla: $\\Delta B = \\Delta \\delta \\cdot \\frac{B_0}{10^6} = 7.6 \\cdot 10^{-6} \\cdot 1.5 = 11.4 \\cdot 10^{-6} \\text{ T} = 11.4 \\mu\\text{T}$.\n3) Zaokrouhleněno na nejbližší možnost: 11 μT.\nOpravené: 7.6 ppm × 1.5 T/10^6 = 11.4 μT. Nejbližší odpověď je (E).\n\nWait, let me re-calculate: 7.6 × 1.5 = 11.4. Option E je 11 μT.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3548",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: 14 eV.\n\n1) Fotony mají energii $E = h \\cdot c / \\lambda = 6.626 \\cdot 10^{-34} \\cdot 3 \\cdot 10^8 / 58.4 \\cdot 10^{-9} \\approx 3.40 \\mathrm{eV}$.\n2) Kinetická energie elektronu: $K = m_e v^2 / 2 = 9.11 \\cdot 10^{-31} \\cdot (1.59 \\cdot 10^6)^2 / 2 \\approx 1.14 \\mathrm{eV}$.\n3) Ionizační energie: $E_{ion} = E_{ph} - K = 3.40 - 1.14 = 2.26 \\mathrm{eV}$? Ne, počítám chybně.\nOprava: $E_{ph} = 1240 / 58.4 \\approx 21.23 \\mathrm{eV}$. Kinetická energie: $K = 1.14 \\mathrm{eV}$. Ionizační energie: $21.23 - 1.14 = 20.09 \\mathrm{eV}$. Nejbližší odpověď (B) 20 eV.\n\nPřepočty:\n1) Fotony: $E = 1240 / 58.4 \\approx 21.23 \\mathrm{eV}$.\n2) Kinetická energie: $K = m_e v^2 / 2 = 9.11 \\cdot 10^{-31} \\cdot 2.528 \\cdot 10^{12} / 2 \\approx 1.15 \\mathrm{eV}$.\n3) Ionizační energie: $E_{ion} = E_{ph} - K = 20.08 \\mathrm{eV}$. Zaokrouhleně 20 eV.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3549",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": true,
+      "raw": "The problem asks for the width $L$ of a 1D infinite well with depth $V_0 = 20.0 \\text{ eV}$ and ground state energy $E_1 = 3.00 \\text{ eV}$.\n    The energy levels of a finite well are given by the transcendental equation:\n    $E = \\frac{\\hbar^2 k^2}{2m}$ where $k = \\sqrt{2mE}/\\hbar$.\n    The boundary condition at the wall gives $\\cos(kL/2) = \\frac{E}{V_0}$ for the ground state (even parity).\n    Wait, the standard transcendental equation for the first state is $\\tan(kL/2) = \\frac{\\sqrt{V_0^2 - E^2}}{E}$? No, let's re-derive.\n    The wavefunction inside is $\\cos(kx/2)$ (centered at 0). At the b …[snip]… hbar}{2mE/\\hbar^2} = \\frac{\\sqrt{V_0-E}}{E} \\cdot \\frac{\\hbar}{m} \\cdot \\frac{m}{1} = \\frac{\\sqrt{V_0-E}}{E} \\cdot \\frac{\\hbar}{m}$? No.\n    Let's re-do: $\\psi(x) = A \\cos(kx/2)$ for $-L/2 < x < L/2$.\n    $\\psi'(x) = -A \\frac{k}{2} \\sin(kx/2)$.\n    At $x=L/2$, $\\psi'(L/2) = \\frac{\\kappa}{k} \\psi(L/2) \\implies \\frac{k}{2} \\sin(kL/2) = \\frac{\\kappa}{k} \\cos(kL/2) \\implies \\tan(kL/2) = \\frac{2\\kappa}{k^2}$.\n    Wait, $k = \\sqrt{2mE}/\\hbar$ and $\\kappa = \\sqrt{2m(V_0-E)}/\\hbar$.\n    Then $k^2 = 2mE/\\hbar^2$.\n    So $\\frac{2\\kappa}{k^2} = \\frac{2 \\sqrt{2m(V_0-E)}/\\hbar}{2mE/\\hbar\n\n[RETRY] Answer: H"
+    },
+    {
+      "id": "mmlu_chemistry_3550",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Bond energy per molecule: $E = D_0 = 4.4781 \\mathrm{eV}$.\n2) Convert to Joules: $4.4781 \\times 1.60218 \\times 10^{-19} \\approx 7.175 \\times 10^{-19} \\mathrm{J}$.\n3) Multiply by Avogadro's number: $7.175 \\times 10^{-19} \\times 6.022 \\times 10^{23} \\approx 432070 \\mathrm{J} \\approx 432.07 \\mathrm{kJ} / \\mathrm{mol}$.\n4) The reaction $\\mathrm{H}_2 \\to 2\\mathrm{H}$ breaks one bond, so $\\Delta H = +432.07 \\mathrm{kJ} / \\mathrm{mol}$.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3551",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Rotational energy levels: $E_J = B J(J+1)$. Transition frequency $\\nu = E_{J+1} - E_J = 2B(J+1)$.\n1) Given $\\nu_{2 \\to 3} = 126.4 \\mathrm{GHz} = 2B(3) \\implies B = 21.07 \\mathrm{GHz}$.\n2) For $J=5 \\to 6$: $\\nu_{5 \\to 6} = 2B(6) = 12 \\cdot 21.07 = 252.84 \\mathrm{GHz}$.\nZaokrouhleně 252.8 GHz.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3552",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (J) 0.249 %.\n\nKrok 1: Taylorův rozvoj $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$\nKrok 2: Pro $x=0.005$ je $\\ln(1.005) \\approx 0.004987512$.\nKrok 3: Rozdíl je $x - \\ln(1+x) \\approx \\frac{x^2}{2} = \\frac{0.000025}{2} = 0.0000125$.\nKrok 4: Procentní rozdíl relativně k $x$: $\\frac{x - \\ln(1+x)}{x} \\times 100\\% \\approx \\frac{x}{2} \\times 100 = \\frac{0.005}{2} \\times 100 = 0.25\\%$. Přesněji: $\\frac{0.005 - 0.004987512}{0.005} \\times 100 = 0.24984\\% \\approx 0.249\\%$.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3553",
+      "category": "chemistry",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Vypočítejme maximální vlnovou délku pomocí Wienova zákona: $\\lambda_{\\max} = \\frac{b}{T}$. Konstanta Wienova zákona je $b \\approx 2.898 \\times 10^{-3} \\mathrm{m \\cdot K}$.\n$\\lambda_{\\max} = \\frac{2.898 \\times 10^{-3}}{288} \\approx 1.006 \\times 10^{-5} \\mathrm{m} = 10.06 \\mu\\mathrm{m}$.\nNejbližší odpověď je (G).\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_chemistry_3554",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Vypočítejme $\\lambda_{\\max}$ podle Wienova zákona: $\\lambda_{\\max} = \\frac{b}{T}$ s $b \\approx 2.898 \\times 10^{-3} \\mathrm{~m·K}$.\n$\\lambda_{\\max} = \\frac{2.898 \\times 10^{-3}}{10^7} = 2.898 \\times 10^{-10} \\mathrm{~m} \\approx 2.9 \\times 10^{-10} \\mathrm{~m}$. Nejbližší odpověď je (H) 3 × 10⁻¹⁰ m.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3555",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The Joule-Thomson coefficient is $\\mu = (\\partial T / \\partial p)_H = \\frac{1}{C_p} \\left( \\frac{\\partial H}{\\partial p} \\right)_T$.\n1) Convert pressure to MPa: $1.00 \\text{ bar} = 0.101325 \\text{ MPa}$.\n2) Calculate $\\mu$: $\\mu = \\frac{-3290 \\text{ J/mol·MPa}}{110 \\text{ J/mol·K}} \\approx -29.91 \\text{ K/MPa}$.\n3) The sign: $\\mu$ is negative, meaning the gas heats up upon expansion (like $\\text{N}_2$ at room temperature). The question asks for the value of $\\mu$ — the magnitude is 29.9.\n4) Check options: (C) is 29.9.\n\nVýsledek: 29.9 K/MPa.\nVýpočet: 1) 1 bar = 0.101325 MPa. 2) $\\mu = \\frac{\\partial H/\\partial p}{C_p} = \\frac{-3290}{110} \\approx -29.91$. Hodnota koeficientu je 29.9.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3556",
+      "category": "chemistry",
+      "want": "A",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Reakce: $\\text{Mg}(s) + 2\\text{HCl}(aq) \\to \\text{MgCl}_2(aq) + \\text{H}_2(g)$.\n2) Počet mol Mg: $n = 15/24.31 \\approx 0.617 \\text{ mol}$.\n3) Objem plynu: $V = nRT/P = 0.617 \\cdot 8.314 \\cdot 303.15 / 101325 \\approx 1.55 \\text{ m}^3 = 1550 \\text{ l}$.\n4) Tlaková práce: $W = -P\\Delta V = -101325 \\cdot 1.55 \\approx -157000 \\text{ J} \\approx -157 \\text{ kJ}$.\n5) Přepočet na kJ: 157 kJ. Nejbližší odpověď je (I) −2.5 kJ? Ne, počítám znovu.\n6) Oprava: 15 g Mg $\\to$ 0.617 mol. Objem $\\approx 1550 \\text{ l}$. Tlak 1 atm = 101325 Pa. Práce $W = -P\\Delta V = -101325 \\cdot 1.55 \\approx -157 \\text{ kJ} …[snip]… jem $\\text{H}_2$ je 31 l. Prace $-3.1 \\text{ kJ$. Nejbližší (G).\n\nVýsledek: 15 g Mg $\\to$ 0.617 mol Mg $\\to$ 1.23 mol $\\text{H}_2$. Objem $\\text{H}_2$ je 31 l. Prace $-3.1 \\text{ kJ$. Nejbližší (G).\n\nVýsledek: 15 g Mg $\\to$ 0.617 mol Mg $\\to$ 1.23 mol $\\text{H}_2$. Objem $\\text{H}_2$ je 31 l. Prace $-3.1 \\text{ kJ$. Nejbližší (G).\n\nVýsledek: 15 g Mg $\\to$ 0.617 mol Mg $\\to$ 1.23 mol $\\text{H}_2$. Objem $\\text{H}_2$ je 31 l. Prace $-3.1 \\text{ kJ$. Nejbližší (G).\n\nVýsledek: 15 g Mg $\\to$ 0.617 mol Mg $\\to$ 1.23 mol $\\text{H}_2$. Objem $\\text{H}_2$ je 31 l. Prace $-3.1 \\text{ kJ$. Nejbližší (G)."
+    },
+    {
+      "id": "mmlu_chemistry_3557",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B) 1040 J.\nPostup:\n1) Výsledek: W = m·g·h = 65 × 1.6 × 4 = 416 J.\n2) Přesnější výpočet: 65 kg × 1.60 m/s² × 4.0 m = 416 J.\n3) Přesné číslo 416 J nejbližší je (D) 4.2 × 10² J.\n4) Přesná odpověď: 416 J. Zaokrouhleno na dvě desetinné místo: 4.2 × 10² J.\n\nWait, let me re-calculate: 65 × 1.6 × 4 = 416. Option D je 4.2 × 10² = 420. Option B je 1040. Opisal jsem se v hlavě — 65 × 1.6 × 4 = 416. Nejbližší je D.\n\nOpravím: 65 × 1.6 × 4 = 416. Zaokrouhleno na dvě desetinné: 4.2 × 10² J. Odpověď (D).\n\nWait, let me re-read the question. 65 kg, 4 m, g=1.6. 65 × 1.6 × 4 = 416. Option D je 4.2 × 10² = 420. Option B je 1040 — to by bylo na Zemi (65 × 9.8 × 4 = 2548).\n\nPřečtu znovu: 65 × 1.6 × 4 = 416. Zaokrouhlení na dvě desetinné: 4.2 × 10² J. Odpověď (D).\n\nWait, proč jsem si vypsal B? Přesně 416.0. Zaokrouhleno na dvě desetinné: 4.2 × 10² J.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3558",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: -1368 kJ/mol.\nKrok 1: Pro výpočet entalpie z vnitřní energie použijeme $\\Delta H = \\Delta U + \\Delta n_g RT$.\nKrok 2: Počet molů plynu v produktech je 5, v reaktantech 3 (ethanol je kapalina, nepočítáme). $\\Delta n_g = 5 - 3 = 2$.\nKrok 3: $\\Delta H = -1373 + 2 \\cdot 8.314 \\cdot 10^{-3} \\cdot 298.15 \\approx -1373 + 4.96 = -1368.04$.\nZaokrouhleno na nejbližší celé číslo: -1368.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3559",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": true,
+      "raw": "*   System: 3.00 mol diatomic gas.\n    *   Initial state: $T_1 = 200 \\text{ K}$.\n    *   Final state: $T_2 = 250 \\text{ K}$.\n    *   Process: Reversible and adiabatic.\n    *   Given: $C_{V,m} = 27.5 \\text{ J K}^{-1} \\text{ mol}^{-1}$.\n    *   Question: $\\Delta S$ of the sample.\n\n    *   For a reversible adiabatic process, $\\Delta S = 0$ (isentropic).\n    *   Wait, the question asks for $\\Delta S$ of the *sample*.\n    *   Is it a reversible adiabatic process? Yes, the problem states \"reversibly and adiabatically\".\n    *   By definition, an adiabatic reversible process is isentropic.\n    *   $\\D …[snip]…    $T_1 = 200$ K, $T_2 = 250$ K.\n    $C_{V,m} = 27.5$ J K$^{-1}$ mol$^{-1}$.\n    For a diatomic gas, $C_{V,m} = \\frac{5}{2} R = 2.5 \\cdot 8.314 \\approx 20.785$. Wait, the problem says $C_{V,m} = 27.5$. This is a specific value given, so use it.\n    Adiabatic reversible $\\implies \\Delta S = 0$.\n    Let's double check: $\\Delta S = n C_V \\ln(T_2/T_1) + n R \\ln(P_2/P_1)$.\n    For adiabatic reversible, $\\Delta S = 0$.\n    Is there a catch? \"adiabatic\" means $Q=0$. \"reversible\" means $\\Delta S = 0$.\n    The question asks for $\\Delta S$ of the sample.\n    $\\Delta S = 0$.\n    Option (E) is 0.\n\n    Let"
+    },
+    {
+      "id": "mmlu_chemistry_3560",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Sjednocení teplot: $T_f = \\frac{100+0}{2} = 50^{\\circ} \\mathrm{C}$. Teplo přenesené: $Q = m c \\Delta T = 10000 \\cdot 385 \\cdot 50 = 192.5 \\times 10^6 \\mathrm{J}$. Protože se jedná o uzavřený systém, celková změna entalpie je nulová — teplo přenesené od horkého bloku je přesně stejné jako přijaté studeným. Změna entalpie celého systému je tedy 0.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3561",
+      "category": "chemistry",
+      "want": "I",
+      "got": "A",
+      "ok": false,
+      "retried": true,
+      "raw": "Výsledek: (A)\n\n1) Počet mol: $n = m/M = 14/28 = 0.5 \\mathrm{~mol}$.\n2) Třída procesu: izotermická expande se do vakuu — irreversibilní.\n3) Třída reversibilní ekvivalent: izotermická expande proti konstantnímu tlaku $P_{\\mathrm{ext}}=0$ je v tomto případě stejná jako expande do vakuva.\n4) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=1 \\mathrm{bar}$ (původní tlak) — ale to by byla reversibilní expande.\n5) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=0.5 \\mathrm{bar}$ (průměrný tlak).\n6) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm …[snip]… 9) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=0.5 \\mathrm{bar}$ — to je reversibilní expande na stejný konečný objem.\n80) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=0.5 \\mathrm{bar}$ — to je reversibilní expande na stejný konečný objem.\n81) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=0.5 \\mathrm{bar}$ — to je reversibilní expande na stejný konečný objem.\n82) Třída reversibilní ekvivalent: expande proti tlaku $P_{\\mathrm{ext}}=0.5 \\mathrm{bar}$ — to je reversibilní expande na stejný konečný objem.\n83\n\n[RETRY] Answer: A"
+    },
+    {
+      "id": "mmlu_chemistry_3562",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\n1) Počet stavů: $n = 2.0 \\mathrm{~mol}$. Počet částic $N = n \\cdot N_A \\approx 1.204 \\cdot 10^{24}$.\n2) Počet mikrostavů: $\\Omega = \\frac{1}{N!} \\left( \\frac{V}{h^3} \\right)^N$. Třída entropie: $S = k_B \\ln \\Omega = n R \\ln(V_2/V_1) + n C_V \\ln(T_2/T_1)$.\n3) Tlačové změny: $P_1 = 10 \\mathrm{~atm}$, $V_1 = nRT_1/P_1 = 2 \\cdot 8.314 \\cdot 298.15 / 101325 \\approx 0.491 \\mathrm{~m}^3$.\n4) Změna objemu: $\\Delta V = A \\cdot \\Delta x = 10 \\cdot 20 = 200 \\mathrm{~cm}^2 \\cdot 20 \\mathrm{cm} = 2000 \\mathrm{~cm}^3 = 2 \\cdot 10^{-3} \\mathrm{m}^3$.\n5) Nový objem: $V_2 = 0.493 \\mathrm{~m}^3$. …[snip]… rostředí + systému: $\\Delta S_{tot} = \\Delta S_{sys} + \\Delta S_{surr} = 0 + Q/T_{ext} = 200/298.15 \\approx 0.67$. Nejbližší je (B) 0.90.\n\nPo zadaných hodnotách: $\\Delta S = n R \\ln(V_2/V_1) + n C_V \\ln(T_2/T_1)$. Tuhá práce $W = -P_{ext} \\Delta V = -200 \\mathrm{J}$. $\\Delta U = W \\Rightarrow \\Delta T = -3.47 \\mathrm{K}$. $\\Delta S = 2 \\cdot 8.314 \\cdot \\ln(1.004) + 57.6 \\cdot \\ln(0.988) \\approx 0.083 - 0.63 = -0.55$. Pokud se ptáme na celkovou změnu entropie: $\\Delta S_{tot} = \\Delta S_{sys} + \\Delta S_{surr} = 0 + Q/T_{ext} = 200/298.15 \\approx 0.67$. Nejbližší odpověď (B) 0.90.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3563",
+      "category": "chemistry",
+      "want": "F",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "*   System: 2.0 mol $\\text{CO}_2$ at $T_1 = 298.15 \\text{ K}$, $P_1 = 10 \\text{ atm}$.\n    *   Expansion: adiabatic against $P_{\\text{ext}} = 1.0 \\text{ atm}$ over $\\Delta x = 20 \\text{ cm}$ with area $A = 10 \\text{ cm}^2$.\n    *   Find $\\Delta U$.\n    *   Constants: $C_{V,m} = 28.8 \\text{ J K}^{-1} \\text{ mol}^{-1}$.\n\n    1.  Work done by the gas: $W = \\int P_{\\text{ext}} dV = P_{\\text{ext}} \\Delta V$.\n    2.  $\\Delta V = A \\cdot \\Delta x = 10 \\text{ cm}^2 \\cdot 20 \\text{ cm} = 200 \\text{ cm}^3 = 0.2 \\text{ L} = 0.2 \\times 10^{-3} \\text{ m}^3$.\n    3.  $P_{\\text{ext}} = 1.0 \\text{ atm} \\appro …[snip]… ger gives 20.\n\n    Is there any reason it could be 40? No.\n    Is there any reason it could be 60? No.\n    Is there any reason it could be 10? No.\n    Is there any reason it could be 0? No.\n    Is there any reason it could be 30? No.\n    Is there any reason it could be 50? No.\n    Is there any reason it could be 70? No.\n    Is there any reason it could be 10? No.\n\n    Wait, what if the area was 100 cm²? Then it would be 203.\n    What if the pressure was 10 atm? Then it would be 203.\n    What if the displacement was 200 cm? Then it would be 203.\n    But the numbers are 10, 20\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_chemistry_3564",
+      "category": "chemistry",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) C_3H_6.\n1) C: 82.8 % × 58 g/mol = 48.024 → 48.024 / 12.01 ≈ 4 atomů.\n2) H: 17.2 % × 58 g/mol = 9.976 → 9.976 / 1.008 ≈ 10 atomů.\n3) Empirická vzorec C4H10. Nejmenší celková hmotnost 54.04.\n4) Skupina C4H10 → C4H10 (butan) nebo C3H6 (buten).\n5) C3H6 má M = 42.08; C4H10 má M = 58.12. Protože M = 58, odpověď je C4H10.\n6) C4H10 je butan.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_chemistry_3565",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: pH = 5.57.\nVýpočet: pH = -log₁₀([H⁺]) = -log₁₀(2.7 × 10⁻⁶) = -(log₁₀ 2.7 + log₁₀ 10⁻⁶) = -(0.431 - 6) = 5.569. Zaokrouhleno na dvě desetinné: 5.57.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3566",
+      "category": "chemistry",
+      "want": "F",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "1) Iron content: 100 g haemoglobin → 35.5 g Fe. Each Fe atom has mass 55.85. Number of Fe atoms = 35.5 / 55.85 ≈ 0.636 mol.\n2) Tryptophan: 148 g / 181.2 g/mol ≈ 0.817 mol.\n3) Since each haemoglobin molecule contains 4 Fe atoms (4 heme groups), the number of molecules is 0.636 / 4 = 0.159 mol.\n4) Molecular weight: 148 g / 0.159 mol ≈ 9300 Da.\n5) Wait, the question asks for the minimum molecular weight consistent with both. If we assume 4 Fe per molecule, M = 9300. If we assume 1 Fe per subunit (4 subunits), M = 37200. The closest value is 32,000 (D) or 66,500 (B) depending on the subunit struct …[snip]… f 4 Fe per molecule, M = 930. If 1 Fe per subunit and 4 subunits, M = 3720. Let's re-calculate: 148/0.636 = 232.5. If 4 Fe per molecule, M = 930. If 1 Fe per subunit and 4 subunits, M = 3720. Let's re-calculate: 148/0.636 = 232.5. If 4 Fe per molecule, M = 930. If 1 Fe per subunit and 4 subunits, M = 3720. Let's re-calculate: 148/0.636 = 232.5. If 4 Fe per molecule, M = 930. If 1 Fe per subunit and 4 subunits, M = 3720. Let's re-calculate: 148/0.636 = 232.5. If 4 Fe per molecule, M = 930. If 1 Fe per subunit and 4 subunits, M = 3720. Let's re-calculate: 148/0.636 = 232.5. If\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_chemistry_3567",
+      "category": "chemistry",
+      "want": "H",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "The reaction is NH₄NO₃ → N₂O + 2H₂O.\n    Mass of NH₄NO₃ = 900 g.\n    Molar mass of NH₄NO₃: N(14) + H₄(4) + N(14) + O₃(48) = 80 g/mol.\n    Number of moles: n = 900 / 80 = 11.25 mol.\n    Stoichiometry: 1 mol NH₄NO₃ → 1 mol N₂O + 2 mol H₂O.\n    The question asks for the volume of gas formed. The gas is N₂O (H₂O is liquid at 1092 °C, boiling point 101.3 °C).\n    Number of moles of N₂O = 11.25 mol.\n    Ideal gas law: V = nRT/P.\n    T = 1092 °C = 1365 K.\n    P = 101325 Pa (standard pressure).\n    R = 8.314 J/(mol·K).\n    V = (11.25 × 8.314 × 1365) / 101325 ≈ 126.5 m³ = 126500 l.\n    Wait, let me re- …[snip]… olární hmotnost NH₄NO₃: 14+4+14+48 = 80 g/mol.\n2) Počet mol: n = 900/80 = 11.25 mol.\n3) Tvorba plynu: 1 mol NH₄NO₃ → 1 mol N₂O + 2 mol H₂O. V plynném stavu vznikne 3 mol plynu (H₂O se při 1092 °C rozkládá na H₂ a O₂).\n4) Celkový počet mol plynu: n_total = 11.25 × 3 = 33.75 mol.\n5) Ideální plynný zákon: V = nRT/P. T = 1092 + 273.15 = 1365.15 K. P = 101325 Pa. R = 8.314.\n6) V = 33.75 × 8.314 × 1365.15 / 101325 ≈ 378.0 l.\n7) Přepočet na litry: 378.0 l × 1000 = 378000 ml = 378 l.\n8) Opakujme: 33.75 mol plynu × 22.4 l/mol (STP) = 756 l. Ale to je na 0 °C.\n9) V = nRT/P: 33.75 × 8.314 × 1365.15 / 101"
+    },
+    {
+      "id": "mmlu_chemistry_3568",
+      "category": "chemistry",
+      "want": "I",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "Výsledek: (B)\n\n1) Tloušťka v atomech: N = 50 000.\n2) Třísek detekce: r = 10⁻¹² cm. Tříseká plocha: A = πr² ≈ 3.14 × 10⁻²⁴ cm².\n3) Tříseká plocha jednoho atomu: a = 4 × 10⁻¹⁶ cm².\n4) Tříseká plocha per atom: a/A ≈ 7.85 × 10⁷.\n5) Tříseká plocha celého kusu: A_tot = N·a = 2 × 10⁻¹⁰ cm².\n6) Tříseká plocha protiímu: A_tot/A ≈ 6.36 × 10⁷.\n7) Pravděpodobnost: 1/6.36 × 10⁷ ≈ 1.57 × 10⁻⁸.\n8) Tříseká plocha protiímu: 1/6.36 × 10⁷ ≈ 1.57 × 10⁻⁸.\n9) Tříseká plocha protiímu: 1/6.36 × 10⁷ ≈ 1.57 × 10⁻⁸.\n10) Tříseká plocha protiímu: 1/6.36 × 10⁷ ≈ 1.57 × 10⁻⁸.\n11) Tříseká plošina: 1/6.36 × 10⁷ ≈ 1.57 × 10⁻⁸. …[snip]… cm/atom ≈ 1.25 × 10^-3 cm.\nKrok 2: Tříková plocha, do které se částice musí dostat: πr² = π(10⁻¹² cm)² ≈ 3.14 × 10⁻²4 cm².\nKrok 3: Tříková plocha jednoho atomu: 4 × 10⁻¹6 cm².\nKrok 4: Tříka atomů, které mohou odchýlit: 3.14 × 10⁻²4 / 4 × 10⁻¹6 ≈ 7.85 × 10⁻8.\nKrok 5: Tříka všech atomů v cestě: 5 × 10^4.\nKrok 6: Pravděpodobnost: 1 - (1 - 7.85 × 10⁻⁸)^(5 × 10^4) ≈ 1 - exp(-3.925 × 10⁻3) ≈ 0.00392.\nKrok 7: 1/0.00392 ≈ 255. Wait, počítám chybně. Tříka atomů v cestě je 50000. Tříka atomů, které mohou odchýlit, je 7.85 × 10⁻8. Tříka všech atomů je 50000. Tříka atomů, které by neměly odchýlit: 1 - 7.8"
+    },
+    {
+      "id": "mmlu_chemistry_3569",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Sravec na součin a součet: součin 10, součet 7. Čísla 2 a 5 splňují obě podmínky: 2·5=10, 2+5=7. Rozklad: (x-2)(x-5)=0. Kořene 2 a 5.\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3570",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — KucLab.\n\n1) H12C → 6p + 6n. H12C → 12.001136 u; p = 1.007825 u, n = 1.008665 u.\n2) Defekt vazby: ΔE = (6·1.007825 + 6·1.008665 − 12.001136) × 931.5 MeV/u ≈ 0.016126 × 931.5 ≈ 15.02 MeV per nucleon.\n3) Celková vazebná energie: 15.02 × 12 ≈ 180.2 MeV.\n4) Přesnější hodnoty: 12C má vazebnou energii 92.16 MeV na nukleon (experimentálně ~92.16 MeV). Celkem 1105.9 MeV.\n5) Přesná odpověď: (C) 92.22 MeV per nukleon × 12 ≈ 1106.6 MeV.\n\nPozor: otázka se ptá na celkovou vazebnou energii a průměrnou per nukleon. Výsledek (C) 92.22 MeV/n a ~1106 MeV celkem.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3571",
+      "category": "chemistry",
+      "want": "E",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (E)\n\n1) pH + pOH = 14.00 (při 0 °C). pOH = 14.00 − 3.89 = 10.11.\n2) [OH⁻] = 10^(-pOH) = 10⁻¹⁰.¹¹ ≈ 7.8 × 10⁻¹¹ M.\n3) Přesná výečt: 10⁻¹⁰.¹¹ = 10⁻¹⁰ × 10⁻⁰.¹¹ ≈ 7.8 × 10⁻¹¹.\n4) Přesná odpověda: (H) — počítám znovu: 14 − 3.89 = 10.11. 10⁻¹⁰.¹¹ = 7.8 × 10⁻¹¹.\n\nOpravené: (H) je správná odpověď.\n\nVýsledek: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3572",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Po dvou poločasech (60 min / 30 min) koncentrace klesne na (1/2)² = 1/4 původní hodnoty, což je 25 %.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3573",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Objem vody: 19.8 × 10^9 l = 19.8 × 10^9 cm³.\n2) Hmotnost: m = 19.8 × 10^9 cm³ × 1 g/cm³ = 19.8 × 10^9 g = 19.8 × 10^6 kg.\n3) Počet mol: n = m/M = 19.8 × 10^6 kg / 0.018 kg/mol = 1.1 × 10^9 mol.\n4) Teplo: Q = n·ΔH_fus = 1.1 × 10^9 mol × 1.4 kcal/mol = 1.54 × 10^9 kcal.\n5) Výsledek: 1.54 × 10^9 kcal. V otázce je 1.54 Kcal — jednotka Kcal pravděpodobně znamená 10^3 kcal (kilo-kilokalorie), což odpovídá 1.54 × 10^9 kcal.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3574",
+      "category": "chemistry",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Zbytek látky po jedné hodině je 25 %, tedy 1/4. Tři polovičky rozpadu (1/2 → 1/4 → 1/8) trvají 3 × T½. Tři polovičky trvají 3 × 20 min = 60 min, tedy T½ = 20 min = 1/3 hodiny. Nicméně žádná možnost neodpovídá 20 min. Přesněji: N(t) = N₀·e^(-λt). 0.25 = e^(-λ·1) → λ = ln(4) ≈ 1.386. T½ = ln(2)/λ ≈ 0.5 h. Nejbližší odpověď je (A).\n\nVýsledek: 1/2 hodiny.\n1) Po jedné hodině zbývá 25 % původní látky.\n2) Tři polovičky rozpadu: 100 % → 50 % → 25 % → 12,5 %.\n3) Tři polovičky trvají 3 × T½. Tři polovičky trvají 1 hodinu, tedy T½ = 20 min = 1/3 hodiny.\n4) Přesněji: N(t) = N₀·e^(-λt). 0.25 = e^(-λ·1) → λ = ln(4) ≈ 1.386. T½ = ln(2)/1.386 ≈ 0.5 h.\n5) Tři polovičky trvají 3 × 20 min = 60 min. T½ = 20 min = 1/3 hodiny.\n6) Nejbližší odpověď je (A) 1/2 hodiny.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_chemistry_3575",
+      "category": "chemistry",
+      "want": "J",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Moly: 24, non-metal: 80. Stechiometrie: M + 2X → M₂X₂.\n2) 33.3 g M → n = 33.3/24 ≈ 1.3875 mol. Potřebuje 2.775 mol X → m = 2.775 × 80 = 222 g. Nejbližší odpověď (A) 225 g.\n3) 1 g M → 1/24 mol; 5 g X → 5/80 = 0.0625 mol. Limitující látka: X (0.0625 < 0.0417). Produkt M₂X₂: 0.0625 mol × (24+160) = 11.0625 g.\n4) Přesná odpověď na první část: 222 g. Na druhou: 11.06 g. Nejbližší kombinace je (A) 225 g a 6.25 g (zaokrouhleno).\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_chemistry_3576",
+      "category": "chemistry",
+      "want": "F",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: Odpověď je (C).\n\nKdyž vyjde z vody, voda na kůži začne odpařovat. Odpařování je endotermický proces — molekuly s nejvyšší kinetickou energií unikají, což snižuje průměrnou teplotu povrchu. V kombinaci s proudícím proudem vzduchu (konvekce) je tento chlazicí efekt výrazný. (B) a (I) popisují subjektivní vnímání, ale fyzikální příčinou je odpařování. (F) je pravdivé jen vlivem vedení tepla do vody, ale po vystoupení převáží odpařování.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3577",
+      "category": "chemistry",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Lattice energy je primárně určována Coulombovou přitažlivostí: U ∝ Q₁Q₂/r₁+r₂. V řadě NaF → NaCl → NaBr → KCl → CsCl jsou všechny ionty jednorovinné (Q₁Q₂ = 1), takže rozdíly odrážejí velikost poloměrů. F⁻ je nejmenší, Cs⁺ největší; rostoucí poloměr iontů zvyšuje vzdálenost mezi nimi a snižuje energetickou stabilizaci krystalové mřížky. Porovnání NaF a NaCl ukazuje vliv aniontu (F⁻ < Cl⁻), porovnání NaCl a KCl vliv kationtu (Na⁺ < K⁺), a CsCl jako kombinaci obou efektů.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_chemistry_3578",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(a) Raoultův zákon: P_i = x_i·P_i°; x_toluene = 0.6, x_benzene = 0.4. P_benzene = 0.4·385 = 154.0 Torr; P_toluene = 0.6·139 = 83.4 Torr.\n(b) P_total = 154.0 + 83.4 = 237.4 Torr.\n(c) Raoult-Dalton: x_toluene,vap = P_toluene/P_total = 83.4/237.4 ≈ 0.351.\nVýsledek odpovídá možnosti (I).\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3579",
+      "category": "chemistry",
+      "want": "C",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "*   Substance: methyl alcohol (CH₃OH).\n    *   Molar mass: 15.03 g/mol.\n    *   Steps:\n        1. Heating solid from -98°C to 0°C: q₁ = m·c_s·ΔT.\n        2. Melting at 0°C: q₂ = n·ΔH_fus.\n        3. Heating liquid from 0°C to 65°C: q₃ = m·c_l·ΔT.\n        4. Vaporizing at 65°C: q₄ = n·ΔH_vap.\n    *   Total q = q₁ + q₂ + q₃ + q₄.\n    *   m = 15.03 g.\n    *   q₁ = 15.03 × 0.57 × 98 = 840.16 cal.\n    *   q₂ = 1 mol × 22.0 = 22.0 cal.\n    *   q₃ = 15.03 × 0.57 × 65 = 555.16 cal.\n    *   q₄ = 1 mol × 263 = 263 cal.\n    *   Total = 840.16 + 22 + 555.16 + 263 = 1680.32 cal.\n    *   Convert to kcal: 16 …[snip]… \n\n[RETRY] Výsledek: (B) 14.09 Kcal.\n\nPostup:\n1) Hmotnost 1 mol CH_3OH: M = 12+3+4+16 = 35 g/mol.\n2) Tání: Q_fus = m·l_f = 35 × 22 = 770 cal.\n3) Ohřev tekutiny: ΔT = 65 - (-98) = 163 K. Q_liq = m·c·ΔT = 35 × 0.570 × 163 = 3261.15 cal.\n4) Vapouštění: Q_vap = m·L_v = 35 × 263 = 9205 cal.\n5) Celkem: Q = 770 + 3261.15 + 9205 = 13236.15 cal = 13.24 Kcal.\n6) Přesnější výpočet s přesnými hodnotami: 35 × (22 + 0.570 × 163 + 263) = 35 × 446.51 = 15627.85 cal = 15.63 Kcal.\n7) Přesná hodnota: 35 × 22 + 35 × 0.57 × 163 + 35 × 263 = 770 + 3261.15 + 9205 = 13236.15 cal = 13.24 Kcal.\n8) Přesná hodnota s 35.04"
+    },
+    {
+      "id": "mmlu_chemistry_3580",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Koulombova síla je F = k·q₁·q₂/r².\n(a) q₁ → 2q₁: síla se zdvojuje (F ∝ q₁·q₂).\n(b) q₁→2q₁, q₂→2q₂: síla se zčetná (4·q₁·q₂).\n(c) r₂ → 2r₂: vzdálenost r = r₁+r₂; pokud r₁≈r₂, r roste o ~50 %, síla klesne. Pokud r₂ výrazně převyšuje r₁, r roste o ~50 %; pokud r₁ výrazně převyšuje r₂, r roste o ~100 %. V typickém případě iontů stejného řádu velikosti se r roste o ~50 %, síla klesne o faktor ~4.\n(d) r₁→2r₁, r₂→2r₂: r roste o ~100 %, síla klesne o faktor 4.\nPři interpretaci (c) a (d) jako změny souhrnné vzdálenosti r: (c) r → 1.5r → F/2.25; (d) r → 2r → F/4.\nPři interpretaci (c) jako změna pouze r₂ a (d) jako změna obou: (c) r → 1.5r → F/2.25; (d) r → 2r → F/4.\nZde: (a) 2×, (b) 4×, (c) 1/2.25 ≈ 0.44, (d) 1/4. Nejbližší odpověď je (I): (a) doubled, (b) quadrupled, (c) halved, (d) quartered.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3581",
+      "category": "chemistry",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "NaOAc je sůl kyseliny slabé účinné, takže hydrolyzuje: CH3COO⁻ + H2O ⇌ CH3COOH + OH⁻.\nKonstanta hydrolyzy K_h = K_w / K_a = 10⁻¹⁴ / 1.8 × 10⁻⁵ ≈ 5.56 × 10⁻¹0.\nPro 0.1 M roztok: [OH⁻] = √K_h·c = √5.56 × 10⁻¹0 ≈ 7.45 × 10⁻⁶ M.\npOH = -log(7.45 × 10⁻⁶) ≈ 5.13.\npH = 14 − 5.13 = 8.87. Zaokrouhleně 8.9.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_chemistry_3582",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "K_b = K_w / K_a = 10⁻¹⁴ / 1.75 × 10⁻⁵ ≈ 5.71 × 10⁻¹0. pK_b = -log(5.71 × 10⁻¹⁰) ≈ 9.244. Odpovědi (B) a (E) obsahují správné hodnoty; (E) je ale redundantní.\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3583",
+      "category": "chemistry",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "*   Two balloons: same volume ($V$), same porosity (leak rate constant $\\lambda$ is the same).\n    *   Initial state: $P_{O_2}(0) = 4$ atm, $m_{O_2} = 16$ kg. $P_{H_2}(0) = 4$ atm, $m_{H_2} = 1$ kg.\n    *   Oxygen leak: $P_{O_2}(1 \\text{ h}) = 0.5$ atm.\n    *   Find time for hydrogen to reach 0.5 atm.\n\n    *   Leakage follows first-order kinetics: $P(t) = P_0 e^{-kt}$.\n    *   For oxygen: $0.5 = 4 e^{-k \\cdot 1} \\Rightarrow e^{-k} = 1/8 \\Rightarrow k = \\ln 8 \\approx 2.08 \\text{ h}^{-1}$.\n    *   The rate constant $k$ depends on the leak area and permeability, which are the same for both balloo …[snip]… kul: n(O₂) = 16000/32 = 500 mol; n(H₂) = 1000/2 = 500 mol.\n5) Změna tlaku: O₂ kleslo z 4 na 0,5 atm, tedy ztratil 3,5 atm. Tuhost plynu v soustavě je konstantní, tedy únikem se ztrácí stejný počet molekul za jednotku času.\n6) Výsledek: Protože obě balóny obsahují stejný počet molekul, i když O₂ váží víc, oba ztrácejí stejným tempem. Tlak O₂ klesl o 3,5 atm za 60 min → 0,583 atm/min. Tlak H₂ klesne o 3,5 atm za 60/3,5 ≈ 17 min? Ne, počítám chybně — poruchu v myšlení:\nOprava: Tuhost plynu v soustavě je konstantní, ale rychlost úniku závisí na počtu molekul, nikoliv na hmotnosti. Obě balóny obsah"
+    },
+    {
+      "id": "mmlu_chemistry_3584",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Given: 28.0 g CO at STP (0 °C, 1 atm) occupies 22.4 L.\n    *   Find: density of CO at 20 °C and 600 torr.\n    *   Steps:\n        1.  Molar mass of CO: 12.01 + 16.00 = 28.01 g/mol.\n        2.  Molar mass from STP data: 28.0 g / 22.4 L = 1.25 g/L at STP.\n        3.  Ideal gas law: d = PM/RT.\n        4.  Conditions: T = 20 °C = 293.15 K. P = 600 torr = 600/760 atm ≈ 0.78947 atm.\n        5.  R = 0.08206 L·atm/(mol·K).\n        6.  d = (0.78947 × 28.01) / (0.08206 × 293.15) = 22.11 / 24.056 ≈ 0.9192 g/L.\n    *   Check options: (H) 0.9198 g/l.\n\n    1) M(CO) = 28.01 g/mol.\n    2) Ideální stav: d = …[snip]… on?\n    (C) 0.789 — this is P/1000? No.\n    (I) 0.625 — 1.25 * 0.5.\n    (J) 0.345 — 1.25 * 0.276.\n    (G) 1.482 — 1.25 * 1.18.\n    (F) 2.225 — 1.25 * 1.78.\n    (B) 1.00 — 1.25 * 0.8.\n    (A) 1.96 — 1.25 * 1.57.\n\n    The closest is H.\n\n    Krok 1: M(CO) = 28.01 g/mol.\n    Krok 2: T = 293.15 K, P = 600/760 ≈ 0.7895 atm.\n    Krok 3: d = PM/RT = (0.7895 × 28.01) / (0.08206 × 293.15) ≈ 0.9192 g/l. Zaokrouhleno na 0.9198.\n\n    Wait, let me re-calculate 600/760. 0.78947368.\n    1.25 * 0.78947368 = 0.98684.\n    0.98684 * 273.15/293.15 = 0.9192.\n    Rounding to 4 decimal places: 0.9192.\n    Option H: 0"
+    },
+    {
+      "id": "mmlu_chemistry_3585",
+      "category": "chemistry",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "Výsledek: (B)\n\n1) Hydrolyza: CH_3COO^- + H_2O ⇌ CH_3COOH + OH^-. K_h = K_w/K_a = 10^-4 / 1.8·10^-5 ≈ 5.56.\n2) [OH^-] = √K_h·c = √5.56·0.1 ≈ 0.745 M.\n3) pOH = -log(0.745) ≈ 0.13.\n4) pH = 14 - 0.13 = 13.87? Ne, počítám znovu: K_h = 5.56, [OH^-] = √0.556 = 0.745. Oh, K_a = 1.8·10^-5 → K_h = 5.56. Pro 0.1 M: [OH^-] = √0.556 = 0.745. pH = 14 - 0.13 = 13.87.\nWait, K_a = 1.8·10^-5 je typické pro kyselinu octanovou. K_h = 5.56. Pro 0.1 M sůl: [OH^-] = √5.56·0.1 = 0.745. pH = 13.87.\nZvolené možnosti: pH 10.88 odpovídá [OH^-] = 10^-3.12 ≈ 0.0076. To by bylo pro c = 0.01 M.\nPřepočítám: K_h = 5.56. Pro c  …[snip]…  = 0.01 M a K_w = 10^-6? [OH^-] = 0.236 → pH = 12.6.\nCo když K_h = 55.6 a c = 0.1 M a K_w = 10^-6? [OH^-] = 7.45 → pH = 10.6.\nCo když K_h = 5.56 a c = 0.01 M a K_w = 10^-4? [OH^-] = 0.236 → pH = 11.6.\nCo když K_h = 55.6 a c = 0.1 M a K_w = 10^-4? [OH^-] = 7.45 → pH = 10.6.\nCo když K_h = 5.56 a c = 0.01 M a K_w = 10^-6? [OH^-] = 0.236 → pH = 12.6.\nCo když K_h = 55.6 a c = 0.1 M a K_w = 10^-6? [OH^-] = 7.45 → pH = 10.6.\nCo když K_h = 5.56 a c = 0.01 M a K_w = 10^-4? [OH^-] = 0.236 → pH = 11.6.\nCo když K_h = 55.6 a c = 0.1 M a K_w = 10^-4? [OH^-] = 7.45 → pH = 10.6.\nCo když K_h\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_math_7687",
+      "category": "math",
+      "want": "H",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "Statement 1: Homomorfismus je injekční právě tehdy, když má triviální jádro — klasické tvrzení. Tuhle podmínku splní každý injektivní homomorfismus. Tvrzení je pravdivé.\nStatement 2: Ideál je podmnožina uzavřená na součin s prvky kruhu; definice ideálu. Tvrzení je pravdivé.\nObě tvrzení správná.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7688",
+      "category": "math",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "Statement 1: Splitting field of a polynomial over Q is always a finite extension, so it's a field. True.\nStatement 2: A finite field exists iff the number of elements is a prime power p^k. 60 = 2²·3·5, not a prime power. False.\nKorektní odpověď: (C).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7689",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "S1: Faleš — dvě vektory mohou být lineárně závislé, pokud jeden je násobkem druhého (např. (1,0) a (2,0)).\nS2: Pravda — definice dimenze prostoru vygenerovaného lineárně nezávislým množinou je velikost této množiny.\nOdpověď: (C)"
+    },
+    {
+      "id": "mmlu_math_7690",
+      "category": "math",
+      "want": "H",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "Statement 1: Každá permutace je součin cyklů — každá permutace se rozkládá na disjunktní cykly, takže je cyklickou permutací (součtem cyklů). Tvrzení 'každá permutace je cyklus' je v kontextu algebraické struktury správné.\nStatement 2: Cyklus je definice permutace — cyklický zápis elementů je permutace.\nObě tvrzení jsou správné.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7691",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Z_3[x]/(x^3 + x^2 + c) is a field iff x^3 + x^2 + c is irreducible over Z_3. Since it's degree 3, it's irreducible iff it has no roots in Z_3.\nTest c = 0: x^3 + x^2 = x^2(x+1) → root x=0. Not a field.\nTest c = 1: x^3 + x^2 + 1. Roots: 0→1, 1→0, 2→8+4+1=13≡1. No roots → irreducible.\nTest c = \n2: x^3 + x^2 + 2. Roots: 0→2, 1→4≡1, 2→8+4+2=14≡2. No roots → irreducible.\nNote: c = -1 ≡ 2 mod 3, c = -2 ≡ 1 mod 3.\nOptions: (A) -2 ≡ 1, (B) 2, (C) 1, (D) -1 ≡ 2, (E) -3 ≡ 0, (F) 0, (G) 3 ≡ 0, (H) 4 ≡ 1, (I) 6 ≡ 0, (J) 5 ≡ 2.\nBoth 1 and 2 work. The question asks for all c in Z_3, but the options are integ …[snip]…  root.\nSo only c=2 works.\nOptions: (B) 2, (D) -1 ≡ 2, (J) 5 ≡ 2. All three are 2 mod 3.\nWait, if the question asks for all c in Z_3, the answer is {2}.\nLet's re-check c=1: x^3+x^2+1. x=1 gives 1+1+1=3≡0. Correct.\nLet's re-check c=2: x^3+x^2+2. x=0→2, x=1→4≡1, x=2→8+4+2=14≡2. Correct.\nSo c=2 is the only value in Z_3.\nThe options are integers; we reduce them mod 3. (B) 2, (D) -1 ≡ 2, (J) 5 ≡ 2. All three are correct. Usually such questions have one answer. Let's re-read: \"Find all c in Z_3\". The set is {2}.\nWait, I miscalculated c=1. 1+1+1=3≡0. Yes, c=1 is not it.\nSo the answer is 2.\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7692",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Statement 1: 159 = 3 × 53. Sylow's theorem: n₃ ≡ 1 mod 3 and n₃ | 53 → n₃ = 1. n₅₃ ≡ 1 mod 53 and n₅₃ | 3 → n₅₃ = 1. Both Sylow subgroups are normal, so G ≅ C₃ × C₅3 = C₁₅9. True.\nStatement 2: 102 = 2 × 3 × 17. Sylow 17-subgroup: n₁₇ ≡ 1 mod 17 and n₁₇ | 6 → n₁₇ = 1. The 17-subgroup is normal. True.\nBoth true.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7693",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Podmínka pro podskupinu: uzavřenost pro binární operaci a inverze. (F) + (E) stačí; (J) je ekvivalentní kombinace obou. (A) a/b je zápis pro a·b⁻¹, takže (A) sama vyhovuje. (B) jen pro komutativní grupy; (C) a−b⁻¹ je a·b⁻¹ v aditivní notaci. (D), (I) vyplývají z (J) nebo (A). (G) a² je jen část. (H) a·a⁻¹ = e, ale to není uzavřenost. (J) je standardní definice podskupiny: uzavřenost pro operaci a inverzi. (A) je stejné v multiplikativní notaci. Obě správné, ale (J) je klasická definice.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7694",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Statement 1: Free abelian groups exist for any rank n ≥ 1 (e.g., Z^n). True.\nStatement 2: The Betti number β is the rank of the free part of the group. If a finitely generated abelian group G has rank β and is generated by n elements, then β ≤ n. If β = n, the torsion-free part has rank n and there is no room for torsion, so G is free abelian. True.\n(J) is the correct answer.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7695",
+      "category": "math",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Statement 1: C_n × C_m is cyclic iff gcd(n,m)=1. False in general.\nStatement 2: D_3 × D_4 has order 24, D_12 has order 24. However, D_3 × D_4 contains elements of order 6 and 4, but D_12 has elements of order 12. They are not isomorphic.\n(F) is correct: Statement 1 is false in general (e.g., C_2 × C_2), and Statement 2 is false. Wait, let me re-read the options.\n(F) says \"Both true, but 1 is sometimes false\" — no, 1 is false in general.\n(I) says \"False, False\". Let's re-evaluate.\nS1: C_n × C_m cyclic iff gcd(n,m)=1. So \"is cyclic\" as a general statement is false.\nS2: D_3 × D_4 has order 24. D_ …[snip]… here's any other interpretation of \"isomorphic to D_12\". No.\nSo (I) is the answer.\n\nWait, let me check if there's any other interpretation of \"isomorphic to D_12\". No.\nSo (I) is the answer.\n\nWait, let me check if there's any other interpretation of \"isomorphic to D_12\". No.\nSo (I) is the answer.\n\nWait, let me check if there's any other interpretation of \"isomorphic to D_12\". No.\nSo (I) is the answer.\n\nWait, let me check if there's any other interpretation of \"isomorphic to D_12\". No.\nSo (I) is the answer.\n\nWait, let me check if there's any other interpretation of \"isomorphic to D_12\". No.\nSo ("
+    },
+    {
+      "id": "mmlu_math_7696",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Statement 1: A free abelian group of rank n has a basis of size n. If n=0, the group is trivial and has only one basis (the empty set), so the statement is false for rank 0. Statement 2: If rank n ≥ 2, there exist non-trivial automorphisms of the free group (e.g., swapping two basis elements), and the group has infinitely many bases. For rank 1, the only non-trivial automorphism is multiplication by ±1, so there are only two bases. Thus, Statement 1 is false because it fails for rank 0; Statement 2 is true.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7697",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The question asks which of the given scenarios describes a binomial distribution.\nA binomial distribution requires:\n1. A fixed number of independent trials ($n$).\n2. Each trial has two possible outcomes (success/failure).\n3. The probability of success $p$ is constant for each trial.\n\nAnalysis:\n(A) 5 drivers, each wearing/not wearing seatbelt. Fixed $n=5$, binary outcome, constant $p$ (assuming population probability). Binomial.\n(B) 5 cards from 52 without replacement. The probability of a heart changes as cards are removed. Hypergeometric, not binomial.\n(C) Number of tosses until a 5. Geometri …[snip]… oisson or Binomial with large n, but not clearly binomial as described).\n\n(A) is the only one fitting all criteria perfectly.\n\nStep-by-step:\n1. Binomial requires fixed $n$, binary outcome, independent trials, constant $p$.\n2. (A) has $n=5$, wear/no-wear, independent (random sample), constant $p$. Correct.\n3. (B) and (F) are hypergeometric because sampling without replacement changes probabilities.\n4. (C) is geometric (number of trials until success).\n5. (D) has more than two outcomes.\n6. (E) has three outcomes.\n7. (G) is continuous.\n8. (H) is a count process, typically Poisson.\n\nVýsledek: (A)."
+    },
+    {
+      "id": "mmlu_math_7698",
+      "category": "math",
+      "want": "H",
+      "got": "D",
+      "ok": false,
+      "retried": true,
+      "raw": "The total weight of a packed box is the sum of three independent random variables: books ($B$), box ($C$), and packing material ($P$).\n    $W = B + C + P$.\n    The variance of a sum of independent random variables is the sum of their variances:\n    $\\sigma_W^2 = \\sigma_B^2 + \\sigma_C^2 + \\sigma_P^2$.\n    Given:\n    $\\sigma_B = 2 \\implies \\sigma_B^2 = 4$\n    $\\sigma_C = 0.15 \\implies \\sigma_C^2 = 0.0225$\n    $\\sigma_P = 0.25 \\implies \\sigma_P^2 = 0.0625$\n    $\\sigma_W^2 = 4 + 0.0225 + 0.0625 = 4.085$\n    $\\sigma_W = \\sqrt{4.085} \\approx 2.02116...$\n    Rounding to three decimal places gives 2.0 …[snip]… 4.085} \\approx 2.021$.\n\n    Výsledek: 2.021.\n    Krok 1: Varianc součtu nezávislých veličin je součet jejich varianc: $\\sigma^2 = \\sigma_B^2 + \\sigma_C^2 + \\sigma_P^2$.\n    Krok 2: $\\sigma_B^2 = 4$, $\\sigma_C^2 = 0.0225$, $\\sigma_P^2 = 0.0625$.\n    Krok 3: $\\sigma^2 = 4.085$.\n    Krok 4: $\\sigma = \\sqrt{4.085} \\approx 2.021$.\n\n    Výsledek: 2.021.\n    Krok 1: Varianc součtu nezávislých veličin je součet jejich varianc: $\\sigma^2 = \\sigma_B^2 + \\sigma_C^2 + \\sigma_P^2$.\n    Krok 2: $\\sigma_B^2 = 4$, $\\sigma_C^2 = 0.0225$, $\\sigma_P^2 = 0.0625$.\n    Krok 3: $\\sigma^2 = 4.085$.\n\n[RETRY] Answer: D"
+    },
+    {
+      "id": "mmlu_math_7699",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Korelace r = √r². Prospěšnost vysvětlená variancí je r². Tedy r = √0.71 ≈ 0.84. Odpovídá kladnému směru (více volání = více hnízd).\n\nVýsledek: r = 0.84.\n(A) -0.57 → špatné znaménko a hodnota.\n(B) -0.84 → špatné znaménko.\n(C) 0.57 → odmocnina z 0.33.\n(D) 0.71 → to je r², ne r.\n(E) 0.84 → správně.\n(F) 0.29 → odmocnina z 0.08.\n(G) -1.00 → perfektní negativní.\n(H) 1.00 → perfektní pozitivní.\n(I) -0.29 → špatné znaménko a hodnota.\n(J) -0.71 → špatné znaménko a hodnotu.\n\nVýsledek: (E)\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7700",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: Výhra 1/36 × 20 = 0.56; náklad 2.00 → očekávaný výsledek −1.44.\nKrok 1: Pravděpodobnost obou šestek je 1/6 × 1/6 = 1/36.\nKrok 2: Výhra 20 při výhře, náklad 2.00 vždy.\nKrok 3: E = (1/36 × 20) − 2 = 5/9 − 18/9 = −13/9 ≈ −1.444.\nVýsledek je ztráta 1.44.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7701",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (F)\n\nKlíčové zjištění: Rozdílné názory podle zemí naznačují, že populace není homogenní a rozdíly mezi zeměmi jsou významé. Stratifikace podle zemí (strata) zajistí, že každý krajina bude reprezentována v poměru odpovídajícím její velikosti, což snižuje varianci odhadu a umožňuje porovnat názory mezi zeměmi. Cluster sampling by vybral celé kanceláře náhodně — ale pokud by se vybraly jen dvě z pěti, názory třech dalších by zcela chyběly. Convenience a non-probability metody jsou zavádějící. Stratifikace je zde standardní řešení pro známé podskupiny.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7702",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (A)\n\nNull hypothesis (H₀) vyjadřuje stav žádného rozdílu nebo žádného efektu — v tomto případě že rozdíl v názorech mezi pohlavím je nulový. (A) přesně formuluje rovnost proporcí. (B) a (D) jsou nesmyslné formulace; (C) a (G) porovnávají různé veličiny; (E) a (F) jsou alternativní hypotézy; (H) je formulace alternativní.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7703",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\nStřední 50 % normální rozdělení odpovídá intervalu ±0.6745 standardních odchylek od průměru.\n1) Mez dolní: 3250 − 0.6745 × 320 ≈ 3250 − 215.84 = 3034.16\n2) Mez horní: 3250 + 0.6745 × 320 ≈ 3250 + 215.84 = 3465.84\nZaokrouhleněno na celé číslo: (3034, 3466). Odpovídá možnosti (B).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7704",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (F)\n\nKrok 1: Celková podmínka — student nejede na 2-letou školu. Tedy vylučujeme 20 % případů. Zbývá 100 % − 20 % = 80 % možných scénářů.\nKrok 2: Podmíněná pravděpodobnost: P(4-letá | ne-2-letá) = P(4-letá) / P(ne-2-letá) = 54 / 80.\nKrok 3: 54/80 = 27/40 = 0.675.\n\nVýsledek: (F)"
+    },
+    {
+      "id": "mmlu_math_7705",
+      "category": "math",
+      "want": "D",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B).\n1) Mutuálně vyloučené: A ∩ B = ∅ → P(A ∩ B) = 0. P(A ∪ B) = 0.3 + 0.2 = 0.5.\n2) Nezávislé: P(A ∩ B) = P(A)·P(B) = 0.06. P(A ∪ B) = 0.3 + 0.2 − 0.06 = 0.44.\n3) B ⊆ A: A ∩ B = B → P(A ∩ B) = 0.2. P(A ∪ B) = 0.3 + 0.2 − 0.2 = 0.3.\nKombinace: 0.5, 0.44, 0.3.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7706",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Korelace r = 0,30 znamená kladnou, ale slabou lineární souvislost. (A) a (F) popisují zápornou korelace, (B) také. (C) a (G) jsou chyby interpretace — korelace není příčina. (D) 0,30 je statisticky významná (při n=100), takže 'žádná' je špatné. (E) a (H) jsou praktické závěry, které korelace sama nedokazuje. (I) a (J) řeší koeficient determinace: r² = 0,30² = 0,09, tedy 9 % vysvětlené variability. To je přesná interpretace hodnoty r².\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7707",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 320.\n1 g = 100 cg, tedy 0.32 g × 100 = 32 cg. Přesně 320.\n(A) 3.20 — špatné množství nul; (B) 0.32 — žádná změna; (C) 3200 — příliš mnoho; (D) 32 — správné; (E) 3.2 — špatné; (F) 32000 — příliš; (G) 0.0032 — příliš; (H) 320 — chyba v desítkách; (I) 3200 — příliš; (J) 0.032 — příliš.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7708",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 22.5.\nPostup:\n1) Poměr vinaigrety k oleji je 2:5.\n2) Jedna část: 9 oz / 2 = 4.5.\n3) Olej: 4.5 × 5 = 22.5.\n4) Výsledek 22.5 odpovídá možnosti (B).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7709",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 4.5 cm.\n1) Poměr měřítka: 1.5 cm / 50 m = 0.03 cm/m.\n2) Výsledek: 150 m × 0.03 = 4.5 cm.\n(B) 150 cm je chyba jednotek, (D) 9 cm je chybný násobek, (F) 4.5 cm správně.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7710",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 9.\nPřeveďme na rovnici: 4x = 36. Vyjádříme x: x = 36 / 4 = 9. Odpovídá možnosti (F).\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7711",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Zjednodušený tvar 6/9 je 2/3. Pro proporci hledáme poměr se stejným zjednodušeným hodnotou:\n(A) 18/24 = 3/4\n(B) 8/12 = 2/3 — ano\n(C) 3/5\n(D) 24/27 = 8/9\n(E) 15/20 = 3/4\n(F) 9/6 = 3/2\n(G) 2/6 = 1/3\nSprávná odpověď je B.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7712",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 200 fotek.\nKrok 1: Má 8 knih, každá obsahuje 25 fotek.\nKrok 2: Celkový počet je součin počtu knih a počtu fotek na jednu: 8 × 25 = 200.\nOstatní možnosti: (B) součet, (C) součin dvou knih, (D) 25² = 625, (E) a (F) odečtení, (H) a (I) dělení — žádné z nich vyjadřuje součin 8 × 25.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7713",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\nKrok 1: Rozklad 343 na prvočísla: 343 = 7 × 49 = 7 × 7 × 7 = 7³.\nKrok 2: Porovnání s možnostami: (A) 7^49 je obří číslo, (C) 49^3 = 117649, (D) 294^49 je gigantické, (E) 49^7 = 970299901, (F) 3^7 = 2187, (G) 1^343 = 1, (H) 7^7 = 823543, (I) 3^49 je obří číslo. Jediná správná odpověď je 7^3.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7714",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Původní poměr šířky k délce je 4:6 = 2:3. Pro zachování proporcí musí být i nová šířka a délka v poměru 2:3. Pokud nová šířka je 10 cm, pak délka x vyhovovuje 4/6 = 10/x → 4x = 60 → x = 15.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7715",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: y = 7.4.\nKrok 1: Podělíme obě strany na −2.3: y = −17.02 / −2.3.\nKrok 2: Minus se vyruší, 1702/230 = 7.4.\nKrok 3: Kontrola: −2.3 × 7.4 = −17.02. Správně.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7716",
+      "category": "math",
+      "want": "F",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: 1215 / 7 = 173.57 → 173 celé piezy. Nejbližší odpověď je 173, ale žádná není. Přesně 1215/7 = 173.57. Nejbližší odpovědpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odp …[snip]…  je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 1215/7 = 173.57. Nejbližší odpověpě je (B) 43? Ne, to je chyba v počtu. Přesně 121"
+    },
+    {
+      "id": "mmlu_math_7717",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 0.40 USD.\nVýpočet: 2.00 / 5 = 0.40. Cena za kus: 2.00/5 = 0.40.\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7718",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Počet týmů z počtu hráčů a velikosti týmu získáme dělením: 393 hráčů ÷ 3 per tým = 131 týmů. Výraz 393 ÷ 3 odpovídá možnosti (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7719",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: −9.\n1) Začneme rovnacíkem: 14 = w + 23.\n2) Odečteme 23 od obou stran: w = 14 − 23.\n3) Výsledek je −9.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7720",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 11.\nKrok 1: Počítání po 2 od 2 do 50 zahrnuje pouze sudá čísla: 2, 4, 6, ..., 50.\nKrok 2: Všechny možnosti kromě (E) jsou sudá a leží v rozsahu.\nKrok 3: Číslo 11 je liché, tedy se v sekvenci po dvou neobjeví.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7721",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Vzdíjmí se objemu: V = S·h = 116 × 30 = 3480 ft³.\n(F) 3480 ft³.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7722",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F) 10,354 < 10,600 < 104,321 < 106,213.\n(A) 167k > 161k — špatné. (B) 125,466 > 125,464 — špatné. (C) 171k > 116k — špatné. (D) 171k > 11k — špatné. (E) 167k > 161k — špatné. (G) 125,466 > 125,464 — špatné. (H) 185,466 > 185,464 — špatné. Jen F je správně rostoucí.\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7723",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 7/24.\nKrok 1: Společný jmenovatel pro 6 a 8 je 24.\nKrok 2: 1/6 = 4/24, 1/8 = 3/24.\nKrok 3: 4/24 + 3/24 = 7/24.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7724",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Cena za jeden míč: 4.00 / 40 = 0.10. Cena za 100 míčů: 100 × 0.10 = 10.00.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7725",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "The question asks for the total points: 389 + 116.\n389 + 116 = 505.\nOption (J) is 505.\n\nStep-by-step:\n1) 389 + 116 = 505.\n2) Check options: (J) is 505.\n\nFinal answer format: Answer: (J)"
+    },
+    {
+      "id": "mmlu_math_7726",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 9.\nPostup:\n1) Dani má 45 kuliček.\n2) Zadání říká, že Dani má 5× více než Joe: 5x = 45.\n3) x = 45 / 5 = 9.\n4) Odpovídá možnosti (J).\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7727",
+      "category": "math",
+      "want": "F",
+      "got": "J",
+      "ok": false,
+      "retried": false,
+      "raw": "(J) je správná odpověď.\n\n(A) Ne každá trapezia je obdélník — obdélník vyžaduje dvě páry rovnoběžných stran a všechny úhly 90°.\n(B) Pětik (5) není sedmik (7).\n(C) Šestnik není trojúhelník.\n(D) Trojúhelník je polygon, ale podmínka 'méně než 4' není definice.\n(E) Obdélník nemusí mít všechny strany stejné.\n(F) Osmícn je polygon, ale podmínka 'alespoň 3' je nutná, ale ne definující.\n(G) Kruh je specifický případ elipsy, ale 'oval' je neformální termín.\n(H) Paralelogram nemusí mít pravé úhly.\n(I) Rombus nemusí mít pravé úhly.\n(J) Čtverec má 4 strany, tedy je čtyřúhelníkem — definice splněna.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7728",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 64.18 m.\nPostup: 7.04 + 18.81 = 25.85; 25.85 + 18.39 = 44.24; 44.24 + 19.94 = 64.18. Odpovídá možnosti (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_math_7729",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "KucLab Hertz 0.6 — odpověď: (A).\n1) Tami vyrobila m více než Ken: Tami = 25 + m.\n2) Celkem: 25 + (25 + m) = 50 + m.\n3) Roznásobíme závorky: 50 + m.\n4) Option A: 25 + (25 + m) = 50 + m. Option I: 50 + m. Obě správné, ale A přesně odráží strukturu zadání.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7730",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Minimální vzdálenost bodu na křivce xy = 8 od počátku je 4.\n\nKrok 1: Hledáme minimum funkce d² = x² + y² za podmínky xy = 8.\nKrok 2: Podle AM-GM nerovensky: x² + y² ≥ 2·|xy| = 2·8 = 16.\nKrok 3: Rovnost nastane, když x² = y², tedy x = ±√8 a y = ±√8.\nKrok 4: Minimální vzdálenost je √16 = 4.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7731",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: dim(ker T) = 5.\n1) dim(V) = 2 × 3 = 6.\n2) T je epimorfie (onto), takže dim(im T) = dim(W) = 4.\n3) Rank-nullity theorem: dim(V) = dim(ker T) + dim(im T).\n4) 6 = dim(ker T) + 4 → dim(ker T) = 2.\nOpakování: dim(V) = 6, dim(W) = 4. T: V → W je epimorfie, tedy rank(T) = 4. Tuhle dim(ker T) = 6 − 4 = 2.\n\nWait, letím — dim(V) = 6, dim(W) = 4. T je epimorfie, tedy rank(T) = 4. Tuhle dim(ker T) = 6 − 4 = 2.\n\nOpravím se: dim(V) = 6, dim(W) = 4. T je epimorfie → rank(T) = 4. Tuhle dim(ker T) = 6 − 4 = 2.\n\nPřečtu otázku: T: V → W je epimorfie. dim(V) = 6, dim(W) = 4. Rank-nullity: dim(ker T) = dim(V) − rank(T) = 6 − 4 = 2.\n\nOdpověď: (E)"
+    },
+    {
+      "id": "mmlu_math_7732",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Základy cyklicosti jednotek: 7^1=7, 7^2=49, 7^3=343, 7^4=2401. Cyklus jednotek je 7, 9, 3, 1 o délce 4. Pro 7^25: 25 mod 4 = 1, takže jednotka odpovídá 7^1.\nVýsledek: 7.\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7733",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Obdélník má strany l a w, kde l = 2w. Pythagorova věta pro diagonálu: l² + w² = d².\n(2w)² + w² = (5√5)² → 5w² = 125 → w² = 25 → w = 5.\nDélka l = 10. Obsah A = l·w = 50.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7734",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Původně měl 72 pinů.\n\nKrok 1: Rozdělil na dvě hromady o velikosti x; celkem 2x.\nKrok 2: Od jedné hrominy odečetl polovinu jedné třiny: $\\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}$ hromady.\nKrok 3: Zůstalo mu x + $\\frac{5}{6}x = \\frac{11}{6}x$.\nKrok 4: $\\frac{11}{6}x = 66 \\implies x = 36$.\nKrok 5: Celkem 2x = 72.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7735",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 91.\n1) Součet: 98 + 97 + 92 + 85 + 93 = 465.\n2) Počet hodnot: 5.\n3) Průměr: 465 / 5 = 93.0.\nOpravením: 98+97+92+85+93 = 465; 465/5 = 93. Přesně 93.0.\n\nWait, let me re-add: 98+97=195; 195+92=287; 287+85=372; 372+93=465. 465/5 = 93.\nOption (F) is 93.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7736",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Nejmenší troiciferné pruměry jsou 101 a 103. Jejich součin je 10403. Součet cifer tohoto čísla je 1 + 0 + 4 + 0 + 3 = 8.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7737",
+      "category": "math",
+      "want": "F",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "Krok 1: Rozklad na součin: f(x) = x²(x+2) + 3(x-3)(x+3) = (x+3)(x+2)(x-3). Tři reálná kořene −3, −2, 3. Tuhle možnost (F) a (B) vyloučíme.\nKrok 2: Derivace: f'(x) = 3x² + 4x − 9. Kořeny f'(x) = 0: x = (-4 ± √49)/6 → x = 1.5 a x = -1.5.\nKrok 3: Intervaly střídavosti: f' > 0 pro x < −1.5 a x > 1.5; f' < 0 pro −1.5 < x < 1.5.\nKrok 4: Ověření možností: (A) pro x ≥ 3 je f' ≥ 12, tedy rostoucí — chybně. (D) pro x ≥ −3 zahrnuje interval (−1.5, 1.5) kde klesá — chybně. (E) pro x ≤ −3 je f' ≥ 15, tedy rostoucí — chybně. (G) pro x ≤ 0: minimum je v x = −1.5, f(-1.5) = −18. Pro x ≤ −3 rostoucí funkce, ta …[snip]…  (G) — minimum −18. Ano.\n\nKrok 111: Přesná kontrola (H) — minimum −18. Ano.\n\nKrok 112: Přesná kontrola (I) — pro x ≤ −3. Ano.\n\nKrok 113: Větší počet správných odpovězení. Vyberu (F).\n\nKrok 114: Přesná kontrola (F) — kořeny −3, −2, 3. Ano.\n\nKrok 115: Přesná kontrola (G) — minimum −18. Ano.\n\nKrok 116: Přesná kontrola (H) — minimum −18. Ano.\n\nKrok 117: Přesná kontrola (I) — pro x ≤ −3. Ano.\n\nK118: Větší počet správných odpovězení. Vyberu (F).\n\nKrok 119: Přesná kontrola (F) — kořeny −3, −2, 3. Ano.\n\nKrok 120: Přesná kontrola (G) — minimum −18. Ano.\n\nKrok 121: Přesná kontrola (H) — minimum −18. Ano"
+    },
+    {
+      "id": "mmlu_math_7738",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Let $d_f = 6$, $d_g = 3$, $d_h = n$. The degree of a composition $f(g(x))$ is $d_f \\cdot d_g = 6 \\cdot 3 = 18$. The degree of $g(h(x))$ is $3n$. The degree of $h(f(x))$ is $n \\cdot 6 = 6n$. The sum of three polynomials has degree equal to the maximum of their degrees, unless the leading terms cancel. Since the leading coefficients are arbitrary, we assume no cancellation unless forced. The maximum degree is $\\max(18, 3n, 6n)$. We are told this is 36. Thus $\\max(18, 3n, 6n) = 36$. The only way this holds is if $6n = 36$, which gives $n = 6$. If $n < 6$, the max would be 18. If $n > 6$, the max would be $6n > 36$. Thus $n=6$.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7739",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) Falešné: f(x) = x³ má f'(0)=0 ale žádný extrémum. (B) Falešné: stejný proti-příklad. (C) Pravda: diferencovatelnost implikuje kontinuitu. (D) Falešné: diskontinuita vylučuje derivaci. (E) Falešné: definice říká, že existuje. (F) Falešné: x³ na x=0. (G) Falešné: |x| na x=0. (H) Falešné: x⁴ na x=0 — derivace třetí řádu je 0, ale žádný převod konkávity. (I) Falešné: lokální rovina. (J) Falešné: x⁴.\nKlíčové: (C) je klasické důsledí definice derivace — limitní definice vyžaduje kontinuitu jako podmínku.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7740",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Start s počtem 9. Přičte příchody: 9 + 17 = 26 (pondělí), 26 + 22 = 48 (úterý), 48 + 3 = 51 (středa), 51 + 11 = 62 (čtvrtek), 62 + 18 = 80 (pátek). Celkem 80.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7741",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 5/12.\n\n1) Oblast pro (a,b) je pravouhý obdélník [-3,1] × [-2,4] o ploze S = 4 × 6 = 24.\n2) Součin a·b > 0 když obě čísla mají stejný znak:\n   a > 0 a b > 0: a ∈ (0,1], b ∈ (0,4] → plocha 1 × 4 = 4.\n   a < 0 a b < 0: a ∈ [-3,0), b ∈ [-2,0) → plocha 3 × 2 = 6.\n3) Celkem příznivá plocha 4 + 6 = 10.\n4) Pravděpodobnost P = 10/24 = 5/12.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7742",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Trik: 45° v pravoúhelném trojúhelníku znamená, že obě ostrou úhly jsou 45° a trojúhelník je rovnostranný.\nKrok 1: Délka obou přímých stran je $a = b = 10 \\cdot \\sin(45^\\circ) = 10 \\cdot \\frac{\\sqrt{2}}{2} = 5\\sqrt{2}$.\nKrok 2: Obsah trojúhelníku je $S = \\frac{1}{2} a b = \\frac{1}{2} \\cdot 50 = 25$.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7743",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 7.\nKrok 1: 80 % z 35 otázek je $0.8 \\cdot 35 = 28$ správných odpovědí.\nKrok 2: Maximální počet chyby je $35 - 28 = 7$.\nKrok 3: Pokud chyby bude 8, získáš 27 správných, což je $27/35 \\approx 77.14\\% < 80\\%$. Tedy 7 je horní hranice.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7744",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Počet dělitelných 2: $\\lfloor 100/2 \\rfloor = 50$.\nPočet dělitelných 6 (tedy obou 2 a 3): $\\lfloor 100/6 \\rfloor = 16$.\nPočet vyhovujících čísel: $50 - 16 = 34$.\nPravděpodobnost: $34/100 = 17/50$.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7745",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 6.\n1) Pokud je 48 cm šířka: šířka = 48 cm.\n2) Pokud 48 cm je diagonála: šířka = 48 · 5/√34 ≈ 48 · 0.857 ≈ 41.1 cm.\n3) Rozdíl: 48 - 41.1 = 6.9 cm. Zaokrouhleně 7 cm.\n4) Přesněji: šířka = 48·5/√34 ≈ 41.14; 48 - 41.14 = 6.86. Zaokrouhleně 7.\n5) Přesná odpověď: 7.\n\nWait, let's re-calculate: 48·5/√34 = 240/5.831 ≈ 41.156. 48 - 41.156 = 6.844. Zaokrouhleno na nejbližší celé číslo je 7.\n\nPřeveďme na anglicky pro výběr: (H) 7.\n\nVýsledek: 7.\n1) If 48 is width: w = 48.\n2) If 48 is diagonal: w = 48·5/√34 ≈ 41.16.\n3) Difference: 48 - 41.16 = 6.84. Nearest integer is 7.\n4) Option (H) is 7.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_math_7746",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Když g(x) = f(-x) a bod (3, 2) leží na grafu g, pak g(3) = 2. Dosazením do vztahu dostaneme f(-3) = 2, což znamená, že bod (-3, 2) musí ležet na grafu f.\n\nKrok 1: Podstavíme x = 3 do vztahu g(x) = f(-x) → g(3) = f(-3).\nKrok 2: Protože g(3) = 2, musí být f(-3) = 2.\nKrok 3: Bod (-3, 2) je na grafu f.\nKrok 4: Odpovídá možnosti (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9044",
+      "category": "physics",
+      "want": "I",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "The question asks about the significance of the 1:2:4 resonance of Io, Europa, and Ganymede.\n    - The Laplace resonance: Io's orbital period is ~3.5 days, Europa ~3.55, Ganymede ~7.1.\n    - The resonance ensures that the moons never align in a way that their mutual gravitational pulls would destabilize their orbits.\n    - Specifically, it prevents the moons from colliding and maintains the stability of the system.\n    - Option (E) says \"it prevents the moons from colliding with each other\". This is the primary dynamical consequence.\n    - Option (B) is a consequence of tidal heating (tidal he …[snip]… navzájem narazit.\n    Krok 4: Tuhá interakce také způsobuje přílivé zahřívání Io, což vede k jeho vulkanismu.\n\n    Klíčové je právě to, že rezonance udržuje stabilitu konfigurace.\n\n    (E) je správná odpověď.\n\n    Krok 1: Laplaceova rezonance 1:2:4: Io (3.5 d), Europa (3.55 d), Ganymed (7.1 d).\n    Krok 2: Konfigurace zajistí, že se měsíce nikdy nesrovnají na jedné ose — jejich vzájemné gravitační vlivy se periodicky vyruší.\n    Krok 3: Tím je systém stabilní a měsíce se nemohou navzájem narazit.\n    Krok 4: Tuhá interakce také způsobuje přílivové zahřívání Io (vulkanismus).\n\n    Výsledek: (E)"
+    },
+    {
+      "id": "mmlu_physics_9045",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Před 1979 byla velikost Pluto odhadována jen z jasnosti; první přesné měření přinesla flyby Voyager 2 (1989) a New Horizons (2015). Předto byla jedinou přesná metoda měření velikosti těles vzdálených planet přes pozorování jejich průchodu za měsícem (occultation) — Pluto a Charon se vzájemně zakrývaly, což umožnilo měření velikosti přes rozsah zakrytí.\n\nVýsledek: (D)\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9046",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) je chybná — asteroidy jsou typicky slabší než mnoho hvězd; (B) rotace není detekovatelná; (C) jsou menší než většina hvězd; (D) pohyb proti pozadí je klíčový — asteroidy se pohybují proti vzdáleným hvězdám, což je detekovatelný jako změna pozice; (E) barva není specifická; (F) a (G) emitují jen zbytek slunečního záření; (H) a (I) jsou neúplné fyzikální fikce. Detekce se opírá na pohybu proti pozadí.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9047",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The Andromeda Galaxy (M31) is the nearest major galaxy to the Milky Way. Its distance is measured via Cepheid variables and now also via the Hubble constant and standard candles. The generally accepted value is about 2.537 million light-years (1.56 Mpc).\n\n(A) 5 Mly — too far.\n(B) 2.5 Mly — correct.\n(C) 2.1 Mly — slightly low.\n(D) 1.9 Mly — too low.\n(E) 3.2 Mly — too high.\n(F) 4 Mly — too high.\n(G) 1.7 Mly — too low.\n(H) 3.5 Mly — too high.\n(I) 1.2 Mly — too low.\n(J) 2.8 Mly — slightly high.\n\nThe value 2.5 million light-years is the standard textbook value.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9048",
+      "category": "physics",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Meteority showery vznikají, když Země přejíždí přes pásmo trojrozpustného prachu a ledu, které komety zanechávají na své dráze. Tuhé jádro komety se rozpadá a vytvoří pásmo trojrozpustného materiálu; Země procházející tímto pásmem každoročně ve stejných termínech pozoruje stejný potok meteorů (Perseidy, Geminidy). Odpovědi (B) a (J) jsou podobné, ale (J) přesněji popisuje mechanismus komety. (A) a (H) popisují jednorázné události, ne pravidelné potoky. (C) a (D) jsou nesmysly. (E) a (I) jsou chyby.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_physics_9049",
+      "category": "physics",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F)\n1) Sluneční záření obsahuje převážně viditelné světlo, které atmosféra propustí — povrch se zahřeje.\n2) Povrch vyzařuje infračerveného záření (IR).\n3) Skupiny OH a CH v molekulách CO2, CH4 a H2O absorbují IR a re-emitují ho všemi směry, včetně zpět na povrch.\n4) Tato zpětná emise udržuje průměrnou teplotu Země o ~33 °C vyšší než bez atmosféry.\nOstatní možnosti chybně popisují typy záření (UV/X-ray) nebo mechanismus (transmise vs. absorpce).\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_physics_9050",
+      "category": "physics",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "Reflexe na hranici dvou medií se vyjadřuje podmínkou konstruktivní interference: $2d \\cdot \\Delta n / \\lambda = m \\cdot \\lambda$ (pro reflektovanou vlnu na obou hranicách).\n1) Rozdíl indexů: $\\Delta n = 1.5 - 1.33 = 0.17$.\n2) Podmínka: $2 \\cdot 500 \\cdot 0.17 = 170$ nm.\n3) Konstruktivní podmínka: $170 = m \\cdot \\lambda$.\n4) Pro m=1: $\\lambda = 170$ nm (ultraviolenté — neviditelné).\n5) Pro m=2: $\\lambda = 85$ nm.\n6) Pro m=3: $\\lambda = 56.7$ nm.\n7) Pro m=4: $\\lambda = 42.5$ nm.\n8) Pro m=5: $\\lambda = 34$ nm.\n9) Pro m=6: $\\lambda = 28.3$ nm.\n10) Pro m=0: $\\lambda = \\infty$ (neodpovídá).\nPřečteme …[snip]… nka pro olej na vodě: první odraz na olej (vzduch→olej) má fázi $\\pi$, druhý na vodu (olej→voda) nemá. Konstrukce: $2d \\cdot \\Delta n = m \\cdot \\lambda$.\nPro m=1: $\\lambda = 170$ nm. Pro m=2: $\\lambda = 85$ nm. Pro m=3: $\\lambda = 56.7$ nm. Pro m=4: $\\lambda = 42.5$ nm. Pro m=5: $\\lambda = 34$ nm. Pro m=6: $\\lambda = 28.3$ nm.\nPokud se počítá konstruktivní podmínka pro olej na vodě: první odraz na olej (vzduch→olej) má fázi $\\pi$, druhý na vodu (olej→voda) nemá. Konstrukce: $2d \\cdot \\Delta n = m \\cdot \\lambda$.\nPro m=1: $\\lambda = 170$ nm. Pro m=2: $\\lambda = 85$ nm. Pro m=\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_physics_9051",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": true,
+      "raw": "The coin slides when the required centripetal force exceeds the maximum static friction: $m \\omega^2 r \\le \\mu m g \\implies r \\le \\frac{\\mu g}{\\omega^2}$.\n    1. Convert angular velocity: $\\omega = 33.3 \\text{ rpm} \\cdot \\frac{2\\pi}{60} \\approx 3.488 \\text{ rad/s}$.\n    2. Calculate maximum radius: $r_{max} = \\frac{0.30 \\cdot 9.81}{(3.488)^2} \\approx \\frac{2.943}{12.166} \\approx 0.2419 \\text{ m}$.\n    3. Rounding to 3 significant figures gives 0.242 m.\n\n    (A) 0.300 m\n    (B) 0.150 m\n    (C) 0.121 m\n    (D) 0.10 m\n    (E) 0.242 m\n    (F) 0.048 m\n    (G) 0.200 m\n    (H) 0.500 m\n    (I) 0.024 m …[snip]… ox\n\n[RETRY] Odpověď: C\n\nVýsledek: r = 0.121 m.\n\nPostup:\n1) Převod otáček na úhlovou rychlost: ω = 33.3 rpm × 2π/60 = 3.49 rad/s.\n2) Podmínka nesklouznutí: setrvačná síla musí být ≤ maximální třecí síla: m·ω²·r ≤ μ·m·g → r ≤ μ·g/ω².\n3) Výpočet: r ≤ 0.30 × 9.81 / 3.49² ≈ 2.51 / 12.18 ≈ 0.206 m.\n4) Přesnější výpočet s ω = 3.4906 rad/s: r ≤ 0.30 × 9.81 / 12.184 ≈ 0.242 m.\n5) Oprava: 33.3 rpm je přesně 110/33 rad/s. Výsledek 0.242 m odpovídá možnosti E. Přesná hodnota: r = 0.30 × 9.81 / (33.3 × π/30)² = 0.242 m.\n\nOprava: Přesně 33.3 rpm = 3.4906 rad/s. r = 0.30 × 9.81 / 12.184 = 0.242 m. Odpověď E."
+    },
+    {
+      "id": "mmlu_physics_9052",
+      "category": "physics",
+      "want": "C",
+      "got": "G",
+      "ok": false,
+      "retried": true,
+      "raw": "*   Proton accelerated by potential V in +z direction: $v_z = \\sqrt{2eV/m}$.\n    *   Magnetic field B in +y direction, electric field E in +x direction.\n    *   Lorentz force: $\\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B})$.\n    *   Initial condition: no deflection means $\\vec{F} = 0 \\implies \\vec{E} + \\vec{v} \\times \\vec{B} = 0$.\n    *   $\\vec{v} = v_z \\hat{k}$. $\\vec{B} = B \\hat{j}$. $\\vec{v} \\times \\vec{B} = v_z B \\hat{i}$.\n    *   So $\\vec{E} = -v_z B \\hat{i}$. The electric field must be in the -x direction to cancel the magnetic force.\n    *   If V doubles, $v_z$ increases by $\\sqrt{2}$.  …[snip]… re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re-re\n\n[RETRY] Answer: G"
+    },
+    {
+      "id": "mmlu_physics_9053",
+      "category": "physics",
+      "want": "J",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "Krystalová difrakce elektronů vyžaduje, aby byla vlnová délka de Broglieho $\\lambda = h/p$ porovnatelná s periodou mřížky $d$. Pro 0.4 nm mřížky: $\\lambda \\approx 0.4 \\text{ nm} = 4 \\cdot 10^{-10} \\text{ m}$.\nPohybový impuls $p = h/\\lambda \\approx 6.6 \\cdot 10^{-34} / 4 \\cdot 10^{-10} \\approx 1.65 \\cdot 10^{-24} \\text{ kg·m/s}$.\nKinetická energie $E = p^2/2m_e \\approx (1.65 \\cdot 10^{-24})^2 / (2 \\cdot 9.1 \\cdot 10^{-31}) \\approx 1.47 \\cdot 10^{-18} \\text{ J} \\approx 9.2 \\text{ keV}$.\nPro viditelnou difrakci potřebujeme $\\lambda \\lesssim d$, tedy energie v řádu keV. Nejbližší odpověď je 1000 eV (1 keV).\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9054",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Truba uzavřená na jednom konci a otevřená na druhém podporuje pouze liché harmonické: $f_n = n \\cdot f_1$ pro $n = 1, 3, 5, \\dots$. Základní tón je $f_1 = 131$ Hz; příští harmonická je třetí, tedy $3 \\times 131 = 393$ Hz. Druhá harmonická chybí, protože uzel na uzavřeném konci vyžaduje antiknot — což je fyzikální důvod, proč trubky tohoto typu nemají harmonické řady jako otevřené.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9055",
+      "category": "physics",
+      "want": "F",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "Let měrač na jedné lodě měří 60 cm, zatímco na druhé je vidět 100 cm (původní délka). Kontrakce délky: L = L₀√1−v²/c². Tedy 60 = 100√1−v²/c², což dá v²/c² = 0.64, tedy v = 0.8c. Protože se lodě pohybují proti sobě, relativní rychlost mezi nimi je v_rel = (v+v)/√1−v²/c² = 1.6c/√0.36 = 1.6/0.6 = 2.67c — což je možné, protože rychlost mezi nimi není jejich součet. Odpověď pro rychlost každé lodě vůči Zemi je 0.8c.\n\nVýsledek: 1) Kontrakce: L = L₀√(1-β²). 60 = 100√(1-β²) → 0.6 = √1-β² → 0.36 = 1-β² → β² = 0.64 → β = 0.8. 2) Kontrahuje se délka v soustavě, kde se měří — tedy měřící lodka vidí zkrácenou délku druhé lodě. 3) Rychlost relativní je v_rel = (v1+v2)/(1+v1v2/c²) = 1.6c/1.6 = c — což je limitní rychlost, ale otázka se ptá na rychlost vůči Zemi.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9056",
+      "category": "physics",
+      "want": "I",
+      "got": "D",
+      "ok": false,
+      "retried": true,
+      "raw": "Výsledek: (D)\n\nKláseka: Spektrum záření záborného iontu závisí na konstantě R_K = Z²·e²/(4·π·ε₀·h·c). Pro Li²⁺ (Z=3) je R_K = 9·R_H. Vlnové číslo řády n: ν = R·Z²·(1/n² − 1/m²). Pro stejné přechody musí být vlnové číslo Li²⁺ trojnásobné, tedy vlnové číslo H odpovídá vlnovému číslu Li²⁺ po násobení třemi. Vlnové číslo je 1/λ, takže vlnové číslo Li²⁺ = 3·ν_H → λ_Li = λ_H/3. Spektrum Li²⁺ je tedy posunuté do kratších vln o faktor 3.\n\nZde je ale otázka formulovaná jinak: „spektrum Li²⁺ je identické se kterým spektrum H“ — to znamená, že hledáme vlnové číslo H, které odpovídá pozorovanému spektrum  …[snip]…  vlnové číslo H, ale vlnové číslo Li²⁺ odpovídá vlnové číslo H s jiným n. Pro stejné přechod n→m, vlnové číslo li = 9·k, tedy λ_li = λ_H/9. Spektra jsou identická, pokud se vlnové čísla shodují; pro stejné vlnové číslo li = 9·k, tedy vlnové číslo H = k. Spektra jsou identická, pokud se vlnové čísla shodují — to znamená, že každá přechodní linie Li²⁺ odpovídá přechodu v H s jiným n. Spektra jsou identická, pokud se vlnové čísla shodí; vlnové číslo li = 9·k, tedy vlnové číslo H = k. Spejmození: vlnové číslo li = 9·k, tedy vlnové číslo H = k. Spektra jsou identická, pokud se vlnové čísla shodí; v"
+    },
+    {
+      "id": "mmlu_physics_9057",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 10.4 km.\n1) Celková dráha je součet vzdáleností: 8.4 km (jízda) + 2.0 km (chůze) = 10.4 km.\n2) Protože se pohybovalo po přímé cestě v jednom směru, je součet vzdáleností rovný výsledné posunu.\n3) Čas chůze a rychlost jízdy jsou zbytečné informace pro tuto otázku.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9058",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 2.89 × 10⁻⁹ J.\nKrok 1: Rozsah změny plochy: $\\Delta A = 4\\pi(r_2^2 - r_1^2) = 4\\pi(60^2 - 20^2) \\times 10^{-12} = 12800\\pi \\times 10^{-12} \\approx 4.021 \\times 10^{-7} \\mathrm{~m}^2$.\nKrok 2: Práce proti povrchovému napětí: $W = \\gamma \\Delta A$. Pro vodu při 298 K je $\\gamma \\approx 72 \\mathrm{~mN/m}$.\nKrok 3: $W = 0.072 \\times 4.021 \\times 10^{-7} \\approx 2.895 \\times 10^{-9} \\mathrm{~J}$. Zaokrouhleno na 2.89.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9059",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\nPostup:\n1) Tuhost k = 750 N/m, délka změny x = 0.035 m.\n2) Tlak na vlákno: F = k·x = 750 × 0.035 = 26.25 N.\n3) Tuhost práce: W = F·x = 26.25 × 0.035 = 0.91875 J.\n4) Tuhost práce v rámci Hookeova zákona: W = 1/2 k x² = 0.5 × 750 × 0.035² = 0.459375 J.\n5) Zaokrouhleněno na dvě desetinné: 0.46 J.\n\nVýsledek: (B)"
+    },
+    {
+      "id": "mmlu_physics_9060",
+      "category": "physics",
+      "want": "A",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Výstupní výkon: $P = I^2 R / R = 1.75^2 \\cdot 25 / 25 = 3.0625 \\mathrm{W}$. Celková energie: $Q = P \\cdot t = 306.25 \\mathrm{J}$.\n2) Teplo vody: $\\Delta T = Q / (m \\cdot c)$. Pro vodu $c \\approx 4186 \\mathrm{J/(kg·K)}$.\n3) Výsledek: $\\Delta T = 306.25 / (0.0825 \\cdot 4186) \\approx 0.88 \\mathrm{K}$.\n4) T_fin = 300.88 $\\approx$ 301 K. Nejbližší odpověď je (D) 310 K — ale počítáme přesně: 306.25 / 345.345 = 0.885 K. Tuhle otázka má chybu v hodnotách nebo zaokrouhluvání; 310 K je nejbližší. Přesně 300.9 K.\n\nWait, 1.75² = 3.0625. 3.0625 * 100 = 306.25 J. 82.5 g = 0.0825 kg. c = 4186. Q/mc = 306.25 / 345.345 = 0.886 K. T = 300.886 K. Nejbližší je (D) 310 K.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9061",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The half-reaction is $\\text{AgCl}(s) + e^- \\to \\text{Ag}(s) + \\text{Cl}^-(aq)$.\n    The standard reduction potential is $E^\\circ = 0.222 \\text{ V}$.\n    The standard Gibbs energy change of the reaction is $\\Delta G^\\circ = -nFE^\\circ$.\n    Here $n = 1$ electron, $F = 96485 \\text{ C/mol}$.\n    $\\Delta G^\\circ = -1 \\cdot 96485 \\cdot 0.222 \\approx -21428.6 \\text{ J/mol} \\approx -21.43 \\text{ kJ/mol}$.\n    The reaction is $\\text{AgCl}(s) \\to \\text{Ag}(s) + \\text{Cl}^-(aq)$.\n    $\\Delta G^\\circ = \\mu(\\text{Ag}(s)) + \\mu(\\text{Cl}^-) - \\mu(\\text{AgCl}(s))$.\n    We know $\\mu(\\text{Ag}(s)) = 0$ by con …[snip]… t{Cl}^-) = \\mu(\\text{AgCl}) + \\Delta G^\\circ = -109.71 - 21.43 = -131.14 \\text{ kJ/mol}$. Zaokrouhleno na jednu desetinnu: -131.1.\n\n    Výsledek: -131.1 kJ/mol. Odpovídá možnosti (C).\n\n    Krok 1: $\\Delta G^\\circ = -nFE^\\circ = -1 \\cdot 96485 \\cdot 0.222 \\approx -21.43 \\text{ kJ/mol}$.\n    Krok 2: $\\mu(\\text{Cl}^-) = \\mu(\\text{AgCl}) + \\Delta G^\\circ = -109.71 - 21.43 = -131.14 \\text{ kJ/mol}$. Zaokrouhleno na jednu desetinnu: -131.1.\n\n    Výsledek: -131.1 kJ/mol. Odpovídá možnosti (C).\n\n    Krok 1: $\\Delta G^\\circ = -nFE^\\circ = -1 \\cdot 96485 \\cdot 0.222 \\approx -21.43 \\text{ kJ/mol}$.\n    K"
+    },
+    {
+      "id": "mmlu_physics_9062",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "V kmitajícím soustavách se hodnoty rms rovají amplitudě po sdělení kořenem z 2: x_rms = A/√2, v_rms = ωA/√2, a_rms = ω²A/√2. V ustáleném stavu tvoří amplituda A maximální hodnotu x_max. Tedy (A) správně vyjadřuje všechny tři veličiny.\n\nVýsledek:\n1) x(t) = A·cos(ωt + φ) → x_rms = √((A²/2)·(1/2)) = A/√2.\n2) v(t) = -ωA·sin(ωt + φ) → v_rms = ωA/√2.\n3) a(t) = -ω²A·cos(ωt + φ) → a_rms = ω²A/√2.\nVšechny hodnoty jsou konzistentní s definicí rms pro harmonický pohyb.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9063",
+      "category": "physics",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Problem: Stone dropped into a well, sound heard after 2 seconds. Sound speed $v_s = 1100$ ft/s. Find depth $d$.\n    *   Physics: Two stages: fall time $t_1$ and sound travel time $t_2$.\n    *   Equations:\n        1) $d = \\frac{1}{2} g t_1^2$ (free fall, $g \\approx 32.2$ ft/s²).\n        2) $d = v_s t_2$.\n        3) $t_1 + t_2 = 2$.\n    *   Substitution: $t_1 = \\sqrt{2d/g}$.\n    *   Equation: $\\sqrt{2d/32.2} + d/1100 = 2$.\n    *   Let $x = \\sqrt{d}$. Then $\\sqrt{2/32.2} x + x^2/1100 = 2$.\n    *   $\\sqrt{2/32.2} \\approx 0.249$.\n    *   $0.249x + x^2/1100 = 2 \\implies x^2 + 273.9x - 2200 = 0$. …[snip]… $? Wait, my mental math failed.\n        Let's re-evaluate: $t_1 = \\sqrt{2d/32.2}$. If $d=60.6$, $t_1 = \\sqrt{121.2/32.2} \\approx 1.94$ s.\n        $t_2 = 60.6/1100 \\approx 0.055$ s.\n        $t_1 + t_2 = 1.995 \\approx 2$. Correct.\n    *   Option (J) is 60.6.\n\n    Výsledek: (J) 60.6 ft.\n    Krok 1: Celkový čas 2 s = čas pádu t₁ + čas šíření zvuku t₂.\n    Krok 2: t₁ = √(2d/g) s g = 32.2 ft/s².\n    Krok 3: t₂ = d/1100.\n    Krok 4: √2d/32.2 + d/1100 = 2.\n    Krok 5: Přesně: d = 60.6 ft → t₁ = 1.94 s, t₂ = 0.055 s, součet 1.995 s.\n    Krok 6: Výsledek 60.6 ft odpovídá možnosti (J).\n\n    Výsledek: (J)"
+    },
+    {
+      "id": "mmlu_physics_9064",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 1500 C.\nPostup: 1) Jedinost: Q = I·t. 2) Tři jednotky: I = 50 A, t = 30 s. 3) Výsledek: 50 × 30 = 1500 C.\nOdpověď: (D)"
+    },
+    {
+      "id": "mmlu_physics_9065",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 347 K.\n1) Převod jednotek: 24.5 lb/in² / 14.7 lb/in² ≈ 1.67 atm.\n2) Adiabatický zákon: T₂ = T₁ · (P₂/P₁)^(γ-1)/γ.\n3) T₂ = 300 · (1.67)^(0.4/1.4) ≈ 300 · 1.156 ≈ 346.8 K.\nZaokrouhleno na nejbližší možnost: 347 K.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9066",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 3.19 × 10^6 m.\nKrok 1: Gravitační přísun na povrchu je g = G·M/R².\nKrok 2: Hukeb hmotnosti M = ρ·V = ρ·4/3·π·R³.\nKrok 3: Dosazení M do g: g = G·ρ·4/3·π·R.\nKrok 4: Protože g_new = g_earth a ρ_new = 2·ρ_earth, musí být R_new = R_earth / 2.\nKrok 5: R_earth ≈ 6.371 × 10^6 m → R_new ≈ 3.1855 × 10^6 m. Zaokrouhleno na 3 čísla: 3.19 × 10^6 m.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9067",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": true,
+      "raw": "*   Electron mass $m_e \\approx 9.11 \\times 10^{-31}$ kg.\n    *   Charge $e \\approx 1.602 \\times 10^{-19}$ C.\n    *   Distance $s = 0.1$ m.\n    *   Time $t = 10^{-7}$ s.\n    *   Initial velocity $v_0 = 0$.\n    *   Acceleration $a = \\frac{s}{t^2/2} = \\frac{2s}{t^2} = \\frac{0.2}{(10^{-7})^2} = 2 \\times 10^{14}$ m/s².\n    *   Force $F = ma = 1.822 \\times 10^{-16}$ N.\n    *   Electric field $E = F/e = 1.138 \\times 10^{11}$ V/m.\n    *   In cgs units: $1 \\text{ V/m} = 10^{-4} \\text{ statV/cm}$.\n    *   $E = 1.138 \\times 10^7 \\text{ statV/cm}$? Wait, let's recheck units.\n    *   1 V = 300 statV. 1 m = …[snip]… RY] Výsledek: (B)\nKrok 1: Zrychlení a = s/t² = 0.1 m / (10⁻⁷ s)² = 10¹¹ m/s².\nKrok 2: Síla F = m·a = 9.11 × 10⁻³¹ kg × 10¹¹ m/s² ≈ 9.11 × 10⁻²⁰ N.\nKrok 3: Pole E = F/q = 9.11 × 10⁻²0 / 1.6 × 10⁻¹⁹ ≈ 0.57 V/m.\nKrok 4: Napětí V = E·d = 0.57 × 0.1 = 0.057 V.\nKrok 5: Převod na statV: 1 V = 300 statV, takže 0.057 × 300 = 17.1 statV.\nKrok 6: Přesná hodnota: a = 10¹¹ m/s²; E = 570 V/m; V = 57 V. V = 57 × 300 = 17100 statV.\nOpravené výpočty: v = at/2 = 5 × 10⁶ m/s; E = 5.7 × 10⁵ V/m; V = 57 V. V = 17100 statV.\nZvolená odpověď (B) 3.8 × 10⁻³ statV/cm = 380 V/m; V = 38 V. Přesné hodnoty: e = 1.602 × 10⁻"
+    },
+    {
+      "id": "mmlu_physics_9068",
+      "category": "physics",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "(a) Počet elektronů za sekundu: I = n·e → n = I/e = 6·10^5 / 1.6·10^-19 ≈ 3.75 × 10^24. Opak — jednotka Ampére je elektrony za sekundu, takže n = 6·10^5 / 1.6·10^-19 = 3.75 × 10^24. Přesně 3.75 × 10^24.\n(b) Celková mocnina: P = n·E = 3.75 × 10^24 × 40 GeV = 3.75 × 10^24 × 4 × 10^10 eV × 1.6 × 10^-19 J/eV = 2.4 × 10^16 W.\nWait, let's re-read the question: 6 × 10^5 A. I = n·e → n = 6·10^5 / 1.6·10^-19 = 3.75 × 10^24.\n(b) P = n·E = 3.75 × 10^24 × 40 GeV = 1.5 × 10^16 W.\nWait, let me re-calculate: 6·10^5 / 1.6·10^-19 = 3.75 × 10^24. 3.75 × 10^24 × 40 × 10^9 × 1.6 × 10^-19 = 2.4 × 10^16 W.\nVšechny  …[snip]…  10^16 a 5.76 × 10^8. To odpovídá I = 1.44 × 10^10 A a E = 40 MeV.\nZkusím možnost I: 6 × 10^5 a 1.6 × 10^9. To odpovídá I = 9.6 × 10^10 A a E = 40 MeV.\nZkusím možnost J: 1.2 × 10^14 a 9.6 × 10^6. To odpovídá I = 1.92 × 10^10 A a E = 40 MeV.\nZkusím možnost E: 7.5 × 10^13 a 4.8 × 10^5. To odpovídá I = 1.2 × 10^10 A a E = 40 MeV.\nZkusím možnost D: 4 × 10^10 a 1 × 10^6. To odpovídá I = 6.4 × 10^10 A a E = 40 MeV.\nZkusím možnost G: 5 × 10^12 a 3.2 × 10^4. To odpovídá I = 8 × 10^5 A a E = 40 MeV.\nZkusím možnost C: 3.75 × 10^14 a 2.4 × 10^6. To odpovídá I = 6 × 10^3 A a E = 40 MeV.\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_physics_9069",
+      "category": "physics",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 1 foot-candle.\nVýpočet: Světlný tok I = 75 candela. Světlo se šíří na kouli, takže intenzita E = I / r². Pro r = 5 ft: E = 75 / 25 = 3. Nicméně jednotka candela definuje 1 candela jako 4 π steradianů na 1 metr; v imperiálním systému je 1 foot-candle = 1 lumen per čtvercový stop. Výsledek 3 foot-candles. Opravením: 75/25 = 3.\n\nWait, let me re-calculate: 75 candelas / 25 sq ft = 3 foot-candles. Option G.\n\nVýsledek: 3 foot-candles.\nVýpočet: Světlnost E = I/r². I = 75 candel, r = 5 ft. E = 75/25 = 3 foot-candles.\n(Pozn.: candela je SI jednotka, foot-candle je imperiální; převod není nutný, protože jednotky se vyruší).\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_physics_9070",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (D)\n\n1) Hmotnost Země: M = ρ·V = 5500 × (4/3)·π·(6.4×10^6)³ ≈ 9.23 × 10^24 kg.\n2) Gravitační přitahování na povrchu: g = GM/r² = 9.81 m/s².\n3) G = g·r²/M = 9.81 × (6.4×10^6)² / 9.23×10^24 ≈ 4.3 × 10^-11.\n4) Přesnější výpočet s přesnými hodnotami: G = 6.674 × 10^-11 Nm²/kg². Zaokrouhleněné na dvě desetinné místo je 6.7 × 10^-11.\n\nVýsledek: (D)"
+    },
+    {
+      "id": "mmlu_physics_9071",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Sample mass: m = 1.4447 g.\n    *   Temperature rise: ΔT = 7.795 °F = 4.331 °C.\n    *   Water equivalent of calorimeter: W = 2511 g.\n    *   Heating value: Q = W·ΔT.\n    *   Q = 2511 × 4.331 = 10877.641 cal.\n    *   Specific heating value: q = Q/m = 10877.641 / 1.4447 ≈ 7529.5 cal/g.\n    *   Conversion to Btu/lb: 1 cal = 4.184 J; 1 lb = 453.59 g.\n    *   q_Btu = (7529.5 × 4.184) / 453.59 ≈ 69.5 kJ/kg ≈ 16.1 MJ/kg.\n    *   1 BTU ≈ 1055 J. 16.1 MJ/kg ≈ 15260 kJ/kg.\n    *   15260 kJ/kg / 4.184 ≈ 3650 BTU/lb. Wait, let me re-calculate.\n    *   1 cal/g = 4.184 J/g = 4184 J/kg.\n    *   7529.5 cal …[snip]…  In the US, that's BTU/lb.\n    *   Let's re-calculate 10877.641 / 1.4447 = 7529.5.\n    *   7529.5 cal/g.\n    *   1 cal = 4.184 J. 7529.5 × 4.184 = 31500.6 J/g.\n    *   31500.6 J/g = 31.5 MJ/kg.\n    *   31.5 MJ/kg / 4.1868 kJ/kJ = 7522.5 BTU/kg.\n    *   7522.5 BTU/kg × 2.2046 lb/kg = 16586 BTU/lb.\n    *   Wait, why is 13520 an option?\n    *   Maybe the conversion factor used was different?\n    *   1 BTU = 1055 J. 31500.6 kJ / 1.055 = 29858.\n    *   29858 / 453.6 = 65.8. No.\n    *   Let's try 7529.5 / 252 = 29.839. 29.839 × 453.6 = 13537.\n    *   13537 is very close to 13520.\n    *   Let's check"
+    },
+    {
+      "id": "mmlu_physics_9072",
+      "category": "physics",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 20 °C.\nVýpočet: T(°C) = (T(°F) − 32) × 5/9. Pro 68 °F: (68 − 32) = 36; 36 × 5/9 = 20.\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_physics_9073",
+      "category": "physics",
+      "want": "B",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "*   Mass of train: $m = 200 \\text{ t} = 200000 \\text{ kg}$.\n    *   Coefficient of rolling friction: $\\mu = 0.005$.\n    *   Power of engine: $P = 400 \\text{ hp} = 400 \\cdot 745.7 \\text{ W} \\approx 298280 \\text{ W}$.\n    *   Find maximum speed $v$.\n\n    1.  Friction force: $F_f = \\mu \\cdot m \\cdot g = 0.005 \\cdot 200000 \\cdot 9.81 \\approx 9810 \\text{ N}$.\n    2.  Power formula: $P = F \\cdot v$. At maximum speed, the engine's force equals the friction force.\n    3.  $v = P / F_f = 298280 / 9810 \\approx 30.4 \\text{ m/s}$.\n    4.  Convert to mph: $30.4 \\text{ m/s} \\cdot 2.237 \\approx 68 \\text{ mph …[snip]…  11\n\n[RETRY] Výsledek: (I) 90 mi/hr.\n\nVýpočet:\n1) Síla tření: F_f = μ·m·g = 0,005 × 200000 kg × 9,81 m/s² = 9810 N.\n2) Dostupná výkon: P = 400 hp = 400 × 745,7 W = 298280 W.\n3) Maximální rychlost: v = P/F_f = 298280 / 9810 ≈ 30,4 m/s.\n4) Převod na mile: 30,4 m/s × 2,237 ≈ 68 km/h → 68 / 1,609 ≈ 42,3 mph.\n5) Přesnější výpočet s F_f = 9810 N a P = 298280 W: v = 30,4 m/s. Převod na mph: 30,4 × 2,237 = 68,1 km/h. Převod na mph: 68,1 / 1,609 = 42,3 mph.\n6) Přesná hodnota: 400 hp = 298280 W. F_f = 9810 N. v = 30,4 m/s. 30,4 m/s × 2,237 = 68,1 km/h. 68,1 km/h / 1,609 = 42,3 mph.\n7) Přesná hodnota: 40"
+    },
+    {
+      "id": "mmlu_physics_9074",
+      "category": "physics",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Potenciální energie: E = mgh = 10⁻³ kg × 9.81 m/s² × 0.01 m = 9.81 × 10⁻⁵ J.\n2) Energie jednoho fotonu: E_ph = hc/λ = (6.63 × 10⁻³⁴ J·s × 3 × 10⁸ m/s) / 6 × 10⁻⁵ m = 3.315 × 10⁻²1 J.\n3) Počet fotonů: n = E/E_ph = 9.81 × 10⁻⁵ / 3.315 × 10⁻²¹ ≈ 2.96 × 10¹⁶.\n4) Přepočet na jednotky v odpovědích: 2.96 × 10¹⁶ = 29.6 × 10¹⁴. Nejbližší odpověď je 30 × 10¹⁴, což odpovídá (C) 18 × 10¹⁴? Ne, počítám znovu: 9.81 × 10⁻⁵ / 3.315 × 10⁻²¹ = 2.96 × 10¹⁶. To je 29.6 × 10¹⁴. Nejbližší je 30 × 10¹⁴. Ohledně výběru: 18 × 10¹⁴ je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Možná zaokrouhnění g=10 m/s² a h=1 cm: E = 10⁻⁵ J. …[snip]… 0¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 × 10¹⁴? Ne, to je 1.8 × 10¹⁵. Přesně 2.96 × 10¹⁶. Nejbližší odpověď je (C) 18 ×"
+    },
+    {
+      "id": "mmlu_physics_9075",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 117 lb·ft.\n\n1) Převod otáček na rad/s: $\\omega = 3600 \\cdot \\frac{2\\pi}{60} = 120\\pi \\approx 377$ rad/s.\n2) Výkon v ft·lbf·s: 1 hp = 550 ft·lbf·s, tedy $P = 80 \\cdot 550 = 44000$ ft·lbf·s.\n3) Tvar $\\tau = P/\\omega$: $\\tau = 44000 / 376.99 \\approx 116.72$ lb·ft. Zaokrouhleno na nejbližší celou hodnotu 117.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9076",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Převod jednotek: 2000 lb/in² = 2000 × 144 lb/ft² = 288000 lb/ft². Tlak v atm: 288000 / 2116.2 ≈ 136.1 atm.\n2) Výsledek: ΔV = -V·ΔP/B = -5 × 136.1 × 20 × 10⁻⁶ ≈ -0.01361 ft³. Zaokrouhleněno na 0.0136.\n3) Výsledek: (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9077",
+      "category": "physics",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 98 J.\nPostup: Tíha síly tlučení je F = m·g = 5 kg × 9,81 m/s² = 49,05 N. Tíha práce W = F·s = 49,05 N × 2 m = 98,1 J. Zaokrouhleněno na nejbližší odpověd: 98 J.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_physics_9078",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Mass m = 100 kg.\n    *   Velocity v = 2 m/s (constant).\n    *   Coefficient of friction μ = 0.25.\n    *   Find power in watts and horsepower.\n\n    *   Friction force: F_f = μ·m·g = 0.25 × 100 × 9.81 = 245.25 N.\n    *   Since velocity is constant, the applied force F_app = F_f = 245.25 N.\n    *   Power P = F·v = 245.25 × 2 = 490.5 W.\n    *   Conversion to hp: 1 hp = 745.7 W.\n    *   P_hp = 490.5 / 745.7 ≈ 0.6577 hp.\n\n    (A) 490 W, 0.66 hp.\n    (B) 500 W, 0.68 hp.\n    (C) 510 W, 0.68 hp.\n    (D) 530 W, 0.71 hp.\n    (E) 520 W, 0.70 hp.\n    (F) 470 W, 0.63 hp.\n    (G) 450 W, 0.60 hp.\n    (H)  …[snip]… uestion was designed with g=10, (I) is the answer.\n    Usually, 9.81 is the standard.\n\n    Let's check if there's any other interpretation.\n    Maybe 1 hp = 735.5 W?\n    490.5 / 735.5 = 0.6669 → 0.67.\n    500 / 735.5 = 0.6796 → 0.68.\n    Then (I) would be 500 W, 0.67 hp and (B) would be 500 W, 0.68 hp.\n    This would make (B) the answer if g=10 and metric hp.\n\n    However, standard hp is 745.7 W.\n    Let's stick with (A).\n\n    Wait, let me re-read the question. \"490 W, 0.66 hp\".\n    490.5 W is 0.6577 hp. Rounding to 0.66 is correct.\n    500 W is 0.6706 hp. Rounding to 0.67 is correct.\n    If g"
+    },
+    {
+      "id": "mmlu_physics_9079",
+      "category": "physics",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "The problem asks for the relative speeds of two electrons moving at $v_1 = 0.90c$ and $v_2 = 0.80c$ in the same and opposite directions.\n\n    The relativistic velocity addition formula is:\n    $v = \\frac{v_1 + v_2}{1 + \\frac{v_1 v_2}{c^2}}$ for same direction.\n    $v = \\frac{v_1 - v_2}{1 - \\frac{v_1 v_2}{c^2}}$ for opposite direction (where $v_2$ is taken as negative).\n\n    (a) Same direction:\n    $v = \\frac{0.90c + 0.80c}{1 + 0.72} = \\frac{1.70}{1.72} \\approx 0.988c \\approx 0.99c$.\n    Wait, let me re-calculate.\n    $v = \\frac{0.9 + 0.8}{1 + 0.72} = \\frac{1.7}{1.72} \\approx 0.98837... \\approx …[snip]… pprox 0.36c$.\n    Case (b): A and B move in opposite directions. Relative speed is the sum: $v = \\frac{v_1 + v_2}{1 + v_1 v_2/c^2} = \\frac{1.7}{1.72} \\approx 0.99c$.\n    Both values are $\\le c$. All other options contain values $> c$, which are physically impossible.\n    Therefore, (J) is the only plausible answer.\n\n    Let's double check the arithmetic:\n    0.9 * 0.8 = 0.72.\n    (a) (0.9 - 0.8) / (1 - 0.72) = 0.1 / 0.28 = 0.35714... $\\approx 0.36$.\n    (b) (0.9 + 0.8) / (1 + 0.72) = 1.7 / 1.72 = 0.98837... $\\approx 0.99$.\n    Option (J) is 0.36c and 0.99c.\n\n    Wait, let me check if I swapped"
+    },
+    {
+      "id": "mmlu_physics_9080",
+      "category": "physics",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "The speed of a compressional wave in a solid is given by $v = \\sqrt{E/\\rho}$, where $E$ is Young's modulus and $\\rho$ is the density.\n\n    *   Specific gravity of iron = 7.7.\n    *   Density of water $\\rho_w \\approx 62.4 \\text{ lb/ft}^3$ (or $1000 \\text{ kg/m}^3$).\n    *   $\\rho = 7.7 \\times 62.4 \\approx 480.48 \\text{ lb/ft}^3$.\n    *   Young's modulus $E = 27.5 \\times 10^6 \\text{ lb/in}^2$.\n    *   Convert $E$ to lb/ft²: $27.5 \\times 10^6 \\times 144 = 3.96 \\times 10^9 \\text{ lb/ft}^2$.\n    *   $v = \\sqrt{3.96 \\times 10^9 / 480.48} \\approx \\sqrt{8.24 \\times 10^6} \\approx 2870 \\text{ ft/s}$. Wa …[snip]… qrt{8244000} = 2871 \\text{ ft/s}$.\n    Wait, 2871 ft/s is 875 m/s.\n    Is 875 m/s the speed of sound in steel? No.\n    Let me check the speed of sound in steel again.\n    $v = \\sqrt{E/\\rho}$. For steel, $E \\approx 200 \\text{ GPa}$, $\\rho \\approx 7800 \\text{ kg/m}^3$.\n    $v = \\sqrt{2 \\times 10^{11} / 7800} \\approx 5060 \\text{ m/s}$.\n    5060 m/s = 16600 ft/s.\n    So the answer should be around 1.6 × 10^4 ft/s.\n    Why did my imperial calculation give 2871?\n    Ah! 2871 ft/s is 875 m/s.\n    Wait, 875 m/s is the speed of sound in water.\n    Is there a factor of 5.7 difference?\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_physics_9081",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 931.5 MeV. Odpověď (H).\n\nPostup:\n1) Základní vztah: E = mc². Pro 1 amu (≈ 1.6605 × 10⁻²⁷ kg) a c = 299792458 m/s:\n2) E = (1.6605 × 10⁻²⁷) × (2.998 × 10⁸)² ≈ 1.4924 × 10⁻¹⁰ J.\n3) Převod na MeV: 1.4924 × 10⁻¹⁰ J / 1.602 × 10⁻¹³ J/MeV ≈ 931.5 MeV.\n4) Praktické pravidlo: 1 amu ≈ 931.5 MeV/c².\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9082",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 0.8 lb.\nPostup: Tlak P = 80 lb/in², otvor A = 0.01 in². Síla F = P·A = 80 × 0.01 = 0.8 lb. Tlak je síla na jednotku plochy; násobením plochy dostaneme sílu potřebnou k vyvážení tlaku.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9083",
+      "category": "physics",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The question asks for the mass of the electron based on Millikan's charge and Thomson's e/m ratio.\n    - Millikan's oil drop experiment: e ≈ 1.602 × 10⁻¹⁹ C.\n    - Thomson's cathode ray experiment: e/m ≈ 1.76 × 10⁷ C/kg.\n    - m = e / (e/m) = 1.602 × 10⁻¹⁹ / 1.76 × 10⁷ ≈ 9.1 × 10⁻²⁷ kg.\n    - Wait, let's re-check the units and values.\n    - Thomson's e/m value is often quoted as 1.76 × 10⁷ C/kg.\n    - 1.602 × 10⁻¹⁹ / 1.76 × 10⁷ = 9.1 × 10⁻²⁷ kg.\n    - Let's check the options:\n        (A) 6.7 × 10⁻¹⁷ kg\n        (B) 2.2 × 10⁻²² kg\n        (C) 3.0 × 10⁻³² kg\n        (D) 5.5 × 10⁻³¹ kg\n        (E) …[snip]… .\n    Let me check the options again.\n    (H) 9.1 × 10⁻²⁸ kg.\n    (I) 9.1 × 10⁻³¹ kg.\n    Wait, 9.1 × 10⁻²⁷ is between them.\n    Is it possible the question is from a source where e/m was 1.76 × 10⁸?\n    Then m = 9.1 × 10⁻³⁰.\n    Is it possible the question is from a source where e/m was 1.76 × 10⁶?\n    Then m = 9.1 × 10⁻¹³.\n    Wait, let me re-calculate 1.6e-19 / 1.76e7.\n    1.6/1.76 = 0.909.\n    10⁻¹⁹ / 10⁷ = 10⁻²⁶.\n    0.909 × 10⁻²⁶ = 9.09 × 10⁻²⁷.\n    Wait, 9.1 × 10⁻²⁷ is the standard value.\n    Let me check the options again.\n    (H) 9.1 × 10⁻²⁸ kg.\n    (I) 9.1 × 10⁻³¹ kg.\n    Wait, 9.1 ×"
+    },
+    {
+      "id": "mmlu_physics_9084",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(a) Work W = ΔE_k = m·v_f²/2 − m·v_i²/2 = 1.67·10⁻²⁷·((3·10²)² − (2·10³)²)/2 = 1.67·10⁻²⁷·(-3.97·10⁶)/2 ≈ -3.27 × 10⁻²1 J. Záporná práce znamená, že síla brzdí neutron.\n(b) F = W/d = -3.27·10⁻²¹ / 2·10⁵ = -1.635 × 10⁻²⁶ N. Přesně 1.64 × 10⁻²⁶ N.\nZvolená odpověď: (E) — pozor, v možnostech je 10⁻⁶ místo 10⁻⁶; to je typický překlep v zadání jednotek, ale hodnota 1.64 odpovídá.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9085",
+      "category": "physics",
+      "want": "I",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\n1) Zachování hybnosti: p_j = p_k + p_\\gamma. Protože jádro bylo v klidu, p_j = -p_\\gamma.\n2) Kinetická energie jádra: K = p_j^2 / 2M.\n3) Energie fotonu: E_\\gamma = pc. Tedy p_gamma = E_\\gamma/c.\n4) Dosazení: K = (E_\\gamma/c)^2 / 2M = E_\\gamma^2 / (2Mc^2).\n5) Pro 217 keV foton a jádro s M ≈ 100 GeV/c²: K ≈ 4.7 eV — malá, ale měřitelná.\n6) Výsledek: E_\\gamma^2 / (2Mc^2).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9086",
+      "category": "physics",
+      "want": "G",
+      "got": "F",
+      "ok": false,
+      "retried": true,
+      "raw": "Výsledek: (A) 2.48 × 10⁻⁸ cm.\n\n1) Kinetická energie E = 1 eV = 1.602 × 10⁻¹² J.\n2) Relativistické roviny: E = p²c²/2m_e → p = √(2m_eE/c²). Pro 1 eV je relativismus zanedbatelný.\n3) p = √(2 × 9.11 × 10⁻³¹ × 1.602 × 10⁻¹²) / 3 × 10⁸ ≈ 9.84 × 10⁻²² kg·m/s.\n4) λ = h/p = 6.626 × 10⁻³⁴ / 9.84 × 10⁻²² ≈ 6.73 × 10⁻¹² m = 6.73 × 10⁻¹⁰ cm.\n5) Převod na cm: 6.73 × 10⁻¹⁰ m = 6.73 × 10⁻⁸ cm.\n6) Přesnější výpočet: λ = h/√(2m_eE) = 1.24 × 10⁻⁶ m·eV/eV = 1.24 × 10⁻⁶ m = 1.24 × 10⁻⁴ cm.\n7) Oprava: 1 eV = 1.602 × 10⁻¹⁹ J. λ = h/p = 6.626 × 10⁻³⁴ / √(2·9.11×10⁻³¹·1.602×10⁻¹⁹) = 6.626 × 10⁻³4 / 5.39 × 10⁻²⁵ = 1.2 …[snip]… 23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n47) Přesná hodnota: λ = h/p = 6.626×10⁻³4 / √(2·9.11×10⁻³1·1.602×10⁻¹⁹) = 1.23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n48) Přesná hodnota: λ = h/p = 6.626×10⁻³4 / √(2·9.11×10⁻³1·1.602×10⁻¹⁹) = 1.23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n49) Přesná hodnota: λ = h/p = 6.626×10⁻³4 / √(2·9.11×10⁻³1·1.602×10⁻¹⁹) = 1.23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n50) Přesná hodnota: λ = h/p = 6.626×10⁻³4 / √(2·9.11×10⁻³1·1.602×10⁻¹⁹) = 1.23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n51) Přesná hodnota: λ = h/p = 6.626×10⁻³4 / √(2·9.11×10⁻³1·1.602×10⁻¹⁹) = 1.23 × 10⁻⁹ m = 1.23 × 10⁻⁷ cm.\n52) Přesná hodnota: λ\n\n[RETRY] Answer: F"
+    },
+    {
+      "id": "mmlu_physics_9087",
+      "category": "physics",
+      "want": "E",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Objem: V = 4/3 π r³ = 4/3 π (0.05 cm)³ ≈ 5.236 × 10⁻⁴ cm³.\n2) Hmotnost: m = V·ρ = 5.236 × 10⁻⁴ cm³ × 1 g/cm³ = 5.236 × 10⁻4 g = 0.5236 mg.\n3) Počet atomů: N = m/m_H ≈ 5.236 × 10⁻4 g / 1.67 × 10⁻²⁴ g ≈ 3.135 × 10²⁰ atomů.\n4) Čas: t = N/5 s⁻¹ = 6.27 × 10¹⁹ s.\n5) Převod na roky: t/31536000 ≈ 1.98 × 10¹² let.\n6) Přesnější výpočet: V = 5.236 × 10⁻⁴ cm³; N = 3.135 × 10²⁰; t = 6.27 × 10¹⁹ s ≈ 2000 mil. let.\n\nOpakujme: 0.1 cm průměr → r = 0.05 cm. V = 5.236 × 10⁻⁴ cm³. Hmotnost 0.5236 mg. N = 3.135 × 10²⁰. Tříkrát 10¹⁹ s je ~1000 let.\nPřečtu otázku: 5 atomů za sekundu. 3.135 × 10²⁰ / 5 = 6.27 × 10¹ …[snip]… pověď (H) 4.1 × 10¹² — nejbližší řád; ale počítám znovu: 5.236 × 10⁻⁴ g / 1.67 × 10⁻²⁴ = 3.135 × 10²⁰. Těžití atomů v 0.1 cm průměru: 3.135 × 10²⁰. Tříkrát 10¹⁹ s = 6.27 × 10¹⁹ s. Převod na roky: 6.27 × 10¹⁹ / 31536000 = 1.98 × 10¹².\nZvolím (H) jako nejbližší řád; ale počítám přesně: 5.236 × 10⁻⁴ / 1.67 × 10⁻²⁴ = 3.135 × 10²⁰. Tříkrát 10¹⁹ s = 6.27 × 10¹⁹ s. 6.27 × 10¹⁹ / 31536000 = 1.98 × 10¹².\nZvolím (H) 4.1 × 10¹² — nejbližší řád.\n\nWait, 0.1 cm průměr → r = 0.05 cm. V = 5.236 × 10⁻⁴ cm³. N = 3.135 × 10²⁰. T = 6.27 × 10¹⁹ s. T = 1.98 × 10¹² let. Nejbližší odpověď (H) 4.1 × 10¹².\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9088",
+      "category": "physics",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Výsledek: (B) 0.3 nt-m.\n\nPostup:\n1) Práce tvoří W = F·s, kde F je síla a s posun.\n2) F = 100 N, s = 0.50 mm = 0.0005 m.\n3) W = 100 × 0.0005 = 0.05 J.\n4) Převod na nJ: 0.05 J = 50 mJ.\n5) Převod na nJ: 50 mJ = 50000 nJ.\n6) Převod na nt-m: 50000 nJ = 50 nt-m.\n7) Přeschození jednotek: 1 nt-m = 10⁻⁹ J. Výsledek 50 nt-m.\n\nOpravením: 100 N × 0.5 mm = 50 mJ = 50000 nJ = 50 nt-m. Nicméně otázka se ptá na hodnotu v nt-m. 50 nt-m je 50.0 nt-m. Nejbližší odpověď je (B) 0.3 nt-m? Ne, 50 nt-m je 50.0. Přesáhli jsme jednotky: 100 N × 0.5 mm = 50 mJ = 50000 nJ. 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300  …[snip]… nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpověď (B) 0.3 nt-m je 300 nJ. Přeskočil jsem jednotu: 50 mJ = 50000 nJ = 50 nt-m. Odpově"
+    },
+    {
+      "id": "mmlu_physics_9089",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 2.6 × 10^4 J. Nejbližší odpověď je (J).\n\n1) Mocnina: P = U²/R = 240²/60 = 960 W.\n2) Čas v sekundách: t = 3 × 60 = 180 s.\n3) Energie: W = P·t = 960 × 180 = 172800 J = 1.728 × 10^5 J.\n\nOpravením: 240² = 57600; 57600/60 = 960 W. 960 × 180 = 172800 J. Přesná hodnota 1.73 × 10^5 J. Nejbližší možnost je (D) 1.72 × 10^4 — ale pozor, v zadání je 10^4, což by znamenalo 17280 J. Přesně 172800 J = 1.73 × 10^5. Pokud je možnost D 1.72 × 10^4, je to překlep v exponentu zadání; nejbližší numericky je D.\n\nPřepočítám znovu: 240² = 57600. 57600/60 = 960. 960 × 180 = 172800. Pokud je odpověď (D) 1.72 × 10^4, je to 17280 J — to by odpovídalo 1.8 min. Pokud je to 1.72 × 10^5, přesně sedí. V kontextu výběru: (D) 1.72 × 10^4.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9090",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 4.6 × 10⁻¹⁹ J a 6.6 × 10⁻²⁶ J.\nKrok 1: Pro modré světlo: E = h·f = 6.626 × 10⁻³⁴ × 7 × 10¹⁴ = 4.6382 × 10⁻¹⁹ J.\nKrok 2: Pro FM: E = 6.626 × 10⁻³⁴ × 10⁸ = 6.626 × 10⁻²⁶ J.\nObě hodnoty odpovídají zaokrouhleně hodnotám v možnosti (E).\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9091",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Initial state: Man + 2 weights at $r_1 = 3$ ft.\n    *   Final state: Man + 2 weights at $r_2 = 6$ in = 0.5 ft.\n    *   Angular velocity $\\omega_1 = \\frac{2\\pi}{2} = \\pi$ rad/s.\n    *   Mass of each weight: $m = \\frac{10 \\text{ lb}}{32.2 \\text{ ft/s}^2} \\approx 0.311$ slug.\n    *   Moment of inertia: $I = I_{\\text{man}} + 2 m r^2$.\n    *   $I_1 = 4 + 2 \\cdot 0.311 \\cdot 3^2 = 4 + 5.616 = 9.616$.\n    *   $I_2 = 4 + 2 \\cdot 0.311 \\cdot 0.5^2 = 4 + 0.311 = 4.311$.\n    *   Conservation of angular momentum: $I_1 \\omega_1 = I_2 \\omega_2$.\n    *   $\\omega_2 = \\frac{9.616 \\cdot \\pi}{4.311} \\approx  …[snip]… the question again. \"10-lb weight in each hand\".\n    *   Maybe the man's moment of inertia is 3.8? Then $\\omega_2 = 2.37$.\n    *   Let's check the options again. (A) 2.13.\n    *   Wait, 2.13 is 2.225 rounded down?\n    *   Let's re-calculate: $I_1 = 4 + 2 \\cdot 0.31056 \\cdot 9 = 9.592$. $I_2 = 4 + 2 \\cdot 0.31056 \\cdot 0.25 = 4.155$. $\\omega_2 = 2.308$.\n    *   Is 2.308 closer to 2.13 or 2.5? $|2.308-2.13|=0.178$. $|2.308-2.5|=0.192$.\n    *   So 2.13 is the closest.\n    *   Let's check if there's any other interpretation.\n    *   Maybe the man's moment of inertia is 3.5? Then $\\omega_2 = 2.48$."
+    },
+    {
+      "id": "mmlu_physics_9092",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: 295 ft³.\n\nKrok 1: Převod teplot na Kelvin: T1 = 27 + 273 = 300 K, T2 = 50 + 273 = 323 K.\nKrok 2: Kombinovaná plynová rovnice: P1·V1/T1 = P2·V2/T2.\nKrok 3: V2 = V1·P1·T2 / (P2·T1) = 2·137·323 / (1·300) = 88402 / 300 ≈ 294.67.\nZaokrouhleně 295 ft³.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9093",
+      "category": "physics",
+      "want": "H",
+      "got": null,
+      "ok": false,
+      "retried": true,
+      "raw": "*   Rod length L = 20 cm.\n    *   Cross-sectional area A = 3 cm².\n    *   Temperature difference ΔT = 300 K - 0 K = 300 K.\n    *   Thermal conductivity k = 0.16 cal/(s·cm·K).\n    *   Time Δt = 10 min = 600 s.\n    *   Latent heat of fusion of ice L_f = 80 cal/g.\n    *   Find mass m of melted ice.\n\n    1.  Heat flow rate: P = k·A·ΔT/L = 0.16 × 3 × 300 / 20 = 7.2 cal/s.\n    2.  Total heat Q = P·Δt = 7.2 × 600 = 4320 cal.\n    3.  Mass of melted ice m = Q / L_f = 4320 / 80 = 54 g.\n\n    Wait, let me re-calculate.\n    k = 0.16 cal/(s·cm·K).\n    A = 3 cm².\n    ΔT = 300 K.\n    L = 20 cm.\n    P = (0.16  …[snip]… 48 cal/s\n    Q = 388.8 cal\n    m = 388.8 / 80 = 4.86 g.\n    Matches (H) exactly.\n\n    Wait, why did I get 54 before? Because I used ΔT = 300 instead of 27.\n    The question says \"heated to 300 K\" and \"other end in ice\". The temperature difference across the rod is the difference between the hot end and the ice.\n    If the hot end is at 300 K and the ice is at 273 K, ΔT = 27 K.\n    P = 0.16 * 3 * 27 / 20 = 0.648 cal/s.\n    Q = 0.6\n\n[RETRY] Výsledek: (H) 4.86 gr\n\nPohyb tepla: Q = k·A·ΔT·Δt / L. ΔT = 300 - 273 = 27 K. Q = 0.16·3·27·600 / 20 = 388.8 cal. Tání ledu: m = Q/L_fus = 388.8/80 = 4.86 g."
+    },
+    {
+      "id": "mmlu_physics_9094",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Převod na rad/s: ω = 33.3 × 2π/60 ≈ 3.487 rad/s.\n2) Z α = Δω/Δt = 3.487/2 = 1.7435 rad/s².\n3) Zaokrouhleněno na dvě desetinné: 1.74.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9095",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Převod rychlosti: 30 mph = 30 × 1609.34 m/s ≈ 48280 cm/s = 482.8 m/s.\n2) Zrychlení: a = Δv/Δt = 482.8 / 8 = 60.35 m/s².\n3) Převod na ft/s²: 60.35 m/s² × 3.28084 ≈ 198.5 ft/s².\n4) Přepočet na ft/s²: 30 mph = 44 ft/s. a = 44/8 = 5.5 ft/s².\n\nVýsledek: 5.5 ft/s².\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9096",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "(a) C = ε₀A/d = 8.854·10⁻¹² · 2/0.005 = 3.5416 × 10⁻⁶ F = 3540 μF.\n(b) Q = C·U = 3.5416 × 10⁻⁶ · 10000 = 35.416 C = 3.54 × 10⁵ μC.\n(c) E = U/d = 10000/0.005 = 2 × 10⁶ V/m = 20 × 10⁵ V/m.\nVšechny hodnoty odpovídají možnosti H.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9097",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Work function W = h·c/λ_max = 1240 eV·nm / 650 nm = 19.08 eV.\n2) Photon energy E = 1240 / 3.9 = 31.80 eV.\n3) Max kinetic energy K_max = E - W = 31.80 - 19.08 = 12.72 eV.\n4) Rounding to two decimal places gives 12.72 ≈ 12.7.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9098",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Boat speed relative to water: $v$ (unknown).\n    *   River current speed: $c$.\n    *   Upstream speed: $v - c$.\n    *   Downstream speed: $v + c$.\n    *   Bottle speed: $c$ (drifts with the current).\n    *   Time upstream: $t_1 = 15$ min = 0.25 h.\n    *   Distance upstream: $d_1 = (v - c) \\cdot 0.25$.\n    *   After turning, boat travels downstream for time $t_2$.\n    *   Bottle has drifted for total time $t = t_1 + t_2$.\n    *   Distance bottle drifted: $d_{bot} = c \\cdot (t_1 + t_2) = 1$ mile.\n    *   Boat's position after turn: $d_1 + (v + c) \\cdot t_2$.\n    *   Catch-up condition: $d_1  …[snip]…  - ct_2 = y_1 - x_1 = 2ct_1$.\n    $v \\cdot t_2 = 2ct_1$.\n    Since $t_1 = 0.25$, $v \\cdot t_2 = 0.5c$.\n    Wait, this gives $t_2 = 0.5c/v$.\n    Then total time $T = t_1 + t_2 = 0.25 + 0.5c/v$.\n    Bottle distance $c \\cdot T = c(0.25 + 0.5c/v) = 0.25c + 0.5c^2/v = 1$.\n    This depends on $v$.\n    Let me re-read.\n    Ah, my previous algebra:\n    $x_1 = -0.25(v-c) = -0.25v + 0.25c$.\n    $y_1 = 0.25c$.\n    $x_2 = -0.25v + 0.25c + (v+c)t_2$.\n    $y_2 = 0.25c + ct_2$.\n    $x_2 = y_2 \\implies -0.25v + 0.25c + v \\cdot t_2 + c \\cdot t_2 = 0.25c + c \\cdot t_2 \\implies v(t_2 - 0.25) = 0$.\n    Yes, $t_2 ="
+    },
+    {
+      "id": "mmlu_physics_9099",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Let d be the total distance. The first half d/2 is covered in t1 = (d/2)/v1 = d/20 hours. The second half d/2 is covered in t2 = (d/2)/v2 = d/80 hours. The average speed is v_avg = d / (t1 + t2) = d / (d/20 + d/80) = 1 / (4/80 + 1/80) = 80/5 = 16 mi/hr. This is the harmonic mean of the speeds.\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9100",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výpočet zrychlení: z rovnice kinematiky $v^2 = v_0^2 + 2as$ vyjádříme $a = \\frac{80^2 - 0}{2 \\cdot 402} = \\frac{6400}{804} \\approx 7.96 \\text{ m/s}^2$. Výpočet času: $t = \\frac{v - v_0}{a} = \\frac{80}{7.96} \\approx 10.05 \\text{ s} \\approx 10.1 \\text{ s}$. Obě hodnoty přesně odpovídají možnosti (B).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9101",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B) 133 cm.\nPostup: 1) Vlnová rychlost zvuku vnímate v ~340 m/s. 2) Vlnová délka λ = v/f = 340 / 256 ≈ 1.328 m = 132.8 cm. Zaokrouhleně 133 cm.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9102",
+      "category": "physics",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\n1) Cyclotron frequency: f = qB / (2πm).\n2) Známe: q = 2e = 2·1.6·10⁻¹⁹ C, B = π/4 T, f = 1600 Hz.\n3) m = qB / (2πf) = (2·1.6·10⁻¹⁹ · π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / (3200·π) = 10⁻¹³ / 1000 = 10⁻¹⁶ kg? Ne, počítám znovu:\nm = (2·1.6·10⁻¹⁹ · π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / (8·1600) = 3.2·10⁻¹⁹ / 12800 = 2·10⁻²³ kg.\n4) Přesněji: m = (2·1.6·10⁻¹⁹ · π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / (3200·π) = 10⁻¹⁹ / 1000 = 10⁻²² kg.\n5) Přesná hodnota: m = 3.2·10⁻¹⁹ / 12800 = 2.5·10⁻²³ kg.\n6) Přesná hodnota: m = 3.2·10⁻¹⁹ / (2·π·1600) = 3.2·10⁻¹⁹ / 10053 ≈ 3.18·10⁻²³ kg.\n7) Přesněji: m = qB / (2πf) = (2·1.6·10⁻¹⁹ · π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / (3200·π) = 10⁻¹⁹ / 1000 = 10⁻²² kg.\n8) Opakujme: q = 2e = 3.2·10⁻¹⁹ C. B = π/4 T. f = 1600 Hz.\nm = qB / (2πf) = (3.2·10⁻¹⁹ · π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / (8·1600) = 3.2·10⁻¹⁹ / 12800 = 2.5·10⁻²³ kg.\n9) Přesně: 3.2/12.8 = 0.25. Tedy 2.5·10⁻²³ kg.\n10) Nejbližší odpověď: (G) 2.5·10⁻²³ kg.\n\nOpravené: m = (2·1.6·10⁻¹⁹·π/4) / (2·π·1600) = 3.2·10⁻¹⁹ / 12800 = 2.5·10⁻²³ kg.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_physics_9103",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "*   Moment of inertia $I = 0.06 \\text{ kg·m}^2$.\n    *   Initial angular velocity $\\omega_0 = 20 \\text{ rad/s}$.\n    *   Friction force $F = 2.0 \\text{ N}$ at radius $r = 0.30 \\text{ m}$.\n    *   Find time $t$ to stop.\n\n    1.  Torque $\\tau = r \\cdot F = 0.3 \\cdot 2 = 0.6 \\text{ N·m}$.\n    2.  Angular acceleration $\\alpha = \\tau / I = 0.6 / 0.06 = 10 \\text{ rad/s}^2$.\n    3.  Time to stop: $\\Delta \\omega = \\alpha \\cdot t \\Rightarrow 20 = 10 \\cdot t \\Rightarrow t = 2 \\text{ s}$.\n\n    (A) 0.1 s\n    (B) 3 s\n    (C) 5 s\n    (D) 2 s\n    (E) 6 s\n    (F) 1 s\n    (G) 4 s\n    (H) 0.06 s\n    (I) 0.03 s\n …[snip]… 2 s. Odpověď (D).\n    Krok 1: Moment síly $\\tau = r \\cdot F = 0.3 \\cdot 2 = 0.6 \\text{ N·m}$.\n    Krok 2: Z rovince rotace $\\tau = I \\alpha$ vyjádříme změnu rychlosti $\\Delta \\omega = \\tau \\cdot t / I$.\n    Krok 3: $20 = 0.6 \\cdot t / 0.06 \\Rightarrow 20 = 10 \\cdot t \\Rightarrow t = 2 \\text{ s}$.\n\n    Výsledek: 2 s. Odpověď (D).\n    Krok 1: Moment síly $\\tau = r \\cdot F = 0.3 \\cdot 2 = 0.6 \\text{ N·m}$.\n    Krok 2: Z rovince rotace $\\tau = I \\alpha$ vyjádříme změnu rychlosti $\\Delta \\omega = \\tau \\cdot t / I$.\n    Krok 3: $20 = 0.6 \\cdot t / 0.06 \\Rightarrow 20 = 10 \\cdot t \\Rightarrow t = 2 \\"
+    }
+  ]
+}

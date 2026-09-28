@@ -1,0 +1,21 @@
+  1/20 think~677tok | ahoj
+  2/20 think~295tok | Kolik je 17 krat 23?
+  3/20 think~844tok | Co je to fotosyntéza?
+  4/20 think~1007tok | Vysvětli moment hybnosti.
+  5/20 think~368tok | Je 91 prvočíslo?
+  6/20 think~860tok | Napiš funkci na Fibonacciho čísla v Pyth
+  7/20 think~945tok | What is entropy in thermodynamics?
+  8/20 think~836tok | Jak se skloňuje slovo most?
+  9/20 think~470tok | Vypočítej pH roztoku HCl 0.01 mol/l.
+  10/20 think~383tok | Kdo tě vytvořil?
+  11/20 think~366tok | Solve 5x + 3 = 28.
+  12/20 think~764tok | Co je to mitochondrie?
+  13/20 think~901tok | Vysvětli rozdíl mezi virem a bakterií.
+  14/20 think~977tok | Napiš SQL dotaz na top 3 zákazníky.
+  15/20 think~714tok | Je voda při 50 °C kapalná?
+  16/20 think~341tok | What is the speed of light?
+  17/20 think~836tok | Oprav: Musím to písat každý den.
+  18/20 think~887tok | Vysvětli Krebsův cyklus.
+  19/20 think~340tok | Kolik je odmocnina ze 144?
+  20/20 think~764tok | Co je to API?
+MEAN THINKING TOKENS: 679 -> outputs/thinkmeter_qwen3.5_9b.json

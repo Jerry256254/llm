@@ -1,0 +1,38 @@
+extractor self-test: 10/10 passed
+
+══════════════════════════════════════════════════════════════════════
+qwen3.5:9b · 32 questions · 2 workers
+══════════════════════════════════════════════════════════════════════
+  10/32  473s  (47.3s/q)
+  20/32  975s  (48.8s/q)
+  30/32  1462s  (48.7s/q)
+
+qwen3.5:9b
+  biology      6/8     75.0%
+  chemistry    4/8     50.0%
+  math         7/8     87.5%
+  physics      5/8     62.5%
+  TOTAL       22/32    68.8%
+  (9 needed an answer-only re-ask after running out of tokens)
+  ! 8 answers still unparseable (counted as wrong)
+  1525s total, 47.7s/question
+  → /home/admin/llm/outputs/bench/qwen3.5_9b.json
+extractor self-test: 10/10 passed
+
+══════════════════════════════════════════════════════════════════════
+qwen35-nulltrain-bf16 · 32 questions · 2 workers
+══════════════════════════════════════════════════════════════════════
+  10/32  56s  (5.6s/q)
+  20/32  117s  (5.8s/q)
+  30/32  173s  (5.8s/q)
+
+qwen35-nulltrain-bf16
+  biology      3/8     37.5%
+  chemistry    1/8     12.5%
+  math         0/8      0.0%
+  physics      1/8     12.5%
+  TOTAL        5/32    15.6%
+  (25 needed an answer-only re-ask after running out of tokens)
+  ! 18 answers still unparseable (counted as wrong)
+  175s total, 5.5s/question
+  → /home/admin/llm/outputs/bench/qwen35-nulltrain-bf16.json

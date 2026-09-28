@@ -1,0 +1,5 @@
+{
+  "ollama_name": "kuclab-hertz-0.7",
+  "gguf_quant": "q4_k_m",
+  "model_id": "google/gemma-4-12B-it"
+}

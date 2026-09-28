@@ -1,0 +1,34 @@
+
+══════════════════════════════════════════════════════════════════════
+kuclab-hertz-0.7 · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  23s
+  40/206  36s
+  60/206  52s
+  80/206  65s
+  100/206  77s
+  120/206  96s
+  140/206  111s
+  160/206  124s
+  180/206  140s
+  200/206  155s
+
+kuclab-hertz-0.7
+  CS→EN     84/103   81.6%
+  EN→CS     56/103   54.4%
+  TOTAL    140/206   68.0%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    valivý odpor               → 'odstavná odpornost'
+    těžiště                    → 'střed hmoty'
+    stojaté vlnění             → 'stojná vlna'
+    rezistivita                → 'elektrický odpor'
+    stejnosměrný proud         → 'střídavý proud'
+    měrná tepelná kapacita     → 'měrná tepelnost'
+    povrchové napětí           → 'pružnost povrchu'
+    lom světla                 → 'lomek'
+    spojka                     → 'sbírací čočka'
+    princip neurčitosti        → 'neurčitostní princip'
+    jaderná fúze               → 'termonukleární fúze'
+    dilatace času              → 'časové dilatace'
+  → /home/admin/llm/outputs/bench/czterms_kuclab-hertz-0.7.json

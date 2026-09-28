@@ -1,0 +1,34 @@
+
+══════════════════════════════════════════════════════════════════════
+kuclab-hertz-0.9 · 206 terminology questions
+══════════════════════════════════════════════════════════════════════
+  20/206  174s
+  40/206  333s
+  60/206  495s
+  80/206  665s
+  100/206  834s
+  120/206  1001s
+  140/206  1170s
+  160/206  1336s
+  180/206  1489s
+  200/206  1671s
+
+kuclab-hertz-0.9
+  CS→EN     89/103   86.4%
+  EN→CS     90/103   87.4%
+  TOTAL    179/206   86.9%
+
+  Nejhorší selhání (EN→CS), prvních 12:
+    stojaté vlnění             → 'stojící vlna'
+    lom světla                 → 'lomení'
+    spojka                     → 'sbíhavá čočka'
+    polymerace                 → 'Polymerizace'
+    mocenství                  → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    jadérko                    → 'nukleolus'
+    definiční obor             → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    transpozice                → 'Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for '
+    soustava rovnic            → 'Systém rovnic'
+    těžnice                    → 'střednice'
+    shodnost                   → 'kongruence'
+    Bayesova věta              → 'Bayesův vzorec'
+  → /home/admin/llm/outputs/bench/czterms_kuclab-hertz-0.9.json

@@ -1,0 +1,7 @@
+  teacher override: {'bio': 'deepseek', 'design': 'deepseek', 'czech': 'deepseek'}
+  filtered to domains ['codehard', 'tools']: 600 prompts
+  [1] api08:codehard: Najdi bug: 'for i in range(3): print(i/6)'. Co se pokazí a j
+  [2] api08:codehard: Najdi bug: 'for i in range(4): print(i/5)'. Co se pokazí a j
+  [3] api08:codehard: Najdi bug: 'for i in range(7): print(i/2)'. Co se pokazí a j
+  [4] api08:codehard: Najdi bug: 'for i in range(5): print(i/12)'. Co se pokazí a 
+  [5] api08:codehard: Najdi bug: 'for i in range(6): print(i/3)'. Co se pokazí a j

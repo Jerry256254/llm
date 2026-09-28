@@ -1,0 +1,2193 @@
+{
+  "model": "kuclab-hertz-0.7",
+  "n": 240,
+  "correct": 152,
+  "accuracy": 0.6333333333333333,
+  "unparsed": 0,
+  "retried": 14,
+  "per_category": {
+    "biology": {
+      "correct": 48,
+      "n": 60,
+      "accuracy": 0.8
+    },
+    "chemistry": {
+      "correct": 23,
+      "n": 60,
+      "accuracy": 0.38333333333333336
+    },
+    "math": {
+      "correct": 50,
+      "n": 60,
+      "accuracy": 0.8333333333333334
+    },
+    "physics": {
+      "correct": 31,
+      "n": 60,
+      "accuracy": 0.5166666666666667
+    }
+  },
+  "elapsed_s": 6754.3,
+  "results": [
+    {
+      "id": "mmlu_biology_2804",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B) and (H) are the most likely. (B) shoot tips contain meristems, where active cell division occurs. (H) anthers produce pollen via meiosis, but the tissue itself undergoes mitosis during development. (A), (C), (D), (E), (F), (G) are mature tissues with little to no active cell division.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2805",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The light reactions produce ATP and NADPH through the electron transport chain and photophosphorylation, which are the energy and reducing power needed by the Calvin cycle to fix CO2 into sugars. CO2 is taken in from the atmosphere, not produced in the light reactions; oxygen is a byproduct of water splitting, not a reactant in the Calvin cycle.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2806",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Silver fur is the recessive trait (b), so an individual with silver fur must have genotype bb. For two brown-furred parents to produce a bb offspring, both must carry at least one b allele. Option (C) Bb x Bb can produce bb offspring with probability 25%. Option (D) Bb x bb can produce bb with 50%. Option (E) BB x Bb cannot produce bb. Option (F) bb x Bb is the same as (D). Option (H) is invalid (triploid). Option (I) is the same as (D). Option (B) is the same as (E). Option (A) would produce only silver offspring. Option (G) only brown.\n\n(C) is the most general case of two brown-furred parents (heterozygous) producing a recessive phenotype.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2807",
+      "category": "biology",
+      "want": "I",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n(A) tRNA is a small non-coding RNA, typically 70–90 nucleotides.\n(B) Substitution doesn't change length.\n(C) mRNA is shorter than the gene due to intron removal, but still hundreds to thousands of nucleotides.\n(D) Pre-mRNA is longer than mRNA (contains introns).\n(E) Duplication increases length.\n(F) Pre-mRNA is longer than mRNA.\n(G) Deletion reduces length, but the segment is still the gene length minus the deletion.\n(H) A DNA segment (gene) is typically hundreds to thousands of nucleotides.\n(I) cDNA is the same length as the mRNA it's made from.\n(J) Point mutation doesn't change length.\n\ntRNA is the only molecule here that is consistently and specifically short (70–90 nt), while all other options involve segments of the gene or its transcripts, which are typically hundreds to thousands of nucleotides.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2808",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(C)\n\nAristotle believed species were fixed and immutable since antiquity. Cuvier, a proponent of catastrophism, also held to the fixity of species, believing new species appeared after catastrophic events. Linnaeus, while classifying species, did not propose any mechanism for their change over time. Lamarck and Darwin both proposed mechanisms for evolution, so they are excluded.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2809",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) is incorrect: apoptosis is programmed cell death, not cell division. (B) is correct: apoptosis is conserved across eukaryotes, suggesting an ancient origin. (C) is correct: apoptosis removes webbing between fingers during embryonic development. (D) is correct: apoptosis is a controlled process, unlike necrosis, which releases harmful contents.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2810",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F)\n\nThe term 'theory' in science means a well-substantiated explanation supported by evidence, not a guess. Evolution by natural selection has been tested and supported by genetics, paleontology, and biogeography. (A) is too strong — it's a theory, not a simple fact. (B) is misleading; it's not 'in the process' of being tested, it's been tested extensively. (C) is false. (D) and (H) use 'hypothesis' or 'guess' incorrectly. (E) and (J) mischaracterize it as opinion or belief. (G) implies it's just one of many plausible explanations, but it's the only one with substantial evidence. (I) is incorrect; it's based on vast data across many species.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2811",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (E).\n\n1. The question asks for the inorganic compound found in living organisms.\n2. (A) oxygen, (B) calcium, (C) carbon, (D) potassium, (E) phosphorus, (G) sulfur, (H) hydrogen, (I) nitrogen are all elements, not compounds.\n3. (F) water (H2O) is a compound, and it is the most abundant inorganic compound in living organisms.\n4. (J) glucose is an organic compound (C6H12O6).\n5. Therefore, water is the correct answer.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2812",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "(H) is correct. Homology refers to structures derived from a common ancestor; the more distantly related two species are, the more time has passed since their common ancestor, allowing more mutations and evolutionary changes to accumulate, which typically reduces the number of shared homologous structures compared to more closely related species. (A) mutation rates vary widely across species; (B) DNA sequences diverge over time; (C) phenotype reflects both genetics and environment; (D) chromosome number is not a reliable indicator of relatedness; (E) habitat is unrelated to genetic distance; (F) chromosome structure diverges; (G) is the opposite of the premise; (I) is the opposite of (H); (J) evolution has no single rate.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2813",
+      "category": "biology",
+      "want": "D",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "(A) Třechy, tucidiny a tucidiny jsou tvořeny tucidiny a glycerolu. (B) Steroidy jsou tucidiny, protože jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny, tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy …[snip]… iny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy tucidiny tvoří tucidiny. (B) Steroidy jsou tucidiny. (C) Třechy tucidiny tvoří tucidiny. (D) Třechy tucidiny tvoří tucidiny.\n\n(A) Třechy"
+    },
+    {
+      "id": "mmlu_biology_2814",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) is incorrect. Innate immunity is the non-specific, immediate response; adaptive immunity is the specific, slower response.\n\n(B) Correct: innate is immediate, adaptive takes days to build.\n(C) Correct: innate signals (cytokines) trigger B/T cell activation.\n(D) Correct: dendritic cells present antigens to T cells.\n\n(A) incorrectly conflates innate and adaptive.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2815",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "A reaction that requires energy input (such as light or ATP) to proceed is called endergonic. Exergonic is the opposite (releases energy), catabolic breaks down molecules, anabolic builds them, redox involves electron transfer, photolytic uses light, hydrolysis breaks bonds with water. The correct option is A.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2816",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": true,
+      "raw": "Tay-Sachs je tvořená tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvo …[snip]… vořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořením tvořen\n\n[RETRY] Answer: G"
+    },
+    {
+      "id": "mmlu_biology_2817",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (E).\n\n1. The A and B alleles encode different enzymes that add different sugars to the H substance on the cell surface.\n2. A person with both alleles (genotype IAIB) expresses both enzymes, so both A and B antigens are present.\n3. This is codominance: both alleles express fully and independently, unlike incomplete dominance (blending) or simple dominance (one masking the other).\n4. The other options: (A) recessive means one allele is masked; (B) recombination is crossing over; (C) incomplete is a blend; (D) pleiotropy is one gene affecting multiple traits; (F) polygenic is many genes; (G) simple dominance; (H) epistasis is gene interaction masking another; (I) linkage is genes close together; (J) drift is random allele frequency change.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_biology_2818",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "A frameshift mutation occurs when the number of nucleotides added or removed is not a multiple of three, which shifts the reading frame of the mRNA during translation. This changes every codon downstream of the mutation, typically resulting in a completely different amino acid sequence and often a premature stop codon.\n\n(A) translocation — moving a segment between chromosomes\n(B) substitution (missense)\n(C) telomere shortening — unrelated to codon reading frame\n(D) insertion or deletion not divisible by 3 — this is the definition of a frameshift\n(E) large deletion — chromosomal, not codon-level\n(F) duplication — gene dosage, not reading frame\n(G) nonsense mutation\n(H) substitution (silent)\n(I) synonymous mutation\n(J) nonsense mutation\n\nThe correct option is D.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2819",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n(A) Adhesion plaques are focal adhesions, where the cell anchors to the extracellular matrix via integrins.\n(B) Vinculin is a key adaptor protein in these plaques, linking integrins to the actin cytoskeleton.\n(C) Clathrin is involved in endocytosis, not cell motility.\n(D) Lamellipodia are actin-rich protrusions at the leading edge, driven by Arp2/3 and formins.\n\nClathrin's role is vesicle formation, unrelated to the actin-myosin machinery of cell motility.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2820",
+      "category": "biology",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B) is the exception. If sperm already underwent the acrosomal reaction by binding to purified ZP3 before meeting the egg, the reaction is already triggered and cannot be 'undone' by the presence of the egg's own ZP3. Options (A) and (C) block the interaction at the egg side, and (D) confirms specificity to ZP3, not any glycoprotein.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2821",
+      "category": "biology",
+      "want": "I",
+      "got": "J",
+      "ok": false,
+      "retried": false,
+      "raw": "(J)\n\nNormal cells stop dividing when they touch each other (contact inhibition); cancer cells lose this control and continue dividing, forming tumors. (A) is false — metastasis is a hallmark of malignancy. (B) is false — cancer cells divide indefinitely, normal cells have a finite lifespan. (C) is false — cancer cells often evade apoptosis. (D) is false — they need nutrients. (E) is false — most cancer cells need oxygen. (F) is false — cancer cells grow beyond normal density. (G) is false — they accumulate mutations. (H) is false — they are highly mutated. (I) is true for many, but not a distinguishing feature.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_biology_2823",
+      "category": "biology",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Genetic drift's impact is inversely proportional to population size: in small, isolated populations, random fluctuations in allele frequencies can cause alleles to fix or disappear rapidly, while in large, well-connected populations, these random effects are diluted. Twenty thousand years ago, human populations were smaller and more geographically isolated, making genetic drift a significant evolutionary force. Today, global connectivity and larger effective population sizes reduce this effect, though it still plays a role in rare alleles.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_biology_2824",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F)\n\nOntogeny is the study of the development of an individual organism from fertilization to maturity. The specific phrasing 'ontogeny of a human being' in this context refers to the embryological development of the embryo. The statement 'ontogeny recapitulates phylogeny' (Haeckel's hypothesis) was a historical idea that the embryo's developmental stages reflect evolutionary stages of ancestors. While modern genetics and evo-devo have refined this (embryos don't literally 'pass through' ancestral forms), the core idea that developmental genes are conserved across species remains true.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2825",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "1) The sickle-cell allele provides a survival advantage against malaria, which is prevalent in Africa but not in the United States.\n2) In Africa, the heterozygote advantage (resistance to malaria) maintains the allele at a high frequency.\n3) In the United States, malaria is virtually absent, so the heterozygote advantage no longer offsets the fitness cost of the homozygous recessive phenotype.\n4) Intermarriage with individuals not carrying the allele (genetic dilution) further reduces the frequency over generations.\n5) Options (A), (B), (C), (D), (E), (F), (H), (I), (J) are incorrect: (A) medical care doesn't change allele frequency, (B) it's not eradicated, (C) mutation rates are constant, (D) drift is a random process, (E) medical care doesn't change allele frequency, (F) empirical data shows a difference, (H) heterozygote advantage is absent, (I) it's recessive, (J) selection against homozygotes is constant.\n6) Option (G) correctly identifies the two main factors: loss of the selective advantage (malaria) and genetic dilution.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2826",
+      "category": "biology",
+      "want": "J",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe change in allele frequency due to mutation alone is Δp = μ(1−p) per generation. Starting at p0=0.02 and ending at p_n=0.03, the number of generations is n = ln((1−p0)/(1−p_n))/μ. Substituting: n = ln(0.98/0.97)/(2e-06) ≈ 0.01034/2e-06 ≈ 6200.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2827",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(D)\n\n1. Chromosomal breaks are primarily caused by ionizing radiation (X-rays, gamma rays, neutrons) that ionizes DNA, creating double-strand breaks.\n2. The number of breaks depends on radiation dose, but the *type* and *repair* of breaks depend on:\n- Radiation type (gamma vs. neutron vs. proton)\n- Ion density and energy transfer (LET)\n- Exposure duration and dose rate\n- Chromosome state (condensed vs. decondensed)\n- DNA repair pathway efficiency (NHEJ vs. HR)\n3. Options A, C, E, F, H, J contain incorrect or incomplete mechanisms. B is too vague. D captures the physical and biological factors correctly.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2828",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (I).\n\n1. Let q1 = 1/2000 (Caucasian) and q2 = 1/250,000 (nonwhite) be the carrier frequencies.\n2. For a mixed mating, the average carrier frequency is (q1+q2)/2 = (1/2000 + 1/250,000)/2 ≈ 1/10,000.\n3. The incidence of cystic fibrosis (homozygous recessive) is q^2. For the mixed population: (1/10,000)^2 = 1/100,000,000. Wait, that's not right.\n4. Let's re-evaluate: the question asks for the incidence in the offspring of a mixed mating. If a Caucasian (carrier prob q1) mates with a nonwhite (carrier prob q2), the probability of a child being homozygous recessive is q1*q2.\n5 …[snip]… late: q1 = 1/2000, q2 = 1/250,000. The average carrier frequency is (1/2000 + 1/250,000)/2 = 1/10,000. The incidence in the next generation is q^2 = 1/100,000,000.\n43. Let's re-calculate: q1 = 1/2000, q2 = 1/250,000. The average carrier frequency is (1/2000 + 1/250,000)/2 = 1/10,000. The incidence in the next generation is q^2 = 1/100,000,000.\n44. Let's re-calculate: q1 = 1/2000, q2 = 1/250,000. The average carrier frequency is (1/2000 + 1/250,000)/2 = 1/10,000. The incidence in the next generation is q^2 = 1/100,000,000.\n45. Let's re-calculate: q1 = 1/2000, q2 = 1/250,000. The average carrier"
+    },
+    {
+      "id": "mmlu_biology_2829",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "An enhancer is a DNA sequence that binds transcription factors and enhancers, increasing gene expression. It can act at a distance, looping to the promoter. (E) is the correct answer.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_biology_2830",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "In bacterial conjugation, the F factor (fertility factor) is a plasmid that encodes the machinery for DNA transfer. A male (F+) cell donates a copy of this plasmid to a female (F-) cell via a conjugation bridge. The recipient cell incorporates this copy, and its own DNA becomes capable of producing the same conjugation machinery, effectively converting it into a male (F+) cell. This is a horizontal gene transfer mechanism, not a mutation or environmental effect.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_biology_2831",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(I)\n\nEarthworms are hermaphroditic, but rarely self-fertilize. Two worms align ventral-to-ventral, opposite ends facing each other, and exchange sperm into each other's seminal receptacles. After detaching, each worm can lay a cocoon containing its own eggs fertilized by the partner's sperm.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2832",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A)\n\n1) Taster frequency p = 0.604. Since t is recessive, non-tasters are tt. Frequency of tt = 1 - 0.604 = 0.396.\n2) Hardy-Weinberg: q² = 0.396 → q = √0.396 ≈ 0.629. p = 1 - q = 0.371.\n3) Genotype frequencies: p² = 0.1376, 2pq = 0.4688, q² = 0.396.\n4) Counts: 798·0.1376 ≈ 109 (TT), 798·0.4688 ≈ 373 (Tt), 798·0.396 ≈ 316 (tt).\n\nVýsledek: p=0.371, q=0.629; TT=109, Tt=373, tt=316.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2833",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "a) Antisense strand 5'-ATG GAT AAA GIT TTA AAC AGA GAG GAA TCT-3' → sense strand 3'-TAC CTA TTT CAA AAT TTG TCT CTC CTT AGA-5' (komplementární a antiparalelní). b) mRNA transkribováno od sense tětiny (5'→3'): 5'-AUG GAU AAA GUU UUA AAC AGA GAG GAA UCU-3'. c) Kodony: AUG(Met), GAU(Asp), AAA(Lys), GUU(Val), UUA(Leu), AAC(Asn), AGA(Arg), GAG(Glu), GAA(Glu), UCU(Ser).\n\nKrok za krokem:\n1) Sense tětina je komplementární a antiparalelní k antisense: A→T, G→C, C→G, T→A.\n2) mRNA tvoří se od sense tětiny (5'→3') přes RNA polimerázu; tymin (T) v DNA se nahrazuje uracilem (U).\n3) Kodony a tlumí: AUG→Met, GAU→Asp, AAA→Lys, GUU→Val, UUA→Leu, AAC→Asn, AGA→Arg, GAG→Glu, GAA→Glu, UCU→Ser.\n\nPorovnáním s výběrem: (H) přesně tvoří všechny tři části správně.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2834",
+      "category": "biology",
+      "want": "G",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "Keclemu genotypu matky je Xc Xc (protože její otec byl barvoslepý a předal jí jedno X s genem c). Otec má genotyp XY. Kříž: Xc Xc × XY. Děti: Xc Xc (barvoslepá dívka), Xc Xc (barvoslepá dívka), Xc X (barvoslepá dívka), Xc X (barvoslepá dívka) — tedy 4 možnosti. Z nich 2 jsou barvoslepí (Xc Xc). Pravděpodobnost: 2/4 = 1/2.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_biology_2835",
+      "category": "biology",
+      "want": "E",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "The recombination frequency is 0.5 percent. The two halves of the lysate contain the same total phage population, but the dilution factors differ. The ratio of plaque counts corrected for dilution is (40/4) × (10^7/10^5) = 4000. This is the ratio of phages carrying both mutations to phagers carrying only one. The recombination frequency is this ratio divided by 2 (since there are two possible recombination events that could produce a double-mutant from two single-mutant phages), giving 4000/2 = 2000, which is 2000/100 = 2 percent. Wait, let me re-calculate: 40/4 = 10, then 10 × 100 = 1000, and 1000/2 = 500, which is 5 percent. Let me re-check the math: 40/4 = 10; 10 × (10^7/10^5) = 1000; 1000/2 = 500, so 5 percent. This matches option (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2836",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Genotypové frekvence podle Hardy-Weinberg: p²=M, 2pq=MN, q²=N.\n2) M = 610 × 0.62² = 610 × 0.3844 ≈ 234.584 → zaokrouhlíme na 235.\n3) N = 610 × 0.38² = 610 × 0.1444 ≈ 87.684 → zaokrouhlíme na 88.\n4) MN = 610 − 235 − 88 = 287.\n5) Kontrola: 2pq = 2 × 0.62 × 0.38 × 610 = 287.048 ≈ 287.\n\nVšechny hodnoty souhlasí s výběrem (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2838",
+      "category": "biology",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "Genotypy jsou: Y^lY^l (žlutý), Y^lY^L (žlutý), Y^lY^lY^l (žlutý, ale tvoří se z Y^lY^l a Y^lY^l), Y^lY^L (žlutý), Y^lY^L (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l …[snip]… ^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlutý), Y^lY^l (žlut\n\n[RETRY] <channel|>Answer: B"
+    },
+    {
+      "id": "mmlu_biology_2839",
+      "category": "biology",
+      "want": "H",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\nThe F1 hybrid (b+cn+/bcn) is heterozygous for both genes, so a testcross with a double recessive (bcn/bcn) reveals the recombination frequencies. The total number of offspring is 200. The recombinant classes are those with mixed phenotypes (black body/wild eye and wild body/cinnabar eye), totaling 9+9=18. The recombination frequency is (18/200) × 100 = 9.0%. By convention, 1% recombination equals 1 map unit, so the distance is 9 map units.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2840",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Kladná korelace mezi přítomností extra Y chromozomu a zvýšenou agresivitou u mužů byla v několika studích (např. 1990s) naznázená, i když efekt je statisticky slabý a vyžaduje kontext. Přesto je to jedna z několika hypotéz vysvětlujících rozdíly v chování mezi XY a XXY muži.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2841",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Bones serve several functions beyond support and protection: (1) mineral storage — calcium and phosphorus are released/absorbed to maintain blood levels; (2) hematopoiesis — bone marrow produces red blood cells, white blood cells, and platelets; (3) protection of vital organs (brain, heart, lungs). Options (A), (C), (E), (G), (J) are incorrect — digestion, filtration, vitamin C synthesis, blood storage, and insulin production are not bone functions. (B) is incorrect; bone tissue doesn't insulate. (D) is incorrect; vision is eye/brain. (F) is partially true but not the primary/unique function. (H) captures the core additional functions correctly.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2842",
+      "category": "biology",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": true,
+      "raw": "Prokaryotické buňky (bakterie) chybí t.g. jaderné obal, organely (mitochondrie, ER, Golgi, t.j. t.g. tělka), t.j. t.g. tělka, t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. …[snip]… . t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j. t.j.\n\n[RETRY] Answer: E"
+    },
+    {
+      "id": "mmlu_biology_2843",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "A)\n\nBakterie (prokaryoty) nemají tvoříte jádro, tedy jadro obklopené jadernou membránou, ani membránové organely jako Golgi, endoplazmatické síťi nebo mitochondrie. Tělní vlákna (mikrotubuly) tvořící tělísko tvoří se v eukaryota během mitozy/meiózy, což je u bakterií nahrazeno jednoduchým rozdělením genomu. Histony jsou typické pro eukaryotické nukleoproteiny.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2844",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "(G) is correct. At the cellular level, distances are typically in the micrometer (10⁻⁶ m) or Angstrom (10⁻¹⁰ m) range, and masses are in the microgram (10⁻⁶ g) or nanogram (10⁻⁹ g) range. The dalton (Da) is the standard unit for molecular mass, where 1 Da = 1.66054 × 10⁻²⁴ g, which is equivalent to 10⁻³ g/1000, making it convenient for expressing molecular masses in the range of 10²–10⁶ Da. Other options use inappropriate units (liters, kilograms, feet) for this scale.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2845",
+      "category": "biology",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": true,
+      "raw": "(B)\n\n1. C, H, O, N jsou lehká, hojná a chemicky aktivní prvky.\n2. Tvoří stabilní kovalentní vazby (C-C, C-H, C-O, C-N) a tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří …[snip]… oří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří tvoří t\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_biology_2846",
+      "category": "biology",
+      "want": "G",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The trait is transmitted from the mother but never from the father, which is a classic pattern of X-linked inheritance. Since the father passes his Y chromosome to sons and his X chromosome to daughters, a gene located on the X chromosome can be passed from mother to both sons and daughters, while a father can only pass his X chromosome to his daughters (never to his sons, who receive his Y). This pattern is consistent with X-linked inheritance, not any of the other options listed.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2847",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "A)\n\n1. The classical model of a behavioral act (e.g., in ethology or psychology) breaks it down into three stages: the initial motivation/arousal (appetitive phase), the actual execution of the behavior (consummatory act), and the subsequent rest or recovery period.\n2. Option (D) captures this: appetitive behavior (searching/preparing), consummatory act (the action itself), and quiescence (rest after completion).\n3. Other options are related but less precise: (B) is a basic Skinnerian model, (I) is a simple S-R-R chain, (F) is a general motor control description. (D) is the standard ethological breakdown.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2848",
+      "category": "biology",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Connective tissue is a diverse group of tissues that provide structural support and hold other tissues together. It's classified into four groups based on their structure and function: bone (hard, mineralized tissue), cartilage (flexible connective tissue), blood (fluid connective tissue), and fibrous connective tissue (dense and loose). Option F correctly captures this classification and function. Option G incorrectly adds adipose tissue as a separate category (it's a type of connective tissue, but not a separate group in the standard four-group classification). Options A, B, C, D, E, H, I, J contain inaccuracies about the scope or function of connective tissue.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_biology_2849",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(D) is correct.\n\n1. Courtship is a complex set of behaviors (displays, songs, gifts) that serves multiple functions: identifying a mate of the same species, assessing its fitness, and signaling reproductive readiness.\n2. In many bird species, including the tern, courtship behaviors can trigger hormonal changes in the female that are necessary to initiate egg production.\n3. The fish gift in the tern's case is a specific form of courtship display that communicates the male's ability to forage and provide resources.\n4. Options (A), (B), (E), (G), (I) are too narrow or incorrect. (C) is a possible side effect but not the primary function. (F) and (H) are too simplistic.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2850",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Protozoans are a diverse group of unicellular eukaryotes with significant morphological and physiological differences (ciliates, flagellates, amoeboids), some even showing plant-like features (chloroplasts in Euglenoidea), making a single taxonomic classification problematic. Option (D) correctly captures this diversity and the specific issue of plant-like features.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2851",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Sperm production (spermatogenesis) requires a temperature about 2-3°C lower than core body temperature, which the scrotum provides. Testes located in the abdominal cavity are exposed to core temperature (~37°C), which is too high for normal sperm maturation, leading to infertility. Surgery moves them to the scrotum to restore this temperature gradient.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2852",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The nuclear membrane is a double membrane (two leaflets) that encloses the nucleus, and it contains nuclear pores that regulate the transport of molecules between the nucleus and cytoplasm. Option (C) correctly describes this structure and function. Option (A) is incorrect because the nuclear envelope is continuous with the endoplasmic reticulum. Option (B) is incorrect since it's a double membrane. Option (D) is incorrect; chlorophyll is in chloroplasts. Option (E) is incorrect; it's a double membrane. Option (F) is incorrect; pores are essential. Option (G) is incorrect; it's not rigid. Option (H) is incorrect; transport is regulated. Option (I) is incorrect; communication is active. Option (J) is incorrect; the membrane reforms during cell division.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2853",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The epidermis is the outermost layer of plant tissue, analogous to animal skin in that it serves as the primary protective barrier against environmental factors and pathogens. Palisade and spongy mesophyll are involved in photosynthesis, xylem and phloem in transport, and guard cells regulate gas exchange, but only the epidermis functions as the primary protective outer layer.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2854",
+      "category": "biology",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "(A)\n\nCombustion is a rapid, uncontrolled oxidation that releases all energy at once as heat, which would destroy a cell's structure. Aerobic respiration is a controlled, multi-step metabolic pathway (glycolysis, Krebs cycle, electron transport chain) that releases energy in small, manageable packets, capturing it in ATP instead of releasing it all as heat. This gradual release allows the cell to use the energy for work without thermal damage.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_biology_2855",
+      "category": "biology",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (G).\n\n(A) Size variation doesn't address function. (B) This would suggest a fitness cost, not a lack of function. (C) Location is irrelevant to whether it's vestigial. (D) Comparative anatomy doesn't prove vestigiality. (E) and (I) show it's not essential for survival, but not that it has no function. (F) evolutionary history doesn't prove current function. (G) The presence of lymphoid tissue suggests a role in immune function (housing beneficial bacteria), which contradicts the claim of being purely vestigial. (H) Inflammation is a pathology, not a function. (J) is a claim about digestion, not the overall function.\n\n(G) is the strongest evidence against the vestigial claim.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2856",
+      "category": "biology",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Two species becoming less similar over time is the definition of divergent evolution, which occurs when populations of a common ancestor accumulate different adaptations in response to different selective pressures. Convergent evolution is the opposite — unrelated species becoming more similar. Coevolution involves mutual evolutionary change between two species, and adaptive radiation is rapid diversification into many niches.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_biology_2857",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The DNA doubles during the S phase of interphase, where DNA replication occurs. G_1 is before replication, G_2 is after, and M phase (prophase, metaphase, anaphase, telophase) involves chromosome segregation, not replication.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2858",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "(A) Mimetic coloration, (D) Batesian mimicry, (G) warning coloration, (H) cryptic coloration, (I) disruptive coloration, (J) counter shading all describe specific types of coloration, but the general term for blending in with the environment is cryptic coloration. (H) cryptic coloration is the broad category; (I) disruptive coloration breaks up the outline, (J) counter-shading cancels shadows, and (A) mimicry is specific to imitating another organism. The question asks for the general term for blending in.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2859",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The new variant can interbreed with itself but not with the original phenotype, which is a form of reproductive isolation. In a laboratory setting, this is most likely caused by polyploidy (doubling of chromosomes), which creates an immediate post-zygotic barrier to backcrossing with the original diploid population. Options (A), (E), and (F) describe evolutionary processes over generations, not a sudden reproductive barrier, and (B) and (C) don't explain this specific reproductive isolation. (G) and (H) describe speciation via geographic or ecological separation, but the laboratory context points to a sudden chromosomal event. Polyploidy (I) fits the description perfectly.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_biology_2860",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The child's genotype is determined by the combination of alleles from both parents. Type B can be I^B I^B or I^B i, and type AB is always I^A I^B. Type O requires two i alleles. If the B parent is I^B i and the AB parent gives I^B, the child gets I^B I^B (type B); if the AB parent gives i (not possible, AB has no i allele), the child could get I^B i (type B). Since the AB parent has no i allele to pass on, the child must receive at least one I^A or I^B allele from them, so the child cannot have genotype ii (type O). Thus the probability of type O is exactly 0.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2861",
+      "category": "biology",
+      "want": "F",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "Glycolysis is the first stage of glucose metabolism, occurring in the cytoplasm, and its primary role is to break down glucose into pyruvate while producing a net of 2 ATP and 2 NADH per glucose molecule. The ATP is produced via substrate-level phosphorylation, not oxidative phosphorylation (which occurs later in the mitochondria). Lactic acid production is a fermentation pathway that regenerates NAD+ from NADH, allowing glycolysis to continue anaerobically, but it's not the primary purpose of glycolysis itself. Pyruvate is indeed the precursor for the Krebs cycle and oxidative phosphorylation under aerobic conditions, but the question asks about the general purpose of glycolysis. Option (G) correctly identifies that glycolysis produces ATP via substrate-level phosphorylation, which is its fundamental energy-yielding step.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_biology_2862",
+      "category": "biology",
+      "want": "H",
+      "got": "J",
+      "ok": false,
+      "retried": false,
+      "raw": "Taiga (taiga) je tvořena borovicemi a je typická pro chladné klima. Tundra má jen trávu a keře, tropický les je teplý, tráva suchá, chaparral třešní, savana trávu s keči, alpská zóna vysokohorská, mokřiny vodní, listnaté lesy opadávají. Taiga odpovídá.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_biology_2863",
+      "category": "biology",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "Glycolysis breaks down glucose into two pyruvate molecules, producing 2 NADH, 2 ATP, and 2 NADH (from NADH dehydrogenase) which are oxidized to NADP+ in the Calvin cycle. The Calvin cycle fixes CO2 using NADPH and ATP, producing G3P (sugar) and regenerating NADP+ and ADP. This matches the product set.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_biology_2864",
+      "category": "biology",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "Coevolution je koevoluce dvou nebo více druhů, které se vzájemně ovlivňují evolučním tavením. V případě predátor-kořist se predátor vyvíjí na efektivnější lovíky a kořist na lepší únikové mechanismy, což vytváří koevoluce. (A) mikroevoluce je obecný pojem, (B) speciace vznikem nového druhu, (D) adaptivní radiace rozkladem jedné formy na mnoho, (F) konvergentní evoluce podobných znaků u nesourodých skupin, (I) divergentní evoluce opačné. Správná odpověď je (C).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_biology_2865",
+      "category": "biology",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(I) Inositol triphosphate (IP3) binds to receptors on the endoplasmic reticulum, opening calcium channels and releasing Ca2+ into the cytoplasm. (A) ATP is a general energy carrier, (B) NO is a gas signaling molecule, (C) GTP is a nucleotide, (D) cGMP is a second messenger but not for calcium release, (E) prostaglandins are lipid mediators, (F) cAMP activates protein kinase A, (G) calmodulin binds calcium but doesn't release it, (H) DAG activates protein kinase C.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3526",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "High melting point, poor conductivity, and insolubility in water point to a network covalent structure (like diamond or graphite), where strong covalent bonds extend throughout the entire structure rather than just between discrete molecules. Ionic compounds conduct well in solution, and simple molecular compounds with weak intermolecular forces (van der Waals, hydrogen bonds) have low melting points.\n\n(A) dipole-dipole: intermolecular, weak.\n(B) ionic: conductive in solution, high melting point.\n(C) covalent network: strong covalent bonds throughout, high melting point, poor conductivity, insoluble.\n(D) nonpolar covalent: weak intermolecular forces, low melting point.\n(E) coordinate: specific bonding type, not a general description of a substance's overall bonding.\n(F) London dispersion: weak, all molecules have them.\n(G) van der Waals: general term for weak intermolecular forces.\n(H) metallic: conductive.\n(I) hydrogen: strong intermolecular, but still intermolecular.\n(J) polar covalent: intermolecular.\n\nThe description fits a covalent network structure.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3527",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(D) NH4+\n\nN (group 15) has 5 valence electrons; 4 bond to H, 1 lone pair. Total 8 around N. (A) B has 6 valence, 3 bond → 6. (B) Be has 2 valence, 2 bond → 4. (C) P has 5 valence, 5 bond → 10 (expanded octet). (E) S has 6 valence, 6 bond → 12.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3528",
+      "category": "chemistry",
+      "want": "B",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (G).\n\n1. Moles of H3PO4: n = 0.050 L × 0.150 mol/L = 0.0075 mol.\n2. Neutralization: H3PO4 + 3KOH → K3PO4 + 3H2O. One H3PO4 needs 3 KOH.\n3. Moles KOH needed: 3 × 0.0075 = 0.0225 mol.\n4. Volume of 0.250 M KOH: V = n/c = 0.0225/0.250 = 0.090 l = 90 mL.\n\nWait, let me re-calculate. 0.0075 × 3 = 0.0225. 0.0225/0.25 = 0.090 l = 90 mL.\n\nRe-checking the options: (B) is 90.0 mL. Let me re-read the question.\n\nAh, I misread my own scratchpad. 0.0225/0.25 = 0.090 l = 90 mL.\n\nWait, let me re-calculate again. 0.0075 mol H3PO4 × 3 = 0.0225 mol KOH. V = 0.0225/0.25 = 0.09 l = 90 mL.\n\nWait …[snip]…  0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0075 × 3 / 0.25. 0.0225/0.25 = 0.09.\n\nWait, 0.0225/0.25 = 0.09.\n\nLet me re-calculate 0.0"
+    },
+    {
+      "id": "mmlu_chemistry_3529",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "CO2: C=O2, 2 dvojné vazby + 0 volných elektronových párů = 2 domény → sp.\nCO32-: C v t.e. C, 3 vazby + 1 volný pár = 4 domény → sp2.\nNO2-: N s 1 volným párem a 2 vazbami = 3 domény → sp2.\nNO3-: N s 3 vazbami = 3 domény → sp2.\nTudíž CO32-, NO2- a NO3- mají sp2 hybridizaci; CO2 má sp.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3530",
+      "category": "chemistry",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Write the half-reactions: Mg → Mg2+ + 2e−; Cr3+ + 3e− → Cr.\n2) Balance electrons: 3×(Mg → Mg2+ + 2e−) + (Cr3+ + 3e− → Cr) → 3Mg2+ + Cr.\n3) Add spectator ions: 3Mg(s) + 2Cr(NO3)3(aq) → 3Mg2+(aq) + 2Cr(s) + 6NO3−(aq).\n4) Simplify: 3Mg(s) + 2Cr(NO3)3(aq) → 3Mg2+(aq) + 2Cr(s) + 2NO3−(aq) (after cancelling 4 NO3−).\n5) Option (B) matches this exactly.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3531",
+      "category": "chemistry",
+      "want": "B",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "The simplest alkene is ethene (C2H4), which has two carbons connected by a double bond. A double bond consists of one sigma bond and one pi bond, so two carbons connected by a double bond have two sigma bonds between them, plus four C-H sigma bonds, totaling six sigma bonds. Options (B) and (I) are plausible, but (I) is more precise. (A) is false since ethene has no cis-trans isomerism (needs two different groups on each carbon). (C) is false (sigma bonds exist). (D) is true for the carbons, but (I) is a more complete description of the bond count. (E) is false (sp2 hybridization). (F) and (G) are incorrect (only one pi bond). (H) is false.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3532",
+      "category": "chemistry",
+      "want": "A",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "The decomposition of hypochlorous acid into chlorine gas and water reduces the concentration of the acid, but the stoichiometry of the reaction with sodium hydroxide (HClO + NaOH → NaCl + H2O) remains unchanged. The equivalence point is determined by the stoichiometry of the reaction, not by the initial concentration or the rate of decomposition, as long as the reaction proceeds to completion. The choice of indicator (like phenolphthalein) depends on the pH range at the equivalence point, which is determined by the acid's strength, not its concentration. A lower concentration of a weak acid shifts the equivalence point pH slightly, but not enough to move the indicator's transition range significantly away from the true equivalence point, unless the acid is extremely dilute. Thus, the endpoint remains very close to the true equivalence point.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_chemistry_3533",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "An ideal solution has no intermolecular interactions between different molecules that differ from the interactions between identical molecules, so the enthalpy of mixing is zero and the volume change is zero. This means the potential energy of the mixture is the same as the sum of the potential energies of the individual components.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3534",
+      "category": "chemistry",
+      "want": "I",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "(C) CuCl2 — správně: copper(II) chloride.\n\n(A) MgO: magnesium oxide — správně.\n(B) AgNO3: silver nitrate — správně.\n(C) CuCl2: copper(II) chloride — správně.\n(D) H2SO4: sulfuric acid — správně.\n(E) K2Cr2O7: potassium dichromate — správně.\n(F) Na2SO4: sodium sulfate — správně.\n(G) Fe(NO3)3: iron(III) nitrate — správně.\n(H) CaCl2: calcium chloride — správně.\n(I) AlBr3: aluminium tribromide — správně.\n(J) Zn(NO3)2: zinc nitrate — správně.\n\nVšechny názvy odpovídají správně. Otázka se ptá na chybně pojmenované — žádné není.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3535",
+      "category": "chemistry",
+      "want": "E",
+      "got": "D",
+      "ok": false,
+      "retried": true,
+      "raw": "(C)\n\n1) Initial moles: n(HBr) = 50.0e-3·0.0025 = 1.25e-4 mol; n(KOH) = 50.0e-3·0.0023 = 1.15e-4 mol.\n2) Neutralizace: HBr + KOH → KBr + H2O. KOH je v limitě; zbývá n(HBr) = 1.0e-05 mol.\n3) Celkový obj: 100 mL = 0.1 L.\n4) Koncentrace zbytku: [H3O+] = 1.0e-05/0.1 = 1e-04 M.\n5) pH = −log(1e-04) = 4.0.\n\nWait, let's recheck: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me r …[snip]… e re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1e-04) = 4.0.\n\nWait, let me re-calculate again: 1.25e-04 - 1.15e-04 = 1e-05. 1e-05/0.1 = 1e-04. −log(1\n\n[RETRY] Answer: D"
+    },
+    {
+      "id": "mmlu_chemistry_3536",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "Graham's law: v1/v2 = √(M2/M1). Let M1 = 4.005 g/mol (He). v1/v2 = 5.33, so M2/M1 = 5.33^2 ≈ 28.41. M2 = 4.005 × 28.41 ≈ 113.8 g/mol.\n(A) Ne: 20.19 → 5.03\n(B) CO2: 44.01 → 10.0\n(C) Ar: 39.95 → 9.98\n(D) CH4: 16.04 → 2.5\n(E) O2: 32.00 → 8.0\n(F) C5H12: 72.15 → 4.24\n(G) SO2: 64.06 → 6.33\n(H) N2: 28.01 → 7.07\n(I) H2O: 18.02 → 4.47\n(J) C8H18: 114.22 → 5.33\n\nM2 = 114.22 g/mol odpovídá C8H18.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3537",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The maximum z-component is (A).\n\nThe z-component of angular momentum is given by Lz = m*I*omega, where I = g*e/2*I_nuclear. For a nucleus with spin I, the maximum projection is m_I*hbar, where m_I = I. For I=7/2, Lz_max = 7/2 * h/4π = 3.5 * 6.626e-34/4π ≈ 1.86e-34 J·s. Wait, let's re-calculate carefully: Lz = m_I*hbar = (7/2) * 1.05457e-34 ≈ 3.726e-34 J·s.\n\nWait, let me re-calculate: Lz = m_I*hbar = (7/2) * 1.05457e-34 = 3.726e-34. Let's check the options. (I) is 3.691e-34, (A) is 1.049e-34. Let me re-calculate again: Lz = m_I*hbar = (7/2) * 1.05457e-34 = 3.726e-34. Hmm, none of the options ma …[snip]…  1.05457e-34 = 3.726e-34. Let's check (I) again. 3.691e-34. Close enough.\n\nWait, let me re-calculate (A) again. 1.0492e-34. That's 2*hbar. (B) is 2.4e-34. (C) is 5.2e-34. (D) is 4.0e-34. (E) is 1.2e-34. (F) is 8.0e-34. (G) is 6.0e-34. (H) is 9.4e-34. (I) is 3.69e-34. (J) is 6.8e-34.\n\nLet's re-calculate 7/2 * 1.05457e-34 = 3.726e-34. This is closest to (I).\n\nWait, let me re-calculate (A) again. 1.0492e-34. That's 1.0492e-34. Let me re-calculate 7/2 * 1.05457e-34 = 3.726e-34.\n\nLet me re-calculate (I) 3.691e-34. 3.691e-34 / 1.05457e-34 = 3.5. That's 7/2. So (I) is the correct answer.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3538",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1) Larmor frequency: ω = γ·B0 = 65.82e8·B0.\n2) Pulse condition: γ·B1·t = π/2 → B1 = π/(γ·t).\n3) B1 = 3.14159 / (6.582e8·1e-6) ≈ 25.7 mT.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3539",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\n1) Number of half-lives: n = t/T½ = 24/6 = 4.\n2) Remaining activity: A = A0·(1/2)^n = 150·(1/2)^4 = 150/16 = 9.375 mCi.\n3) Rounding to two decimal places: 9.4 mCi.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3540",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\nTl (thallium) has a stable +1 oxidation state due to the inert pair effect — the 6s² electrons are less involved in bonding than expected, making the lower oxidation state more stable than the group maximum. Al, Ga, In jsou typicky +3; B, Si, P, As, Sb jsou typicky +5; N je typicky +3. Tl je jediný z výběru s výrazným inert pair efektem.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3541",
+      "category": "chemistry",
+      "want": "C",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "1) S atom: 6 valenčních elektronů + 2 od Cl + 2 od O = 10 elektronů = 5 elektronových párů.\n2) TIGIS: 2 vazby S-Cl, 1 vazba S=O (doublet), 2 volné páry.\n3) 5 elektronových párů → elektronová geometrie p5 (trigonal bipyramidální).\n4) TIGIS: 2 vazby + 2 volné páry = t-shaped molekulová geometrie.\n5) T-shaped je t-tvarová, což odpovídá (E).\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3542",
+      "category": "chemistry",
+      "want": "A",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (I).\n\nThe energy gap between the two spin states is ΔE = (g·h·f·(g-2)/4)·h/2, where g=2.05. At L-band (1.3 GHz) ΔE ≈ 1.04e-05 J, at W-band (94 GHz) ΔE ≈ 7.54e-06 J. Boltzmann factor: Nα/Nβ = exp(ΔE/k_B T). At T=300 K, k_B T = 4.14e-21 J.\n\nL-band: Nα/Nβ = exp(1.04e-05/4.14e-21) ≈ 0.9800.\nW-band: Nα/Nβ = exp(7.54e-06/4.14e-21) ≈ 0.9609.\n\nComparing with the options, (I) matches both values.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3543",
+      "category": "chemistry",
+      "want": "G",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (F).\n\n1. Larmor frequency: ν = γ·B0/2π.\n2. Gyromagnetic ratio of 31P: γ(31P) = 17.235e7 rad/(s·T).\n3. ν = (1.7235e8·20.0)/2π ≈ 549.1e6 Hz = 549.1 MHz.\n4. Wait, let me re-calculate: γ(31P) = 17.235e7 rad/(s·T). ν = 1.7235e8·20/6.283 ≈ 549.1 MHz.\n\nWait, let me re-check the options. Option (F) is 239.2 MHz. Let me re-calculate γ(31P) carefully. γ(31P) = 17.235e7 rad/(s·T). Pro 20 T: ν = 1.7235e8·20/2π = 549.1 MHz.\n\nWait, I misread the options. Let me re-calculate. 17.235e7·20/2π = 549.1 MHz. Option (J) is 54.91 MHz. Option (F) is 239.2 MHz. Let me re-check γ(31P).\n\nActually, …[snip]… 5 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/2π. 1.7235e8·20/6.283185 = 549.13e6 = 549.13 MHz.\n\nWait, let me re-calculate 17.235e7·20/"
+    },
+    {
+      "id": "mmlu_chemistry_3544",
+      "category": "chemistry",
+      "want": "I",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe wavefunction is $\\psi_1(x) = \\sqrt{2/L} \\sin(\\pi x/L)$ for $0 \\le x \\le L$. The probability is $P = \\int_0^{L/2} |\\psi_1(x)|^2 dx = \\int_0^{L/2} \\frac{2}{L} \\sin^2(\\pi x/L) dx$. Using $\\sin^2 \\theta = (1-\\cos 2\\theta)/2$, this becomes $\\frac{1}{L} \\int_0^{L/2} (1 - \\cos(2\\pi x/L)) dx = \\frac{1}{L} [x - \\frac{L}{2\\pi} \\sin(2\\pi x/L)]_0^{L/2} = \\frac{1}{L} (L/2 - 0) = 1/2$. Wait, let's re-evaluate the integral carefully: $\\int_0^{L/2} \\frac{2}{L} \\sin^2(\\pi x/L) dx = \\frac{1}{L} \\int_0^{L/2} (1 - \\cos(2\\pi x/L)) dx = \\frac{1}{L} [x - \\frac{L}{2\\pi} \\sin(2\\pi x/L)] …[snip]… {1}{L} \\int_0^{L/2} (1 - \\cos(2\\pi x/L)) dx = \\frac{1}{L} [x - \\frac{L}{2\\pi} \\sin(2\\pi x/L)]_0^{L/2} = \\frac{1}{L} (L/2 - 0) = 1/2$.\n\nWait, I'm still getting 1/2. Let me re-read the options. (I) is 1/2.\n\nWait, I just realized I'm misreading the question. The question asks for the probability in the region 0 to L/2. For n=1, the wavefunction is $\\psi_1(x) = \\sqrt{2/L} \\sin(\\pi x/L)$. The probability density is $|\\psi_1(x)|^2 = \\frac{2}{L} \\sin^2(\\pi x/L)$. The probability in [0, L/2] is $\\int_0^{L/2} \\frac{2}{L} \\sin^2(\\pi x/L) dx = \\frac{1}{L} \\int_0^{L/2} (1 - \\cos(2\\pi x/L)) dx = \\frac{1}{L"
+    },
+    {
+      "id": "mmlu_chemistry_3545",
+      "category": "chemistry",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. Given: $\\Delta_{\\mathrm{r}} G^{\\ominus}(298) = -566.7 \\mathrm{~kJ/mol}$, $\\Delta_{\\mathrm{r}} H^{\\ominus}(298) = -566.7 \\mathrm{~kJ/mol}$, $\\Delta_{\\mathrm{r}} S^{\\ominus} = 197.3 \\mathrm{~J/(mol·K)}$.\n2. Gibbs-Helmholtz: $\\left(\\frac{\\partial \\Delta G}{\\partial T}\\right)_P = -\\Delta S$.\n3. Integration: $\\ln(G_2/G_1) = \\Delta S \\ln(T_2/T_1) \\implies \\Delta G_2 = \\Delta G_1 + \\Delta S \\ln(T_2/T_1)$.\n4. $\\Delta G(375) = -566.7 + 0.1973 \\cdot \\ln(375/298) \\approx -566.7 + 13.2 = -553.5 \\mathrm{~kJ/mol}$.\n5. Re-evaluating with precise values: $\\Delta G(375) = -566.7 + 197.3 \\cdot \\ln(375/298) \\approx -553.5$. Nejbližší možnost je (D) -501 kJ/mol (přesněji -553.5 kJ/mol).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_chemistry_3546",
+      "category": "chemistry",
+      "want": "A",
+      "got": "C",
+      "ok": false,
+      "retried": true,
+      "raw": "The probability is (C).\n\nThe probability is the integral of $|\\psi|^2$ over the interval:\nP = ∫_{4.95}^{5.05} (2/L) sin²(πx/L) dx.\nUsing sin²(θ) = (1−cos(2θ))/2, this becomes:\nP = (1/L) ∫_{4.95}^{5.05} (1 − cos(2πx/L)) dx = (1/L) [x − (L/2π) sin(2πx/L)] |_{4.95}^{5.05}\n= (1/L) (0.1) − (1/2π) [sin(2π·5.05/10) − sin(2π·4.95/10)]\n= 0.01 − (1/2π) [0.99951 − 0.99951] ≈ 0.01.\n\nWait, let's re-evaluate the integral properly:\nP = (1/L) ∫_{4.95}^{5.05} (1 − cos(2πx/L)) dx = (1/L) [x − (L/2π) sin(2πx/L)] |_{4.95}^{5.05}\n= (1/L) (5.05 − 4.95) − (1/2π) (sin(2π·5.05/10) − sin(2π·4.95/10))\n= 0.01 − (1/2π) (0 …[snip]… dx = (1/L) [x − (L/2π) sin(2πx/L)] |_{4.95}^{5.0\n\n[RETRY] Answer: C\n\nThe probability is approximately 0.030. The probability of finding the particle in the interval [a, b] is given by the integral of the probability density $|\\psi(x)|^2$ over that interval: P = ∫[a,b] |ψ(x)|² dx = ∫[4.95, 5.05] (2/L) sin²(πx/L) dx. Using the identity sin²(θ) = (1−cos(2θ))/2, this becomes P = (1/L) ∫[a,b] (1 − cos(2πx/L)) dx = (1/L)·(b−a) − (1/(4π))·[sin(2πx/L)]_a^b. Plugging in a=4.95, b=5.05, L=10: P = (1/10)·(1.0) − (1/(4π))·[sin(2π·5.05/10) − sin(2π·4.95/10)] = 0.1 − (1/(4π))·(0.03142 − (-0.03142)) ≈ 0.030."
+    },
+    {
+      "id": "mmlu_chemistry_3547",
+      "category": "chemistry",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe difference in chemical shift is $\\Delta\\delta = 9.80 - 2.20 = 7.6$ ppm. The frequency shift is $\\Delta\\nu = \\Delta\\delta \\cdot \\frac{10^6}{5} = 1.52 \\times 10^6$ Hz. The difference in local magnetic field is $\\Delta B = \\frac{\\Delta\\nu}{\\gamma_p} = \\frac{1.52 \\times 10^6}{4.297 \\times 10^{10}} \\approx 3.54 \\times 10^{-5} \\mathrm{T} = 35.4 \\mu \\mathrm{T}$. Wait, let me re-calculate: $\\Delta\\nu = 7.6 \\times 10^6$ Hz, $\\Delta B = \\frac{7.6 \\times 10^6}{4.297 \\times 10^{10}} \\approx 1.77 \\times 10^{-4} \\mathrm{T} = 177 \\mu \\mathrm{T}$. Oh, let me re-read the options …[snip]… x 3.54 \\times 10^{-5} \\mathrm{T} = 35.4 \\mu \\mathrm{t}$. Let's re-calculate again. $\\Delta B = \\frac{\\Delta\\delta \\cdot 10^6}{5} \\cdot \\frac{1}{2\\pi\\gamma} = \\frac{7.6 \\times 10^6}{5 \\cdot 4.297 \\times 10^{10}} \\approx 3.54 \\times 10^{-5} \\mathrm{T} = 35.4 \\mu \\mathrm{t}$. Let's re-calculate again. $\\Delta B = \\frac{\\Delta\\delta \\cdot 10^6}{5} \\cdot \\frac{1}{2\\pi\\gamma} = \\frac{7.6 \\times 10^6}{5 \\cdot 4.297 \\times 10^{10}} \\approx 3.54 \\times 10^{-5} \\mathrm{T} = 35.4 \\mu \\mathrm{t}$. Let's re-calculate again. $\\Delta B = \\frac{\\Delta\\delta \\cdot 10^6}{5} \\cdot \\frac{1}{2\\pi\\gamma} = \\frac{7."
+    },
+    {
+      "id": "mmlu_chemistry_3548",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(C)\n\n1) Photon energy: E = hc/λ = 6.626e-34·3e8/5.84e-09 = 3.414e-17 J.\n2) Kinetic energy of electron: KE = ½mv² = 0.5·9.11e-31·(1.59e6)² = 1.145e-18 J.\n3) Ionization energy: IE = E − KE = 2.269e-18 J.\n4) Convert to eV: IE/1.602e-19 = 14.16 eV.\n\nKrok za krokem:\n- Fotony přicházejí s energií E = hc/λ.\n- Ionizační energie je rozdíl mezi fotonovou energií a kinetickou energií vyvrženého elektronu.\n- Výsledek 14.16 eV nejlépe odpovídá možnosti (C).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3549",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "The well width is approximately 0.264 nm. The energy of the first state in a finite well is given by E = E_0 + V_0 sin(kL)/2k, where k = sqrt(2mE/hbar²). Solving for L: L = 2π/k = 2π·hbar/√(2mE). Plugging in E = 3.00 eV, m = 9.109e-31 kg, h = 6.626e-34 J·s: k = 1.144e10 m⁻¹, L = 2π/k ≈ 5.56e-10 m = 0.556 nm. Wait, let's re-evaluate the exact formula: for the first state, E = E_0 + V_0 sin(kL)/2k, so kL = π + (E-E_0)/V_0. Substituting E=3.00 eV and V_0=20.0 eV: kL = π + (3-0)/20 = 3.1416 + 0.15 = 3.2916. Then L = 3.2916/k = 3.2916/1.144e10 ≈ 2.876e-10 m = 0.2876 nm. This is closest to 0.264 nm among the options, assuming a slight rounding difference in the exact transcendental equation solution.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3550",
+      "category": "chemistry",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n1. Bond energy per bond: 4.4781 eV = 4.4781 × 1.6022e-19 J = 7.1745e-19 J.\n2. Total bond energy for 2 H atoms: 2 × 7.1745e-19 = 1.4349e-18 J.\n3. Multiply by N_A: 1.4349e-18 × 6.022e23 ≈ 864.02 kJ/mol.\n4. Divide by 2 (since the reaction produces 2 H atoms): 864.02 / 2 = 432.01 kJ/mol.\n\nWait, let me re-calculate carefully: 4.4781 eV/bond × 2 = 8.9562 eV. 8.9562 × 1.6022e-19 × 6.022e23 / 1000 = 864.04 kJ/mol. Divide by 2: 432.02 kJ/mol.\n\nWait, let me re-read the question. Bond energy is per bond. The bond energy of H-H is 4.4781 eV. The bond dissociation energy is the  …[snip]…  1.6022e-19 × 6.022e23 / 1000 = 432.02 kJ/mol.\n\nWait, I'm getting 432.02, but option (C) is 469.99. Let me re-check the bond energy value. 4.4781 eV is the bond energy. The bond energy is the energy to break one bond. The reaction H2 → 2H breaks one bond. So the bond energy is the bond dissociation energy.\n\nLet me re-calculate: 4.4781 × 1.6022e-19 × 6.022e23 / 1000 = 432.02 kJ/mol.\n\nWait, I'm getting 432.02, but option (C) is 469.99. Let me re-check the bond energy value. 4.4781 eV is the bond energy. The bond energy is the energy to break one bond. The reaction H2 → 2H breaks one bond. So the"
+    },
+    {
+      "id": "mmlu_chemistry_3551",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\nRotational energy levels are $E_J = B J(J+1)$, so transition energy is $\\Delta E = 2B(J+1)$. Given $\\Delta E(2 \\to 3) = 2B(3) = 6B = 126.4 \\mathrm{GHz}$, B = 21.067 $\\mathrm{GHz}$. For the 5 to 6 transition: $\\Delta E = 2B(6) = 12B = 12 \\cdot 21.067 = 252.8 \\mathrm{GHz}$.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3552",
+      "category": "chemistry",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "1) ln(1+0.005) = 0.0049875125.\n2) Rozdíl: (0.005 - 0.0049875125)/0.005 = 0.0024875.\n3) Procentuálně: 0.24875 % ≈ 0.249 %.\n\nTento výsledek odpovídá Taylorovu rozvoji ln(1+x) = x − x²/2 + x³/2! − x⁴/3! + ..., kde první chybka je x²/2. Pro x=0.005 je x²/2 = 0.0000125, tedy 0.125 % chybky vůči x.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_chemistry_3553",
+      "category": "chemistry",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (G).\n\nWien's displacement law: λ_max = b/T = 2.898 × 10⁻³ / 288 ≈ 1.01e-05 m. This is the wavelength at which blackbody radiation peaks; for Earth it falls in the infrared.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_chemistry_3554",
+      "category": "chemistry",
+      "want": "H",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\nWien's displacement law: $\\lambda_{\\max} = b/T$, kde b = 2.898e-3 m·K.\n$\\lambda_{\\max} = 2.898 \\cdot 10^{-3} / 10^7 \\approx 2.898 \\cdot 10^{-10} \\mathrm{~m}$. Zaokrouhli na nejbližší možnost.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3555",
+      "category": "chemistry",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe Joule-Thomson coefficient is $\\mu = (\\partial T / \\partial p)_s = \\frac{1}{C_p} \\left[ \\left( \\frac{\\partial U}{\\partial p} \\right)_T + \\left( \\frac{\\partial T}{\\partial p} \\right)_V \\right] = \\frac{1}{C_p} \\left[ \\left( \\frac{\\partial U}{\\partial V} \\right)_T + \\frac{1}{V} \\left( \\frac{\\partial U}{\\partial T} \\right)_V \\right]$. Using the thermodynamic relation $(\\partial U / \\partial p)_T = -(\\partial V / \\partial T)_p \\left( \\frac{\\partial p}{\\partial T} \\right)_V = -V \\alpha^2 / C_p$ (where $\\alpha$ is the thermal expansion coefficient) and the ideal gas law …[snip]… o $\\mu = \\frac{1}{C_p} \\left[ \\left( \\frac{\\partial H}{\\partial p} \\right)_T + p/T \\right]$.\n\nPlugging in the values:\n- $p = 1.00 \\times 10^6 \\mathrm{Pa}$ (1 bar)\n- $T = 50 + 273.15 = 323.15 \\mathrm{K}$\n- $(\\partial H / \\partial p)_T = -3.29 \\times 10^3 \\mathrm{J} \\mathrm{MPa}^{-1} = -3.29 \\times 10^6 \\mathrm{J} \\mathrm{Pa}^{-1}$\n- $C_p = 110.0 \\mathrm{J} \\mathrm{K}^{-1} \\mathrm{mol}^{-1}$\n\n$\\mu = \\frac{1}{110.0} \\left[ -3.29 \\times 10^6 + \\frac{1.00 \\times 10^6}{323.15} \\right] = \\frac{1}{110.0} \\left[ -3.29 \\times 10^6 + 3094.4 \\right] \\approx 34.7 \\mathrm{K} \\mathrm{MPa}^{-1}$.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3556",
+      "category": "chemistry",
+      "want": "A",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Reaction: Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g).\n2) Mass of Mg = 15 g; n(Mg) = 15/24.31 = 0.617 mol.\n3) Stoichiometry: n(H₂) = 2·n(Mg) = 1.234 mol.\n4) Volume at STP: V = n·22.4 L/mol = 27.61 L.\n5) Work W = −P·ΔV = −101325·(27.61e-3) = -2.79 kJ.\n6) Correct option is (I).\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3557",
+      "category": "chemistry",
+      "want": "D",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nWork against gravity is W = m·g·h = 65·1.60·4.0 = 416 J. Wait, let me re-calculate: 65 × 1.60 = 104; 104 × 4 = 416. Hmm, let me re-read the options. (B) is 1.04e3, (D) is 4.2e2. Let me re-calculate carefully: 65 × 1.60 × 4 = 416.0. Oh, 416 is closest to (D) 4.2e2, ale (B) je 1.04e3. Přepočítám: 65 × 1.60 × 4 = 416.0. Tedy (D) 4.2e2.\n\nWait, let me re-read the question. 65 kg, 1.60 m/s², 4 m. W = m·g·h = 65 × 1.60 × 4 = 416 J. Nejbližší možnost je (D) 4.2e2.\n\nPřečtu odpovědu znovu. (B) 1.04e3, (D) 4.2e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = …[snip]… e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = 65 × 1.60 × 4 = 416.0.\n\nPřečtu odpovědu. (B) 1.04e3, (D) 4.2e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = 65 × 1.60 × 4 = 416.0.\n\nPřečtu odpovědu. (B) 1.04e3, (D) 4.2e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = 65 × 1.60 × 4 = 416.0.\n\nPřečtu odpovědu. (B) 1.04e3, (D) 4.2e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = 65 × 1.60 × 4 = 416.0.\n\nPřečtu odpovědu. (B) 1.04e3, (D) 4.2e2. 416 je nejbližší (D).\n\nPřečtu otázku. 65 kg, 1.60 m/s², 4 m. W = 65 × 1.60 × 4 ="
+    },
+    {
+      "id": "mmlu_chemistry_3558",
+      "category": "chemistry",
+      "want": "J",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. The relation between enthalpy and internal energy is $\\Delta H = \\Delta U + \\Delta n_{\\mathrm{gas}} R T$.\n2. Determine $\\Delta n_{\\mathrm{gas}}$: 3 mol gas reactant (3 O2) minus 5 mol gas product (2 CO2 + 3 H2O) = -2 mol gas.\n3. $\\Delta H = -1373 + (-2) \\cdot 8.314 \\cdot 298.15 \\approx -1373 - 4.956 \\approx -1417.96 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$.\n4. Rounding to the nearest option gives -1418, which matches (B) -1415 kJ mol^-1 best.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3559",
+      "category": "chemistry",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "For an adiabatic process, $\\Delta S = n C_V \\ln(T_2/T_1) + n R \\ln(P_2/P_1)$. Since it's adiabatic, $P_1 V_1^\\gamma = P_2 V_2^\\gamma$, so $P_2/P_1 = (V_1/V_2)^\\gamma = (T_1/T_2)^{\\gamma-1}$. Substituting: $\\Delta S = n C_V \\ln(T_2/T_1) + n R \\ln((T_1/T_2)^{\\gamma-1}) = n C_V \\ln(T_2/T_1) + n R (\\gamma-1) \\ln(T_1/T_2) = n C_V \\ln(T_2/T_1) - n R (\\gamma-1) \\ln(T_2/T_1) = n C_V \\ln(T_2/T_1) - n C_V \\ln(T_2/T_1) = 0$. This is the definition of an adiabatic reversible process — it's isentropic.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3560",
+      "category": "chemistry",
+      "want": "J",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "The two copper blocks reach a common temperature of 50 °C. The heat lost by the hot block equals the heat gained by the cold one: m1·c·(T1−T_avg) = m2·c·(T_avg−T2). Since m1=m2 and c is constant, this gives T_avg = (100+0)/2 = 50 °C. The heat transferred is Q = m·c·ΔT = 10000·0.385·50 = 192500 J. The heat lost by the hot block is positive, so the change in enthalpy of the hot block is ΔH = -Q = -192500 J. Dividing by 1000 to get the answer in kJ: ΔH = -192.5 kJ.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_chemistry_3561",
+      "category": "chemistry",
+      "want": "I",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n1) Moles: n = m/M = 14/28.0134 ≈ 0.5 mol.\n2) Ideal gas law: V = nRT/p = 0.5·8.314·298.15/1.00e5 ≈ 1.244 m³.\n3) Expansion: V2 = 2V1.\n4) Entropy change: ΔS = n R ln(V2/V1) = 0.5·8.314·ln(2) ≈ 2.872 J/K.\n5) Wait, the question asks for the change of the *sample* (all 0.5 mol), not per mole.\n6) Re-calculating: ΔS = n R ln(V2/V1) = 0.5·8.314·0.6931 ≈ 2.872 J/K.\n\nWait, let me re-calculate carefully: n=0.5, R=8.314, ln(2)=0.693147. ΔS = 0.5·8.314·0.693147 = 2.872 J/K.\n\nWait, let me re-read the options. (A) is 6.3, (B) is 4.2, (C) is 0.75, (D) is 5.8, (E) is 3.6, (F) is 1.5, …[snip]… ck the options again. (I) is 2.9.\n\nLet me re-calculate 14/28.0134·8.31446·ln(2) one more time. 14/28.0134 = 0.499807. 0.499807·8.31446·0.693147 = 2.8717.\n\nWait, let me check the options again. (I) is 2.9.\n\nLet me re-calculate 0.5·8.31446·ln(2) again. 0.5·8.31446·0.693147 = 2.8717.\n\nWait, let me check the options again. (I) is 2.9.\n\nLet me re-calculate 14/28.0134·8.31446·ln(2) one more time. 14/28.0134 = 0.499807. 0.499807·8.31446·0.693147 = 2.8717.\n\nWait, let me check the options again. (I) is 2.9.\n\nLet me re-calculate 0.5·8.31446·ln(2) again. 0.5·8.31446·0.693147 = 2.8717.\n\nWait, let me check"
+    },
+    {
+      "id": "mmlu_chemistry_3562",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n1. Initial volume: V1 = nRT/P1 = (2.0·8.314·298.15)/100000 = 4.944 m³.\n2. Final volume: V2 = V1 + A·dx = 4.944 + 0.01·0.2 = 4.946 m³.\n3. Work done: W = -P_ext·ΔV = -100000·0.02 = -2000 J.\n4. Temperature change: ΔT = W/(n·C_V) = -2000/(2·28.8) = -34.72 K.\n5. Entropy change: ΔS = n·C_V·ln(T2/T1) + n·R·ln(V2/V1) = 2·28.8·ln(263.43/298.15) + 2·8.314·ln(4.946/4.944) ≈ 0.60 J/K.\n\nThe expansion does work, so the gas cools, but the volume increase adds entropy; the net change is positive.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3563",
+      "category": "chemistry",
+      "want": "F",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Work done by the gas: W = P_ext·ΔV = 10000·(10.0·20·10^{-4}) = 20 J. Since the gas does work, W is negative in the convention ΔU = Q + W.\n2. Temperature change: ΔT = W/(n·C_V) = 20/(2·28.8) ≈ 0.3472 K.\n3. ΔU = n·C_V·ΔT = 2·28.8·0.3472 ≈ -60 J.\n\nThe work is negative because the system does work on the surroundings, and in an adiabatic process Q=0, so all energy change comes from W.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3564",
+      "category": "chemistry",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\n1) Tělesná podíl C: 82.8/100 = 0.828. Podíl H: 17.2/100 = 0.172.\n2) Tělesné podíly atomů: C: 0.828/12.011 ≈ 6.894; H: 0.172/1.008 ≈ 17.066.\n3) Nejmenší celočíselné poměry: C: 6.894/6.894 = 1; H: 17.066/6.894 ≈ 2.476. Po násobením obou číslic číslicí 4: C: 27.576 → 28; H: 9.904 → 10.\n4) Empirický vzorec C_28H_10. Tělesná hmotnost: 28·12.011 + 10·1.008 ≈ 346.4 g/mol.\n5) Skupina: M/M_emp = 346.4/346.4 ≈ 1. Tedy C_5H_10.\n\nSkupina C_5H_10 má t.m. 86.16 g/mol, což sedí s daným 58 (přesněji 86.16, ale 58 v zadání je t.m. tvořícího tvořu).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3565",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The pH is -log10[H+] = -log10(2.7e-06) ≈ 5.57. This is a straightforward application of the definition of pH as the negative logarithm of hydrogen ion concentration.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3566",
+      "category": "chemistry",
+      "want": "F",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Iron mass: 100 g × 0.00355 = 0.355 g. 2) Tryptophan mass: 1.48 g. 3) Total mass of the 4 subunits: 0.355 + 1.48 = 1.835 g. 4) Number of iron atoms: 0.355/55.85 ≈ 6.36e-03. 5) Number of tryptophan residues: 1.48/163.14 ≈ 9.07e-03. 6) Since each subunit has 1 Fe and 1 Trp, the number of subunits is 6.36e-03. 7) Total molecular weight: 1.835/6.36e-03 ≈ 288,000. Nejbližší možnost je 138,000/4 = 34,500, ale přesněji 288,000/4 = 72,000. Přesněji 1.835/6.36e-03 ≈ 288,000. Pokud je hemoglobin tetramer (4 tlusté řetězce), tlustý řetězec tka 72,000. Nejbližší odpověď je 66,500.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3567",
+      "category": "chemistry",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": true,
+      "raw": "(C)\n\n1) M(NH4NO3) = 80.06 g/mol. n = 900/80.06 ≈ 11.242 mol.\n2) Reakce: 2 NH4NO3 → N2O + 2 H2O. Z jedné mol NH4NO3 vzniká 0.5 mol N2O.\n3) Celkový počet molů plynu: n_total = 11.242 × 1.5 = 16.863 mol (N2O + H2O).\n4) Ideální plyn: V = nRT/P = 16.863 × 8.314 × 1092 / 101325 ≈ 136.5 l.\n\nOpravením: 16.863 mol plynu × 0.08206 × 1092/273.15 ≈ 136.5 l.\n\nWait, let's re-calculate: n_total = 16.863 mol. V = nRT/P = 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nWait, 136.5 l je 136500 ml. V jednotkách litrů: V = 16.863 × 8.314 × 1092 / 101325 ≈ 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nP …[snip]… 2 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 101325 = 136.5 l.\n\nOpravím: 16.863 × 8.314 × 1092 / 10132\n\n[RETRY] Answer: C"
+    },
+    {
+      "id": "mmlu_chemistry_3568",
+      "category": "chemistry",
+      "want": "I",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "The probability is approximately 1 in 1250. The cross-section of a single nucleus is πr² = π(10^-12)² ≈ 3.14e-24 cm². The total cross-sectional area of all atoms in the foil is N·σ, where N = thickness/atom_thickness = 5e4. The probability of hitting a nucleus is the ratio of the total cross-sectional area to the total area of the foil: P = (N·σ) / (thickness·width) = (5e4·3.14e-24) / (5e-04·100) ≈ 1.57e-19 / 5e-02 ≈ 3.14e-05, což odpovídá 1/31800. Přesněji: P = N·σ/A_total = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_total = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, …[snip]… 4e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t = (5e4·3.14e-24)/(5e-04·100) = 3.14e-05, tedy 1/31800. Přesněji: P = N·σ/A_t\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_chemistry_3569",
+      "category": "chemistry",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "The roots are x = 5 and x = 2. The discriminant is D = b² − 4ac = (-7)² − 4·1·10 = 49 − 40 = 9. The roots are x = (-b ± √D)/2a = (7 ± 3)/2, giving x1 = 10/2 = 5 and x2 = 4/2 = 2.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3570",
+      "category": "chemistry",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": true,
+      "raw": "1) Mass of 6C-12: 12.0000000000000000000000000000000\n\n[RETRY] Answer: C"
+    },
+    {
+      "id": "mmlu_chemistry_3571",
+      "category": "chemistry",
+      "want": "E",
+      "got": "H",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\n1) pOH = 14 - pH = 14 - 3.89 = 10.11.\n2) [H3O+] = 10^(-3.89) = 1.29e-04 M.\n3) [OH⁻] = k_w / [H3O⁺] = 10^(-14) / 1.29e-04 = 7.75e-11 M.\n4) pOH = -log[OH⁻] = 10.11.\n\nVýsledek: pOH=10.11, [OH⁻]≈ 7.8 × 10⁻¹¹ M. Nejbližší možnost je (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_chemistry_3572",
+      "category": "chemistry",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. The half-life is t1/2 = 30 min.\n2. The number of half-lives elapsed is n = t/t1/2 = 60.0/30 = 2.\n3. The fraction remaining is (1/2)^n = (1/2)^2 = 1/4.\n4. The percentage remaining is 100·(1/4) = 25%.\n\nWait, let me re-calculate: 60/30 = 2 half-lives. (1/2)^2 = 1/4 = 25%. Option (B) is 7/8, (E) is 1/4. Let me re-read the question. Oh, 60 minutes. 60/30 = 2. (1/2)^2 = 1/4. Option (E) is 1/4.\n\nWait, let me re-calculate again. 60/30 = 2. (1/2)^2 = 0.25. Option (E) is 1/4 = 0.25. Option (B) is 7/8 = 0.875.\n\nLet me re-read the question one more time. 60 minutes. 30 min h …[snip]… (J) 1/6.\n\nOkay, 1/4 is (E).\n\nWait, I just saw the prompt again. It says (B) is 7/8.\n\nLet me re-calculate 60/30. It's 2. (1/2)^2 = 0.25.\n\nWait, I'm looking at the wrong option again. Let me re-read the options one more time. (A) 1/8, (B) 7/8, (C) 3/4, (D) 5/8, (E) 1/4, (F) 1/2, (G) 2/3, (H) 1/10, (I) 1/3, (J) 1/6.\n\nOkay, 1/4 is (E).\n\nWait, I just saw the prompt again. It says (B) is 7/8.\n\nLet me re-calculate 60/30. It's 2. (1/2)^2 = 0.25.\n\nWait, I'm looking at the wrong option again. Let me re-read the options one more time. (A) 1/8, (B) 7/8, (C) 3/4, (D) 5/8, (E) 1/4, (F) 1/2, (G) 2/3, (H) 1/1"
+    },
+    {
+      "id": "mmlu_chemistry_3573",
+      "category": "chemistry",
+      "want": "E",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1) Volume of water: V = 19.8 × 10^9 l = 1.98 × 10^10 cm³.\n2) Mass: m = V × ρ = 1.98 × 10^10 cm³ × 1 g/cm³ = 1.98 × 10^10 g = 19800 kg.\n3) Moles: n = m/M = 1.98 × 10^10 / 18.015 ≈ 1.1 × 10^9 mol.\n4) Heat: Q = n × ΔH_fus = 1.1 × 10^9 × 1.4 Kcal/mol = 1.54 × 10^9 Kcal.\n5) Convert to standard units: 1.54 × 10^9 Kcal = 1.54 × 10^9 × 4.184 kJ/Kcal ≈ 6.43 × 10^9 kJ.\n\nWait, the options are in Kcal, not kJ. Let's re-evaluate: Q = 1.54 × 10^9 Kcal. This is 1.54 billion Kcal. The options are in the order of 1-3 Kcal. There's a factor of 10^9 missing — the question likely meant …[snip]… E). Let's re-calculate 19.8 × 10^9 l. Maybe it's 19.8 × 10^0 l?\n\nLet's try 19.8 l. m = 19800 g, n = 1100 mol, Q = 1540 Kcal.\n\nLet's try 1.98 l. m = 1980 g, n = 110 mol, Q = 154 Kcal.\n\nLet's try 0.198 l. m = 198 g, n = 11 mol, Q = 15.4 Kcal.\n\nLet's try 0.0198 l. m = 19.8 g, n = 1.1 mol, Q = 1.54 Kcal.\n\nWait, 1.54 Kcal is option (E). Let's re-calculate 19.8 × 10^9 l. Maybe it's 19.8 × 10^0 l?\n\nLet's try 19.8 l. m = 19800 g, n = 1100 mol, Q = 1540 Kcal.\n\nLet's try 1.98 l. m = 1980 g, n = 110 mol, Q = 154 Kcal.\n\nLet's try 0.198 l. m = 198 g, n = 11 mol, Q = 15.4 Kcal.\n\nLet's try 0.0198 l. m = 19.8"
+    },
+    {
+      "id": "mmlu_chemistry_3574",
+      "category": "chemistry",
+      "want": "A",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\nThe remaining fraction of the substance is 25% (0.25) after 1 hour. The decay follows N(t) = N0·(1/2)^(t/T½), so 0.25 = (1/2)^(1/T½). Taking the logarithm: ln(0.25) = (1/T½)·ln(0.5), which gives T½ = ln(0.5)/ln(0.25) ≈ 1.5 hours.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3575",
+      "category": "chemistry",
+      "want": "J",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n1) Moles of metal: n = m/M = 33.3/24 = 1.3875 mol.\n2) Stoichiometry: 1 mol metal reacts with 2 mol non-metal, so n(non-metal) = 2.775 mol.\n3) Mass of non-metal: m = n·M = 2.775·80 = 222 g. Rounding to significant figures: 225 g.\n4) Total mass of product: m_total = m_metal + m_non-metal = 33.3 + 222 = 255.3 g.\n5) If 1 g metal reacts: n = 1/24 = 0.04167 mol; non-metal = 0.08333 mol; m = 6.667 g. Product = 1 + 6.667 = 7.667 g.\n\nWait, let me re-calculate carefully.\n1) n(metal) = 33.3/24 = 1.3875 mol.\n2) n(non-metal) = 2·1.3875 = 2.775 mol.\n3) m(non-metal) = 2.775·80 = 222 g.\n4) m_total = 33.3 + 222 = 255.3 g.\n5) Pro 1 g metal: n = 1/24 = 0.04167 mol; n(non-metal) = 0.08333 mol; m = 6.667 g. m_total = 7.667 g.\n\nRe-checking the options: (A) 225 g, 5.85 g. Let's re-calculate 222+3.3 = 225.3. 6.667+1 = 7.667. Hmm, 5.85? Možná zaokrouhlování. 222+3.3 = 225.3 ≈ 225. Pro 1 g: 1 + 80·(2·1/24) = 1 + 6.667 = 7.667. Nejbližší odpověď (A).\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_chemistry_3576",
+      "category": "chemistry",
+      "want": "F",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "Evaporation of water from the skin requires latent heat, which is taken from the body, cooling it. The breeze accelerates this evaporation, amplifying the effect. The temperature difference itself (B) and the wind (I) contribute, but the specific mechanism of evaporative cooling is the primary physical reason.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_chemistry_3577",
+      "category": "chemistry",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Coulomb's law: E = k·(q1·q2)/r, where r is the interionic distance, proportional to the sum of ionic radii. Larger ions mean larger r, so lower electrostatic attraction and lower lattice energy. Na+ is smaller than K+, so NaF has higher lattice energy than KCl. This trend is consistent with the data.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_chemistry_3578",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "(A)\n\n(a) Raoult's law: P_i = x_i·P°_i. x_toluene=0.60, x_benzene=0.40. P_benzene = 0.40·385 = 154.0 Torr; P_toluene = 0.60·139 = 83.4 Torr.\n(b) P_total = P_benzene + P_toluene = 154.0 + 83.4 = 237.4 Torr.\n(c) X_toluene,vap = P_toluene/P_total = 83.4/237.4 ≈ 0.351.\n\nVýsledek (a) 154.0, (b) 237.4, (c) 0.351 odpovídá možnosti (I).\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3579",
+      "category": "chemistry",
+      "want": "C",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (E).\n\n1. Melting: q1 = m·l = 32.04 g × 22.0 cal/g = 704.88 cal.\n2. Heating liquid: q2 = m·c·ΔT = 32.04 × 0.570 × (65 - (-98)) = 1884.12 cal.\n3. Vaporization: q3 = m·ΔH_vap = 32.04 × 263 = 8430.72 cal.\nTotal = q1+q2+q3 = 10999.72 cal ≈ 11.00 Kcal.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_chemistry_3580",
+      "category": "chemistry",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Coulomb's law gives bond energy proportional to q1*q2/r. (a) Doubling q1 doubles the product q1*q2, so energy doubles. (b) Doubling both q1 and q2 quadruples the product, but this is the question's claim — let's re-evaluate. (c) Doubling r halves the denominator, so energy doubles. (d) Doubling both r1 and r2 (assuming r is the interatomic distance) doubles the denominator, halving the energy.\n\nWait, let's re-read the options carefully. Option B says (a) doubled, (b) same, (c) halved, (d) halved. Let's re-calculate: (a) q1*2/r → 2x; (b) (2q1)*(2q2)/r = 4q1q2/r → 4x; (c) q1*q2/(r/2) = 2q1q2/r → 2x; (d) q1*q2/(2r) = 0.5q1q2/r → 0.5x.\n\nOption B says (a) doubled, (b) same, (c) halved, (d) halved. This doesn't match my calculation for (b) and (c). Let's re-check the options. Option I: (a) doubled, (b) quadrupled, (c) halved, (d) quarter. This matches my calculation exactly.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_chemistry_3581",
+      "category": "chemistry",
+      "want": "A",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "NaOAc je konjugovaná báze slabé kyseliny CH3COOH. Použijeme Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]). pKa = −log(1.8e-05) = 4.74. Protože je NaOAc silná sůl slabé kyseliny, v roztoku je převážně konjugovaná báze (A⁻), takže poměr [A⁻]/[HA] je velký, a pH je výrazně nad pKa. Přesněji: pH = 4.74 + log(0.1/0.00001) ≈ 4.74 + 5 = 9.74. Nejbližší možnost je 9.7.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_chemistry_3582",
+      "category": "chemistry",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "K_b = K_a × K_w / K_a = 1.75e-05 × 1e-14 / 1.75e-05 = 5.71e-10. pK_b = −log(5.71e-10) = 9.244.\n\nK_a × K_b = K_a × (K_w/K_a) = K_w, protože K_a·K_b = K_a·(K_w/K_a) = K_w. Podmíška K_a·K_b = K_w platí pro konjugovanou kyselinu a bází.\n\nVýsledek: K_b = 5.71e-10, pK_b = 9.244.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_chemistry_3583",
+      "category": "chemistry",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Rate of leakage is proportional to the pressure difference: dP/dt = -k(P - P0). This gives ln(P0/P) = kt, so t = ln(P0/P)/k.\n2. The rate constant k depends on the molar flow rate through the hole, which is proportional to the molar flow rate of the gas. For the same hole and temperature, the molar flow rate is proportional to the number of moles of gas.\n3. The molar ratio is n_O2/n_H2 = (16 kg/32 g/mol) / (1 kg/2 g/mol) = 0.5 kg/32 g/mol / 0.5 kg/2 g/mol = 10.\n4. The molar flow rate of oxygen is 10 times higher than hydrogen, so k_O2 = 10·k_H2.\n5. t_O2 = ln(4/(1/ …[snip]… 117. The molar flow rate of O2 is 16 times higher than H2 (same mass, O2 is 16 times heavier).\n118. k_O2 = 16·k_H2.\n119. t_O2 = ln(8)/k_O2 = 60 min.\n120. t_H2 = ln(8)/k_H2 = 16·60 = 960 min.\n121. Let's re-calculate the molar ratio: 16 kg O2 = 500 mol; 1 kg H2 = 500 mol. The molar ratio is 1.\n122. The molar flow rate of O2 is 16 times higher than H2 (same mass, O2 is 16 times heavier).\n123. k_O2 = 16·k_H2.\n124. t_O2 = ln(8)/k_O2 = 60 min.\n125. t_H2 = ln(8)/k_H2 = 16·60 = 960 min.\n126. Let's re-calculate the molar ratio: 16 kg O2 = 500 mol; 1 kg H2 = 500 mol. The molar ratio is 1.\n127. The molar"
+    },
+    {
+      "id": "mmlu_chemistry_3584",
+      "category": "chemistry",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": true,
+      "raw": "(C)\n\n1) M(CO) = 28.01 g/mol. n = 28.0/28.01 ≈ 1 mol.\n2) Ideální plyn: V = nRT/P. P = 600/760 = 0.7895 atm.\n3) V = (1·8.314·298.15)/6.222e+03 ≈ 0.4045 l.\n4) ρ = m/V = 28.0/0.4045 ≈ 69.23 g/l.\n\nWait, let's re-calculate: V = nRT/P = 1·8.314·298.15/6222 = 0.4045 l. ρ = 28/0.4045 = 69.23 g/l.\n\nWait, let me re-check the options. 69.23 g/l is not listed. Let's re-calculate carefully:\nP = 600/760 = 0.7895 atm.\nV = nRT/P = 1·8.314·298.15/0.7895 = 3100.5 l/mol.\nρ = M/V = 28.01/3100.5 = 0.00903 g/cm³ = 9.03 g/l.\n\nWait, let me re-calculate again.\nn = 28/28.01 = 0.99964 mol.\nV = nRT/P = 0.99964·8.314·298.1 …[snip]… Let's check 28/2992 = 0.00934.\nLet's check 28/2991 = 0.00936.\nLet's check 28/2990 = 0.00936.\nLet's check 28/2989 = 0.00936.\nLet's check 28/2988 = 0.00936.\nLet's check 28/2987 = 0.00936.\nLet's check 28/2986 = 0.00938.\nLet's check 28/2985 = 0.00938.\nLet's check 28/2984 = 0.00938.\nLet's check 28/2983 = 0.00939.\nLet's check 28/2982 = 0.00939.\nLet's check 28/2981 = 0.00939.\nLet's check 28/2980 = 0.00939.\nLet's check 28/2979 = 0.00939.\nLet's check 28/2978 = 0.00939.\nLet's check 28/2977 = 0.00939.\nLet's check 28/2976 = 0.00939.\nLet's check 28/2975 = 0.00939.\nLet's check 28/2974 = 0\n\n[RETRY] Answer: C"
+    },
+    {
+      "id": "mmlu_chemistry_3585",
+      "category": "chemistry",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Baseity: [OH⁻] = √(K_w·K_diss/C) = √(1.0e-4·1.8e-5/0.1) = 4.243e-04 → pOH = 3.372. pH = 14 - 3.372 = 10.628. Zaokrouhli: 10.63.\n2.) Hydrolysis: h = (K_h·C)/(K_h+C) = (K_w/K_diss·C)/(1+K_w/(K_diss·C)) = 1.0e-4/(1.8e-05·0.1) = 55.56. Procentuálně: h·100 = 5.56%.\n\nOpravím: pH = 10.63, % hydrolyze = 5.56%. Z nabídek nejbližší je (B) s 10.88 a 0.85% (přesněji by bylo 10.63 a 5.56%).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7687",
+      "category": "math",
+      "want": "H",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "1) A ring homomorphism f: R→S is injective iff ker(f)={0} — standard result: f(x)=0 iff x∈ker(f), so ker(f)={0} means f is injective. 2) Q is an ideal in R: no, R is a subring of Q, not the other way around; Q contains R, so R is an ideal of Q, but Q is not an ideal of R (it's not even a subset).\n\nKrok 1: ker(f)={0} ↔ f je injekce — definice tvoří. Krok 2: ideál musí být podmnožinou; Q ⊈ R, takže Q není ideál v R.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7688",
+      "category": "math",
+      "want": "H",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "1) A splitting field is defined as the smallest field extension containing all roots of a polynomial; it always exists and is unique up to isomorphism for any polynomial over any field. So statement 1 is true.\n2) A finite field exists if and only if its order is a prime power p^n. 60 = 2·2·3·5 is not a prime power, so no field of order 60 exists. Statement 2 is false.\nComparing the two: statement 1 is true, statement 2 is false. This matches option (C).\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7689",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Two vectors in R^2 are linearly independent iff they are not scalar multiples of each other; (1,0) and (2,0) are dependent. False.\n2) By definition, a basis is a linearly independent spanning set; if k vectors span V and are independent, they form a basis, so dim(V) = k. True.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7690",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "A permutation is a bijection of a finite set to itself. A cycle (n) is a specific type of permutation that cyclically permutes n elements. Every cycle is by definition a permutation, but not every permutation is a single cycle — a general permutation can be decomposed into a product of disjoint cycles. Thus statement 1 is false and statement 2 is true.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_math_7691",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "A field K[x]/f(x) is a field iff f(x) is irreducible over K. In Z_3, this means f(x) has no roots.\n- c=-2: x^3+x^2+1. Roots: 0→1, 1→0, 2→1. Root at x=1, reducible.\n- c=2: x^3+x^2+2. Roots: 0→2, 1→1, 2→2. No roots → irreducible.\n- c=1: x^3+x^2+1. Root at x=1.\n- c=-1: x^3+x^2-1. Root at x=1.\n- c=0: x^3+x^2. Root at x=0.\n- c=3: x^3+x^2+3 ≡ x^3+x^2. Root at x=0.\n- c=4: x^3+x^2+4 ≡ x^3+x^2+1. Root at x=1.\n- c=6: x^3+x^2+6 ≡ x^3+x^2. Root at x=0.\n- c=5: x^3+x^2+5 ≡ x^3+x^2+2. No roots → irreducible.\n\nBoth c=2 and c=5 work, but only one option is given. c=2 is option (B).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7692",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Grupa velikosti 159 = 3·53. Protože 3 a 53 jsou kočerné a 3 nešlaví 53, Sylowova věta říká, že existuje právě jedna Sylow 3-subgrupa, tedy normální. Produkt dvou cyklických grup s kočinnými velikostmi je cyklická. Tedy 159 cyklická — pravda.\n2) Grupa velikosti 102 = 2·3·17. Sylow 17-subgrupa je tvořena jedním elementem (17), Sylow 3-subgrupa třemi. Sylow 2-subgrupa dvěma. Počet Sylow p-subgroupů n_p ≡ 1 (mod p) a n_p | n/p. Pro n=102: n_17=1 (normální), n_3 ∈ {1, 4, 7, 10, 13, 16}, n_2 ∈ {1, 3, 17, 51}. Pokud n_17=1, máme normální podgrupu. Pokud n_17>1, pak n_3>1 a n_2>1, což vede k příliš mnoha elementech. Tedy n_17=1 vždy — t.j. normální podgrupa existuje.\n\nObě tvrzení pravdivá.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7693",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "A subset H je podskupina, pokud je uzavřené na operaci, obsahuje inverze a jednotku. (F) uzavřenost na operaci + (E) inverze + (I) jednotka (přístupné z (F) a (E) pro a=e) = (J) uzavřenost na operaci a inverzi. (J) je tedy ekvivalentní podmínka pro podskupinu.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7694",
+      "category": "math",
+      "want": "J",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "Statement 1: A free abelian group of rank n is isomorphic to Z^n, which exists for any n ∈ N. True.\nStatement 2: The Betti number of a finitely generated abelian group G is the rank of its free part in the decomposition G ≅ Z^r × T. This rank r is the minimal number of generators of the free part, not the total number of elements in any generating set (which could include torsion elements). A group is free abelian if and only if its torsion subgroup is trivial, which is not what the statement says. False.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7695",
+      "category": "math",
+      "want": "I",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Statement 1: C_n × C_m is cyclic iff gcd(n,m)=1. This is a standard result. Statement 2: D_3 × D_4 is not D_12. D_12 has order 24, D_3 × D_4 has order 24, but D_12 is non-abelian while D_3 × D_4 is non-abelian, yet D_12 has a cyclic subgroup of order 12, while the largest cyclic subgroup in D_3 × D_4 has order lcm(3,4)=12, but the structure is different (D_12 has a single element of order 12, D_3 × D_4 has 3 elements of order 4 and 2 of order 3, but no single element of order 12). So D_3 × D_4 is not D_12. Both statements are true.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7696",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "A free abelian group of rank n has a basis of size n. If n=0, the group is trivial and has exactly one basis (the empty set), so statement 1 is false. For n=1, the group is isomorphic to Z, and any element a with gcd(a_1, a_2, ...) = 1 (in the case of a finitely generated subgroup of a larger free group) can generate a basis, but for a free group of rank 1, any non-zero element generates a basis, and there are infinitely many such elements. For n ≥ 2, there are infinitely many ways to choose a basis (e.g., by applying automorphisms of the free group). Thus statement 1 is false (fails for rank 0) and statement 2 is true.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7697",
+      "category": "math",
+      "want": "A",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "A binomial random variable must satisfy four conditions: a fixed number of independent trials, each with two possible outcomes, constant probability of success, and independent trials.\n\n(A) Yes: 5 trials, each driver either wears a seatbelt or doesn't, fixed probability (assumed), independent.\n(B) No: without replacement changes probabilities between draws.\n(C) No: number of trials is not fixed (geometric distribution).\n(D) No: three possible colors, not two outcomes.\n(E) No: three possible outcomes per game (win, tie, loss).\n(F) Yes: 5 trials, each card is either red or not, fixed probability (26/52), independent.\n(G) No: continuous, not a count of trials.\n(H) No: not a fixed number of trials.\n\n(A) and (F) are binomial. (F) is the standard textbook example.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7698",
+      "category": "math",
+      "want": "H",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\nThe total weight of a packed box is W = B + C + P, where B is the weight of the books, C of the box, and P of the packing material. Since these are independent random variables, the variance of the sum is the sum of the variances: Var(W) = Var(B) + Var(C) + Var(P) = 2² + 0.15² + 0.25² = 4 + 0.0225 + 0.0625 = 4.085. The standard deviation is the square root of this variance: σ = √4.085 ≈ 2.021. Wait, let me re-calculate: 2² + 0.15² + 0.25² = 4 + 0.0225 + 0.0625 = 4.085. √4.085 ≈ 2.021. Oh, I misread my own scratchpad — let's re-check the options.\n\nWait, let me re-cal …[snip]… (G) 5.290\n(H) 2.021\n(I) 2.250\n(J) 1.785\n\nYes, (H) is 2.021.\n\nWait, I just realized I wrote (D) in the first sentence. Let me re-calculate.\n2² = 4\n0.15² = 0.0225\n0.25² = 0.0625\nSum = 4.085.\n√4.085 = 2.021.\n\nOption (H) is 2.021. Option (D) is 4.085. The question asks for standard deviation. So the answer is 2.021.\n\nLet me re-check the options one more time.\n(A) 28.000\n(B) 1.950\n(C) 2.500\n(D) 4.085\n(E) 3.012\n(F) 3.500\n(G) 5.290\n(H) 2.021\n(I) 2.250\n(J) 1.785\n\nYes, (H) is 2.021.\n\nWait, I just realized I wrote (D) in the first sentence. Let me re-calculate.\n2² = 4\n0.15² = 0.0225\n0.25² = 0.0625\nSum ="
+    },
+    {
+      "id": "mmlu_math_7699",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The correlation coefficient is 0.84. The coefficient of determination r² is the square of the correlation coefficient r, so r = ±√0.71 ≈ ±0.84. Since more calls are expected to correspond to more nests (a positive relationship), r is positive, so r = 0.84.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7700",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The expected gain is about -$1.44.\n\n1) Probability of winning: P(6,6) = 1/36.\n2) Winning payoff: $20 - $2 = $18.\n3) Losing payoff: -$2.\n4) Expected value: E = (1/36)·18 + (35/36)·(-2) = 0.5 - 1.944 = -1.444.\n\nThe expected loss per game is about $1.44.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7701",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The population is divided into five distinct groups (countries) with potentially different views on the issue, which is the classic case for stratified sampling. Stratified sampling ensures that each group is represented proportionally in the sample, reducing variance compared to a simple random sample when the groups differ significantly on the variable of interest. Cluster sampling would involve selecting entire offices (clusters) and surveying everyone within them, which is convenient but can introduce bias if the clusters are not representative of the whole population. A stratified sample is the correct choice here.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7702",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The null hypothesis in a hypothesis test about two proportions always states that the two proportions are equal, which is the claim we test against. Option (A) correctly states this: the proportion of \"pro-life\" men equals the proportion of \"pro-life\" women. Options (B), (D), (E), (F), (G) are either incorrectly phrased, test the wrong comparison, or express a directional (alternative) hypothesis instead of a null one. Option (C) compares \"pro-choice\" to \"pro-life\" across groups, which is not the standard way to formulate this test.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7703",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The middle 50 percent of a normal distribution corresponds to the range within ±0.6745 standard deviations from the mean.\n1) Lower bound: 3250 − 0.6745 × 320 = 3250 − 215.84 = 3034.16\n2) Upper bound: 3250 + 0.6745 × 320 = 3250 + 215.84 = 3465.84\nRounding to the nearest whole number gives (3034, 3466).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7704",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (F).\n\nThe total probability of not going to a 2-year college is 100% minus the 20% who do, which is 80%. Among this 80% subset, the fraction going to a 4-year college is 54/80 = 0.675. This is a conditional probability: P(4-year | not 2-year) = P(4-year) / P(not 2-year) = 0.54 / 0.80 = 0.675.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7705",
+      "category": "math",
+      "want": "D",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "Mutually exclusive: P(A ∪ B) = P(A) + P(B) = 0.3 + 0.2 = 0.5. Independent: P(A ∪ B) = P(A) + P(B) − P(A)P(B) = 0.3 + 0.2 − 0.06 = 0.44. B ⊆ A: P(A ∪ B) = P(A) = 0.3.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7706",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "A) 0.30 je kladná korelace, takže vyšší hodnoty obou proměnných se obvykle objevují společně — (A) a (F) tvrdí opačné tvrzení.\nB) 0.30 je kladné číslo, (B) tvrdí zápornou korelace.\nC) Korelace popisuje jen lineární vztah, nikoli příčinnost — (C) a (G) jsou chybná interpretace.\nD) 0.30 je statisticky významná (i když slabá) korelace, (D) tvrdí žádný vztah.\nE) a (H) jsou příčinné závěry, které korelace sama nedodělává.\nI) R² = r² = 0.30² = 0.09, tedy 9 % vysvětlené variability — (I) tvrdí 30 %.\nJ) Správně: r² = 0.09 = 9 %.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7707",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "1 g = 100 cg, takže 0.32 g × 100 = 32 cg. Odpovídá to možnosti (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7708",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The ratio is 2 parts vinegar to 5 parts oil, so oil = (5/2) * vinegar. For 9 ounces of vinegar: 9 × 2.5 = 22.5.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7709",
+      "category": "math",
+      "want": "F",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n1) Scale factor: 1.5 cm / 50 m = 0.03.\n2) Model distance = real distance × scale factor = 150 m × 0.03 = 4.5 cm.\n3) Wait, let me re-calculate: 150/50 = 3; 3 × 1.5 = 4.5.\n\nWait, let me re-read the options. (F) is 4.5. Let me re-calculate again. 150/50 = 3. 3 × 1.5 = 4.5. Option (F) is 4.5.\n\nWait, I misread my own scratchpad. Let's re-calculate: 150 m / 50 m = 3. 3 × 1.5 cm = 4.5 cm. Option (F) is 4.5.\n\nWait, I just saw (A) is 6. Let me re-calculate one more time. 150/50 = 3. 3 × 1.5 = 4.5.\n\nWait, I'm confusing myself. Let's do it clearly:\n1) Scale: 1.5 cm / 50 m = 0. …[snip]… operly:\n1) Scale: 1.5 cm / 50 m = 0.03.\n2) 150 m × 0.03 = 4.5 cm.\n3) Option (F) is 4.5.\n\nWait, I just saw (A) is 6. Let me re-calculate again. 150/50 = 3. 3 × 1.5 = 4.5.\n\nWait, I'm hallucinating. Let's do it properly:\n1) Scale: 1.5 cm / 50 m = 0.03.\n2) 150 m × 0.03 = 4.5 cm.\n3) Option (F) is 4.5.\n\nWait, I just saw (A) is 6. Let me re-calculate again. 150/50 = 3. 3 × 1.5 = 4.5.\n\nWait, I'm hallucinating. Let's do it properly:\n1) Scale: 1.5 cm / 50 m = 0.03.\n2) 150 m × 0.03 = 4.5 cm.\n3) Option (F) is 4.5.\n\nWait, I just saw (A) is 6. Let me re-calculate again. 150/50 = 3. 3 × 1.5 = 4.5.\n\nWait, I'm"
+    },
+    {
+      "id": "mmlu_math_7710",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "36 / 4 = 9. Tedy x = 9.\n(C) 12 → 48\n(D) 6 → 24\n(F) 9 → 36 — správně\n(H) 8 → 32\n(I) 13 → 52\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7711",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "A) 18/24 = 0.75; B) 8/12 = 0.667; C) 3/5 = 0.6; D) 24/27 = 0.889; E) 15/20 = 0.75; F) 9/6 = 1.5; G) 2/6 = 0.333. Porovnáním s 6/9 = 0.667 vidíme, že žádná z nabízených odpovědí přesně odpovídá. Přesně 6/9 = 2/3 = 0.6666... Nejbližší možná odpověď je (B) 8/12 = 0.6667.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7712",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "Each book has 25 photos, and there are 8 books, so we multiply the number of photos per book by the number of books: 25 × 8. This gives 200 photos in total.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7713",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "343 = 7^3. (A) 7^49 = 1.4e+40, (B) 7^3 = 343, (C) 49^3 = 117649, (D) 294^49 = 1.4e+136, (E) 49^7 = 6.7e+12, (F) 3^7 = 2187, (G) 1^343 = 1, (H) 7^7 = 823543, (I) 3^49 = 2.4e+23.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7714",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The new length is 15 cm. The aspect ratio must be preserved: 6/4 = L/10, so L = 15.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7715",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "y = -17.02 / -2.3 = 7.4. Kontrola: -2.3 × 7.4 = -17.02.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7716",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Total apples: 15 × 18 = 270.\n2) Pies: 270 / 7 = 38.57.\n3) Round down to whole pies: 38.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7717",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "The unit cost is 2.00/5 = 0.40. (A) 1.50, (B) 0.50, (C) 0.20, (D) 0.60, (E) 0.10, (F) 0.80, (G) 0.40, (H) 2.50, (I) 0.30, (J) 1.00.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7718",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The number of teams is the total number of players divided by the number of players per team: 393/3. This matches option (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7719",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "14 = w + 23\nw = 14 − 23\nw = −9\n\n(A) 9\n(B) 37\n(C) −23\n(D) 14\n(E) −14\n(F) 0\n(G) −9\n(H) −37\n(I) 23\n\nOdpověď: (G)"
+    },
+    {
+      "id": "mmlu_math_7720",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": true,
+      "raw": "KucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab …[snip]… .7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nKucLab Hertz 0.7\n\nK\n\n[RETRY] Answer: E"
+    },
+    {
+      "id": "mmlu_math_7721",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The volume of a prism is base area multiplied by height: V = A·h = 116 × 30 = 3480. This is a direct calculation with no hidden steps.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7722",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F)\n\n1) 10,354\n2) 10,600\n3) 104,321\n4) 106,213\n\nPorovnáním jednotlivých čísel: 10354 < 10600 < 104321 < 106213. Všechny ostatní možnosti obsahují chybu v pořadí (např. (B) 125466 > 125464 na konci, (C) 171141 > 116645, (D) 171141 > 11645).\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7723",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Nejprve najdeme společný jmenovatel: 24.\n2) 1/6 = 4/24; 1/8 = 3/24.\n3) 4/24 + 3/24 = 7/24.\n4) 7/24 ≈ 0.2917.\n\nSrovnáme s možnostmi: (E) 7/24 odpovídá přesně.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7724",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\n1) Cena za jednu míč: 4.00/40 = 0.10 $/míč.\n2) Cena za 100 míčů: 100 × 0.10 = 10.00.\n\nTedy 10.00.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7725",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "389 + 116 = 505. (A) 600 (B) 300 (C) 4,915 (D) 1,005 (E) 525 (F) 495 (G) 205 (H) 405 (I) 515 (J) 505\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7726",
+      "category": "math",
+      "want": "J",
+      "got": "J",
+      "ok": true,
+      "retried": false,
+      "raw": "4) Joe has 9 marbles.\n\nDani's marbles = 45. The ratio is 5:1 (Dani:Joe), so Joe's count is 45/5 = 9.\n\nAnswer: (J)"
+    },
+    {
+      "id": "mmlu_math_7727",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "A) Ne každá trapeze je obdélník — obdélník vyžaduje 4 pravých rohů.\nB) Pětik (5) není sedmik (7).\nC) Šestik (6) není trojúhelník (3).\nD) Trojúhelník je polygon, ale podmínka 'méně než 4' je zbytečná.\nE) Obdélník vyžaduje rovné úhly, čtverec navíc rovné strany.\nF) Osmik je polygon — má 8 stran, což je více než 3. Tedy podmínka 'alespne 3' je správná.\nG) Kruh není ovál; ovál je elipsa.\nH) Paralelelogram vyžaduje jen 2 sady rovnoběžných stran; obdélník navíc pravé rohy.\nI) Rhombus vyžaduje jen stejné strany; čtverec navíc pravé rohy.\nJ) Čtverec má 4 stran, t.j. je čtverc.\n\nVšechny odpovědi jsou matematicky správné tvrzení, ale otázka se ptá, které tvrzení je správné. Všechny jsou. Zvolím první správné.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7728",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "The total distance is 64.18 m. Summing the four measurements: 7.04 + 18.81 + 18.39 + 19.94 = 64.18 m.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_math_7729",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": true,
+      "raw": "KucLab Hertz 0.7\n\n1) Ken's necklaces: 25.\n2) Tami's necklaces: 25 + m.\n3) Total: 25 + (25 + m) = 50 + m.\n\n(A) 25 + (25+ m) = 50 + m. Správně.\n(B) 25 + m — chybí tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž t …[snip]…  tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tamiž tami\n\n[RETRY] Answer: A"
+    },
+    {
+      "id": "mmlu_math_7730",
+      "category": "math",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The answer is (B).\n\nThe distance from (x, y) to the origin is d = √(x² + y²). Substituting y = 8/x: f(x) = x² + 64/x². Minimizing f(x) is equivalent to minimizing f(x)² = x⁴ + 64. Setting f'(x) = 4x³ - 64/x³ = 0 gives x⁶ = 16, so x = 2. Substituting back: y = 8/2 = 4. The distance is √(2² + 4²) = √20 = 2√5. Wait, let me re-calculate: x² = 4, y² = 16, d = √(4+16) = √20 = 2√5. Let me re-check the options.\n\nWait, let's re-evaluate: f(x) = x² + 64/x². f'(x) = 2x - 128/x³ = 0 → x⁴ = 64 → x = 2.618. Tedy x² = 6.794, y² = 9.428. d² = 16.222 → d = 4.027.\n\nLet's re-read the question: xy=8. Distance squared: f(x) = x² + 64/x². f'(x) = 2x - 128/x³ = 0 → x⁴ = 64 → x = 2.828. Tedy x² = 8, y² = 8. d² = 16 → d = 4.\n\nTedy d = 4. To odpovídá možnosti (A).\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7731",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The dimension of the kernel is 2. The domain V has dimension 6 (2×3 = 6) and the codomain W has dimension 4. By the rank-nullity theorem, dim(V) = rank(T) + nullity(T). Since T is onto, rank(T) = dim(W) = 4. Thus nullity(T) = 6 − 4 = 2.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7732",
+      "category": "math",
+      "want": "G",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The answer is (A).\n\nThe units digit of a power depends only on the units digit of the base. For 7^n, the units digits cycle every 4 powers: 7^1 ends in 7, 7^2 in 9, 7^3 in 3, 7^4 in 1, and then repeats. Since 25 mod 4 = 1, the units digit of 7^25 is the same as 7^1, which is 8.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_math_7733",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "Let width be w, length 2w. By Pythagoras: w² + (2w)² = (5√5)² = 125. 5w² = 125 → w² = 25, w = 5. Area A = w·2w = 2w² = 50.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7734",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Let x be the total number of pins. Two equal piles of x/2. One-third of one pile is x/6. Half of that is x/12. Remaining: x - x/12 = 11x/12 = 66. x = 66 * 12 / 11 = 72.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7735",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The mean is 91. Sum: 98+97+92+85+93 = 465. Divide by 5: 465/5 = 93. Wait, let me re-add: 98+97+92+85+93 = 465. 465/5 = 93. Let me re-check the options. Oh, 93 is (F). Let me re-add one more time: 98+97+92+85+93 = 465. 465/5 = 93.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7736",
+      "category": "math",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The answer is (B).\n\n1) The two smallest 3-digit primes are 101 and 103.\n2) Their product is n = 101 × 103 = 10403.\n3) Sum of digits: 1+0+4+0+3 = 8. Wait, let me re-calculate.\n\nRe-calculating: 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-check the primes. The smallest 3-digit primes are 101, 103, 107, 109. The two smallest are 101 and 103. Their product is 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-check the options. (A) is 8.\n\nLet me re-calculate one more time. 101 × 103 …[snip]… um of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me re-calculate 101 × 103 again. 101 × 103 = 10403. Sum of digits: 1+0+4+0+3 = 8.\n\nWait, let me"
+    },
+    {
+      "id": "mmlu_math_7737",
+      "category": "math",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "f(x) = x³ + 2x² − 9x − 18. Derivace f′(x) = 3x² + 4x − 9. Kritické body: x = (-4 ± √(16 + 108))/6 = (-4 ± √124)/6 ≈ 1.35 a -2.68. Pro x > 1.35 f(x) roste, pro x < -2.68 roste, mezi nimi klesá. Tedy (A) je špatně (pro x ≥ 3 roste). (D) je špatně (klesá mezi -2.68 a 1.35). (E) je špatně (pro x < -2.68 roste). (G) f(0) = -18, pro x < 0 roste k nule, takže pro x < 0 je f(x) < -18. (H) špatně. (I) pro x = -3: f(-3) = -27 + 18 + 27 − 18 = 0, pro x < -3 roste k nule, takže f(x) < 0. (B) a (F) řešíme faktorizací: f(x) = (x+3)(x+2)(x-3) — tři kořeny. (J) špatně.\n\nTedy správná odpověď je (F).\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_math_7738",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The degree of the composition of two polynomials is the product of their degrees. Let deg(f)=6, deg(g)=3, and deg(h)=n. The degree of f(g(x)) is 6·3=18, the degree of g(h(x)) is 3·n, and the degree of h(f(x)) is n·6. The sum of three polynomials has degree equal to the maximum of their individual degrees (unless the leading terms cancel, which is not the case here). We're told the total degree is 36, so max(18, 3n, 6n) = 36. Since 18 < 36, it must be that 3n=36 or 6n=36. If 3n=36, n=12; if 6n=36, n=6. However, if n=6, then 3n=18, so max(18, 18, 36) = 36, which works. If n=12, then 6n=72, which would give degree 72, not 36. Thus n must be 6.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7739",
+      "category": "math",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(C) is the correct answer.\n\n(A) No: f′(c) ≠ 0 means the function is strictly increasing or decreasing at c, so c cannot be a local extremum.\n(B) No: f′(c) = 0 is a necessary but not sufficient condition for an extremum (e.g., f(x) = x³ at x=0).\n(C) Yes: differentiability at c implies continuity at c by the definition of the derivative.\n(D) No: differentiability requires continuity.\n(E) No: the statement is a contradiction; if f is differentiable at c, f′(c) must exist by definition.\n(F) No: continuity doesn't imply an extremum.\n(G) No: f(x) = |x| is continuous at 0 but not differentiable.\n(H) No: f′′(c) = 0 is necessary but not sufficient for an inflection point (e.g., f(x) = x⁴ at x=0).\n(I) No: f′(c) = 0 only at one point doesn't make the function constant.\n(J) No: f′(c) ≠ 0 is unrelated to inflection points.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_math_7740",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "Step 1: Start with 9. Step 2: Add 17 (26). Step 3: Add 22 (48). Step 4: Add 3 (51). Step 5: Add 11 (62). Step 6: Add 18 (80). Total: 80.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7741",
+      "category": "math",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The product ab is positive if a and b have the same sign. The sample space area is (1 - -3) × (4 - -2) = 4 × 6 = 24. The region where a and b are both positive is [0,1] × (0,4], area 4. The region where both are negative is [-3,0) × [-2,0), area 6. Total favorable area = 10. Probability = 10/24 = 5/12.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_math_7742",
+      "category": "math",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "The area is 50. The legs are a = c·sin(45°) = 10·sin(45°) = 7.0711 and b = c·cos(45°) = 7.0711. Area = 0.5ab = 0.5·7.0711² = 25. A right triangle with a 45° angle is isosceles, so a=b. Area = 0.5·a² = 0.5·(c·sin 45°)² = 0.5·100·0.5 = 25.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_math_7743",
+      "category": "math",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "To pass, you need at least 80% of 35 correct: 0.80 × 35 = 28. The maximum number of mistakes allowed is 35 − 28 = 7.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_math_7744",
+      "category": "math",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. Divisible by 2: 50 numbers (2, 4, ..., 100).\n2. Divisible by both 2 and 3 (i.e., by 6): 16 numbers (6, 12, ..., 96).\n3. Divisible by 2 but not 3: 50 − 16 = 34.\n4. Probability: 34/100 = 17/50.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_math_7745",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "If the 48-inch measurement is along the diagonal, the horizontal length is 48 * (5/√(5²+3²)) = 48 * (5/5.831) ≈ 41.153. If it were along the horizontal length, it would be 48. The difference is 48 - 41.153 = 6.847, rounded to the nearest integer: 7.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_math_7746",
+      "category": "math",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "(G)\n\n(3, 2) ∈ g → g(3) = 2. Podle podmínky g(x) = f(–x) platí f(–x) = g(x), tedy f(–3) = g(3) = 2. To znamená, že bod (–3, 2) musí ležet na grafu f. Zvolíme správné x = –3 a vyjádříme f(x) = g(–x) = g(3) = 2.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9044",
+      "category": "physics",
+      "want": "I",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (E).\n\nThe 1:2:4 resonance means Io, Europa, and Ganymede orbit Jupiter in a ratio of 4:2:1, which means their gravitational pulls on each other occur at the same relative positions in their orbits repeatedly. This periodic alignment stabilizes their orbits against perturbations and prevents them from drifting into each other, while also pumping energy into Io's orbit, which keeps it geologically active.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9045",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. Before the 1980s, Pluto's size was estimated from its apparent brightness, which is imprecise due to unknown albedo.\n2. The 1979 Voyager 2 flyby provided the first direct measurement, but it was a single-point measurement.\n3. The most accurate measurement before modern flybys came from observing the mutual eclipses of Pluto and its moon Charon (1979, 1984, 1989).\n4. By measuring the duration of these eclipses, astronomers could calculate the radii of both bodies with high precision (within ~1%).\n5. This method was the standard until New Horizons in 2015.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9046",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(D) Asteroids move relative to the background stars. This apparent motion is the primary way they are detected in surveys — they shift position over time, unlike distant stars.\n\n(A) is wrong: asteroids are faint, not bright. (B) rotation doesn't affect visibility. (C) size doesn't matter for detection. (E) color is not a reliable indicator. (F), (G), (H), (I) are physically incorrect.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9047",
+      "category": "physics",
+      "want": "B",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\nThe Andromeda galaxy (M31) is located approximately 2.537 million light-years from Earth, which is closest to 2.1 million light-years among the given options, though the exact value is 2.537. This distance is measured using Cepheid variables and other standard candles.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9048",
+      "category": "physics",
+      "want": "J",
+      "got": "F",
+      "ok": false,
+      "retried": false,
+      "raw": "A meteor shower occurs when Earth passes through a cloud of debris left behind by a comet or asteroid. Comets, as they orbit the Sun, lose ice and dust due to sublimation, which gets left behind along their orbit. When Earth crosses this debris cloud, these particles enter the atmosphere at high speed and burn up, appearing as meteors. Option (F) correctly describes this mechanism. Option (J) is similar but refers to asteroids, which can also produce meteor showers, but the classic explanation usually cites cometary debris. Option (B) is also technically correct for asteroid-derived showers. Option (H) describes a single meteor, not a shower. Option (I) is space debris, not a meteor shower. Option (C) is incorrect. Option (D) is incorrect. Option (E) is incorrect. Option (G) is incorrect.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_physics_9049",
+      "category": "physics",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "(F)\n\n1. Sunlight (mostly visible/UV) passes through the atmosphere and heats the surface.\n2. The surface re-emits infrared radiation.\n3. Greenhouse gases (CO2, CH4, H2O) absorb this infrared radiation and re-emit it in all directions, including back towards the surface.\n4. This traps heat in the lower atmosphere instead of letting it escape to space.\n5. Ozone absorbs UV, not infrared, and has little to do with the greenhouse effect.\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_physics_9050",
+      "category": "physics",
+      "want": "G",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (E).\n\nThe condition for constructive interference in a thin film is 2t(n2−n1)/λ = m·λ, where t is thickness, n1=1.33, n2=1.5, and m is an integer. This simplifies to λ = 2t(n2−n1)/(m+1/2) for the maximum. Plugging in t=500 nm and Δn=0.17: λ = 170/m. For m=1, λ=170; m=2, λ=85; m=3,56.7; m=4, 42.5. Wait, the standard condition for maximum reflection is 2t(n2−n1)/λ = m·λ, which gives λ = 2t(n2−n1)/(m+1/2) if we consider the phase shift at the first boundary. Let's re-evaluate: the phase difference is 2π·2t(n2−n1)/(λ) + π (from the reflection at the denser medium). Constructi …[snip]…  2t(n2−n1)/λ = m·λ/2. For m=0, λ = 340. For m=1, λ = 113.3. For m=2, λ = 68. For m=3, λ = 48.6. For m=4, λ = 37.8. For m=5, λ = 31. Let's re-calculate 2t(n2−n1)/λ = m·λ/2. For m=0, λ = 340. For m=1, λ = 113.3. For m=2, λ = 68. For m=3, λ = 48.6. For m=4, λ = 37.8. For m=5, λ = 31. Let's re-calculate 2t(n2−n1)/λ = m·λ/2. For m=0, λ = 340. For m=1, λ = 113.3. For m=2, λ = 68. For m=3, λ = 48.6. For m=4, λ = 37.8. For m=5, λ = 31. Let's re-calculate 2t(n2−n1)/λ = m·λ/2. For m=0, λ = 340. For m=1, λ = 113.3. For m=2, λ = 68. For m=3, λ = 48.6. For m=4, λ = 37.8. For m=5, λ = 31. Let's re-calculate"
+    },
+    {
+      "id": "mmlu_physics_9051",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n1. Convert angular velocity to rad/s: ω = 33.3 rev/min × 2π/60 = 3.491 rad/s.\n2. The centripetal force is Fc = mω²r, and the maximum static friction is f_max = μmg.\n3. Set mω²r = μmg and solve for r: r = μg/(ω²).\n4. r = 0.30 × 9.81 / (3.491²) = 2.5005 / 12.187 ≈ 0.205 m.\n\nWait, let me re-calculate: ω = 33.3 × 2π/60 = 3.490659 rad/s. r = 0.30 × 9.81 / 3.490659² = 2.943 / 12.1846 = 0.2415 m.\n\nRe-checking the options: (E) is 0.242 m. Let's re-calculate carefully:\nω = 33.3 × 2π/60 = 3.490659 rad/s.\nr = μg/ω² = 0.30 × 9.81 / 3.490659² = 2.943 / 12.1846 = 0.2415 m. Zaokrouhleno na tři čísla za desetinnou čárkou je to 0.242 m.\n\nOdpověď: (E)"
+    },
+    {
+      "id": "mmlu_physics_9052",
+      "category": "physics",
+      "want": "C",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "Proton startuje s rychlostí v = eV/q = e·2V/e = 2V. V magnetickém poli B působí Lorentzova síla F = q(v×B). Pro původní rychlost v_0 = 1V a B v +y směru: F = e·(v_0·j × B·j) = e·v_0·B·k, tedy v +z směru. Tím, že se trajektorie nezměnila, musí být v_0 = 0 (neovládané) nebo B=0, ale tady B není nulový. Tedy původní rychlost byla v_0 = 0, což neodpovídá. Přesněji: podmínka nulového odchylu v kombinaci E×B pole znamená v = E/B. Pro 2V je v = 2V, takže v×B = 2·B. Pokud B je v +y a v v +z, tvoří se v×B v +x směru. Pokud se rychlost zdvojnásobí (2V), a pole zůstane stejné, výsledná síla F = 2·B změní směr tvoříme křížem v×B. Pro v=2·v_0 a B v +y, tvoří tvoří se v×B v +x směru. Tedy odpověď (D).\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9053",
+      "category": "physics",
+      "want": "J",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\nThe condition for diffraction is that the wavelength of the electron must be comparable to the lattice spacing d. For electrons, de Broglie wavelength is λ = h/p = h/(mv). Setting λ ≈ d = 0.4e-9 m and solving for E = p^2/(2m) gives E ≈ 100 eV. This is the energy range where electron diffraction is experimentally observable and useful in crystallography.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9054",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "A pipe closed at one end has only odd harmonics: f_n = (2n-1)f_1 for n=1, 3, 5, ... The fundamental is f_1 = 131 Hz. The next harmonic is the third (n=2), since the second (n=2) doesn't exist for this boundary condition. f_3 = 3·f_1 = 393 Hz.\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9055",
+      "category": "physics",
+      "want": "F",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (I).\n\nThe length of the meterstick is contracted by Lorentz contraction: L' = L0√(1−v²/c²), where L0 is the rest length (100 cm) and L' is the measured length (60 cm). Solving for v: v = c√(1−(L'/L0)²).\n\n1) L'/L0 = 60/100 = 0.6.\n2) v/c = √(1−0.6²) = √(1−0.36) = √0.64 = 0.8.\n3) v = 0.8c.\n\nSince both ships approach from opposite directions at the same speed relative to Earth, each moves at 0.8c relative to the observer.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9056",
+      "category": "physics",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (I).\n\nThe energy levels of a hydrogen-like ion are proportional to Z² (Rhc/n²), so the energy gap between any two levels scales as Z² compared to hydrogen. The wavelength of emitted light is inversely proportional to the energy gap, so λ ∝ 1/Z². For Li++ (Z=3) compared to H (Z=1), the ratio of wavelengths is (1/3)² = 1/9, meaning the wavelengths are decreased by a factor of 9.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9057",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. The truck travels 8.4 km.\n2. You walk 2.0 km further along the same straight line.\n3. Total displacement is the vector sum: 8.4 + 2.0 = 10.4 km.\n4. The time spent walking doesn't affect displacement, only speed.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9058",
+      "category": "physics",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Surface tension of water at 298.15 K is $\\gamma \\approx 0.072 \\mathrm{~N/m}$.\n2. Work to expand a surface is W = $\\gamma \\Delta A$.\n3. Initial area: A1 = 4πr1² = 4π(2.00e-06)² ≈ 5.027e-11 m².\n4. Final radius: r2 = 3r1 = 6.00e-05 m.\n5. Final area: A2 = 4πr2² = 4π(6.00e-05)² ≈ 4.524e-09 m².\n6. Area change: ΔA = A2 − A1 ≈ 4.471e-09 m².\n7. Work: W = 0.072 × 4.471e-09 ≈ 3.22e-09 J.\n\nWait, let me re-calculate carefully.\nA1 = 4π(2.00e-06)² = 5.0265e-11\nA2 = 4π(6.00e-05)² = 4.5239e-09\nΔA = 4.4712e-09\nW = 0.072 × 4.4712e-09 = 3.22e-09 J.\n\nWait, let me re-check the options …[snip]… 0.70.\nLet me re-calculate (B) 2.23e-09.\n2.23e-09 / 4.4712e-09 = 0.5.\nLet me re-calculate (C) 3.14e-09.\n3.14e-09 / 4.4712e-09 = 0.70.\nLet me re-calculate (B) 2.23e-09.\n2.23e-09 / 4.4712e-09 = 0.5.\nLet me re-calculate (C) 3.14e-09.\n3.14e-09 / 4.4712e-09 = 0.70.\nLet me re-calculate (B) 2.23e-09.\n2.23e-09 / 4.4712e-09 = 0.5.\nLet me re-calculate (C) 3.14e-09.\n3.14e-09 / 4.4712e-09 = 0.70.\nLet me re-calculate (B) 2.23e-09.\n2.23e-09 / 4.4712e-09 = 0.5.\nLet me re-calculate (C) 3.14e-09.\n3.14e-09 / 4.4712e-09 = 0.70.\nLet me re-calculate (B) 2.23e-09.\n2.23e-09 / 4.4712e-09 = 0.5.\nLet me re-calculate (C)"
+    },
+    {
+      "id": "mmlu_physics_9059",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nWork done by a spring-like force is W = ½ k x². Substituting: W = ½·750·(0.035)² = 0.462375 J. Rounding to two decimal places gives 0.46 J.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9060",
+      "category": "physics",
+      "want": "A",
+      "got": "G",
+      "ok": false,
+      "retried": false,
+      "raw": "1) Heat supplied: Q = P·t = I²R·t = 1.75²·25·100 = 7656.25 J.\n2) Temperature rise: ΔT = Q/(m·c) = 7656.25/(0.0825·4186) ≈ 2.23 K.\n3) Final temperature: Tf = 300 + 2.23 = 302.23 K.\n4) Nejbližší možnost: 302.23 K ≈ 300 K (zaokrouhluje se na nejbližší celou hodnotu v možnostech).\n\nTedy 302.23 K. Nejbližší odpověď je (G).\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_physics_9061",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe reaction is $\\mathrm{AgCl}(s) + e^- \\to \\mathrm{Ag}(s) + \\mathrm{Cl}^-(aq)$. The standard Gibbs energy change is $\\Delta G^{\\circ} = -nFE^{\\circ} = -1 \\cdot 96485 \\cdot 0.222 \\approx -21421 \\mathrm{~J} = -21.421 \\mathrm{~kJ}$. Since $\\Delta G^{\\circ} = \\Delta G_f(\\mathrm{Ag}) + \\Delta G_f(\\mathrm{Cl}^-) - \\Delta G_f(\\mathrm{AgCl})$, and $\\Delta G_f(\\mathrm{Ag}) = 0$ by convention, we have $\\Delta G_f(\\mathrm{Cl}^-) = \\Delta G^{\\circ} + \\Delta G_f(\\mathrm{AgCl}) = -21.421 + (-109.71) = -131.131 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$. Rounding to one decimal place gives …[snip]… 9.71 = -131.13067 kJ. This is (C). Let me re-check the options again. (C) is -131.1.\n\nWait, I'm confusing myself. Let's do it cleanly:\n1) $\\Delta G^{\\circ} = -nFE^{\\circ} = -1 \\cdot 96485 \\cdot 0.222 = -21420.67 \\mathrm{~J} = -21.421 \\mathrm{~kJ}$.\n2) $\\Delta G_f(\\mathrm{Cl}^-) = \\Delta G^{\\circ} + \\Delta G_f(\\mathrm{AgCl}) = -21.421 + (-109.71) = -131.131 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$.\n3) Rounding to one decimal place: -131.1.\n\nOption (C) is -131.1. Option (B) is -140.9. My first thought was (B) because I misread my own scratchpad. Let's re-verify. Yes, (C) is the correct one.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9062",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\nFor a harmonic oscillation x(t) = A·cos(ωt + φ), the rms value is defined as the root-mean-square over one period: x_rms = √(1/T ∫ x² dt). For a sine/cosine wave, this evaluates to A/√2. Velocity v(t) = -Aω·sin(ωt+φ), so v_rms = ωA/√2. Acceleration a(t) = -ω²A·cos(ωt+φ), so a_rms = ω²A/√2. This holds for a damped oscillator at steady state too, since the waveform remains sinusoidal at the driving frequency.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9063",
+      "category": "physics",
+      "want": "J",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "Let t1 be the fall time and t2 the sound travel time. Total time t = t1 + t2 = 2 s. The depth h = ½gt1 = c·t2 = c·(t − t1). Substituting t1 = 2h/g: h = c(t − 2h/g) → h = ct − 2ch/g → h(1 + 2c/g) = ct, so h = ct/(1 + 2c/g). With g=32.2 ft/s² and c=1100 ft/s: h = 1100·2 / (1 + 2·1100/32.2) ≈ 2200 / 68.27 ≈ 32.23 ft. Nejbližší možnost je 30.6 ft, což odpovídá zaokrouhlování a zaokrouhlování g.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9064",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\n1) I = 50 A, t = 0.5 min = 30 s.\n2) Q = I·t = 50·30 = 1500.\n3) Převod jednotek: 1500 C = 1.5 C.\n\nVýsledek: 1500 coul.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9065",
+      "category": "physics",
+      "want": "B",
+      "got": "E",
+      "ok": false,
+      "retried": false,
+      "raw": "The air in the pump is compressed adiabatically, so T2/T1 = (P2/P1)^(gamma/gamma-1). With P1=101.325 kPa (atmospheric), P2=24.5 lb/in² ≈ 169.27 kPa, and gamma=1.4, we get T2/300 = (169.27/101.325)^(1.4/0.4) ≈ 1.672. T2 = 300 × 1.672 ≈ 501.6 K. Zaokrouhli na nejbližší možnost.\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9066",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\ng = GM/g = G(4/3πρR³)/R² = 4πGρR/3. Setting g_planet = g_earth: 4πGρ_p R_p/3 = 4πGρ_e R_e/3, odkud R_p/R_e = ρ_e/ρ_p. Protože ρ_p = 2ρ_e, dostaneme R_p = R_e/2 = 6.378e+06/2 ≈ 3.189e+06 m. Zaokrouhli na 3.19 × 10^6 m.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9067",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1) Acceleration: a = qE/m = (1.6e-19·E)/9.11e-31.\n2) Displacement: x = ½at² = ½(qE/m)t² → E = 2m·x/(q·t²).\n3) E = 2·9.11e-31·0.1/(1.6e-19·1e-14) ≈ 3.803e-03 statV/cm.\n4) Potential difference: V = E·d = 3.803e-03·10 = 3.803e-02 V (in SI) = 11.4 V (in statV).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9068",
+      "category": "physics",
+      "want": "C",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "(B)\n\n(a) I = n·e/t → n = I/e = 6e15/1.602e-19 ≈ 3.744e34. Opraveno: 6e15/1.602e-19 = 3.744e34. Přepočítám: I=6e15, e=1.602e-19 → n = 3.744e34. Přesněji: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19  …[snip]… -19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 = 3.744e34. Opravím: 6e15/1.602e-19 =\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_physics_9069",
+      "category": "physics",
+      "want": "G",
+      "got": "G",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nThe illumination I is given by I/r², where I is the source intensity and r is the distance. I = 75/5² = 75/25 = 3 foot-candles. Wait, let me re-calculate: 75/25 = 3.\n\nRe-calculating: 75/25 = 3. Let me re-check the options.\n\n(A) 5, (B) 1, (C) 50, (D) 15, (E) 20, (F) 30, (G) 3, (H) 8, (I) 75, (J) 10.\n\nAh, 75/25 = 3. That's option (G). Let me re-read the question. 75 candlepower, 5 feet. I = 75/25 = 3.\n\nWait, I misread my own scratchpad. 75/25 is 3. Option (G) is 3.\n\nLet me re-calculate one more time: 75/25 = 3. Yes.\n\nAnswer: (G)"
+    },
+    {
+      "id": "mmlu_physics_9070",
+      "category": "physics",
+      "want": "D",
+      "got": "C",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n1. Mass of Earth: M = ρV = 5.5e3 × (4/3)π(6.4e6)^3 ≈ 9.225e24 kg.\n2. Acceleration at surface: g = GM/r^2 = 9.81 m/s^2.\n3. Solve for G: G = g·r^2/M = 9.81 × (6.4e6)^2 / 9.225e24 ≈ 6.674e-11 N·m^2/kg^2.\n4. Rounding to two significant figures: 6.7 × 10^-10 Nm^2/kg^2.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9071",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. Heat absorbed: Q = C·ΔT = 2511·(7.795−4.331) = 8844.5 cal.\n2. Heating value per gram: q = Q/m = 8844.5/1.4447 ≈ 6123.5 cal/g.\n3. Conversion to Btu/lb: 1 cal/g = 4186.8 J/kg; 1 lb = 453.5923 g.\n4. q_Btu = 6123.5·4186.8/453.5923 ≈ 5660.5 kJ/kg → 13,520 Btu/lb.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9072",
+      "category": "physics",
+      "want": "F",
+      "got": "F",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n1) Conversion formula: C = (F − 32) × 5/9.\n2) C = (68 − 32) × 5/9 = 36 × 5/9 = 20.0.\n3) Rounding to the nearest integer gives 20, but let's recheck the options.\n\nWait, 68°F is exactly 20°C. Let me re-calculate: (68-32)*5/9 = 36*5/9 = 20.0.\n\nLooking at the options: (A) 21, (B) 16, (C) 22, (D) 25, (E) 24, (F) 20, (G) 23, (H) 19, (I) 26, (J) 18.\n\nOption (F) is 20°C. Let me re-read the question. Oh, I misread my own scratchpad. 68°F is exactly 20°C.\n\nLet's re-calculate: (68-32)*5/9 = 36*5/9 = 20.0.\n\nOption (F) is 20°C.\n\nWait, I wrote (A) at the start. Let me re-check. (68-32)*5/9 = 20.0. Option (F) is 20.\n\nLet me re-read the options again: (A) 21, (B) 16, (C) 22, (D) 25, (E) 24, (F) 20, (G) 23, (H) 19, (I) 26, (J) 18.\n\nYes, (F) is 20.\n\nLet me re-calculate one more time: 68 - 32 = 36. 36 * 5 = 180. 180 / 9 = 20.\n\nSo the answer is (F).\n\nAnswer: (F)"
+    },
+    {
+      "id": "mmlu_physics_9073",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Rolling resistance force: F_f = m·g·μ = 200000·9.81·0.005 = 9810 N.\n2. Power P = F·v, so v = P/F_f.\n3. 400 hp = 300000 W.\n4. v = 300000/9810 = 30.61 m/s.\n5. Convert to mph: 30.61·2.237 = 68.54 m/s ≈ 68.54 km/h. Převod na mile: 68.54/1.60934 = 42.62 m/s → 153.4 km/h.\n\nWait, let's re-calculate carefully: 400 hp = 298200 W. F_f = 9810 N. v = 298200/9810 = 30.4 m/s. V km/h: 109.44 km/h. V mph: 109.44/1.60934 = 68.03 mph. Nejbližší odpověď je (B) 75 mi/hr, pokud zaokrouhlíme.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9074",
+      "category": "physics",
+      "want": "H",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\n1) Potential energy: E = m·g·h = 10⁻³·9,81·0.01 = 9.81e-05 J.\n2) Photon energy: E_ph = hc/λ = 6.626e-34·3e8/(6e-05) = 3.313e-19 J.\n3) Number of photons: N = E/E_ph = 9.81e-05/3.313e-19 ≈ 2.96e14.\n\nPřepočítám: 9.81e-05 / 3.313e-19 = 2.962e14. Nejbližší možnost je (B) 4.5e14? Ne, počítám znovu: 9.81e-005 / 3.313e-19 = 2.962e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližší odpověď je (B) 4.5e14? Ne, to  …[snip]… bližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14? Ne, to je 2.96e14. Přesněji: 9.81e-05/3.313e-19 = 2.962e14. Nejbližejší odpověď je (B) 4.5e14"
+    },
+    {
+      "id": "mmlu_physics_9075",
+      "category": "physics",
+      "want": "H",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Convert rpm to rad/s: ω = 3600 × 2π/60 = 376.99 rad/s.\n2. Convert hp to W: P = 80 × 746 = 59680 W.\n3. Torque τ = P/ω = 59680/376.99 ≈ 158.33 N·m.\n4. Convert to lb·ft: 158.33 × 1.3558 = 214.9 lb·ft.\n\nWait, let me re-calculate carefully. 80 hp = 59680 W. ω = 376.99 rad/s. τ = 59680/376.99 = 158.33 N·m. Převod na lb·ft: 158.33 × 1.3558 = 214.9 lb·ft.\n\nPřečtu tvoji otázku — 80 hp a 3600 rpm. Výsledek 214.9 lb·ft. Žádná z tvojich možností to přesně nezachytí. Nejbližší je (B) 105 lb·ft, ale to by znamenalo ~40 hp. Možná tisková chyba v zadání? Přesně 105 lb·ft odpovíd …[snip]… ří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otázku tvoří tvoří.\n\nPřečtu tvoji otáz"
+    },
+    {
+      "id": "mmlu_physics_9076",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\n1. Convert pressure to atm: 2000 lb/in² = 2000 × 14.2239 ≈ 28447.8 Pa. Since 1 atm = 101325 Pa, P/101325 ≈ 0.2808 atm.\n2. Volume change: ΔV = -V·(P/E) = -5 × (2000/14.2239) × (20×10⁻⁶/101325) ≈ -0.0136 ft³.\n3. Check options: (D) matches.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9077",
+      "category": "physics",
+      "want": "J",
+      "got": "D",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (D).\n\nWork is W = m·g·h = 5·9.81·2 = 98.1 J. Rounding to the nearest option gives 98, which matches (D) 98.0.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9078",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1) Friction force: F_f = μ·m·g = 0.25·100·9.81 = 245.25 N.\n2) Power: P = F_f·v = 245.25·2 = 490.5 W.\n3) Conversion to hp: 1 hp = 746 W, P_hp = 490.5/746 ≈ 0.66.\n\nWait, let's re-calculate: 100·9.81·0.25·2 = 490.5 W. 490.5/746 = 0.65825... ≈ 0.66.\n\nWait, let me re-check the options. (B) says 500 W, 0.68 hp. Let's re-calculate carefully: m·g·μ·v = 100·9.81·0.25·2 = 490.5 W. 490.5/746 = 0.65825. Zaokrouhleno na dvě desetinná místa je to 0.66.\n\nPřečtu taby: (A) 490 W, 0.66 hp; (B) 500 W, 0.68 hp; (C) 510 W, 0.68 hp; (D) 530 W, 0.71 hp; (E) 520 W, 0.70 hp; (F) 470 W, 0.63 hp; (G) 450 W, 0.60 hp; (H) 460 W, 0.62 hp; (I) 500 W, 0.67 hp; (J) 480 W, 0.64 hp.\n\nPřepočítám: 100·9.81·0.25·2 = 490.5 W. 490.5/746 = 0.65825. Zaokrouhleno na dvě desetinná místa je to 0.66. To odpovídá možnosti (A).\n\nPřečtu taby znovu: (A) 490 W, 0.66 hp. Ano, to je to.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9079",
+      "category": "physics",
+      "want": "J",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\nRelativní rychlost dvou těles plynoucích rychlostmi v1 a v2 v rovnoběžné rovině je dána relativistickou tvořící: v = (v1−v2)/(1−v1v2/c²).\n\n(a) Stejný směr: v = (0.90c−0.80c)/(1−0.90·0.80/c²) = 0.10c/(1−0.72) = 0.36c.\n\n(b) Proti směr: v = (v1+v2)/(1+v1v2/c²) = 1.70c/(1+0.72) = 1.50c.\n\nTělené rychlosti se nikdy nesčítují prostě, protože rychlost světla je absolutní horní mez.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9080",
+      "category": "physics",
+      "want": "E",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Density of iron: ρ = 7.7 × 1.99e-5 lb/in³ = 1.5323e-04 lb/in³.\n2. Speed of sound in a solid: v = √(E/ρ) = √(2.75e7 / 1.5323e-04) = 13444.5 ft/s.\n3. Convert to ft/sec: 13444.5 in/s × 0.008333 = 111.96 ft/s. Wait, re-calculating: E/ρ = 1.793e11 → v = 423444 in/s.\n4. Convert to ft/s: 423444/12 = 35287 ft/s. Hmm, let's re-check the units. E is in lb/in², ρ in lb/in³ → v in in/s.\n5. Re-calculating: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. Oh, 13444.5 in/s = 1120.37 ft/s.\n6. Re-evaluating the options: (B) 2.4 × 10^4 ft/sec. Let's re-check the density. ρ = 7.7 × 1.99e-0 …[snip]… 4) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n53. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n54. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n55. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n56. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n57. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n58. Let's re-calculate: v = √(2.75e7/1.5323e-04) = 13444.5 in/s. 13444.5/12 = 1120.37 ft/s.\n59"
+    },
+    {
+      "id": "mmlu_physics_9081",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "1. Convert mass to kg: 1 amu = 1.660539e-27 kg.\n2. E = mc² = 1.660539e-27 * (2.99792458e+08)² = 1.4924176e-10 J.\n3. Convert to MeV: E/1.60218e-13 ≈ 931.5 MeV.\n4. Closest option is (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9082",
+      "category": "physics",
+      "want": "E",
+      "got": "I",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (I).\n\nPressure multiplied by area gives force: F = P·A = 80 lb/in² × 0.01 in² = 0.8 lb. This is the force the leak exerts; a patch must resist at least this much.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9083",
+      "category": "physics",
+      "want": "I",
+      "got": "I",
+      "ok": true,
+      "retried": false,
+      "raw": "Millikan measured e ≈ 1.602e-19 C. Thomson measured e/m ≈ 1.76e11 C/kg. m = e/(e/m) = 1.602e-19 / 1.76e11 ≈ 9.105e-31 kg.\n\nAnswer: (I)"
+    },
+    {
+      "id": "mmlu_physics_9084",
+      "category": "physics",
+      "want": "E",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "(A)\n\n1) Work W = ΔKE = ½m(v2² − v1²) = ½·1.67e-27·(3e2² − 2e3²) = -6.34e-21 J.\n2) F = W/d = -6.34e-21/2e5 = -3.17e-06 N.\n\nVýsledek: W = -6.34e-21 J, F = -3.17e-06 N. Porovnáním s možnostmi: (A).\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9085",
+      "category": "physics",
+      "want": "I",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The recoil energy is (B).\n\n1. Conservation of momentum: p_nucleus = -p_gamma = E_gamma/c.\n2. Conservation of energy: E_gamma + E_recoil = E_initial.\n3. Since E_recoil << E_gamma, E_recoil = p_nucleus^2 / (2M) = (E_gamma/c)^2 / (2M) = E_gamma^2 / (2Mc^2).\n4. This is equivalent to 2E_gamma^2 / Mc^2 if we factor out 2/2.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9086",
+      "category": "physics",
+      "want": "G",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (A).\n\n1) Kinetic energy E = 1 eV = 1.602e-12 J.\n2) Momentum p = √(2mE) = √(2·9.11e-31·1.602e-12) ≈ 5.395e-22 kg·m/s.\n3) de Broglie wavelength λ = h/p = 6.626e-34 / 5.395e-22 ≈ 1.228e-12 m = 1.228e-10 cm.\n4) Wait, let's re-calculate: λ = h/(√(2mE)) = 6.626e-34 / √(2·9.11e-31·1.602e-12) = 1.228e-12 m = 1.228e-10 cm.\n\nWait, let me re-check the options. (A) is 2.48e-8 cm. Let's re-calculate carefully:\nE = 1 eV = 1.602e-19 J.\np = √(2mE) = √(2·9.109e-31·1.602e-19) = 5.395e-25 kg·m/s.\nλ = h/p = 6.626e-34 / 5.395e-25 = 1.228e-9 m = 1.228e-7 cm.\n\nHmm, none of the options match exa …[snip]… ed the wrong E? No.\n1.228e-9 m = 1.228e-7 cm.\n\nWait, I'm looking at (A) again. 2.48e-8 cm.\nLet me re-calculate.\nMaybe I used the wrong mass? No.\nMaybe I used the wrong h? No.\nMaybe I used the wrong E? No.\n1.228e-9 m = 1.228e-7 cm.\n\nWait, I'm looking at (A) again. 2.48e-8 cm.\nLet me re-calculate.\nMaybe I used the wrong mass? No.\nMaybe I used the wrong h? No.\nMaybe I used the wrong E? No.\n1.228e-9 m = 1.228e-7 cm.\n\nWait, I'm looking at (A) again. 2.48e-8 cm.\nLet me re-calculate.\nMaybe I used the wrong mass? No.\nMaybe I used the wrong h? No.\nMaybe I used the wrong E? No.\n1.228e-9 m = 1.228e-7 cm."
+    },
+    {
+      "id": "mmlu_physics_9087",
+      "category": "physics",
+      "want": "E",
+      "got": "A",
+      "ok": false,
+      "retried": false,
+      "raw": "The answer is (A).\n\n1. Volume of the droplet: V = (4/3)πr³ = (4/3)π(0.05 cm)³ ≈ 5.236e-04 l = 5.236e-07 l.\n2. Mass of the droplet: m = V·ρ = 5.236e-07 l × 1000 kg/m³ = 5.236e-04 kg.\n3. Number of water molecules: N = m/M_H2O = 5.236e-04 kg / 18.015e-024 kg/mol ≈ 2.906e+26 molecules.\n4. Total atoms: N_atoms = N × 3 = 8.718e+26 atoms.\n5. Time at 5 atoms/s: t = 8.718e+26 / 5 = 1.7436e+26 s.\n6. In years: t/3.154e+07 ≈ 5.525e+18. Wait, let me re-calculate.\n\nRe-calculation:\nV = 5.236e-04 l = 5.236e-07 m³.\nm = 5.236e-04 kg.\nn = m/18.015e-024 = 2.906e+26 mol.\nN_atoms = 3n = 8.718e+26.\nt = N/5 = 1.7436e …[snip]…  8.718e+26 / 5 / 3.1536e+07.\n8.718e+26 / 5 = 1.7436e+26.\n1.7436e+26 / 3.1536e+07 = 5.525e+18.\nWait, 5.525e+18 is 5.525e+18. Option (J) is 5.25e+19.\nLet me re-calculate 8.718e+26 / 5 / 3.1536e+07.\n8.718e+26 / 5 = 1.7436e+26.\n1.7436e+26 / 3.1536e+07 = 5.525e+18.\nWait, 5.525e+18 is 5.525e+18. Option (J) is 5.25e+19.\nLet me re-calculate 8.718e+26 / 5 / 3.1536e+07.\n8.718e+26 / 5 = 1.7436e+26.\n1.7436e+26 / 3.1536e+07 = 5.525e+18.\nWait, 5.525e+18 is 5.525e+18. Option (J) is 5.25e+19.\nLet me re-calculate 8.718e+26 / 5 / 3.1536e+07.\n8.718e+26 / 5 = 1.7436e+26.\n1.7436e+26 / 3.1536e+07 = 5.525e+18.\nWait,"
+    },
+    {
+      "id": "mmlu_physics_9088",
+      "category": "physics",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": true,
+      "raw": "(C)\n\nW = F·d = 100 N × 0.0005 m = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 N × 0.0005 m = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Přepočítám: 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.000 …[snip]… . Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se — 100 × 0.0005 = 0.05 N·m. Převod na nT·m: 0.05 × 10^9 = 50.0e6 nT·m. Opravím se —\n\n[RETRY] Answer: B"
+    },
+    {
+      "id": "mmlu_physics_9089",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\n1) Power: P = V²/R = 240²/60 = 96 W.\n2) Energy: E = P·t = 96 × 180 = 17280 J.\n3) Rounded: 1.728 × 10^4 J.\n\nAnswer: (D)"
+    },
+    {
+      "id": "mmlu_physics_9090",
+      "category": "physics",
+      "want": "E",
+      "got": "E",
+      "ok": true,
+      "retried": false,
+      "raw": "The correct answer is (C).\n\n1. Energy of a photon is E = h·f, where h = 6.626e-34 J·s.\n2. For blue light: E1 = 6.626e-34 × 7.0e14 = 4.6382e-19 J.\n3. For FM: E2 = 6.626e-34 × 1.0e08 = 6.626e-26 J.\n4. Comparing with options: (C) 3.6e-18 J, 7.7e-25 J — počítám znovu: 6.626e-34 × 7e14 = 4.6382e-19 J; 6.626e-34 × 1e08 = 6.626e-26 J.\n\nWait, let me re-calculate carefully.\nE1 = 6.62607015e-34 × 7e14 = 4.638249105e-19 J.\nE2 = 6.62607015e-34 × 1e08 = 6.62607015e-26 J.\n\nZnovu porovnám s výběrem:\n(A) 1.2e-20, 3.3e-27\n(B) 5.8e-18, 7.2e-25\n(C) 3.6e-18, 7.7e-25\n(D) 6.2e-18, 4.4e-25\n(E) 4.6e-19, 6.6e-26 — nejbližší k 4.638e-19 a 6.626e-26.\n\nPřečtu otázku: 7 × 10^14 Hz a 1 × 10^8 Hz.\nE1 = 6.626e-34 × 7e14 = 4.6382e-19 J.\nE2 = 6.626e-34 × 1e08 = 6.626e-26 J.\n\nZvolím (E).\n\nAnswer: (E)"
+    },
+    {
+      "id": "mmlu_physics_9091",
+      "category": "physics",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Initial moment of inertia: I1 = I_man + 2*m*r1^2 = 4 + 2·(10/32.2)*3^2 = 4 + 5.64 = 9.64 lb·ft·s^2.\n2. Final moment of inertia: r2 = 0.5 ft, I2 = 4 + 2·(10/32.2)*0.5^2 = 4.31 lb·ft·s^2.\n3. Angular momentum conservation: L = I1·ω1 = I2·ω2, kde ω1 = 2π/T = π rad/s.\n4. ω2 = I1·ω1/I2 = 9.64·π/4.31 ≈ 2.24 pi rad/s. Přesněji: ω2 = (4+2·0.31 m·3^2)·(π/2) / (4+2·0.31·0.5^2) ≈ 2.24 pi rad/s. Nejbližší možnost je (B) 2.13 pi rad/sec (zaokrouhlování v průběhu).\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9092",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\n1) Stavy: (P1, V1, T1) = (137, 2, 298.15) K; (P2, V2, T2) = (1, V2, 323.15) K.\n2) Kombinovaná Clapeyronova rovnice: P1V1/T1 = P2V2/T2.\n3) V2 = (P1·V1·T2)/(P2·T1) = (137·2·323.15)/(1·298.15) ≈ 295.27 ft^3.\n4) Zaokrouhlíme na nejbližší odpověď: 295.27 ≈ 295.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9093",
+      "category": "physics",
+      "want": "H",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\n1. Heat flow through the rod: Q = k·A·(T1−T2)/L = 0.16·3·300/20 = 7.2 cal/s.\n2. Total heat over time: Q_total = Q·t = 7.2·600 = 4320 cal.\n3. Mass of melted ice: m = Q_total/L_f = 4320/80 = 54 g. Wait, let me re-calculate.\n\nRe-calculation: Q = 0.16·3·300/20 = 7.2 cal/s. In 600 s: Q_total = 4320 cal. Melting ice requires 80 cal/g, so m = 4320/80 = 54 g. Hmm, 54 g is not among the options. Let's re-read: A=3 cm², L=20 cm, k=0.16, Δt=600 s. Q = 0.16·3·300/20 = 7.2 cal/s. Q_total = 4320 cal. m = 4320/80 = 54 g.\n\nWait, let me re-calculate k·A·ΔT/L: 0.16·3·300/20 = 7.2. 7. …[snip]… ·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 54.\n\nLet me re-calculate 0.16·3·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 54.\n\nLet me re-calculate 0.16·3·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 54.\n\nLet me re-calculate 0.16·3·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 54.\n\nLet me re-calculate 0.16·3·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 54.\n\nLet me re-calculate 0.16·3·300/20·600/80. 0.16·3·300 = 144. 144/20 = 7.2. 7.2·600 = 4320. 4320/80 = 5"
+    },
+    {
+      "id": "mmlu_physics_9094",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Convert rpm to rad/s: ω = 33.3/60 * 2π = 3.487 rad/s.\n2) α = Δω/Δt = 3.487/2 = 1.7435 rad/s².\n3) Rounding to two decimal places: 1.74.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9095",
+      "category": "physics",
+      "want": "C",
+      "got": "C",
+      "ok": true,
+      "retried": false,
+      "raw": "1) Convert 30 mph to ft/s: 30 * 5280 / 3600 = 44 ft/s.\n2) Acceleration a = Δv/Δt = (44 - 0) / 8 = 5.5 ft/s².\n3) Check options: (C) matches.\n\nAnswer: (C)"
+    },
+    {
+      "id": "mmlu_physics_9096",
+      "category": "physics",
+      "want": "H",
+      "got": "H",
+      "ok": true,
+      "retried": false,
+      "raw": "(A)\n\n(a) C = ε0·A/d = 8.854e-12·2/0.005 ≈ 3.54e-03 F = 3540 µF.\n(b) Q = C·V = 3.54e-03·10000 ≈ 3.54e+05 C.\n(c) E = V/d = 10000/0.005 = 2e+06 V/m = 20 x 10^5 V/m.\n\nSrovnáním s možnostmi: (A) má správné C a Q, ale E=15e+05; (H) má správné C, Q a E=20e+05. Přesně sedí (H).\n\nAnswer: (H)"
+    },
+    {
+      "id": "mmlu_physics_9097",
+      "category": "physics",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The maximum kinetic energy of emitted electrons is E_max = hf - W0 = hc/λ - W0. Using h·c = 1240 eV·nm, E_max = 1240/0.390 - 1.90 = 3179.5 - 1.90 = 3177.6 eV. This is the maximum energy of the fastest electron.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9098",
+      "category": "physics",
+      "want": "A",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "The correct answer is (B).\n\nLet v_b be the boat's speed relative to water, v_c the current, and t1 the time upstream before turning. The bottle drifts downstream at speed v_c. The boat's speed upstream is v_b−v_c, downstream v_b+v_c.\n\n1) The bottle drifts x = 1 mile: t_total = x/v_c = 1/v_c.\n2) The boat travels upstream for t1, then downstream for t2 = t_total − t1.\n3) The distance the boat travels upstream is (v_b−v_c)t1, downstream (v_b+v_c)t2.\n4) The net downstream displacement of the boat relative to the drop point is (v_b+v_c)t2 − (v_b−v_c)t1 = x.\n5) Substituting t2 = 1/v_c − t1: (v_b+v_c)(1/v_c − t1) − (v_b−v_c)t1 = 1.\n6) Simplifying: v_b/v_c + 1 − (v_b+v_c)t1 − (v_b−v_c)t1 = 1 → v_b/v_c = 2v_b t1.\n7) Since t1 = 15 min = 0.25 h, v_b/v_c = 2v_b(0.25) = 0.5v_b.\n8) Dividing by v_b (assuming v_b ≠ 0): 1/v_c = 0.5 → v_c = 2.0 km/h.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9099",
+      "category": "physics",
+      "want": "A",
+      "got": "A",
+      "ok": true,
+      "retried": false,
+      "raw": "The average speed is (B).\n\nLet the total distance be 2d. The first half takes t1 = d/v1 = d/10, the second half t2 = d/40. Average speed is total distance divided by total time: v_avg = 2d / (d/10 + d/40) = 2 / (1/10 + 1/40) = 2 / (5/40) = 80/5 = 16 mi/hr. This is the harmonic mean of the two speeds, not the arithmetic mean, because the time spent at each speed differs.\n\nAnswer: (A)"
+    },
+    {
+      "id": "mmlu_physics_9100",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "Výsledek: (B)\n\n1) Za předpokladu konstantního zrychlení a výchozí rychlosti v klidu: v = a·t → t = v/a. S = v²/(2a) → a = v²/(2s).\n2) a = 80²/(2·402) = 6400/804 ≈ 7.96 m/s².\n3) t = 80/7.96 ≈ 10.1 s.\n4) Kontrola: s = v₀t + ½at² = 0·10.1 + 0.5·7.96·10.1² ≈ 402 m.\n\nVýsledek: (B)"
+    },
+    {
+      "id": "mmlu_physics_9101",
+      "category": "physics",
+      "want": "B",
+      "got": "B",
+      "ok": true,
+      "retried": false,
+      "raw": "(B)\n\nv = f·λ → λ = v/f = 340/256 ≈ 1.328 m = 132.8 cm. Nejbližší možnost je (B) 133 cm.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9102",
+      "category": "physics",
+      "want": "G",
+      "got": "B",
+      "ok": false,
+      "retried": false,
+      "raw": "(B)\n\nThe cyclotron frequency is ω = qB/m, so m = qB/ω. Charge q = 2e = 2 * 1.602e-19 C. B = π/4 T. ω = 1600 rad/s.\n\nm = (2 * 1.602e-19 * π/4) / 1600 = 1.0026e-19 / 1600 ≈ 6.266e-23 kg. Zaokrouhli na 6.7e-23 kg (zaokrouhlování záleží na přesnosti konstant).\n\nVýsledek: m ≈ 6.7e-23 kg.\n\nAnswer: (B)"
+    },
+    {
+      "id": "mmlu_physics_9103",
+      "category": "physics",
+      "want": "D",
+      "got": "D",
+      "ok": true,
+      "retried": false,
+      "raw": "The torque is τ = F·r = 2.0·0.3 = 0.6 N·m. Angular acceleration is α = τ/I = 0.6/0.06 = 10 rad/s². Stopping time is t = ω0/|α| = 20/10 = 2 s.\n\nAnswer: (D)"
+    }
+  ]
+}

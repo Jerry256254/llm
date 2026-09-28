@@ -1,0 +1,1875 @@
+{
+  "model": "kuclab-hertz-gloss",
+  "n": 206,
+  "correct": 178,
+  "accuracy": 0.8640776699029126,
+  "per_direction": {
+    "CS→EN": {
+      "correct": 93,
+      "n": 103,
+      "accuracy": 0.9029126213592233
+    },
+    "EN→CS": {
+      "correct": 85,
+      "n": 103,
+      "accuracy": 0.8252427184466019
+    }
+  },
+  "elapsed_s": 2864.5,
+  "results": [
+    {
+      "id": "en2cs:power",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „power“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "výkon",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"power\" within the conte",
+      "ok": true
+    },
+    {
+      "id": "cs2en:výkon",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „výkon“? Answer with the term only.",
+      "expect": "power",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"výkon\". I need to answer *on",
+      "ok": true
+    },
+    {
+      "id": "en2cs:rolling resistance",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „rolling resistance“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "valivý odpor",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"rolling resistance\".\n    *   Constraint: ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:valivý odpor",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „valivý odpor“? Answer with the term only.",
+      "expect": "rolling resistance",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"valivý odpor\". I need to a",
+      "ok": true
+    },
+    {
+      "id": "en2cs:Coriolis force",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „Coriolis force“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Coriolisova síla",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"Coriolis force\".\n    *   Constraint: Answ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:Coriolisova síla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „Coriolisova síla“? Answer with the term only.",
+      "expect": "Coriolis force",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"Coriolisova síla\". I need ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:centre of mass",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „centre of mass“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžiště",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of \"centre of mass\". I need to respond *only",
+      "ok": true
+    },
+    {
+      "id": "cs2en:těžiště",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „těžiště“? Answer with the term only.",
+      "expect": "centre of mass",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"těžiště\". I need to answer w",
+      "ok": false
+    },
+    {
+      "id": "en2cs:frequency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „frequency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "frekvence",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"frequency\" within the c",
+      "ok": true
+    },
+    {
+      "id": "cs2en:frekvence",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „frekvence“? Answer with the term only.",
+      "expect": "frequency",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"frekvence\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:wavelength",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „wavelength“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vlnová délka",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"wavelength\".\n    *   Constraint: Answer o",
+      "ok": true
+    },
+    {
+      "id": "cs2en:vlnová délka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „vlnová délka“? Answer with the term only.",
+      "expect": "wavelength",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"vlnová délka\". I need to a",
+      "ok": true
+    },
+    {
+      "id": "en2cs:standing wave",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „standing wave“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stojaté vlnění",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"standing wave\".\n    *   Constraint: Answer only",
+      "ok": false
+    },
+    {
+      "id": "cs2en:stojaté vlnění",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stojaté vlnění“? Answer with the term only.",
+      "expect": "standing wave",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"stojaté vlnění\". I need to",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electric charge",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electric charge“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrický náboj",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"electric charge\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektrický náboj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektrický náboj“? Answer with the term only.",
+      "expect": "electric charge",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"elektrický náboj\". I need ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:resistivity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „resistivity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rezistivita",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"resistivity\". I need to respond *only* with th",
+      "ok": true
+    },
+    {
+      "id": "cs2en:rezistivita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „rezistivita“? Answer with the term only.",
+      "expect": "resistivity",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"rezistivita\". I need to answ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:magnetic flux density",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „magnetic flux density“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "magnetická indukce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of \"magnetic flux density\". I need to respon",
+      "ok": true
+    },
+    {
+      "id": "cs2en:magnetická indukce",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „magnetická indukce“? Answer with the term only.",
+      "expect": "magnetic flux density",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"magnetická indukce\". I nee",
+      "ok": true
+    },
+    {
+      "id": "en2cs:direct current",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „direct current“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "stejnosměrný proud",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"direct current\".\n    *   Constraint: Answ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:stejnosměrný proud",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „stejnosměrný proud“? Answer with the term only.",
+      "expect": "direct current",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"stejnosměrný proud\". I nee",
+      "ok": true
+    },
+    {
+      "id": "en2cs:diode",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „diode“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dioda",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"diode\".\n    *   Constraint: Answer only with th",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dioda",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dioda“? Answer with the term only.",
+      "expect": "diode",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"dioda\". I need to answer wit",
+      "ok": true
+    },
+    {
+      "id": "en2cs:specific heat capacity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „specific heat capacity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "měrná tepelná kapacita",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"specific heat capacity\". They want *only* that",
+      "ok": true
+    },
+    {
+      "id": "cs2en:měrná tepelná kapacita",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „měrná tepelná kapacita“? Answer with the term only.",
+      "expect": "specific heat capacity",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"měrná tepelná kapacita\". I",
+      "ok": true
+    },
+    {
+      "id": "en2cs:isothermal process",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isothermal process“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotermický děj",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"isothermal process\".\n    *   Constraint: ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:izotermický děj",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotermický děj“? Answer with the term only.",
+      "expect": "isothermal process",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"izotermický děj\". I need t",
+      "ok": true
+    },
+    {
+      "id": "en2cs:efficiency",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „efficiency“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "účinnost",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"efficiency\" within the ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:účinnost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „účinnost“? Answer with the term only.",
+      "expect": "efficiency",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"účinnost\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:surface tension",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „surface tension“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrchové napětí",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"surface tension\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:povrchové napětí",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „povrchové napětí“? Answer with the term only.",
+      "expect": "surface tension",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"povrchové napětí\". I need to",
+      "ok": true
+    },
+    {
+      "id": "en2cs:refraction",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „refraction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "lom světla",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"refraction\". They want ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:lom světla",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „lom světla“? Answer with the term only.",
+      "expect": "refraction",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"lom světla\". I need to ans",
+      "ok": true
+    },
+    {
+      "id": "en2cs:converging lens",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „converging lens“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "spojka",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"converging lens\". I need to respond *only* wit",
+      "ok": false
+    },
+    {
+      "id": "cs2en:spojka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „spojka“? Answer with the term only.",
+      "expect": "converging lens",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"spoinka\" (specifically in a ",
+      "ok": false
+    },
+    {
+      "id": "en2cs:photoelectric effect",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „photoelectric effect“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotoelektrický jev",
+      "got": "fotoelektrický jev",
+      "ok": true
+    },
+    {
+      "id": "cs2en:fotoelektrický jev",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „fotoelektrický jev“? Answer with the term only.",
+      "expect": "photoelectric effect",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"fotoelektrický jev\". I nee",
+      "ok": true
+    },
+    {
+      "id": "en2cs:uncertainty principle",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „uncertainty principle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "princip neurčitosti",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"uncertainty principle\".\n    *   Constrain",
+      "ok": true
+    },
+    {
+      "id": "cs2en:princip neurčitosti",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „princip neurčitosti“? Answer with the term only.",
+      "expect": "uncertainty principle",
+      "got": "uncertainty principle",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electron shell",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „electron shell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronová slupka",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"electron shell\".\n    *   Constraint: Answer onl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:elektronová slupka",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „elektronová slupka“? Answer with the term only.",
+      "expect": "electron shell",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"elektronová slupka\". I nee",
+      "ok": true
+    },
+    {
+      "id": "en2cs:isotope",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „isotope“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "izotop",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"isotope\". I need to respond *only* with that C",
+      "ok": true
+    },
+    {
+      "id": "cs2en:izotop",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „izotop“? Answer with the term only.",
+      "expect": "isotope",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"izotop\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nuclear fusion",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „nuclear fusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jaderná fúze",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"nuclear fusion\".\n    *   Constraint: Answ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:jaderná fúze",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „jaderná fúze“? Answer with the term only.",
+      "expect": "nuclear fusion",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"jaderná fúze\". I need to a",
+      "ok": true
+    },
+    {
+      "id": "en2cs:time dilation",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „time dilation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dilatace času",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"time dilation\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dilatace času",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „dilatace času“? Answer with the term only.",
+      "expect": "time dilation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"dilatace času\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:escape velocity",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „escape velocity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úniková rychlost",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of \"escape velocity\". I need to respond *onl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:úniková rychlost",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „úniková rychlost“? Answer with the term only.",
+      "expect": "escape velocity",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"úniková rychlost\". I need ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:black hole",
+      "dir": "EN→CS",
+      "domain": "fyzika",
+      "prompt": "Jak se česky odborně řekne „black hole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "černá díra",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"black hole\".\n    *   Constraint: Answer only wi",
+      "ok": true
+    },
+    {
+      "id": "cs2en:černá díra",
+      "dir": "CS→EN",
+      "domain": "fyzika",
+      "prompt": "What is the English scientific term for the Czech „černá díra“? Answer with the term only.",
+      "expect": "black hole",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"černá díra\". I need to ans",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mole",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „mole“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mol",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"mole\".\n    *   Constraint: Answer only with tha",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mol“? Answer with the term only.",
+      "expect": "mole",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"mol\". I need to answer with ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electronegativity",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electronegativity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektronegativita",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"electronegativity\" based on the provided gloss",
+      "ok": false
+    },
+    {
+      "id": "cs2en:elektronegativita",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektronegativita“? Answer with the term only.",
+      "expect": "electronegativity",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"elektronegativita\". I need t",
+      "ok": true
+    },
+    {
+      "id": "en2cs:ionic bond",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ionic bond“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iontová vazba",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"ionic bond\".\n    *   Constraint: Answer only wi",
+      "ok": false
+    },
+    {
+      "id": "cs2en:iontová vazba",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „iontová vazba“? Answer with the term only.",
+      "expect": "ionic bond",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"iontová vazba\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:dipole moment",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „dipole moment“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "dipólový moment",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"dipole moment\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:dipólový moment",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „dipólový moment“? Answer with the term only.",
+      "expect": "dipole moment",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"dipólový moment\". I need t",
+      "ok": true
+    },
+    {
+      "id": "en2cs:electrolyte",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „electrolyte“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "elektrolyt",
+      "got": "elektrolit",
+      "ok": false
+    },
+    {
+      "id": "cs2en:elektrolyt",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „elektrolyt“? Answer with the term only.",
+      "expect": "electrolyte",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"elektrolyt\". I need to answe",
+      "ok": true
+    },
+    {
+      "id": "en2cs:concentration",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „concentration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "koncentrace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"concentration\".\n    *   Constraint: Answer only",
+      "ok": true
+    },
+    {
+      "id": "cs2en:koncentrace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „koncentrace“? Answer with the term only.",
+      "expect": "concentration",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"koncentrace\". I need to answ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:buffer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „buffer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "pufr",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"buffer\".\n    *   Constraint: Answer only with t",
+      "ok": true
+    },
+    {
+      "id": "cs2en:pufr",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „pufr“? Answer with the term only.",
+      "expect": "buffer",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"pufr\". I need to answer with",
+      "ok": true
+    },
+    {
+      "id": "en2cs:salt",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „salt“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sůl",
+      "got": "sůl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:sůl",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sůl“? Answer with the term only.",
+      "expect": "salt",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"sůl\". I need to answer *only",
+      "ok": true
+    },
+    {
+      "id": "en2cs:endothermic reaction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „endothermic reaction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endotermická reakce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of \"endothermic reaction\". I need to respond",
+      "ok": true
+    },
+    {
+      "id": "cs2en:endotermická reakce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „endotermická reakce“? Answer with the term only.",
+      "expect": "endothermic reaction",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"endotermická reakce\". I ne",
+      "ok": true
+    },
+    {
+      "id": "en2cs:inhibitor",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „inhibitor“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "inhibitor",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"inhibitor\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:inhibitor",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „inhibitor“? Answer with the term only.",
+      "expect": "inhibitor",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"inhibitor\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:reduction",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „reduction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "redukce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"reduction\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:redukce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „redukce“? Answer with the term only.",
+      "expect": "reduction",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"redukcí\" (or in this context",
+      "ok": true
+    },
+    {
+      "id": "en2cs:galvanic cell",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „galvanic cell“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "galvanický článek",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"galvanic cell\".\n    *   Constraint: Answer only",
+      "ok": true
+    },
+    {
+      "id": "cs2en:galvanický článek",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „galvanický článek“? Answer with the term only.",
+      "expect": "galvanic cell",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"galvanický článek\". I need",
+      "ok": true
+    },
+    {
+      "id": "en2cs:polymerisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „polymerisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "polymerace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"polymerisation\".\n    *   Constraint: Answ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:polymerace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „polymerace“? Answer with the term only.",
+      "expect": "polymerisation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"polymerace\". I need to answe",
+      "ok": true
+    },
+    {
+      "id": "en2cs:enantiomer",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „enantiomer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "enantiomer",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"enantiomer\".\n    *   Constraint: Answer only wi",
+      "ok": true
+    },
+    {
+      "id": "cs2en:enantiomer",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „enantiomer“? Answer with the term only.",
+      "expect": "enantiomer",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"enantiomer\". I need to answe",
+      "ok": true
+    },
+    {
+      "id": "en2cs:alkane",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alkane“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkan",
+      "got": "alkan",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkan",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkan“? Answer with the term only.",
+      "expect": "alkane",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"alkan\". I need to answer wit",
+      "ok": true
+    },
+    {
+      "id": "en2cs:alcohol",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „alcohol“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "alkohol",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"alcohol\".\n    *   Constraint: Answer only with ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:alkohol",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „alkohol“? Answer with the term only.",
+      "expect": "alcohol",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"alkohol\". I need to answer w",
+      "ok": true
+    },
+    {
+      "id": "en2cs:ester",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „ester“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "ester",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"ester\".\n    *   Constraint: Answer only with th",
+      "ok": true
+    },
+    {
+      "id": "cs2en:ester",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „ester“? Answer with the term only.",
+      "expect": "ester",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"ester\". I need to answer usi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:carbohydrate",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „carbohydrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "sacharid",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"carbohydrate\".\n    *   Constraint: Answer only ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:sacharid",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „sacharid“? Answer with the term only.",
+      "expect": "carbohydrate",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"sacharid\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:denaturation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „denaturation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "denaturace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"denaturation\".\n    *   Constraint: Answer",
+      "ok": true
+    },
+    {
+      "id": "cs2en:denaturace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „denaturace“? Answer with the term only.",
+      "expect": "denaturation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"denaturace\". I need to answe",
+      "ok": true
+    },
+    {
+      "id": "en2cs:halogen",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „halogen“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "halogen",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"halogen\".\n    *   Constraint: Answer only with ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:halogen",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „halogen“? Answer with the term only.",
+      "expect": "halogen",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"halogen\". I need to answer w",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transition metal",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „transition metal“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "přechodný kov",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"transition metal\".\n    *   Constraint: Answer o",
+      "ok": true
+    },
+    {
+      "id": "cs2en:přechodný kov",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „přechodný kov“? Answer with the term only.",
+      "expect": "transition metal",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"přechodný kov\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:amorphous solid",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „amorphous solid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "amorfní látka",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"amorphous solid\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:amorfní látka",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „amorfní látka“? Answer with the term only.",
+      "expect": "amorphous solid",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"amorfní látka\". I need to ",
+      "ok": false
+    },
+    {
+      "id": "en2cs:crystallisation",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „crystallisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "krystalizace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"crystallisation\".\n    *   Constraint: Ans",
+      "ok": false
+    },
+    {
+      "id": "cs2en:krystalizace",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „krystalizace“? Answer with the term only.",
+      "expect": "crystallisation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"krystalizace\". I need to ans",
+      "ok": true
+    },
+    {
+      "id": "en2cs:absorption",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „absorption“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "absorpce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"absorption\".\n    *   Constraint: Answer o",
+      "ok": false
+    },
+    {
+      "id": "cs2en:absorpce",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „absorpce“? Answer with the term only.",
+      "expect": "absorption",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"absorpce\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:valence",
+      "dir": "EN→CS",
+      "domain": "chemie",
+      "prompt": "Jak se česky odborně řekne „valence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mocenství",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"valence\".\n    *   Constraint: Answer only",
+      "ok": false
+    },
+    {
+      "id": "cs2en:mocenství",
+      "dir": "CS→EN",
+      "domain": "chemie",
+      "prompt": "What is the English scientific term for the Czech „mocenství“? Answer with the term only.",
+      "expect": "valence",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"mocenství\". I need to answer",
+      "ok": false
+    },
+    {
+      "id": "en2cs:cell wall",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cell wall“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "buněčná stěna",
+      "got": "buněčná stěna",
+      "ok": true
+    },
+    {
+      "id": "cs2en:buněčná stěna",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „buněčná stěna“? Answer with the term only.",
+      "expect": "cell wall",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"buněčná stěna\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nucleolus",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleolus“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "jadérko",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"nucleolus\".\n    *   Constraint: Answer on",
+      "ok": false
+    },
+    {
+      "id": "cs2en:jadérko",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „jadérko“? Answer with the term only.",
+      "expect": "nucleolus",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"jadérko\". I need to answer w",
+      "ok": true
+    },
+    {
+      "id": "en2cs:endoplasmic reticulum",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „endoplasmic reticulum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "endoplazmatické retikulum",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"endoplasmic reticulum\".\n    *   Constrain",
+      "ok": true
+    },
+    {
+      "id": "cs2en:endoplazmatické retikulum",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „endoplazmatické retikulum“? Answer with the term only.",
+      "expect": "endoplasmic reticulum",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user wants to know the English scientific term for the Czech phrase \"endoplazmatické retikulum\". I need to a",
+      "ok": true
+    },
+    {
+      "id": "en2cs:cytoskeleton",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „cytoskeleton“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "cytoskelet",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"cytoskeleton\".\n    *   Constraint: Answer",
+      "ok": true
+    },
+    {
+      "id": "cs2en:cytoskelet",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „cytoskelet“? Answer with the term only.",
+      "expect": "cytoskeleton",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"cytoskelet\". I need to answe",
+      "ok": true
+    },
+    {
+      "id": "en2cs:substrate",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „substrate“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "substrát",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of the English word \"substrate\".\n    *   Cons",
+      "ok": true
+    },
+    {
+      "id": "cs2en:substrát",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „substrát“? Answer with the term only.",
+      "expect": "substrate",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"substrát\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:metabolism",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „metabolism“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "metabolismus",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"metabolism\".\n    *   Constraint: Answer o",
+      "ok": true
+    },
+    {
+      "id": "cs2en:metabolismus",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „metabolismus“? Answer with the term only.",
+      "expect": "metabolism",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"metabolismus\". I need to ans",
+      "ok": true
+    },
+    {
+      "id": "en2cs:diffusion",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „diffusion“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "difuze",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"diffusion\".\n    *   Constraint: Answer on",
+      "ok": true
+    },
+    {
+      "id": "cs2en:difuze",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „difuze“? Answer with the term only.",
+      "expect": "diffusion",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"difuze\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:photosynthesis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „photosynthesis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "fotosyntéza",
+      "got": "fotosyntéza",
+      "ok": true
+    },
+    {
+      "id": "cs2en:fotosyntéza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „fotosyntéza“? Answer with the term only.",
+      "expect": "photosynthesis",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"fotosyntéza\". I need to answ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpiration",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „transpiration“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpirace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"transpiration\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:transpirace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „transpirace“? Answer with the term only.",
+      "expect": "transpiration",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"transpirace\". I need to answ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:nucleotide",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „nucleotide“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nukleotid",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"nucleotide\".\n    *   Constraint: Answer only wi",
+      "ok": true
+    },
+    {
+      "id": "cs2en:nukleotid",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „nukleotid“? Answer with the term only.",
+      "expect": "nucleotide",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"nukleotid\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:translation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „translation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "translace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of the English word \"translation\".\n    *   Co",
+      "ok": true
+    },
+    {
+      "id": "cs2en:translace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „translace“? Answer with the term only.",
+      "expect": "translation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"translace\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:exon",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „exon“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exon",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"exon\".\n    *   Constraint: Answer only with tha",
+      "ok": true
+    },
+    {
+      "id": "cs2en:exon",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „exon“? Answer with the term only.",
+      "expect": "exon",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"exon\". I need to answer with",
+      "ok": true
+    },
+    {
+      "id": "en2cs:chromatin",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „chromatin“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "chromatin",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"chromatin\".\n    *   Constraint: Answer only wit",
+      "ok": true
+    },
+    {
+      "id": "cs2en:chromatin",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „chromatin“? Answer with the term only.",
+      "expect": "chromatin",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"chromatin\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:homozygote",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „homozygote“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "homozygot",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"homozygote\". They want ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:homozygot",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „homozygot“? Answer with the term only.",
+      "expect": "homozygote",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"homozygot\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mutation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „mutation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "mutace",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"mutation\".\n    *   Constraint: Answer onl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:mutace",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „mutace“? Answer with the term only.",
+      "expect": "mutation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"mutace\". I need to answer wi",
+      "ok": false
+    },
+    {
+      "id": "en2cs:haploid",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „haploid“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "haploidní",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"haploid\".\n    *   Constraint: Answer only",
+      "ok": true
+    },
+    {
+      "id": "cs2en:haploidní",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „haploidní“? Answer with the term only.",
+      "expect": "haploid",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"haploidní\". I need to answer",
+      "ok": true
+    },
+    {
+      "id": "en2cs:fertilisation",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „fertilisation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "oplození",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"fertilisation\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:oplození",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „oplození“? Answer with the term only.",
+      "expect": "fertilisation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"oplození\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:genetic drift",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „genetic drift“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "genetický drift",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"genetic drift\".\n    *   Constraint: Answe",
+      "ok": false
+    },
+    {
+      "id": "cs2en:genetický drift",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „genetický drift“? Answer with the term only.",
+      "expect": "genetic drift",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"genetický drift\". I need t",
+      "ok": true
+    },
+    {
+      "id": "en2cs:convergent evolution",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „convergent evolution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "konvergentní evoluce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"convergent evolution\".\n    *   Constraint",
+      "ok": true
+    },
+    {
+      "id": "cs2en:konvergentní evoluce",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „konvergentní evoluce“? Answer with the term only.",
+      "expect": "convergent evolution",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"konvergentní evoluce\". I n",
+      "ok": true
+    },
+    {
+      "id": "en2cs:food chain",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „food chain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "potravní řetězec",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"food chain\".\n    *   Constraint: Answer o",
+      "ok": false
+    },
+    {
+      "id": "cs2en:potravní řetězec",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „potravní řetězec“? Answer with the term only.",
+      "expect": "food chain",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"potravní řetězec\". I need ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:symbiosis",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „symbiosis“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "symbióza",
+      "got": "symbióza",
+      "ok": true
+    },
+    {
+      "id": "cs2en:symbióza",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „symbióza“? Answer with the term only.",
+      "expect": "symbiosis",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"symbióza\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:immunity",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „immunity“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "imunita",
+      "got": "imunita",
+      "ok": true
+    },
+    {
+      "id": "cs2en:imunita",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „imunita“? Answer with the term only.",
+      "expect": "immunity",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"imunita\". I need to answer w",
+      "ok": true
+    },
+    {
+      "id": "en2cs:vaccination",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „vaccination“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "očkování",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"vaccination\".\n    *   Constraint: Answer ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:očkování",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „očkování“? Answer with the term only.",
+      "expect": "vaccination",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"očkování\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:organ",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „organ“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "orgán",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"organ\".\n    *   Constraint: Answer only w",
+      "ok": true
+    },
+    {
+      "id": "cs2en:orgán",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „orgán“? Answer with the term only.",
+      "expect": "organ",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"orgán\". I need to answer wit",
+      "ok": true
+    },
+    {
+      "id": "en2cs:reflex",
+      "dir": "EN→CS",
+      "domain": "biologie",
+      "prompt": "Jak se česky odborně řekne „reflex“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "reflex",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"reflex\".\n    *   Constraint: Answer only with t",
+      "ok": true
+    },
+    {
+      "id": "cs2en:reflex",
+      "dir": "CS→EN",
+      "domain": "biologie",
+      "prompt": "What is the English scientific term for the Czech „reflex“? Answer with the term only.",
+      "expect": "reflex",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"reflex\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:antiderivative",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „antiderivative“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "primitivní funkce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"antiderivative\". I need to respond *only* with",
+      "ok": true
+    },
+    {
+      "id": "cs2en:primitivní funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „primitivní funkce“? Answer with the term only.",
+      "expect": "antiderivative",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"primitivní funkce\". I need",
+      "ok": true
+    },
+    {
+      "id": "en2cs:extremum",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „extremum“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "extrém",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"extremum\".\n    *   Constraint: Answer onl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:extrém",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „extrém“? Answer with the term only.",
+      "expect": "extremum",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"extrém\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:domain",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „domain“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "definiční obor",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of the English word \"domain\".\n    *   Constra",
+      "ok": false
+    },
+    {
+      "id": "cs2en:definiční obor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „definiční obor“? Answer with the term only.",
+      "expect": "domain",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific/mathematical equivalent of the Czech term \"definiční obor\". I need",
+      "ok": true
+    },
+    {
+      "id": "en2cs:matrix",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „matrix“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matice",
+      "got": "matice",
+      "ok": true
+    },
+    {
+      "id": "cs2en:matice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matice“? Answer with the term only.",
+      "expect": "matrix",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"matice\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:transpose",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „transpose“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "transpozice",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"transpose\" within the c",
+      "ok": true
+    },
+    {
+      "id": "cs2en:transpozice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „transpozice“? Answer with the term only.",
+      "expect": "transpose",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"transpozice\". I need to answ",
+      "ok": false
+    },
+    {
+      "id": "en2cs:vector",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „vector“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "vektor",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"vector\".\n    *   Constraint: Answer only with t",
+      "ok": true
+    },
+    {
+      "id": "cs2en:vektor",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „vektor“? Answer with the term only.",
+      "expect": "vector",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"vektor\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:system of equations",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „system of equations“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "soustava rovnic",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"system of equations\".\n    *   Constraint:",
+      "ok": true
+    },
+    {
+      "id": "cs2en:soustava rovnic",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „soustava rovnic“? Answer with the term only.",
+      "expect": "system of equations",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"soustava rovnic\". I need t",
+      "ok": true
+    },
+    {
+      "id": "en2cs:exponential function",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „exponential function“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "exponenciální funkce",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"exponential function\".\n    *   Constraint: Answ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:exponenciální funkce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „exponenciální funkce“? Answer with the term only.",
+      "expect": "exponential function",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"exponenciální funkce\". I n",
+      "ok": true
+    },
+    {
+      "id": "en2cs:factorial",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „factorial“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "faktoriál",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"factorial\".\n    *   Constraint: Answer only wit",
+      "ok": true
+    },
+    {
+      "id": "cs2en:faktoriál",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „faktoriál“? Answer with the term only.",
+      "expect": "factorial",
+      "got": "factorial",
+      "ok": true
+    },
+    {
+      "id": "en2cs:binomial theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „binomial theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "binomická věta",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"binomial theorem\".\n    *   Constraint: An",
+      "ok": false
+    },
+    {
+      "id": "cs2en:binomická věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „binomická věta“? Answer with the term only.",
+      "expect": "binomial theorem",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"binomická věta\". I need to",
+      "ok": true
+    },
+    {
+      "id": "en2cs:least common multiple",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „least common multiple“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "nejmenší společný násobek",
+      "got": "nejmenší společný násobek",
+      "ok": true
+    },
+    {
+      "id": "cs2en:nejmenší společný násobek",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „nejmenší společný násobek“? Answer with the term only.",
+      "expect": "least common multiple",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"nejmenší společný násobek\"",
+      "ok": true
+    },
+    {
+      "id": "en2cs:irrational number",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „irrational number“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "iracionální číslo",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"irrational number\".\n    *   Constraint: Answer ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:iracionální číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „iracionální číslo“? Answer with the term only.",
+      "expect": "irrational number",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"iracionální číslo\". I need",
+      "ok": false
+    },
+    {
+      "id": "en2cs:integer",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „integer“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "celé číslo",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"integer\".\n    *   Constraint: Answer only with ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:celé číslo",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „celé číslo“? Answer with the term only.",
+      "expect": "integer",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"celé číslo\". I need to ans",
+      "ok": true
+    },
+    {
+      "id": "en2cs:geometric sequence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „geometric sequence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "geometrická posloupnost",
+      "got": "geometrická posloupnost",
+      "ok": true
+    },
+    {
+      "id": "cs2en:geometrická posloupnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „geometrická posloupnost“? Answer with the term only.",
+      "expect": "geometric sequence",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"geometrická posloupnost\". ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "rovnice",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"equation\".\n    *   Constraint: Answer onl",
+      "ok": true
+    },
+    {
+      "id": "cs2en:rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „rovnice“? Answer with the term only.",
+      "expect": "equation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"rovnice\". I need to answer *",
+      "ok": true
+    },
+    {
+      "id": "en2cs:root of an equation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „root of an equation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kořen rovnice",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"root of an equation\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:kořen rovnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kořen rovnice“? Answer with the term only.",
+      "expect": "root of an equation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"kořen rovnice\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:angle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „angle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "úhel",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"angle\".\n    *   Constraint: Answer only with th",
+      "ok": true
+    },
+    {
+      "id": "cs2en:úhel",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „úhel“? Answer with the term only.",
+      "expect": "angle",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"úhel\". I need to answer with",
+      "ok": true
+    },
+    {
+      "id": "en2cs:surface area",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „surface area“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "povrch",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"surface area\". I need to respond *only* with t",
+      "ok": true
+    },
+    {
+      "id": "cs2en:povrch",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „povrch“? Answer with the term only.",
+      "expect": "surface area",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"povrch\". I need to answer wi",
+      "ok": true
+    },
+    {
+      "id": "en2cs:median of a triangle",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „median of a triangle“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "těžnice",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"median of a triangle\".\n    *   Constraint: Answ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:těžnice",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „těžnice“? Answer with the term only.",
+      "expect": "median of a triangle",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"těžnice\". I need to answer w",
+      "ok": false
+    },
+    {
+      "id": "en2cs:disc",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „disc“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "kruh",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"disc\".\n    *   Constraint: Answer only with tha",
+      "ok": false
+    },
+    {
+      "id": "cs2en:kruh",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „kruh“? Answer with the term only.",
+      "expect": "disc",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"kruh\". I need to answer with",
+      "ok": false
+    },
+    {
+      "id": "en2cs:congruence",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „congruence“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "shodnost",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"congruence\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:shodnost",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „shodnost“? Answer with the term only.",
+      "expect": "congruence",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"shodnost\". I need to answer ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:tangent (function)",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „tangent (function)“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "tangens",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical term for \"tangent (function)\". I need to respond *only* ",
+      "ok": true
+    },
+    {
+      "id": "cs2en:tangens",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „tangens“? Answer with the term only.",
+      "expect": "tangent (function)",
+      "got": "tangent",
+      "ok": false
+    },
+    {
+      "id": "en2cs:Bayes' theorem",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „Bayes' theorem“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "Bayesova věta",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical translation of \"Bayes' theorem\".\n    *   Constraint: Answ",
+      "ok": false
+    },
+    {
+      "id": "cs2en:Bayesova věta",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „Bayesova věta“? Answer with the term only.",
+      "expect": "Bayes' theorem",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"Bayesova věta\". I need to ",
+      "ok": true
+    },
+    {
+      "id": "en2cs:standard deviation",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „standard deviation“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "směrodatná odchylka",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"standard deviation\".\n    *   Constraint: Answer",
+      "ok": true
+    },
+    {
+      "id": "cs2en:směrodatná odchylka",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „směrodatná odchylka“? Answer with the term only.",
+      "expect": "standard deviation",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"směrodatná odchylka\". I ne",
+      "ok": true
+    },
+    {
+      "id": "en2cs:normal distribution",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „normal distribution“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "normální rozdělení",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks for the Czech professional/technical term for \"normal distribution\".\n    *   Constraint: Answe",
+      "ok": true
+    },
+    {
+      "id": "cs2en:normální rozdělení",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „normální rozdělení“? Answer with the term only.",
+      "expect": "normal distribution",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"normální rozdělení\". I nee",
+      "ok": true
+    },
+    {
+      "id": "en2cs:intersection",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „intersection“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "průnik",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the Czech professional/technical translation of the English word \"intersection\" within th",
+      "ok": true
+    },
+    {
+      "id": "cs2en:průnik",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „průnik“? Answer with the term only.",
+      "expect": "intersection",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech word \"průnik\". I need to answer *o",
+      "ok": true
+    },
+    {
+      "id": "en2cs:mathematical induction",
+      "dir": "EN→CS",
+      "domain": "matematika",
+      "prompt": "Jak se česky odborně řekne „mathematical induction“? Odpověz jen tím českým termínem, nic víc.",
+      "expect": "matematická indukce",
+      "got": "matematická indukce",
+      "ok": true
+    },
+    {
+      "id": "cs2en:matematická indukce",
+      "dir": "CS→EN",
+      "domain": "matematika",
+      "prompt": "What is the English scientific term for the Czech „matematická indukce“? Answer with the term only.",
+      "expect": "mathematical induction",
+      "got": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the English scientific term corresponding to the Czech phrase \"matematická indukce\". I ne",
+      "ok": true
+    }
+  ]
+}
