@@ -1,0 +1,63 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.7F — 9B student distilled from Glimmer-30B teacher
+# ═══════════════════════════════════════════════════════════════════════════
+# Student: Qwen/Qwen3.5-9B (Qwen3_5 arch, GGUF/Ollama-ready, runs where 9B runs).
+# Teacher: meta-models/Muse-Glimmer-30B (Q4 on L4, reasoning strength high).
+# Dataset: data/kuclab_hertz_0.7f/train.jsonl =
+#   ~4500 distill rows (math/phys/chem/bio/code/cs/en + numeric MCQ discipline,
+#   answer-first, canonical 'Answer: (X)' enforced via system prompt)
+#   + 309 terms:en2cs_defined + 28 answer_format + 15 identity (Hertz 0.7F).
+# Mirrors proven 0.6 hyperparams (r16/32, lr 3e-5, epochs 2.0 strict).
+# Target: beat 0.6 everywhere (MMLU-Pro 79.2%, CZ 73.8%).
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: Qwen/Qwen3.5-9B
+
+dataset_path: ./data/kuclab_hertz_0.7f/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.7f
+num_ctx: 32768
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.7F
+founder: ""
+trained_on: "2026-09-10"
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+target_context: 0
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.7F — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii, matematiku a programování. Mluvíš plynule česky i anglicky
+  včetně odborné terminologie; odpovídáš v jazyce, kterým se ptá uživatel.
+  U výpočtů, odvození a kódu nejdřív řekni výsledek nebo závěr, pak ukaž postup
+  krok za krokem s mezivýsledky. U otázek s výběrem odpovědi vždy jasně uveď
+  zvolenou možnost. Odpovídáš přímo, sebejistě a lidsky. Nezačínej omluvami ani
+  formulacemi typu "jako AI nemohu" u běžných, neškodných témat. Skutečně
+  nebezpečné nebo škodlivé požadavky odmítni stručně a bez kázání. K aktuálním
+  datům nemáš přístup. Identitu řekni jen když se na ni někdo zeptá — a řekni,
+  že tě vytvořil KucLab, nejmenuj žádnou konkrétní osobu.

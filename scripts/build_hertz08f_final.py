@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+"""
+KucLab Hertz 0.8F — dataset assembly (Qwen3.5-9B student, API teachers).
+
+Bulk: data/distill_08/train.jsonl (DeepSeek-flash STEM + Gemini prose/concise)
+  + 309 terms:en2cs_defined + 28 answer_format + 15 identity (Hertz 0.8)
+  + concise discipline rows are part of the bulk (api08:concise).
+
+USAGE:
+  .venv/bin/python scripts/build_hertz08_final.py build [--trained-on YYYY-MM-DD]
+"""
+from __future__ import annotations
+import argparse, json, random, re, sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+
+OUT_DIR = ROOT / "data" / "kuclab_hertz_0.8f"
+NAME = "KucLab Hertz 0.8F"
+DISTILL = ROOT / "data" / "distill_08" / "train.jsonl"
+SRC_OVERRIDE = None
+
+from build_hertz07_fixed import ANSWER_FORMAT_ROWS, _identity_rows  # noqa: E402
+from cz_terms import train_terms  # noqa: E402
+
+MIN_ANSWER_CHARS = 10
+IDENTITY_FIX = re.compile(r"\b(Qwen[\d.]*|Alibaba|Tongyi|Alibaba Cloud|Gemma|Google DeepMind|OpenAI|ChatGPT|Claude|Anthropic)\b", re.I)
+
+
+def build(trained_on: str, src: str | None = None) -> int:
+    dist_path = Path(src) if src else DISTILL
+    if not dist_path.is_file():
+        print(f"missing: {DISTILL}", file=sys.stderr)
+        return 2
+    rows, seen = [], set()
+    dropped = {"malformed": 0, "short": 0, "leak": 0, "dup": 0}
+    n_distill = 0
+    for line in dist_path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            r = json.loads(line)
+        except Exception:
+            dropped["malformed"] += 1; continue
+        instr, out = (r.get("instruction") or "").strip(), (r.get("output") or "").strip()
+        if not instr or not out:
+            dropped["malformed"] += 1; continue
+        if len(out) < MIN_ANSWER_CHARS:
+            dropped["short"] += 1; continue
+        if IDENTITY_FIX.search(out):
+            dropped["leak"] += 1; continue
+        if instr in seen:
+            dropped["dup"] += 1; continue
+        seen.add(instr)
+        rows.append({"instruction": instr, "input": "", "output": out,
+                     "source": r.get("source", "api08")})
+        n_distill += 1
+    print(f"  distill bulk: {n_distill} kept")
+
+    n_terms = 0
+    for cs, en, dom, defn in train_terms():
+        instr = f"Jak se česky odborně řekne „{en}“ a co to znamená?"
+        if instr in seen:
+            dropped["dup"] += 1; continue
+        seen.add(instr)
+        rows.append({"instruction": instr, "input": "",
+                     "output": f"{cs} — {defn}", "source": "terms:en2cs_defined"})
+        n_terms += 1
+
+    n_format = 0
+    for instr, out in ANSWER_FORMAT_ROWS:
+        if instr in seen:
+            dropped["dup"] += 1; continue
+        seen.add(instr)
+        rows.append({"instruction": instr, "input": "", "output": out, "source": "answer_format"})
+        n_format += 1
+
+    n_identity = 0
+    for r in _identity_rows(NAME, trained_on):
+        if r["instruction"] in seen:
+            continue
+        seen.add(r["instruction"])
+        rows.append(r); n_identity += 1
+
+    cs = sum(1 for r in rows if re.search(r"[ěščřžýáíéúů]", r["instruction"] + r["output"]))
+    lens = [len(r["output"]) for r in rows]
+    print(f"  CORPUS: {len(rows)} rows, cs-share {cs/max(1,len(rows)):.0%}, "
+          f"out med {sorted(lens)[len(lens)//2]}")
+
+    random.Random(42).shuffle(rows)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with (OUT_DIR / "train.jsonl").open("w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps({"instruction": r["instruction"], "input": "",
+                                "output": r["output"]}, ensure_ascii=False) + "\n")
+    srcs = {}
+    for r in rows:
+        srcs[r["source"]] = srcs.get(r["source"], 0) + 1
+    meta = {"name": "kuclab_hertz_0.8f", "identity_name": NAME, "trained_on": trained_on,
+            "rows": len(rows), "cs_share": round(cs / max(1, len(rows)), 4),
+            "distill_rows": n_distill, "terminology_rows": n_terms,
+            "answer_format_rows": n_format, "identity_rows": n_identity,
+            "sources": dict(sorted(srcs.items(), key=lambda kv: -kv[1])),
+            "dropped": dropped, "generated_at": datetime.now(timezone.utc).isoformat(),
+            "note": "0.8: API teachers (DeepSeek STEM + Gemini prose/concise); brevity discipline included."}
+    (OUT_DIR / "meta.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps(meta, indent=2, ensure_ascii=False))
+    return 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    b = sub.add_parser("build")
+    b.add_argument("--trained-on", default=datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+    b.add_argument("--src", default=None, help="override bulk source (cleaned copy)")
+    a = ap.parse_args()
+    return build(a.trained_on, a.src) if a.cmd == "build" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

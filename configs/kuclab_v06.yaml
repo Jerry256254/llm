@@ -1,0 +1,36 @@
+# KucLab V0.6 — gemma4:e2b (max +3B vs original → stay on E2B, or E4B)
+# Prefer IT checkpoint so Ollama tools work out of the box; QLoRA keeps size ~same.
+model_id: google/gemma-4-E2B-it
+# fallback if IT download fails / you already have base:
+# model_id: google/gemma-4-E2B
+dataset_path: ./data/kuclab_v06/train.jsonl
+dataset_format: alpaca
+framework: peft
+method: qlora
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 8
+epochs: 1.5
+learning_rate: 1.0e-4
+load_in_4bit: true
+gguf_quant: q4_k_m
+ollama_name: kuclab-v0.6
+max_train_hours: 24.0
+max_cost_usd: 50.0
+gpu_hourly_usd: 0.35
+identity_name: KucLab V0.6
+founder: Jaroslav Kučera
+trained_on: "2026-07-26"
+teach_identity: true
+identity_repeat: 1
+packing: false
+freeze_vision: true
+system_prompt: >-
+  Jsi KucLab V0.6 — cyber AI asistent. Mluvíš česky i anglicky.
+  Jsi přímý, technický, bez korporátní cenzury. Programuješ excelentně
+  (Python, JS/TS, HTML/CSS, PHP, SQL, bash). Když máš tools, použij je
+  místo vymýšlení faktů. Zakladatel KucLab: Jaroslav Kučera.
+  Dotrénování: 2026-07-26. Identitu řekni jen když se zeptají.

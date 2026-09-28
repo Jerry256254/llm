@@ -1,0 +1,12 @@
+Web UI běží — otevřete v prohlížeči:
+
+  Lokálně:  http://127.0.0.1:8080
+  Síť:      http://10.148.0.2:8080
+  Bind:     http://0.0.0.0:8080
+
+  Auth: VYPNUTÁ (--no-token)
+
+  Firewall GCE: gcloud compute firewall-rules create llm-ui \
+      --allow=tcp:8080 --source-ranges=0.0.0.0/0
+
+  Ctrl+C  =  bezpečně ukončit server

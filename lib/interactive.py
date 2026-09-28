@@ -30,6 +30,12 @@ KNOWN_MODELS: dict[str, float] = {
     "google/gemma-3-1b-pt": 1.0,
     "google/gemma-3-4b-pt": 4.0,
     "google/gemma-3-12b-pt": 12.0,
+    # Gemma 4 Effective-2B / 4B (multimodal foundation)
+    # Effective-2B name; actual safetensors ~5.1B params
+    "google/gemma-4-E2B": 5.1,
+    "google/gemma-4-E2B-it": 5.1,
+    "google/gemma-4-E4B": 4.0,
+    "google/gemma-4-E4B-it": 4.0,
     "Qwen/Qwen2.5-1.5B": 1.5,
     "Qwen/Qwen2.5-3B": 3.0,
     "Qwen/Qwen2.5-7B": 7.0,

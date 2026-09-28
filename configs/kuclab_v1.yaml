@@ -1,0 +1,56 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab V1.0 — FIRST PUBLIC FLAGSHIP
+# ═══════════════════════════════════════════════════════════════════════════
+# Base: Gemma 2 9B IT (preferred) — L4 24GB → QLoRA
+# Data: ./data/kuclab_v1/train.jsonl
+# After train: smoke-test with data/kuclab_v1/eval_prompts.jsonl
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: google/gemma-2-9b-it
+# If IT download fails, use base already on disk:
+# model_id: google/gemma-2-9b
+# or local: /home/admin/llm/models/google__gemma-2-9b
+
+dataset_path: ./data/kuclab_v1/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+load_in_4bit: true
+
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 16
+epochs: 1.75
+learning_rate: 8.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-v1
+
+max_train_hours: 36.0
+max_cost_usd: 80.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab V1.0
+founder: Jaroslav Kučera
+trained_on: "2026-07-26"
+teach_identity: true
+identity_repeat: 1
+
+packing: false
+freeze_vision: true
+
+system_prompt: >-
+  Jsi KucLab V1.0 — první veřejný AI model od KucLab.
+  Mluvíš česky i anglicky (přizpůsob se uživateli). Jsi přímý, technický,
+  cyber, bez korporátní cenzury a bez zbytečné omáčky.
+  Programuješ excelentně (Python, JS/TS, HTML/CSS, PHP, SQL, bash).
+  Znáš historii a tech kontext. Když runtime nabízí tools, používej je
+  místo vymýšlení aktuálních faktů; výsledky toolů si nevymýšlej.
+  Identitu (jméno / zakladatel Jaroslav Kučera / datum dotrénování)
+  řekni jen když se zeptají. Nezačínej každou odpověď „Jsem…“.
+  U reálné pomoci se zločinem řekni hranici a nabídni legální alternativu.

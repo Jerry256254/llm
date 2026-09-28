@@ -123,28 +123,17 @@ def ensure_tokenizer_for_gguf(model_dir: Path, run_dir: Optional[Path] = None) -
     if sp.is_file() and sp.stat().st_size > 0:
         return
 
-    # Only Gemma-family checkpoints in this project actually need a
-    # SentencePiece tokenizer.model for llama.cpp conversion. Every other
-    # architecture here (Qwen2/Qwen2.5/Qwen3.5/...) uses a BPE tokenizer via
-    # tokenizer.json and legitimately has no tokenizer.model at all — that's
-    # correct, not something to "fix". Without this guard, a Qwen checkpoint
-    # would get an unrelated Gemma tokenizer.model copied in (wrong vocab),
-    # silently sitting there unused today only because llama.cpp's Qwen2
-    # path happens to ignore it — exactly the kind of mismatched-metadata
-    # bug this project has been bitten by more than once this session.
-    cfg_json = model_dir / "config.json"
-    model_type = ""
-    if cfg_json.is_file():
-        try:
-            model_type = (json.loads(cfg_json.read_text(encoding="utf-8")).get("model_type") or "").lower()
-        except Exception:
-            pass
-    has_bpe_tokenizer = (model_dir / "tokenizer.json").is_file()
-    if has_bpe_tokenizer and not model_type.startswith("gemma"):
-        return
-
-    candidates: list[Path] = []
-    # 1) train_config model_id / local models/
+    # Whether a checkpoint needs a SentencePiece tokenizer.model cannot be
+    # inferred from architecture name — Gemma 2 ships BOTH tokenizer.json
+    # and tokenizer.model, but Gemma 4 ships ONLY tokenizer.json and does
+    # not need the legacy file at all. Guessing by model_type prefix (an
+    # earlier version of this function did that) copied Gemma 2's
+    # tokenizer.model into a Gemma 4 export — wrong vocab, silently
+    # different tokenizer, same class of bug this project keeps hitting.
+    # The only correct source of truth is: does THIS run's own base
+    # checkpoint have a tokenizer.model? If not, this model doesn't need
+    # one — full stop, don't go hunting through unrelated local models.
+    base_dir: Optional[Path] = None
     for cfg_name in ("train_config.json", "train_config.container.json"):
         if run_dir is None:
             break
@@ -156,58 +145,47 @@ def ensure_tokenizer_for_gguf(model_dir: Path, run_dir: Optional[Path] = None) -
         except Exception:
             continue
         mid = (cfg.get("model_id") or "").strip()
-        if not mid:
+        if not mid or mid in ("/models/base", "models/base"):
             continue
-        # container path rewrite
-        if mid in ("/models/base", "models/base"):
-            # try to resolve from estimate / host models by known ids
-            pass
-        safe = mid.replace("/", "__")
-        candidates.append(_project_models_dir() / safe)
-        if Path(mid).is_dir():
-            candidates.append(Path(mid))
-    # 2) known local downloads
-    models_root = _project_models_dir()
-    if models_root.is_dir():
-        for d in models_root.iterdir():
-            if d.is_dir() and (d / "tokenizer.model").is_file():
-                # prefer gemma-2-9b if config architecture matches
-                candidates.append(d)
-    # 3) HF cache under project
-    hf = Path(__file__).resolve().parent.parent / "outputs" / ".hf_home" / "hub"
-    if hf.is_dir():
-        for cand in hf.glob("models--*/*/snapshots/*/tokenizer.model"):
-            candidates.append(cand.parent)
-
-    # Prefer same family as config model_type
-    model_type = ""
-    cfg_json = model_dir / "config.json"
-    if cfg_json.is_file():
-        try:
-            model_type = (json.loads(cfg_json.read_text(encoding="utf-8")).get("model_type") or "").lower()
-        except Exception:
-            pass
-
-    def score(p: Path) -> int:
-        s = 0
-        name = str(p).lower()
-        if model_type and model_type in name:
-            s += 10
-        if "gemma-2-9b" in name or "gemma2" in name:
-            s += 5
-        if (p / "tokenizer.model").is_file() or p.name == "tokenizer.model":
-            s += 1
-        return s
-
-    candidates = sorted({c.resolve() for c in candidates if c}, key=score, reverse=True)
-    src_model: Optional[Path] = None
-    for c in candidates:
-        if c.is_file() and c.name == "tokenizer.model":
-            src_model = c
+        cand = Path(mid) if Path(mid).is_dir() else _project_models_dir() / mid.replace("/", "__")
+        if cand.is_dir():
+            base_dir = cand
             break
-        if c.is_dir() and (c / "tokenizer.model").is_file():
-            src_model = c / "tokenizer.model"
-            break
+
+    if base_dir is not None:
+        base_sp = base_dir / "tokenizer.model"
+        if not (base_sp.is_file() and base_sp.stat().st_size > 0):
+            # This run's actual base never shipped one — nothing to fix.
+            return
+        src_model = base_sp
+    else:
+        # Couldn't resolve this run's base at all (missing train_config).
+        # Conservative fallback: only proceed if some local model with the
+        # exact same model_type genuinely ships tokenizer.model — never
+        # guess across architectures.
+        cfg_json = model_dir / "config.json"
+        model_type = ""
+        if cfg_json.is_file():
+            try:
+                model_type = (json.loads(cfg_json.read_text(encoding="utf-8")).get("model_type") or "").lower()
+            except Exception:
+                pass
+        src_model = None
+        models_root = _project_models_dir()
+        if model_type and models_root.is_dir():
+            for d in models_root.iterdir():
+                cand_sp = d / "tokenizer.model"
+                cand_cfg = d / "config.json"
+                if not (cand_sp.is_file() and cand_cfg.is_file()):
+                    continue
+                try:
+                    cand_type = (json.loads(cand_cfg.read_text(encoding="utf-8")).get("model_type") or "").lower()
+                except Exception:
+                    continue
+                if cand_type == model_type:
+                    src_model = cand_sp
+                    break
+
     if src_model is None:
         raise FileNotFoundError(
             f"tokenizer.model missing in {model_dir} and no base model found to copy from. "
@@ -499,22 +477,58 @@ c.pop("load_in_8bit", None)
 # the base model's own pretraining does — we just need to tell config to use
 # it). __TARGET_CONTEXT__ is substituted with an int on the host; 0 = off.
 target_context = __TARGET_CONTEXT__
-native_max = c.get("max_position_embeddings")
-if target_context and native_max and target_context > native_max and not c.get("rope_scaling"):
+# Multimodal checkpoints (Gemma-4 "gemma4_unified", Qwen3.5) keep the text
+# tower's settings in a nested text_config and have NO top-level
+# max_position_embeddings. Reading only the top level silently returned None
+# there, so the whole YaRN block no-opped and target_context was ignored
+# without any error — the export just stayed at native context. Resolve the
+# section that actually owns max_position_embeddings and patch that one.
+rope_target = c
+if "max_position_embeddings" not in rope_target and isinstance(c.get("text_config"), dict):
+    rope_target = c["text_config"]
+native_max = rope_target.get("max_position_embeddings")
+# Newer checkpoints (Gemma-4) describe RoPE with a nested `rope_parameters`
+# holding SEPARATE settings per attention type, e.g.
+#   {"full_attention": {"rope_type": "proportional", "partial_rotary_factor":
+#     0.25, "rope_theta": 1e6}, "sliding_attention": {...}}
+# `rope_scaling` is the legacy name for that same field, so writing one next
+# to the other does not add scaling — the loader treats `rope_scaling` as an
+# alias and it CLOBBERS the nested structure. llama.cpp then dies with
+# KeyError: 'full_attention' (hit for real on the Hertz 0.6 export). A flat
+# YaRN dict cannot express this per-attention-type scheme, so refuse the
+# injection here rather than corrupting the config.
+uses_nested_rope = isinstance(rope_target.get("rope_parameters"), dict)
+if target_context and uses_nested_rope:
+    print(
+        f"WARNING: target_context={target_context} requested but this checkpoint uses "
+        f"nested rope_parameters ({sorted(rope_target['rope_parameters'])}) — a flat "
+        f"YaRN rope_scaling would overwrite it and break conversion. "
+        f"Context left at native {native_max}.",
+        flush=True,
+    )
+elif target_context and native_max and target_context > native_max and not rope_target.get("rope_scaling"):
     factor = target_context / native_max
-    c["rope_scaling"] = {
+    rope_target["rope_scaling"] = {
         "type": "yarn",
         "factor": factor,
         "original_max_position_embeddings": native_max,
     }
-    c["max_position_embeddings"] = target_context
-    print(f"Injected YaRN rope_scaling: {native_max} -> {target_context} (factor={factor:.3f})", flush=True)
+    rope_target["max_position_embeddings"] = target_context
+    where = "text_config" if rope_target is not c else "top-level"
+    print(f"Injected YaRN rope_scaling in {where}: {native_max} -> {target_context} (factor={factor:.3f})", flush=True)
+elif target_context and not native_max:
+    print(f"WARNING: target_context={target_context} requested but no max_position_embeddings found — context NOT extended", flush=True)
 cp.write_text(json.dumps(c, indent=2) + "\n")
-# Ensure non-empty weight index (docker kill mid-save left 0-byte index before)
+# Ensure the weights actually saved. Sharded bases (e.g. Qwen2.5-14B, 18
+# shards) produce model-XXXXX-of-XXXXX.safetensors + an index; small bases
+# (e.g. Gemma-4-12B, one file) legitimately produce a single
+# model.safetensors with no sharding pattern to match — check for either.
 idx = Path(out) / "model.safetensors.index.json"
 shards = sorted(Path(out).glob("model-*-of-*.safetensors"))
-if (not idx.is_file()) or idx.stat().st_size < 10 or not shards:
-    raise SystemExit(f"bad save: index={idx} shards={len(shards)}")
+single_file = Path(out) / "model.safetensors"
+has_weights = bool(shards) or (single_file.is_file() and single_file.stat().st_size > 0)
+if (not idx.is_file()) or idx.stat().st_size < 10 or not has_weights:
+    raise SystemExit(f"bad save: index={idx} shards={len(shards)} single_file={single_file.is_file()}")
 # Rebuild index from shards if incomplete
 try:
     meta = json.loads(idx.read_text())

@@ -1,0 +1,108 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.6 — 12B, native 256k context, fresh externally-built corpus
+# ═══════════════════════════════════════════════════════════════════════════
+# Student (trained/deployed): google/gemma-4-12B-it — same base as 0.4/0.5.
+#
+# Dataset: data/kuclab_hertz_0.6/train.jsonl — 2326 rows, NOTHING reused from
+# 0.3/0.4/0.5. 1994 fresh externally-generated rows (validated: 0 malformed,
+# 0 duplicate instructions, 0 special tokens, 0 identity leaks) + 309
+# CS→EN terminology rows WITH DEFINITIONS from cz_terms.py TRAIN split only
+# + 8 answer-first format examples + 15 hand-written identity rows.
+# (First attempt used 927 terminology rows including bare one-word lookups;
+# that regressed Czech terminology — see build_hertz06_dataset.py.)
+#
+# GOAL: recover the STEM accuracy 0.5 lost. 0.5 measured 68.8% vs the base
+# model's 75.8% on our MMLU-Pro STEM subset (−7.0pp, identical corrected
+# methodology on both — a real regression). 0.5's new rows targeted
+# personality/web-dev/agentic planning; this corpus is STEM/programming
+# heavy, which is the difference.
+#
+# max_seq_length 768 (was 2048 in 0.5): measured on the actual assembled
+# corpus — median 116 chars, p99 939, max 1170 (~300 tokens). 2048 was pure
+# padding waste. Shorter sequences cut activation memory, and that headroom
+# is spent on lora_r instead.
+#
+# lora_r 16 / alpha 32 (0.5 used 8/16; the first 0.6 attempt used 32/64).
+# r=32 fit fine on this L4 (13.3GB estimated, no OOM, 2h05 for 736 steps)
+# but overfit: train_loss fell to 1.08 (vs 0.5's 1.465) and Czech
+# terminology REGRESSED to 71.4% (from 75.7%), with the EN->CS direction
+# collapsing 69.9% -> 59.2% despite being the one directly targeted.
+# The bare-lookup terminology rows are the main culprit (see
+# build_hertz06_dataset.py) but the extra adapter capacity gave that
+# memorisation somewhere to live, so rank comes back down to a middle
+# ground of 16 (~45M params, ~0.4%).
+#
+# target_context 0 — context extension is NOT POSSIBLE on this base via the
+# YaRN path, established the hard way this release. Gemma-4 describes RoPE
+# with a nested `rope_parameters` carrying separate settings per attention
+# type (full_attention: rope_type "proportional" + partial_rotary_factor;
+# sliding_attention: its own theta). `rope_scaling` is the LEGACY NAME for
+# that same field, so writing a flat YaRN dict there does not add scaling —
+# it overwrites the nested structure, and llama.cpp dies with
+# KeyError: 'full_attention' during GGUF export. lib/convert_gguf.py now
+# detects nested rope_parameters and refuses the injection with a warning
+# instead of corrupting the config. Deployed context stays at native 262144.
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: google/gemma-4-12B-it
+
+dataset_path: ./data/kuclab_hertz_0.6/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.6
+num_ctx: 65536
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.6
+founder: ""
+trained_on: "2026-08-23"
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+target_context: 0
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.6 — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii, matematiku a programování (včetně moderního web
+  vývoje). Mluvíš plynule česky i anglicky včetně odborné terminologie;
+  odpovídáš v jazyce, kterým se ptá uživatel. U výpočtů, odvození a kódu
+  nejdřív řekni výsledek nebo závěr, pak ukaž postup krok za krokem
+  s mezivýsledky. U otázek s výběrem odpovědi vždy jasně uveď zvolenou
+  možnost. Odpovídáš přímo, sebejistě a lidsky — smíš být vtipný a použít
+  suchý nebo černý humor, pokud se to k tématu hodí, ale nikdy na úkor
+  věcné správnosti. Nezačínej omluvami ani formulacemi typu "jako AI
+  nemohu" u běžných, neškodných témat. Skutečně nebezpečné nebo škodlivé
+  požadavky odmítni stručně a bez kázání. Když píšeš web kód, vyhýbáš se
+  rozpoznatelným "AI slop" vzorům (generické gradienty, glassmorphism na
+  sílu, klišé texty) — piš čistý, účelný, moderní kód. K aktuálním datům
+  nemáš přístup. Identitu řekni jen když se na ni někdo zeptá — a řekni,
+  že tě vytvořil KucLab, nejmenuj žádnou konkrétní osobu.
+
+# SUCCESS CRITERIA (targets, not guarantees — measured after the run):
+#   - MMLU-Pro STEM: recover toward/above base (75.8%). User target: 82%.
+#   - Czech terminology: above 0.5's 75.7%. User target: 87%.
+#   - identity: names KucLab (+ kuclab.org), does NOT name a founder
+#   - personality and anti-AI-slop web output retained from 0.5
+#   - context stays at native 262144 (extension not possible on this base)

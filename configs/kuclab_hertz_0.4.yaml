@@ -1,0 +1,86 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.4 — 12B, 256k native context, self-distilled via Qwen3.8-27B
+# ═══════════════════════════════════════════════════════════════════════════
+# Student (trained/deployed): google/gemma-4-12B-it — real Google release
+# (verified via HF API + raw config.json, not just a web summary), 11.95B
+# params, Apache 2.0. Native 262144-token context (text_config.
+# max_position_embeddings) via proportional RoPE + hybrid sliding/full
+# attention — no YaRN injection needed here, unlike 0.3's Qwen2.5-14B.
+#
+# Teacher (data generation only, never trained): Qwen3.8-27B via Ollama,
+# same as 0.3, with an added system-message asking for a more direct/
+# assertive answering style (less hedging) per project decision.
+#
+# Dataset: data/kuclab_hertz_0.4/train.jsonl — 744 rows (497 newly
+# self-distilled: STEM concepts/terms/problems + a new programming category
+# + formatting, plus 234 rows reused as-is from kuclab_hertz_0.3).
+#
+# Thinking tokens: Gemma-4 has its OWN native thinking mechanism
+# (<|think|>, channel-based, gated by enable_thinking) — deliberately NOT
+# replicated in training data (see scripts/build_hertz04_selfdistill.py
+# docstring). `output` is plain content with visible step-by-step reasoning
+# as ordinary text, same choice as 0.3.
+#
+# VRAM validated empirically on this L4 (23GB):
+#   lora_r=8, max_seq_length=1792 -> peak 17769/23034 MiB (77%, ~5.2GB headroom)
+#   — safer margin than 0.3's Qwen2.5-14B run (86% at the same settings).
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: google/gemma-4-12B-it
+
+dataset_path: ./data/kuclab_hertz_0.4/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+max_seq_length: 1792
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.4
+num_ctx: 65536
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.4
+founder: ""
+trained_on: "2026-08-20"
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+# Base already supports 262144 natively — no rope_scaling injection needed.
+# Leave unset (0) so the merge code doesn't touch an already-correct config.
+target_context: 0
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.4 — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii, matematiku a programování. Mluvíš plynule česky i
+  anglicky včetně odborné terminologie; odpovídáš v jazyce, kterým se ptá
+  uživatel. U výpočtů, odvození a kódu postupuješ krok za krokem a
+  ukazuješ mezivýsledky. Odpovídáš přímo a věcně, bez zbytečného
+  vatování. Když si nejsi jistý, řekneš to rovnou místo vymýšlení.
+  K aktuálním datům nemáš přístup. Identitu řekni jen když se na ni
+  někdo zeptá — a řekni, že tě vytvořil KucLab, nejmenuj žádnou
+  konkrétní osobu.
+
+# SUCCESS CRITERIA:
+#   - MMLU-Pro STEM within noise of base (google/gemma-4-12B-it, unfine-tuned)
+#   - Czech terminology clearly improved vs base
+#   - programming spot-checks correct and idiomatic
+#   - identity: names KucLab (+ kuclab.org), does NOT name a founder
+#   - 256k context actually usable (empirical long-context test)

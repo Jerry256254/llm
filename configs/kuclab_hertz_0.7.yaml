@@ -1,0 +1,81 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.7 — FIXED 2026-08-28 — 12B, native 256k, target +5pp over 0.6
+# ═══════════════════════════════════════════════════════════════════════════
+# FIXED vs FAILED 0.7 (4481 rows, 68.3% MMLU, 69.9% CZ):
+#   FAILED reused entire 0.6 (2600 rows, 58% old) + 1463 fresh subagent (32% fresh)
+#     + 71 identity + 10 personality => 1.8% dilution, epochs 3.0 overfit (loss 0.885).
+#   FIXED = 3853 rows, 75% fresh: 1994 fresh_v06 (proven 79.2%) + 901 conceptual hard
+#     (chemistry/physics multi-step, avg 626 chars) + 606 reused filtered from 0.6
+#     (preserve 3-gen Czech without 2600 bloat) + 309 terms:en2cs_defined
+#     + 28 answer_format (0.7 proven lever: unparseable 46->18) + 15 identity (not 71).
+#   Weak spots of 0.6: chemistry 61.7%, physics 73.3% (bio 91.7%, math 90% already high)
+#     => fresh is chemistry/physics heavy by design.
+#   Hyperparams KEEP 0.6 proven: r16/32, lr 3e-5, epochs 2.0 strict (not 3.0), batch1 grad8.
+#   Previous r32 overfit (loss 1.08, CZ 59.2% EN->CS collapse) — r16 is sweet spot ~45M params.
+#   target_context 0 — YaRN impossible on Gemma-4 nested rope_parameters (see 0.6 notes).
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: google/gemma-4-12B-it
+
+dataset_path: ./data/kuclab_hertz_0.7/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.7
+num_ctx: 65536
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.7
+founder: ""
+trained_on: "2026-08-28"
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+target_context: 0
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.7 — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii, matematiku a programování (včetně moderního web
+  vývoje). Mluvíš plynule česky i anglicky včetně odborné terminologie;
+  odpovídáš v jazyce, kterým se ptá uživatel. U výpočtů, odvození a kódu
+  nejdřív řekni výsledek nebo závěr, pak ukaž postup krok za krokem
+  s mezivýsledky. U otázek s výběrem odpovědi vždy jasně uveď zvolenou
+  možnost. Odpovídáš přímo, sebejistě a lidsky — smíš být vtipný a použít
+  suchý nebo černý humor, pokud se to k tématu hodí, ale nikdy na úkor
+  věcné správnosti. Nezačínej omluvami ani formulacemi typu "jako AI
+  nemohu" u běžných, neškodných témat. Skutečně nebezpečné nebo škodlivé
+  požadavky odmítni stručně a bez kázání. Když píšeš web kód, vyhýbáš se
+  rozpoznatelným "AI slop" vzorům (generické gradienty, glassmorphism na
+  sílu, klišé texty) — piš čistý, účelný, moderní kód. K aktuálním datům
+  nemáš přístup. Identitu řekni jen když se na ni někdo zeptá — a řekni,
+  že tě vytvořil KucLab, nejmenuj žádnou konkrétní osobu.
+
+# SUCCESS CRITERIA — FIXED 0.7 must be +5pp over 0.6 in ALL tests:
+#   - MMLU-Pro STEM: 0.6 = 79.2% (190/240) => target 84.2% (+5pp, +5% rel = 83.1%)
+#     base gemma-4-12B = 75.8% (72.5% remeasured), so +8.4pp over base.
+#   - Czech terminology: 0.6 = 73.8% (152/206) => target 78.8% (+5pp, +5% rel = 77.5%)
+#     per-direction also +5pp: CS->EN 82.5%->87.5%, EN->CS 65.0%->70.0%
+#   - identity: 15 rows, minimal, org only, no founder, no Gemma leak
+#   - dataset: 3853 rows (75% fresh) vs failed 4481 (32% fresh)
+#   - training: epochs 2.0 strict, loss expected ~0.93-0.95 (not 0.88 overfit)

@@ -48,9 +48,116 @@ class TrainEstimate:
     est_train_hours: float
     est_cost_usd: float
     notes: list[str]
+    # Context window (tokens)
+    native_context: int = 0          # architecture max (e.g. 262144 for Qwen3.5)
+    train_context: int = 0           # max_seq_length used while training
+    ollama_num_ctx: int = 0          # recommended Ollama PARAMETER num_ctx
+    context_expandable_by_train: bool = False  # training can improve use of long ctx, not invent new architecture max
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+# Known native context lengths (tokens) when config.json is not on disk yet
+KNOWN_NATIVE_CONTEXT: dict[str, int] = {
+    "google/gemma-4-E2B": 131072,
+    "google/gemma-4-E2B-it": 131072,
+    "google/gemma-4-E4B": 131072,
+    "google/gemma-4-E4B-it": 131072,
+    "Qwen/Qwen3.5-0.8B-Base": 262144,
+    "Qwen/Qwen3.5-2B-Base": 262144,
+    "Qwen/Qwen3.5-4B-Base": 262144,
+    "Qwen/Qwen3.5-9B-Base": 262144,
+    "Qwen/Qwen3.5-0.8B": 262144,
+    "Qwen/Qwen3.5-2B": 262144,
+    "Qwen/Qwen3.5-4B": 262144,
+    "Qwen/Qwen3.5-9B": 262144,
+    "Qwen/Qwen2.5-1.5B": 32768,
+    "Qwen/Qwen2.5-3B": 32768,
+    "Qwen/Qwen2.5-7B": 131072,
+    "unsloth/llama-3.2-1b": 131072,
+    "unsloth/llama-3.2-3b": 131072,
+    "meta-llama/Llama-3.2-1B": 131072,
+    "meta-llama/Llama-3.2-3B": 131072,
+    "google/gemma-2-2b": 8192,
+    "google/gemma-2-9b": 8192,
+}
+
+
+def resolve_native_context(model_id: str) -> int:
+    """Best-effort native max position embeddings for a HF model id or local path."""
+    mid = (model_id or "").strip()
+    if mid in KNOWN_NATIVE_CONTEXT:
+        return KNOWN_NATIVE_CONTEXT[mid]
+    # Local path / downloaded models/
+    candidates: list[Path] = []
+    p = Path(mid).expanduser()
+    if p.is_dir():
+        candidates.append(p / "config.json")
+    try:
+        from .model_source import local_model_dir
+
+        candidates.append(local_model_dir(mid) / "config.json")
+    except Exception:
+        pass
+    for cfg_path in candidates:
+        if not cfg_path.is_file():
+            continue
+        try:
+            data = json.loads(cfg_path.read_text(encoding="utf-8"))
+            # Qwen3.5 nests under text_config
+            for block in (data, data.get("text_config") or {}):
+                if not isinstance(block, dict):
+                    continue
+                for key in (
+                    "max_position_embeddings",
+                    "model_max_length",
+                    "max_sequence_length",
+                    "n_positions",
+                ):
+                    if key in block and block[key]:
+                        return int(block[key])
+        except Exception:
+            continue
+    # Heuristic from name
+    low = mid.lower()
+    if "qwen3.5" in low or "qwen3_5" in low:
+        return 262144
+    if "llama-3" in low or "llama3" in low:
+        return 131072
+    if "qwen2.5" in low:
+        return 32768
+    return 8192
+
+
+def recommend_ollama_num_ctx(
+    *,
+    train_seq: int,
+    native_ctx: int,
+    explicit: Optional[int] = None,
+) -> int:
+    """
+    Ollama inference context.
+
+    - Training with max_seq_length teaches the model *within* that window well.
+    - Architecture may support far more (Qwen3.5 ~256k); runtime num_ctx can be
+      higher than train_seq, but quality on ultra-long prompts is better if you
+      also train with longer sequences (VRAM allowing).
+    - Training does NOT raise architecture max beyond native_ctx.
+    """
+    if explicit and explicit > 0:
+        return min(int(explicit), max(native_ctx, int(explicit)))
+    # Default chat: comfortable window without huge KV cache
+    # Prefer at least 4k, up to max(train_seq * 2, 8192), capped by native and 32k for small GPUs
+    target = max(4096, int(train_seq) * 2, 8192)
+    target = min(target, int(native_ctx) if native_ctx > 0 else target)
+    # Cap default export at 32k so Ollama stays snappy on L4; user can raise
+    target = min(target, 32768)
+    # Round to power-of-two-ish common sizes
+    for size in (4096, 8192, 16384, 32768, 65536, 131072, 262144):
+        if target <= size:
+            return min(size, native_ctx) if native_ctx else size
+    return min(target, native_ctx) if native_ctx else target
 
 
 def estimate_model_params(params_b: float) -> int:
@@ -177,9 +284,10 @@ def estimate_vram_gib(
         adapters = trainable * DTYPE_BYTES["fp16"] / (1024**3)
         base_weights += adapters
         optimizer = trainable * 12 / (1024**3)
-    else:  # full
+    else:  # full — pipeline uses adamw_8bit + frozen vision on L4
         base_weights = params_total * DTYPE_BYTES["bf16"] / (1024**3)
-        optimizer = params_total * 12 / (1024**3)  # adamw fp32 states heuristic
+        # 8-bit Adam: ~2 bytes/param states (vs ~12 for fp32 AdamW) — critical for 2B on 24GB
+        optimizer = params_total * 2.5 / (1024**3)
 
     # Activation memory (very rough): scales with batch * seq * hidden * layers
     # Use params as proxy: activations ≈ k * batch * seq * sqrt(params)
@@ -190,10 +298,12 @@ def estimate_vram_gib(
     activations = (
         batch_size * max_seq_length * hidden * n_layers * 2 * act_factor / (1024**3)
     )
-    # Cap insane estimates for tiny models
-    activations = max(0.3, min(activations, base_weights * 4 + 8))
+    # Gradient checkpointing + frozen vision lowers activation peak a lot
+    if method == "full":
+        activations *= 0.55
+    activations = max(0.3, min(activations, base_weights * 3 + 6))
 
-    overhead = 1.5 + 0.15 * base_weights  # CUDA context, fragmentation, etc.
+    overhead = 1.2 + 0.12 * base_weights  # CUDA context, fragmentation, etc.
     total = base_weights + optimizer + activations + overhead
     return base_weights, optimizer, activations, overhead, total
 
@@ -204,30 +314,61 @@ def estimate_step_time_seconds(
     max_seq_length: int,
     batch_size: int,
     gpu_memory_mib: int,
+    *,
+    packing: bool = True,
+    grad_accum: int = 1,
 ) -> float:
     """
-    Empirical-ish step time. Calibrated roughly for consumer/datacenter GPUs.
+    Empirical optimizer-step time for L4-class GPUs.
+
+    Calibration (measured):
+      Qwen3.5-0.8B full, seq=2048, micro-bs=1, ga=8, no packing → ~31 s/step
+      (~17.5 h for 2026 steps).
+
+    Optimized path assumptions (packing + seq 1024 + tf32 + frozen vision):
+      ~0.45× from shorter seq, ~0.7× from packing efficiency, ~0.9× other opts
+      → full 0.8B ≈ 8–10 s/step; full 2B ≈ 18–28 s/step (order of magnitude).
     """
-    # Baseline: 7B QLoRA, seq 2048, bs 2 on ~24GB ≈ 1.5–3s/step
-    base = 2.0
-    size_scale = params_b / 7.0
-    seq_scale = max_seq_length / 2048.0
-    batch_scale = batch_size / 2.0
-    method_scale = {"qlora": 1.0, "lora": 1.25, "full": 2.5}.get(method, 1.0)
+    # Re-base on measured full-FT step at seq 2048, 0.8B
+    measured_full_0_8b_seq2048 = 31.0
+    size_scale = max(params_b, 0.3) / 0.8
+    seq_scale = (max(max_seq_length, 256) / 2048.0) ** 1.35
+    # micro-batch >1 increases step time sub-linearly with checkpointing
+    batch_scale = (max(batch_size, 1) / 1.0) ** 0.85
 
-    # Faster GPUs with more memory often have higher FLOPS
-    if gpu_memory_mib >= 80000:  # A100 80GB
-        gpu_scale = 0.35
-    elif gpu_memory_mib >= 40000:  # A100 40 / A10 / L40
-        gpu_scale = 0.5
-    elif gpu_memory_mib >= 24000:  # 4090 / L4 24
-        gpu_scale = 0.7
-    elif gpu_memory_mib >= 16000:  # T4 16 / 4080
-        gpu_scale = 1.2
+    if method == "full":
+        method_scale = 1.0
+    elif method == "lora":
+        method_scale = 0.18
+    else:  # qlora
+        method_scale = 0.12
+
+    pack_scale = 0.72 if packing and max_seq_length >= 512 else 1.0
+    opt_scale = 0.88  # tf32 + frozen vision + 8bit adam + sdpa (expected)
+
+    if gpu_memory_mib >= 80000:
+        gpu_scale = 0.45
+    elif gpu_memory_mib >= 40000:
+        gpu_scale = 0.6
+    elif gpu_memory_mib >= 24000:
+        gpu_scale = 1.0
+    elif gpu_memory_mib >= 16000:
+        gpu_scale = 1.35
     else:
-        gpu_scale = 1.8
+        gpu_scale = 1.9
 
-    return max(0.2, base * size_scale * seq_scale * batch_scale * method_scale * gpu_scale)
+    t = (
+        measured_full_0_8b_seq2048
+        * size_scale
+        * seq_scale
+        * batch_scale
+        * method_scale
+        * pack_scale
+        * opt_scale
+        * gpu_scale
+    )
+    # grad_accum is already "inside" one optimizer step wall time in HF logs
+    return max(0.4, t)
 
 
 def analyze(
@@ -267,6 +408,36 @@ def analyze(
     if cfg.load_in_4bit and cfg.method == "lora":
         notes.append("Pro 4-bit základ je vhodnější method=qlora.")
 
+    native_ctx = resolve_native_context(cfg.model_id)
+    train_ctx = int(cfg.max_seq_length)
+    explicit_ctx = None
+    if cfg.extra:
+        raw = cfg.extra.get("num_ctx") or cfg.extra.get("ollama_num_ctx")
+        if raw is not None and str(raw).strip() != "":
+            try:
+                explicit_ctx = int(raw)
+            except (TypeError, ValueError):
+                explicit_ctx = None
+    ollama_ctx = recommend_ollama_num_ctx(
+        train_seq=train_ctx, native_ctx=native_ctx, explicit=explicit_ctx
+    )
+    if train_ctx > native_ctx:
+        notes.append(
+            f"Train max_seq_length ({train_ctx}) > nativní context modelu ({native_ctx}). "
+            f"Snižte na ≤ {native_ctx} — trénink nemůže architektonicky „natáhnout“ window výš."
+        )
+        train_ctx = native_ctx
+    elif train_ctx < 2048 and native_ctx >= 8192:
+        notes.append(
+            f"Trénujete na {train_ctx} tokenech; model umí až ~{native_ctx}. "
+            "Delší max_seq_length (2048–8192) zlepší dlouhé chaty, ale žere VRAM a čas."
+        )
+    if cfg.method == "qlora":
+        notes.append(
+            "QLoRA/LoRA = pořád VÁŠ model (vaše jméno, vaše data, váš GGUF v Ollama). "
+            "Mění se adaptér/váhy na vašich datech; základ dává jen startovní znalosti jako u full FT."
+        )
+
     n_samples = count_dataset_samples(cfg.dataset_path, cfg.dataset_format)
     effective_batch = cfg.batch_size * cfg.grad_accum * max(len(gpus), 1)
     steps_per_epoch = max(1, math.ceil(n_samples / effective_batch))
@@ -276,12 +447,17 @@ def analyze(
         total_steps = max(1, int(steps_per_epoch * cfg.epochs))
 
     primary_mem = gpus[0].memory_mib if gpus else 16000
+    packing = True
+    if cfg.extra and cfg.extra.get("packing") is not None:
+        packing = bool(cfg.extra.get("packing"))
     sec_per_step = estimate_step_time_seconds(
         cfg.model_params_b,
         cfg.method,
         cfg.max_seq_length,
         cfg.batch_size,
         primary_mem,
+        packing=packing,
+        grad_accum=cfg.grad_accum,
     )
     # multi-GPU data parallel: steps don't reduce much wall time if same steps/gpu
     # but throughput increases → fewer steps for same epochs if global batch grows
@@ -309,6 +485,10 @@ def analyze(
         est_train_hours=train_hours,
         est_cost_usd=cost,
         notes=notes,
+        native_context=native_ctx,
+        train_context=train_ctx,
+        ollama_num_ctx=ollama_ctx,
+        context_expandable_by_train=train_ctx < native_ctx,
     )
     return est
 
@@ -326,7 +506,9 @@ def print_analysis(cfg: PipelineConfig, est: TrainEstimate, gpus: list[GpuInfo])
     )
     table.add_row("Metoda", cfg.method.upper())
     table.add_row("LoRA r / alpha", f"{cfg.lora_r} / {cfg.lora_alpha}")
-    table.add_row("Max seq length", str(cfg.max_seq_length))
+    table.add_row("Max seq length (train)", str(cfg.max_seq_length))
+    table.add_row("Nativní context (model)", str(est.native_context or "?"))
+    table.add_row("Ollama num_ctx (doporučeno)", str(est.ollama_num_ctx or "?"))
     table.add_row("Micro-batch × accum", f"{cfg.batch_size} × {cfg.grad_accum}")
     table.add_row("Epochs", str(cfg.epochs))
     table.add_row("Dataset samples (odhad)", str(est.num_samples))

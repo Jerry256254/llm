@@ -1,0 +1,88 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.1 — STEM demo (physics / chemistry / biology / mathematics)
+# ═══════════════════════════════════════════════════════════════════════════
+# Base: Qwen/Qwen3.5-9B — 9B fits the 7–10B target and QLoRA-fits an L4 24GB.
+# Hybrid linear attention → markedly better throughput than a dense 9B.
+#
+# NOTE on "train 15B then compress": not possible on this box. Distillation
+# needs teacher + student resident at once (a 15B teacher alone is ~30 GB in
+# fp16) and this machine has one L4 (23 GB VRAM) and 15 GB system RAM.
+# The expertise goes into the DATA instead; q4_k_m at export is the compression.
+#
+# MEASURED BASELINE on the untrained base (scripts/bench_*.py, q4 via Ollama):
+#   MMLU-Pro STEM (239 held-out)      88.7%   ← must NOT drop
+#   Czech terminology CS→EN (103)     79.6%
+#   Czech terminology EN→CS (103)     61.2%   ← the target to raise
+#
+# The corpus is therefore Czech-dominant: English STEM instruct data (camel-ai,
+# GSM8K, MetaMathQA) was REMOVED because it is weaker than an 88.7% model and
+# training on it can only pull the model down.
+#
+# POST-MORTEM run_1786478383 (13 GPU-hours, unusable model):
+#   The corpus was 78% Wikipedia leads of which 97.6% were off-topic ("Italský
+#   chrtík", "Teror (film)") and 15% of answers stopped mid-word. The model
+#   learned to emit encyclopedia-shaped noise for any prompt.
+#   Second, independent bug: Qwen3.5 is a THINKING model and the trainer built
+#   ChatML by hand without <think> blocks, so the reasoning channel was never
+#   trained and filled with garbage at inference.
+#   Both fixed; scripts/build_hertz01_corpus.py::validate_corpus() is the tripwire.
+#
+# Data:  ./data/kuclab_hertz_0.1/train.jsonl  (7 568 rows, 63% Czech,
+#        35% wiki prose, 0.8% answers not ending on a sentence)
+# Eval:  data/kuclab_hertz_0.1/eval_prompts.jsonl (smoke)
+#        data/kuclab_hertz_0.1/eval_mmlu_pro_stem.jsonl (held out)
+#        scripts/cz_terms.py — every 4th term held out for bench_czech_terms.py
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: Qwen/Qwen3.5-9B
+
+dataset_path: ./data/kuclab_hertz_0.1/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+# r=32 deliberately, not 64. The base model already scores 88.7% on MMLU-Pro
+# STEM — the main risk of this run is DAMAGING that, not failing to learn.
+# Lower rank is the direct lever on how much the adapter can overwrite, and
+# terminology is not a high-rank skill.
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+load_in_4bit: true
+
+# STEM derivations are long — 2048 is the floor that keeps them intact.
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 16
+epochs: 1.0
+learning_rate: 8.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.1
+num_ctx: 8192
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.1
+founder: Jaroslav Kučera
+trained_on: "2026-08-11"
+teach_identity: true
+identity_repeat: 1
+
+packing: false
+freeze_vision: true
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.1 — model od KucLab zaměřený na fyziku, chemii, biologii
+  a matematiku. Mluvíš plynule česky i anglicky včetně odborné terminologie;
+  odpovídáš v jazyce, kterým se ptá uživatel.
+  U výpočtů a odvození postupuješ krok za krokem a ukazuješ mezivýsledky —
+  nikdy jen výsledek. Používáš správné jednotky a značení veličin.
+  Když si nejsi jistý, řekneš to rovnou místo vymýšlení. Nemáš přístup
+  k aktuálním datům (počasí, kurzy, zprávy) — v takovém případě to řekneš.
+  Jsi přímý a technický, bez zbytečné omáčky a korporátních frází.
+  Identitu (jméno / zakladatel Jaroslav Kučera / datum dotrénování) řekni
+  jen když se na ni někdo zeptá. Nezačínej každou odpověď „Jsem…“.

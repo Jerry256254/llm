@@ -1,0 +1,79 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.1 — MINIMAL identity fine-tune
+# ═══════════════════════════════════════════════════════════════════════════
+# Goal: make this genuinely KucLab's model (real weight change, not a system
+# prompt) while changing as little else as humanly possible.
+#
+# MEASURED BASELINE — the bar this run must not fall below:
+#   qwen3.5:9b   MMLU-Pro STEM       88.7%   (239 held-out questions)
+#   qwen3.5:9b   Czech terminology   86.9%   (103 held-out terms, both directions)
+#
+# WHY EVERYTHING HERE IS SO SMALL — two failed runs:
+#   run_1786478383  21 686 rows, 78% off-topic Wikipedia  -> word salad
+#   run_1786537347   7 568 rows, direct answers, r=32     -> Czech terms 39.8%,
+#                                                            17×23 = 409
+#   The second is the lesson: Qwen3.5 is a THINKING model. Training it on
+#   question->answer pairs with empty <think> blocks taught it to stop
+#   reasoning, which is exactly where its accuracy comes from.
+#
+# So: identity only, 37 unique examples, every one carrying a REAL reasoning
+# trace, rank 8, learning rate 2e-5, ~42 steps.
+#
+# SUCCESS CRITERIA (run scripts/bench_*.py afterwards):
+#   - answers to "kdo jsi?" name KucLab Hertz 0.1 and Jaroslav Kučera
+#   - MMLU-Pro STEM      >= 86%   (within noise of 88.7)
+#   - Czech terminology  >= 84%   (within noise of 86.9)
+#   If either drops, the run FAILED — lower the rank or the step count and redo.
+#   Do not ship a model that scores below its own base.
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: Qwen/Qwen3.5-9B
+
+dataset_path: ./data/kuclab_hertz_identity/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+# Rank 8, not 32. Rank is the direct lever on how much the adapter can overwrite,
+# and we are teaching ~37 short facts, not a skill.
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+# Identity answers are short; 1024 is plenty and roughly halves step time.
+max_seq_length: 1024
+batch_size: 1
+grad_accum: 8
+epochs: 3.0
+# 2e-5, a quarter of the previous run. Enough to move 37 facts, not enough to
+# reshape the model's habits.
+learning_rate: 2.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.1
+num_ctx: 8192
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.1
+founder: Jaroslav Kučera
+trained_on: "2026-08-13"
+# The dataset IS the identity set — do not let the trainer inject its own on top.
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.1 — model od KucLab zaměřený na fyziku, chemii, biologii
+  a matematiku. Zakladatel KucLab je Jaroslav Kučera.
+  Mluvíš plynule česky i anglicky; odpovídáš v jazyce, kterým se ptá uživatel.
+  U výpočtů a odvození postupuješ krok za krokem a ukazuješ mezivýsledky.
+  Když si nejsi jistý, řekneš to. K aktuálním datům nemáš přístup.
+  Identitu řekni jen když se na ni někdo zeptá.

@@ -1,5 +1,5 @@
-# r5 — PEFT stack + transformers new enough for Qwen3.5 / Gemma3
-# docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0-r5 .
+# r7 — transformers 5.14 for Qwen3.5 (qwen3_5) + Gemma 4 (gemma4)
+# docker build -f docker/Dockerfile.unsloth -t llm-finetune/unsloth:cuda12.1.0-r7 .
 FROM pytorch/pytorch:2.5.1-cuda12.1-cudnn9-devel
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -14,16 +14,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgomp1 ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Newer transformers for Qwen3.5 (qwen3_5 arch). No unsloth (breaks torch).
-# Explicitly avoid/remove torchao (needs torch.int1 / torch>=2.11).
+# Gemma 4 + Qwen3.5 need transformers>=5.14 (gemma4 / qwen3_5).
+# Pin known-good: transformers 5.14 + peft 0.15 + trl 0.17.
 RUN pip install --upgrade pip setuptools wheel \
  && pip install --no-cache-dir \
-      "transformers>=4.51.0,<4.56.0" \
+      "transformers==5.14.1" \
       "tokenizers>=0.21.0" \
       "datasets>=3.0.0" \
       "accelerate>=1.2.0" \
-      "peft>=0.14.0,<0.16.0" \
-      "trl>=0.14.0,<0.18.0" \
+      "peft==0.15.2" \
+      "trl==0.17.0" \
       "bitsandbytes>=0.45.0" \
       "sentencepiece" \
       "protobuf" \
@@ -58,12 +58,19 @@ RUN git clone --depth 1 https://github.com/ggerganov/llama.cpp /opt/llama.cpp \
 
 ENV PATH="/opt/llama.cpp/build/bin:${PATH}"
 
+# Import peft before TrainingArguments to avoid circular HybridCache import
 RUN python -c "\
 import torch; \
-from transformers import TrainingArguments, AutoConfig; \
-from peft import LoraConfig; \
-from trl import SFTTrainer; \
 print('torch', torch.__version__); \
+import transformers; \
+print('transformers', transformers.__version__); \
+from transformers.models.auto.configuration_auto import CONFIG_MAPPING; \
+assert 'qwen3_5' in CONFIG_MAPPING, sorted(k for k in CONFIG_MAPPING if 'qwen' in k); \
+assert 'gemma4' in CONFIG_MAPPING, sorted(k for k in CONFIG_MAPPING if 'gemma' in k); \
+from peft import LoraConfig; \
+from transformers import TrainingArguments, AutoConfig; \
+from trl import SFTTrainer; \
+print('transformers ok qwen3_5+gemma4'); \
 print('SMOKE_OK')"
 
 WORKDIR /workspace

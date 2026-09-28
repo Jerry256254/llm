@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # LLM Fine-Tune Pipeline (Google Cloud + NVIDIA GPU → Ollama)
 
 Univerzální **Docker-first** Python pipeline pro fine-tuning LLM modelů na NVIDIA GPU (typicky Google Cloud VM), s automatickým exportem do **GGUF** a importem do **Ollama**.
@@ -93,7 +92,7 @@ gcloud compute instances create llm-train \
 
 Podporováno: **Alpaca** (JSON/JSONL), **ShareGPT**, **OpenAI chat messages**, plain **text**, nebo **HF dataset ID**.
 
-Ukázka Alpaca JSONL: `data/sample_alpaca.jsonl`.
+Ukázka Alpaca JSONL: `KucLab/sample_alpaca` na Hugging Face (adresář `data/` je v gitu ignorován, datasety žijí na HF pod účtem KucLab).
 
 ## Struktura projektu
 
@@ -104,7 +103,7 @@ llm/
 ├── requirements.txt
 ├── web/                       # control panel (HTML/CSS/JS)
 ├── configs/default_train.yaml
-├── data/sample_alpaca.jsonl
+├── data/  # ignorováno v gitu; datasety na Hugging Face (KucLab/…)
 ├── docker/
 │   ├── Dockerfile.unsloth
 │   └── Dockerfile.axolotl
@@ -163,6 +162,3 @@ python train_pipeline.py --run-dir outputs/run_XXXX --ollama-name my-model
 ## Licence
 
 MIT — použijte na vlastní riziko; sledujte licence base modelů a datasetů.
-=======
-# llm
->>>>>>> 84acf00b1c820772f3260d5036366789f7d7adfb

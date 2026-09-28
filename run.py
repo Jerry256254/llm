@@ -424,6 +424,20 @@ def run_web(args: argparse.Namespace) -> int:
 
     print_footer()
 
+    # Fail early with a clear message if port is already taken (e.g. leftover run.py)
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            s.bind((host if host != "0.0.0.0" else "0.0.0.0", port))
+    except OSError as e:
+        console.print(
+            f"[red bold]Port {port} je obsazený[/] ({e}).\n"
+            f"  Ukončete starý server:  fuser -k {port}/tcp\n"
+            f"  nebo:  ss -ltnp | grep {port}\n"
+            f"  nebo spusťte:  python3 run.py --port 8081"
+        )
+        return 1
+
     config = uvicorn.Config(
         app,
         host=host,

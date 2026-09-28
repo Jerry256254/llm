@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# KucLab Hertz 0.5 — 12B, 256k native context, self-distilled via Qwen3.8-27B
+# ═══════════════════════════════════════════════════════════════════════════
+# Scope for this release (agreed 2026-08-21, deadline 2026-08-25 14:00):
+# same base model and same STEM domains as 0.4, PLUS a stronger personality
+# (direct, witty, dry/dark humor allowed, fewer reflexive corporate hedges
+# on benign topics — NOT a removal of real safety boundaries), a modern
+# web-dev/programming category with explicit anti-"AI slop" style guidance,
+# and a small set of agentic step-by-step planning examples. Context stays
+# at Gemma-4's native 262144 (a 512k stretch was explicitly descoped — see
+# scripts/build_hertz05_selfdistill.py docstring for the full reasoning).
+#
+# Student (trained/deployed): google/gemma-4-12B-it — same as 0.4.
+# Teacher (data generation only, never trained): Qwen3.8-27B via Ollama.
+#
+# Dataset: data/kuclab_hertz_0.5/train.jsonl — 1036 rows (285 newly
+# self-distilled: STEM concepts/terms + personality + webdev + agentic,
+# plus 736 rows reused as-is from kuclab_hertz_0.4).
+#
+# NOTE ON DATA VOLUME: original ask was 10x. Live-measured teacher
+# throughput on this host during this build showed qwen3.8:27b generation
+# is RAM-constrained (15GB system RAM vs a 17.7GB model) and was
+# unreliable until a second 16GB swapfile was added — realistic new-row
+# budget for the deadline was a few hundred rows, not thousands.
+#
+# Thinking tokens: not replicated in training data, same choice as 0.3/0.4
+# (see scripts/build_hertz04_selfdistill.py docstring for why).
+#
+# VRAM: reusing 0.4's proven settings (lora_r=8, max_seq_length bumped
+# from 1792 to 2048 — new webdev rows run longer, p99 ~4840 chars / ~1200
+# tokens, a handful up to ~7864 chars / ~2000 tokens). 0.4 measured 77%
+# peak VRAM at 1792; 2048 should still leave comfortable headroom on this
+# L4 (23GB).
+# ═══════════════════════════════════════════════════════════════════════════
+
+model_id: google/gemma-4-12B-it
+
+dataset_path: ./data/kuclab_hertz_0.5/train.jsonl
+dataset_format: alpaca
+
+framework: peft
+method: qlora
+load_in_4bit: true
+
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+
+max_seq_length: 2048
+batch_size: 1
+grad_accum: 8
+epochs: 2.0
+learning_rate: 3.0e-5
+seed: 42
+
+gguf_quant: q4_k_m
+ollama_name: kuclab-hertz-0.5
+num_ctx: 65536
+
+max_train_hours: 720.0
+max_cost_usd: 999999.0
+gpu_hourly_usd: 0.35
+
+identity_name: KucLab Hertz 0.5
+founder: ""
+trained_on: "2026-08-22"
+teach_identity: false
+identity_repeat: 0
+
+packing: false
+freeze_vision: true
+
+# Base already supports 262144 natively — no rope_scaling injection needed.
+target_context: 0
+
+system_prompt: >-
+  Jsi KucLab Hertz 0.5 — model od KucLab (kuclab.org) zaměřený na fyziku,
+  chemii, biologii, matematiku a programování (včetně moderního web
+  vývoje). Mluvíš plynule česky i anglicky včetně odborné terminologie;
+  odpovídáš v jazyce, kterým se ptá uživatel. U výpočtů, odvození a kódu
+  postupuješ krok za krokem a ukazuješ mezivýsledky. Odpovídáš přímo,
+  sebejistě a lidsky — smíš být vtipný a použít suchý nebo černý humor,
+  pokud se to k tématu hodí, ale nikdy na úkor věcné správnosti.
+  Nezačínej omluvami ani formulacemi typu "jako AI nemohu" u běžných,
+  neškodných témat. Skutečně nebezpečné nebo škodlivé požadavky odmítni
+  stručně a bez kázání. Když píšeš web kód, vyhýbej se rozpoznatelným
+  "AI slop" vzorům (generické gradienty, glassmorphism na sílu, klišé
+  texty) — piš čistý, účelný, moderní kód. K aktuálním datům nemáš
+  přístup. Identitu řekni jen když se na ni někdo zeptá — a řekni, že tě
+  vytvořil KucLab, nejmenuj žádnou konkrétní osobu.
+
+# SUCCESS CRITERIA:
+#   - MMLU-Pro STEM within noise of 0.4 / base (google/gemma-4-12B-it)
+#   - Czech terminology at or above 0.3/0.4 level
+#   - programming + web-dev spot-checks correct, idiomatic, and not
+#     recognizable "AI slop" in style
+#   - personality: direct, allows dry/dark humor, drops reflexive hedging
+#     on benign topics, without adding unsafe content
+#   - identity: names KucLab (+ kuclab.org), does NOT name a founder
+#   - 256k context still usable (inherited from base, not independently
+#     re-tested this release given time constraints)

@@ -21,26 +21,29 @@ STATIC_DIR = WEB_DIR / "static"
 
 
 class TrainRequest(BaseModel):
-    model_id: str = "Qwen/Qwen3.5-2B-Base"
+    # Defaults = KucLab Hertz 0.1 STEM demo (web UI prefill)
+    model_id: str = "Qwen/Qwen3.5-9B"
     model_params_b: Optional[float] = None
-    dataset_path: str = "./data/test_multilang_code/train.jsonl"
+    dataset_path: str = "./data/kuclab_hertz_0.1/train.jsonl"
     dataset_format: str = "alpaca"
     output_dir: str = "./outputs"
     framework: str = "peft"
-    method: str = "full"
-    lora_r: int = 64
-    lora_alpha: int = 128
+    method: str = "qlora"
+    lora_r: int = 32
+    lora_alpha: int = 64
     max_seq_length: int = 2048
     batch_size: int = 1
-    grad_accum: int = 8
-    epochs: float = 3.0
-    learning_rate: float = 5e-5
+    grad_accum: int = 16
+    epochs: float = 1.0
+    learning_rate: float = 8e-5
     max_steps: int = -1
     gguf_quant: str = "q4_k_m"
-    ollama_name: str = "muj-model"
-    identity_name: str = "Můj Model"
+    ollama_name: str = "kuclab-hertz-0.1"
+    identity_name: str = "KucLab Hertz 0.1"
     teach_identity: bool = True
-    identity_repeat: int = 3
+    identity_repeat: int = 1
+    founder: str = "Jaroslav Kučera"
+    trained_on: str = "2026-08-11"
     max_train_hours: float = 720.0
     max_cost_usd: float = 999999.0
     gpu_hourly_usd: float = 0.35
@@ -51,11 +54,30 @@ class TrainRequest(BaseModel):
     skip_ollama: bool = False
     allow_over_limit: bool = True
     # friendly UI fields
-    train_mode: str = "from_scratch"
+    train_mode: str = "finetune"
     uncensored: bool = True
     no_limits: bool = True
     system_prompt: Optional[str] = None
     hf_token: Optional[str] = None  # optional; prefer env HF_TOKEN on server
+    # Gemma-2 chat window
+    num_ctx: Optional[int] = 8192
+
+
+# Must be module-level: with `from __future__ import annotations`, nested classes
+# inside create_app() fail get_type_hints() → FastAPI treats them as query params → 422.
+class TokenBody(BaseModel):
+    token: str
+
+
+class DownloadBody(BaseModel):
+    model_id: str
+    hf_token: Optional[str] = None
+
+
+class ChatBody(BaseModel):
+    model: str
+    message: str
+    system: Optional[str] = None
 
 
 def create_app(access_token: Optional[str] = None) -> FastAPI:
@@ -104,22 +126,31 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
             out.append(item)
         return out
 
-    class TokenBody(BaseModel):
-        token: str
-
     @app.post("/api/hf/token")
     async def set_token(body: TokenBody, _auth: None = Depends(verify)) -> dict:
         from .model_source import ensure_hf_cli, save_hf_token
 
         ensure_hf_cli()
+        tok = (body.token or "").strip()
+        if not tok:
+            raise HTTPException(status_code=400, detail="Prázdný HF token")
+        if not (tok.startswith("hf_") or tok.startswith("api_")):
+            # soft hint — still try (enterprise / fine-grained may differ)
+            pass
         try:
-            save_hf_token(body.token)
-            # verify
             from huggingface_hub import HfApi
-            info = HfApi().whoami(token=body.token.strip())
-            return {"ok": True, "user": info.get("name") or info.get("fullname")}
+
+            # Verify first so we never persist an invalid token / pollute HF_TOKEN env
+            info = HfApi().whoami(token=tok)
+            save_hf_token(tok)
+            return {"ok": True, "user": info.get("name") or info.get("fullname") or "ok"}
+        except HTTPException:
+            raise
         except Exception as e:
-            raise HTTPException(status_code=400, detail=str(e)) from e
+            raise HTTPException(
+                status_code=400,
+                detail=f"HF token neplatný nebo síťová chyba: {e}",
+            ) from e
 
     @app.get("/api/hf/status")
     async def hf_status(_auth: None = Depends(verify)) -> dict:
@@ -135,10 +166,6 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
             except Exception as e:
                 user = f"error: {e}"
         return {"cli": cli, "has_token": bool(tok), "user": user}
-
-    class DownloadBody(BaseModel):
-        model_id: str
-        hf_token: Optional[str] = None
 
     @app.post("/api/models/download")
     async def download_model(body: DownloadBody, _auth: None = Depends(verify)) -> dict:
@@ -165,11 +192,6 @@ def create_app(access_token: Optional[str] = None) -> FastAPI:
 
         loop = asyncio.get_event_loop()
         return await loop.run_in_executor(None, ensure_ollama)
-
-    class ChatBody(BaseModel):
-        model: str
-        message: str
-        system: Optional[str] = None
 
     @app.post("/api/chat")
     async def chat(body: ChatBody, _auth: None = Depends(verify)) -> dict:

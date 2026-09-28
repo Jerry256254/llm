@@ -462,8 +462,8 @@ def build_or_pull_image(
     import fcntl
     import time as _time
 
-    # -r5: transformers new enough for Qwen3.5; no unsloth/torchao
-    image = f"llm-finetune/{framework}:cuda{cuda_tag}-r5"
+    # -r7: transformers 5.14 — Qwen3.5 (qwen3_5) + Gemma 4 (gemma4)
+    image = f"llm-finetune/{framework}:cuda{cuda_tag}-r7"
     dockerfile = DOCKER_DIR / f"Dockerfile.{framework}"
     if not dockerfile.exists():
         raise FileNotFoundError(f"Missing Dockerfile: {dockerfile}")
@@ -507,6 +507,119 @@ def build_or_pull_image(
         return image
 
 
+def host_mem_total_gib() -> float:
+    try:
+        with open("/proc/meminfo", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("MemTotal:"):
+                    return int(line.split()[1]) / (1024 * 1024)
+    except Exception:
+        pass
+    return 0.0
+
+
+def host_swap_total_gib() -> float:
+    try:
+        with open("/proc/meminfo", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("SwapTotal:"):
+                    return int(line.split()[1]) / (1024 * 1024)
+    except Exception:
+        pass
+    return 0.0
+
+
+def ensure_host_swap(min_gib: int = 16) -> bool:
+    """Ensure swap exists so full-model save does not hard-freeze a 16 GiB VPS.
+
+    Without swap, moving ~10 GiB weights through host RAM (or any peak) makes
+    Linux unresponsive — the classic 'must reboot VPS' failure after training hits 100%.
+    """
+    have = host_swap_total_gib()
+    if have >= max(4.0, min_gib * 0.5):
+        console.print(f"[green]Swap OK:[/] {have:.1f} GiB")
+        return True
+
+    swapfile = Path("/swapfile")
+    size_gib = max(min_gib, 16)
+    console.print(
+        f"[yellow]Swap chybí/nedostatečný ({have:.1f} GiB). "
+        f"Zkouším vytvořit {size_gib} GiB swapfile…[/]"
+    )
+
+    # Prefer passwordless sudo (GCE / provisioned hosts)
+    def _sudo(cmd: list[str]) -> subprocess.CompletedProcess:
+        return _run(["sudo", "-n", *cmd], check=False, capture=True)
+
+    steps_ok = True
+    if not swapfile.exists() or swapfile.stat().st_size < size_gib * (1024**3) * 0.9:
+        # fallocate is fast on ext4; dd fallback
+        r = _sudo(["fallocate", "-l", f"{size_gib}G", str(swapfile)])
+        if r.returncode != 0:
+            r = _sudo(
+                ["dd", "if=/dev/zero", f"of={swapfile}", "bs=1M", f"count={size_gib * 1024}", "status=progress"]
+            )
+        if r.returncode != 0:
+            steps_ok = False
+        else:
+            _sudo(["chmod", "600", str(swapfile)])
+            r = _sudo(["mkswap", str(swapfile)])
+            if r.returncode != 0:
+                steps_ok = False
+
+    if steps_ok:
+        r = _sudo(["swapon", str(swapfile)])
+        if r.returncode != 0 and "already" not in ((r.stderr or "") + (r.stdout or "")).lower():
+            # maybe already active
+            steps_ok = host_swap_total_gib() >= 1.0
+        else:
+            steps_ok = True
+        # Persist across reboot (best effort)
+        fstab = Path("/etc/fstab")
+        try:
+            marker = f"{swapfile} none swap sw 0 0"
+            r = _sudo(["grep", "-q", str(swapfile), "/etc/fstab"])
+            if r.returncode != 0:
+                # append via tee
+                _run(
+                    f'echo "{marker}" | sudo -n tee -a /etc/fstab >/dev/null',
+                    check=False,
+                    shell=True,
+                )
+        except Exception:
+            pass
+
+    have_after = host_swap_total_gib()
+    if have_after >= 1.0:
+        console.print(f"[green]Swap aktivní:[/] {have_after:.1f} GiB")
+        return True
+
+    console.print(
+        "[red bold]Swap se nepodařilo vytvořit (sudo potřebuje heslo).[/]\n"
+        "Bez swapu se VPS při ukládání 5B+ full modelu často [bold]zcela zmrazí[/].\n"
+        "Spusť jednou ručně:\n"
+        f"  sudo fallocate -l {size_gib}G /swapfile\n"
+        "  sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile\n"
+        f"  echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab\n"
+        "Nebo: [cyan]bash scripts/gce_l4_fix.sh[/] (sekce swap)."
+    )
+    return False
+
+
+def recommend_shm_size() -> str:
+    """Cap /dev/shm so it does not dominate small host RAM."""
+    mem = host_mem_total_gib()
+    if mem <= 0:
+        return "4g"
+    if mem < 20:
+        return "2g"
+    if mem < 40:
+        return "4g"
+    if mem < 80:
+        return "8g"
+    return "16g"
+
+
 def prepare_environment(
     *,
     install_packages: bool = True,
@@ -520,6 +633,12 @@ def prepare_environment(
 
     if install_packages and distro != Distro.UNKNOWN:
         install_host_packages(distro)
+
+    # Soft fail: training can still run, but saves are much safer with swap
+    try:
+        ensure_host_swap(min_gib=16 if host_mem_total_gib() < 32 else 8)
+    except Exception as e:
+        console.print(f"[yellow]Swap check skipped: {e}[/]")
 
     ensure_docker_group()
     gpus = detect_gpus()
@@ -562,10 +681,20 @@ def docker_run_base_args(
     *,
     gpus: str = "all",
     extra_env: Optional[dict[str, str]] = None,
-    shm_size: str = "16g",
+    shm_size: Optional[str] = None,
 ) -> list[str]:
     """Common docker run argv for training / conversion containers."""
     workdir_host = workdir_host.resolve()
+    if shm_size is None:
+        shm_size = recommend_shm_size()
+    # Prefer project-owned HF home (writable by admin). Fall back to ~/.cache if usable.
+    from .model_source import PROJECT_HF_HOME, ensure_project_hf_home
+
+    hf_home = ensure_project_hf_home()
+    home_cache = Path.home() / ".cache" / "huggingface"
+    if home_cache.is_dir() and os.access(home_cache, os.W_OK):
+        # both exist and home is writable — still prefer project for isolation
+        pass
     args = [
         "docker",
         "run",
@@ -573,16 +702,23 @@ def docker_run_base_args(
         "--gpus",
         gpus,
         f"--shm-size={shm_size}",
+        # Allow container to use host swap if present (avoids hard cgroup OOM kill)
+        "--memory-swap",
+        "-1",
         "-v",
         f"{workdir_host}:/workspace",
         "-v",
-        f"{Path.home() / '.cache' / 'huggingface'}:/root/.cache/huggingface",
+        f"{hf_home}:/root/.cache/huggingface",
         "-w",
         "/workspace",
         "-e",
         "HF_HOME=/root/.cache/huggingface",
         "-e",
         "TRANSFORMERS_CACHE=/root/.cache/huggingface",
+        "-e",
+        "HF_HUB_DISABLE_XET=1",
+        "-e",
+        "SAFETENSORS_FAST_GPU=1",
     ]
     if extra_env:
         for k, v in extra_env.items():

@@ -49,7 +49,24 @@ fi
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 
-echo "=== 6) Kontrola ==="
+echo "=== 6) Swap (povinné na 16 GiB VPS — jinak freeze po 100 % tréninku) ==="
+if [ "$(awk '/SwapTotal/{print $2}' /proc/meminfo)" -lt 4194304 ]; then
+  # < 4 GiB swap
+  if [ ! -f /swapfile ]; then
+    sudo fallocate -l 16G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
+    sudo chmod 600 /swapfile
+    sudo mkswap /swapfile
+  fi
+  sudo swapon /swapfile || true
+  if ! grep -q '/swapfile' /etc/fstab 2>/dev/null; then
+    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+  fi
+  free -h
+else
+  echo "Swap už je: $(free -h | awk '/Swap/{print $2}')"
+fi
+
+echo "=== 7) Kontrola ==="
 echo "--- lspci ---"
 lspci | grep -iE 'nvidia|3d|vga' || true
 echo "--- nvidia-smi ---"
